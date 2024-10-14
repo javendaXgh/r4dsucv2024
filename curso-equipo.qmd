@@ -1,0 +1,18 @@
+---
+title: "Equipo de Profesores"
+---
+
+### Prof. Juan Pablo Goncalves: 
+
+### Prof. Jesús Sánchez:
+
+### Prof. José Miguel Avendaño: 
+
+Magister en Ciencias de la Computación (U.C.V.) y Economista (U.C.V.). Trabaja con datos desde hace más de dos décadas. Sus investigaciónes se centran en el uso del procesamiento del lenguaje natural (NLP), incluyendo los Largos Modelos de Lenguaje (LLM´s), el cual es un campo de estudio del ***machine learning*** . Su interés por la Ciencia de Datos lo ha acercado al desarrollo de aplicaciones web donde los datos, su manipulación y representación, son los pilares en que sustento mi trabajo.
+
+Actualmente participa en las investigaciones que desarrolla el Laboratorio de Gestión de la Innovación y el Centro de Microscopía Electrónica «Dr. Mitsuo Ogura», ambos de la UCV, en la incorporación de largos modelos de lenguaje en procesos de enseñanza inteligenciada.
+
+| Horas de Consulta | Sitio |
+|----|----|
+| Lunes 2:30 - 3:00 pm | Laboratorio piso 2 Escuela de Economía, FaCES |
+| Miércoles 3:00 pm - 4:30 pm | Centro de Microscopía Electrónica, planta baja, Facultad de Ciencias |

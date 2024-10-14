@@ -1,0 +1,74 @@
+---
+title: "Ciencia de Datos basada en programación en R para economistas-UCV"
+execute:
+  freeze: false
+---
+
+```{r}
+#| echo: false
+#| message: false
+#| warning: false
+
+library(googlesheets4)
+library(gt)
+library(tidyverse)
+gs4_deauth()
+d <- read_sheet("https://docs.google.com/spreadsheets/d/1R-Gpk-DhDwFLG1tNVEqKOE8ICzBqriEuvewHd1VguAs/edit?gid=0#gid=0")
+
+
+```
+
+```{r}
+#| echo: false
+#| warning: false
+
+d |>
+  select(-dia) |>
+  mutate(
+    fecha = as.Date(fecha)
+  ) |>
+  gt() |>
+  fmt_date(fecha, 
+           date_style = 31,
+            locale = 'es-VE') |>
+  sub_missing(columns = c(semana, tema, materiales), missing_text = "") |>
+  cols_align(
+    align = "center",
+    columns = c(semana)
+    ) |>
+  cols_align(
+    align = "right",
+    columns = c(fecha)
+    ) |>
+  cols_align(
+    align = "left",
+    columns = c(tema, materiales)
+    ) |>
+  tab_style(
+    style = cell_borders(
+      sides = "right",
+      color = "#D3D3D3",
+      style = "solid"
+    ),
+    locations = cells_body(
+      columns = c(fecha, tema, materiales)
+    )
+  ) |>
+  fmt_markdown(
+    columns = c(tema, materiales)
+  ) |>
+  cols_width(
+    semana ~ px(45),
+    fecha ~ px(100),
+    tema ~ px(200),
+    materiales ~ px(600)
+  ) |>
+  cols_label_with(fn = function(x) {
+      janitor::make_clean_names(x, case = "title") |>
+        toupper() |>
+        stringr::str_replace_all("^|$", "**") |>
+        md()
+    }) |>
+  tab_options(table.font.size = 13) |>
+  opt_row_striping()
+```

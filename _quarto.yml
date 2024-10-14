@@ -1,0 +1,80 @@
+project:
+  type: website
+  resources:
+    - lectures/14/14-decision-errors.pdf
+
+website:
+  page-navigation: true
+  title: "R4DS-UCV-Economía"
+  description: "Sitio del Curso Monográfico - Ciencia de Datos basada en programación en R para economistas"
+  site-url: "https://r4dsucveconomia2024.netlify.app"
+  repo-url: https://github.com/orgs/UCVeconomia2024-2/
+
+
+  open-graph: true
+
+  sidebar:
+    background: "#E46C4E"
+    logo: "images/logo_curso_sinBG.png"
+    pinned: true
+    align: center
+
+    tools:
+      - icon: cloud
+        href: https://posit.cloud/
+        text: "Posit Cloud"
+      - icon: discord
+        href:  https://discord.gg/fxXcEHH2
+        text: "Discord"
+      - icon: github
+        href: https://github.com/orgs/UCVeconomia2024-2/dashboard
+        text: "GitHub"
+
+    style: docked
+    search: true
+    collapse-level: 1
+
+    contents:
+      - section: "Información del Curso"
+        contents:
+          - href: curso-infogeneral.qmd
+            text: Información General
+          - href: curso-programa.qmd
+            text: Programación de Actividades
+          - href: curso-equipo.qmd
+            text: Equipo de Profesores
+          - href: index.qmd
+            text: Materiales del Curso
+
+          # - href: faq.qmd
+          #   text: Preguntas Frecuentes
+      - section: "Prácticas"
+        contents:
+          - href: labs/lab-1.qmd
+            text: Práctica 1
+      - section: "Proyectos"
+        contents:
+          - href: project/proyecto-1.qmd
+            text: "Proyectos mitad de curso"
+          - href: project/proyecto-2.qmd
+            text: "Proyecto Final de Curso"
+
+  page-footer:
+    right: "Este sitio fue elaborado con [Quarto](https://quarto.org/)."
+    background: "#5d6d74"
+lang: es    
+format:
+  html:
+    theme:
+      light: [cosmo, style/copystat101.scss]
+      dark: [cosmo,  style/dark.scss]
+    linkcolor: "#E63B2E"
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+    mainfont: "Atkinson Hyperlegible"
+
+execute:
+  freeze: auto
+
+editor: visual

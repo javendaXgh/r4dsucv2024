@@ -1,0 +1,449 @@
+---
+title: "Programa de Actividades"
+---
+
+## Programa de actividades (sujeto a modificaciones):
+
+Se detallan la mayoría de los contenidos de programación que serán abordados. Es necesario destacar que en cada actividad serán abordados transversalmente contenidos asociados a problemas que son estudiados por la ciencia de datos. Se espera en cada clase incorporar ejercicios prácticos que desarrollen las habilidades de programación en computadoras.
+
+### Clase 1:
+
+1.  **Objetivo:** sesión inicial del curso donde se presentan los temas a abordar y la instalación de R y RStudio.
+
+2.  **Contenido:**
+
+    1.  Por qué R
+
+    2.  Ciclo de un proyecto de ciencia de datos
+
+    3.  Entornos de Programación
+
+    4.  Instalar R según sistema operativo
+
+    5.  RStudio: proyecto, estructura, ventanas, directorios de trabajo, RStudio en línea.
+
+    6.  R Vs. RStudio
+
+    7.  Proyectos de Trabajo: crear proyecto, ambiente, directorio de trabajo, estructura de proyectos, ventanas. Consumo de memoria
+
+    8.  Archivos: Scripts R y Rmd.
+
+3.  **Ejercicio práctico:** Crear un proyecto y dentro del proyecto un script "hello word.R"
+
+### Clase 2:
+
+1.  **Objetivo:** Comprender el entorno de programación. Aprender a instalar paquetes, cargarlos.
+
+2.  **Contenido:**
+
+    1.  Crear objetos, variables, nombres variables
+
+    2.  Fundamentos básicos de programación en R. Funciones precargadas
+
+    3.  Consola / Script
+
+    4.  Crear scripts.
+
+    5.  Archivos: R, Quarto, RData y RMD.
+
+    6.  Rbase
+
+3.  **Ejercicio práctico:**
+
+    1.  Crear scripts
+    2.  Crear variables de distintos tipos
+    3.  Corregir variables
+
+### Clase 3:
+
+1.  **Objetivo:** Conocer la estructura de datos denominada "vector"
+
+2.  **Contenido:**
+
+    1.  Paquetes: instalación y carga de paquetes
+
+    2.  Repositorios de paquetes
+
+    3.  Vectores: logical, character, integer, numeric, date. Función mode
+
+    4.  Cómo pedir ayuda
+
+3.  **Ejercicio práctico:**
+
+    1.  Crear vectores de distintos tipo "mode"
+
+### Clase 4:
+
+1.  **Objetivo:** Seguir conociendo las principales estructuras de datos que se manejan dentro de R
+
+2.  **Contenido:**
+
+    1.  "Coerce" dentro de los vectores. Función class
+
+    2.  Trabajando Factores
+
+    3.  Matrices
+
+    4.  Listas
+
+    5.  Acceder a elementos de vectores, listas: índices y atributos. Función print
+
+3.  **Ejercicio práctico:**
+
+    1.  Practicar elementos de coerce, accesos a elementos de listas.
+
+### Clase 5:
+
+1.  **Presentación:** Conocer la estructura de datos Data Frame y sus atributos
+
+2.  **Objetivo:**
+
+    1.  Data Frames
+
+    2.  Importar datos 1- Función read_csv
+
+    3.  Acceso elementos Data Frame
+
+    4.  Visualizar parcial o totalmente, función view
+
+    5.  Funciones str, summary y tabulaciones cruzadas
+
+3.  **Ejercicio práctico:**
+
+    1.  Crear una Data Frame
+
+### Clase 6:
+
+1.  **Objetivo:** Comprender cómo obtener subconjuntos condicionados sobre vectores o Data Frames y tibbles
+
+2.  **Contenido:**
+
+    1.  Operadores lógicos, tabla de la verdad
+
+    2.  Programación funcional
+
+    3.  Subsets
+
+    4.  Presentación dplyr
+
+    5.  Aplicación de filtros via dplyr filter
+
+3.  **Ejercicio práctico:**
+
+    1.  Subsets y Filter de Data Frames precargadas
+
+### Clase 7:
+
+1.  **Objetivo:** Procesamientos de datos encadenados e introducción a la generación de reportes
+
+2.  **Contenido:**
+
+    1.  Encadenamiento en los procesamientos: operador pipe %\>%
+
+    2.  Carga de datos desde excel
+
+    3.  Gráfico de frecuencia de una variable, Análisis Exploratorio de datos
+
+    4.  Aplicación filtros en data frames por funciones máx, min, mean
+
+    5.  Preparar un reporte estático e interactivo
+
+3.  **Ejercicio práctico:**
+
+    1.  Crear un reporte con un subset de datos
+
+### Clase 8:
+
+1.  **Objetivo:** Creando datos derivados- mutate aplicado a datos de tipo fechas
+
+2.  **Contenido:**
+
+    1.  Data Frames aplicar mutate -1
+
+    2.  Trabajando con fechas: month, day, year, convertir formatos POSIX
+
+3.  **Ejercicio práctico:**
+
+    1.  crear columnas con día, mes y año en una Data Frame
+
+### Clase 9:
+
+1.  **Objetivo:** Creando datos derivados- mutate aplicado a datos de tipo "string"
+
+2.  **Contenido:**
+
+    1.  Data Frames aplicar mutate -2
+
+    2.  Trabajando con strings: str_detect, str_split, str_squish, entre otras.
+
+    3.  Expresiones regulares
+
+    4.  Separate
+
+3.  **Ejercicio práctico:**
+
+    1.  Usar separate dentro de una data frame vs mutate
+
+### Clase 10:
+
+1.  **Objetivo:** Comprender funciones condicionales vectorizadas
+
+2.  **Contenido:**
+
+    1.  Binds por columa o por fila.
+
+    2.  Función ifelse
+
+    3.  Función case_when
+
+    4.  Arrange
+
+3.  **Ejercicio práctico:**
+
+    1.  Lectura de datos, juntar Data Frames y aplicar condicional.
+
+### Clase 11:
+
+1.  **Objetivo:** Comprender un flujo completo de importar y transformar los datos con el pipe operator
+
+2.  **Contenido:**
+
+    1.  Función select
+
+    2.  Aplicación de un pipeline compuesto
+
+3.  **Ejercicio práctico:**
+
+    1.  Aplicar lo aprendido en bloques del 7 al 11.
+
+### Clase 12:
+
+1.  **Objetivo:** agrupación de datos dentro de una Data Frame y obtención de valores sumarios
+
+2.  **Contenido:**
+
+    1.  Agrupación de datos: group-by
+
+    2.  Presentación estructura tibble
+
+    3.  Sumarizar datos: summarise
+
+    4.  Desagrupar
+
+3.  **Ejercicio práctico:**
+
+    1.  Agrupar una Data Frame por variable categórica y obtener valores sumarios
+
+### Clase 13:
+
+1.  **Objetivo:** comprender los datos representados en formatos wide o longer
+
+2.  **Contenido:**
+
+    1.  Pivoteo de datos
+
+    2.  Formatos de datos long
+
+    3.  Formatos de datos wide
+
+3.  **Ejercicio práctico:**
+
+    1.  Tranformar de formato wide a long una Data Frame
+
+### Clase 14:
+
+1.  **Objetivo:** comprender las familia de las funciones vectorizadas apply
+
+2.  **Contenido:**
+
+    1.  Programación funcional:
+
+        1.  sapply
+
+        2.  lapply
+
+        3.  apply
+
+        4.  tapply
+
+3.  **Ejercicio práctico:**
+
+    1.  Aplicar lapply sobre subset de columnas de una Data Frame
+
+### Clase 15:
+
+1.  **Objetivo:** Introducción al análisis exploratorio de datos e imputación de datos faltantes.
+
+2.  **Contenido:**
+
+    1.  Lectura de datos JSON
+
+    2.  Inspección de datos
+
+    3.  Introducción Análisis Exploratorio de Datos
+
+    4.  Imputación de datos faltantes
+
+3.  **Ejercicio práctico:**
+
+    1.  Realizar un reporte y análisis exploratorio sobre un conjunto de datos no mayor 5 variables
+
+### Clase 16:
+
+1.  **Objetivo:** Abordar las estructuras de control y los ciclos
+
+2.  **Contenido:**
+
+    1.  Estructuras de control if, else
+
+    2.  Loops, whiles
+
+    3.  Gráficos en Plotly
+
+3.  **Ejercicio práctico:**
+
+    1.  Mediante un loop generar distintos gráficos y guardarlos.
+
+### Clase 17:
+
+1.  **Objetivo:** comprender la lógica de las funciones
+
+2.  **Contenido:**
+
+    1.  Crear funciones: argumentos, default, return
+
+    2.  Vectorizados Vs. Ciclos
+
+3.  **Ejercicio práctico:**
+
+    1.  Crear dos funciones que contengan una estructura de control
+
+### Clase 18:
+
+1.  **Objetivo:** Comprender los tipos de gráficos y sus usos. Introducción al sistema ggplot2.
+
+2.  **Contenido:**
+
+    1.  Sistema gráfico ggplot2: grammar of graphics 1
+
+        1.  Tipos de gráficos
+
+        2.  Leyendas
+
+3.  **Ejercicio práctico:**
+
+    1.  Crear 2 gráficos: 1 de barra, 1 de líneas
+
+### Clase 19:
+
+1.  **Objetivo:** Comprender los tipos de gráficos y sus usos. Introducción al sistema ggplot2.
+
+2.  **Contenido:**
+
+    1.  Sistema gráfico ggplot2: grammar of graphics 2
+
+        1.  Facets
+
+        2.  Adaptación colores
+
+3.  **Ejercicio práctico:**
+
+    1.  Crear facets con paleta de colores personalizada.
+
+### Clase 20:
+
+1.  **Objetivo:** familia de funciones vectorizadas 2
+
+2.  **Contenido:**
+
+    1.  Funciones vectorizadas purrr
+
+    2.  Bind_rows, bind_cols
+
+    3.  Lecturas en bucle
+
+3.  **Ejercicio práctico:**
+
+    1.  Lectura de datos en bucle y conformación de una estructura de datos unificada.
+
+### Clase 21:
+
+1.  **Objetivo:** Comprender la lógica de joins (unión) de Data Frames.
+
+2.  **Contenido:**
+
+    1.  joins de datos
+
+    2.  Regresión lineal
+
+3.  **Ejercicio práctico:**
+
+    1.  Aplicar un join de datos y obtener una regresión lineal por grupo de datos
+
+### Clase 22:
+
+1.  **Objetivo:** Aspectos generales de recursos en línea. Uso de R en paralelo con python.
+
+2.  **Contenido:**
+
+    1.  Trabajando con repositorios de códigos
+
+    2.  Control de Versiones
+
+    3.  Cómo pedir ayuda
+
+    4.  Dónde pedir ayuda
+
+3.  **Ejercicio práctico:**
+
+    1.  según dinámica de las sesiones previas
+
+### Clase 23:
+
+1.  **Objetivo:** Introducción al machine learning supervisado y no supervisado
+
+2.  **Contenido:**
+
+    1.  Introducción al machine learning con paquete caret.
+
+        1.  Aprendizaje supervisado: Arboles de decisión
+
+        2.  Aprendizaje no supervisado: clustering
+
+3.  **Ejercicio práctico:**
+
+    1.  Crear clusters sobre un conjunto de datos
+
+### Clase 24:
+
+1.  **Objetivo:** crear aplicaciones web interactivas con Shiny 1
+
+2.  **Contenido:**
+
+    1.  Introducción a Shiny 1: Aplicaciones web interactivas
+
+        1.  estructura UI - Server
+
+        2.  Principios de programación reactiva
+
+3.  **Ejercicio práctico:**
+
+    1.  crear una aplicación web interactiva mínima.
+
+### Clase 25:
+
+1.  **Objetivo:** crear aplicaciones web interactivas con Shiny 2
+
+2.  **Contenido:**
+
+    1.  Introducción a Shiny 2: Aplicaciones web interactivas
+
+        1.  Sliders, inputs de texto, inputs numéricos, render de tablas y gráficos
+
+3.  **Ejercicio práctico:**
+
+    1.  continúa de sesión anterior: crear una aplicación web interactiva mínima 2
+
+### Clase 26 a la 32:
+
+-   Objetivo: trabajar en proyecto final de la materia donde se aplican todos los contenidos revisados con la finalidad de crear un producto basado en el uso de datos.
