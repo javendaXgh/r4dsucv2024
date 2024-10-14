@@ -4,7 +4,11 @@ title: "Equipo de Profesores"
 
 ### Prof. Juan Pablo Goncalves:
 
+Profesor Escuela de Economía.......
+
 ### Prof. Jesús Sánchez:
+
+Profesor Escuela de Economía.......
 
 ### Prof. José Miguel Avendaño:
 
@@ -13,6 +17,6 @@ Magister en Ciencias de la Computación (U.C.V.) y Economista (U.C.V.). Trabaja 
 Actualmente participa en las investigaciones que desarrolla el Laboratorio de Gestión de la Innovación y el Centro de Microscopía Electrónica «Dr. Mitsuo Ogura», ambos de la UCV, en la incorporación de largos modelos de lenguaje en procesos de enseñanza inteligenciada.
 
 | Horas de Consulta | Sitio |
-|----|----|
+|------------------------------------|------------------------------------|
 | Lunes 2:30 - 3:00 pm | Laboratorio piso 2 Escuela de Economía, FaCES |
 | Miércoles 3:00 pm - 4:30 pm | Centro de Microscopía Electrónica, planta baja, Facultad de Ciencias |

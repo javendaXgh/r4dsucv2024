@@ -1,55 +1,53 @@
 project:
   type: website
   resources:
-    - lectures/14/14-decision-errors.pdf
+    - lectures/
 
 website:
-  page-navigation: true
-  title: "R4DS-UCV-Economía"
-  description: "Ciencia de Datos basada en programación en R para economistas"
+  page-navigation: false
+  title: "R4DS-Economía-UCV"
+  description: "Ciencia de Datos Basada en Programación en R para Economistas"
   site-url: https://ucveconomiar4ds.netlify.app
   repo-url: https://github.com/orgs/UCVeconomia2024-2/
   favicon: images/favicon.png
 
-
-
   open-graph: true
 
   sidebar:
-    background: "#E46C4E"
+    background: "#a01f35" #"#E46C4E"
     logo: "images/logo_curso_sinBG.png"
     pinned: true
     align: center
-
     tools:
-      - icon: cloud
-        href: https://posit.cloud/
-        text: "Posit Cloud"
+      - icon: envelope
+        text: "Correo"
+        href: "mailto:ucveconomiar4ds@gmail.com"
       - icon: discord
         href:  https://discord.gg/fxXcEHH2
         text: "Discord"
       - icon: github
         href: https://github.com/orgs/UCVeconomia2024-2/dashboard
         text: "GitHub"
-      - icon: envelope
-        text: "Correo"
-        href: "mailto:ucveconomiar4ds@gmail.com"
+      - icon: cloud
+        href: https://posit.cloud/
+        text: "Posit Cloud"
+
 
     style: docked
     search: true
     collapse-level: 1
 
     contents:
-      - section: "Información del Curso"
+      - section: "Sobre el Curso"
         contents:
           - href: curso-infogeneral.qmd
             text: Información General
           - href: curso-programa.qmd
-            text: Programación de Actividades
+            text: Contenido
           - href: curso-equipo.qmd
             text: Equipo de Profesores
           - href: index.qmd
-            text: Materiales del Curso
+            text: Actividades
 
           # - href: faq.qmd
           #   text: Preguntas Frecuentes
@@ -67,6 +65,8 @@ website:
   page-footer:
     right: "Este sitio fue elaborado con [Quarto](https://quarto.org/)."
     background: "#5d6d74"
+    left: |
+      [![](images/escuelaeconomiawbg.png){fig-alt="Escuela de Economía" width=75px}](http://www.ucv.ve/economia)
 lang: es    
 format:
   html:
@@ -79,7 +79,7 @@ format:
     code-overflow: wrap
     mainfont: "Atkinson Hyperlegible"
 
-execute:
-  freeze: auto
+# execute:
+#   freeze: auto
 
 editor: visual
