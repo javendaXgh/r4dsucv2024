@@ -6,9 +6,11 @@ project:
 website:
   page-navigation: true
   title: "R4DS-UCV-Economía"
-  description: "Sitio del Curso Monográfico - Ciencia de Datos basada en programación en R para economistas"
-  site-url: "https://r4dsucveconomia2024.netlify.app"
+  description: "Ciencia de Datos basada en programación en R para economistas"
+  site-url: https://ucveconomiar4ds.netlify.app
   repo-url: https://github.com/orgs/UCVeconomia2024-2/
+  favicon: images/favicon.png
+
 
 
   open-graph: true
