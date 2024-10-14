@@ -31,6 +31,9 @@ website:
       - icon: github
         href: https://github.com/orgs/UCVeconomia2024-2/dashboard
         text: "GitHub"
+      - icon: envelope
+        text: "Correo"
+        href: "mailto:ucveconomiar4ds@gmail.com"
 
     style: docked
     search: true
