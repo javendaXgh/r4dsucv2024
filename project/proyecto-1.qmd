@@ -4,7 +4,7 @@ title: "Proyecto Mitad del Curso"
 
 ### **Introducción**
 
-En esta etapa del curso, pondrás en práctica los conocimientos adquiridos hasta ahora en R para abordar un **problema real**. El trabajo será desarrollado en equipos de 3 a 5 estudiantes. La idea es que desarrolles un proyecto completo, desde la definición del problema hasta la presentación de los resultados. Este proyecto tiene un peso asignado de 20% sobre el total de la calificación del curso.
+En esta etapa de l curso, pondrás en práctica los conocimientos adquiridos hasta ahora en R para abordar un **problema real**. El trabajo será desarrollado en equipos de 3 a 5 estudiantes. La idea es que desarrolles un proyecto completo, desde la definición del problema hasta la presentación de los resultados. Este proyecto tiene un peso asignado de 20% sobre el total de la calificación del curso.
 
 La calificación será con un tope de 20 puntos, desagregados de esta manera:
 
