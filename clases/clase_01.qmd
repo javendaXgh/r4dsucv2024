@@ -14,15 +14,11 @@ library(countdown)
 
 ## Equipo de Enseñanza
 
-:::: columns
-::: {.column width="50%"}
-Prof. Juan Pablo Goncalves
+-   Prof. Juan P. Goncalves
 
-Prof. Jesús Sánchez
+-   Prof. Jesús Sánches
 
-MSc. José Miguel Avendaño I.
-:::
-::::
+-   MSc. José M. Avendaño
 
 ## Participantes Curso
 
@@ -171,7 +167,7 @@ Extraer conocimiento desde un conjunto de datos
 
 -   Presentación final del Proyecto en laboratorio (20 minutos)
 
--   Creación de un póster (afiche) para comunicar (ni bachillerato)
+-   Creación de un póster (afiche) para comunicar (⛔️ bachillerato)
 
 -   Se publicará en la página el proyecto
 
@@ -199,7 +195,7 @@ En la página del curso están las especificaciones sobre los proyectos a realiz
 -   Evitar uso de correo
 -   Revisar distintos canales en Discord, p. ejem: ***errores-de-códigos***
 
-## Novedades- Anuncios
+## Anuncios del Curso
 
 -   Se publicacarán en el canal ***anuncios-clases*** del Discord
 -   Revisar día anterior a cada una de las clases
@@ -212,10 +208,10 @@ En la página del curso están las especificaciones sobre los proyectos a realiz
 
 -   Revisar canales en Discord
 
-    -   Reglas
+    -   ***Reglas***
 
-    -   Recursos disponibles
+    -   ***Recursos disponibles***
 
-    -   Tareas
+    -   ***Tareas***
 
 -   Realizar la primera tarea
