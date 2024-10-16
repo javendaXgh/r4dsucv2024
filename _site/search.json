@@ -107,5 +107,460 @@
     "title": "Equipo de Profesores",
     "section": "",
     "text": "Prof. Juan Pablo Goncalves:\nProfesor Escuela de Economía…….\n\n\nProf. Jesús Sánchez:\nProfesor Escuela de Economía…….\n\n\nProf. José Miguel Avendaño:\nMagister en Ciencias de la Computación (U.C.V.) y Economista (U.C.V.). Trabaja con datos desde hace más de dos décadas. Sus investigaciónes se centran en el uso del procesamiento del lenguaje natural (NLP), incluyendo los Largos Modelos de Lenguaje (LLM´s), el cual es un campo de estudio del machine learning. Su interés por la Ciencia de Datos lo ha acercado al desarrollo de aplicaciones web donde los datos, su manipulación y representación, son los pilares en que sustentan.\nActualmente participa en las investigaciones que desarrolla el Laboratorio de Gestión de la Innovación y el Centro de Microscopía Electrónica «Dr. Mitsuo Ogura», ambos de la UCV, en la incorporación de largos modelos de lenguaje en procesos de enseñanza inteligenciada.\n\n\n\n\n\n\n\nHoras de Consulta\nSitio\n\n\n\n\nLunes 2:30 - 3:00 pm\nLaboratorio piso 2 Escuela de Economía, FaCES\n\n\nMiércoles 3:00 pm - 4:30 pm\nCentro de Microscopía Electrónica, planta baja, Facultad de Ciencias"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#equipo-de-enseñanza",
+    "href": "lectures/clase_1/clase_01.html#equipo-de-enseñanza",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Equipo de Enseñanza",
+    "text": "Equipo de Enseñanza\n\n\nProf. Juan Pablo Goncalves\nProf. Jesús Sánchez\nMSc. José Miguel Avendaño I."
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#participantes-curso",
+    "href": "lectures/clase_1/clase_01.html#participantes-curso",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Participantes Curso",
+    "text": "Participantes Curso\n\nExpectativas?\nPrevio:\n\nProgramación?\nInvestigaciones?\nTrabajan en el área?\n\n\n\n\n\n−+\n07:00"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#ciencia-de-datos-por-ejemplo",
+    "href": "lectures/clase_1/clase_01.html#ciencia-de-datos-por-ejemplo",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Ciencia de Datos, por ejemplo",
+    "text": "Ciencia de Datos, por ejemplo\nExtraer conocimiento desde un conjunto de datos"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#excel---no",
+    "href": "lectures/clase_1/clase_01.html#excel---no",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Excel - no …",
+    "text": "Excel - no …"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#por-qué-r",
+    "href": "lectures/clase_1/clase_01.html#por-qué-r",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "¡por qué R?",
+    "text": "¡por qué R?"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#rstudio",
+    "href": "lectures/clase_1/clase_01.html#rstudio",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "RStudio",
+    "text": "RStudio"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#vista-integral",
+    "href": "lectures/clase_1/clase_01.html#vista-integral",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Vista Integral",
+    "text": "Vista Integral"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#importar",
+    "href": "lectures/clase_1/clase_01.html#importar",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Importar",
+    "text": "Importar"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#ordenar-transformar",
+    "href": "lectures/clase_1/clase_01.html#ordenar-transformar",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Ordenar + transformar",
+    "text": "Ordenar + transformar"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#visualizar",
+    "href": "lectures/clase_1/clase_01.html#visualizar",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Visualizar",
+    "text": "Visualizar"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#modelar",
+    "href": "lectures/clase_1/clase_01.html#modelar",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Modelar",
+    "text": "Modelar"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#comprender",
+    "href": "lectures/clase_1/clase_01.html#comprender",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Comprender",
+    "text": "Comprender"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#comunicar",
+    "href": "lectures/clase_1/clase_01.html#comunicar",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Comunicar",
+    "text": "Comunicar"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#generar-conjunto-de-datos",
+    "href": "lectures/clase_1/clase_01.html#generar-conjunto-de-datos",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Generar Conjunto de Datos",
+    "text": "Generar Conjunto de Datos"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#programar",
+    "href": "lectures/clase_1/clase_01.html#programar",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Programar",
+    "text": "Programar"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#intención",
+    "href": "lectures/clase_1/clase_01.html#intención",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Intención",
+    "text": "Intención\n\nPensar como un Científico de Datos:\n\nInvestigador\nCrítico\nInnovador\n\nDónde ubicar recursos técnicos y ayuda"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#promesa",
+    "href": "lectures/clase_1/clase_01.html#promesa",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Promesa",
+    "text": "Promesa\n\nNociones de programación\nObtener y crear conjunto de datos\nPresentar investigaciones"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#página-web",
+    "href": "lectures/clase_1/clase_01.html#página-web",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Página Web",
+    "text": "Página Web\nhttps://ucveconomiar4ds.netlify.app\n\n\nTodos los materiales\nEnlaces a recursos"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#salones",
+    "href": "lectures/clase_1/clase_01.html#salones",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Salones",
+    "text": "Salones\n\nLaboratorio piso 2\nCentro Microscopía Electrónica FC"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#herramientas-del-curso",
+    "href": "lectures/clase_1/clase_01.html#herramientas-del-curso",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Herramientas del Curso",
+    "text": "Herramientas del Curso\n\nUso Discord: comunicación, recomendaciones, soporte\nRepositorio GitHub: optimizar flujos de trabajo\nAsistente chat para codificación\nPágina web con recursos\nRStudio Cloud-Server: computación en la nube"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#actividades",
+    "href": "lectures/clase_1/clase_01.html#actividades",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Actividades",
+    "text": "Actividades\n\nRevisar los materiales de apoyo compartidos\nClases pendientes vía remoto (al menos 3 clases)\nParticipar en el curso, atender las actividades, practicar constantemente\nEnlazar lo aprendido con datos del mundo real, preferiblemente sobre la realidad venezolana"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#tareas",
+    "href": "lectures/clase_1/clase_01.html#tareas",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Tareas",
+    "text": "Tareas\n\nSemanales (cantidad exacta por definir)\nSe entregan los códigos mediante GitHub"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#bibliografía",
+    "href": "lectures/clase_1/clase_01.html#bibliografía",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nr4ds en español\nHands-On Programming with R\nCiencia de Datos para Gente Sociable\nMuchos otros"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#proyecto",
+    "href": "lectures/clase_1/clase_01.html#proyecto",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Proyecto",
+    "text": "Proyecto\n\nElección del conjunto de datos de su preferencia\nTrabajo en equipo\nPresentación avances tercer mes del curso\nPresentación final del Proyecto en laboratorio (20 minutos)\nCreación de un póster (afiche) para comunicar (ni bachillerato)\nSe publicará en la página el proyecto"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#evaluación",
+    "href": "lectures/clase_1/clase_01.html#evaluación",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Evaluación",
+    "text": "Evaluación\n\n\n\nCategoría\nPercentage\n\n\n\n\nLaboratorios-tareas\n40%\n\n\nProyecto Intermedio Curso\n20%\n\n\nProyecto Final Curso\n30%\n\n\nEnsayo (inicios diciembre)\n10%\n\n\n\nEn la página del curso están las especificaciones sobre los proyectos a realizar"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#equipos",
+    "href": "lectures/clase_1/clase_01.html#equipos",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Equipos",
+    "text": "Equipos\n\n4 a 5 personas\nProyecto\nEvaluación Equipo de Profesores:\n\ncalidad código, originalidad, aporte"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#soporte",
+    "href": "lectures/clase_1/clase_01.html#soporte",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Soporte",
+    "text": "Soporte\n\nEn la página del curso se publicarán las horas de atención\nRealizar preguntas en el canal foro en el Discord\nEvitar uso de correo\nRevisar distintos canales en Discord, p. ejem: errores-de-códigos"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#novedades--anuncios",
+    "href": "lectures/clase_1/clase_01.html#novedades--anuncios",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Novedades- Anuncios",
+    "text": "Novedades- Anuncios\n\nSe publicacarán en el canal anuncios-clases del Discord\nRevisar\nI’ll (try my best to) send a weekly update announcement each Friday, outlining the plan for the following week and reminding you what you need to do to prepare, practice, and perform"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#late-work-waivers-regrades-policy",
+    "href": "lectures/clase_1/clase_01.html#late-work-waivers-regrades-policy",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Late work, waivers, regrades policy",
+    "text": "Late work, waivers, regrades policy\n\nWe have policies!\nRead about them on the course syllabus and refer back to them when you need it"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#retos-que-representa-el-curso",
+    "href": "lectures/clase_1/clase_01.html#retos-que-representa-el-curso",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Retos que Representa el Curso",
+    "text": "Retos que Representa el Curso"
+  },
+  {
+    "objectID": "lectures/clase_1/clase_01.html#tareas-asignadas",
+    "href": "lectures/clase_1/clase_01.html#tareas-asignadas",
+    "title": "Bienvenida a Ciencia de Datos para Economistas",
+    "section": "Tareas Asignadas",
+    "text": "Tareas Asignadas\n\nRevisar canales en Discord\n\nReglas\nRecursos disponibles\nTareas\n\nRealizar la primera tarea"
+  },
+  {
+    "objectID": "lectures/clase_01.html#equipo-de-enseñanza",
+    "href": "lectures/clase_01.html#equipo-de-enseñanza",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Equipo de Enseñanza",
+    "text": "Equipo de Enseñanza\n\n\nProf. Juan Pablo Goncalves\nProf. Jesús Sánchez\nMSc. José Miguel Avendaño I."
+  },
+  {
+    "objectID": "lectures/clase_01.html#participantes-curso",
+    "href": "lectures/clase_01.html#participantes-curso",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Participantes Curso",
+    "text": "Participantes Curso\n\nExpectativas?\nPrevio:\n\nProgramación?\nInvestigaciones?\nTrabajan en el área?\n\n\n\n\n\n−+\n07:00"
+  },
+  {
+    "objectID": "lectures/clase_01.html#ciencia-de-datos-por-ejemplo",
+    "href": "lectures/clase_01.html#ciencia-de-datos-por-ejemplo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ciencia de Datos, por ejemplo",
+    "text": "Ciencia de Datos, por ejemplo\nExtraer conocimiento desde un conjunto de datos"
+  },
+  {
+    "objectID": "lectures/clase_01.html#excel---no",
+    "href": "lectures/clase_01.html#excel---no",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Excel - no …",
+    "text": "Excel - no …"
+  },
+  {
+    "objectID": "lectures/clase_01.html#por-qué-r",
+    "href": "lectures/clase_01.html#por-qué-r",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "¡por qué R?",
+    "text": "¡por qué R?"
+  },
+  {
+    "objectID": "lectures/clase_01.html#rstudio",
+    "href": "lectures/clase_01.html#rstudio",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "RStudio",
+    "text": "RStudio"
+  },
+  {
+    "objectID": "lectures/clase_01.html#vista-integral",
+    "href": "lectures/clase_01.html#vista-integral",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Vista Integral",
+    "text": "Vista Integral"
+  },
+  {
+    "objectID": "lectures/clase_01.html#importar",
+    "href": "lectures/clase_01.html#importar",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Importar",
+    "text": "Importar"
+  },
+  {
+    "objectID": "lectures/clase_01.html#ordenar-transformar",
+    "href": "lectures/clase_01.html#ordenar-transformar",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ordenar + transformar",
+    "text": "Ordenar + transformar"
+  },
+  {
+    "objectID": "lectures/clase_01.html#visualizar",
+    "href": "lectures/clase_01.html#visualizar",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Visualizar",
+    "text": "Visualizar"
+  },
+  {
+    "objectID": "lectures/clase_01.html#modelar",
+    "href": "lectures/clase_01.html#modelar",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Modelar",
+    "text": "Modelar"
+  },
+  {
+    "objectID": "lectures/clase_01.html#comprender",
+    "href": "lectures/clase_01.html#comprender",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Comprender",
+    "text": "Comprender"
+  },
+  {
+    "objectID": "lectures/clase_01.html#comunicar",
+    "href": "lectures/clase_01.html#comunicar",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Comunicar",
+    "text": "Comunicar"
+  },
+  {
+    "objectID": "lectures/clase_01.html#generar-conjunto-de-datos",
+    "href": "lectures/clase_01.html#generar-conjunto-de-datos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Generar Conjunto de Datos",
+    "text": "Generar Conjunto de Datos"
+  },
+  {
+    "objectID": "lectures/clase_01.html#programar",
+    "href": "lectures/clase_01.html#programar",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Programar",
+    "text": "Programar"
+  },
+  {
+    "objectID": "lectures/clase_01.html#intención",
+    "href": "lectures/clase_01.html#intención",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Intención",
+    "text": "Intención\n\nPensar como un Científico de Datos:\n\nInvestigador\nCrítico\nInnovador\n\nDónde ubicar recursos técnicos y ayuda"
+  },
+  {
+    "objectID": "lectures/clase_01.html#promesa",
+    "href": "lectures/clase_01.html#promesa",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Promesa",
+    "text": "Promesa\n\nNociones de programación\nObtener y crear conjunto de datos\nPresentar investigaciones"
+  },
+  {
+    "objectID": "lectures/clase_01.html#página-web",
+    "href": "lectures/clase_01.html#página-web",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Página Web",
+    "text": "Página Web\nhttps://ucveconomiar4ds.netlify.app\n\n\nTodos los materiales\nEnlaces a recursos"
+  },
+  {
+    "objectID": "lectures/clase_01.html#salones",
+    "href": "lectures/clase_01.html#salones",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Salones",
+    "text": "Salones\n\nLaboratorio piso 2\nCentro Microscopía Electrónica FC"
+  },
+  {
+    "objectID": "lectures/clase_01.html#herramientas-del-curso",
+    "href": "lectures/clase_01.html#herramientas-del-curso",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Herramientas del Curso",
+    "text": "Herramientas del Curso\n\nUso Discord: comunicación, recomendaciones, soporte\nRepositorio GitHub: optimizar flujos de trabajo\nAsistente chat para codificación\nPágina web con recursos\nRStudio Cloud-Server: computación en la nube"
+  },
+  {
+    "objectID": "lectures/clase_01.html#actividades",
+    "href": "lectures/clase_01.html#actividades",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Actividades",
+    "text": "Actividades\n\nRevisar los materiales de apoyo compartidos\nClases pendientes vía remoto (al menos 3 clases)\nParticipar en el curso, atender las actividades, practicar constantemente\nEnlazar lo aprendido con datos del mundo real, preferiblemente sobre la realidad venezolana"
+  },
+  {
+    "objectID": "lectures/clase_01.html#tareas",
+    "href": "lectures/clase_01.html#tareas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tareas",
+    "text": "Tareas\n\nSemanales (cantidad exacta por definir)\nSe entregan los códigos mediante GitHub"
+  },
+  {
+    "objectID": "lectures/clase_01.html#bibliografía",
+    "href": "lectures/clase_01.html#bibliografía",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Bibliografía",
+    "text": "Bibliografía\n\nr4ds en español\nHands-On Programming with R\nCiencia de Datos para Gente Sociable\nMuchos otros"
+  },
+  {
+    "objectID": "lectures/clase_01.html#proyecto",
+    "href": "lectures/clase_01.html#proyecto",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Proyecto",
+    "text": "Proyecto\n\nElección del conjunto de datos de su preferencia\nTrabajo en equipo\nPresentación avances tercer mes del curso\nPresentación final del Proyecto en laboratorio (20 minutos)\nCreación de un póster (afiche) para comunicar (ni bachillerato)\nSe publicará en la página el proyecto"
+  },
+  {
+    "objectID": "lectures/clase_01.html#evaluación",
+    "href": "lectures/clase_01.html#evaluación",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Evaluación",
+    "text": "Evaluación\n\n\n\nCategoría\nPercentage\n\n\n\n\nLaboratorios-tareas\n40%\n\n\nProyecto Intermedio Curso\n20%\n\n\nProyecto Final Curso\n30%\n\n\nEnsayo (inicios diciembre)\n10%\n\n\n\nEn la página del curso están las especificaciones sobre los proyectos a realizar"
+  },
+  {
+    "objectID": "lectures/clase_01.html#equipos",
+    "href": "lectures/clase_01.html#equipos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Equipos",
+    "text": "Equipos\n\n4 a 5 personas\nProyecto\nEvaluación Equipo de Profesores:\n\ncalidad código, originalidad, aporte"
+  },
+  {
+    "objectID": "lectures/clase_01.html#soporte",
+    "href": "lectures/clase_01.html#soporte",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Soporte",
+    "text": "Soporte\n\nEn la página del curso se publicarán las horas de atención\nRealizar preguntas en el canal foro en el Discord\nEvitar uso de correo\nRevisar distintos canales en Discord, p. ejem: errores-de-códigos"
+  },
+  {
+    "objectID": "lectures/clase_01.html#novedades--anuncios",
+    "href": "lectures/clase_01.html#novedades--anuncios",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Novedades- Anuncios",
+    "text": "Novedades- Anuncios\n\nSe publicacarán en el canal anuncios-clases del Discord\nRevisar día anterior a cada una de las clases"
+  },
+  {
+    "objectID": "lectures/clase_01.html#late-work-waivers-regrades-policy",
+    "href": "lectures/clase_01.html#late-work-waivers-regrades-policy",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Late work, waivers, regrades policy",
+    "text": "Late work, waivers, regrades policy\n\nWe have policies!\nRead about them on the course syllabus and refer back to them when you need it"
+  },
+  {
+    "objectID": "lectures/clase_01.html#retos-que-representa-el-curso",
+    "href": "lectures/clase_01.html#retos-que-representa-el-curso",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Retos que Representa el Curso",
+    "text": "Retos que Representa el Curso"
+  },
+  {
+    "objectID": "lectures/clase_01.html#tareas-asignadas",
+    "href": "lectures/clase_01.html#tareas-asignadas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tareas Asignadas",
+    "text": "Tareas Asignadas\n\nRevisar canales en Discord\n\nReglas\nRecursos disponibles\nTareas\n\nRealizar la primera tarea\n\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "lectures/clase_01.html#actividades-próximas",
+    "href": "lectures/clase_01.html#actividades-próximas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Actividades Próximas",
+    "text": "Actividades Próximas\n\nRevisar los materiales de apoyo compartidos\nClases pendientes vía remoto (al menos 3 clases)"
+  },
+  {
+    "objectID": "lectures/clase_01.html#equipos-proyecto",
+    "href": "lectures/clase_01.html#equipos-proyecto",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Equipos Proyecto",
+    "text": "Equipos Proyecto\n\n4 a 5 personas\nEvaluación Equipo de Profesores:\n\ncalidad código, originalidad, aporte"
+  },
+  {
+    "objectID": "lectures/clase_01.html#soporte-curso",
+    "href": "lectures/clase_01.html#soporte-curso",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Soporte Curso",
+    "text": "Soporte Curso\n\nEn la página del curso se publicarán las horas de atención\nRealizar preguntas en el canal foro en el Discord\nEvitar uso de correo\nRevisar distintos canales en Discord, p. ejem: errores-de-códigos"
   }
 ]
