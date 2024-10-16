@@ -186,8 +186,6 @@ Extraer conocimiento desde un conjunto de datos
 
 En la página del curso están las especificaciones sobre los proyectos a realizar
 
-## 
-
 ## Equipos Proyecto
 
 -   4 a 5 personas
