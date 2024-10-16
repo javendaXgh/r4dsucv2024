@@ -145,7 +145,6 @@ Extraer conocimiento desde un conjunto de datos
 
 -   RStudio Cloud-Server: computación en la nube
 
-
 ## Bibliografía
 
 -   r4ds en español
@@ -176,7 +175,7 @@ Extraer conocimiento desde un conjunto de datos
 
 -   Se publicará en la página el proyecto
 
-## Evaluación 
+## Evaluación
 
 | Categoría                  | Percentage |
 |----------------------------|------------|
@@ -202,12 +201,10 @@ En la página del curso están las especificaciones sobre los proyectos a realiz
 -   Evitar uso de correo
 -   Revisar distintos canales en Discord, p. ejem: ***errores-de-códigos***
 
-
 ## Novedades- Anuncios
 
 -   Se publicacarán en el canal ***anuncios-clases*** del Discord
 -   Revisar día anterior a cada una de las clases
-
 
 # Conclusión
 
