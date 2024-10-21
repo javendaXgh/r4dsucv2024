@@ -85,11 +85,11 @@
     "text": "panel Editor de Código\n\neditor de código. se introducen códigos (scripts)\nSe ejecutan con “run” el el área superior derecha"
   },
   {
-    "objectID": "clases/clase_02.html#panel-envirnment-y-files",
-    "href": "clases/clase_02.html#panel-envirnment-y-files",
+    "objectID": "clases/clase_02.html#panel-environment-y-files",
+    "href": "clases/clase_02.html#panel-environment-y-files",
     "title": "Conociendo el IDE RStudio",
-    "section": "panel Envirnment y Files",
-    "text": "panel Envirnment y Files"
+    "section": "panel Environment y Files",
+    "text": "panel Environment y Files"
   },
   {
     "objectID": "clases/clase_02.html#panel-cónsola",
@@ -124,14 +124,21 @@
     "href": "clases/clase_02.html#configurar-working-directory",
     "title": "Conociendo el IDE RStudio",
     "section": "Configurar “working directory”",
-    "text": "Configurar “working directory”\ncrear carpeta donde se van a guardar los proyectos, p ejemp, dentro de “Documentos” - paso 1\n\n\npaso 2"
+    "text": "Configurar “working directory”\ncrear carpeta donde se van a guardar los proyectos, p ejemp, dentro de “Documentos” - paso 1"
+  },
+  {
+    "objectID": "clases/clase_02.html#configurar-working-directory-cont.",
+    "href": "clases/clase_02.html#configurar-working-directory-cont.",
+    "title": "Conociendo el IDE RStudio",
+    "section": "Configurar “working directory” (cont.)",
+    "text": "Configurar “working directory” (cont.)\npaso 2"
   },
   {
     "objectID": "clases/clase_02.html#proyecto",
     "href": "clases/clase_02.html#proyecto",
     "title": "Conociendo el IDE RStudio",
     "section": "Proyecto:",
-    "text": "Proyecto:\nconjunto de archivos (“files” ) que conforman un determinado análisis, página web, presentación, libro, etc. Al crearse hay algunos archivos que se crean automáticamente .Rproj\nlist.files()"
+    "text": "Proyecto:\nconjunto de archivos (“files” ) que conforman un determinado análisis, página web, presentación, libro, etc.\nAl crearse hay algunos archivos que se definen automáticamente como por ejemplo el .Rproj\nCon la función 💡 (función 🤔????) list.files() se pueden listar todos los archivos que se encuentran en el directorio"
   },
   {
     "objectID": "clases/clase_02.html#primera-práctica",
@@ -139,6 +146,13 @@
     "title": "Conociendo el IDE RStudio",
     "section": "Primera Práctica:",
     "text": "Primera Práctica:\nInstalar un paquete de R de manera offline\n\nCrear un Proyecto de nombre 02_inst_paqk_off\nDescargar script desde http://direccion_ip:90/descarga/scripts/clase_02_instalacion_paquete_offline.R\nDescargar archivo zip\nhttp://direccion_ip:90/descarga/winbinarios.zip\nMover el archivo zip al directorio de trabajo del proyecto que\nEjecutar línea a línea"
+  },
+  {
+    "objectID": "clases/clase_02.html#video-creación-proyecto",
+    "href": "clases/clase_02.html#video-creación-proyecto",
+    "title": "Conociendo el IDE RStudio",
+    "section": "Video Creación Proyecto",
+    "text": "Video Creación Proyecto"
   },
   {
     "objectID": "clases/clase_02.html#playlist-economía-r4ds",
@@ -436,12 +450,5 @@
       "Sobre el Curso",
       "Información General"
     ]
-  },
-  {
-    "objectID": "clases/clase_02.html#video-creación-proyecto",
-    "href": "clases/clase_02.html#video-creación-proyecto",
-    "title": "Conociendo el IDE RStudio",
-    "section": "Video Creación Proyecto",
-    "text": "Video Creación Proyecto"
   }
 ]

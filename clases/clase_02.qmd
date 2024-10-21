@@ -65,7 +65,7 @@ editor de código. se introducen códigos (scripts)
 
 Se ejecutan con "run" el el área superior derecha
 
-## panel Envirnment y Files
+## panel Environment y Files
 
 ![](images/rstudio/4_rightside.png){width="344"}
 
@@ -103,15 +103,19 @@ crear carpeta donde se van a guardar los proyectos, p ejemp, dentro de "Document
 
 ![](images/rstudio/wd1){width="500"}
 
--   paso 2
+## Configurar "working directory" (cont.)
+
+paso 2
 
 ![](images/rstudio/wd2){width="500"}
 
 ## Proyecto:
 
-conjunto de archivos ("files" ) que conforman un determinado análisis, página web, presentación, libro, etc. Al crearse hay algunos archivos que se crean automáticamente .Rproj
+conjunto de archivos ("files" ) que conforman un determinado análisis, página web, presentación, libro, etc.
 
-`list.files()`
+Al crearse hay algunos archivos que se definen automáticamente como por ejemplo el .`Rproj`
+
+Con la **función** 💡 (función 🤔????) `list.files()` se pueden listar todos los archivos que se encuentran en el directorio
 
 ## Primera Práctica:
 
