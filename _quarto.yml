@@ -1,11 +1,11 @@
 project:
   type: website
   resources:
-    - lectures/
+    - scripts/
 
 website:
   page-navigation: false
-  title: "R4DS-Economía-UCV"
+  title: "UCV EconomíaR4DS"
   description: "Ciencia de Datos Basada en Programación en R para Economistas"
   site-url: https://ucveconomiar4ds.netlify.app
   repo-url: https://github.com/orgs/UCVeconomia2024-2/
@@ -53,7 +53,7 @@ website:
           #   text: Preguntas Frecuentes
       - section: "Prácticas"
         contents:
-          - href: labs/lab-1.qmd
+          - href: laboratorios/lab-1.qmd
             text: Práctica 1
       - section: "Proyectos"
         contents:
@@ -63,7 +63,7 @@ website:
             text: "Proyecto Final de Curso"
 
   page-footer:
-    right: "Este sitio fue elaborado con [Quarto](https://quarto.org/)."
+    right: "Este sitio fue elaborado con [Quarto](https://quarto.org/) inspirado en el site [sta199 de Mine Çetinkaya-Rundel](https://mine-cr.com/teaching/sta199/)"
     background: "#5d6d74"
     left: |
       [![](images/escuelaeconomiawbg.png){fig-alt="Escuela de Economía" width=75px}](http://www.ucv.ve/economia)

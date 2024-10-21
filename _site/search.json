@@ -1,58 +1,7 @@
 [
   {
-    "objectID": "curso-infogeneral.html",
-    "href": "curso-infogeneral.html",
-    "title": "Información General",
-    "section": "",
-    "text": "Los seres humanos han adoptado masivamente el uso de dispositivos electrónicos en sus actividades diarias, teniendo de ejemplos los teléfonos móviles, los sensores para mediciones de salud, entre otros. En particular, resulta necesario resaltar que estos aparatos almacenan registros digitales de los valores que en ellos se levantan, quedando reflejadas las actividades que hace su portador. Igualmente, la sociedad ha llevado al plano digital una serie de procesos y actividades que antes se hacían en el mundo físico, quedando también los registros de los contenidos generados y de las distintas interacciones que ocurren. Como consecuencia de ambos factores, se encuentran disponibles grandes volúmenes de datos que pueden ser procesados parcial o totalmente por medio de computadores, posteriormente ser transformados en información y con esta se puede hacer el modelado que permite representar conductas, comportamientos sociales, así como la determinación de tendencias, patrones o análisis predictivos.\nDentro de este contexto se tiene que han surgido nuevas áreas de estudio, que desde distintos ángulos, fundamentan la generación de conocimiento en el uso de los datos. Algunas de estas son:\n\nCiencia de Datos: es un campo interdisciplinario que utiliza métodos científicos, estadísticos y computacionales para extraer conocimientos y tomar decisiones informadas a partir de grandes conjuntos de datos, donde se recopilan, limpian, analizan y visualizan datos para identificar patrones, tendencias y relaciones que no serían evidentes a simple vista.\nCiencias Sociales Computacionales: es un campo de estudio donde las computadoras se utilizan para modelar, simular y analizar fenómenos sociales, por ejemplo, estudiando los comportamientos de los individuos en las redes sociales, la influencia de estas redes en la toma de decisiones, la búsqueda de correlaciones o relaciones causales entre distintos fenómenos socio-económicos.\n\nSaber que existen estas nuevas áreas de conocimiento, algunas ya formalizadas como carreras de estudio en universidades del mundo, e incluso en latinoamérica, hacen ver claramente que la manipulación o el modelado de los datos no sólo debe quedar en manos de los computistas, sino se hace necesario que los científicos sociales conozcan y dominen distintos métodos para interactuar con tales cantidades de información, yendo más allá del uso de softwares tradicionales como lo son las hojas de cálculo tipo Excel.\nPor tal motivo, en este documento se expone la propuesta de la materia de estudio “Ciencia de Datos basada en programación en R para economistas” dirigido a los estudiantes de pregrado de la Escuela de Economía.\nEl contenido de la materia, que será detallado más adelante, está diseñado para que el aprendiz pase por un proceso de aprendizaje y de práctica continua, que le permitan dominar diversos métodos de programación que sirvan como herramientas para sustentar y validar las hipótesis que tengan al realizar las investigaciones inherentes al eje central de la carrera Economía, así como también para coadyuvar a que puedan comunicar de manera efectiva los resultados de las investigaciones.\nIgualmente, es necesario resaltar que a lo largo de todas las clases y actividades, se hace énfasis en el desarrollo de las capacidades analíticas del participante, mediante la interpretación de los resultados obtenidos al procesar los datos. De esta forma, se introducen conceptos y métodos de la ciencia de datos y de las ciencias sociales computacionales.\n\n\n\nPara programar en informática se cuenta con distintos lenguajes, los cuales se clasifican principalmente según dos características. La primera viene dada en el propósito o el uso, que tendrá el programa informático que se esté codificando, ya que por ejemplo, son distintos los objetivos que se persiguen al programar las rutinas de un software que da soporte a un horno microondas a los que se tendrán, como es en este caso, al hacer la manipulación y el procesamiento de los datos. Es así, que dentro de la taxonomía de los lenguajes de programación, uno de los criterios de clasificación que se aplica, es determinar si son de “propósito general”, equivalente a indicar que pueden ser usados para distintos fines y por otro lado están aquellos lenguajes que son de “propósito específico”, en los que se delimita de forma taxativa, a qué están destinados los programas que se pueden codificar con tal lenguaje.\nAdicionalmente, la otra característica que diferencia a los lenguajes, es lo que se denomina el “nivel” en el que se considera que están cuando se hace el enunciado y la ejecución de las instrucciones que el computador ejecutará. Para esto existe una escala entre los extremos “bajo nivel” y “alto nivel”, catalogando como lenguajes de “bajo nivel”, aquellos en los que se programa en instrucciones que son mucho más abstractas y cercanas al lenguaje intrínseco del computador, el cual tiende a ser bastante complejo. Por otra lado, están los lenguajes que se consideran de “alto nivel”, en los que se programa con enunciados que son de más fácil comprensión para el ser humano, ya que las instrucciones que se codifican son más cercanas en sintaxis al lenguaje natural con que habitualmente nos expresamos.\nDe esta manera, dentro de los lenguajes de programación se encuentra R, el cual es un lenguaje de propósito específico, orientado a la estadística que ha sido adoptado ampliamente para realizar la manipulación y al procesamiento de datos, que inicialmente a principios del año 2000, estuvo destinado a correr modelos estadísticos como una opción de código abierto alternativa a programas como Stata o EViews.\nAdicionalmente, el lenguaje R también se asume que es de “alto nivel”, facilitando al usuario la comprensión del lenguaje y de cómo hacer uso de las instrucciones que en él se pueden ejecutar, teniendo una curva de aprendizaje con una pendiente más suave a la de otros lenguajes de programación, lo que lo hace ideal para ser aprendido por aquellos que no tienen formación en ciencias de la computación sino que provienen de otras áreas del conocimiento como lo son las ciencias sociales.\nNo obstante, como en todo proceso en que se hace la selección de un recurso sobre otro, existen beneficios y sacrificios, no siendo la selección de R ajena a estos contrapesos. Las opciones de lenguajes disponibles para los investigadores cercanos a las ciencias que basan sus estudios en el uso de los datos, tienen como otras opciones los lenguajes Python y Julia.\nPython es un lenguaje de programación de propósito general, que ha sido adoptado por la comunidad científica por su facilidad de uso y por la cantidad de librerías que se han desarrollado para el procesamiento de datos, mientras que Julia es un lenguaje de programación de alto rendimiento, que ha sido adoptado por la comunidad científica por su velocidad de ejecución y por la facilidad de escribir código que se asemeja a las matemáticas.\nSin embargo, dentro de estas opciones el lenguaje que se ha seleccionado para la propuesta de esta materia es R, ya que es un lenguaje que ha sido adoptado ampliamente por la comunidad de científicos sociales por su facilidad de uso, la integración con el entorno de desarrollo RStudio que facilita la configuración inicial del ambiente de trabajo dentro del computador, así como también por la gran cantidad de librerías que se han desarrollado para el procesamiento de datos asociados a dominios de las ciencias sociales.\nEn líneas generales, a continuación se mencionan algunos de los beneficios que se obtienen al programar en R:\n\nAnálisis de datos: R es una herramienta poderosa para el análisis de datos, lo que permite a los economistas manejar grandes conjuntos de datos de manera eficiente. Esto es crucial en economía, donde los datos pueden ser complejos y abundantes.\nVisualización de datos: R ofrece una amplia gama de paquetes para visualización de datos, lo que permite a los economistas crear gráficos y visualizaciones claras, interactivas y efectivas, lo cual es útil para comunicar los resultados de las investigaciones de manera más impactante y comprensible.\nModelado estadístico: R cuenta con una gran variedad de librerías para realizar análisis estadísticos avanzados y modelado, lo que permite a los economistas desarrollar modelos complejos para comprender mejor los fenómenos sociales y económicos.\nReproducibilidad, comunicar resultados y transparencia: Programar en R permite a los economistas documentar y reproducir fácilmente sus análisis, lo que aumenta la transparencia y la credibilidad de la investigación. Igualmente los investigadores puedan comunicar de manera efectiva los resultados de sus investigaciones, generando reportes, gráficos, tablas, mapas, aplicaciones web interactivas, entre otros, que pueden ser publicadas con cadenas de trabajo automatizadas que minimizan los esfuerzos y el tiempo que se requiere para la generación y actualización de estos productos.\n\nSin embargo, la propuesta acá detallada, no aborda en profundidad los aspectos mencionados en el punto 3 sobre el modelado estadístico, ya que al existir materias especializadas dentro de la carrera de Economía para abordar estos tópicos, se considera que la materia propuesta se enfoca en la enseñanza del resto de los beneficios enumerados.\nIgualmente resulta de interés hacer las siguientes consideraciones al usar un lenguaje de programación como R, también extrapolable a python:\n\nLenguaje de código abierto: R es un lenguaje open source (código abierto) y su uso no implica ningún pago de licencia y los recursos computacionales que se necesitan para ejecutarlo están optimizados, siendo un elemento muy beneficioso, por ejemplo para estudiantes e instituciones que pueden contar con equipos informáticos que no son de última generación, haciendo que los procesos que en él se corran puedan hacerse de una manera más eficiente en comparación a si se usarán softwares privativos.\nComunidad de Usuarios: la existencia de una comunidad de usuarios muy activa, donde en múltiples investigaciones el componente de programación se hace en este lenguaje, llegando algunas de estas investigaciones a formar parte del estado del arte en su dominio y en muchos casos los modelos implementados o aplicados, son publicados mediantes “librerías” o “paquetes”, haciendo que los usuarios de R puedan acceder de forma libre a los más recientes y novedosos modelos, siendo nuevamente importante resaltar que esto lo pueden hacer de forma legal, sin realizar el desembolso de alguna suma de dinero.\nAcceso a Cómputos en la Nube: los programadores de R pueden acceder a recursos de cómputo que se encuentran disponibles en la nube, donde mediante un navegador web se pueden ingresa a sitios de internet que permiten programar y ejecutar los códigos, disipando barreras que generalmente vienen dadas en que el investigador cuenta con computadoras obsoletas o de muy limitados recursos de procesamiento informático. Al usar la nube, el computador del programador pasa a ser un terminal y la contraparte de los cálculos ocurre en un servidor remoto, con robustos recursos que empresas tecnológicas ponen a disposicición de la comunidad científica de forma gratuita.\n\n\n\n\nTrabajar por proyectos grupales donde tengan que resolver un un problema real y aprendan haciendo las codificaciones, asociado a algún tema de interés de la realidad económica venezolana y abarcando las distintas fases de un proyecto de investigación, desde la obtención de los datos, su manipulación y procesamiento, hasta la presentación de los resultados, garantizando que las investigaciones pueda ser reproducibles por la comunidad científica.\nEjemplos de esto puede ser la obtención de datos de forma periódica y automatizada para la generación de una canasta de precios de la cual se puedan hacer las mediciones de las variaciones de precios detectadas y así construir un indicador de inflación.\n\n\n\nA los fines de indicar algunas de las fuentes de datos a las cuales se puede acceder para realizar las investigaciones a desarrollar, se mencionan las siguientes:\n\nPáginas web o bases de datos de instituciones públicas y privadas.\nPáginas web de comercio electrónico como supermercados donde se publican precios.\nInformación georreferenciada disponible en las API´s de Google Maps y de Open Street Maps.\nConexiones a API´s de distintos sistemas de información.\nDatos de redes sociales.\n\n\n\n\nSesiones de clases y prácticas presenciales, ya que se considera que el aprendizaje de la programación se facilita cuando se cuenta con la presencia del instructor y se puede interactuar con los compañeros de clase y más aún, teniendo presente los problemas de conectividad a internet.\n\n\n\nLas clases deben ser impartidas en un laboratorio que por participante debe contar con un equipo (computador) con al menos 4 GB de RAM; navegador web actualizado (Firefox o Google Chrome); 10 Gb de disco duro disponible; sistema operativo: windows 8 (o superior) , MacOS o Ubuntu 18 o superior (en caso de usar Ubuntu la memoria RAM puede ser mínima de 2 Gb ); arquitectura 64 bits.\n\n\n\nEl curso contará con un repositorio de acceso público mediante la web, con los códigos, datos, guías y demás materiales que sean usados y generados a lo largo de las sesiones de trabajo. Igualmente se adoptará el uso un grupo de mensajería como Discord para almacenar todas las preguntas y respuestas que vayan surgiendo a lo largo del curso, las cuales podrán servir como material de consulta para futuros asistentes al curso.\nLos proyectos de programación que se generen a lo largo del curso por parte de los alumnos, deberán ser compartidos mediante el repositorio, garantizando el acceso por parte de todos los interesados. Igualmente se fomentará la creación de conjuntos de datos de libre acceso que sirvan para toda la comunidad de investigadores.\n\n\n\nEn resumen, aprender a programar en R y familiarizarse con la ciencia de datos y las ciencias sociales computacionales, puede permitir a los economistas realizar análisis más sofisticados y rigurosos, así como abordar preguntas de investigación más complejas en el ámbito de las ciencias sociales, abriendo la posibilidad de que se obtengan y generen datos estructurados, en medio de una situación país donde no existe la cultura gubernamental ni privada de compartir y/o publicar conjuntos de datos.\nLos participantes del curso podrán hacer investigaciones que resulten reproducibles y mediante procesamientos encadenados y se les facilitará comunicar los resultados mediante blogs, página web o reportes técnicos de fácil acceso mediante la web.\nIgualmente, podrán hacer prototipos de aplicaciones web interactivas para el análisis exploratorio de los datos, su modelado mediante modelos econométricos o estadísticos y dispondrán de nociones de elementos introductorios a la ciencia de datos y sus métodos de trabajo.",
-    "crumbs": [
-      "Sobre el Curso",
-      "Información General"
-    ]
-  },
-  {
-    "objectID": "curso-infogeneral.html#ciencia-de-datos-basada-en-programación-en-r-para-economistas",
-    "href": "curso-infogeneral.html#ciencia-de-datos-basada-en-programación-en-r-para-economistas",
-    "title": "Información General",
-    "section": "",
-    "text": "Los seres humanos han adoptado masivamente el uso de dispositivos electrónicos en sus actividades diarias, teniendo de ejemplos los teléfonos móviles, los sensores para mediciones de salud, entre otros. En particular, resulta necesario resaltar que estos aparatos almacenan registros digitales de los valores que en ellos se levantan, quedando reflejadas las actividades que hace su portador. Igualmente, la sociedad ha llevado al plano digital una serie de procesos y actividades que antes se hacían en el mundo físico, quedando también los registros de los contenidos generados y de las distintas interacciones que ocurren. Como consecuencia de ambos factores, se encuentran disponibles grandes volúmenes de datos que pueden ser procesados parcial o totalmente por medio de computadores, posteriormente ser transformados en información y con esta se puede hacer el modelado que permite representar conductas, comportamientos sociales, así como la determinación de tendencias, patrones o análisis predictivos.\nDentro de este contexto se tiene que han surgido nuevas áreas de estudio, que desde distintos ángulos, fundamentan la generación de conocimiento en el uso de los datos. Algunas de estas son:\n\nCiencia de Datos: es un campo interdisciplinario que utiliza métodos científicos, estadísticos y computacionales para extraer conocimientos y tomar decisiones informadas a partir de grandes conjuntos de datos, donde se recopilan, limpian, analizan y visualizan datos para identificar patrones, tendencias y relaciones que no serían evidentes a simple vista.\nCiencias Sociales Computacionales: es un campo de estudio donde las computadoras se utilizan para modelar, simular y analizar fenómenos sociales, por ejemplo, estudiando los comportamientos de los individuos en las redes sociales, la influencia de estas redes en la toma de decisiones, la búsqueda de correlaciones o relaciones causales entre distintos fenómenos socio-económicos.\n\nSaber que existen estas nuevas áreas de conocimiento, algunas ya formalizadas como carreras de estudio en universidades del mundo, e incluso en latinoamérica, hacen ver claramente que la manipulación o el modelado de los datos no sólo debe quedar en manos de los computistas, sino se hace necesario que los científicos sociales conozcan y dominen distintos métodos para interactuar con tales cantidades de información, yendo más allá del uso de softwares tradicionales como lo son las hojas de cálculo tipo Excel.\nPor tal motivo, en este documento se expone la propuesta de la materia de estudio “Ciencia de Datos basada en programación en R para economistas” dirigido a los estudiantes de pregrado de la Escuela de Economía.\nEl contenido de la materia, que será detallado más adelante, está diseñado para que el aprendiz pase por un proceso de aprendizaje y de práctica continua, que le permitan dominar diversos métodos de programación que sirvan como herramientas para sustentar y validar las hipótesis que tengan al realizar las investigaciones inherentes al eje central de la carrera Economía, así como también para coadyuvar a que puedan comunicar de manera efectiva los resultados de las investigaciones.\nIgualmente, es necesario resaltar que a lo largo de todas las clases y actividades, se hace énfasis en el desarrollo de las capacidades analíticas del participante, mediante la interpretación de los resultados obtenidos al procesar los datos. De esta forma, se introducen conceptos y métodos de la ciencia de datos y de las ciencias sociales computacionales.\n\n\n\nPara programar en informática se cuenta con distintos lenguajes, los cuales se clasifican principalmente según dos características. La primera viene dada en el propósito o el uso, que tendrá el programa informático que se esté codificando, ya que por ejemplo, son distintos los objetivos que se persiguen al programar las rutinas de un software que da soporte a un horno microondas a los que se tendrán, como es en este caso, al hacer la manipulación y el procesamiento de los datos. Es así, que dentro de la taxonomía de los lenguajes de programación, uno de los criterios de clasificación que se aplica, es determinar si son de “propósito general”, equivalente a indicar que pueden ser usados para distintos fines y por otro lado están aquellos lenguajes que son de “propósito específico”, en los que se delimita de forma taxativa, a qué están destinados los programas que se pueden codificar con tal lenguaje.\nAdicionalmente, la otra característica que diferencia a los lenguajes, es lo que se denomina el “nivel” en el que se considera que están cuando se hace el enunciado y la ejecución de las instrucciones que el computador ejecutará. Para esto existe una escala entre los extremos “bajo nivel” y “alto nivel”, catalogando como lenguajes de “bajo nivel”, aquellos en los que se programa en instrucciones que son mucho más abstractas y cercanas al lenguaje intrínseco del computador, el cual tiende a ser bastante complejo. Por otra lado, están los lenguajes que se consideran de “alto nivel”, en los que se programa con enunciados que son de más fácil comprensión para el ser humano, ya que las instrucciones que se codifican son más cercanas en sintaxis al lenguaje natural con que habitualmente nos expresamos.\nDe esta manera, dentro de los lenguajes de programación se encuentra R, el cual es un lenguaje de propósito específico, orientado a la estadística que ha sido adoptado ampliamente para realizar la manipulación y al procesamiento de datos, que inicialmente a principios del año 2000, estuvo destinado a correr modelos estadísticos como una opción de código abierto alternativa a programas como Stata o EViews.\nAdicionalmente, el lenguaje R también se asume que es de “alto nivel”, facilitando al usuario la comprensión del lenguaje y de cómo hacer uso de las instrucciones que en él se pueden ejecutar, teniendo una curva de aprendizaje con una pendiente más suave a la de otros lenguajes de programación, lo que lo hace ideal para ser aprendido por aquellos que no tienen formación en ciencias de la computación sino que provienen de otras áreas del conocimiento como lo son las ciencias sociales.\nNo obstante, como en todo proceso en que se hace la selección de un recurso sobre otro, existen beneficios y sacrificios, no siendo la selección de R ajena a estos contrapesos. Las opciones de lenguajes disponibles para los investigadores cercanos a las ciencias que basan sus estudios en el uso de los datos, tienen como otras opciones los lenguajes Python y Julia.\nPython es un lenguaje de programación de propósito general, que ha sido adoptado por la comunidad científica por su facilidad de uso y por la cantidad de librerías que se han desarrollado para el procesamiento de datos, mientras que Julia es un lenguaje de programación de alto rendimiento, que ha sido adoptado por la comunidad científica por su velocidad de ejecución y por la facilidad de escribir código que se asemeja a las matemáticas.\nSin embargo, dentro de estas opciones el lenguaje que se ha seleccionado para la propuesta de esta materia es R, ya que es un lenguaje que ha sido adoptado ampliamente por la comunidad de científicos sociales por su facilidad de uso, la integración con el entorno de desarrollo RStudio que facilita la configuración inicial del ambiente de trabajo dentro del computador, así como también por la gran cantidad de librerías que se han desarrollado para el procesamiento de datos asociados a dominios de las ciencias sociales.\nEn líneas generales, a continuación se mencionan algunos de los beneficios que se obtienen al programar en R:\n\nAnálisis de datos: R es una herramienta poderosa para el análisis de datos, lo que permite a los economistas manejar grandes conjuntos de datos de manera eficiente. Esto es crucial en economía, donde los datos pueden ser complejos y abundantes.\nVisualización de datos: R ofrece una amplia gama de paquetes para visualización de datos, lo que permite a los economistas crear gráficos y visualizaciones claras, interactivas y efectivas, lo cual es útil para comunicar los resultados de las investigaciones de manera más impactante y comprensible.\nModelado estadístico: R cuenta con una gran variedad de librerías para realizar análisis estadísticos avanzados y modelado, lo que permite a los economistas desarrollar modelos complejos para comprender mejor los fenómenos sociales y económicos.\nReproducibilidad, comunicar resultados y transparencia: Programar en R permite a los economistas documentar y reproducir fácilmente sus análisis, lo que aumenta la transparencia y la credibilidad de la investigación. Igualmente los investigadores puedan comunicar de manera efectiva los resultados de sus investigaciones, generando reportes, gráficos, tablas, mapas, aplicaciones web interactivas, entre otros, que pueden ser publicadas con cadenas de trabajo automatizadas que minimizan los esfuerzos y el tiempo que se requiere para la generación y actualización de estos productos.\n\nSin embargo, la propuesta acá detallada, no aborda en profundidad los aspectos mencionados en el punto 3 sobre el modelado estadístico, ya que al existir materias especializadas dentro de la carrera de Economía para abordar estos tópicos, se considera que la materia propuesta se enfoca en la enseñanza del resto de los beneficios enumerados.\nIgualmente resulta de interés hacer las siguientes consideraciones al usar un lenguaje de programación como R, también extrapolable a python:\n\nLenguaje de código abierto: R es un lenguaje open source (código abierto) y su uso no implica ningún pago de licencia y los recursos computacionales que se necesitan para ejecutarlo están optimizados, siendo un elemento muy beneficioso, por ejemplo para estudiantes e instituciones que pueden contar con equipos informáticos que no son de última generación, haciendo que los procesos que en él se corran puedan hacerse de una manera más eficiente en comparación a si se usarán softwares privativos.\nComunidad de Usuarios: la existencia de una comunidad de usuarios muy activa, donde en múltiples investigaciones el componente de programación se hace en este lenguaje, llegando algunas de estas investigaciones a formar parte del estado del arte en su dominio y en muchos casos los modelos implementados o aplicados, son publicados mediantes “librerías” o “paquetes”, haciendo que los usuarios de R puedan acceder de forma libre a los más recientes y novedosos modelos, siendo nuevamente importante resaltar que esto lo pueden hacer de forma legal, sin realizar el desembolso de alguna suma de dinero.\nAcceso a Cómputos en la Nube: los programadores de R pueden acceder a recursos de cómputo que se encuentran disponibles en la nube, donde mediante un navegador web se pueden ingresa a sitios de internet que permiten programar y ejecutar los códigos, disipando barreras que generalmente vienen dadas en que el investigador cuenta con computadoras obsoletas o de muy limitados recursos de procesamiento informático. Al usar la nube, el computador del programador pasa a ser un terminal y la contraparte de los cálculos ocurre en un servidor remoto, con robustos recursos que empresas tecnológicas ponen a disposicición de la comunidad científica de forma gratuita.\n\n\n\n\nTrabajar por proyectos grupales donde tengan que resolver un un problema real y aprendan haciendo las codificaciones, asociado a algún tema de interés de la realidad económica venezolana y abarcando las distintas fases de un proyecto de investigación, desde la obtención de los datos, su manipulación y procesamiento, hasta la presentación de los resultados, garantizando que las investigaciones pueda ser reproducibles por la comunidad científica.\nEjemplos de esto puede ser la obtención de datos de forma periódica y automatizada para la generación de una canasta de precios de la cual se puedan hacer las mediciones de las variaciones de precios detectadas y así construir un indicador de inflación.\n\n\n\nA los fines de indicar algunas de las fuentes de datos a las cuales se puede acceder para realizar las investigaciones a desarrollar, se mencionan las siguientes:\n\nPáginas web o bases de datos de instituciones públicas y privadas.\nPáginas web de comercio electrónico como supermercados donde se publican precios.\nInformación georreferenciada disponible en las API´s de Google Maps y de Open Street Maps.\nConexiones a API´s de distintos sistemas de información.\nDatos de redes sociales.\n\n\n\n\nSesiones de clases y prácticas presenciales, ya que se considera que el aprendizaje de la programación se facilita cuando se cuenta con la presencia del instructor y se puede interactuar con los compañeros de clase y más aún, teniendo presente los problemas de conectividad a internet.\n\n\n\nLas clases deben ser impartidas en un laboratorio que por participante debe contar con un equipo (computador) con al menos 4 GB de RAM; navegador web actualizado (Firefox o Google Chrome); 10 Gb de disco duro disponible; sistema operativo: windows 8 (o superior) , MacOS o Ubuntu 18 o superior (en caso de usar Ubuntu la memoria RAM puede ser mínima de 2 Gb ); arquitectura 64 bits.\n\n\n\nEl curso contará con un repositorio de acceso público mediante la web, con los códigos, datos, guías y demás materiales que sean usados y generados a lo largo de las sesiones de trabajo. Igualmente se adoptará el uso un grupo de mensajería como Discord para almacenar todas las preguntas y respuestas que vayan surgiendo a lo largo del curso, las cuales podrán servir como material de consulta para futuros asistentes al curso.\nLos proyectos de programación que se generen a lo largo del curso por parte de los alumnos, deberán ser compartidos mediante el repositorio, garantizando el acceso por parte de todos los interesados. Igualmente se fomentará la creación de conjuntos de datos de libre acceso que sirvan para toda la comunidad de investigadores.\n\n\n\nEn resumen, aprender a programar en R y familiarizarse con la ciencia de datos y las ciencias sociales computacionales, puede permitir a los economistas realizar análisis más sofisticados y rigurosos, así como abordar preguntas de investigación más complejas en el ámbito de las ciencias sociales, abriendo la posibilidad de que se obtengan y generen datos estructurados, en medio de una situación país donde no existe la cultura gubernamental ni privada de compartir y/o publicar conjuntos de datos.\nLos participantes del curso podrán hacer investigaciones que resulten reproducibles y mediante procesamientos encadenados y se les facilitará comunicar los resultados mediante blogs, página web o reportes técnicos de fácil acceso mediante la web.\nIgualmente, podrán hacer prototipos de aplicaciones web interactivas para el análisis exploratorio de los datos, su modelado mediante modelos econométricos o estadísticos y dispondrán de nociones de elementos introductorios a la ciencia de datos y sus métodos de trabajo.",
-    "crumbs": [
-      "Sobre el Curso",
-      "Información General"
-    ]
-  },
-  {
-    "objectID": "project/proyecto-2.html",
-    "href": "project/proyecto-2.html",
-    "title": "Proyecto Final del Curso",
-    "section": "",
-    "text": "Introducción\nEn este proyecto, tendrás la oportunidad de aplicar todos los conocimientos adquiridos a lo largo del curso para resolver un problema real y relevante. El trabajo será desarrollado en equipos de 3 a 5 estudiantes. Además, diseñarás un póster atractivo que resuma tu investigación y crearás una presentación para compartir tus resultados con tus compañeros y la comunidad en general. Los resultados de las investigaciones se mostrarán en la página del Curso para promocionar el talento de los estudiantes de la Escuela de Economía de la UCV.\nEste proyecto tiene un peso asignado de 30% sobre el total de la calificación del curso.\nLa calificación será con un tope de 30 puntos, desagregados de esta manera:\n\n5 puntos: originalidad y claridad del proyecto (identificación problema, plantear una pregunta de investigación).\n5 puntos: calidad del código (limpieza datos, procesamiento, análisis exploratorio)\n5 puntos: comunicación de los resultados (gráficos, reporte quarto)\n5 puntos: presentación en público del proyecto\n5 puntos póster (afiche)\n5 puntos resto: (documentar proceso, compartir proyecto)\n\n\n\nObjetivos del Proyecto\n\nInvestigación: Realiza un análisis de datos exhaustivo, utilizando las técnicas aprendidas en clase.\nObteneción y limpiar los datos: Recolectar los datos necesarios y realizar las tareas de limpieza y transformación requeridas.\nRealizar el análisis exploratorio de datos: Explorar los datos para identificar patrones, tendencias y relaciones entre las variables.\nModelar los datos: Aplicar técnicas de modelado adecuadas para responder a la pregunta de investigación (opcional, es un valor agregado, no es necesario).\nVisualizar los resultados: Crear visualizaciones claras y efectivas para comunicar los hallazgos.\nComunicación efectiva: Diseña un póster visualmente atractivo que comunique de manera clara y concisa los objetivos, metodología, resultados y conclusiones de tu investigación.\nDocumentar el proceso: Elaborar un informe que describa cada una de las etapas del proyecto, incluyendo el código utilizado.\nPresentación en público: Prepara una presentación breve para exponer tu proyecto ante tus compañeros y recibir retroalimentación.\nColaboración: Comparte tu trabajo con la comunidad del curso, contribuyendo a un repositorio de proyectos.\nCompartir el proyecto: Crear un repositorio en una plataforma de control de versiones ( GitHub) para compartir el código y los resultados con otros.\n\n\n\nEspecificaciones del Proyecto\n\nContenido: El proyecto debe abordar distintas herramientas de R aprendidas hasta el momento.\nTema: Elige un tema de tu interés relacionado con Venezuela que pueda ser abordado con los datos disponibles (obligatorio).\nCalidad del código: Se evaluará la claridad, eficiencia y organización del código.\nEstructura: El proyecto debe seguir las buenas prácticas de desarrollo en RStudio, incluyendo la organización de archivos, el uso de funciones y la documentación del código.\nPóster: Diseña un póster que incluya los siguientes elementos: título, introducción, objetivos, metodología, resultados (visualizaciones), conclusiones y referencias.\nPresentación: Prepara una presentación de 5-7 minutos para exponer tu proyecto.\nInforme: Entrega un informe escrito que detalle el proceso de investigación, los resultados y las conclusiones (opcional).\nReproducibilidad: El proyecto debe ser reproducible, es decir, cualquier persona con los mismos datos y el código fuente debería obtener los mismos resultados (opcional, es un valor agregado).\nComunicación: Los resultados deben ser presentados de manera clara y concisa, utilizando gráficos, tablas y texto explicativo.\nRepositorio: Comparte tu código y los datos en un repositorio en línea (por ejemplo, GitHub).\n\n\n\nSugerencias de Temas\n\nSe abordará en clase al momento de asignar el proyecto y los grupos.\n\n\n\nEntrega:\n\nInforme: Un documento que describa el problema, la metodología utilizada, los resultados y las conclusiones (opcional).\nCódigo Carpeta Proyecto: El código R utilizado para realizar el análisis.\nPresentación: Una presentación breve que resuma los principales hallazgos del proyecto.\nRepositorio: Un enlace al repositorio en GitHub o una plataforma similar.\nPóster- Afiche: lámina (dimensiones por definir) con lo indicado anteriormente\n\n\n\nFecha Entrega:\nSemana final del Curso (fecha precisa por definir).",
-    "crumbs": [
-      "Proyectos",
-      "Proyecto Final de Curso"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Actividades",
-    "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas\n\n\n2\nlun, 21 oct.\n\n\n\n\n\n\n\n\nmié, 23 oct.\n\n\n\n\n\n\n3\nlun, 28 oct.\n\n\n\n\n\n\n\n\nmié, 30 oct.\n\n\n\n\n\n\n3\nlun, 4 nov.\n\n\n\n\n\n\n\n\nmié, 6 nov.\n\n\n\n\n\n\n4\nlun, 11 nov.\n\n\n\n\n\n\n\n\nmié, 13 nov.\n\n\n\n\n\n\n5\nlun, 18 nov.\n\n\n\n\n\n\n\n\nmié, 20 nov.\n\n\n\n\n\n\n6\nlun, 25 nov.\n\n\n\n\n\n\n\n\nmié, 27 nov.\n\n\n\n\n\n\n7\nlun, 2 dic.\n\n\n\n\n\n\n\n\nmié, 4 dic.\n\n\n\n\n\n\n8\nlun, 9 dic.\n\n\n\n\n\n\n\n\nmié, 11 dic.\n\n\n\n\n\n\n9\nlun, 16 dic.\n\n\n\n\n\n\n\n\nmié, 18 dic.\n\n\n\n\n\n\n10\nlun, 13 ene.\n\n\n\n\n\n\n\n\nmié, 15 ene.\n\n\n\n\n\n\n11\nlun, 20 ene.\n\n\n\n\n\n\n\n\nmié, 22 ene.\n\n\n\n\n\n\n12\nlun, 27 ene.\n\n\n\n\n\n\n\n\nmié, 29 ene.\n\n\n\n\n\n\n13\nlun, 3 feb.\n\n\n\n\n\n\n\n\nmié, 5 feb.\n\n\n\n\n\n\n14\nlun, 10 feb.\n\n\n\n\n\n\n\n\nmié, 12 feb.\n\n\n\n\n\n\n15\nsáb, 15 feb.\n\n\n\n\n\n\n\n\nlun, 17 feb.",
-    "crumbs": [
-      "Sobre el Curso",
-      "Actividades"
-    ]
-  },
-  {
-    "objectID": "proyecto-2.html",
-    "href": "proyecto-2.html",
-    "title": "Proyecto Final del Curso",
-    "section": "",
-    "text": "Introducción\nEn este proyecto, tendrás la oportunidad de aplicar todos los conocimientos adquiridos a lo largo del curso para resolver un problema real y relevante. El trabajo será desarrollado en equipos de 3 a 5 estudiantes. Además, diseñarás un póster atractivo que resuma tu investigación y crearás una presentación para compartir tus resultados con tus compañeros y la comunidad en general. Los resultados de las investigaciones se mostrarán en la página del Curso para promocionar el talento de los estudiantes de la Escuela de Economía de la UCV.\nEste proyecto tiene un peso asignado de 30% sobre el total de la calificación del curso.\nLa calificación será con un tope de 30 puntos, desagregados de esta manera:\n\n5 puntos: originalidad y claridad del proyecto (identificación problema, plantear una pregunta de investigación).\n5 puntos: calidad del código (limpieza datos, procesamiento, análisis exploratorio)\n5 puntos: comunicación de los resultados (gráficos, reporte quarto)\n5 puntos: presentación en público del proyecto\n5 puntos póster (afiche)\n5 puntos resto: (documentar proceso, compartir proyecto)\n\n\n\nObjetivos del Proyecto\n\nInvestigación: Realiza un análisis de datos exhaustivo, utilizando las técnicas aprendidas en clase.\nObteneción y limpiar los datos: Recolectar los datos necesarios y realizar las tareas de limpieza y transformación requeridas.\nRealizar el análisis exploratorio de datos: Explorar los datos para identificar patrones, tendencias y relaciones entre las variables.\nModelar los datos: Aplicar técnicas de modelado adecuadas para responder a la pregunta de investigación (opcional, es un valor agregado, no es necesario).\nVisualizar los resultados: Crear visualizaciones claras y efectivas para comunicar los hallazgos.\nComunicación efectiva: Diseña un póster visualmente atractivo que comunique de manera clara y concisa los objetivos, metodología, resultados y conclusiones de tu investigación.\nDocumentar el proceso: Elaborar un informe que describa cada una de las etapas del proyecto, incluyendo el código utilizado.\nPresentación en público: Prepara una presentación breve para exponer tu proyecto ante tus compañeros y recibir retroalimentación.\nColaboración: Comparte tu trabajo con la comunidad del curso, contribuyendo a un repositorio de proyectos.\nCompartir el proyecto: Crear un repositorio en una plataforma de control de versiones ( GitHub) para compartir el código y los resultados con otros.\n\n\n\nEspecificaciones del Proyecto\n\nContenido: El proyecto debe abordar distintas herramientas de R aprendidas hasta el momento.\nTema: Elige un tema de tu interés relacionado con Venezuela que pueda ser abordado con los datos disponibles (obligatorio).\nCalidad del código: Se evaluará la claridad, eficiencia y organización del código.\nEstructura: El proyecto debe seguir las buenas prácticas de desarrollo en RStudio, incluyendo la organización de archivos, el uso de funciones y la documentación del código.\nPóster: Diseña un póster que incluya los siguientes elementos: título, introducción, objetivos, metodología, resultados (visualizaciones), conclusiones y referencias.\nPresentación: Prepara una presentación de 5-7 minutos para exponer tu proyecto.\nInforme: Entrega un informe escrito que detalle el proceso de investigación, los resultados y las conclusiones (opcional).\nReproducibilidad: El proyecto debe ser reproducible, es decir, cualquier persona con los mismos datos y el código fuente debería obtener los mismos resultados (opcional, es un valor agregado).\nComunicación: Los resultados deben ser presentados de manera clara y concisa, utilizando gráficos, tablas y texto explicativo.\nRepositorio: Comparte tu código y los datos en un repositorio en línea (por ejemplo, GitHub).\n\n\n\nSugerencias de Temas\n\nSe abordará en clase al momento de asignar el proyecto y los grupos.\n\n\n\nEntrega:\n\nInforme: Un documento que describa el problema, la metodología utilizada, los resultados y las conclusiones (opcional).\nCódigo Carpeta Proyecto: El código R utilizado para realizar el análisis.\nPresentación: Una presentación breve que resuma los principales hallazgos del proyecto.\nRepositorio: Un enlace al repositorio en GitHub o una plataforma similar.\nPóster- Afiche: lámina (dimensiones por definir) con lo indicado anteriormente\n\n\n\nFecha Entrega:\nSemana final del Curso (fecha precisa por definir)."
-  },
-  {
-    "objectID": "labs/lab-1.html",
-    "href": "labs/lab-1.html",
+    "objectID": "laboratorios/lab-1.html",
+    "href": "laboratorios/lab-1.html",
     "title": "Laboratorio 1",
     "section": "",
     "text": "Para crear un comentario en una línea de código se usa el signo numeral al inicio de la línea. Esto le indica a R que esa línea la debe ignorar a la hora de ejecutar el código.\nCrea un archivo de texto llamado “mi_primer_archivo.R” con una línea comentada que diga “Este es mi primer archivo en R”. Verifica en la sección derecha de RStudio, en la tab “files”, la ruta donde estás guardando el archivo\n\n\n\n\n\n\nInstala los paquetes dplyr y stringr.\n\n# descomentar línea de abajo (quitar numeral)\n\n#install.packages('dplyr')\n#install.packages('stringr')\n\n\n\n\nCarga los paquetes instalados\n\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(stringr)\n\n\n\n\n\nIntroducción:\n\n¿Qué es un vector? Un vector es una secuencia de elementos del mismo tipo. En R, los vectores pueden contener números, caracteres, valores lógicos, fechas, y más.\n¿Cómo crear un vector? Se utiliza la función c() para combinar elementos en un vector.\nVariables: es similar a una caja con un nombre, donde guardamos información que puede cambiar. En programación, usamos variables para almacenar datos que necesitamos más tarde.\nOperador de asignación: El operador &lt;- es como una flecha que apunta desde el valor hacia la caja, indicando que el valor de la derecha se asigna a la variable de la izquierda.\n\nEjemplos Completos:\n\n# Vector numérico\nnumeros &lt;- c(1, 2, 3, 4, 5)\n# la variable se llama numeros y su contenido es 1, 2, 3, 4, 5\n\n\n# Vector de caracteres\ndias_semana &lt;- c(\"lunes\", \"martes\", \"miércoles\", \"jueves\", \"viernes\", \"sábado\", \"domingo\")\n\n# la variable se llama dias_semana y su contenido es \"lunes\", \"martes\",....\n# prestar atención a comillas al inicio y final de cada día de la semana\n\n\n# Vector lógico\nmayores_edad &lt;- c(TRUE, FALSE, TRUE)\n# la variable se llama mayores_edad y tiene asignado los valores TRUE, FALSE,TRUE \n# importante: los valores lógicos no van entre comillas\n\n\n# vectores con la fecha\nfechas_nacimiento &lt;- c('2010-01-01', \"2005-06-10\",'1999-10-31')\n\n# prestar atención al uso de comillas simples y dobles\n\n\n\n\nLos chunks anteriores tienen que haber sido ejecutados. Es ideal que los códigos se ejecuten secuencialmente dentro de un script.\n\nprint(numeros)\n\n[1] 1 2 3 4 5\n\n\n\nprint(mayores_edad)\n\n[1]  TRUE FALSE  TRUE\n\n\n\nprint(dias_semana)\n\n[1] \"lunes\"     \"martes\"    \"miércoles\" \"jueves\"    \"viernes\"   \"sábado\"   \n[7] \"domingo\"  \n\n\n\nprint(fechas_nacimiento)\n\n[1] \"2010-01-01\" \"2005-06-10\" \"1999-10-31\"\n\n\n\n\n\n\n# descomentar línea de abajo (quitar numeral)\n#numeros_pares &lt;- c(2, 4, 6, , 10)\n\n\n# descomentar línea de abajo (quitar numeral)\n# mis_frutas &lt;- c(\"manzana', \"banana\", 'uva´)\n\n\n# descomentar línea de abajo (quitar numeral)\n#mayor_que_cinco &lt; - c(6, 8, 10)\n\n\n\n\n\nCrear un vector numérico:\nPara añadir un chunk de código se debe presionar el botón verde en la barra de herramientas \nPara cada uno de los ejercicios indicados se debe añadir un chunk distinto repitiendo el procedimiento\n\nCon los números pares del 2 al 10.\nCon los números impares del 1 al 9.\n\nCrear un vector de caracteres:\n\nCon el nombre de la Facultad y de la Universidad.\nCon los nombres de los tres primeros meses del año.\n\nCrear un vector lógico:\n\nIndicando si cada número del 1 al 5 es mayor que 3.Indicando si cada letra de la palabra “banana” es una “a”.\n\nCrear un vector de fechas:\n\nDel primer día y último día de tres meses de el año que prefieras",
@@ -62,8 +11,8 @@
     ]
   },
   {
-    "objectID": "labs/lab-1.html#ejercicios-prácticos",
-    "href": "labs/lab-1.html#ejercicios-prácticos",
+    "objectID": "laboratorios/lab-1.html#ejercicios-prácticos",
+    "href": "laboratorios/lab-1.html#ejercicios-prácticos",
     "title": "Laboratorio 1",
     "section": "",
     "text": "Para crear un comentario en una línea de código se usa el signo numeral al inicio de la línea. Esto le indica a R que esa línea la debe ignorar a la hora de ejecutar el código.\nCrea un archivo de texto llamado “mi_primer_archivo.R” con una línea comentada que diga “Este es mi primer archivo en R”. Verifica en la sección derecha de RStudio, en la tab “files”, la ruta donde estás guardando el archivo\n\n\n\n\n\n\nInstala los paquetes dplyr y stringr.\n\n# descomentar línea de abajo (quitar numeral)\n\n#install.packages('dplyr')\n#install.packages('stringr')\n\n\n\n\nCarga los paquetes instalados\n\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(stringr)\n\n\n\n\n\nIntroducción:\n\n¿Qué es un vector? Un vector es una secuencia de elementos del mismo tipo. En R, los vectores pueden contener números, caracteres, valores lógicos, fechas, y más.\n¿Cómo crear un vector? Se utiliza la función c() para combinar elementos en un vector.\nVariables: es similar a una caja con un nombre, donde guardamos información que puede cambiar. En programación, usamos variables para almacenar datos que necesitamos más tarde.\nOperador de asignación: El operador &lt;- es como una flecha que apunta desde el valor hacia la caja, indicando que el valor de la derecha se asigna a la variable de la izquierda.\n\nEjemplos Completos:\n\n# Vector numérico\nnumeros &lt;- c(1, 2, 3, 4, 5)\n# la variable se llama numeros y su contenido es 1, 2, 3, 4, 5\n\n\n# Vector de caracteres\ndias_semana &lt;- c(\"lunes\", \"martes\", \"miércoles\", \"jueves\", \"viernes\", \"sábado\", \"domingo\")\n\n# la variable se llama dias_semana y su contenido es \"lunes\", \"martes\",....\n# prestar atención a comillas al inicio y final de cada día de la semana\n\n\n# Vector lógico\nmayores_edad &lt;- c(TRUE, FALSE, TRUE)\n# la variable se llama mayores_edad y tiene asignado los valores TRUE, FALSE,TRUE \n# importante: los valores lógicos no van entre comillas\n\n\n# vectores con la fecha\nfechas_nacimiento &lt;- c('2010-01-01', \"2005-06-10\",'1999-10-31')\n\n# prestar atención al uso de comillas simples y dobles\n\n\n\n\nLos chunks anteriores tienen que haber sido ejecutados. Es ideal que los códigos se ejecuten secuencialmente dentro de un script.\n\nprint(numeros)\n\n[1] 1 2 3 4 5\n\n\n\nprint(mayores_edad)\n\n[1]  TRUE FALSE  TRUE\n\n\n\nprint(dias_semana)\n\n[1] \"lunes\"     \"martes\"    \"miércoles\" \"jueves\"    \"viernes\"   \"sábado\"   \n[7] \"domingo\"  \n\n\n\nprint(fechas_nacimiento)\n\n[1] \"2010-01-01\" \"2005-06-10\" \"1999-10-31\"\n\n\n\n\n\n\n# descomentar línea de abajo (quitar numeral)\n#numeros_pares &lt;- c(2, 4, 6, , 10)\n\n\n# descomentar línea de abajo (quitar numeral)\n# mis_frutas &lt;- c(\"manzana', \"banana\", 'uva´)\n\n\n# descomentar línea de abajo (quitar numeral)\n#mayor_que_cinco &lt; - c(6, 8, 10)\n\n\n\n\n\nCrear un vector numérico:\nPara añadir un chunk de código se debe presionar el botón verde en la barra de herramientas \nPara cada uno de los ejercicios indicados se debe añadir un chunk distinto repitiendo el procedimiento\n\nCon los números pares del 2 al 10.\nCon los números impares del 1 al 9.\n\nCrear un vector de caracteres:\n\nCon el nombre de la Facultad y de la Universidad.\nCon los nombres de los tres primeros meses del año.\n\nCrear un vector lógico:\n\nIndicando si cada número del 1 al 5 es mayor que 3.Indicando si cada letra de la palabra “banana” es una “a”.\n\nCrear un vector de fechas:\n\nDel primer día y último día de tres meses de el año que prefieras",
@@ -73,22 +22,137 @@
     ]
   },
   {
-    "objectID": "proyecto-1.html",
-    "href": "proyecto-1.html",
-    "title": "Proyecto Mitad del Curso",
-    "section": "",
-    "text": "Introducción\nEn esta etapa del curso, pondrás en práctica los conocimientos adquiridos hasta ahora en R para abordar un problema real. El trabajo será desarrollado en equipos de 3 a 5 estudiantes. La idea es que desarrolles un proyecto completo, desde la definición del problema hasta la presentación de los resultados. Este proyecto tiene un peso asignado de 20% sobre el total de la calificación del curso.\nLa calificación será con un tope de 20 puntos, desagregados de esta manera:\n\n5 puntos: originalidad y claridad del proyecto (identificación problema, plantear una pregunta de investigación).\n5 puntos: calidad del código (limpieza datos, procesamiento, análisis exploratorio)\n5 puntos: comunicación de los resultados (gráficos, reporte quarto)\n5 puntos resto: (documentar proceso, compartir proyecto)\n\n\n\nObjetivos del Proyecto\n\nIdentificar un problema: Seleccionar un problema relevante y actual, preferiblemente relacionado con Venezuela, que pueda ser analizado con los datos disponibles.\nPlantear una pregunta de investigación: Formular una pregunta clara y concisa que el proyecto buscará responder.\nObteneción y limpiar los datos: Recolectar los datos necesarios y realizar las tareas de limpieza y transformación requeridas.\nRealizar el análisis exploratorio de datos: Explorar los datos para identificar patrones, tendencias y relaciones entre las variables.\nModelar los datos: Aplicar técnicas de modelado adecuadas para responder a la pregunta de investigación (opcional, es un valor agregado, no es necesario).\nVisualizar los resultados: Crear visualizaciones claras y efectivas para comunicar los hallazgos.\nDocumentar el proceso: Elaborar un informe que describa cada una de las etapas del proyecto, incluyendo el código utilizado.\nCompartir el proyecto: Crear un repositorio en una plataforma de control de versiones (GitHub) para compartir el código y los resultados con otros. (opcional, es un valor agregado)\n\n\n\nEspecificaciones del Proyecto\n\nContenido: El proyecto debe abordar distintas herramientas de R aprendidas hasta el momento.\nCalidad del código: Se evaluará la claridad, eficiencia y organización del código.\nEstructura: El proyecto debe seguir las buenas prácticas de desarrollo en RStudio, incluyendo la organización de archivos, el uso de funciones y la documentación del código.\nReproducibilidad: El proyecto debe ser reproducible, es decir, cualquier persona con los mismos datos y el código fuente debería obtener los mismos resultados (opcional, es un valor agregado).\nComunicación: Los resultados deben ser presentados de manera clara y concisa, utilizando gráficos, tablas y texto explicativo.\n\n\n\nSugerencias de Temas\n\nSe abordará en clase al momento de asignar el proyecto y los grupos.\n\n\n\nEntrega\nEl proyecto final deberá entregarse en un formato reproducible (por ejemplo, un archivo Quarto), incluyendo:\n\nInforme: Un documento que describa el problema, la metodología utilizada, los resultados y las conclusiones (opcional).\nCódigo Carpeta Proyecto: El código R utilizado para realizar el análisis.\nPresentación: Una presentación breve que resuma los principales hallazgos del proyecto.\nRepositorio (opcional): Un enlace al repositorio en GitHub o una plataforma similar.\nFecha Entrega:\nSemana intermedia del Curso (fecha precisa por definir)."
+    "objectID": "clases/clase_02.html#ides",
+    "href": "clases/clase_02.html#ides",
+    "title": "Conociendo el IDE RStudio",
+    "section": "IDE’s",
+    "text": "IDE’s\n\n\nconsola R, entornos de programación, no todo es visual-acciones, hablar sobre la programación, no son out of the box"
   },
   {
-    "objectID": "curso-programa.html",
-    "href": "curso-programa.html",
-    "title": "Contenido (sujeto a modificaciones)",
+    "objectID": "clases/clase_02.html#rstudio",
+    "href": "clases/clase_02.html#rstudio",
+    "title": "Conociendo el IDE RStudio",
+    "section": "RStudio:",
+    "text": "RStudio:\n\nimagen tomada de presentación de Yanina Bellini Saibene @yabellini para el grupo RLadies"
+  },
+  {
+    "objectID": "clases/clase_02.html#rstudio-1",
+    "href": "clases/clase_02.html#rstudio-1",
+    "title": "Conociendo el IDE RStudio",
+    "section": "RStudio:",
+    "text": "RStudio:\nRStudio es un entorno de desarrollo integrado (IDE) que proporciona una interfaz al agregar muchas funciones y herramientas convenientes.\n\n\nsoftware libre, colaboradores, cambio de presentacion"
+  },
+  {
+    "objectID": "clases/clase_02.html#ide-rstudio",
+    "href": "clases/clase_02.html#ide-rstudio",
+    "title": "Conociendo el IDE RStudio",
+    "section": "IDE RStudio",
+    "text": "IDE RStudio\nUno de los entornos más cómodos para utilizar el lenguaje R es el programa R studio.\n\nRstudio es una fundación que produce productos asociados al lenguaje R, como el programa sobre el que corremos los comandos, y extensiones del lenguaje (librerías).\nEl programa es gratuito y se puede bajar de la página oficial"
+  },
+  {
+    "objectID": "clases/clase_02.html#se-puede-ejecutar-desde",
+    "href": "clases/clase_02.html#se-puede-ejecutar-desde",
+    "title": "Conociendo el IDE RStudio",
+    "section": "Se puede ejecutar desde:",
+    "text": "Se puede ejecutar desde:\n\nNube\nlocal: su propio computador\nLAN: red local"
+  },
+  {
+    "objectID": "clases/clase_02.html#secciones",
+    "href": "clases/clase_02.html#secciones",
+    "title": "Conociendo el IDE RStudio",
+    "section": "Secciones",
+    "text": "Secciones\n\nPantalla Rstudio"
+  },
+  {
+    "objectID": "clases/clase_02.html#partes---componentes-pestañas",
+    "href": "clases/clase_02.html#partes---componentes-pestañas",
+    "title": "Conociendo el IDE RStudio",
+    "section": "Partes - Componentes, pestañas",
+    "text": "Partes - Componentes, pestañas\n\n4 paneles y c/u con distintas pestañas y funcionalidades"
+  },
+  {
+    "objectID": "clases/clase_02.html#abrir-archivos",
+    "href": "clases/clase_02.html#abrir-archivos",
+    "title": "Conociendo el IDE RStudio",
+    "section": "abrir archivos",
+    "text": "abrir archivos\n\nSon distintos los tipos de archivos que se pueden abrir"
+  },
+  {
+    "objectID": "clases/clase_02.html#panel-editor-de-código",
+    "href": "clases/clase_02.html#panel-editor-de-código",
+    "title": "Conociendo el IDE RStudio",
+    "section": "panel Editor de Código",
+    "text": "panel Editor de Código\n\neditor de código. se introducen códigos (scripts)\nSe ejecutan con “run” el el área superior derecha"
+  },
+  {
+    "objectID": "clases/clase_02.html#panel-envirnment-y-files",
+    "href": "clases/clase_02.html#panel-envirnment-y-files",
+    "title": "Conociendo el IDE RStudio",
+    "section": "panel Envirnment y Files",
+    "text": "panel Envirnment y Files"
+  },
+  {
+    "objectID": "clases/clase_02.html#panel-cónsola",
+    "href": "clases/clase_02.html#panel-cónsola",
+    "title": "Conociendo el IDE RStudio",
+    "section": "panel cónsola",
+    "text": "panel cónsola\n\nimportante diferenciar: consola estamos dentro de R, en terminal acceso al SO del computador"
+  },
+  {
+    "objectID": "clases/clase_02.html#panel-files",
+    "href": "clases/clase_02.html#panel-files",
+    "title": "Conociendo el IDE RStudio",
+    "section": "panel files",
+    "text": "panel files\n\nnavegador de archivos y visor."
+  },
+  {
+    "objectID": "clases/clase_02.html#working-directory",
+    "href": "clases/clase_02.html#working-directory",
+    "title": "Conociendo el IDE RStudio",
+    "section": "Working Directory:",
+    "text": "Working Directory:\nes donde tenemos la ruta (path) a los archivos con los cuales trabajamos en un determinado proyecto: Absoluta\n\nen panel “files” \nen terminal con el comando pwd \nen la consola con la función getwd()"
+  },
+  {
+    "objectID": "clases/clase_02.html#working-directory-1",
+    "href": "clases/clase_02.html#working-directory-1",
+    "title": "Conociendo el IDE RStudio",
+    "section": "Working Directory:",
+    "text": "Working Directory:\nrelativa"
+  },
+  {
+    "objectID": "clases/clase_02.html#configurar-working-directory",
+    "href": "clases/clase_02.html#configurar-working-directory",
+    "title": "Conociendo el IDE RStudio",
+    "section": "Configurar “working directory”",
+    "text": "Configurar “working directory”\ncrear carpeta donde se van a guardar los proyectos, p ejemp, dentro de “Documentos” - paso 1\n\n\npaso 2"
+  },
+  {
+    "objectID": "clases/clase_02.html#proyecto",
+    "href": "clases/clase_02.html#proyecto",
+    "title": "Conociendo el IDE RStudio",
+    "section": "Proyecto:",
+    "text": "Proyecto:\nconjunto de archivos (“files” ) que conforman un determinado análisis, página web, presentación, libro, etc. Al crearse hay algunos archivos que se crean automáticamente .Rproj\nlist.files()"
+  },
+  {
+    "objectID": "clases/clase_02.html#primera-práctica",
+    "href": "clases/clase_02.html#primera-práctica",
+    "title": "Conociendo el IDE RStudio",
+    "section": "Primera Práctica:",
+    "text": "Primera Práctica:\nInstalar un paquete de R de manera offline\n\nCrear un Proyecto de nombre 02_inst_paqk_off\nDescargar script desde http://direccion_ip:90/descarga/scripts/clase_02_instalacion_paquete_offline.R\nDescargar archivo zip\nhttp://direccion_ip:90/descarga/winbinarios.zip\nMover el archivo zip al directorio de trabajo del proyecto que\nEjecutar línea a línea"
+  },
+  {
+    "objectID": "clases/clase_02.html#playlist-economía-r4ds",
+    "href": "clases/clase_02.html#playlist-economía-r4ds",
+    "title": "Conociendo el IDE RStudio",
+    "section": "Playlist Economía R4DS",
+    "text": "Playlist Economía R4DS\nPlaylist videos del curso\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "curso-equipo.html",
+    "href": "curso-equipo.html",
+    "title": "Equipo de Profesores",
     "section": "",
-    "text": "Se detallan la mayoría de los contenidos de programación que serán abordados. Es necesario destacar que en cada actividad serán abordados transversalmente contenidos asociados a problemas que son estudiados por la ciencia de datos. Se espera en cada clase incorporar ejercicios prácticos que desarrollen las habilidades de programación en computadoras.\n\nClase 1:\n\nObjetivo: sesión inicial del curso donde se presentan los temas a abordar y la instalación de R y RStudio.\nContenido:\n\nPor qué R\nCiclo de un proyecto de ciencia de datos\nEntornos de Programación\nInstalar R según sistema operativo\nRStudio: proyecto, estructura, ventanas, directorios de trabajo, RStudio en línea.\nR Vs. RStudio\nProyectos de Trabajo: crear proyecto, ambiente, directorio de trabajo, estructura de proyectos, ventanas. Consumo de memoria\nArchivos: Scripts R y Rmd.\n\nEjercicio práctico: Crear un proyecto y dentro del proyecto un script “hello word.R”\n\n\n\nClase 2:\n\nObjetivo: Comprender el entorno de programación. Aprender a instalar paquetes, cargarlos.\nContenido:\n\nCrear objetos, variables, nombres variables\nFundamentos básicos de programación en R. Funciones precargadas\nConsola / Script\nCrear scripts.\nArchivos: R, Quarto, RData y RMD.\nRbase\n\nEjercicio práctico:\n\nCrear scripts\nCrear variables de distintos tipos\nCorregir variables\n\n\n\n\nClase 3:\n\nObjetivo: Conocer la estructura de datos denominada “vector”\nContenido:\n\nPaquetes: instalación y carga de paquetes\nRepositorios de paquetes\nVectores: logical, character, integer, numeric, date. Función mode\nCómo pedir ayuda\n\nEjercicio práctico:\n\nCrear vectores de distintos tipo “mode”\n\n\n\n\nClase 4:\n\nObjetivo: Seguir conociendo las principales estructuras de datos que se manejan dentro de R\nContenido:\n\n“Coerce” dentro de los vectores. Función class\nTrabajando Factores\nMatrices\nListas\nAcceder a elementos de vectores, listas: índices y atributos. Función print\n\nEjercicio práctico:\n\nPracticar elementos de coerce, accesos a elementos de listas.\n\n\n\n\nClase 5:\n\nPresentación: Conocer la estructura de datos Data Frame y sus atributos\nObjetivo:\n\nData Frames\nImportar datos 1- Función read_csv\nAcceso elementos Data Frame\nVisualizar parcial o totalmente, función view\nFunciones str, summary y tabulaciones cruzadas\n\nEjercicio práctico:\n\nCrear una Data Frame\n\n\n\n\nClase 6:\n\nObjetivo: Comprender cómo obtener subconjuntos condicionados sobre vectores o Data Frames y tibbles\nContenido:\n\nOperadores lógicos, tabla de la verdad\nProgramación funcional\nSubsets\nPresentación dplyr\nAplicación de filtros via dplyr filter\n\nEjercicio práctico:\n\nSubsets y Filter de Data Frames precargadas\n\n\n\n\nClase 7:\n\nObjetivo: Procesamientos de datos encadenados e introducción a la generación de reportes\nContenido:\n\nEncadenamiento en los procesamientos: operador pipe %&gt;%\nCarga de datos desde excel\nGráfico de frecuencia de una variable, Análisis Exploratorio de datos\nAplicación filtros en data frames por funciones máx, min, mean\nPreparar un reporte estático e interactivo\n\nEjercicio práctico:\n\nCrear un reporte con un subset de datos\n\n\n\n\nClase 8:\n\nObjetivo: Creando datos derivados- mutate aplicado a datos de tipo fechas\nContenido:\n\nData Frames aplicar mutate -1\nTrabajando con fechas: month, day, year, convertir formatos POSIX\n\nEjercicio práctico:\n\ncrear columnas con día, mes y año en una Data Frame\n\n\n\n\nClase 9:\n\nObjetivo: Creando datos derivados- mutate aplicado a datos de tipo “string”\nContenido:\n\nData Frames aplicar mutate -2\nTrabajando con strings: str_detect, str_split, str_squish, entre otras.\nExpresiones regulares\nSeparate\n\nEjercicio práctico:\n\nUsar separate dentro de una data frame vs mutate\n\n\n\n\nClase 10:\n\nObjetivo: Comprender funciones condicionales vectorizadas\nContenido:\n\nBinds por columa o por fila.\nFunción ifelse\nFunción case_when\nArrange\n\nEjercicio práctico:\n\nLectura de datos, juntar Data Frames y aplicar condicional.\n\n\n\n\nClase 11:\n\nObjetivo: Comprender un flujo completo de importar y transformar los datos con el pipe operator\nContenido:\n\nFunción select\nAplicación de un pipeline compuesto\n\nEjercicio práctico:\n\nAplicar lo aprendido en bloques del 7 al 11.\n\n\n\n\nClase 12:\n\nObjetivo: agrupación de datos dentro de una Data Frame y obtención de valores sumarios\nContenido:\n\nAgrupación de datos: group-by\nPresentación estructura tibble\nSumarizar datos: summarise\nDesagrupar\n\nEjercicio práctico:\n\nAgrupar una Data Frame por variable categórica y obtener valores sumarios\n\n\n\n\nClase 13:\n\nObjetivo: comprender los datos representados en formatos wide o longer\nContenido:\n\nPivoteo de datos\nFormatos de datos long\nFormatos de datos wide\n\nEjercicio práctico:\n\nTranformar de formato wide a long una Data Frame\n\n\n\n\nClase 14:\n\nObjetivo: comprender las familia de las funciones vectorizadas apply\nContenido:\n\nProgramación funcional:\n\nsapply\nlapply\napply\ntapply\n\n\nEjercicio práctico:\n\nAplicar lapply sobre subset de columnas de una Data Frame\n\n\n\n\nClase 15:\n\nObjetivo: Introducción al análisis exploratorio de datos e imputación de datos faltantes.\nContenido:\n\nLectura de datos JSON\nInspección de datos\nIntroducción Análisis Exploratorio de Datos\nImputación de datos faltantes\n\nEjercicio práctico:\n\nRealizar un reporte y análisis exploratorio sobre un conjunto de datos no mayor 5 variables\n\n\n\n\nClase 16:\n\nObjetivo: Abordar las estructuras de control y los ciclos\nContenido:\n\nEstructuras de control if, else\nLoops, whiles\nGráficos en Plotly\n\nEjercicio práctico:\n\nMediante un loop generar distintos gráficos y guardarlos.\n\n\n\n\nClase 17:\n\nObjetivo: comprender la lógica de las funciones\nContenido:\n\nCrear funciones: argumentos, default, return\nVectorizados Vs. Ciclos\n\nEjercicio práctico:\n\nCrear dos funciones que contengan una estructura de control\n\n\n\n\nClase 18:\n\nObjetivo: Comprender los tipos de gráficos y sus usos. Introducción al sistema ggplot2.\nContenido:\n\nSistema gráfico ggplot2: grammar of graphics 1\n\nTipos de gráficos\nLeyendas\n\n\nEjercicio práctico:\n\nCrear 2 gráficos: 1 de barra, 1 de líneas\n\n\n\n\nClase 19:\n\nObjetivo: Comprender los tipos de gráficos y sus usos. Introducción al sistema ggplot2.\nContenido:\n\nSistema gráfico ggplot2: grammar of graphics 2\n\nFacets\nAdaptación colores\n\n\nEjercicio práctico:\n\nCrear facets con paleta de colores personalizada.\n\n\n\n\nClase 20:\n\nObjetivo: familia de funciones vectorizadas 2\nContenido:\n\nFunciones vectorizadas purrr\nBind_rows, bind_cols\nLecturas en bucle\n\nEjercicio práctico:\n\nLectura de datos en bucle y conformación de una estructura de datos unificada.\n\n\n\n\nClase 21:\n\nObjetivo: Comprender la lógica de joins (unión) de Data Frames.\nContenido:\n\njoins de datos\nRegresión lineal\n\nEjercicio práctico:\n\nAplicar un join de datos y obtener una regresión lineal por grupo de datos\n\n\n\n\nClase 22:\n\nObjetivo: Aspectos generales de recursos en línea. Uso de R en paralelo con python.\nContenido:\n\nTrabajando con repositorios de códigos\nControl de Versiones\nCómo pedir ayuda\nDónde pedir ayuda\n\nEjercicio práctico:\n\nsegún dinámica de las sesiones previas\n\n\n\n\nClase 23:\n\nObjetivo: Introducción al machine learning supervisado y no supervisado\nContenido:\n\nIntroducción al machine learning con paquete caret.\n\nAprendizaje supervisado: Arboles de decisión\nAprendizaje no supervisado: clustering\n\n\nEjercicio práctico:\n\nCrear clusters sobre un conjunto de datos\n\n\n\n\nClase 24:\n\nObjetivo: crear aplicaciones web interactivas con Shiny 1\nContenido:\n\nIntroducción a Shiny 1: Aplicaciones web interactivas\n\nestructura UI - Server\nPrincipios de programación reactiva\n\n\nEjercicio práctico:\n\ncrear una aplicación web interactiva mínima.\n\n\n\n\nClase 25:\n\nObjetivo: crear aplicaciones web interactivas con Shiny 2\nContenido:\n\nIntroducción a Shiny 2: Aplicaciones web interactivas\n\nSliders, inputs de texto, inputs numéricos, render de tablas y gráficos\n\n\nEjercicio práctico:\n\ncontinúa de sesión anterior: crear una aplicación web interactiva mínima 2\n\n\n\n\nClase 26 a la 32:\n\nObjetivo: trabajar en proyecto final de la materia donde se aplican todos los contenidos revisados con la finalidad de crear un producto basado en el uso de datos.",
-    "crumbs": [
-      "Sobre el Curso",
-      "Contenido"
-    ]
+    "text": "Prof. Juan Pablo Goncalves:\nProfesor Escuela de Economía…….\n\n\nProf. Jesús Sánchez:\nProfesor Escuela de Economía…….\n\n\nProf. José Miguel Avendaño:\nMagister en Ciencias de la Computación (U.C.V.) y Economista (U.C.V.). Trabaja con datos desde hace más de dos décadas. Sus investigaciónes se centran en el uso del procesamiento del lenguaje natural (NLP), incluyendo los Largos Modelos de Lenguaje (LLM´s), el cual es un campo de estudio del machine learning. Su interés por la Ciencia de Datos lo ha acercado al desarrollo de aplicaciones web donde los datos, su manipulación y representación, son los pilares en que sustentan.\nActualmente participa en las investigaciones que desarrolla el Laboratorio de Gestión de la Innovación y el Centro de Microscopía Electrónica «Dr. Mitsuo Ogura», ambos de la UCV, en la incorporación de largos modelos de lenguaje en procesos de enseñanza inteligenciada.\n\n\n\n\n\n\n\nHoras de Consulta\nSitio\n\n\n\n\nLunes 2:30 - 3:00 pm\nLaboratorio piso 2 Escuela de Economía, FaCES\n\n\nMiércoles 3:00 pm - 4:30 pm\nCentro de Microscopía Electrónica, planta baja, Facultad de Ciencias"
   },
   {
     "objectID": "project/proyecto-1.html",
@@ -102,466 +166,51 @@
     ]
   },
   {
-    "objectID": "curso-equipo.html",
-    "href": "curso-equipo.html",
-    "title": "Equipo de Profesores",
+    "objectID": "curso-programa.html",
+    "href": "curso-programa.html",
+    "title": "Contenido (sujeto a modificaciones)",
     "section": "",
-    "text": "Prof. Juan Pablo Goncalves:\nProfesor Escuela de Economía…….\n\n\nProf. Jesús Sánchez:\nProfesor Escuela de Economía…….\n\n\nProf. José Miguel Avendaño:\nMagister en Ciencias de la Computación (U.C.V.) y Economista (U.C.V.). Trabaja con datos desde hace más de dos décadas. Sus investigaciónes se centran en el uso del procesamiento del lenguaje natural (NLP), incluyendo los Largos Modelos de Lenguaje (LLM´s), el cual es un campo de estudio del machine learning. Su interés por la Ciencia de Datos lo ha acercado al desarrollo de aplicaciones web donde los datos, su manipulación y representación, son los pilares en que sustentan.\nActualmente participa en las investigaciones que desarrolla el Laboratorio de Gestión de la Innovación y el Centro de Microscopía Electrónica «Dr. Mitsuo Ogura», ambos de la UCV, en la incorporación de largos modelos de lenguaje en procesos de enseñanza inteligenciada.\n\n\n\n\n\n\n\nHoras de Consulta\nSitio\n\n\n\n\nLunes 2:30 - 3:00 pm\nLaboratorio piso 2 Escuela de Economía, FaCES\n\n\nMiércoles 3:00 pm - 4:30 pm\nCentro de Microscopía Electrónica, planta baja, Facultad de Ciencias"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#equipo-de-enseñanza",
-    "href": "lectures/clase_1/clase_01.html#equipo-de-enseñanza",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Equipo de Enseñanza",
-    "text": "Equipo de Enseñanza\n\n\nProf. Juan Pablo Goncalves\nProf. Jesús Sánchez\nMSc. José Miguel Avendaño I."
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#participantes-curso",
-    "href": "lectures/clase_1/clase_01.html#participantes-curso",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Participantes Curso",
-    "text": "Participantes Curso\n\nExpectativas?\nPrevio:\n\nProgramación?\nInvestigaciones?\nTrabajan en el área?\n\n\n\n\n\n−+\n07:00"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#ciencia-de-datos-por-ejemplo",
-    "href": "lectures/clase_1/clase_01.html#ciencia-de-datos-por-ejemplo",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Ciencia de Datos, por ejemplo",
-    "text": "Ciencia de Datos, por ejemplo\nExtraer conocimiento desde un conjunto de datos"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#excel---no",
-    "href": "lectures/clase_1/clase_01.html#excel---no",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Excel - no …",
-    "text": "Excel - no …"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#por-qué-r",
-    "href": "lectures/clase_1/clase_01.html#por-qué-r",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "¡por qué R?",
-    "text": "¡por qué R?"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#rstudio",
-    "href": "lectures/clase_1/clase_01.html#rstudio",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "RStudio",
-    "text": "RStudio"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#vista-integral",
-    "href": "lectures/clase_1/clase_01.html#vista-integral",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Vista Integral",
-    "text": "Vista Integral"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#importar",
-    "href": "lectures/clase_1/clase_01.html#importar",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Importar",
-    "text": "Importar"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#ordenar-transformar",
-    "href": "lectures/clase_1/clase_01.html#ordenar-transformar",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Ordenar + transformar",
-    "text": "Ordenar + transformar"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#visualizar",
-    "href": "lectures/clase_1/clase_01.html#visualizar",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Visualizar",
-    "text": "Visualizar"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#modelar",
-    "href": "lectures/clase_1/clase_01.html#modelar",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Modelar",
-    "text": "Modelar"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#comprender",
-    "href": "lectures/clase_1/clase_01.html#comprender",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Comprender",
-    "text": "Comprender"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#comunicar",
-    "href": "lectures/clase_1/clase_01.html#comunicar",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Comunicar",
-    "text": "Comunicar"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#generar-conjunto-de-datos",
-    "href": "lectures/clase_1/clase_01.html#generar-conjunto-de-datos",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Generar Conjunto de Datos",
-    "text": "Generar Conjunto de Datos"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#programar",
-    "href": "lectures/clase_1/clase_01.html#programar",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Programar",
-    "text": "Programar"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#intención",
-    "href": "lectures/clase_1/clase_01.html#intención",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Intención",
-    "text": "Intención\n\nPensar como un Científico de Datos:\n\nInvestigador\nCrítico\nInnovador\n\nDónde ubicar recursos técnicos y ayuda"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#promesa",
-    "href": "lectures/clase_1/clase_01.html#promesa",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Promesa",
-    "text": "Promesa\n\nNociones de programación\nObtener y crear conjunto de datos\nPresentar investigaciones"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#página-web",
-    "href": "lectures/clase_1/clase_01.html#página-web",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Página Web",
-    "text": "Página Web\nhttps://ucveconomiar4ds.netlify.app\n\n\nTodos los materiales\nEnlaces a recursos"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#salones",
-    "href": "lectures/clase_1/clase_01.html#salones",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Salones",
-    "text": "Salones\n\nLaboratorio piso 2\nCentro Microscopía Electrónica FC"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#herramientas-del-curso",
-    "href": "lectures/clase_1/clase_01.html#herramientas-del-curso",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Herramientas del Curso",
-    "text": "Herramientas del Curso\n\nUso Discord: comunicación, recomendaciones, soporte\nRepositorio GitHub: optimizar flujos de trabajo\nAsistente chat para codificación\nPágina web con recursos\nRStudio Cloud-Server: computación en la nube"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#actividades",
-    "href": "lectures/clase_1/clase_01.html#actividades",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Actividades",
-    "text": "Actividades\n\nRevisar los materiales de apoyo compartidos\nClases pendientes vía remoto (al menos 3 clases)\nParticipar en el curso, atender las actividades, practicar constantemente\nEnlazar lo aprendido con datos del mundo real, preferiblemente sobre la realidad venezolana"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#tareas",
-    "href": "lectures/clase_1/clase_01.html#tareas",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Tareas",
-    "text": "Tareas\n\nSemanales (cantidad exacta por definir)\nSe entregan los códigos mediante GitHub"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#bibliografía",
-    "href": "lectures/clase_1/clase_01.html#bibliografía",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Bibliografía",
-    "text": "Bibliografía\n\nr4ds en español\nHands-On Programming with R\nCiencia de Datos para Gente Sociable\nMuchos otros"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#proyecto",
-    "href": "lectures/clase_1/clase_01.html#proyecto",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Proyecto",
-    "text": "Proyecto\n\nElección del conjunto de datos de su preferencia\nTrabajo en equipo\nPresentación avances tercer mes del curso\nPresentación final del Proyecto en laboratorio (20 minutos)\nCreación de un póster (afiche) para comunicar (ni bachillerato)\nSe publicará en la página el proyecto"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#evaluación",
-    "href": "lectures/clase_1/clase_01.html#evaluación",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Evaluación",
-    "text": "Evaluación\n\n\n\nCategoría\nPercentage\n\n\n\n\nLaboratorios-tareas\n40%\n\n\nProyecto Intermedio Curso\n20%\n\n\nProyecto Final Curso\n30%\n\n\nEnsayo (inicios diciembre)\n10%\n\n\n\nEn la página del curso están las especificaciones sobre los proyectos a realizar"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#equipos",
-    "href": "lectures/clase_1/clase_01.html#equipos",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Equipos",
-    "text": "Equipos\n\n4 a 5 personas\nProyecto\nEvaluación Equipo de Profesores:\n\ncalidad código, originalidad, aporte"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#soporte",
-    "href": "lectures/clase_1/clase_01.html#soporte",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Soporte",
-    "text": "Soporte\n\nEn la página del curso se publicarán las horas de atención\nRealizar preguntas en el canal foro en el Discord\nEvitar uso de correo\nRevisar distintos canales en Discord, p. ejem: errores-de-códigos"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#novedades--anuncios",
-    "href": "lectures/clase_1/clase_01.html#novedades--anuncios",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Novedades- Anuncios",
-    "text": "Novedades- Anuncios\n\nSe publicacarán en el canal anuncios-clases del Discord\nRevisar\nI’ll (try my best to) send a weekly update announcement each Friday, outlining the plan for the following week and reminding you what you need to do to prepare, practice, and perform"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#late-work-waivers-regrades-policy",
-    "href": "lectures/clase_1/clase_01.html#late-work-waivers-regrades-policy",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Late work, waivers, regrades policy",
-    "text": "Late work, waivers, regrades policy\n\nWe have policies!\nRead about them on the course syllabus and refer back to them when you need it"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#retos-que-representa-el-curso",
-    "href": "lectures/clase_1/clase_01.html#retos-que-representa-el-curso",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Retos que Representa el Curso",
-    "text": "Retos que Representa el Curso"
-  },
-  {
-    "objectID": "lectures/clase_1/clase_01.html#tareas-asignadas",
-    "href": "lectures/clase_1/clase_01.html#tareas-asignadas",
-    "title": "Bienvenida a Ciencia de Datos para Economistas",
-    "section": "Tareas Asignadas",
-    "text": "Tareas Asignadas\n\nRevisar canales en Discord\n\nReglas\nRecursos disponibles\nTareas\n\nRealizar la primera tarea"
-  },
-  {
-    "objectID": "lectures/clase_01.html#equipo-de-enseñanza",
-    "href": "lectures/clase_01.html#equipo-de-enseñanza",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Equipo de Enseñanza",
-    "text": "Equipo de Enseñanza\n\n\nProf. Juan Pablo Goncalves\nProf. Jesús Sánchez\nMSc. José Miguel Avendaño I."
-  },
-  {
-    "objectID": "lectures/clase_01.html#participantes-curso",
-    "href": "lectures/clase_01.html#participantes-curso",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Participantes Curso",
-    "text": "Participantes Curso\n\nExpectativas?\nPrevio:\n\nProgramación?\nInvestigaciones?\nTrabajan en el área?\n\n\n\n\n\n−+\n07:00"
-  },
-  {
-    "objectID": "lectures/clase_01.html#ciencia-de-datos-por-ejemplo",
-    "href": "lectures/clase_01.html#ciencia-de-datos-por-ejemplo",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Ciencia de Datos, por ejemplo",
-    "text": "Ciencia de Datos, por ejemplo\nExtraer conocimiento desde un conjunto de datos"
-  },
-  {
-    "objectID": "lectures/clase_01.html#excel---no",
-    "href": "lectures/clase_01.html#excel---no",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Excel - no …",
-    "text": "Excel - no …"
-  },
-  {
-    "objectID": "lectures/clase_01.html#por-qué-r",
-    "href": "lectures/clase_01.html#por-qué-r",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "¡por qué R?",
-    "text": "¡por qué R?"
-  },
-  {
-    "objectID": "lectures/clase_01.html#rstudio",
-    "href": "lectures/clase_01.html#rstudio",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "RStudio",
-    "text": "RStudio"
-  },
-  {
-    "objectID": "lectures/clase_01.html#vista-integral",
-    "href": "lectures/clase_01.html#vista-integral",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Vista Integral",
-    "text": "Vista Integral"
-  },
-  {
-    "objectID": "lectures/clase_01.html#importar",
-    "href": "lectures/clase_01.html#importar",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Importar",
-    "text": "Importar"
-  },
-  {
-    "objectID": "lectures/clase_01.html#ordenar-transformar",
-    "href": "lectures/clase_01.html#ordenar-transformar",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Ordenar + transformar",
-    "text": "Ordenar + transformar"
-  },
-  {
-    "objectID": "lectures/clase_01.html#visualizar",
-    "href": "lectures/clase_01.html#visualizar",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Visualizar",
-    "text": "Visualizar"
-  },
-  {
-    "objectID": "lectures/clase_01.html#modelar",
-    "href": "lectures/clase_01.html#modelar",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Modelar",
-    "text": "Modelar"
-  },
-  {
-    "objectID": "lectures/clase_01.html#comprender",
-    "href": "lectures/clase_01.html#comprender",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Comprender",
-    "text": "Comprender"
-  },
-  {
-    "objectID": "lectures/clase_01.html#comunicar",
-    "href": "lectures/clase_01.html#comunicar",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Comunicar",
-    "text": "Comunicar"
-  },
-  {
-    "objectID": "lectures/clase_01.html#generar-conjunto-de-datos",
-    "href": "lectures/clase_01.html#generar-conjunto-de-datos",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Generar Conjunto de Datos",
-    "text": "Generar Conjunto de Datos"
-  },
-  {
-    "objectID": "lectures/clase_01.html#programar",
-    "href": "lectures/clase_01.html#programar",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Programar",
-    "text": "Programar"
-  },
-  {
-    "objectID": "lectures/clase_01.html#intención",
-    "href": "lectures/clase_01.html#intención",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Intención",
-    "text": "Intención\n\nPensar como un Científico de Datos:\n\nInvestigador\nCrítico\nInnovador\n\nDónde ubicar recursos técnicos y ayuda"
-  },
-  {
-    "objectID": "lectures/clase_01.html#promesa",
-    "href": "lectures/clase_01.html#promesa",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Promesa",
-    "text": "Promesa\n\nNociones de programación\nObtener y crear conjunto de datos\nPresentar investigaciones"
-  },
-  {
-    "objectID": "lectures/clase_01.html#página-web",
-    "href": "lectures/clase_01.html#página-web",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Página Web",
-    "text": "Página Web\nhttps://ucveconomiar4ds.netlify.app\n\n\nTodos los materiales\nEnlaces a recursos"
-  },
-  {
-    "objectID": "lectures/clase_01.html#salones",
-    "href": "lectures/clase_01.html#salones",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Salones",
-    "text": "Salones\n\nLaboratorio piso 2\nCentro Microscopía Electrónica FC"
-  },
-  {
-    "objectID": "lectures/clase_01.html#herramientas-del-curso",
-    "href": "lectures/clase_01.html#herramientas-del-curso",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Herramientas del Curso",
-    "text": "Herramientas del Curso\n\nUso Discord: comunicación, recomendaciones, soporte\nRepositorio GitHub: optimizar flujos de trabajo\nAsistente chat para codificación\nPágina web con recursos\nRStudio Cloud-Server: computación en la nube"
-  },
-  {
-    "objectID": "lectures/clase_01.html#actividades",
-    "href": "lectures/clase_01.html#actividades",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Actividades",
-    "text": "Actividades\n\nRevisar los materiales de apoyo compartidos\nClases pendientes vía remoto (al menos 3 clases)\nParticipar en el curso, atender las actividades, practicar constantemente\nEnlazar lo aprendido con datos del mundo real, preferiblemente sobre la realidad venezolana"
-  },
-  {
-    "objectID": "lectures/clase_01.html#tareas",
-    "href": "lectures/clase_01.html#tareas",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Tareas",
-    "text": "Tareas\n\nSemanales (cantidad exacta por definir)\nSe entregan los códigos mediante GitHub"
-  },
-  {
-    "objectID": "lectures/clase_01.html#bibliografía",
-    "href": "lectures/clase_01.html#bibliografía",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Bibliografía",
-    "text": "Bibliografía\n\nr4ds en español\nHands-On Programming with R\nCiencia de Datos para Gente Sociable\nMuchos otros"
-  },
-  {
-    "objectID": "lectures/clase_01.html#proyecto",
-    "href": "lectures/clase_01.html#proyecto",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Proyecto",
-    "text": "Proyecto\n\nElección del conjunto de datos de su preferencia\nTrabajo en equipo\nPresentación avances tercer mes del curso\nPresentación final del Proyecto en laboratorio (20 minutos)\nCreación de un póster (afiche) para comunicar (ni bachillerato)\nSe publicará en la página el proyecto"
-  },
-  {
-    "objectID": "lectures/clase_01.html#evaluación",
-    "href": "lectures/clase_01.html#evaluación",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Evaluación",
-    "text": "Evaluación\n\n\n\nCategoría\nPercentage\n\n\n\n\nLaboratorios-tareas\n40%\n\n\nProyecto Intermedio Curso\n20%\n\n\nProyecto Final Curso\n30%\n\n\nEnsayo (inicios diciembre)\n10%\n\n\n\nEn la página del curso están las especificaciones sobre los proyectos a realizar"
-  },
-  {
-    "objectID": "lectures/clase_01.html#equipos",
-    "href": "lectures/clase_01.html#equipos",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Equipos",
-    "text": "Equipos\n\n4 a 5 personas\nProyecto\nEvaluación Equipo de Profesores:\n\ncalidad código, originalidad, aporte"
-  },
-  {
-    "objectID": "lectures/clase_01.html#soporte",
-    "href": "lectures/clase_01.html#soporte",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Soporte",
-    "text": "Soporte\n\nEn la página del curso se publicarán las horas de atención\nRealizar preguntas en el canal foro en el Discord\nEvitar uso de correo\nRevisar distintos canales en Discord, p. ejem: errores-de-códigos"
-  },
-  {
-    "objectID": "lectures/clase_01.html#novedades--anuncios",
-    "href": "lectures/clase_01.html#novedades--anuncios",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Novedades- Anuncios",
-    "text": "Novedades- Anuncios\n\nSe publicacarán en el canal anuncios-clases del Discord\nRevisar día anterior a cada una de las clases"
-  },
-  {
-    "objectID": "lectures/clase_01.html#late-work-waivers-regrades-policy",
-    "href": "lectures/clase_01.html#late-work-waivers-regrades-policy",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Late work, waivers, regrades policy",
-    "text": "Late work, waivers, regrades policy\n\nWe have policies!\nRead about them on the course syllabus and refer back to them when you need it"
-  },
-  {
-    "objectID": "lectures/clase_01.html#retos-que-representa-el-curso",
-    "href": "lectures/clase_01.html#retos-que-representa-el-curso",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Retos que Representa el Curso",
-    "text": "Retos que Representa el Curso"
-  },
-  {
-    "objectID": "lectures/clase_01.html#tareas-asignadas",
-    "href": "lectures/clase_01.html#tareas-asignadas",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Tareas Asignadas",
-    "text": "Tareas Asignadas\n\nRevisar canales en Discord\n\nReglas\nRecursos disponibles\nTareas\n\nRealizar la primera tarea\n\n\n\n\n\n🔗 ucveconomiar4ds"
-  },
-  {
-    "objectID": "lectures/clase_01.html#actividades-próximas",
-    "href": "lectures/clase_01.html#actividades-próximas",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Actividades Próximas",
-    "text": "Actividades Próximas\n\nRevisar los materiales de apoyo compartidos\nClases pendientes vía remoto (al menos 3 clases)"
-  },
-  {
-    "objectID": "lectures/clase_01.html#equipos-proyecto",
-    "href": "lectures/clase_01.html#equipos-proyecto",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Equipos Proyecto",
-    "text": "Equipos Proyecto\n\n4 a 5 personas\nEvaluación Equipo de Profesores:\n\ncalidad código, originalidad, aporte"
-  },
-  {
-    "objectID": "lectures/clase_01.html#soporte-curso",
-    "href": "lectures/clase_01.html#soporte-curso",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Soporte Curso",
-    "text": "Soporte Curso\n\nEn la página del curso se publicarán las horas de atención\nRealizar preguntas en el canal foro en el Discord\nEvitar uso de correo\nRevisar distintos canales en Discord, p. ejem: errores-de-códigos"
+    "text": "Se detallan la mayoría de los contenidos de programación que serán abordados. Es necesario destacar que en cada actividad serán abordados transversalmente contenidos asociados a problemas que son estudiados por la ciencia de datos. Se espera en cada clase incorporar ejercicios prácticos que desarrollen las habilidades de programación en computadoras.\n\nClase 1:\n\nObjetivo: sesión inicial del curso donde se presentan los temas a abordar y la instalación de R y RStudio.\nContenido:\n\nPor qué R\nCiclo de un proyecto de ciencia de datos\nEntornos de Programación\nInstalar R según sistema operativo\nRStudio: proyecto, estructura, ventanas, directorios de trabajo, RStudio en línea.\nR Vs. RStudio\nProyectos de Trabajo: crear proyecto, ambiente, directorio de trabajo, estructura de proyectos, ventanas. Consumo de memoria\nArchivos: Scripts R y Rmd.\n\nEjercicio práctico: Crear un proyecto y dentro del proyecto un script “hello word.R”\n\n\n\nClase 2:\n\nObjetivo: Comprender el entorno de programación. Aprender a instalar paquetes, cargarlos.\nContenido:\n\nCrear objetos, variables, nombres variables\nFundamentos básicos de programación en R. Funciones precargadas\nConsola / Script\nCrear scripts.\nArchivos: R, Quarto, RData y RMD.\nRbase\n\nEjercicio práctico:\n\nCrear scripts\nCrear variables de distintos tipos\nCorregir variables\n\n\n\n\nClase 3:\n\nObjetivo: Conocer la estructura de datos denominada “vector”\nContenido:\n\nPaquetes: instalación y carga de paquetes\nRepositorios de paquetes\nVectores: logical, character, integer, numeric, date. Función mode\nCómo pedir ayuda\n\nEjercicio práctico:\n\nCrear vectores de distintos tipo “mode”\n\n\n\n\nClase 4:\n\nObjetivo: Seguir conociendo las principales estructuras de datos que se manejan dentro de R\nContenido:\n\n“Coerce” dentro de los vectores. Función class\nTrabajando Factores\nMatrices\nListas\nAcceder a elementos de vectores, listas: índices y atributos. Función print\n\nEjercicio práctico:\n\nPracticar elementos de coerce, accesos a elementos de listas.\n\n\n\n\nClase 5:\n\nPresentación: Conocer la estructura de datos Data Frame y sus atributos\nObjetivo:\n\nData Frames\nImportar datos 1- Función read_csv\nAcceso elementos Data Frame\nVisualizar parcial o totalmente, función view\nFunciones str, summary y tabulaciones cruzadas\n\nEjercicio práctico:\n\nCrear una Data Frame\n\n\n\n\nClase 6:\n\nObjetivo: Comprender cómo obtener subconjuntos condicionados sobre vectores o Data Frames y tibbles\nContenido:\n\nOperadores lógicos, tabla de la verdad\nProgramación funcional\nSubsets\nPresentación dplyr\nAplicación de filtros via dplyr filter\n\nEjercicio práctico:\n\nSubsets y Filter de Data Frames precargadas\n\n\n\n\nClase 7:\n\nObjetivo: Procesamientos de datos encadenados e introducción a la generación de reportes\nContenido:\n\nEncadenamiento en los procesamientos: operador pipe %&gt;%\nCarga de datos desde excel\nGráfico de frecuencia de una variable, Análisis Exploratorio de datos\nAplicación filtros en data frames por funciones máx, min, mean\nPreparar un reporte estático e interactivo\n\nEjercicio práctico:\n\nCrear un reporte con un subset de datos\n\n\n\n\nClase 8:\n\nObjetivo: Creando datos derivados- mutate aplicado a datos de tipo fechas\nContenido:\n\nData Frames aplicar mutate -1\nTrabajando con fechas: month, day, year, convertir formatos POSIX\n\nEjercicio práctico:\n\ncrear columnas con día, mes y año en una Data Frame\n\n\n\n\nClase 9:\n\nObjetivo: Creando datos derivados- mutate aplicado a datos de tipo “string”\nContenido:\n\nData Frames aplicar mutate -2\nTrabajando con strings: str_detect, str_split, str_squish, entre otras.\nExpresiones regulares\nSeparate\n\nEjercicio práctico:\n\nUsar separate dentro de una data frame vs mutate\n\n\n\n\nClase 10:\n\nObjetivo: Comprender funciones condicionales vectorizadas\nContenido:\n\nBinds por columa o por fila.\nFunción ifelse\nFunción case_when\nArrange\n\nEjercicio práctico:\n\nLectura de datos, juntar Data Frames y aplicar condicional.\n\n\n\n\nClase 11:\n\nObjetivo: Comprender un flujo completo de importar y transformar los datos con el pipe operator\nContenido:\n\nFunción select\nAplicación de un pipeline compuesto\n\nEjercicio práctico:\n\nAplicar lo aprendido en bloques del 7 al 11.\n\n\n\n\nClase 12:\n\nObjetivo: agrupación de datos dentro de una Data Frame y obtención de valores sumarios\nContenido:\n\nAgrupación de datos: group-by\nPresentación estructura tibble\nSumarizar datos: summarise\nDesagrupar\n\nEjercicio práctico:\n\nAgrupar una Data Frame por variable categórica y obtener valores sumarios\n\n\n\n\nClase 13:\n\nObjetivo: comprender los datos representados en formatos wide o longer\nContenido:\n\nPivoteo de datos\nFormatos de datos long\nFormatos de datos wide\n\nEjercicio práctico:\n\nTranformar de formato wide a long una Data Frame\n\n\n\n\nClase 14:\n\nObjetivo: comprender las familia de las funciones vectorizadas apply\nContenido:\n\nProgramación funcional:\n\nsapply\nlapply\napply\ntapply\n\n\nEjercicio práctico:\n\nAplicar lapply sobre subset de columnas de una Data Frame\n\n\n\n\nClase 15:\n\nObjetivo: Introducción al análisis exploratorio de datos e imputación de datos faltantes.\nContenido:\n\nLectura de datos JSON\nInspección de datos\nIntroducción Análisis Exploratorio de Datos\nImputación de datos faltantes\n\nEjercicio práctico:\n\nRealizar un reporte y análisis exploratorio sobre un conjunto de datos no mayor 5 variables\n\n\n\n\nClase 16:\n\nObjetivo: Abordar las estructuras de control y los ciclos\nContenido:\n\nEstructuras de control if, else\nLoops, whiles\nGráficos en Plotly\n\nEjercicio práctico:\n\nMediante un loop generar distintos gráficos y guardarlos.\n\n\n\n\nClase 17:\n\nObjetivo: comprender la lógica de las funciones\nContenido:\n\nCrear funciones: argumentos, default, return\nVectorizados Vs. Ciclos\n\nEjercicio práctico:\n\nCrear dos funciones que contengan una estructura de control\n\n\n\n\nClase 18:\n\nObjetivo: Comprender los tipos de gráficos y sus usos. Introducción al sistema ggplot2.\nContenido:\n\nSistema gráfico ggplot2: grammar of graphics 1\n\nTipos de gráficos\nLeyendas\n\n\nEjercicio práctico:\n\nCrear 2 gráficos: 1 de barra, 1 de líneas\n\n\n\n\nClase 19:\n\nObjetivo: Comprender los tipos de gráficos y sus usos. Introducción al sistema ggplot2.\nContenido:\n\nSistema gráfico ggplot2: grammar of graphics 2\n\nFacets\nAdaptación colores\n\n\nEjercicio práctico:\n\nCrear facets con paleta de colores personalizada.\n\n\n\n\nClase 20:\n\nObjetivo: familia de funciones vectorizadas 2\nContenido:\n\nFunciones vectorizadas purrr\nBind_rows, bind_cols\nLecturas en bucle\n\nEjercicio práctico:\n\nLectura de datos en bucle y conformación de una estructura de datos unificada.\n\n\n\n\nClase 21:\n\nObjetivo: Comprender la lógica de joins (unión) de Data Frames.\nContenido:\n\njoins de datos\nRegresión lineal\n\nEjercicio práctico:\n\nAplicar un join de datos y obtener una regresión lineal por grupo de datos\n\n\n\n\nClase 22:\n\nObjetivo: Aspectos generales de recursos en línea. Uso de R en paralelo con python.\nContenido:\n\nTrabajando con repositorios de códigos\nControl de Versiones\nCómo pedir ayuda\nDónde pedir ayuda\n\nEjercicio práctico:\n\nsegún dinámica de las sesiones previas\n\n\n\n\nClase 23:\n\nObjetivo: Introducción al machine learning supervisado y no supervisado\nContenido:\n\nIntroducción al machine learning con paquete caret.\n\nAprendizaje supervisado: Arboles de decisión\nAprendizaje no supervisado: clustering\n\n\nEjercicio práctico:\n\nCrear clusters sobre un conjunto de datos\n\n\n\n\nClase 24:\n\nObjetivo: crear aplicaciones web interactivas con Shiny 1\nContenido:\n\nIntroducción a Shiny 1: Aplicaciones web interactivas\n\nestructura UI - Server\nPrincipios de programación reactiva\n\n\nEjercicio práctico:\n\ncrear una aplicación web interactiva mínima.\n\n\n\n\nClase 25:\n\nObjetivo: crear aplicaciones web interactivas con Shiny 2\nContenido:\n\nIntroducción a Shiny 2: Aplicaciones web interactivas\n\nSliders, inputs de texto, inputs numéricos, render de tablas y gráficos\n\n\nEjercicio práctico:\n\ncontinúa de sesión anterior: crear una aplicación web interactiva mínima 2\n\n\n\n\nClase 26 a la 32:\n\nObjetivo: trabajar en proyecto final de la materia donde se aplican todos los contenidos revisados con la finalidad de crear un producto basado en el uso de datos.",
+    "crumbs": [
+      "Sobre el Curso",
+      "Contenido"
+    ]
+  },
+  {
+    "objectID": "proyecto-1.html",
+    "href": "proyecto-1.html",
+    "title": "Proyecto Mitad del Curso",
+    "section": "",
+    "text": "Introducción\nEn esta etapa del curso, pondrás en práctica los conocimientos adquiridos hasta ahora en R para abordar un problema real. El trabajo será desarrollado en equipos de 3 a 5 estudiantes. La idea es que desarrolles un proyecto completo, desde la definición del problema hasta la presentación de los resultados. Este proyecto tiene un peso asignado de 20% sobre el total de la calificación del curso.\nLa calificación será con un tope de 20 puntos, desagregados de esta manera:\n\n5 puntos: originalidad y claridad del proyecto (identificación problema, plantear una pregunta de investigación).\n5 puntos: calidad del código (limpieza datos, procesamiento, análisis exploratorio)\n5 puntos: comunicación de los resultados (gráficos, reporte quarto)\n5 puntos resto: (documentar proceso, compartir proyecto)\n\n\n\nObjetivos del Proyecto\n\nIdentificar un problema: Seleccionar un problema relevante y actual, preferiblemente relacionado con Venezuela, que pueda ser analizado con los datos disponibles.\nPlantear una pregunta de investigación: Formular una pregunta clara y concisa que el proyecto buscará responder.\nObteneción y limpiar los datos: Recolectar los datos necesarios y realizar las tareas de limpieza y transformación requeridas.\nRealizar el análisis exploratorio de datos: Explorar los datos para identificar patrones, tendencias y relaciones entre las variables.\nModelar los datos: Aplicar técnicas de modelado adecuadas para responder a la pregunta de investigación (opcional, es un valor agregado, no es necesario).\nVisualizar los resultados: Crear visualizaciones claras y efectivas para comunicar los hallazgos.\nDocumentar el proceso: Elaborar un informe que describa cada una de las etapas del proyecto, incluyendo el código utilizado.\nCompartir el proyecto: Crear un repositorio en una plataforma de control de versiones (GitHub) para compartir el código y los resultados con otros. (opcional, es un valor agregado)\n\n\n\nEspecificaciones del Proyecto\n\nContenido: El proyecto debe abordar distintas herramientas de R aprendidas hasta el momento.\nCalidad del código: Se evaluará la claridad, eficiencia y organización del código.\nEstructura: El proyecto debe seguir las buenas prácticas de desarrollo en RStudio, incluyendo la organización de archivos, el uso de funciones y la documentación del código.\nReproducibilidad: El proyecto debe ser reproducible, es decir, cualquier persona con los mismos datos y el código fuente debería obtener los mismos resultados (opcional, es un valor agregado).\nComunicación: Los resultados deben ser presentados de manera clara y concisa, utilizando gráficos, tablas y texto explicativo.\n\n\n\nSugerencias de Temas\n\nSe abordará en clase al momento de asignar el proyecto y los grupos.\n\n\n\nEntrega\nEl proyecto final deberá entregarse en un formato reproducible (por ejemplo, un archivo Quarto), incluyendo:\n\nInforme: Un documento que describa el problema, la metodología utilizada, los resultados y las conclusiones (opcional).\nCódigo Carpeta Proyecto: El código R utilizado para realizar el análisis.\nPresentación: Una presentación breve que resuma los principales hallazgos del proyecto.\nRepositorio (opcional): Un enlace al repositorio en GitHub o una plataforma similar.\nFecha Entrega:\nSemana intermedia del Curso (fecha precisa por definir)."
+  },
+  {
+    "objectID": "proyecto-2.html",
+    "href": "proyecto-2.html",
+    "title": "Proyecto Final del Curso",
+    "section": "",
+    "text": "Introducción\nEn este proyecto, tendrás la oportunidad de aplicar todos los conocimientos adquiridos a lo largo del curso para resolver un problema real y relevante. El trabajo será desarrollado en equipos de 3 a 5 estudiantes. Además, diseñarás un póster atractivo que resuma tu investigación y crearás una presentación para compartir tus resultados con tus compañeros y la comunidad en general. Los resultados de las investigaciones se mostrarán en la página del Curso para promocionar el talento de los estudiantes de la Escuela de Economía de la UCV.\nEste proyecto tiene un peso asignado de 30% sobre el total de la calificación del curso.\nLa calificación será con un tope de 30 puntos, desagregados de esta manera:\n\n5 puntos: originalidad y claridad del proyecto (identificación problema, plantear una pregunta de investigación).\n5 puntos: calidad del código (limpieza datos, procesamiento, análisis exploratorio)\n5 puntos: comunicación de los resultados (gráficos, reporte quarto)\n5 puntos: presentación en público del proyecto\n5 puntos póster (afiche)\n5 puntos resto: (documentar proceso, compartir proyecto)\n\n\n\nObjetivos del Proyecto\n\nInvestigación: Realiza un análisis de datos exhaustivo, utilizando las técnicas aprendidas en clase.\nObteneción y limpiar los datos: Recolectar los datos necesarios y realizar las tareas de limpieza y transformación requeridas.\nRealizar el análisis exploratorio de datos: Explorar los datos para identificar patrones, tendencias y relaciones entre las variables.\nModelar los datos: Aplicar técnicas de modelado adecuadas para responder a la pregunta de investigación (opcional, es un valor agregado, no es necesario).\nVisualizar los resultados: Crear visualizaciones claras y efectivas para comunicar los hallazgos.\nComunicación efectiva: Diseña un póster visualmente atractivo que comunique de manera clara y concisa los objetivos, metodología, resultados y conclusiones de tu investigación.\nDocumentar el proceso: Elaborar un informe que describa cada una de las etapas del proyecto, incluyendo el código utilizado.\nPresentación en público: Prepara una presentación breve para exponer tu proyecto ante tus compañeros y recibir retroalimentación.\nColaboración: Comparte tu trabajo con la comunidad del curso, contribuyendo a un repositorio de proyectos.\nCompartir el proyecto: Crear un repositorio en una plataforma de control de versiones ( GitHub) para compartir el código y los resultados con otros.\n\n\n\nEspecificaciones del Proyecto\n\nContenido: El proyecto debe abordar distintas herramientas de R aprendidas hasta el momento.\nTema: Elige un tema de tu interés relacionado con Venezuela que pueda ser abordado con los datos disponibles (obligatorio).\nCalidad del código: Se evaluará la claridad, eficiencia y organización del código.\nEstructura: El proyecto debe seguir las buenas prácticas de desarrollo en RStudio, incluyendo la organización de archivos, el uso de funciones y la documentación del código.\nPóster: Diseña un póster que incluya los siguientes elementos: título, introducción, objetivos, metodología, resultados (visualizaciones), conclusiones y referencias.\nPresentación: Prepara una presentación de 5-7 minutos para exponer tu proyecto.\nInforme: Entrega un informe escrito que detalle el proceso de investigación, los resultados y las conclusiones (opcional).\nReproducibilidad: El proyecto debe ser reproducible, es decir, cualquier persona con los mismos datos y el código fuente debería obtener los mismos resultados (opcional, es un valor agregado).\nComunicación: Los resultados deben ser presentados de manera clara y concisa, utilizando gráficos, tablas y texto explicativo.\nRepositorio: Comparte tu código y los datos en un repositorio en línea (por ejemplo, GitHub).\n\n\n\nSugerencias de Temas\n\nSe abordará en clase al momento de asignar el proyecto y los grupos.\n\n\n\nEntrega:\n\nInforme: Un documento que describa el problema, la metodología utilizada, los resultados y las conclusiones (opcional).\nCódigo Carpeta Proyecto: El código R utilizado para realizar el análisis.\nPresentación: Una presentación breve que resuma los principales hallazgos del proyecto.\nRepositorio: Un enlace al repositorio en GitHub o una plataforma similar.\nPóster- Afiche: lámina (dimensiones por definir) con lo indicado anteriormente\n\n\n\nFecha Entrega:\nSemana final del Curso (fecha precisa por definir)."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Actividades",
+    "section": "",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\n\n\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\n\n\n\n\n\n\n3\nlun, 28 oct.\n\n\n\n\n\n\n\n\nmié, 30 oct.\n\n\n\n\n\n\n3\nlun, 4 nov.\n\n\n\n\n\n\n\n\nmié, 6 nov.\n\n\n\n\n\n\n4\nlun, 11 nov.\n\n\n\n\n\n\n\n\nmié, 13 nov.\n\n\n\n\n\n\n5\nlun, 18 nov.\n\n\n\n\n\n\n\n\nmié, 20 nov.\n\n\n\n\n\n\n6\nlun, 25 nov.\n\n\n\n\n\n\n\n\nmié, 27 nov.\n\n\n\n\n\n\n7\nlun, 2 dic.\n\n\n\n\n\n\n\n\nmié, 4 dic.\n\n\n\n\n\n\n8\nlun, 9 dic.\n\n\n\n\n\n\n\n\nmié, 11 dic.\n\n\n\n\n\n\n9\nlun, 16 dic.\n\n\n\n\n\n\n\n\nmié, 18 dic.\n\n\n\n\n\n\n10\nlun, 13 ene.\n\n\n\n\n\n\n\n\nmié, 15 ene.\n\n\n\n\n\n\n11\nlun, 20 ene.\n\n\n\n\n\n\n\n\nmié, 22 ene.\n\n\n\n\n\n\n12\nlun, 27 ene.\n\n\n\n\n\n\n\n\nmié, 29 ene.\n\n\n\n\n\n\n13\nlun, 3 feb.\n\n\n\n\n\n\n\n\nmié, 5 feb.\n\n\n\n\n\n\n14\nlun, 10 feb.\n\n\n\n\n\n\n\n\nmié, 12 feb.\n\n\n\n\n\n\n15\nsáb, 15 feb.\n\n\n\n\n\n\n\n\nlun, 17 feb.",
+    "crumbs": [
+      "Sobre el Curso",
+      "Actividades"
+    ]
+  },
+  {
+    "objectID": "project/proyecto-2.html",
+    "href": "project/proyecto-2.html",
+    "title": "Proyecto Final del Curso",
+    "section": "",
+    "text": "Introducción\nEn este proyecto, tendrás la oportunidad de aplicar todos los conocimientos adquiridos a lo largo del curso para resolver un problema real y relevante. El trabajo será desarrollado en equipos de 3 a 5 estudiantes. Además, diseñarás un póster atractivo que resuma tu investigación y crearás una presentación para compartir tus resultados con tus compañeros y la comunidad en general. Los resultados de las investigaciones se mostrarán en la página del Curso para promocionar el talento de los estudiantes de la Escuela de Economía de la UCV.\nEste proyecto tiene un peso asignado de 30% sobre el total de la calificación del curso.\nLa calificación será con un tope de 30 puntos, desagregados de esta manera:\n\n5 puntos: originalidad y claridad del proyecto (identificación problema, plantear una pregunta de investigación).\n5 puntos: calidad del código (limpieza datos, procesamiento, análisis exploratorio)\n5 puntos: comunicación de los resultados (gráficos, reporte quarto)\n5 puntos: presentación en público del proyecto\n5 puntos póster (afiche)\n5 puntos resto: (documentar proceso, compartir proyecto)\n\n\n\nObjetivos del Proyecto\n\nInvestigación: Realiza un análisis de datos exhaustivo, utilizando las técnicas aprendidas en clase.\nObteneción y limpiar los datos: Recolectar los datos necesarios y realizar las tareas de limpieza y transformación requeridas.\nRealizar el análisis exploratorio de datos: Explorar los datos para identificar patrones, tendencias y relaciones entre las variables.\nModelar los datos: Aplicar técnicas de modelado adecuadas para responder a la pregunta de investigación (opcional, es un valor agregado, no es necesario).\nVisualizar los resultados: Crear visualizaciones claras y efectivas para comunicar los hallazgos.\nComunicación efectiva: Diseña un póster visualmente atractivo que comunique de manera clara y concisa los objetivos, metodología, resultados y conclusiones de tu investigación.\nDocumentar el proceso: Elaborar un informe que describa cada una de las etapas del proyecto, incluyendo el código utilizado.\nPresentación en público: Prepara una presentación breve para exponer tu proyecto ante tus compañeros y recibir retroalimentación.\nColaboración: Comparte tu trabajo con la comunidad del curso, contribuyendo a un repositorio de proyectos.\nCompartir el proyecto: Crear un repositorio en una plataforma de control de versiones ( GitHub) para compartir el código y los resultados con otros.\n\n\n\nEspecificaciones del Proyecto\n\nContenido: El proyecto debe abordar distintas herramientas de R aprendidas hasta el momento.\nTema: Elige un tema de tu interés relacionado con Venezuela que pueda ser abordado con los datos disponibles (obligatorio).\nCalidad del código: Se evaluará la claridad, eficiencia y organización del código.\nEstructura: El proyecto debe seguir las buenas prácticas de desarrollo en RStudio, incluyendo la organización de archivos, el uso de funciones y la documentación del código.\nPóster: Diseña un póster que incluya los siguientes elementos: título, introducción, objetivos, metodología, resultados (visualizaciones), conclusiones y referencias.\nPresentación: Prepara una presentación de 5-7 minutos para exponer tu proyecto.\nInforme: Entrega un informe escrito que detalle el proceso de investigación, los resultados y las conclusiones (opcional).\nReproducibilidad: El proyecto debe ser reproducible, es decir, cualquier persona con los mismos datos y el código fuente debería obtener los mismos resultados (opcional, es un valor agregado).\nComunicación: Los resultados deben ser presentados de manera clara y concisa, utilizando gráficos, tablas y texto explicativo.\nRepositorio: Comparte tu código y los datos en un repositorio en línea (por ejemplo, GitHub).\n\n\n\nSugerencias de Temas\n\nSe abordará en clase al momento de asignar el proyecto y los grupos.\n\n\n\nEntrega:\n\nInforme: Un documento que describa el problema, la metodología utilizada, los resultados y las conclusiones (opcional).\nCódigo Carpeta Proyecto: El código R utilizado para realizar el análisis.\nPresentación: Una presentación breve que resuma los principales hallazgos del proyecto.\nRepositorio: Un enlace al repositorio en GitHub o una plataforma similar.\nPóster- Afiche: lámina (dimensiones por definir) con lo indicado anteriormente\n\n\n\nFecha Entrega:\nSemana final del Curso (fecha precisa por definir).",
+    "crumbs": [
+      "Proyectos",
+      "Proyecto Final de Curso"
+    ]
   },
   {
     "objectID": "clases/clase_01.html#equipo-de-enseñanza",
@@ -746,11 +395,11 @@
     "text": "Soporte Curso\n\nEn la página del curso se publicarán las horas de atención\nRealizar preguntas en el canal foro en el Discord\nEvitar uso de correo\nRevisar distintos canales en Discord, p. ejem: errores-de-códigos"
   },
   {
-    "objectID": "clases/clase_01.html#novedades--anuncios",
-    "href": "clases/clase_01.html#novedades--anuncios",
+    "objectID": "clases/clase_01.html#anuncios-del-curso",
+    "href": "clases/clase_01.html#anuncios-del-curso",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Novedades- Anuncios",
-    "text": "Novedades- Anuncios\n\nSe publicacarán en el canal anuncios-clases del Discord\nRevisar día anterior a cada una de las clases"
+    "section": "Anuncios del Curso",
+    "text": "Anuncios del Curso\n\nSe publicacarán en el canal anuncios-clases del Discord\nRevisar día anterior a cada una de las clases"
   },
   {
     "objectID": "clases/clase_01.html#retos-que-representa-el-curso",
@@ -767,10 +416,32 @@
     "text": "Tareas Asignadas\n\nRevisar canales en Discord\n\nReglas\nRecursos disponibles\nTareas\n\nRealizar la primera tarea\n\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
-    "objectID": "clases/clase_01.html#anuncios-del-curso",
-    "href": "clases/clase_01.html#anuncios-del-curso",
-    "title": "Ciencia de Datos para Economistas",
-    "section": "Anuncios del Curso",
-    "text": "Anuncios del Curso\n\nSe publicacarán en el canal anuncios-clases del Discord\nRevisar día anterior a cada una de las clases"
+    "objectID": "curso-infogeneral.html",
+    "href": "curso-infogeneral.html",
+    "title": "Información General",
+    "section": "",
+    "text": "Los seres humanos han adoptado masivamente el uso de dispositivos electrónicos en sus actividades diarias, teniendo de ejemplos los teléfonos móviles, los sensores para mediciones de salud, entre otros. En particular, resulta necesario resaltar que estos aparatos almacenan registros digitales de los valores que en ellos se levantan, quedando reflejadas las actividades que hace su portador. Igualmente, la sociedad ha llevado al plano digital una serie de procesos y actividades que antes se hacían en el mundo físico, quedando también los registros de los contenidos generados y de las distintas interacciones que ocurren. Como consecuencia de ambos factores, se encuentran disponibles grandes volúmenes de datos que pueden ser procesados parcial o totalmente por medio de computadores, posteriormente ser transformados en información y con esta se puede hacer el modelado que permite representar conductas, comportamientos sociales, así como la determinación de tendencias, patrones o análisis predictivos.\nDentro de este contexto se tiene que han surgido nuevas áreas de estudio, que desde distintos ángulos, fundamentan la generación de conocimiento en el uso de los datos. Algunas de estas son:\n\nCiencia de Datos: es un campo interdisciplinario que utiliza métodos científicos, estadísticos y computacionales para extraer conocimientos y tomar decisiones informadas a partir de grandes conjuntos de datos, donde se recopilan, limpian, analizan y visualizan datos para identificar patrones, tendencias y relaciones que no serían evidentes a simple vista.\nCiencias Sociales Computacionales: es un campo de estudio donde las computadoras se utilizan para modelar, simular y analizar fenómenos sociales, por ejemplo, estudiando los comportamientos de los individuos en las redes sociales, la influencia de estas redes en la toma de decisiones, la búsqueda de correlaciones o relaciones causales entre distintos fenómenos socio-económicos.\n\nSaber que existen estas nuevas áreas de conocimiento, algunas ya formalizadas como carreras de estudio en universidades del mundo, e incluso en latinoamérica, hacen ver claramente que la manipulación o el modelado de los datos no sólo debe quedar en manos de los computistas, sino se hace necesario que los científicos sociales conozcan y dominen distintos métodos para interactuar con tales cantidades de información, yendo más allá del uso de softwares tradicionales como lo son las hojas de cálculo tipo Excel.\nPor tal motivo, en este documento se expone la propuesta de la materia de estudio “Ciencia de Datos basada en programación en R para economistas” dirigido a los estudiantes de pregrado de la Escuela de Economía.\nEl contenido de la materia, que será detallado más adelante, está diseñado para que el aprendiz pase por un proceso de aprendizaje y de práctica continua, que le permitan dominar diversos métodos de programación que sirvan como herramientas para sustentar y validar las hipótesis que tengan al realizar las investigaciones inherentes al eje central de la carrera Economía, así como también para coadyuvar a que puedan comunicar de manera efectiva los resultados de las investigaciones.\nIgualmente, es necesario resaltar que a lo largo de todas las clases y actividades, se hace énfasis en el desarrollo de las capacidades analíticas del participante, mediante la interpretación de los resultados obtenidos al procesar los datos. De esta forma, se introducen conceptos y métodos de la ciencia de datos y de las ciencias sociales computacionales.\n\n\n\nPara programar en informática se cuenta con distintos lenguajes, los cuales se clasifican principalmente según dos características. La primera viene dada en el propósito o el uso, que tendrá el programa informático que se esté codificando, ya que por ejemplo, son distintos los objetivos que se persiguen al programar las rutinas de un software que da soporte a un horno microondas a los que se tendrán, como es en este caso, al hacer la manipulación y el procesamiento de los datos. Es así, que dentro de la taxonomía de los lenguajes de programación, uno de los criterios de clasificación que se aplica, es determinar si son de “propósito general”, equivalente a indicar que pueden ser usados para distintos fines y por otro lado están aquellos lenguajes que son de “propósito específico”, en los que se delimita de forma taxativa, a qué están destinados los programas que se pueden codificar con tal lenguaje.\nAdicionalmente, la otra característica que diferencia a los lenguajes, es lo que se denomina el “nivel” en el que se considera que están cuando se hace el enunciado y la ejecución de las instrucciones que el computador ejecutará. Para esto existe una escala entre los extremos “bajo nivel” y “alto nivel”, catalogando como lenguajes de “bajo nivel”, aquellos en los que se programa en instrucciones que son mucho más abstractas y cercanas al lenguaje intrínseco del computador, el cual tiende a ser bastante complejo. Por otra lado, están los lenguajes que se consideran de “alto nivel”, en los que se programa con enunciados que son de más fácil comprensión para el ser humano, ya que las instrucciones que se codifican son más cercanas en sintaxis al lenguaje natural con que habitualmente nos expresamos.\nDe esta manera, dentro de los lenguajes de programación se encuentra R, el cual es un lenguaje de propósito específico, orientado a la estadística que ha sido adoptado ampliamente para realizar la manipulación y al procesamiento de datos, que inicialmente a principios del año 2000, estuvo destinado a correr modelos estadísticos como una opción de código abierto alternativa a programas como Stata o EViews.\nAdicionalmente, el lenguaje R también se asume que es de “alto nivel”, facilitando al usuario la comprensión del lenguaje y de cómo hacer uso de las instrucciones que en él se pueden ejecutar, teniendo una curva de aprendizaje con una pendiente más suave a la de otros lenguajes de programación, lo que lo hace ideal para ser aprendido por aquellos que no tienen formación en ciencias de la computación sino que provienen de otras áreas del conocimiento como lo son las ciencias sociales.\nNo obstante, como en todo proceso en que se hace la selección de un recurso sobre otro, existen beneficios y sacrificios, no siendo la selección de R ajena a estos contrapesos. Las opciones de lenguajes disponibles para los investigadores cercanos a las ciencias que basan sus estudios en el uso de los datos, tienen como otras opciones los lenguajes Python y Julia.\nPython es un lenguaje de programación de propósito general, que ha sido adoptado por la comunidad científica por su facilidad de uso y por la cantidad de librerías que se han desarrollado para el procesamiento de datos, mientras que Julia es un lenguaje de programación de alto rendimiento, que ha sido adoptado por la comunidad científica por su velocidad de ejecución y por la facilidad de escribir código que se asemeja a las matemáticas.\nSin embargo, dentro de estas opciones el lenguaje que se ha seleccionado para la propuesta de esta materia es R, ya que es un lenguaje que ha sido adoptado ampliamente por la comunidad de científicos sociales por su facilidad de uso, la integración con el entorno de desarrollo RStudio que facilita la configuración inicial del ambiente de trabajo dentro del computador, así como también por la gran cantidad de librerías que se han desarrollado para el procesamiento de datos asociados a dominios de las ciencias sociales.\nEn líneas generales, a continuación se mencionan algunos de los beneficios que se obtienen al programar en R:\n\nAnálisis de datos: R es una herramienta poderosa para el análisis de datos, lo que permite a los economistas manejar grandes conjuntos de datos de manera eficiente. Esto es crucial en economía, donde los datos pueden ser complejos y abundantes.\nVisualización de datos: R ofrece una amplia gama de paquetes para visualización de datos, lo que permite a los economistas crear gráficos y visualizaciones claras, interactivas y efectivas, lo cual es útil para comunicar los resultados de las investigaciones de manera más impactante y comprensible.\nModelado estadístico: R cuenta con una gran variedad de librerías para realizar análisis estadísticos avanzados y modelado, lo que permite a los economistas desarrollar modelos complejos para comprender mejor los fenómenos sociales y económicos.\nReproducibilidad, comunicar resultados y transparencia: Programar en R permite a los economistas documentar y reproducir fácilmente sus análisis, lo que aumenta la transparencia y la credibilidad de la investigación. Igualmente los investigadores puedan comunicar de manera efectiva los resultados de sus investigaciones, generando reportes, gráficos, tablas, mapas, aplicaciones web interactivas, entre otros, que pueden ser publicadas con cadenas de trabajo automatizadas que minimizan los esfuerzos y el tiempo que se requiere para la generación y actualización de estos productos.\n\nSin embargo, la propuesta acá detallada, no aborda en profundidad los aspectos mencionados en el punto 3 sobre el modelado estadístico, ya que al existir materias especializadas dentro de la carrera de Economía para abordar estos tópicos, se considera que la materia propuesta se enfoca en la enseñanza del resto de los beneficios enumerados.\nIgualmente resulta de interés hacer las siguientes consideraciones al usar un lenguaje de programación como R, también extrapolable a python:\n\nLenguaje de código abierto: R es un lenguaje open source (código abierto) y su uso no implica ningún pago de licencia y los recursos computacionales que se necesitan para ejecutarlo están optimizados, siendo un elemento muy beneficioso, por ejemplo para estudiantes e instituciones que pueden contar con equipos informáticos que no son de última generación, haciendo que los procesos que en él se corran puedan hacerse de una manera más eficiente en comparación a si se usarán softwares privativos.\nComunidad de Usuarios: la existencia de una comunidad de usuarios muy activa, donde en múltiples investigaciones el componente de programación se hace en este lenguaje, llegando algunas de estas investigaciones a formar parte del estado del arte en su dominio y en muchos casos los modelos implementados o aplicados, son publicados mediantes “librerías” o “paquetes”, haciendo que los usuarios de R puedan acceder de forma libre a los más recientes y novedosos modelos, siendo nuevamente importante resaltar que esto lo pueden hacer de forma legal, sin realizar el desembolso de alguna suma de dinero.\nAcceso a Cómputos en la Nube: los programadores de R pueden acceder a recursos de cómputo que se encuentran disponibles en la nube, donde mediante un navegador web se pueden ingresa a sitios de internet que permiten programar y ejecutar los códigos, disipando barreras que generalmente vienen dadas en que el investigador cuenta con computadoras obsoletas o de muy limitados recursos de procesamiento informático. Al usar la nube, el computador del programador pasa a ser un terminal y la contraparte de los cálculos ocurre en un servidor remoto, con robustos recursos que empresas tecnológicas ponen a disposicición de la comunidad científica de forma gratuita.\n\n\n\n\nTrabajar por proyectos grupales donde tengan que resolver un un problema real y aprendan haciendo las codificaciones, asociado a algún tema de interés de la realidad económica venezolana y abarcando las distintas fases de un proyecto de investigación, desde la obtención de los datos, su manipulación y procesamiento, hasta la presentación de los resultados, garantizando que las investigaciones pueda ser reproducibles por la comunidad científica.\nEjemplos de esto puede ser la obtención de datos de forma periódica y automatizada para la generación de una canasta de precios de la cual se puedan hacer las mediciones de las variaciones de precios detectadas y así construir un indicador de inflación.\n\n\n\nA los fines de indicar algunas de las fuentes de datos a las cuales se puede acceder para realizar las investigaciones a desarrollar, se mencionan las siguientes:\n\nPáginas web o bases de datos de instituciones públicas y privadas.\nPáginas web de comercio electrónico como supermercados donde se publican precios.\nInformación georreferenciada disponible en las API´s de Google Maps y de Open Street Maps.\nConexiones a API´s de distintos sistemas de información.\nDatos de redes sociales.\n\n\n\n\nSesiones de clases y prácticas presenciales, ya que se considera que el aprendizaje de la programación se facilita cuando se cuenta con la presencia del instructor y se puede interactuar con los compañeros de clase y más aún, teniendo presente los problemas de conectividad a internet.\n\n\n\nLas clases deben ser impartidas en un laboratorio que por participante debe contar con un equipo (computador) con al menos 4 GB de RAM; navegador web actualizado (Firefox o Google Chrome); 10 Gb de disco duro disponible; sistema operativo: windows 8 (o superior) , MacOS o Ubuntu 18 o superior (en caso de usar Ubuntu la memoria RAM puede ser mínima de 2 Gb ); arquitectura 64 bits.\n\n\n\nEl curso contará con un repositorio de acceso público mediante la web, con los códigos, datos, guías y demás materiales que sean usados y generados a lo largo de las sesiones de trabajo. Igualmente se adoptará el uso un grupo de mensajería como Discord para almacenar todas las preguntas y respuestas que vayan surgiendo a lo largo del curso, las cuales podrán servir como material de consulta para futuros asistentes al curso.\nLos proyectos de programación que se generen a lo largo del curso por parte de los alumnos, deberán ser compartidos mediante el repositorio, garantizando el acceso por parte de todos los interesados. Igualmente se fomentará la creación de conjuntos de datos de libre acceso que sirvan para toda la comunidad de investigadores.\n\n\n\nEn resumen, aprender a programar en R y familiarizarse con la ciencia de datos y las ciencias sociales computacionales, puede permitir a los economistas realizar análisis más sofisticados y rigurosos, así como abordar preguntas de investigación más complejas en el ámbito de las ciencias sociales, abriendo la posibilidad de que se obtengan y generen datos estructurados, en medio de una situación país donde no existe la cultura gubernamental ni privada de compartir y/o publicar conjuntos de datos.\nLos participantes del curso podrán hacer investigaciones que resulten reproducibles y mediante procesamientos encadenados y se les facilitará comunicar los resultados mediante blogs, página web o reportes técnicos de fácil acceso mediante la web.\nIgualmente, podrán hacer prototipos de aplicaciones web interactivas para el análisis exploratorio de los datos, su modelado mediante modelos econométricos o estadísticos y dispondrán de nociones de elementos introductorios a la ciencia de datos y sus métodos de trabajo.",
+    "crumbs": [
+      "Sobre el Curso",
+      "Información General"
+    ]
+  },
+  {
+    "objectID": "curso-infogeneral.html#ciencia-de-datos-basada-en-programación-en-r-para-economistas",
+    "href": "curso-infogeneral.html#ciencia-de-datos-basada-en-programación-en-r-para-economistas",
+    "title": "Información General",
+    "section": "",
+    "text": "Los seres humanos han adoptado masivamente el uso de dispositivos electrónicos en sus actividades diarias, teniendo de ejemplos los teléfonos móviles, los sensores para mediciones de salud, entre otros. En particular, resulta necesario resaltar que estos aparatos almacenan registros digitales de los valores que en ellos se levantan, quedando reflejadas las actividades que hace su portador. Igualmente, la sociedad ha llevado al plano digital una serie de procesos y actividades que antes se hacían en el mundo físico, quedando también los registros de los contenidos generados y de las distintas interacciones que ocurren. Como consecuencia de ambos factores, se encuentran disponibles grandes volúmenes de datos que pueden ser procesados parcial o totalmente por medio de computadores, posteriormente ser transformados en información y con esta se puede hacer el modelado que permite representar conductas, comportamientos sociales, así como la determinación de tendencias, patrones o análisis predictivos.\nDentro de este contexto se tiene que han surgido nuevas áreas de estudio, que desde distintos ángulos, fundamentan la generación de conocimiento en el uso de los datos. Algunas de estas son:\n\nCiencia de Datos: es un campo interdisciplinario que utiliza métodos científicos, estadísticos y computacionales para extraer conocimientos y tomar decisiones informadas a partir de grandes conjuntos de datos, donde se recopilan, limpian, analizan y visualizan datos para identificar patrones, tendencias y relaciones que no serían evidentes a simple vista.\nCiencias Sociales Computacionales: es un campo de estudio donde las computadoras se utilizan para modelar, simular y analizar fenómenos sociales, por ejemplo, estudiando los comportamientos de los individuos en las redes sociales, la influencia de estas redes en la toma de decisiones, la búsqueda de correlaciones o relaciones causales entre distintos fenómenos socio-económicos.\n\nSaber que existen estas nuevas áreas de conocimiento, algunas ya formalizadas como carreras de estudio en universidades del mundo, e incluso en latinoamérica, hacen ver claramente que la manipulación o el modelado de los datos no sólo debe quedar en manos de los computistas, sino se hace necesario que los científicos sociales conozcan y dominen distintos métodos para interactuar con tales cantidades de información, yendo más allá del uso de softwares tradicionales como lo son las hojas de cálculo tipo Excel.\nPor tal motivo, en este documento se expone la propuesta de la materia de estudio “Ciencia de Datos basada en programación en R para economistas” dirigido a los estudiantes de pregrado de la Escuela de Economía.\nEl contenido de la materia, que será detallado más adelante, está diseñado para que el aprendiz pase por un proceso de aprendizaje y de práctica continua, que le permitan dominar diversos métodos de programación que sirvan como herramientas para sustentar y validar las hipótesis que tengan al realizar las investigaciones inherentes al eje central de la carrera Economía, así como también para coadyuvar a que puedan comunicar de manera efectiva los resultados de las investigaciones.\nIgualmente, es necesario resaltar que a lo largo de todas las clases y actividades, se hace énfasis en el desarrollo de las capacidades analíticas del participante, mediante la interpretación de los resultados obtenidos al procesar los datos. De esta forma, se introducen conceptos y métodos de la ciencia de datos y de las ciencias sociales computacionales.\n\n\n\nPara programar en informática se cuenta con distintos lenguajes, los cuales se clasifican principalmente según dos características. La primera viene dada en el propósito o el uso, que tendrá el programa informático que se esté codificando, ya que por ejemplo, son distintos los objetivos que se persiguen al programar las rutinas de un software que da soporte a un horno microondas a los que se tendrán, como es en este caso, al hacer la manipulación y el procesamiento de los datos. Es así, que dentro de la taxonomía de los lenguajes de programación, uno de los criterios de clasificación que se aplica, es determinar si son de “propósito general”, equivalente a indicar que pueden ser usados para distintos fines y por otro lado están aquellos lenguajes que son de “propósito específico”, en los que se delimita de forma taxativa, a qué están destinados los programas que se pueden codificar con tal lenguaje.\nAdicionalmente, la otra característica que diferencia a los lenguajes, es lo que se denomina el “nivel” en el que se considera que están cuando se hace el enunciado y la ejecución de las instrucciones que el computador ejecutará. Para esto existe una escala entre los extremos “bajo nivel” y “alto nivel”, catalogando como lenguajes de “bajo nivel”, aquellos en los que se programa en instrucciones que son mucho más abstractas y cercanas al lenguaje intrínseco del computador, el cual tiende a ser bastante complejo. Por otra lado, están los lenguajes que se consideran de “alto nivel”, en los que se programa con enunciados que son de más fácil comprensión para el ser humano, ya que las instrucciones que se codifican son más cercanas en sintaxis al lenguaje natural con que habitualmente nos expresamos.\nDe esta manera, dentro de los lenguajes de programación se encuentra R, el cual es un lenguaje de propósito específico, orientado a la estadística que ha sido adoptado ampliamente para realizar la manipulación y al procesamiento de datos, que inicialmente a principios del año 2000, estuvo destinado a correr modelos estadísticos como una opción de código abierto alternativa a programas como Stata o EViews.\nAdicionalmente, el lenguaje R también se asume que es de “alto nivel”, facilitando al usuario la comprensión del lenguaje y de cómo hacer uso de las instrucciones que en él se pueden ejecutar, teniendo una curva de aprendizaje con una pendiente más suave a la de otros lenguajes de programación, lo que lo hace ideal para ser aprendido por aquellos que no tienen formación en ciencias de la computación sino que provienen de otras áreas del conocimiento como lo son las ciencias sociales.\nNo obstante, como en todo proceso en que se hace la selección de un recurso sobre otro, existen beneficios y sacrificios, no siendo la selección de R ajena a estos contrapesos. Las opciones de lenguajes disponibles para los investigadores cercanos a las ciencias que basan sus estudios en el uso de los datos, tienen como otras opciones los lenguajes Python y Julia.\nPython es un lenguaje de programación de propósito general, que ha sido adoptado por la comunidad científica por su facilidad de uso y por la cantidad de librerías que se han desarrollado para el procesamiento de datos, mientras que Julia es un lenguaje de programación de alto rendimiento, que ha sido adoptado por la comunidad científica por su velocidad de ejecución y por la facilidad de escribir código que se asemeja a las matemáticas.\nSin embargo, dentro de estas opciones el lenguaje que se ha seleccionado para la propuesta de esta materia es R, ya que es un lenguaje que ha sido adoptado ampliamente por la comunidad de científicos sociales por su facilidad de uso, la integración con el entorno de desarrollo RStudio que facilita la configuración inicial del ambiente de trabajo dentro del computador, así como también por la gran cantidad de librerías que se han desarrollado para el procesamiento de datos asociados a dominios de las ciencias sociales.\nEn líneas generales, a continuación se mencionan algunos de los beneficios que se obtienen al programar en R:\n\nAnálisis de datos: R es una herramienta poderosa para el análisis de datos, lo que permite a los economistas manejar grandes conjuntos de datos de manera eficiente. Esto es crucial en economía, donde los datos pueden ser complejos y abundantes.\nVisualización de datos: R ofrece una amplia gama de paquetes para visualización de datos, lo que permite a los economistas crear gráficos y visualizaciones claras, interactivas y efectivas, lo cual es útil para comunicar los resultados de las investigaciones de manera más impactante y comprensible.\nModelado estadístico: R cuenta con una gran variedad de librerías para realizar análisis estadísticos avanzados y modelado, lo que permite a los economistas desarrollar modelos complejos para comprender mejor los fenómenos sociales y económicos.\nReproducibilidad, comunicar resultados y transparencia: Programar en R permite a los economistas documentar y reproducir fácilmente sus análisis, lo que aumenta la transparencia y la credibilidad de la investigación. Igualmente los investigadores puedan comunicar de manera efectiva los resultados de sus investigaciones, generando reportes, gráficos, tablas, mapas, aplicaciones web interactivas, entre otros, que pueden ser publicadas con cadenas de trabajo automatizadas que minimizan los esfuerzos y el tiempo que se requiere para la generación y actualización de estos productos.\n\nSin embargo, la propuesta acá detallada, no aborda en profundidad los aspectos mencionados en el punto 3 sobre el modelado estadístico, ya que al existir materias especializadas dentro de la carrera de Economía para abordar estos tópicos, se considera que la materia propuesta se enfoca en la enseñanza del resto de los beneficios enumerados.\nIgualmente resulta de interés hacer las siguientes consideraciones al usar un lenguaje de programación como R, también extrapolable a python:\n\nLenguaje de código abierto: R es un lenguaje open source (código abierto) y su uso no implica ningún pago de licencia y los recursos computacionales que se necesitan para ejecutarlo están optimizados, siendo un elemento muy beneficioso, por ejemplo para estudiantes e instituciones que pueden contar con equipos informáticos que no son de última generación, haciendo que los procesos que en él se corran puedan hacerse de una manera más eficiente en comparación a si se usarán softwares privativos.\nComunidad de Usuarios: la existencia de una comunidad de usuarios muy activa, donde en múltiples investigaciones el componente de programación se hace en este lenguaje, llegando algunas de estas investigaciones a formar parte del estado del arte en su dominio y en muchos casos los modelos implementados o aplicados, son publicados mediantes “librerías” o “paquetes”, haciendo que los usuarios de R puedan acceder de forma libre a los más recientes y novedosos modelos, siendo nuevamente importante resaltar que esto lo pueden hacer de forma legal, sin realizar el desembolso de alguna suma de dinero.\nAcceso a Cómputos en la Nube: los programadores de R pueden acceder a recursos de cómputo que se encuentran disponibles en la nube, donde mediante un navegador web se pueden ingresa a sitios de internet que permiten programar y ejecutar los códigos, disipando barreras que generalmente vienen dadas en que el investigador cuenta con computadoras obsoletas o de muy limitados recursos de procesamiento informático. Al usar la nube, el computador del programador pasa a ser un terminal y la contraparte de los cálculos ocurre en un servidor remoto, con robustos recursos que empresas tecnológicas ponen a disposicición de la comunidad científica de forma gratuita.\n\n\n\n\nTrabajar por proyectos grupales donde tengan que resolver un un problema real y aprendan haciendo las codificaciones, asociado a algún tema de interés de la realidad económica venezolana y abarcando las distintas fases de un proyecto de investigación, desde la obtención de los datos, su manipulación y procesamiento, hasta la presentación de los resultados, garantizando que las investigaciones pueda ser reproducibles por la comunidad científica.\nEjemplos de esto puede ser la obtención de datos de forma periódica y automatizada para la generación de una canasta de precios de la cual se puedan hacer las mediciones de las variaciones de precios detectadas y así construir un indicador de inflación.\n\n\n\nA los fines de indicar algunas de las fuentes de datos a las cuales se puede acceder para realizar las investigaciones a desarrollar, se mencionan las siguientes:\n\nPáginas web o bases de datos de instituciones públicas y privadas.\nPáginas web de comercio electrónico como supermercados donde se publican precios.\nInformación georreferenciada disponible en las API´s de Google Maps y de Open Street Maps.\nConexiones a API´s de distintos sistemas de información.\nDatos de redes sociales.\n\n\n\n\nSesiones de clases y prácticas presenciales, ya que se considera que el aprendizaje de la programación se facilita cuando se cuenta con la presencia del instructor y se puede interactuar con los compañeros de clase y más aún, teniendo presente los problemas de conectividad a internet.\n\n\n\nLas clases deben ser impartidas en un laboratorio que por participante debe contar con un equipo (computador) con al menos 4 GB de RAM; navegador web actualizado (Firefox o Google Chrome); 10 Gb de disco duro disponible; sistema operativo: windows 8 (o superior) , MacOS o Ubuntu 18 o superior (en caso de usar Ubuntu la memoria RAM puede ser mínima de 2 Gb ); arquitectura 64 bits.\n\n\n\nEl curso contará con un repositorio de acceso público mediante la web, con los códigos, datos, guías y demás materiales que sean usados y generados a lo largo de las sesiones de trabajo. Igualmente se adoptará el uso un grupo de mensajería como Discord para almacenar todas las preguntas y respuestas que vayan surgiendo a lo largo del curso, las cuales podrán servir como material de consulta para futuros asistentes al curso.\nLos proyectos de programación que se generen a lo largo del curso por parte de los alumnos, deberán ser compartidos mediante el repositorio, garantizando el acceso por parte de todos los interesados. Igualmente se fomentará la creación de conjuntos de datos de libre acceso que sirvan para toda la comunidad de investigadores.\n\n\n\nEn resumen, aprender a programar en R y familiarizarse con la ciencia de datos y las ciencias sociales computacionales, puede permitir a los economistas realizar análisis más sofisticados y rigurosos, así como abordar preguntas de investigación más complejas en el ámbito de las ciencias sociales, abriendo la posibilidad de que se obtengan y generen datos estructurados, en medio de una situación país donde no existe la cultura gubernamental ni privada de compartir y/o publicar conjuntos de datos.\nLos participantes del curso podrán hacer investigaciones que resulten reproducibles y mediante procesamientos encadenados y se les facilitará comunicar los resultados mediante blogs, página web o reportes técnicos de fácil acceso mediante la web.\nIgualmente, podrán hacer prototipos de aplicaciones web interactivas para el análisis exploratorio de los datos, su modelado mediante modelos econométricos o estadísticos y dispondrán de nociones de elementos introductorios a la ciencia de datos y sus métodos de trabajo.",
+    "crumbs": [
+      "Sobre el Curso",
+      "Información General"
+    ]
+  },
+  {
+    "objectID": "clases/clase_02.html#video-creación-proyecto",
+    "href": "clases/clase_02.html#video-creación-proyecto",
+    "title": "Conociendo el IDE RStudio",
+    "section": "Video Creación Proyecto",
+    "text": "Video Creación Proyecto"
   }
 ]

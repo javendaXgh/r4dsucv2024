@@ -1,0 +1,138 @@
+---
+title: " Conociendo el IDE RStudio"
+subtitle: "Clase 2"
+date: "Octubre 21, 2024"
+format: revealjs
+---
+
+## IDE's
+
+![](images/visualcode.png){fig-align="center" width="500"}
+
+::: notes
+consola R, entornos de programación, no todo es visual-acciones, hablar sobre la programación, no son out of the box
+:::
+
+## RStudio:
+
+![imagen tomada de presentación de Yanina Bellini Saibene \@yabellini para el grupo RLadies](images/rmotor.png){fig-align="center" width="500"}
+
+## RStudio:
+
+RStudio es un entorno de desarrollo integrado (IDE) que proporciona una interfaz al agregar muchas funciones y herramientas convenientes.
+
+![](images/icono.png){fig-align="center" width="400"}
+
+::: notes
+software libre, colaboradores, cambio de presentacion
+:::
+
+## IDE RStudio
+
+Uno de los *entornos* más cómodos para utilizar el *lenguaje* **R** es el *programa* **R studio**.
+
+-   Rstudio es una fundación que produce productos asociados al lenguaje R, como el programa sobre el que corremos los comandos, y extensiones del lenguaje (librerías).
+
+-   El programa es *gratuito* y se puede bajar de la [página oficial](https://posit.co/download/rstudio-desktop/)
+
+## Se puede ejecutar desde:
+
+1.  [Nube](https://posit.cloud/)
+2.  local: su propio computador
+3.  LAN: red local
+
+## Secciones
+
+![Pantalla Rstudio](images/Pantalla%20Rstudio.png){width="1000"}
+
+## Partes - Componentes, pestañas
+
+![](images/rstudio/rstudiototal.png){width="705"}
+
+4 paneles y c/u con distintas pestañas y funcionalidades\
+
+## abrir archivos
+
+![](images/rstudio/2_file.png){width="313"}
+
+Son distintos los tipos de archivos que se pueden abrir
+
+## panel Editor de Código
+
+![](images/rstudio/3_scripts.png){width="625"}
+
+editor de código. se introducen códigos (scripts)
+
+Se ejecutan con "run" el el área superior derecha
+
+## panel Envirnment y Files
+
+![](images/rstudio/4_rightside.png){width="344"}
+
+## panel cónsola
+
+![](images/rstudio/5_consola_terminal.png){width="907"}
+
+importante diferenciar: **consola** estamos dentro de R, en **terminal** acceso al SO del computador
+
+## panel files
+
+![](images/rstudio/6_files_viewer.png){width="520"}
+
+navegador de archivos y visor.
+
+# Uso del IDE RStudio
+
+## Working Directory:
+
+es donde tenemos la ruta (path) a los archivos con los cuales trabajamos en un determinado proyecto: Absoluta
+
+a.  en panel "files" ![](images/rstudio/path_files.png){width="700"}
+b.  en terminal con el comando pwd ![](images/rstudio/path_pwd.png){width="800"}
+c.  en la consola con la función getwd() ![](images/rstudio/path_getwd.png){width="800"}
+
+## Working Directory:
+
+relativa
+
+![](images/rstudio/wd_relativa.png){width="400"}
+
+## Configurar "working directory"
+
+crear carpeta donde se van a guardar los proyectos, p ejemp, dentro de "Documentos" - paso 1
+
+![](images/rstudio/wd1){width="500"}
+
+-   paso 2
+
+![](images/rstudio/wd2){width="500"}
+
+## Proyecto:
+
+conjunto de archivos ("files" ) que conforman un determinado análisis, página web, presentación, libro, etc. Al crearse hay algunos archivos que se crean automáticamente .Rproj
+
+`list.files()`
+
+## Primera Práctica:
+
+Instalar un paquete de R de manera *offline*
+
+1.  Crear un Proyecto de nombre 02_inst_paqk_off
+
+2.  Descargar script desde [http://direccion_ip:90/descarga/scripts/](http://localhost:90/descarga/scripts/)[clase_02_instalacion_paquete_offline.R](http://localhost:90/descarga/scripts/clase_02_instalacion_paquete_offline.R)
+
+3.  Descargar archivo zip
+
+    [http://direccion_ip:90/descarga/winbinarios.zip](http://localhost:90/descarga/winbinarios.zip)
+
+4.  Mover el archivo zip al directorio de trabajo del proyecto que
+
+5.  Ejecutar línea a línea
+
+## Video Creación Proyecto
+
+{{< video https://www.youtube.com/watch?v=HgqY5j5jCxU width="1000"height="700" >}}
+
+## Playlist Economía R4DS
+
+[Playlist videos del curso](https://www.youtube.com/playlist?list=PLliutFhUtupLHCkX5dWyTrTMNQod1Uedy)

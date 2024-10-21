@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ucveconomiar4ds.netlify.app/curso-infogeneral.html</loc>
-    <lastmod>2024-10-14T04:55:08.443Z</lastmod>
+    <loc>https://ucveconomiar4ds.netlify.app/laboratorios/lab-1.html</loc>
+    <lastmod>2024-10-14T03:06:18.578Z</lastmod>
   </url>
   <url>
-    <loc>https://ucveconomiar4ds.netlify.app/project/proyecto-2.html</loc>
+    <loc>https://ucveconomiar4ds.netlify.app/clases/clase_02.html</loc>
+    <lastmod>2024-10-21T09:49:43.636Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ucveconomiar4ds.netlify.app/curso-equipo.html</loc>
+    <lastmod>2024-10-14T12:07:17.623Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ucveconomiar4ds.netlify.app/project/proyecto-1.html</loc>
+    <lastmod>2024-10-14T16:00:10.430Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ucveconomiar4ds.netlify.app/curso-programa.html</loc>
+    <lastmod>2024-10-14T11:46:13.107Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ucveconomiar4ds.netlify.app/proyecto-1.html</loc>
+    <lastmod>2024-10-14T05:05:17.694Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ucveconomiar4ds.netlify.app/proyecto-2.html</loc>
     <lastmod>2024-10-14T02:21:12.937Z</lastmod>
   </url>
   <url>
@@ -13,39 +33,15 @@
     <lastmod>2024-10-14T11:43:04.180Z</lastmod>
   </url>
   <url>
-    <loc>https://ucveconomiar4ds.netlify.app/proyecto-2.html</loc>
+    <loc>https://ucveconomiar4ds.netlify.app/project/proyecto-2.html</loc>
     <lastmod>2024-10-14T02:21:12.937Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ucveconomiar4ds.netlify.app/labs/lab-1.html</loc>
-    <lastmod>2024-10-14T03:06:18.578Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ucveconomiar4ds.netlify.app/proyecto-1.html</loc>
-    <lastmod>2024-10-14T05:05:17.694Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ucveconomiar4ds.netlify.app/curso-programa.html</loc>
-    <lastmod>2024-10-14T11:46:13.107Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ucveconomiar4ds.netlify.app/project/proyecto-1.html</loc>
-    <lastmod>2024-10-14T16:00:10.430Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ucveconomiar4ds.netlify.app/curso-equipo.html</loc>
-    <lastmod>2024-10-14T12:07:17.623Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ucveconomiar4ds.netlify.app/lectures/clase_1/clase_01.html</loc>
-    <lastmod>2024-10-16T13:47:39.360Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ucveconomiar4ds.netlify.app/lectures/clase_01.html</loc>
-    <lastmod>2024-10-16T14:12:33.247Z</lastmod>
   </url>
   <url>
     <loc>https://ucveconomiar4ds.netlify.app/clases/clase_01.html</loc>
     <lastmod>2024-10-16T14:40:41.423Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ucveconomiar4ds.netlify.app/curso-infogeneral.html</loc>
+    <lastmod>2024-10-14T04:55:08.443Z</lastmod>
   </url>
 </urlset>
