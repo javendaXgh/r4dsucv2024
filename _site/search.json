@@ -22,6 +22,195 @@
     ]
   },
   {
+    "objectID": "clases/test.html#r-base",
+    "href": "clases/test.html#r-base",
+    "title": "test",
+    "section": "R base",
+    "text": "R base\nCon R base nos referimos a los comandos básicos que vienen incorporados en el R, sin necesidad de cargar librerías."
+  },
+  {
+    "objectID": "clases/test.html#uso-de-la-consola-como-una-calculadora--operaciones-aritméticas",
+    "href": "clases/test.html#uso-de-la-consola-como-una-calculadora--operaciones-aritméticas",
+    "title": "test",
+    "section": "Uso de la consola como una calculadora- operaciones aritméticas",
+    "text": "Uso de la consola como una calculadora- operaciones aritméticas\n\nEn la consola podemos hacer calculos tal cual si estuviesemos usando una calculadora\n\n\n5*3+6\n\n[1] 21\n\n5*(3+6)\n\n[1] 45\n\n\ntener presente el uso de los paréntesis y el orden en que serán ejecutadas las operaciones matemáticas"
+  },
+  {
+    "objectID": "clases/test.html#definición-de-objetos",
+    "href": "clases/test.html#definición-de-objetos",
+    "title": "test",
+    "section": "Definición de objetos",
+    "text": "Definición de objetos\nLos Objetos/Elementos constituyen la categoría esencial del R. De hecho, todo en R es un objeto, y se almacena con un nombre específico que no debe poseer espacios. Un número, un vector, una función, la progresión de letras del abecedario, una base de datos, un gráfico, constituyen para R objetos de distinto tipo. Los objetos que vamos creando a medida que trabajamos pueden visualizarse en el panel derecho superior de la pantalla (el Environment).\nEl operador &lt;- (Alt + Guión) sirve para definir un objeto. A la izquierda del &lt;- debe ubicarse el nombre que tomará el elemento a crear. Del lado derecho debe ir la definición del mismo.\n\nA &lt;- 1\n\nPor ejemplo, podemos crear el elemento A, cuyo valor será 1. Para esto, debemos correr el código presionando Ctrl + Enter, con el cursor ubicado en cualquier parte de la línea. Al definir un elemento, el mismo queda guardado en el ambiente del programa, y podrá ser utilizado posteriormente para observar su contenido o para realizar una operación con el mismo.\n\nA \n\n[1] 1\n\nA+6\n\n[1] 7\n\n\nAl correr una linea con el nombre del objeto, la consola del programa nos muestra su contenido. Entre corchetes observamos el número de orden del elemento en cuestión. Si corremos una operación, la consola nos muestra el resultado de la misma.\nEl operador = es equivalente a &lt;-, pero en la práctica no se utiliza para la definición de objetos.\n\nB = 2\nB\n\n[1] 2\n\n\n&lt;- es un operador Unidireccional, es decir que:\nA &lt;- B implica que A va tomar como valor el contenido del objeto B, y no al revés.\n\nA &lt;- B\nA      # Ahora A toma el valor de B, y B continúa conservando el mismo valor\n\n[1] 2\n\nB\n\n[1] 2"
+  },
+  {
+    "objectID": "clases/test.html#variables",
+    "href": "clases/test.html#variables",
+    "title": "test",
+    "section": "Variables",
+    "text": "Variables\nPueden contener cualquier estructura de datos como una matriz, un valor numérico, un texto, un vector y otras que se verán más adelante. Son creadas mediante el uso del operador de asignación."
+  },
+  {
+    "objectID": "clases/test.html#tipos-de-datos",
+    "href": "clases/test.html#tipos-de-datos",
+    "title": "test",
+    "section": "Tipos de datos",
+    "text": "Tipos de datos\nCuando queremos saber con cuál tipo de datos estamos trabajando necesitamos usar la función class()\n\nx &lt;- 2\n\nclass(x)\n\n[1] \"numeric\"\n\n\ntipos de datos - numeric\nSi queremos preguntar lo hacemos con la función is.numeric()\n\nis.numeric(x)\n\n[1] TRUE\n\n\nEn la lámina anterior vimos que el valor que retornó class(x) fue “numeric”.\n\nNúmericos: son aquellos que incluyen números enteros y decimales. En otros lenguajes se les conocen como números de tipo “float” y “double”.\n\n\nx &lt;- 2\n\nclass(x)\n\n[1] \"numeric\"\n\n\ntipos de datos - integer\n\nEnteros: hay casos en los que es necesario trabajar con números enteros sin que contenga ningún decimal. Estos números se declaran con el uso de una L posterior al número.\n\n\ny &lt;- 2L\ny\n\n[1] 2\n\nclass(y)\n\n[1] \"integer\"\n\n\nEjemplo de una operación:\n\nx &lt;- 2.7\nclass(x)\n\n[1] \"numeric\"\n\ny &lt;- 3L\nclass(y)\n\n[1] \"integer\"\n\n\ntipos de datos - lógicos\n\nLógicos: Sirven para representar datos que solo pueden tener uno de estos dos valores\n\nverdadero - TRUE\nfalso - FALSE\n\n\nOperadores lógicos:\n\n\\(&gt;\\) (mayor a-)\n\\(&gt;=\\) (mayor o igual a-)\n\\(&lt;\\) (menor a-)\n\\(&lt;=\\) (menor o igual a-)\n\\(==\\) (igual a-)\n\\(!=\\) (distinto a-)\n\n\n# Redefinimos los valores A y B\nA &lt;- 10\nB &lt;- 20\n\n# Realizamos comparaciones lógicas\nA &gt;  B\n\n[1] FALSE\n\nA &gt;= B\n\n[1] FALSE\n\nA &lt;  B\n\n[1] TRUE\n\nA &lt;= B\n\n[1] TRUE\n\nA == B\n\n[1] FALSE\n\nA != B\n\n[1] TRUE\n\nC &lt;- A != B\nC\n\n[1] TRUE\n\n\nComo muestra el último ejemplo, el resultado de una operación lógica puede almacenarse como el valor de un objeto.\n\nx &lt;- 2.7\ny &lt;-3L\nz &lt;- x==y\nz\n\n[1] FALSE\n\nclass(z)\n\n[1] \"logical\"\n\n\nacabamos de usar el operador ‘==’ que nos sirve para hacer una comparación de igualdad entre dos objetos. Lo que estamos es preguntando si son iguales el uno al otro y la respuesta que obtenemos es de tipo lógica booleana TRUE o FALSE\n\nTRUE*4\n\n[1] 4\n\nFALSE*2\n\n[1] 0\n\n\nacabamos de ver coerción. Forzar a un cambio de un tipo de dato en otro tipo de dato. Los TRUE pueden ser interpretados mediante la coerción como 1 y los FALSE como 0\n\n# dos es igual a 3?\n2==3\n\n[1] FALSE\n\n# dos es distinto de tres? (tener presente que el ! \n# precediendo al igual quiere decir que es lo inverso \n# al igual, es decir, distinto)\n2!=3\n\n[1] TRUE\n\n#dos es menor que tres?\n2&lt;3\n\n[1] TRUE\n\n\n\n#juan es igual a pedro? (hablamos del texto)\n'juan'=='pedro'\n\n[1] FALSE\n\n# el texto jose es igual a jose?\n'jose'=='jose'\n\n[1] TRUE\n\n#dos es igual a dos?\n2==2\n\n[1] TRUE\n\n\n\n# a es menor que b?\n'a'&lt;'b'\n\n[1] TRUE\n\n# a es mayor que 8?\n'a'&gt;8\n\n[1] TRUE\n\n# a es igual a 1?\n'a'==1\n\n[1] FALSE\n\n\ntipos de datos - character\n\nDatos de caracteres: se usan para almacenar cadenas de caracteres como por ejemplo un nombre, una oración, o cualquier valor que el computador no deba entender como un objeto lógico, número entero, númerico, matriz, etc. El valor debe estar declarado entre comillas simples ” o comilla sencilla ’. Prestar atención a no usar la tipo tilde ´ o cualquiera diferente a las mencionadas\n\n\nnombre &lt;- 'jose miguel'\nno_es_numero &lt;- '2'\nno_es_numero\n\n[1] \"2\"\n\nclass(no_es_numero)\n\n[1] \"character\"\n\nnchar(x)\n\n[1] 3\n\n\n\nnchar('hola')\n\n[1] 4\n\nnchar(5)\n\n[1] 1\n\nnchar(1532)\n\n[1] 4\n\n\ntipos de datos - Date\n\nFechas El trabajo con las fechas puede llegar a ser un tanto complejo y será abordado de forma más intensiva adelante. Revisando algunas de las formas de trabajar con fechas tenemos el uso de las funciones Date y POSIXct\n\nLa función Date solo almacena la fecha calendario\nLa función POSIXct puede almacenar en conjunto hora y fecha\n\n\nLas fechas se representan, en cualquiera de los casos como la cantidad de días (date) o segundos (POSIXct) que han transcurrido desde el 1 ero de enero de 1970.\n\nfecha1 &lt;- as.Date('2020-01-31')\nfecha1\n\n[1] \"2020-01-31\"\n\nclass(fecha1)\n\n[1] \"Date\"\n\nas.numeric(fecha1)\n\n[1] 18292\n\n\n\nfecha2 &lt;- as.POSIXct('2020-01-31 11:15')\nfecha2\n\n[1] \"2020-01-31 11:15:00 -04\"\n\nas.numeric(fecha2)\n\n[1] 1580483700\n\nclass(fecha2)\n\n[1] \"POSIXct\" \"POSIXt\""
+  },
+  {
+    "objectID": "clases/test.html#vectores",
+    "href": "clases/test.html#vectores",
+    "title": "test",
+    "section": "Vectores:",
+    "text": "Vectores:\nSon colecciones de elementos que tienen que ser exclusivamente del mismo tipo, de la misma clase. Se usa la c () para declarar un vector. Los elementos que conforman el vector van separados por comas. Los vectores pueden, y es lo más común, les asignamos nombre como lo vimos con las variables. Incluso podemos tener vectores con una solo elemento (que de por si son las variables que ya estudiamos).\n\nnumeros &lt;- c(1,2,5,7)\nnumeros\n\n[1] 1 2 5 7\n\nclass(numeros)\n\n[1] \"numeric\"\n\ntextos &lt;- c('juan','eliana','maria')\nclass(textos)\n\n[1] \"character\"\n\ntextos\n\n[1] \"juan\"   \"eliana\" \"maria\" \n\nlogicos &lt;- c(TRUE, FALSE, TRUE)\nclass(logicos)\n\n[1] \"logical\"\n\n\n\nunico &lt;- c('aula')\nunico\n\n[1] \"aula\"\n\nclass(unico)\n\n[1] \"character\"\n\nerrado &lt;- c('texto', 1)\nerrado\n\n[1] \"texto\" \"1\"    \n\nclass(errado)\n\n[1] \"character\"\n\n\n\nerrado &lt;- c('texto', 1)\nerrado\n\n[1] \"texto\" \"1\"    \n\nclass(errado)\n\n[1] \"character\"\n\n#aplicó la coercion"
+  },
+  {
+    "objectID": "clases/test.html#funciones",
+    "href": "clases/test.html#funciones",
+    "title": "test",
+    "section": "Funciones:",
+    "text": "Funciones:\nLas funciones son series de procedimientos estandarizados, que toman como imput determinados argumentos a fijar por el usuario, y devuelven un resultado acorde a la aplicación de dichos procedimientos. Su lógica de funcionamiento es:\nfuncion(argumento1 = arg1, argumento2 = arg2)\nA lo largo del curso iremos viendo numerosas funciones, según lo requieran los distintos ejercicios. Sin embargo, veamos ahora algunos ejemplos para comprender su funcionamiento:\n\npaste() : concatena una serie de caracteres, pudiendo indicarse cómo separar a cada uno de ellos\n\npaste0(): concatena una serie de caracteres sin separar\nsum(): suma de todos los elementos de un vector\n\nmean() promedio aritmético de todos los elementos de un vector\n\n\npaste(\"Pega\", \"estas\", 4, \"palabras\", sep = \" \")\n\n[1] \"Pega estas 4 palabras\"\n\n#Puedo concatenar caracteres almacenados en objetos\npaste(A, B, C, sep = \"**\")\n\n[1] \"10**20**TRUE\"\n\n# Paste0 pega los caracteres sin separador\npaste0(A, B, C)\n\n[1] \"1020TRUE\"\n\n1:5\n\n[1] 1 2 3 4 5\n\nsum(1:5)\n\n[1] 15\n\nmean(1:5, na.rm = TRUE)\n\n[1] 3"
+  },
+  {
+    "objectID": "clases/test.html#caracteres-especiales",
+    "href": "clases/test.html#caracteres-especiales",
+    "title": "test",
+    "section": "Caracteres especiales",
+    "text": "Caracteres especiales\n\nR es sensible a mayúsculas y minúsculas, tanto para los nombres de las variables, como para las funciones y parámetros.\nEl numeral # se utiliza para hacer comentarios. Todo lo que se escribe después del # no es interpretado por R. Se debe utilizar un # por cada línea de código que se desea anular\nLos corchetes [] se utilizan para acceder a un objeto:\n\nen un vector[n° orden]\nen una tabla[fila, columna]\nen una lista[n° elemento]\n\nel signo $ también es un método de acceso. Particularmente, en los dataframes, nos permitira acceder a una determinada columna de una tabla\nLos paréntesis() se utilizan en las funciones para definir los parámetros.\nLas comas , se utilizan para separar los parametros al interior de una función."
+  },
+  {
+    "objectID": "clases/test.html#objetos",
+    "href": "clases/test.html#objetos",
+    "title": "test",
+    "section": "Objetos:",
+    "text": "Objetos:\nTodo lo que existe dentro de R es un objeto: funciones, vectores, etc. En R se puede trabajar con una gran cantidad de objetos distintos tanto en su tipo como tenerlos dentro de una sesión de trabajo, en lo que respecta al curso estos son con 4 estructuras en las cuales tendremos datos almacenados en memoria.\n\nValores\nVectores\nListas\nData Frames"
+  },
+  {
+    "objectID": "clases/test.html#ambientes-de-trabajo",
+    "href": "clases/test.html#ambientes-de-trabajo",
+    "title": "test",
+    "section": "Ambientes de trabajo",
+    "text": "Ambientes de trabajo\nHay algunas cosas que tenemos que tener en cuenta respecto del orden del ambiente en el que trabajamos:\n\nWorking Directory: Es el directorio de trabajo. Pueden ver el suyo con getwd(), es hacia donde apunta el código, por ejemplo, si quieren leer un archivo, la ruta del archivo tiene que estar explicitada como el recorrido desde el Working Directory.\nEnvironment: Esto engloba tanto la información que tenemos cargada en Data y Values, como las librerías que tenemos cargadas mientras trabajamos.\n\nEs importante que mantengamos bien delimitadas estas cosas entre diferentes trabajos, sino:\n\nEl directorio queda referido a un lugar específico en nuestra computadora.\n\n\nSi se lo compartimos a otro se rompe\nSi cambiamos de computadora se rompe\nSi lo cambiamos de lugar se rompe\nSi primero abrimos otro script se rompe\n\n\nTenemos mezclados resultados de diferentes trabajos:\n\n\nNunca sabemos si esa variable/tabla/lista se creo en ese script y no otro\nPerdemos espacio de la memoria\nNo estamos seguros de que el script cargue todas las librerías que necesita\n\nRstudio tiene una herramienta muy útil de trabajo que son los proyectos. Estos permiten mantener un ambiente de trabajo delimitado por cada uno de nuestros trabajos. Es decir:\n\nEl directorio de trabajo se refiere a donde esta ubicado el archivo .Rproj\nEl Environment es específico de nuestro proyecto.\n\nUn proyecto no es un sólo script, sino toda una carpeta de trabajo.\nPara crearlo, vamos al logo de nuevo projecto (Arriba a la derecha de la panatalla), y elegimos la carpeta de trabajo."
+  },
+  {
+    "objectID": "clases/test.html#tipos-de-archivos-de-r",
+    "href": "clases/test.html#tipos-de-archivos-de-r",
+    "title": "test",
+    "section": "Tipos de archivos de R",
+    "text": "Tipos de archivos de R\n\nScript: Es un archivo de texto plano, donde podemos poner el código que utilizamos para preservarlo\nRmd: También sirve para guardar el código, pero a diferencia de los scripts, se puede compilar, e intercalar código con resultados (este archivo es un rmarkdown)\nRproject: Es un archivo que define la metadata del proyecto\nRDS y Rdata: Dos formatos de archivos propios de R para guardar datos.\nqmd: archivo de Quarto, el cual es un sistema de publicaciones (página web, blogs, que puede contener códigos y otros objetos resultados de una rutina de programación acompañados por texto legible."
+  },
+  {
+    "objectID": "clases/test.html#remover-objetos-del-global-environment",
+    "href": "clases/test.html#remover-objetos-del-global-environment",
+    "title": "test",
+    "section": "Remover objetos del Global Environment",
+    "text": "Remover objetos del Global Environment\nEn caso de querer remover un objeto (todo lo que existe dentro del programa que estamos ejecutando) del “global environment” podemos usar la función rm() teniendo como argumento el nombre del objeto que queremos remover\nrm(“nombre”)\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_03_apoyo.html#r-base",
+    "href": "clases/clase_03_apoyo.html#r-base",
+    "title": "Clase 3- Apoyo",
+    "section": "R base",
+    "text": "R base\nCon R base nos referimos a los comandos básicos que vienen incorporados en el R, sin necesidad de cargar librerías."
+  },
+  {
+    "objectID": "clases/clase_03_apoyo.html#uso-de-la-consola-como-una-calculadora--operaciones-aritméticas",
+    "href": "clases/clase_03_apoyo.html#uso-de-la-consola-como-una-calculadora--operaciones-aritméticas",
+    "title": "Clase 3- Apoyo",
+    "section": "Uso de la consola como una calculadora- operaciones aritméticas",
+    "text": "Uso de la consola como una calculadora- operaciones aritméticas\n\nEn la consola podemos hacer calculos tal cual si estuviesemos usando una calculadora\n\n\n5*3+6\n\n[1] 21\n\n5*(3+6)\n\n[1] 45\n\n\ntener presente el uso de los paréntesis y el orden en que serán ejecutadas las operaciones matemáticas"
+  },
+  {
+    "objectID": "clases/clase_03_apoyo.html#definición-de-objetos",
+    "href": "clases/clase_03_apoyo.html#definición-de-objetos",
+    "title": "Clase 3- Apoyo",
+    "section": "Definición de objetos",
+    "text": "Definición de objetos\nLos Objetos/Elementos constituyen la categoría esencial del R. De hecho, todo en R es un objeto, y se almacena con un nombre específico que no debe poseer espacios. Un número, un vector, una función, la progresión de letras del abecedario, una base de datos, un gráfico, constituyen para R objetos de distinto tipo. Los objetos que vamos creando a medida que trabajamos pueden visualizarse en el panel derecho superior de la pantalla (el Environment).\nEl operador &lt;- (Alt + Guión) sirve para definir un objeto. A la izquierda del &lt;- debe ubicarse el nombre que tomará el elemento a crear. Del lado derecho debe ir la definición del mismo.\n\nA &lt;- 1\n\nPor ejemplo, podemos crear el elemento A, cuyo valor será 1. Para esto, debemos correr el código presionando Ctrl + Enter, con el cursor ubicado en cualquier parte de la línea. Al definir un elemento, el mismo queda guardado en el ambiente del programa, y podrá ser utilizado posteriormente para observar su contenido o para realizar una operación con el mismo.\n\nA \n\n[1] 1\n\nA+6\n\n[1] 7\n\n\nAl correr una linea con el nombre del objeto, la consola del programa nos muestra su contenido. Entre corchetes observamos el número de orden del elemento en cuestión. Si corremos una operación, la consola nos muestra el resultado de la misma.\nEl operador = es equivalente a &lt;-, pero en la práctica no se utiliza para la definición de objetos.\n\nB = 2\nB\n\n[1] 2\n\n\n&lt;- es un operador Unidireccional, es decir que:\nA &lt;- B implica que A va tomar como valor el contenido del objeto B, y no al revés.\n\nA &lt;- B\nA      # Ahora A toma el valor de B, y B continúa conservando el mismo valor\n\n[1] 2\n\nB\n\n[1] 2"
+  },
+  {
+    "objectID": "clases/clase_03_apoyo.html#variables",
+    "href": "clases/clase_03_apoyo.html#variables",
+    "title": "Clase 3- Apoyo",
+    "section": "Variables",
+    "text": "Variables\nPueden contener cualquier estructura de datos como una matriz, un valor numérico, un texto, un vector y otras que se verán más adelante. Son creadas mediante el uso del operador de asignación."
+  },
+  {
+    "objectID": "clases/clase_03_apoyo.html#funciones-precargadas",
+    "href": "clases/clase_03_apoyo.html#funciones-precargadas",
+    "title": "Clase 3- Apoyo",
+    "section": "Funciones Precargadas:",
+    "text": "Funciones Precargadas:\nRBase cuenta con diversas funciones que ya vienen definidas con el lenguaje de programación. Muchas de ellas son comandos básicos para realizar rutinas de programación. Otro lote de funciones, distinto a otros lenguajes, son funciones para aplicar métodos inherentes a la estadística. Cuando se vea un texto en un script que está asociado a un verbo, o proceso, y posterior al nombre, viene acompañado de un signo de inicio de paréntesis y finaliza con otro signo de cierre de paréntesis, se está en presencia de una función. En algunos casos entre ambos signos de paréntesis aparecerá un texto que puede estar entre comillas, sin comillas y en otros casos varios textos separados por comas. Cuando se da este último caso se refiere a que la función necesita distintos argumentos para poder ejecutarse.\nEjemplos:\n\nFunción sin argumento\n\nSys.Date()\n\n[1] \"2024-10-23\"\n\n\nFunción con un argumento\n\nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1\n\n\nFunción con múltiples argumentos\n\n# asignación variables\nvelocidad &lt;- cars$speed\ndistancia &lt;- cars$dist\n\n# crear un gráfico de tipo scatter plot (diagrama de dispersión )\nplot(velocidad, distancia)"
+  },
+  {
+    "objectID": "clases/clase_03_apoyo.html#tipos-de-datos",
+    "href": "clases/clase_03_apoyo.html#tipos-de-datos",
+    "title": "Clase 3- Apoyo",
+    "section": "Tipos de datos",
+    "text": "Tipos de datos\nCuando queremos saber con cuál tipo de datos estamos trabajando necesitamos usar la función class()\n```{r data_types, include=TRUE, echo=TRUE\nLas funciones son series de procedimientos estandarizados, que toman como imput determinados argumentos a fijar por el usuario, y devuelven un resultado acorde a la aplicación de dichos procedimientos. Su lógica de funcionamiento es:\nfuncion(argumento1 = arg1, argumento2 = arg2)\nOtros ejemplos de funciones:\n\npaste() : concatena una serie de caracteres, pudiendo indicarse cómo separar a cada uno de ellos\n\npaste0(): concatena una serie de caracteres sin separar\nsum(): suma de todos los elementos de un vector\n\nmean() promedio aritmético de todos los elementos de un vector\n\n\npaste(\"Pega\", \"estas\", 4, \"palabras\", sep = \" \")\n\n[1] \"Pega estas 4 palabras\"\n\n#Puedo concatenar caracteres almacenados en objetos\nA= 'nombre'\nB= 'apellido'\nC= 'ciudad'\npaste(A, B, C, sep = \"**\")\n\n[1] \"nombre**apellido**ciudad\"\n\n# Paste0 pega los caracteres sin separador\npaste0(A, B, C)\n\n[1] \"nombreapellidociudad\"\n\n1:5\n\n[1] 1 2 3 4 5\n\nsum(1:5)\n\n[1] 15\n\nmean(1:5, na.rm = TRUE)\n\n[1] 3"
+  },
+  {
+    "objectID": "clases/clase_03_apoyo.html#vectores",
+    "href": "clases/clase_03_apoyo.html#vectores",
+    "title": "Clase 3- Apoyo",
+    "section": "Vectores",
+    "text": "Vectores\nSon colecciones de elementos que tienen que ser exclusivamente del mismo tipo, de la misma clase. Se usa la c () para declarar un vector. Los elementos que conforman el vector van separados por comas. Los vectores pueden, y es lo más común, les asignamos nombre como lo vimos con las variables. Incluso podemos tener vectores con una solo elemento (que de por si son las variables que ya estudiamos)."
+  },
+  {
+    "objectID": "clases/clase_03_apoyo.html#tipos-de-vectores",
+    "href": "clases/clase_03_apoyo.html#tipos-de-vectores",
+    "title": "Clase 3- Apoyo",
+    "section": "Tipos de vectores",
+    "text": "Tipos de vectores\nvectores - numeric\nSi queremos preguntar lo hacemos con la función is.numeric()\n\nx=10\nis.numeric(x)\n\n[1] TRUE\n\n\nEn la lámina anterior vimos que el valor que retornó class(x) fue “numeric”.\n\nNúmericos: son aquellos que incluyen números enteros y decimales. En otros lenguajes se les conocen como números de tipo “float” y “double”.\n\n\nx &lt;- 2\n\nclass(x)\n\n[1] \"numeric\"\n\n\nvectores - integer\n\nEnteros: hay casos en los que es necesario trabajar con números enteros sin que contenga ningún decimal. Estos números se declaran con el uso de una L posterior al número.\n\n\ny &lt;- 2L\ny\n\n[1] 2\n\nclass(y)\n\n[1] \"integer\"\n\n\nEjemplo de una operación:\n\nx &lt;- 2.7\nclass(x)\n\n[1] \"numeric\"\n\ny &lt;- 3L\nclass(y)\n\n[1] \"integer\"\n\n\nvectores - lógicos\n\nLógicos: Sirven para representar datos que solo pueden tener uno de estos dos valores\n\nverdadero - TRUE\nfalso - FALSE\n\n\nOperadores lógicos:\n\n\\(&gt;\\) (mayor a)\n\\(&gt;=\\) (mayor o igual a)\n\\(&lt;\\) (menor a)\n\\(&lt;=\\) (menor o igual a)\n\\(==\\) (igual a)\n\\(!=\\) (distinto a)\n\n\n# Redefinimos los valores A y B\nA &lt;- 10\nB &lt;- 20\n\n# Realizamos comparaciones lógicas\nA &gt;  B\n\n[1] FALSE\n\nA &gt;= B\n\n[1] FALSE\n\nA &lt;  B\n\n[1] TRUE\n\nA &lt;= B\n\n[1] TRUE\n\nA == B\n\n[1] FALSE\n\nA != B\n\n[1] TRUE\n\nC &lt;- A != B\nC\n\n[1] TRUE\n\n\nComo muestra el último ejemplo, el resultado de una operación lógica puede almacenarse como el valor de un objeto.\n\nx &lt;- 2.7\ny &lt;-3L\nz &lt;- x==y\nz\n\n[1] FALSE\n\nclass(z)\n\n[1] \"logical\"\n\n\nacabamos de usar el operador ‘==’ que nos sirve para hacer una comparación de igualdad entre dos objetos. Lo que estamos es preguntando si son iguales el uno al otro y la respuesta que obtenemos es de tipo lógica booleana TRUE o FALSE\n\nTRUE*4\n\n[1] 4\n\nFALSE*2\n\n[1] 0\n\n\nacabamos de ver coerción. Forzar a un cambio de un tipo de dato en otro tipo de dato. Los TRUE pueden ser interpretados mediante la coerción como 1 y los FALSE como 0\n\n# dos es igual a 3?\n2==3\n\n[1] FALSE\n\n# dos es distinto de tres? (tener presente que el ! \n# precediendo al igual quiere decir que es lo inverso \n# al igual, es decir, distinto)\n2!=3\n\n[1] TRUE\n\n#dos es menor que tres?\n2&lt;3\n\n[1] TRUE\n\n\n\n#juan es igual a pedro? (hablamos del texto)\n'juan'=='pedro'\n\n[1] FALSE\n\n# el texto jose es igual a jose?\n'jose'=='jose'\n\n[1] TRUE\n\n#dos es igual a dos?\n2==2\n\n[1] TRUE\n\n\n\n# a es menor que b?\n'a'&lt;'b'\n\n[1] TRUE\n\n# a es mayor que 8?\n'a'&gt;8\n\n[1] TRUE\n\n# a es igual a 1?\n'a'==1\n\n[1] FALSE\n\n\nvectores - character\n\nDatos de caracteres: se usan para almacenar cadenas de caracteres como por ejemplo un nombre, una oración, o cualquier valor que el computador no deba entender como un objeto lógico, número entero, númerico, matriz, etc. El valor debe estar declarado entre comillas simples ” o comilla sencilla ’. Prestar atención a no usar la tipo tilde ´ o cualquiera diferente a las mencionadas\n\n\nnombre &lt;- 'jose miguel'\nno_es_numero &lt;- '2'\nno_es_numero\n\n[1] \"2\"\n\nclass(no_es_numero)\n\n[1] \"character\"\n\nnchar(x)\n\n[1] 3\n\n\n\nnchar('hola')\n\n[1] 4\n\nnchar(5)\n\n[1] 1\n\nnchar(1532)\n\n[1] 4\n\n\nvectores - Date\n\nFechas El trabajo con las fechas puede llegar a ser un tanto complejo y será abordado de forma más intensiva adelante. Revisando algunas de las formas de trabajar con fechas tenemos el uso de las funciones Date y POSIXct\n\nLa función Date solo almacena la fecha calendario\nLa función POSIXct puede almacenar en conjunto hora y fecha\n\n\nLas fechas se representan, en cualquiera de los casos como la cantidad de días (date) o segundos (POSIXct) que han transcurrido desde el 1 ero de enero de 1970.\n\nfecha1 &lt;- as.Date('2020-01-31')\nfecha1\n\n[1] \"2020-01-31\"\n\nclass(fecha1)\n\n[1] \"Date\"\n\nas.numeric(fecha1)\n\n[1] 18292\n\n\n\nfecha2 &lt;- as.POSIXct('2020-01-31 11:15')\nfecha2\n\n[1] \"2020-01-31 11:15:00 -04\"\n\nas.numeric(fecha2)\n\n[1] 1580483700\n\nclass(fecha2)\n\n[1] \"POSIXct\" \"POSIXt\""
+  },
+  {
+    "objectID": "clases/clase_03_apoyo.html#vectores-repaso",
+    "href": "clases/clase_03_apoyo.html#vectores-repaso",
+    "title": "Clase 3- Apoyo",
+    "section": "Vectores repaso:",
+    "text": "Vectores repaso:\n\nnumeros &lt;- c(1,2,5,7)\nnumeros\n\n[1] 1 2 5 7\n\nclass(numeros)\n\n[1] \"numeric\"\n\ntextos &lt;- c('juan','eliana','maria')\nclass(textos)\n\n[1] \"character\"\n\ntextos\n\n[1] \"juan\"   \"eliana\" \"maria\" \n\nlogicos &lt;- c(TRUE, FALSE, TRUE)\nclass(logicos)\n\n[1] \"logical\"\n\nis.numeric(numeros)\n\n[1] TRUE\n\nis.logical(textos)\n\n[1] FALSE\n\nis.character(textos)\n\n[1] TRUE\n\n\n\nunico &lt;- c('aula')\nunico\n\n[1] \"aula\"\n\nclass(unico)\n\n[1] \"character\"\n\nerrado &lt;- c('texto', 1)\nerrado\n\n[1] \"texto\" \"1\"    \n\nclass(errado)\n\n[1] \"character\"\n\n\n\nerrado &lt;- c('texto', 1)\nerrado\n\n[1] \"texto\" \"1\"    \n\nclass(errado)\n\n[1] \"character\"\n\n#aplicó la coercion"
+  },
+  {
+    "objectID": "clases/clase_03_apoyo.html#estructuras-de-datos-objetos",
+    "href": "clases/clase_03_apoyo.html#estructuras-de-datos-objetos",
+    "title": "Clase 3- Apoyo",
+    "section": "Estructuras de Datos/ Objetos:",
+    "text": "Estructuras de Datos/ Objetos:\nTodo lo que existe dentro de R es un objeto: funciones, vectores, etc. En R se puede trabajar con una gran cantidad de objetos distintos tanto en su tipo como tenerlos dentro de una sesión de trabajo.\nEstas son algunos de los objetos que contienen datos con los cuales trabajaremos a lo largo del curso.\n\nValores\nVectores\nListas\nData Frames\nTibbles\n\nNo obstante, existen estructuras más complejas que no son de tipo tabular que no serán abordadas como la raster layers."
+  },
+  {
+    "objectID": "clases/clase_03_apoyo.html#caracteres-especiales",
+    "href": "clases/clase_03_apoyo.html#caracteres-especiales",
+    "title": "Clase 3- Apoyo",
+    "section": "Caracteres especiales",
+    "text": "Caracteres especiales\n\nR es sensible a mayúsculas y minúsculas, tanto para los nombres de las variables, como para las funciones y parámetros.\nEl numeral # se utiliza para hacer comentarios. Todo lo que se escribe después del # no es interpretado por R. Se debe utilizar un # por cada línea de código que se desea anular\nLos corchetes [] se utilizan para acceder a un objeto:\n\nen un vector[n° orden]\nen una tabla[fila, columna]\nen una lista[n° elemento]\n\nel signo $ también es un método de acceso. Particularmente, en los dataframes, nos permitira acceder a una determinada columna de una tabla\nLos paréntesis() se utilizan en las funciones para definir los parámetros.\nLas comas , se utilizan para separar los parametros al interior de una función."
+  },
+  {
+    "objectID": "clases/clase_03_apoyo.html#nombres-variables",
+    "href": "clases/clase_03_apoyo.html#nombres-variables",
+    "title": "Clase 3- Apoyo",
+    "section": "Nombres Variables",
+    "text": "Nombres Variables"
+  },
+  {
+    "objectID": "clases/clase_03_apoyo.html#ambientes-de-trabajo",
+    "href": "clases/clase_03_apoyo.html#ambientes-de-trabajo",
+    "title": "Clase 3- Apoyo",
+    "section": "Ambientes de trabajo",
+    "text": "Ambientes de trabajo\nHay algunas cosas que tenemos que tener en cuenta respecto del orden del ambiente en el que trabajamos:\n\nWorking Directory: Es el directorio de trabajo. Pueden ver el suyo con getwd(), es hacia donde apunta el código, por ejemplo, si quieren leer un archivo, la ruta del archivo tiene que estar explicitada como el recorrido desde el Working Directory.\nEnvironment: Esto engloba tanto la información que tenemos cargada en Data y Values, como las librerías que tenemos cargadas mientras trabajamos.\n\nEs importante que mantengamos bien delimitadas estas cosas entre diferentes trabajos, sino:\n\nEl directorio queda referido a un lugar específico en nuestra computadora.\n\n\nSi se lo compartimos a otro se rompe\nSi cambiamos de computadora se rompe\nSi lo cambiamos de lugar se rompe\nSi primero abrimos otro script se rompe\n\n\nTenemos mezclados resultados de diferentes trabajos:\n\n\nNunca sabemos si esa variable/tabla/lista se creo en ese script y no otro\nPerdemos espacio de la memoria\nNo estamos seguros de que el script cargue todas las librerías que necesita\n\nRstudio tiene una herramienta muy útil de trabajo que son los proyectos. Estos permiten mantener un ambiente de trabajo delimitado por cada uno de nuestros trabajos. Es decir:\n\nEl directorio de trabajo se refiere a donde esta ubicado el archivo .Rproj\nEl Environment es específico de nuestro proyecto.\n\nUn proyecto no es un sólo script, sino toda una carpeta de trabajo.\nPara crearlo, vamos al logo de nuevo projecto (Arriba a la derecha de la panatalla), y elegimos la carpeta de trabajo."
+  },
+  {
+    "objectID": "clases/clase_03_apoyo.html#tipos-de-archivos-de-r",
+    "href": "clases/clase_03_apoyo.html#tipos-de-archivos-de-r",
+    "title": "Clase 3- Apoyo",
+    "section": "Tipos de archivos de R",
+    "text": "Tipos de archivos de R\n\nScript: Es un archivo de texto plano, donde podemos poner el código que utilizamos para preservarlo\nRmd: También sirve para guardar el código, pero a diferencia de los scripts, se puede compilar, e intercalar código con resultados (este archivo es un rmarkdown)\nRproject: Es un archivo que define la metadata del proyecto\nRDS y Rdata: Dos formatos de archivos propios de R para guardar datos.\nqmd: archivo de Quarto, el cual es un sistema de publicaciones (página web, blogs, que puede contener códigos y otros objetos resultados de una rutina de programación acompañados por texto legible."
+  },
+  {
+    "objectID": "clases/clase_03_apoyo.html#remover-objetos-del-global-environment",
+    "href": "clases/clase_03_apoyo.html#remover-objetos-del-global-environment",
+    "title": "Clase 3- Apoyo",
+    "section": "Remover objetos del Global Environment",
+    "text": "Remover objetos del Global Environment\nEn caso de querer remover un objeto (todo lo que existe dentro del programa que estamos ejecutando) del “global environment” podemos usar la función rm() teniendo como argumento el nombre del objeto que queremos remover\nrm(“nombre”)\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
     "objectID": "clases/clase_02.html#ides",
     "href": "clases/clase_02.html#ides",
     "title": "Conociendo el IDE RStudio",
@@ -162,6 +351,90 @@
     "text": "Playlist Economía R4DS\nPlaylist videos del curso\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
+    "objectID": "scripts/clase_03/clase_03_complemento_variables.html",
+    "href": "scripts/clase_03/clase_03_complemento_variables.html",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "",
+    "text": "En esta clase veremos algunas recomendaciones sobre cómo deben nombrarse las variables en el lenguaje de programación R. Recuerde que el nombre de las variables es fundamental para mantener un código claro y comprensible.\n# Algún día haremos justicia los que tenemos la ñ en nuestro nombre\nprof_avendaño &lt;- 'se ejecutará pero no es recomendable'\nLos nombres de las variables no deben contener acentos, diéresis ni caracteres especiales. Aunque es posible utilizar algunos caracteres como la “ñ”, no es recomendable."
+  },
+  {
+    "objectID": "scripts/clase_03/clase_03_complemento_variables.html#buenas-prácticas-para-nombrar-variables",
+    "href": "scripts/clase_03/clase_03_complemento_variables.html#buenas-prácticas-para-nombrar-variables",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Buenas prácticas para nombrar variables",
+    "text": "Buenas prácticas para nombrar variables\nEs importante que el nombre de la variable describa el valor que está guardando. Por ejemplo, no use nombres ambiguos como:\n\nprincesa &lt;- 10000\n\nEn lugar de eso, use nombres descriptivos como:\n\nmeta_ventas_enero &lt;- 10000\n\nEsto le ayudará a entender el propósito de la variable más adelante en el código, especialmente cuando tiene múltiples variables en su programa."
+  },
+  {
+    "objectID": "scripts/clase_03/clase_03_complemento_variables.html#declaración-de-variables",
+    "href": "scripts/clase_03/clase_03_complemento_variables.html#declaración-de-variables",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Declaración de variables",
+    "text": "Declaración de variables\nDespués de elegir el nombre de la variable, es necesario usar el operador de asignación. En R, esto se hace con &lt;-. También puede usar atajos de teclado como Alt + - en Windows para escribir el operador más rápido.\n\nvariable_texto &lt;- \"contiene un texto\"\n\nTenga en cuenta que los textos deben ir entre comillas simples (') o dobles (\").\nSi el valor que desea asignar es numérico, no use comillas:\n\nvariable_numero &lt;- 1000\n\nCompare este ejemplo con una asignación incorrecta:\n\nvariable_numero_2 &lt;- '1000'\nvariable_numero + variable_numero  # Correcto\n\n[1] 2000\n\n# variable_numero + variable_numero_2  # Genera error"
+  },
+  {
+    "objectID": "scripts/clase_03/clase_03_complemento_variables.html#ejecutar-código-en-r",
+    "href": "scripts/clase_03/clase_03_complemento_variables.html#ejecutar-código-en-r",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Ejecutar código en R",
+    "text": "Ejecutar código en R\nAl declarar una variable y ejecutar la línea, R creará una variable en el entorno. Puede ver el nuevo objeto creado en la ventana de “Environment”.\n\nmeta_ventas_enero &lt;- 1000"
+  },
+  {
+    "objectID": "scripts/clase_03/clase_03_complemento_variables.html#ejemplos-prácticos",
+    "href": "scripts/clase_03/clase_03_complemento_variables.html#ejemplos-prácticos",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Ejemplos prácticos",
+    "text": "Ejemplos prácticos\nEjecute los siguientes ejemplos y asegúrese de que las variables aparezcan en el “Environment”.\n\nvar_nombre &lt;- 'primera asignacion'\n\nRecuerde siempre seguir las mejores prácticas de nombramiento para facilitar la lectura y el mantenimiento de su código."
+  },
+  {
+    "objectID": "scripts/clase_03/clase_03_complemento_variables.html#reglas-para-la-creación-de-variables",
+    "href": "scripts/clase_03/clase_03_complemento_variables.html#reglas-para-la-creación-de-variables",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Reglas para la creación de variables",
+    "text": "Reglas para la creación de variables\n\nEstilo y convención\n\nMinúsculas: Las variables deben escribirse en minúsculas como una recomendación de estilo. Aunque no es una limitación del lenguaje, es una buena práctica:\n\nprimeravariable &lt;- 'iniciamos un script'\n\nRayita abajo para juntar palabras: Puede usar el guion bajo _ para juntar dos o más palabras en el nombre de una variable:\n\n\nvariable_creada &lt;- 'este texto es el contenido de la variable'\n\n\n\nRestricciones\n\nNo espacios en los nombres: Las variables no pueden contener espacios en su nombre. El siguiente ejemplo no es válido y dará error:\n\n\n# variable con espacio &lt;- 'esta línea no se podrá ejecutar'\n\n\nNo comenzar con números: Las variables no pueden comenzar con un número. El siguiente ejemplo también genera un error:\n\n\n# 1variable &lt;- 'tampoco se ejecutará este código'\n\nAl ejecutar la línea anterior, se obtendrá un mensaje de error en la Consola.\n\nSolo letras o puntos al inicio: Los nombres de las variables solo pueden empezar con una letra o un punto. Si se utiliza un punto al inicio, no debe ser seguido de un número:\n\n\nvariable_tercera &lt;- 'seguimos avanzando'\n.variable_tercera &lt;- 'la variable_tercera es distinta a la .variable_tercera, son dos nombres distintos'\n\nEl siguiente ejemplo es incorrecto porque el punto no puede estar seguido de un número:\n\n# .5variable &lt;- 'INCORRECTO'\n\n\n\nCaracteres especiales no permitidos\nAdemás del punto . y la rayita abajo _, no se permite el uso de otros caracteres especiales en los nombres de las variables.\nAquí tienes un listado de los caracteres especiales que no puedes usar:\n\nlistado_caracteres_especiales &lt;- c(\"~\", \"`\", \"!\", \"@\", \"#\", \"$\", \"%\", \"^\", \"&\", \n                                   \"*\", \"(\", \")\", \"-\", \"_\", \"+\", \"=\", \"{\", \"}\", \n                                   \"[\", \"]\", \"|\", \"\\\\\", \"/\", \":\", \";\", \"\\\"\", \n                                   \"'\", \"&lt;\", \"&gt;\", \".\", \"?\")\nlistado_caracteres_especiales\n\n [1] \"~\"  \"`\"  \"!\"  \"@\"  \"#\"  \"$\"  \"%\"  \"^\"  \"&\"  \"*\"  \"(\"  \")\"  \"-\"  \"_\"  \"+\" \n[16] \"=\"  \"{\"  \"}\"  \"[\"  \"]\"  \"|\"  \"\\\\\" \"/\"  \":\"  \";\"  \"\\\"\" \"'\"  \"&lt;\"  \"&gt;\"  \".\" \n[31] \"?\" \n\n\nEl siguiente ejemplo es incorrecto debido al uso de un carácter especial en el nombre de la variable:\n\n# variable.inasig@nabl_e &lt;- 'INCORRECTO'"
+  },
+  {
+    "objectID": "apoyo/clase_03_complemento_variables.html",
+    "href": "apoyo/clase_03_complemento_variables.html",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "",
+    "text": "En esta clase veremos algunas recomendaciones sobre cómo deben nombrarse las variables en el lenguaje de programación R. Recuerde que el nombre de las variables es fundamental para mantener un código claro y comprensible.\n# Algún día haremos justicia los que tenemos la ñ en nuestro nombre\nprof_avendaño &lt;- 'se ejecutará pero no es recomendable'\nLos nombres de las variables no deben contener acentos, diéresis ni caracteres especiales. Aunque es posible utilizar algunos caracteres como la “ñ”, no es recomendable."
+  },
+  {
+    "objectID": "apoyo/clase_03_complemento_variables.html#buenas-prácticas-para-nombrar-variables",
+    "href": "apoyo/clase_03_complemento_variables.html#buenas-prácticas-para-nombrar-variables",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Buenas prácticas para nombrar variables",
+    "text": "Buenas prácticas para nombrar variables\nEs importante que el nombre de la variable describa el valor que está guardando. Por ejemplo, no use nombres ambiguos como:\n\nprincesa &lt;- 10000\n\nEn lugar de eso, use nombres descriptivos como:\n\nmeta_ventas_enero &lt;- 10000\n\nEsto le ayudará a entender el propósito de la variable más adelante en el código, especialmente cuando tiene múltiples variables en su programa."
+  },
+  {
+    "objectID": "apoyo/clase_03_complemento_variables.html#declaración-de-variables",
+    "href": "apoyo/clase_03_complemento_variables.html#declaración-de-variables",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Declaración de variables",
+    "text": "Declaración de variables\nDespués de elegir el nombre de la variable, es necesario usar el operador de asignación. En R, esto se hace con &lt;-. También puede usar atajos de teclado como Alt + - en Windows para escribir el operador más rápido.\n\nvariable_texto &lt;- \"contiene un texto\"\n\nTenga en cuenta que los textos deben ir entre comillas simples (') o dobles (\").\nSi el valor que desea asignar es numérico, no use comillas:\n\nvariable_numero &lt;- 1000\n\nCompare este ejemplo con una asignación incorrecta:\n\nvariable_numero_2 &lt;- '1000'\nvariable_numero + variable_numero  # Correcto\n\n[1] 2000\n\n# variable_numero + variable_numero_2  # Genera error"
+  },
+  {
+    "objectID": "apoyo/clase_03_complemento_variables.html#ejecutar-código-en-r",
+    "href": "apoyo/clase_03_complemento_variables.html#ejecutar-código-en-r",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Ejecutar código en R",
+    "text": "Ejecutar código en R\nAl declarar una variable y ejecutar la línea, R creará una variable en el entorno. Puede ver el nuevo objeto creado en la ventana de “Environment”.\n\nmeta_ventas_enero &lt;- 1000"
+  },
+  {
+    "objectID": "apoyo/clase_03_complemento_variables.html#ejemplos-prácticos",
+    "href": "apoyo/clase_03_complemento_variables.html#ejemplos-prácticos",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Ejemplos prácticos",
+    "text": "Ejemplos prácticos\nEjecute los siguientes ejemplos y asegúrese de que las variables aparezcan en el “Environment”.\n\nvar_nombre &lt;- 'primera asignacion'\n\nRecuerde siempre seguir las mejores prácticas de nombramiento para facilitar la lectura y el mantenimiento de su código."
+  },
+  {
+    "objectID": "apoyo/clase_03_complemento_variables.html#reglas-para-la-creación-de-variables",
+    "href": "apoyo/clase_03_complemento_variables.html#reglas-para-la-creación-de-variables",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Reglas para la creación de variables",
+    "text": "Reglas para la creación de variables\n\nEstilo y convención\n\nMinúsculas: Las variables deben escribirse en minúsculas como una recomendación de estilo. Aunque no es una limitación del lenguaje, es una buena práctica:\n\nprimeravariable &lt;- 'iniciamos un script'\n\nRayita abajo para juntar palabras: Puede usar el guion bajo _ para juntar dos o más palabras en el nombre de una variable:\n\n\nvariable_creada &lt;- 'este texto es el contenido de la variable'\n\n\n\nRestricciones\n\nNo espacios en los nombres: Las variables no pueden contener espacios en su nombre. El siguiente ejemplo no es válido y dará error:\n\n\n# variable con espacio &lt;- 'esta línea no se podrá ejecutar'\n\n\nNo comenzar con números: Las variables no pueden comenzar con un número. El siguiente ejemplo también genera un error:\n\n\n# 1variable &lt;- 'tampoco se ejecutará este código'\n\nAl ejecutar la línea anterior, se obtendrá un mensaje de error en la Consola.\n\nSolo letras o puntos al inicio: Los nombres de las variables solo pueden empezar con una letra o un punto. Si se utiliza un punto al inicio, no debe ser seguido de un número:\n\n\nvariable_tercera &lt;- 'seguimos avanzando'\n.variable_tercera &lt;- 'la variable_tercera es distinta a la .variable_tercera, son dos nombres distintos'\n\nEl siguiente ejemplo es incorrecto porque el punto no puede estar seguido de un número:\n\n# .5variable &lt;- 'INCORRECTO'\n\n\n\nCaracteres especiales no permitidos\nAdemás del punto . y la rayita abajo _, no se permite el uso de otros caracteres especiales en los nombres de las variables.\nAquí tienes un listado de los caracteres especiales que no puedes usar:\n\nlistado_caracteres_especiales &lt;- c(\"~\", \"`\", \"!\", \"@\", \"#\", \"$\", \"%\", \"^\", \"&\", \n                                   \"*\", \"(\", \")\", \"-\", \"_\", \"+\", \"=\", \"{\", \"}\", \n                                   \"[\", \"]\", \"|\", \"\\\\\", \"/\", \":\", \";\", \"\\\"\", \n                                   \"'\", \"&lt;\", \"&gt;\", \".\", \"?\")\nlistado_caracteres_especiales\n\n [1] \"~\"  \"`\"  \"!\"  \"@\"  \"#\"  \"$\"  \"%\"  \"^\"  \"&\"  \"*\"  \"(\"  \")\"  \"-\"  \"_\"  \"+\" \n[16] \"=\"  \"{\"  \"}\"  \"[\"  \"]\"  \"|\"  \"\\\\\" \"/\"  \":\"  \";\"  \"\\\"\" \"'\"  \"&lt;\"  \"&gt;\"  \".\" \n[31] \"?\" \n\n\nEl siguiente ejemplo es incorrecto debido al uso de un carácter especial en el nombre de la variable:\n\n# variable.inasig@nabl_e &lt;- 'INCORRECTO'"
+  },
+  {
     "objectID": "curso-equipo.html",
     "href": "curso-equipo.html",
     "title": "Equipo de Profesores",
@@ -191,25 +464,11 @@
     ]
   },
   {
-    "objectID": "proyecto-1.html",
-    "href": "proyecto-1.html",
-    "title": "Proyecto Mitad del Curso",
-    "section": "",
-    "text": "Introducción\nEn esta etapa del curso, pondrás en práctica los conocimientos adquiridos hasta ahora en R para abordar un problema real. El trabajo será desarrollado en equipos de 3 a 5 estudiantes. La idea es que desarrolles un proyecto completo, desde la definición del problema hasta la presentación de los resultados. Este proyecto tiene un peso asignado de 20% sobre el total de la calificación del curso.\nLa calificación será con un tope de 20 puntos, desagregados de esta manera:\n\n5 puntos: originalidad y claridad del proyecto (identificación problema, plantear una pregunta de investigación).\n5 puntos: calidad del código (limpieza datos, procesamiento, análisis exploratorio)\n5 puntos: comunicación de los resultados (gráficos, reporte quarto)\n5 puntos resto: (documentar proceso, compartir proyecto)\n\n\n\nObjetivos del Proyecto\n\nIdentificar un problema: Seleccionar un problema relevante y actual, preferiblemente relacionado con Venezuela, que pueda ser analizado con los datos disponibles.\nPlantear una pregunta de investigación: Formular una pregunta clara y concisa que el proyecto buscará responder.\nObteneción y limpiar los datos: Recolectar los datos necesarios y realizar las tareas de limpieza y transformación requeridas.\nRealizar el análisis exploratorio de datos: Explorar los datos para identificar patrones, tendencias y relaciones entre las variables.\nModelar los datos: Aplicar técnicas de modelado adecuadas para responder a la pregunta de investigación (opcional, es un valor agregado, no es necesario).\nVisualizar los resultados: Crear visualizaciones claras y efectivas para comunicar los hallazgos.\nDocumentar el proceso: Elaborar un informe que describa cada una de las etapas del proyecto, incluyendo el código utilizado.\nCompartir el proyecto: Crear un repositorio en una plataforma de control de versiones (GitHub) para compartir el código y los resultados con otros. (opcional, es un valor agregado)\n\n\n\nEspecificaciones del Proyecto\n\nContenido: El proyecto debe abordar distintas herramientas de R aprendidas hasta el momento.\nCalidad del código: Se evaluará la claridad, eficiencia y organización del código.\nEstructura: El proyecto debe seguir las buenas prácticas de desarrollo en RStudio, incluyendo la organización de archivos, el uso de funciones y la documentación del código.\nReproducibilidad: El proyecto debe ser reproducible, es decir, cualquier persona con los mismos datos y el código fuente debería obtener los mismos resultados (opcional, es un valor agregado).\nComunicación: Los resultados deben ser presentados de manera clara y concisa, utilizando gráficos, tablas y texto explicativo.\n\n\n\nSugerencias de Temas\n\nSe abordará en clase al momento de asignar el proyecto y los grupos.\n\n\n\nEntrega\nEl proyecto final deberá entregarse en un formato reproducible (por ejemplo, un archivo Quarto), incluyendo:\n\nInforme: Un documento que describa el problema, la metodología utilizada, los resultados y las conclusiones (opcional).\nCódigo Carpeta Proyecto: El código R utilizado para realizar el análisis.\nPresentación: Una presentación breve que resuma los principales hallazgos del proyecto.\nRepositorio (opcional): Un enlace al repositorio en GitHub o una plataforma similar.\nFecha Entrega:\nSemana intermedia del Curso (fecha precisa por definir)."
-  },
-  {
-    "objectID": "proyecto-2.html",
-    "href": "proyecto-2.html",
-    "title": "Proyecto Final del Curso",
-    "section": "",
-    "text": "Introducción\nEn este proyecto, tendrás la oportunidad de aplicar todos los conocimientos adquiridos a lo largo del curso para resolver un problema real y relevante. El trabajo será desarrollado en equipos de 3 a 5 estudiantes. Además, diseñarás un póster atractivo que resuma tu investigación y crearás una presentación para compartir tus resultados con tus compañeros y la comunidad en general. Los resultados de las investigaciones se mostrarán en la página del Curso para promocionar el talento de los estudiantes de la Escuela de Economía de la UCV.\nEste proyecto tiene un peso asignado de 30% sobre el total de la calificación del curso.\nLa calificación será con un tope de 30 puntos, desagregados de esta manera:\n\n5 puntos: originalidad y claridad del proyecto (identificación problema, plantear una pregunta de investigación).\n5 puntos: calidad del código (limpieza datos, procesamiento, análisis exploratorio)\n5 puntos: comunicación de los resultados (gráficos, reporte quarto)\n5 puntos: presentación en público del proyecto\n5 puntos póster (afiche)\n5 puntos resto: (documentar proceso, compartir proyecto)\n\n\n\nObjetivos del Proyecto\n\nInvestigación: Realiza un análisis de datos exhaustivo, utilizando las técnicas aprendidas en clase.\nObteneción y limpiar los datos: Recolectar los datos necesarios y realizar las tareas de limpieza y transformación requeridas.\nRealizar el análisis exploratorio de datos: Explorar los datos para identificar patrones, tendencias y relaciones entre las variables.\nModelar los datos: Aplicar técnicas de modelado adecuadas para responder a la pregunta de investigación (opcional, es un valor agregado, no es necesario).\nVisualizar los resultados: Crear visualizaciones claras y efectivas para comunicar los hallazgos.\nComunicación efectiva: Diseña un póster visualmente atractivo que comunique de manera clara y concisa los objetivos, metodología, resultados y conclusiones de tu investigación.\nDocumentar el proceso: Elaborar un informe que describa cada una de las etapas del proyecto, incluyendo el código utilizado.\nPresentación en público: Prepara una presentación breve para exponer tu proyecto ante tus compañeros y recibir retroalimentación.\nColaboración: Comparte tu trabajo con la comunidad del curso, contribuyendo a un repositorio de proyectos.\nCompartir el proyecto: Crear un repositorio en una plataforma de control de versiones ( GitHub) para compartir el código y los resultados con otros.\n\n\n\nEspecificaciones del Proyecto\n\nContenido: El proyecto debe abordar distintas herramientas de R aprendidas hasta el momento.\nTema: Elige un tema de tu interés relacionado con Venezuela que pueda ser abordado con los datos disponibles (obligatorio).\nCalidad del código: Se evaluará la claridad, eficiencia y organización del código.\nEstructura: El proyecto debe seguir las buenas prácticas de desarrollo en RStudio, incluyendo la organización de archivos, el uso de funciones y la documentación del código.\nPóster: Diseña un póster que incluya los siguientes elementos: título, introducción, objetivos, metodología, resultados (visualizaciones), conclusiones y referencias.\nPresentación: Prepara una presentación de 5-7 minutos para exponer tu proyecto.\nInforme: Entrega un informe escrito que detalle el proceso de investigación, los resultados y las conclusiones (opcional).\nReproducibilidad: El proyecto debe ser reproducible, es decir, cualquier persona con los mismos datos y el código fuente debería obtener los mismos resultados (opcional, es un valor agregado).\nComunicación: Los resultados deben ser presentados de manera clara y concisa, utilizando gráficos, tablas y texto explicativo.\nRepositorio: Comparte tu código y los datos en un repositorio en línea (por ejemplo, GitHub).\n\n\n\nSugerencias de Temas\n\nSe abordará en clase al momento de asignar el proyecto y los grupos.\n\n\n\nEntrega:\n\nInforme: Un documento que describa el problema, la metodología utilizada, los resultados y las conclusiones (opcional).\nCódigo Carpeta Proyecto: El código R utilizado para realizar el análisis.\nPresentación: Una presentación breve que resuma los principales hallazgos del proyecto.\nRepositorio: Un enlace al repositorio en GitHub o una plataforma similar.\nPóster- Afiche: lámina (dimensiones por definir) con lo indicado anteriormente\n\n\n\nFecha Entrega:\nSemana final del Curso (fecha precisa por definir)."
-  },
-  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\n\n\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\n\n\n\n\n\n\n3\nlun, 28 oct.\n\n\n\n\n\n\n\n\nmié, 30 oct.\n\n\n\n\n\n\n3\nlun, 4 nov.\n\n\n\n\n\n\n\n\nmié, 6 nov.\n\n\n\n\n\n\n4\nlun, 11 nov.\n\n\n\n\n\n\n\n\nmié, 13 nov.\n\n\n\n\n\n\n5\nlun, 18 nov.\n\n\n\n\n\n\n\n\nmié, 20 nov.\n\n\n\n\n\n\n6\nlun, 25 nov.\n\n\n\n\n\n\n\n\nmié, 27 nov.\n\n\n\n\n\n\n7\nlun, 2 dic.\n\n\n\n\n\n\n\n\nmié, 4 dic.\n\n\n\n\n\n\n8\nlun, 9 dic.\n\n\n\n\n\n\n\n\nmié, 11 dic.\n\n\n\n\n\n\n9\nlun, 16 dic.\n\n\n\n\n\n\n\n\nmié, 18 dic.\n\n\n\n\n\n\n10\nlun, 13 ene.\n\n\n\n\n\n\n\n\nmié, 15 ene.\n\n\n\n\n\n\n11\nlun, 20 ene.\n\n\n\n\n\n\n\n\nmié, 22 ene.\n\n\n\n\n\n\n12\nlun, 27 ene.\n\n\n\n\n\n\n\n\nmié, 29 ene.\n\n\n\n\n\n\n13\nlun, 3 feb.\n\n\n\n\n\n\n\n\nmié, 5 feb.\n\n\n\n\n\n\n14\nlun, 10 feb.\n\n\n\n\n\n\n\n\nmié, 12 feb.\n\n\n\n\n\n\n15\nsáb, 15 feb.\n\n\n\n\n\n\n\n\nlun, 17 feb.",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\n\n\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\n\n\n🖥️ láminas clase 03  💻/scripts clase 3\n\n\n3\nlun, 28 oct.\n\n\n\n\n\n\n\n\nmié, 30 oct.\n\n\n\n\n\n\n3\nlun, 4 nov.\n\n\n\n\n\n\n\n\nmié, 6 nov.\n\n\n\n\n\n\n4\nlun, 11 nov.\n\n\n\n\n\n\n\n\nmié, 13 nov.\n\n\n\n\n\n\n5\nlun, 18 nov.\n\n\n\n\n\n\n\n\nmié, 20 nov.\n\n\n\n\n\n\n6\nlun, 25 nov.\n\n\n\n\n\n\n\n\nmié, 27 nov.\n\n\n\n\n\n\n7\nlun, 2 dic.\n\n\n\n\n\n\n\n\nmié, 4 dic.\n\n\n\n\n\n\n8\nlun, 9 dic.\n\n\n\n\n\n\n\n\nmié, 11 dic.\n\n\n\n\n\n\n9\nlun, 16 dic.\n\n\n\n\n\n\n\n\nmié, 18 dic.\n\n\n\n\n\n\n10\nlun, 13 ene.\n\n\n\n\n\n\n\n\nmié, 15 ene.\n\n\n\n\n\n\n11\nlun, 20 ene.\n\n\n\n\n\n\n\n\nmié, 22 ene.\n\n\n\n\n\n\n12\nlun, 27 ene.\n\n\n\n\n\n\n\n\nmié, 29 ene.\n\n\n\n\n\n\n13\nlun, 3 feb.\n\n\n\n\n\n\n\n\nmié, 5 feb.\n\n\n\n\n\n\n14\nlun, 10 feb.\n\n\n\n\n\n\n\n\nmié, 12 feb.\n\n\n\n\n\n\n15\nsáb, 15 feb.\n\n\n\n\n\n\n\n\nlun, 17 feb.",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -225,6 +484,230 @@
       "Proyectos",
       "Proyecto Final de Curso"
     ]
+  },
+  {
+    "objectID": "apoyo/clase_03_apoyo.html",
+    "href": "apoyo/clase_03_apoyo.html",
+    "title": "Clase 3- Apoyo",
+    "section": "",
+    "text": "Este material fue compilado y adaptado por José M. Avendaño teniendo parcialmente códigos y conceptos desarrollados por Diego Kozlowski y Juan Barriola para un curso de R."
+  },
+  {
+    "objectID": "apoyo/clase_03_apoyo.html#r-base",
+    "href": "apoyo/clase_03_apoyo.html#r-base",
+    "title": "Clase 3- Apoyo",
+    "section": "R base",
+    "text": "R base\nCon R base nos referimos a los comandos básicos que vienen incorporados en el R, sin necesidad de cargar librerías."
+  },
+  {
+    "objectID": "apoyo/clase_03_apoyo.html#uso-de-la-consola-como-una-calculadora--operaciones-aritméticas",
+    "href": "apoyo/clase_03_apoyo.html#uso-de-la-consola-como-una-calculadora--operaciones-aritméticas",
+    "title": "Clase 3- Apoyo",
+    "section": "Uso de la consola como una calculadora- operaciones aritméticas",
+    "text": "Uso de la consola como una calculadora- operaciones aritméticas\n\nEn la consola podemos hacer calculos tal cual si estuviesemos usando una calculadora\n\n\n5*3+6\n\n[1] 21\n\n5*(3+6)\n\n[1] 45\n\n\ntener presente el uso de los paréntesis y el orden en que serán ejecutadas las operaciones matemáticas"
+  },
+  {
+    "objectID": "apoyo/clase_03_apoyo.html#definición-de-objetos",
+    "href": "apoyo/clase_03_apoyo.html#definición-de-objetos",
+    "title": "Clase 3- Apoyo",
+    "section": "Definición de objetos",
+    "text": "Definición de objetos\nLos Objetos/Elementos constituyen la categoría esencial del R. De hecho, todo en R es un objeto, y se almacena con un nombre específico que no debe poseer espacios. Un número, un vector, una función, la progresión de letras del abecedario, una base de datos, un gráfico, constituyen para R objetos de distinto tipo. Los objetos que vamos creando a medida que trabajamos pueden visualizarse en el panel derecho superior de la pantalla (el Environment).\nEl operador &lt;- (Alt + Guión) sirve para definir un objeto. A la izquierda del &lt;- debe ubicarse el nombre que tomará el elemento a crear. Del lado derecho debe ir la definición del mismo.\n\nA &lt;- 1\n\nPor ejemplo, podemos crear el elemento A, cuyo valor será 1. Para esto, debemos correr el código presionando Ctrl + Enter, con el cursor ubicado en cualquier parte de la línea. Al definir un elemento, el mismo queda guardado en el ambiente del programa, y podrá ser utilizado posteriormente para observar su contenido o para realizar una operación con el mismo.\n\nA \n\n[1] 1\n\nA+6\n\n[1] 7\n\n\nAl correr una linea con el nombre del objeto, la consola del programa nos muestra su contenido. Entre corchetes observamos el número de orden del elemento en cuestión. Si corremos una operación, la consola nos muestra el resultado de la misma.\nEl operador = es equivalente a &lt;-, pero en la práctica no se utiliza para la definición de objetos.\n\nB = 2\nB\n\n[1] 2\n\n\n&lt;- es un operador Unidireccional, es decir que:\nA &lt;- B implica que A va tomar como valor el contenido del objeto B, y no al revés.\n\nA &lt;- B\nA      # Ahora A toma el valor de B, y B continúa conservando el mismo valor\n\n[1] 2\n\nB\n\n[1] 2"
+  },
+  {
+    "objectID": "apoyo/clase_03_apoyo.html#variables",
+    "href": "apoyo/clase_03_apoyo.html#variables",
+    "title": "Clase 3- Apoyo",
+    "section": "Variables",
+    "text": "Variables\nPueden contener cualquier estructura de datos como una matriz, un valor numérico, un texto, un vector y otras que se verán más adelante. Son creadas mediante el uso del operador de asignación."
+  },
+  {
+    "objectID": "apoyo/clase_03_apoyo.html#funciones-precargadas",
+    "href": "apoyo/clase_03_apoyo.html#funciones-precargadas",
+    "title": "Clase 3- Apoyo",
+    "section": "Funciones Precargadas:",
+    "text": "Funciones Precargadas:\nRBase cuenta con diversas funciones que ya vienen definidas con el lenguaje de programación. Muchas de ellas son comandos básicos para realizar rutinas de programación. Otro lote de funciones, distinto a otros lenguajes, son funciones para aplicar métodos inherentes a la estadística. Cuando se vea un texto en un script que está asociado a un verbo, o proceso, y posterior al nombre, viene acompañado de un signo de inicio de paréntesis y finaliza con otro signo de cierre de paréntesis, se está en presencia de una función. En algunos casos entre ambos signos de paréntesis aparecerá un texto que puede estar entre comillas, sin comillas y en otros casos varios textos separados por comas. Cuando se da este último caso se refiere a que la función necesita distintos argumentos para poder ejecutarse.\nEjemplos:\n\nFunción sin argumento\n\nSys.Date()\n\n[1] \"2024-10-23\"\n\n\nFunción con un argumento\n\nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1\n\n\nFunción con múltiples argumentos\n\n# asignación variables\nvelocidad &lt;- cars$speed\ndistancia &lt;- cars$dist\n\n# crear un gráfico de tipo scatter plot (diagrama de dispersión )\nplot(velocidad, distancia)"
+  },
+  {
+    "objectID": "apoyo/clase_03_apoyo.html#tipos-de-datos",
+    "href": "apoyo/clase_03_apoyo.html#tipos-de-datos",
+    "title": "Clase 3- Apoyo",
+    "section": "Tipos de datos",
+    "text": "Tipos de datos\nCuando queremos saber con cuál tipo de datos estamos trabajando necesitamos usar la función class()\n```{r data_types, include=TRUE, echo=TRUE\nLas funciones son series de procedimientos estandarizados, que toman como imput determinados argumentos a fijar por el usuario, y devuelven un resultado acorde a la aplicación de dichos procedimientos. Su lógica de funcionamiento es:\nfuncion(argumento1 = arg1, argumento2 = arg2)\n\nOtros ejemplos de funciones:\n\npaste() : concatena una serie de caracteres, pudiendo indicarse cómo separar a cada uno de ellos\n\npaste0(): concatena una serie de caracteres sin separar\nsum(): suma de todos los elementos de un vector\n\nmean() promedio aritmético de todos los elementos de un vector\n\n\npaste(\"Pega\", \"estas\", 4, \"palabras\", sep = \" \")\n\n[1] \"Pega estas 4 palabras\"\n\n#Puedo concatenar caracteres almacenados en objetos\nA= 'nombre'\nB= 'apellido'\nC= 'ciudad'\npaste(A, B, C, sep = \"**\")\n\n[1] \"nombre**apellido**ciudad\"\n\n# Paste0 pega los caracteres sin separador\npaste0(A, B, C)\n\n[1] \"nombreapellidociudad\"\n\n1:5\n\n[1] 1 2 3 4 5\n\nsum(1:5)\n\n[1] 15\n\nmean(1:5, na.rm = TRUE)\n\n[1] 3"
+  },
+  {
+    "objectID": "apoyo/clase_03_apoyo.html#vectores",
+    "href": "apoyo/clase_03_apoyo.html#vectores",
+    "title": "Clase 3- Apoyo",
+    "section": "Vectores",
+    "text": "Vectores\nSon colecciones de elementos que tienen que ser exclusivamente del mismo tipo, de la misma clase. Se usa la c () para declarar un vector. Los elementos que conforman el vector van separados por comas. Los vectores pueden, y es lo más común, les asignamos nombre como lo vimos con las variables. Incluso podemos tener vectores con una solo elemento (que de por si son las variables que ya estudiamos)."
+  },
+  {
+    "objectID": "apoyo/clase_03_apoyo.html#tipos-de-vectores",
+    "href": "apoyo/clase_03_apoyo.html#tipos-de-vectores",
+    "title": "Clase 3- Apoyo",
+    "section": "Tipos de vectores",
+    "text": "Tipos de vectores\n\nvectores - numeric\nSi queremos preguntar lo hacemos con la función is.numeric()\n\nx=10\nis.numeric(x)\n\n[1] TRUE\n\n\nEn la lámina anterior vimos que el valor que retornó class(x) fue “numeric”.\n\nNúmericos: son aquellos que incluyen números enteros y decimales. En otros lenguajes se les conocen como números de tipo “float” y “double”.\n\n\nx &lt;- 2\n\nclass(x)\n\n[1] \"numeric\"\n\n\n\n\nvectores - integer\n\nEnteros: hay casos en los que es necesario trabajar con números enteros sin que contenga ningún decimal. Estos números se declaran con el uso de una L posterior al número.\n\n\ny &lt;- 2L\ny\n\n[1] 2\n\nclass(y)\n\n[1] \"integer\"\n\n\nEjemplo de una operación:\n\nx &lt;- 2.7\nclass(x)\n\n[1] \"numeric\"\n\ny &lt;- 3L\nclass(y)\n\n[1] \"integer\"\n\n\n\n\nvectores - lógicos\n\nLógicos: Sirven para representar datos que solo pueden tener uno de estos dos valores\n\nverdadero - TRUE\nfalso - FALSE\n\n\n\n\nOperadores lógicos:\n\n\\(&gt;\\) (mayor a)\n\\(&gt;=\\) (mayor o igual a)\n\\(&lt;\\) (menor a)\n\\(&lt;=\\) (menor o igual a)\n\\(==\\) (igual a)\n\\(!=\\) (distinto a)\n\n\n# Redefinimos los valores A y B\nA &lt;- 10\nB &lt;- 20\n\n# Realizamos comparaciones lógicas\nA &gt;  B\n\n[1] FALSE\n\nA &gt;= B\n\n[1] FALSE\n\nA &lt;  B\n\n[1] TRUE\n\nA &lt;= B\n\n[1] TRUE\n\nA == B\n\n[1] FALSE\n\nA != B\n\n[1] TRUE\n\nC &lt;- A != B\nC\n\n[1] TRUE\n\n\nComo muestra el último ejemplo, el resultado de una operación lógica puede almacenarse como el valor de un objeto.\n\nx &lt;- 2.7\ny &lt;-3L\nz &lt;- x==y\nz\n\n[1] FALSE\n\nclass(z)\n\n[1] \"logical\"\n\n\nacabamos de usar el operador ‘==’ que nos sirve para hacer una comparación de igualdad entre dos objetos. Lo que estamos es preguntando si son iguales el uno al otro y la respuesta que obtenemos es de tipo lógica booleana TRUE o FALSE\n\nTRUE*4\n\n[1] 4\n\nFALSE*2\n\n[1] 0\n\n\nacabamos de ver coerción. Forzar a un cambio de un tipo de dato en otro tipo de dato. Los TRUE pueden ser interpretados mediante la coerción como 1 y los FALSE como 0\n\n# dos es igual a 3?\n2==3\n\n[1] FALSE\n\n# dos es distinto de tres? (tener presente que el ! \n# precediendo al igual quiere decir que es lo inverso \n# al igual, es decir, distinto)\n2!=3\n\n[1] TRUE\n\n#dos es menor que tres?\n2&lt;3\n\n[1] TRUE\n\n\n\n#juan es igual a pedro? (hablamos del texto)\n'juan'=='pedro'\n\n[1] FALSE\n\n# el texto jose es igual a jose?\n'jose'=='jose'\n\n[1] TRUE\n\n#dos es igual a dos?\n2==2\n\n[1] TRUE\n\n\n\n# a es menor que b?\n'a'&lt;'b'\n\n[1] TRUE\n\n# a es mayor que 8?\n'a'&gt;8\n\n[1] TRUE\n\n# a es igual a 1?\n'a'==1\n\n[1] FALSE\n\n\n\n\nvectores - character\n\nDatos de caracteres: se usan para almacenar cadenas de caracteres como por ejemplo un nombre, una oración, o cualquier valor que el computador no deba entender como un objeto lógico, número entero, númerico, matriz, etc. El valor debe estar declarado entre comillas simples ” o comilla sencilla ’. Prestar atención a no usar la tipo tilde ´ o cualquiera diferente a las mencionadas\n\n\nnombre &lt;- 'jose miguel'\nno_es_numero &lt;- '2'\nno_es_numero\n\n[1] \"2\"\n\nclass(no_es_numero)\n\n[1] \"character\"\n\nnchar(x)\n\n[1] 3\n\n\n\nnchar('hola')\n\n[1] 4\n\nnchar(5)\n\n[1] 1\n\nnchar(1532)\n\n[1] 4\n\n\n\n\nvectores - Date\n\nFechas El trabajo con las fechas puede llegar a ser un tanto complejo y será abordado de forma más intensiva adelante. Revisando algunas de las formas de trabajar con fechas tenemos el uso de las funciones Date y POSIXct\n\nLa función Date solo almacena la fecha calendario\nLa función POSIXct puede almacenar en conjunto hora y fecha\n\n\nLas fechas se representan, en cualquiera de los casos como la cantidad de días (date) o segundos (POSIXct) que han transcurrido desde el 1 ero de enero de 1970.\n\nfecha1 &lt;- as.Date('2020-01-31')\nfecha1\n\n[1] \"2020-01-31\"\n\nclass(fecha1)\n\n[1] \"Date\"\n\nas.numeric(fecha1)\n\n[1] 18292\n\n\n\nfecha2 &lt;- as.POSIXct('2020-01-31 11:15')\nfecha2\n\n[1] \"2020-01-31 11:15:00 -04\"\n\nas.numeric(fecha2)\n\n[1] 1580483700\n\nclass(fecha2)\n\n[1] \"POSIXct\" \"POSIXt\""
+  },
+  {
+    "objectID": "apoyo/clase_03_apoyo.html#vectores-repaso",
+    "href": "apoyo/clase_03_apoyo.html#vectores-repaso",
+    "title": "Clase 3- Apoyo",
+    "section": "Vectores repaso:",
+    "text": "Vectores repaso:\n\nnumeros &lt;- c(1,2,5,7)\nnumeros\n\n[1] 1 2 5 7\n\nclass(numeros)\n\n[1] \"numeric\"\n\ntextos &lt;- c('juan','eliana','maria')\nclass(textos)\n\n[1] \"character\"\n\ntextos\n\n[1] \"juan\"   \"eliana\" \"maria\" \n\nlogicos &lt;- c(TRUE, FALSE, TRUE)\nclass(logicos)\n\n[1] \"logical\"\n\nis.numeric(numeros)\n\n[1] TRUE\n\nis.logical(textos)\n\n[1] FALSE\n\nis.character(textos)\n\n[1] TRUE\n\n\n\nunico &lt;- c('aula')\nunico\n\n[1] \"aula\"\n\nclass(unico)\n\n[1] \"character\"\n\nerrado &lt;- c('texto', 1)\nerrado\n\n[1] \"texto\" \"1\"    \n\nclass(errado)\n\n[1] \"character\"\n\n\n\nerrado &lt;- c('texto', 1)\nerrado\n\n[1] \"texto\" \"1\"    \n\nclass(errado)\n\n[1] \"character\"\n\n#aplicó la coercion"
+  },
+  {
+    "objectID": "apoyo/clase_03_apoyo.html#estructuras-de-datos-objetos",
+    "href": "apoyo/clase_03_apoyo.html#estructuras-de-datos-objetos",
+    "title": "Clase 3- Apoyo",
+    "section": "Estructuras de Datos/ Objetos:",
+    "text": "Estructuras de Datos/ Objetos:\nTodo lo que existe dentro de R es un objeto: funciones, vectores, etc. En R se puede trabajar con una gran cantidad de objetos distintos tanto en su tipo como tenerlos dentro de una sesión de trabajo.\nEstas son algunos de los objetos que contienen datos con los cuales trabajaremos a lo largo del curso.\n\nValores\nVectores\nListas\nData Frames\nTibbles\n\nNo obstante, existen estructuras más complejas que no son de tipo tabular que no serán abordadas como la raster layers."
+  },
+  {
+    "objectID": "apoyo/clase_03_apoyo.html#caracteres-especiales",
+    "href": "apoyo/clase_03_apoyo.html#caracteres-especiales",
+    "title": "Clase 3- Apoyo",
+    "section": "Caracteres especiales",
+    "text": "Caracteres especiales\n\nR es sensible a mayúsculas y minúsculas, tanto para los nombres de las variables, como para las funciones y parámetros.\nEl numeral # se utiliza para hacer comentarios. Todo lo que se escribe después del # no es interpretado por R. Se debe utilizar un # por cada línea de código que se desea anular\nLos corchetes [] se utilizan para acceder a un objeto:\n\nen un vector[n° orden]\nen una tabla[fila, columna]\nen una lista[n° elemento]\n\nel signo $ también es un método de acceso. Particularmente, en los dataframes, nos permitira acceder a una determinada columna de una tabla\nLos paréntesis() se utilizan en las funciones para definir los parámetros.\nLas comas , se utilizan para separar los parametros al interior de una función."
+  },
+  {
+    "objectID": "apoyo/clase_03_apoyo.html#nombres-variables",
+    "href": "apoyo/clase_03_apoyo.html#nombres-variables",
+    "title": "Clase 3- Apoyo",
+    "section": "Nombres Variables",
+    "text": "Nombres Variables"
+  },
+  {
+    "objectID": "apoyo/clase_03_apoyo.html#ambientes-de-trabajo",
+    "href": "apoyo/clase_03_apoyo.html#ambientes-de-trabajo",
+    "title": "Clase 3- Apoyo",
+    "section": "Ambientes de trabajo",
+    "text": "Ambientes de trabajo\nHay algunas cosas que tenemos que tener en cuenta respecto del orden del ambiente en el que trabajamos:\n\nWorking Directory: Es el directorio de trabajo. Pueden ver el suyo con getwd(), es hacia donde apunta el código, por ejemplo, si quieren leer un archivo, la ruta del archivo tiene que estar explicitada como el recorrido desde el Working Directory.\nEnvironment: Esto engloba tanto la información que tenemos cargada en Data y Values, como las librerías que tenemos cargadas mientras trabajamos.\n\nEs importante que mantengamos bien delimitadas estas cosas entre diferentes trabajos, sino:\n\nEl directorio queda referido a un lugar específico en nuestra computadora.\n\n\nSi se lo compartimos a otro se rompe\nSi cambiamos de computadora se rompe\nSi lo cambiamos de lugar se rompe\nSi primero abrimos otro script se rompe\n\n\nTenemos mezclados resultados de diferentes trabajos:\n\n\nNunca sabemos si esa variable/tabla/lista se creo en ese script y no otro\nPerdemos espacio de la memoria\nNo estamos seguros de que el script cargue todas las librerías que necesita\n\nRstudio tiene una herramienta muy útil de trabajo que son los proyectos. Estos permiten mantener un ambiente de trabajo delimitado por cada uno de nuestros trabajos. Es decir:\n\nEl directorio de trabajo se refiere a donde esta ubicado el archivo .Rproj\nEl Environment es específico de nuestro proyecto.\n\nUn proyecto no es un sólo script, sino toda una carpeta de trabajo.\nPara crearlo, vamos al logo de nuevo projecto (Arriba a la derecha de la panatalla), y elegimos la carpeta de trabajo."
+  },
+  {
+    "objectID": "apoyo/clase_03_apoyo.html#tipos-de-archivos-de-r",
+    "href": "apoyo/clase_03_apoyo.html#tipos-de-archivos-de-r",
+    "title": "Clase 3- Apoyo",
+    "section": "Tipos de archivos de R",
+    "text": "Tipos de archivos de R\n\nScript: Es un archivo de texto plano, donde podemos poner el código que utilizamos para preservarlo\nRmd: También sirve para guardar el código, pero a diferencia de los scripts, se puede compilar, e intercalar código con resultados (este archivo es un rmarkdown)\nRproject: Es un archivo que define la metadata del proyecto\nRDS y Rdata: Dos formatos de archivos propios de R para guardar datos.\nqmd: archivo de Quarto, el cual es un sistema de publicaciones (página web, blogs, que puede contener códigos y otros objetos resultados de una rutina de programación acompañados por texto legible."
+  },
+  {
+    "objectID": "apoyo/clase_03_apoyo.html#remover-objetos-del-global-environment",
+    "href": "apoyo/clase_03_apoyo.html#remover-objetos-del-global-environment",
+    "title": "Clase 3- Apoyo",
+    "section": "Remover objetos del Global Environment",
+    "text": "Remover objetos del Global Environment\nEn caso de querer remover un objeto (todo lo que existe dentro del programa que estamos ejecutando) del “global environment” podemos usar la función rm() teniendo como argumento el nombre del objeto que queremos remover\nrm(“nombre”)"
+  },
+  {
+    "objectID": "scripts/clase_03/clase_03_apoyo.html",
+    "href": "scripts/clase_03/clase_03_apoyo.html",
+    "title": "Clase 3- Apoyo",
+    "section": "",
+    "text": "Este material fue compilado y adaptado por José M. Avendaño teniendo parcialmente códigos y conceptos desarrollados por Diego Kozlowski y Juan Barriola para un curso de R."
+  },
+  {
+    "objectID": "scripts/clase_03/clase_03_apoyo.html#r-base",
+    "href": "scripts/clase_03/clase_03_apoyo.html#r-base",
+    "title": "Clase 3- Apoyo",
+    "section": "R base",
+    "text": "R base\nCon R base nos referimos a los comandos básicos que vienen incorporados en el R, sin necesidad de cargar librerías."
+  },
+  {
+    "objectID": "scripts/clase_03/clase_03_apoyo.html#uso-de-la-consola-como-una-calculadora--operaciones-aritméticas",
+    "href": "scripts/clase_03/clase_03_apoyo.html#uso-de-la-consola-como-una-calculadora--operaciones-aritméticas",
+    "title": "Clase 3- Apoyo",
+    "section": "Uso de la consola como una calculadora- operaciones aritméticas",
+    "text": "Uso de la consola como una calculadora- operaciones aritméticas\n\nEn la consola podemos hacer calculos tal cual si estuviesemos usando una calculadora\n\n\n5*3+6\n\n[1] 21\n\n5*(3+6)\n\n[1] 45\n\n\ntener presente el uso de los paréntesis y el orden en que serán ejecutadas las operaciones matemáticas"
+  },
+  {
+    "objectID": "scripts/clase_03/clase_03_apoyo.html#definición-de-objetos",
+    "href": "scripts/clase_03/clase_03_apoyo.html#definición-de-objetos",
+    "title": "Clase 3- Apoyo",
+    "section": "Definición de objetos",
+    "text": "Definición de objetos\nLos Objetos/Elementos constituyen la categoría esencial del R. De hecho, todo en R es un objeto, y se almacena con un nombre específico que no debe poseer espacios. Un número, un vector, una función, la progresión de letras del abecedario, una base de datos, un gráfico, constituyen para R objetos de distinto tipo. Los objetos que vamos creando a medida que trabajamos pueden visualizarse en el panel derecho superior de la pantalla (el Environment).\nEl operador &lt;- (Alt + Guión) sirve para definir un objeto. A la izquierda del &lt;- debe ubicarse el nombre que tomará el elemento a crear. Del lado derecho debe ir la definición del mismo.\n\nA &lt;- 1\n\nPor ejemplo, podemos crear el elemento A, cuyo valor será 1. Para esto, debemos correr el código presionando Ctrl + Enter, con el cursor ubicado en cualquier parte de la línea. Al definir un elemento, el mismo queda guardado en el ambiente del programa, y podrá ser utilizado posteriormente para observar su contenido o para realizar una operación con el mismo.\n\nA \n\n[1] 1\n\nA+6\n\n[1] 7\n\n\nAl correr una linea con el nombre del objeto, la consola del programa nos muestra su contenido. Entre corchetes observamos el número de orden del elemento en cuestión. Si corremos una operación, la consola nos muestra el resultado de la misma.\nEl operador = es equivalente a &lt;-, pero en la práctica no se utiliza para la definición de objetos.\n\nB = 2\nB\n\n[1] 2\n\n\n&lt;- es un operador Unidireccional, es decir que:\nA &lt;- B implica que A va tomar como valor el contenido del objeto B, y no al revés.\n\nA &lt;- B\nA      # Ahora A toma el valor de B, y B continúa conservando el mismo valor\n\n[1] 2\n\nB\n\n[1] 2"
+  },
+  {
+    "objectID": "scripts/clase_03/clase_03_apoyo.html#variables",
+    "href": "scripts/clase_03/clase_03_apoyo.html#variables",
+    "title": "Clase 3- Apoyo",
+    "section": "Variables",
+    "text": "Variables\nPueden contener cualquier estructura de datos como una matriz, un valor numérico, un texto, un vector y otras que se verán más adelante. Son creadas mediante el uso del operador de asignación."
+  },
+  {
+    "objectID": "scripts/clase_03/clase_03_apoyo.html#funciones-precargadas",
+    "href": "scripts/clase_03/clase_03_apoyo.html#funciones-precargadas",
+    "title": "Clase 3- Apoyo",
+    "section": "Funciones Precargadas:",
+    "text": "Funciones Precargadas:\nRBase cuenta con diversas funciones que ya vienen definidas con el lenguaje de programación. Muchas de ellas son comandos básicos para realizar rutinas de programación. Otro lote de funciones, distinto a otros lenguajes, son funciones para aplicar métodos inherentes a la estadística. Cuando se vea un texto en un script que está asociado a un verbo, o proceso, y posterior al nombre, viene acompañado de un signo de inicio de paréntesis y finaliza con otro signo de cierre de paréntesis, se está en presencia de una función. En algunos casos entre ambos signos de paréntesis aparecerá un texto que puede estar entre comillas, sin comillas y en otros casos varios textos separados por comas. Cuando se da este último caso se refiere a que la función necesita distintos argumentos para poder ejecutarse.\nEjemplos:\n\nFunción sin argumento\n\nSys.Date()\n\n[1] \"2024-10-23\"\n\n\nFunción con un argumento\n\nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1\n\n\nFunción con múltiples argumentos\n\n# asignación variables\nvelocidad &lt;- cars$speed\ndistancia &lt;- cars$dist\n\n# crear un gráfico de tipo scatter plot (diagrama de dispersión )\nplot(velocidad, distancia)"
+  },
+  {
+    "objectID": "scripts/clase_03/clase_03_apoyo.html#tipos-de-datos",
+    "href": "scripts/clase_03/clase_03_apoyo.html#tipos-de-datos",
+    "title": "Clase 3- Apoyo",
+    "section": "Tipos de datos",
+    "text": "Tipos de datos\nCuando queremos saber con cuál tipo de datos estamos trabajando necesitamos usar la función class()\n```{r data_types, include=TRUE, echo=TRUE\nLas funciones son series de procedimientos estandarizados, que toman como imput determinados argumentos a fijar por el usuario, y devuelven un resultado acorde a la aplicación de dichos procedimientos. Su lógica de funcionamiento es:\nfuncion(argumento1 = arg1, argumento2 = arg2)\n\nOtros ejemplos de funciones:\n\npaste() : concatena una serie de caracteres, pudiendo indicarse cómo separar a cada uno de ellos\n\npaste0(): concatena una serie de caracteres sin separar\nsum(): suma de todos los elementos de un vector\n\nmean() promedio aritmético de todos los elementos de un vector\n\n\npaste(\"Pega\", \"estas\", 4, \"palabras\", sep = \" \")\n\n[1] \"Pega estas 4 palabras\"\n\n#Puedo concatenar caracteres almacenados en objetos\nA= 'nombre'\nB= 'apellido'\nC= 'ciudad'\npaste(A, B, C, sep = \"**\")\n\n[1] \"nombre**apellido**ciudad\"\n\n# Paste0 pega los caracteres sin separador\npaste0(A, B, C)\n\n[1] \"nombreapellidociudad\"\n\n1:5\n\n[1] 1 2 3 4 5\n\nsum(1:5)\n\n[1] 15\n\nmean(1:5, na.rm = TRUE)\n\n[1] 3"
+  },
+  {
+    "objectID": "scripts/clase_03/clase_03_apoyo.html#vectores",
+    "href": "scripts/clase_03/clase_03_apoyo.html#vectores",
+    "title": "Clase 3- Apoyo",
+    "section": "Vectores",
+    "text": "Vectores\nSon colecciones de elementos que tienen que ser exclusivamente del mismo tipo, de la misma clase. Se usa la c () para declarar un vector. Los elementos que conforman el vector van separados por comas. Los vectores pueden, y es lo más común, les asignamos nombre como lo vimos con las variables. Incluso podemos tener vectores con una solo elemento (que de por si son las variables que ya estudiamos)."
+  },
+  {
+    "objectID": "scripts/clase_03/clase_03_apoyo.html#tipos-de-vectores",
+    "href": "scripts/clase_03/clase_03_apoyo.html#tipos-de-vectores",
+    "title": "Clase 3- Apoyo",
+    "section": "Tipos de vectores",
+    "text": "Tipos de vectores\n\nvectores - numeric\nSi queremos preguntar lo hacemos con la función is.numeric()\n\nx=10\nis.numeric(x)\n\n[1] TRUE\n\n\nEn la lámina anterior vimos que el valor que retornó class(x) fue “numeric”.\n\nNúmericos: son aquellos que incluyen números enteros y decimales. En otros lenguajes se les conocen como números de tipo “float” y “double”.\n\n\nx &lt;- 2\n\nclass(x)\n\n[1] \"numeric\"\n\n\n\n\nvectores - integer\n\nEnteros: hay casos en los que es necesario trabajar con números enteros sin que contenga ningún decimal. Estos números se declaran con el uso de una L posterior al número.\n\n\ny &lt;- 2L\ny\n\n[1] 2\n\nclass(y)\n\n[1] \"integer\"\n\n\nEjemplo de una operación:\n\nx &lt;- 2.7\nclass(x)\n\n[1] \"numeric\"\n\ny &lt;- 3L\nclass(y)\n\n[1] \"integer\"\n\n\n\n\nvectores - lógicos\n\nLógicos: Sirven para representar datos que solo pueden tener uno de estos dos valores\n\nverdadero - TRUE\nfalso - FALSE\n\n\n\n\nOperadores lógicos:\n\n\\(&gt;\\) (mayor a)\n\\(&gt;=\\) (mayor o igual a)\n\\(&lt;\\) (menor a)\n\\(&lt;=\\) (menor o igual a)\n\\(==\\) (igual a)\n\\(!=\\) (distinto a)\n\n\n# Redefinimos los valores A y B\nA &lt;- 10\nB &lt;- 20\n\n# Realizamos comparaciones lógicas\nA &gt;  B\n\n[1] FALSE\n\nA &gt;= B\n\n[1] FALSE\n\nA &lt;  B\n\n[1] TRUE\n\nA &lt;= B\n\n[1] TRUE\n\nA == B\n\n[1] FALSE\n\nA != B\n\n[1] TRUE\n\nC &lt;- A != B\nC\n\n[1] TRUE\n\n\nComo muestra el último ejemplo, el resultado de una operación lógica puede almacenarse como el valor de un objeto.\n\nx &lt;- 2.7\ny &lt;-3L\nz &lt;- x==y\nz\n\n[1] FALSE\n\nclass(z)\n\n[1] \"logical\"\n\n\nacabamos de usar el operador ‘==’ que nos sirve para hacer una comparación de igualdad entre dos objetos. Lo que estamos es preguntando si son iguales el uno al otro y la respuesta que obtenemos es de tipo lógica booleana TRUE o FALSE\n\nTRUE*4\n\n[1] 4\n\nFALSE*2\n\n[1] 0\n\n\nacabamos de ver coerción. Forzar a un cambio de un tipo de dato en otro tipo de dato. Los TRUE pueden ser interpretados mediante la coerción como 1 y los FALSE como 0\n\n# dos es igual a 3?\n2==3\n\n[1] FALSE\n\n# dos es distinto de tres? (tener presente que el ! \n# precediendo al igual quiere decir que es lo inverso \n# al igual, es decir, distinto)\n2!=3\n\n[1] TRUE\n\n#dos es menor que tres?\n2&lt;3\n\n[1] TRUE\n\n\n\n#juan es igual a pedro? (hablamos del texto)\n'juan'=='pedro'\n\n[1] FALSE\n\n# el texto jose es igual a jose?\n'jose'=='jose'\n\n[1] TRUE\n\n#dos es igual a dos?\n2==2\n\n[1] TRUE\n\n\n\n# a es menor que b?\n'a'&lt;'b'\n\n[1] TRUE\n\n# a es mayor que 8?\n'a'&gt;8\n\n[1] TRUE\n\n# a es igual a 1?\n'a'==1\n\n[1] FALSE\n\n\n\n\nvectores - character\n\nDatos de caracteres: se usan para almacenar cadenas de caracteres como por ejemplo un nombre, una oración, o cualquier valor que el computador no deba entender como un objeto lógico, número entero, númerico, matriz, etc. El valor debe estar declarado entre comillas simples ” o comilla sencilla ’. Prestar atención a no usar la tipo tilde ´ o cualquiera diferente a las mencionadas\n\n\nnombre &lt;- 'jose miguel'\nno_es_numero &lt;- '2'\nno_es_numero\n\n[1] \"2\"\n\nclass(no_es_numero)\n\n[1] \"character\"\n\nnchar(x)\n\n[1] 3\n\n\n\nnchar('hola')\n\n[1] 4\n\nnchar(5)\n\n[1] 1\n\nnchar(1532)\n\n[1] 4\n\n\n\n\nvectores - Date\n\nFechas El trabajo con las fechas puede llegar a ser un tanto complejo y será abordado de forma más intensiva adelante. Revisando algunas de las formas de trabajar con fechas tenemos el uso de las funciones Date y POSIXct\n\nLa función Date solo almacena la fecha calendario\nLa función POSIXct puede almacenar en conjunto hora y fecha\n\n\nLas fechas se representan, en cualquiera de los casos como la cantidad de días (date) o segundos (POSIXct) que han transcurrido desde el 1 ero de enero de 1970.\n\nfecha1 &lt;- as.Date('2020-01-31')\nfecha1\n\n[1] \"2020-01-31\"\n\nclass(fecha1)\n\n[1] \"Date\"\n\nas.numeric(fecha1)\n\n[1] 18292\n\n\n\nfecha2 &lt;- as.POSIXct('2020-01-31 11:15')\nfecha2\n\n[1] \"2020-01-31 11:15:00 -04\"\n\nas.numeric(fecha2)\n\n[1] 1580483700\n\nclass(fecha2)\n\n[1] \"POSIXct\" \"POSIXt\""
+  },
+  {
+    "objectID": "scripts/clase_03/clase_03_apoyo.html#vectores-repaso",
+    "href": "scripts/clase_03/clase_03_apoyo.html#vectores-repaso",
+    "title": "Clase 3- Apoyo",
+    "section": "Vectores repaso:",
+    "text": "Vectores repaso:\n\nnumeros &lt;- c(1,2,5,7)\nnumeros\n\n[1] 1 2 5 7\n\nclass(numeros)\n\n[1] \"numeric\"\n\ntextos &lt;- c('juan','eliana','maria')\nclass(textos)\n\n[1] \"character\"\n\ntextos\n\n[1] \"juan\"   \"eliana\" \"maria\" \n\nlogicos &lt;- c(TRUE, FALSE, TRUE)\nclass(logicos)\n\n[1] \"logical\"\n\nis.numeric(numeros)\n\n[1] TRUE\n\nis.logical(textos)\n\n[1] FALSE\n\nis.character(textos)\n\n[1] TRUE\n\n\n\nunico &lt;- c('aula')\nunico\n\n[1] \"aula\"\n\nclass(unico)\n\n[1] \"character\"\n\nerrado &lt;- c('texto', 1)\nerrado\n\n[1] \"texto\" \"1\"    \n\nclass(errado)\n\n[1] \"character\"\n\n\n\nerrado &lt;- c('texto', 1)\nerrado\n\n[1] \"texto\" \"1\"    \n\nclass(errado)\n\n[1] \"character\"\n\n#aplicó la coercion"
+  },
+  {
+    "objectID": "scripts/clase_03/clase_03_apoyo.html#estructuras-de-datos-objetos",
+    "href": "scripts/clase_03/clase_03_apoyo.html#estructuras-de-datos-objetos",
+    "title": "Clase 3- Apoyo",
+    "section": "Estructuras de Datos/ Objetos:",
+    "text": "Estructuras de Datos/ Objetos:\nTodo lo que existe dentro de R es un objeto: funciones, vectores, etc. En R se puede trabajar con una gran cantidad de objetos distintos tanto en su tipo como tenerlos dentro de una sesión de trabajo.\nEstas son algunos de los objetos que contienen datos con los cuales trabajaremos a lo largo del curso.\n\nValores\nVectores\nListas\nData Frames\nTibbles\n\nNo obstante, existen estructuras más complejas que no son de tipo tabular que no serán abordadas como la raster layers."
+  },
+  {
+    "objectID": "scripts/clase_03/clase_03_apoyo.html#caracteres-especiales",
+    "href": "scripts/clase_03/clase_03_apoyo.html#caracteres-especiales",
+    "title": "Clase 3- Apoyo",
+    "section": "Caracteres especiales",
+    "text": "Caracteres especiales\n\nR es sensible a mayúsculas y minúsculas, tanto para los nombres de las variables, como para las funciones y parámetros.\nEl numeral # se utiliza para hacer comentarios. Todo lo que se escribe después del # no es interpretado por R. Se debe utilizar un # por cada línea de código que se desea anular\nLos corchetes [] se utilizan para acceder a un objeto:\n\nen un vector[n° orden]\nen una tabla[fila, columna]\nen una lista[n° elemento]\n\nel signo $ también es un método de acceso. Particularmente, en los dataframes, nos permitira acceder a una determinada columna de una tabla\nLos paréntesis() se utilizan en las funciones para definir los parámetros.\nLas comas , se utilizan para separar los parametros al interior de una función."
+  },
+  {
+    "objectID": "scripts/clase_03/clase_03_apoyo.html#nombres-variables",
+    "href": "scripts/clase_03/clase_03_apoyo.html#nombres-variables",
+    "title": "Clase 3- Apoyo",
+    "section": "Nombres Variables",
+    "text": "Nombres Variables"
+  },
+  {
+    "objectID": "scripts/clase_03/clase_03_apoyo.html#ambientes-de-trabajo",
+    "href": "scripts/clase_03/clase_03_apoyo.html#ambientes-de-trabajo",
+    "title": "Clase 3- Apoyo",
+    "section": "Ambientes de trabajo",
+    "text": "Ambientes de trabajo\nHay algunas cosas que tenemos que tener en cuenta respecto del orden del ambiente en el que trabajamos:\n\nWorking Directory: Es el directorio de trabajo. Pueden ver el suyo con getwd(), es hacia donde apunta el código, por ejemplo, si quieren leer un archivo, la ruta del archivo tiene que estar explicitada como el recorrido desde el Working Directory.\nEnvironment: Esto engloba tanto la información que tenemos cargada en Data y Values, como las librerías que tenemos cargadas mientras trabajamos.\n\nEs importante que mantengamos bien delimitadas estas cosas entre diferentes trabajos, sino:\n\nEl directorio queda referido a un lugar específico en nuestra computadora.\n\n\nSi se lo compartimos a otro se rompe\nSi cambiamos de computadora se rompe\nSi lo cambiamos de lugar se rompe\nSi primero abrimos otro script se rompe\n\n\nTenemos mezclados resultados de diferentes trabajos:\n\n\nNunca sabemos si esa variable/tabla/lista se creo en ese script y no otro\nPerdemos espacio de la memoria\nNo estamos seguros de que el script cargue todas las librerías que necesita\n\nRstudio tiene una herramienta muy útil de trabajo que son los proyectos. Estos permiten mantener un ambiente de trabajo delimitado por cada uno de nuestros trabajos. Es decir:\n\nEl directorio de trabajo se refiere a donde esta ubicado el archivo .Rproj\nEl Environment es específico de nuestro proyecto.\n\nUn proyecto no es un sólo script, sino toda una carpeta de trabajo.\nPara crearlo, vamos al logo de nuevo projecto (Arriba a la derecha de la panatalla), y elegimos la carpeta de trabajo."
+  },
+  {
+    "objectID": "scripts/clase_03/clase_03_apoyo.html#tipos-de-archivos-de-r",
+    "href": "scripts/clase_03/clase_03_apoyo.html#tipos-de-archivos-de-r",
+    "title": "Clase 3- Apoyo",
+    "section": "Tipos de archivos de R",
+    "text": "Tipos de archivos de R\n\nScript: Es un archivo de texto plano, donde podemos poner el código que utilizamos para preservarlo\nRmd: También sirve para guardar el código, pero a diferencia de los scripts, se puede compilar, e intercalar código con resultados (este archivo es un rmarkdown)\nRproject: Es un archivo que define la metadata del proyecto\nRDS y Rdata: Dos formatos de archivos propios de R para guardar datos.\nqmd: archivo de Quarto, el cual es un sistema de publicaciones (página web, blogs, que puede contener códigos y otros objetos resultados de una rutina de programación acompañados por texto legible."
+  },
+  {
+    "objectID": "scripts/clase_03/clase_03_apoyo.html#remover-objetos-del-global-environment",
+    "href": "scripts/clase_03/clase_03_apoyo.html#remover-objetos-del-global-environment",
+    "title": "Clase 3- Apoyo",
+    "section": "Remover objetos del Global Environment",
+    "text": "Remover objetos del Global Environment\nEn caso de querer remover un objeto (todo lo que existe dentro del programa que estamos ejecutando) del “global environment” podemos usar la función rm() teniendo como argumento el nombre del objeto que queremos remover\nrm(“nombre”)"
   },
   {
     "objectID": "clases/clase_01.html#equipo-de-enseñanza",
@@ -428,6 +911,146 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "Tareas Asignadas",
     "text": "Tareas Asignadas\n\nRevisar canales en Discord\n\nReglas\nRecursos disponibles\nTareas\n\nRealizar la primera tarea\n\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_03.html#r-base",
+    "href": "clases/clase_03.html#r-base",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "R Base",
+    "text": "R Base"
+  },
+  {
+    "objectID": "clases/clase_03.html#uso-de-la-console",
+    "href": "clases/clase_03.html#uso-de-la-console",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Uso de la Console",
+    "text": "Uso de la Console"
+  },
+  {
+    "objectID": "clases/clase_03.html#objetos",
+    "href": "clases/clase_03.html#objetos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Objetos",
+    "text": "Objetos"
+  },
+  {
+    "objectID": "clases/clase_03.html#variables",
+    "href": "clases/clase_03.html#variables",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Variables",
+    "text": "Variables"
+  },
+  {
+    "objectID": "clases/clase_03.html#funciones-precargadas",
+    "href": "clases/clase_03.html#funciones-precargadas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Funciones Precargadas",
+    "text": "Funciones Precargadas"
+  },
+  {
+    "objectID": "clases/clase_03.html#vectores",
+    "href": "clases/clase_03.html#vectores",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Vectores",
+    "text": "Vectores"
+  },
+  {
+    "objectID": "clases/clase_03.html#tipos-de-vectores",
+    "href": "clases/clase_03.html#tipos-de-vectores",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tipos de Vectores",
+    "text": "Tipos de Vectores"
+  },
+  {
+    "objectID": "clases/clase_03.html#operadores-lógicos",
+    "href": "clases/clase_03.html#operadores-lógicos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Operadores Lógicos",
+    "text": "Operadores Lógicos\n\n\\(&gt;\\) (mayor a)\n\\(&gt;=\\) (mayor o igual a)\n\\(&lt;\\) (menor a)\n\\(&lt;=\\) (menor o igual a)\n\\(==\\) (igual a)\n\\(!=\\) (distinto a)"
+  },
+  {
+    "objectID": "clases/clase_03.html#estructuras-de-datos-1",
+    "href": "clases/clase_03.html#estructuras-de-datos-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Estructuras de Datos 1",
+    "text": "Estructuras de Datos 1\n\n\n\n\n\n\n\n\nObjeto\nR\nEjemplo\n\n\n\n\n\nvector atómico\nc(1)\n\n\n ️\nvector\nc(‘a’, ‘x’, ‘d’)\n\n\n\nmátriz\nmatrix(1:8,2,4)"
+  },
+  {
+    "objectID": "clases/clase_03.html#estructuras-de-datos-2",
+    "href": "clases/clase_03.html#estructuras-de-datos-2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Estructuras de Datos 2",
+    "text": "Estructuras de Datos 2\n\n\n\n\n\n\n\n\nObjeto\nR\nEjemplo\n\n\n\n\n\nlista\nlista_test &lt;- list(primer=c(‘a’, ‘x’), segun=c(1))\n\n\n\ndata frame\nmtcars\n\n\n\ntibble\nas_tibble(mtcars)"
+  },
+  {
+    "objectID": "clases/clase_03.html#caracteres-especiales",
+    "href": "clases/clase_03.html#caracteres-especiales",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caracteres Especiales",
+    "text": "Caracteres Especiales"
+  },
+  {
+    "objectID": "clases/clase_03.html#nombres-variables",
+    "href": "clases/clase_03.html#nombres-variables",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Nombres Variables",
+    "text": "Nombres Variables"
+  },
+  {
+    "objectID": "clases/clase_03.html#ambientes-de-trabajo",
+    "href": "clases/clase_03.html#ambientes-de-trabajo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ambientes de Trabajo",
+    "text": "Ambientes de Trabajo"
+  },
+  {
+    "objectID": "clases/clase_03.html#tipos-de-de-archivos-en-r",
+    "href": "clases/clase_03.html#tipos-de-de-archivos-en-r",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tipos de de Archivos en R",
+    "text": "Tipos de de Archivos en R"
+  },
+  {
+    "objectID": "clases/clase_03.html#remover-objetos",
+    "href": "clases/clase_03.html#remover-objetos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Remover Objetos",
+    "text": "Remover Objetos\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_03_complemento_variables.html#buenas-prácticas-para-nombrar-variables",
+    "href": "clases/clase_03_complemento_variables.html#buenas-prácticas-para-nombrar-variables",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Buenas prácticas para nombrar variables",
+    "text": "Buenas prácticas para nombrar variables\nEs importante que el nombre de la variable describa el valor que está guardando. Por ejemplo, no use nombres ambiguos como:\n\nprincesa &lt;- 10000\n\nEn lugar de eso, use nombres descriptivos como:\n\nmeta_ventas_enero &lt;- 10000\n\nEsto le ayudará a entender el propósito de la variable más adelante en el código, especialmente cuando tiene múltiples variables en su programa."
+  },
+  {
+    "objectID": "clases/clase_03_complemento_variables.html#declaración-de-variables",
+    "href": "clases/clase_03_complemento_variables.html#declaración-de-variables",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Declaración de variables",
+    "text": "Declaración de variables\nDespués de elegir el nombre de la variable, es necesario usar el operador de asignación. En R, esto se hace con &lt;-. También puede usar atajos de teclado como Alt + - en Windows para escribir el operador más rápido.\n\nvariable_texto &lt;- \"contiene un texto\"\n\nTenga en cuenta que los textos deben ir entre comillas simples (') o dobles (\").\nSi el valor que desea asignar es numérico, no use comillas:\n\nvariable_numero &lt;- 1000\n\nCompare este ejemplo con una asignación incorrecta:\n\nvariable_numero_2 &lt;- '1000'\nvariable_numero + variable_numero  # Correcto\n\n[1] 2000\n\n# variable_numero + variable_numero_2  # Genera error"
+  },
+  {
+    "objectID": "clases/clase_03_complemento_variables.html#ejecutar-código-en-r",
+    "href": "clases/clase_03_complemento_variables.html#ejecutar-código-en-r",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Ejecutar código en R",
+    "text": "Ejecutar código en R\nAl declarar una variable y ejecutar la línea, R creará una variable en el entorno. Puede ver el nuevo objeto creado en la ventana de “Environment”.\n\nmeta_ventas_enero &lt;- 1000"
+  },
+  {
+    "objectID": "clases/clase_03_complemento_variables.html#ejemplos-prácticos",
+    "href": "clases/clase_03_complemento_variables.html#ejemplos-prácticos",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Ejemplos prácticos",
+    "text": "Ejemplos prácticos\nEjecute los siguientes ejemplos y asegúrese de que las variables aparezcan en el “Environment”.\n\nvar_nombre &lt;- 'primera asignacion'\n\nRecuerde siempre seguir las mejores prácticas de nombramiento para facilitar la lectura y el mantenimiento de su código."
+  },
+  {
+    "objectID": "clases/clase_03_complemento_variables.html#reglas-para-la-creación-de-variables",
+    "href": "clases/clase_03_complemento_variables.html#reglas-para-la-creación-de-variables",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Reglas para la creación de variables",
+    "text": "Reglas para la creación de variables\nEstilo y convención\n\nMinúsculas: Las variables deben escribirse en minúsculas como una recomendación de estilo. Aunque no es una limitación del lenguaje, es una buena práctica:\n\nprimeravariable &lt;- 'iniciamos un script'\n\nRayita abajo para juntar palabras: Puede usar el guion bajo _ para juntar dos o más palabras en el nombre de una variable:\n\n\nvariable_creada &lt;- 'este texto es el contenido de la variable'\n\nRestricciones\n\nNo espacios en los nombres: Las variables no pueden contener espacios en su nombre. El siguiente ejemplo no es válido y dará error:\n\n\n# variable con espacio &lt;- 'esta línea no se podrá ejecutar'\n\n\nNo comenzar con números: Las variables no pueden comenzar con un número. El siguiente ejemplo también genera un error:\n\n\n# 1variable &lt;- 'tampoco se ejecutará este código'\n\nAl ejecutar la línea anterior, se obtendrá un mensaje de error en la Consola.\n\nSolo letras o puntos al inicio: Los nombres de las variables solo pueden empezar con una letra o un punto. Si se utiliza un punto al inicio, no debe ser seguido de un número:\n\n\nvariable_tercera &lt;- 'seguimos avanzando'\n.variable_tercera &lt;- 'la variable_tercera es distinta a la .variable_tercera, son dos nombres distintos'\n\nEl siguiente ejemplo es incorrecto porque el punto no puede estar seguido de un número:\n\n# .5variable &lt;- 'INCORRECTO'\n\nCaracteres especiales no permitidos\nAdemás del punto . y la rayita abajo _, no se permite el uso de otros caracteres especiales en los nombres de las variables.\nAquí tienes un listado de los caracteres especiales que no puedes usar:\n\nlistado_caracteres_especiales &lt;- c(\"~\", \"`\", \"!\", \"@\", \"#\", \"$\", \"%\", \"^\", \"&\", \n                                   \"*\", \"(\", \")\", \"-\", \"_\", \"+\", \"=\", \"{\", \"}\", \n                                   \"[\", \"]\", \"|\", \"\\\\\", \"/\", \":\", \";\", \"\\\"\", \n                                   \"'\", \"&lt;\", \"&gt;\", \".\", \"?\")\nlistado_caracteres_especiales\n\n [1] \"~\"  \"`\"  \"!\"  \"@\"  \"#\"  \"$\"  \"%\"  \"^\"  \"&\"  \"*\"  \"(\"  \")\"  \"-\"  \"_\"  \"+\"  \"=\"  \"{\" \n[18] \"}\"  \"[\"  \"]\"  \"|\"  \"\\\\\" \"/\"  \":\"  \";\"  \"\\\"\" \"'\"  \"&lt;\"  \"&gt;\"  \".\"  \"?\" \n\n\nEl siguiente ejemplo es incorrecto debido al uso de un carácter especial en el nombre de la variable:\n\n# variable.inasig@nabl_e &lt;- 'INCORRECTO'\n\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "curso-infogeneral.html",

@@ -1,0 +1,17 @@
+🖥️ [slides](https://sta101-f23.github.io/lectures/01/01-welcome.html) <br>
+☁️ [ae-01](https://posit.cloud/spaces/405361/content/6388717) <br>
+⌨️ [ae-01](https://sta101-f23.github.io/ae/ae-01-unvotes.html)
+
+  ✍️🧠💻🖥️🖱️🚫❓🎥 [Data privacy](https://www.youtube.com/watch?v=c4fvdoNbcSw) <br>
+🎥 [Misrepresentation](https://www.youtube.com/watch?v=C_-rTKfswUI) <br>
+🎥 [Algorithmic bias](https://www.youtube.com/watch?v=E2eD72pwtps) <br>
+🎥 [Joy Buolamwini - How I’m fighting bias in algorithms](https://youtu.be/UG_X_7g63rY) <br>
+🎥 [Cathy O’Neil - Weapons of Math Destruction](https://youtu.be/TQHs8SA1qpk) <br>
+🎥 [Safiya Umoja Noble - Imagining a Future Free from the Algorithms of Oppression](https://youtu.be/tNi_U1Bb1S0)
+
+
+extensiones
+quarto add quarto-ext/fontawesome
+https://github.com/quarto-ext/fontawesome
+quarto add quarto-ext/lightbox
+https://github.com/quarto-ext/lightbox

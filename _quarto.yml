@@ -10,7 +10,7 @@ website:
   site-url: https://ucveconomiar4ds.netlify.app
   repo-url: https://github.com/orgs/UCVeconomia2024-2/
   favicon: images/favicon.png
-
+  
   open-graph: true
 
   sidebar:
@@ -34,7 +34,7 @@ website:
 
 
     style: docked
-    search: true
+    # search: true
     collapse-level: 1
 
     contents:
@@ -70,6 +70,7 @@ website:
 lang: es    
 format:
   html:
+    embed-resources: true
     theme:
       light: [cosmo, style/copystat101.scss]
       dark: [cosmo,  style/dark.scss]
