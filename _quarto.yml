@@ -17,7 +17,7 @@ website:
     background: "#a01f35" #"#E46C4E"
     logo: "images/logo_curso_sinBG.png"
     pinned: true
-    align: center
+    align: center 
     tools:
       - icon: envelope
         text: "Correo"
@@ -72,7 +72,7 @@ format:
   html:
     embed-resources: true
     theme:
-      light: [cosmo, style/copystat101.scss]
+      light: [cosmo, style/stat101_of.scss]
       dark: [cosmo,  style/dark.scss]
     linkcolor: "#E63B2E"
     toc: true
