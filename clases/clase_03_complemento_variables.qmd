@@ -5,18 +5,21 @@ title: "Clase 03: complemento- nombres variables"
 En esta clase veremos algunas recomendaciones sobre cómo deben nombrarse las variables en el lenguaje de programación R. Recuerde que el nombre de las variables es fundamental para mantener un código claro y comprensible.
 
 ```{r}
-# Algún día haremos justicia los que tenemos la ñ en nuestro nombre
-prof_avendaño <- 'se ejecutará pero no es recomendable'
+# Algún día haremos justicia los que tenemos 
+# la ñ en nuestro nombre
+apellido_avendaño <- 'se ejecutará pero no es recomendable'
 ```
+
+## Nombres
 
 Los nombres de las variables **no** deben contener acentos, diéresis ni caracteres especiales. Aunque es posible utilizar algunos caracteres como la "ñ", no es recomendable.
 
-## Buenas prácticas para nombrar variables
+## Buenas Prácticas 
 
-Es importante que el nombre de la variable describa el valor que está guardando. Por ejemplo, no use nombres ambiguos como:
+Para nombrar variables Es importante que el nombre de la variable describa el valor que está guardando. Por ejemplo, no use nombres ambiguos o no descriptivos como:
 
 ```{r}
-princesa <- 10000
+pupitre <- 10000
 
 ```
 
@@ -27,6 +30,8 @@ meta_ventas_enero <- 10000
 
 
 ```
+
+## Nombres Descriptivos
 
 Esto le ayudará a entender el propósito de la variable más adelante en el código, especialmente cuando tiene múltiples variables en su programa.
 
@@ -39,7 +44,14 @@ variable_texto <- "contiene un texto"
 
 ```
 
+## Declaración de variables (cont. 1)
+
 Tenga en cuenta que los textos deben ir entre comillas simples (`'`) o dobles (`"`).
+
+```{r}
+variable_texto <- "contiene un texto" # ✅
+variable_texto <- 'contiene un texto' # ✅
+```
 
 Si el valor que desea asignar es numérico, no use comillas:
 
@@ -48,15 +60,25 @@ variable_numero <- 1000
 
 ```
 
-Compare este ejemplo con una asignación incorrecta:
+## Declaración de variables (cont. 2)
+
+Existen vectores conformados por números enteros (ocupan menos memoria en espacio de trabajo) y se declaran
 
 ```{r}
-variable_numero_2 <- '1000'
-variable_numero + variable_numero  # Correcto
-# variable_numero + variable_numero_2  # Genera error
+vector_de_enteros <- c(3L, 5L, 7L)
 ```
 
-## Ejecutar código en R
+Cada número es seguido por la letra L
+
+## Declaración de variables (cont. 3)
+
+Si se va a declarar un vector de datos lógicos tampoco se usan comillas
+
+```{r}
+vector_logico_ejemplo <- c(TRUE, TRUE, FALSE)
+```
+
+## Variables Creadas- Environment
 
 Al declarar una variable y ejecutar la línea, R creará una variable en el entorno. Puede ver el nuevo objeto creado en la ventana de "Environment".
 
@@ -69,24 +91,24 @@ meta_ventas_enero <- 1000
 Ejecute los siguientes ejemplos y asegúrese de que las variables aparezcan en el "Environment".
 
 ```{r}
-var_nombre <- 'primera asignacion'
+variable_nombre <- 'primera asignacion'
 ```
 
 Recuerde siempre seguir las mejores prácticas de nombramiento para facilitar la lectura y el mantenimiento de su código.
-
-```{r}
-
-```
 
 ## Reglas para la creación de variables
 
 ### Estilo y convención
 
--   **Minúsculas:** Las variables deben escribirse en minúsculas como una recomendación de estilo. Aunque no es una limitación del lenguaje, es una buena práctica:
+**Minúsculas:** Las variables deben escribirse en minúsculas como una recomendación de estilo. Aunque no es una limitación del lenguaje, es una buena práctica:
 
-    ```{r}
-    primeravariable <- 'iniciamos un script'
-    ```
+```{r}
+primera_variable <- 'iniciamos un script'
+
+
+```
+
+## Reglas (cont.)
 
 -   **Rayita abajo para juntar palabras:** Puede usar el guion bajo `_` para juntar dos o más palabras en el nombre de una variable:
 
@@ -94,9 +116,9 @@ Recuerde siempre seguir las mejores prácticas de nombramiento para facilitar la
 variable_creada <- 'este texto es el contenido de la variable'
 ```
 
-### Restricciones
+## Restricciones
 
--   **No espacios en los nombres:** Las variables no pueden contener espacios en su nombre. El siguiente ejemplo no es válido y dará error:
+-   **No se pueden colocar espacios en los nombres:** El siguiente ejemplo no es válido y dará error:
 
 ```{r}
 # variable con espacio <- 'esta línea no se podrá ejecutar'
@@ -111,6 +133,8 @@ variable_creada <- 'este texto es el contenido de la variable'
 
 Al ejecutar la línea anterior, se obtendrá un mensaje de error en la Consola.
 
+## Restricciones (cont.)
+
 -   **Solo letras o puntos al inicio:** Los nombres de las variables solo pueden empezar con una letra o un punto. Si se utiliza un punto al inicio, no debe ser seguido de un número:
 
 ```{r}
@@ -119,6 +143,8 @@ variable_tercera <- 'seguimos avanzando'
 
 ```
 
+## Restricciones (cont.) 
+
 El siguiente ejemplo es incorrecto porque el punto no puede estar seguido de un número:
 
 ```{r}
@@ -126,7 +152,7 @@ El siguiente ejemplo es incorrecto porque el punto no puede estar seguido de un 
 
 ```
 
-### Caracteres especiales no permitidos
+## Caracteres Especiales no Permitidos
 
 Además del punto `.` y la rayita abajo `_`, no se permite el uso de otros caracteres especiales en los nombres de las variables.
 
@@ -137,8 +163,10 @@ listado_caracteres_especiales <- c("~", "`", "!", "@", "#", "$", "%", "^", "&",
                                    "*", "(", ")", "-", "_", "+", "=", "{", "}", 
                                    "[", "]", "|", "\\", "/", ":", ";", "\"", 
                                    "'", "<", ">", ".", "?")
-listado_caracteres_especiales
+
 ```
+
+## Ejemplo de Caracteres Especiales no Permitidos
 
 El siguiente ejemplo es incorrecto debido al uso de un carácter especial en el nombre de la variable:
 

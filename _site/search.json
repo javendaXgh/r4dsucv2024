@@ -468,7 +468,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\n\n\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\n\n\n🖥️ láminas clase 03  💻/scripts clase 3\n\n\n3\nlun, 28 oct.\n\n\n💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\n\n\n\n\n\n\n3\nlun, 4 nov.\n\n\n\n\n\n\n\n\nmié, 6 nov.\n\n\n\n\n\n\n4\nlun, 11 nov.\n\n\n\n\n\n\n\n\nmié, 13 nov.\n\n\n\n\n\n\n5\nlun, 18 nov.\n\n\n\n\n\n\n\n\nmié, 20 nov.\n\n\n\n\n\n\n6\nlun, 25 nov.\n\n\n\n\n\n\n\n\nmié, 27 nov.\n\n\n\n\n\n\n7\nlun, 2 dic.\n\n\n\n\n\n\n\n\nmié, 4 dic.\n\n\n\n\n\n\n8\nlun, 9 dic.\n\n\n\n\n\n\n\n\nmié, 11 dic.\n\n\n\n\n\n\n9\nlun, 16 dic.\n\n\n\n\n\n\n\n\nmié, 18 dic.\n\n\n\n\n\n\n10\nlun, 13 ene.\n\n\n\n\n\n\n\n\nmié, 15 ene.\n\n\n\n\n\n\n11\nlun, 20 ene.\n\n\n\n\n\n\n\n\nmié, 22 ene.\n\n\n\n\n\n\n12\nlun, 27 ene.\n\n\n\n\n\n\n\n\nmié, 29 ene.\n\n\n\n\n\n\n13\nlun, 3 feb.\n\n\n\n\n\n\n\n\nmié, 5 feb.\n\n\n\n\n\n\n14\nlun, 10 feb.\n\n\n\n\n\n\n\n\nmié, 12 feb.\n\n\n\n\n\n\n15\nsáb, 15 feb.\n\n\n\n\n\n\n\n\nlun, 17 feb.",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\n\n\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\n\n\n🖥️ láminas clase 03  💻/scripts clase 3\n\n\n3\nlun, 28 oct.\n\n\n💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\n\n\n🖥️ láminas clase 05\n\n\n3\nlun, 4 nov.\n\n\n\n\n\n\n\n\nmié, 6 nov.\n\n\n\n\n\n\n4\nlun, 11 nov.\n\n\n\n\n\n\n\n\nmié, 13 nov.\n\n\n\n\n\n\n5\nlun, 18 nov.\n\n\n\n\n\n\n\n\nmié, 20 nov.\n\n\n\n\n\n\n6\nlun, 25 nov.\n\n\n\n\n\n\n\n\nmié, 27 nov.\n\n\n\n\n\n\n7\nlun, 2 dic.\n\n\n\n\n\n\n\n\nmié, 4 dic.\n\n\n\n\n\n\n8\nlun, 9 dic.\n\n\n\n\n\n\n\n\nmié, 11 dic.\n\n\n\n\n\n\n9\nlun, 16 dic.\n\n\n\n\n\n\n\n\nmié, 18 dic.\n\n\n\n\n\n\n10\nlun, 13 ene.\n\n\n\n\n\n\n\n\nmié, 15 ene.\n\n\n\n\n\n\n11\nlun, 20 ene.\n\n\n\n\n\n\n\n\nmié, 22 ene.\n\n\n\n\n\n\n12\nlun, 27 ene.\n\n\n\n\n\n\n\n\nmié, 29 ene.\n\n\n\n\n\n\n13\nlun, 3 feb.\n\n\n\n\n\n\n\n\nmié, 5 feb.\n\n\n\n\n\n\n14\nlun, 10 feb.\n\n\n\n\n\n\n\n\nmié, 12 feb.\n\n\n\n\n\n\n15\nsáb, 15 feb.\n\n\n\n\n\n\n\n\nlun, 17 feb.",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -916,8 +916,8 @@
     "objectID": "clases/clase_03.html#r-base",
     "href": "clases/clase_03.html#r-base",
     "title": "Ciencia de Datos para Economistas",
-    "section": "R Base",
-    "text": "R Base"
+    "section": "",
+    "text": "Con R base nos referimos a los comandos básicos que vienen incorporados en el R, sin necesidad de cargar librerías."
   },
   {
     "objectID": "clases/clase_03.html#uso-de-la-console",
@@ -1001,7 +1001,7 @@
     "href": "clases/clase_03.html#ambientes-de-trabajo",
     "title": "Ciencia de Datos para Economistas",
     "section": "Ambientes de Trabajo",
-    "text": "Ambientes de Trabajo"
+    "text": "Ambientes de Trabajo\nTipos de Archivos"
   },
   {
     "objectID": "clases/clase_03.html#tipos-de-de-archivos-en-r",
@@ -1015,7 +1015,7 @@
     "href": "clases/clase_03.html#remover-objetos",
     "title": "Ciencia de Datos para Economistas",
     "section": "Remover Objetos",
-    "text": "Remover Objetos\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Remover Objetos\n\nrm(nombre_objeto)\nrm(list=ls())"
   },
   {
     "objectID": "clases/clase_03_complemento_variables.html#buenas-prácticas-para-nombrar-variables",
@@ -1029,7 +1029,7 @@
     "href": "clases/clase_03_complemento_variables.html#declaración-de-variables",
     "title": "Clase 03: complemento- nombres variables",
     "section": "Declaración de variables",
-    "text": "Declaración de variables\nDespués de elegir el nombre de la variable, es necesario usar el operador de asignación. En R, esto se hace con &lt;-. También puede usar atajos de teclado como Alt + - en Windows para escribir el operador más rápido.\n\nvariable_texto &lt;- \"contiene un texto\"\n\nTenga en cuenta que los textos deben ir entre comillas simples (') o dobles (\").\nSi el valor que desea asignar es numérico, no use comillas:\n\nvariable_numero &lt;- 1000\n\nCompare este ejemplo con una asignación incorrecta:\n\nvariable_numero_2 &lt;- '1000'\nvariable_numero + variable_numero  # Correcto\n\n[1] 2000\n\n# variable_numero + variable_numero_2  # Genera error"
+    "text": "Declaración de variables\nDespués de elegir el nombre de la variable, es necesario usar el operador de asignación. En R, esto se hace con &lt;-. También puede usar atajos de teclado como Alt + - en Windows para escribir el operador más rápido.\n\nvariable_texto &lt;- \"contiene un texto\""
   },
   {
     "objectID": "clases/clase_03_complemento_variables.html#ejecutar-código-en-r",
@@ -1043,14 +1043,14 @@
     "href": "clases/clase_03_complemento_variables.html#ejemplos-prácticos",
     "title": "Clase 03: complemento- nombres variables",
     "section": "Ejemplos prácticos",
-    "text": "Ejemplos prácticos\nEjecute los siguientes ejemplos y asegúrese de que las variables aparezcan en el “Environment”.\n\nvar_nombre &lt;- 'primera asignacion'\n\nRecuerde siempre seguir las mejores prácticas de nombramiento para facilitar la lectura y el mantenimiento de su código."
+    "text": "Ejemplos prácticos\nEjecute los siguientes ejemplos y asegúrese de que las variables aparezcan en el “Environment”.\n\nvariable_nombre &lt;- 'primera asignacion'\n\nRecuerde siempre seguir las mejores prácticas de nombramiento para facilitar la lectura y el mantenimiento de su código."
   },
   {
     "objectID": "clases/clase_03_complemento_variables.html#reglas-para-la-creación-de-variables",
     "href": "clases/clase_03_complemento_variables.html#reglas-para-la-creación-de-variables",
     "title": "Clase 03: complemento- nombres variables",
     "section": "Reglas para la creación de variables",
-    "text": "Reglas para la creación de variables\nEstilo y convención\n\nMinúsculas: Las variables deben escribirse en minúsculas como una recomendación de estilo. Aunque no es una limitación del lenguaje, es una buena práctica:\n\nprimeravariable &lt;- 'iniciamos un script'\n\nRayita abajo para juntar palabras: Puede usar el guion bajo _ para juntar dos o más palabras en el nombre de una variable:\n\n\nvariable_creada &lt;- 'este texto es el contenido de la variable'\n\nRestricciones\n\nNo espacios en los nombres: Las variables no pueden contener espacios en su nombre. El siguiente ejemplo no es válido y dará error:\n\n\n# variable con espacio &lt;- 'esta línea no se podrá ejecutar'\n\n\nNo comenzar con números: Las variables no pueden comenzar con un número. El siguiente ejemplo también genera un error:\n\n\n# 1variable &lt;- 'tampoco se ejecutará este código'\n\nAl ejecutar la línea anterior, se obtendrá un mensaje de error en la Consola.\n\nSolo letras o puntos al inicio: Los nombres de las variables solo pueden empezar con una letra o un punto. Si se utiliza un punto al inicio, no debe ser seguido de un número:\n\n\nvariable_tercera &lt;- 'seguimos avanzando'\n.variable_tercera &lt;- 'la variable_tercera es distinta a la .variable_tercera, son dos nombres distintos'\n\nEl siguiente ejemplo es incorrecto porque el punto no puede estar seguido de un número:\n\n# .5variable &lt;- 'INCORRECTO'\n\nCaracteres especiales no permitidos\nAdemás del punto . y la rayita abajo _, no se permite el uso de otros caracteres especiales en los nombres de las variables.\nAquí tienes un listado de los caracteres especiales que no puedes usar:\n\nlistado_caracteres_especiales &lt;- c(\"~\", \"`\", \"!\", \"@\", \"#\", \"$\", \"%\", \"^\", \"&\", \n                                   \"*\", \"(\", \")\", \"-\", \"_\", \"+\", \"=\", \"{\", \"}\", \n                                   \"[\", \"]\", \"|\", \"\\\\\", \"/\", \":\", \";\", \"\\\"\", \n                                   \"'\", \"&lt;\", \"&gt;\", \".\", \"?\")\nlistado_caracteres_especiales\n\n [1] \"~\"  \"`\"  \"!\"  \"@\"  \"#\"  \"$\"  \"%\"  \"^\"  \"&\"  \"*\"  \"(\"  \")\"  \"-\"  \"_\"  \"+\"  \"=\"  \"{\" \n[18] \"}\"  \"[\"  \"]\"  \"|\"  \"\\\\\" \"/\"  \":\"  \";\"  \"\\\"\" \"'\"  \"&lt;\"  \"&gt;\"  \".\"  \"?\" \n\n\nEl siguiente ejemplo es incorrecto debido al uso de un carácter especial en el nombre de la variable:\n\n# variable.inasig@nabl_e &lt;- 'INCORRECTO'\n\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Reglas para la creación de variables\n\nEstilo y convención\nMinúsculas: Las variables deben escribirse en minúsculas como una recomendación de estilo. Aunque no es una limitación del lenguaje, es una buena práctica:\n\nprimera_variable &lt;- 'iniciamos un script'"
   },
   {
     "objectID": "curso-infogeneral.html",
@@ -1091,5 +1091,439 @@
     "title": "UCV EconomíaR4DS",
     "section": "",
     "text": "library(rvest)"
+  },
+  {
+    "objectID": "clases/clase_03_complemento_variables.html",
+    "href": "clases/clase_03_complemento_variables.html",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "",
+    "text": "En esta clase veremos algunas recomendaciones sobre cómo deben nombrarse las variables en el lenguaje de programación R. Recuerde que el nombre de las variables es fundamental para mantener un código claro y comprensible.\n# Algún día haremos justicia los que tenemos \n# la ñ en nuestro nombre\napellido_avendaño &lt;- 'se ejecutará pero no es recomendable'"
+  },
+  {
+    "objectID": "clases/clase_03_complemento_variables.html#nombres",
+    "href": "clases/clase_03_complemento_variables.html#nombres",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Nombres",
+    "text": "Nombres\nLos nombres de las variables no deben contener acentos, diéresis ni caracteres especiales. Aunque es posible utilizar algunos caracteres como la “ñ”, no es recomendable."
+  },
+  {
+    "objectID": "clases/clase_03_complemento_variables.html#buenas-prácticas",
+    "href": "clases/clase_03_complemento_variables.html#buenas-prácticas",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Buenas Prácticas",
+    "text": "Buenas Prácticas\nPara nombrar variables Es importante que el nombre de la variable describa el valor que está guardando. Por ejemplo, no use nombres ambiguos o no descriptivos como:\n\npupitre &lt;- 10000\n\nEn lugar de eso, use nombres descriptivos como:\n\nmeta_ventas_enero &lt;- 10000"
+  },
+  {
+    "objectID": "clases/clase_03_complemento_variables.html#nombres-descriptivos",
+    "href": "clases/clase_03_complemento_variables.html#nombres-descriptivos",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Nombres Descriptivos",
+    "text": "Nombres Descriptivos\nEsto le ayudará a entender el propósito de la variable más adelante en el código, especialmente cuando tiene múltiples variables en su programa."
+  },
+  {
+    "objectID": "clases/clase_03_complemento_variables.html#declaración-de-variables-cont.",
+    "href": "clases/clase_03_complemento_variables.html#declaración-de-variables-cont.",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Declaración de variables (cont.)",
+    "text": "Declaración de variables (cont.)\nTenga en cuenta que los textos deben ir entre comillas simples (') o dobles (\").\nSi el valor que desea asignar es numérico, no use comillas:\n\nvariable_numero &lt;- 1000"
+  },
+  {
+    "objectID": "clases/clase_03_complemento_variables.html#ejemplo",
+    "href": "clases/clase_03_complemento_variables.html#ejemplo",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Ejemplo",
+    "text": "Ejemplo\nCompare este ejemplo con una asignación incorrecta:\n\nvariable_numero_2 &lt;- '1000'\nvariable_numero + variable_numero  # Correcto\n\n[1] 2000\n\n# variable_numero + variable_numero_2  # Genera error"
+  },
+  {
+    "objectID": "clases/clase_03_complemento_variables.html#reglas-cont.",
+    "href": "clases/clase_03_complemento_variables.html#reglas-cont.",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Reglas (cont.)",
+    "text": "Reglas (cont.)\n\nRayita abajo para juntar palabras: Puede usar el guion bajo _ para juntar dos o más palabras en el nombre de una variable:\n\n\nvariable_creada &lt;- 'este texto es el contenido de la variable'"
+  },
+  {
+    "objectID": "clases/clase_03_complemento_variables.html#restricciones",
+    "href": "clases/clase_03_complemento_variables.html#restricciones",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Restricciones",
+    "text": "Restricciones\n\nNo se pueden colocar espacios en los nombres: El siguiente ejemplo no es válido y dará error:\n\n\n# variable con espacio &lt;- 'esta línea no se podrá ejecutar'\n\n\nNo comenzar con números: Las variables no pueden comenzar con un número. El siguiente ejemplo también genera un error:\n\n\n# 1variable &lt;- 'tampoco se ejecutará este código'\n\nAl ejecutar la línea anterior, se obtendrá un mensaje de error en la Consola."
+  },
+  {
+    "objectID": "clases/clase_03_complemento_variables.html#restricciones-cont.",
+    "href": "clases/clase_03_complemento_variables.html#restricciones-cont.",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Restricciones (cont.)",
+    "text": "Restricciones (cont.)\n\nSolo letras o puntos al inicio: Los nombres de las variables solo pueden empezar con una letra o un punto. Si se utiliza un punto al inicio, no debe ser seguido de un número:\n\n\nvariable_tercera &lt;- 'seguimos avanzando'\n.variable_tercera &lt;- 'la variable_tercera es distinta a la .variable_tercera, son dos nombres distintos'"
+  },
+  {
+    "objectID": "clases/clase_03_complemento_variables.html#restricciones-cont.-1",
+    "href": "clases/clase_03_complemento_variables.html#restricciones-cont.-1",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Restricciones (cont.)",
+    "text": "Restricciones (cont.)\nEl siguiente ejemplo es incorrecto porque el punto no puede estar seguido de un número:\n\n# .5variable &lt;- 'INCORRECTO'"
+  },
+  {
+    "objectID": "clases/clase_03_complemento_variables.html#caracteres-especiales-no-permitidos",
+    "href": "clases/clase_03_complemento_variables.html#caracteres-especiales-no-permitidos",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Caracteres Especiales no Permitidos",
+    "text": "Caracteres Especiales no Permitidos\nAdemás del punto . y la rayita abajo _, no se permite el uso de otros caracteres especiales en los nombres de las variables.\nAquí tienes un listado de los caracteres especiales que no puedes usar:\n\nlistado_caracteres_especiales &lt;- c(\"~\", \"`\", \"!\", \"@\", \"#\", \"$\", \"%\", \"^\", \"&\", \n                                   \"*\", \"(\", \")\", \"-\", \"_\", \"+\", \"=\", \"{\", \"}\", \n                                   \"[\", \"]\", \"|\", \"\\\\\", \"/\", \":\", \";\", \"\\\"\", \n                                   \"'\", \"&lt;\", \"&gt;\", \".\", \"?\")"
+  },
+  {
+    "objectID": "clases/clase_03_complemento_variables.html#ejemplo-caracteres-especiales-no-permitidos",
+    "href": "clases/clase_03_complemento_variables.html#ejemplo-caracteres-especiales-no-permitidos",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Ejemplo Caracteres Especiales no Permitidos",
+    "text": "Ejemplo Caracteres Especiales no Permitidos\nEl siguiente ejemplo es incorrecto debido al uso de un carácter especial en el nombre de la variable:\n\n# variable.inasig@nabl_e &lt;- 'INCORRECTO'\n\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_05.html",
+    "href": "clases/clase_05.html",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "Sesgo de supervivencia"
+  },
+  {
+    "objectID": "clases/clase_05.html#científicos-de-datos",
+    "href": "clases/clase_05.html#científicos-de-datos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Científicos de Datos 👨‍🔬 👩‍🔬",
+    "text": "Científicos de Datos 👨‍🔬 👩‍🔬\n\n\n\nSesgo del Superviviente"
+  },
+  {
+    "objectID": "clases/clase_05.html#puntos-varios",
+    "href": "clases/clase_05.html#puntos-varios",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Puntos Varios:",
+    "text": "Puntos Varios:\n\nTareas: pendiente y actual\nElección día clase virtual 1 (configuración GitHib)\nClase miércoles 6/nov en Facultad de Ciencias?\nMateriales: videos apoyo, scripts, qmd´s, videos recomendados, Discord, vignettes\nPromesa inicial\nInstalación paquetes\n\n\n\nClase virtual: 2da pantalla, uso discord\nClase miércoles: abordar primera tarea y proyecto\nPromesa inicial: Fundamentos de CD Realizar un proyecto de inicio a fin Herramientas para la solución de problemas (Venezuela) Defenderse solos paso a paso, soporte, incremental, primero ubicarnos. Cuento hoja primera clase\nMateriales: preguntas en discord, videos proximamente, orden de lectura, caso clase 3, canal Discord errores,"
+  },
+  {
+    "objectID": "clases/clase_05.html#archivos",
+    "href": "clases/clase_05.html#archivos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Archivos:",
+    "text": "Archivos:\n\n.R: script de R\n.qmd perteneciente al sistema de publicación quarto\n.rmd : información comprimida de datos de ambiente de trabajo"
+  },
+  {
+    "objectID": "clases/clase_05.html#ambiente-de-trabajo",
+    "href": "clases/clase_05.html#ambiente-de-trabajo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ambiente de Trabajo",
+    "text": "Ambiente de Trabajo\nEnvironment\n\n\narchivo Vs environment"
+  },
+  {
+    "objectID": "clases/clase_05.html#section",
+    "href": "clases/clase_05.html#section",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "Nombres Variables\nMaterial complementario disponible en variables"
+  },
+  {
+    "objectID": "clases/clase_05.html#vectores",
+    "href": "clases/clase_05.html#vectores",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Vectores",
+    "text": "Vectores\n\nSe declaran con la función c () que permite combinar elementos\nElementos de la misma mode\n\nmode (3)\nmode ('palabras declaradas')\n\nElementos ordenados\n\nVector c (1,3,4,7)\n!= a vector c (1,4,3,7)"
+  },
+  {
+    "objectID": "clases/clase_05.html#tipos-de-vectores",
+    "href": "clases/clase_05.html#tipos-de-vectores",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tipos de Vectores",
+    "text": "Tipos de Vectores"
+  },
+  {
+    "objectID": "clases/clase_05.html#operadores-lógicos",
+    "href": "clases/clase_05.html#operadores-lógicos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Operadores Lógicos",
+    "text": "Operadores Lógicos\n\n\\(&gt;\\) (mayor a)\n\\(&gt;=\\) (mayor o igual a)\n\\(&lt;\\) (menor a)\n\\(&lt;=\\) (menor o igual a)\n\\(==\\) (igual a)\n\\(!=\\) (distinto a)"
+  },
+  {
+    "objectID": "clases/clase_05.html#estructuras-de-datos",
+    "href": "clases/clase_05.html#estructuras-de-datos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Estructuras de Datos",
+    "text": "Estructuras de Datos\n\n\n\n\n\n\n\n\nObjeto\nR\nEjemplo\n\n\n\n\n\nvector atómico\nc(1)\n\n\n ️\nvector\nc(‘a’, ‘x’, ‘d’)\n\n\n\nmátriz\nmatrix(1:8,2,4)"
+  },
+  {
+    "objectID": "clases/clase_05.html#estructuras-de-datos-2",
+    "href": "clases/clase_05.html#estructuras-de-datos-2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Estructuras de Datos 2",
+    "text": "Estructuras de Datos 2\n\n\n\n\n\n\n\n\nObjeto\nR\nEjemplo\n\n\n\n\n\nlista\nlista_test &lt;- list(primer=c(‘a’, ‘x’), segun=c(1))\n\n\n\ndata frame\nmtcars\n\n\n\ntibble\nas_tibble(mtcars)\n\n\n\nTipos de de Objetos en R\nmode\nclass"
+  },
+  {
+    "objectID": "clases/clase_05.html#caracteres-especiales",
+    "href": "clases/clase_05.html#caracteres-especiales",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caracteres Especiales",
+    "text": "Caracteres Especiales"
+  },
+  {
+    "objectID": "clases/clase_05.html#section-2",
+    "href": "clases/clase_05.html#section-2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "Tipos de de Objetos en R\nmode\nclass"
+  },
+  {
+    "objectID": "clases/clase_05.html#variables-objetos",
+    "href": "clases/clase_05.html#variables-objetos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Variables / Objetos",
+    "text": "Variables / Objetos\n\nDefinición\nCreación\nEnvironment\n\n\n\nlimpiar ambiente de trabajo"
+  },
+  {
+    "objectID": "clases/clase_05.html#recursos",
+    "href": "clases/clase_05.html#recursos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Recursos:",
+    "text": "Recursos:\n\nVignettes\nCheat Sheets"
+  },
+  {
+    "objectID": "clases/clase_05.html#ejemplo-de-obtención-y-procesamiento",
+    "href": "clases/clase_05.html#ejemplo-de-obtención-y-procesamiento",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplo de obtención y procesamiento",
+    "text": "Ejemplo de obtención y procesamiento\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_03.html",
+    "href": "clases/clase_03.html",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "Con R base nos referimos a los comandos básicos que vienen incorporados en el R, sin necesidad de cargar librerías."
+  },
+  {
+    "objectID": "clases/clase_03.html#objetos--variables",
+    "href": "clases/clase_03.html#objetos--variables",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Objetos- Variables",
+    "text": "Objetos- Variables\nMaterial complementario disponible en"
+  },
+  {
+    "objectID": "clases/clase_04.html",
+    "href": "clases/clase_04.html",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "Interactuar con la cónsola indicando comandos-funciones y definir variables:\n\nSumas\nSecuencias\nNúmeros aleatorios\nRaíces cuadradas\nVisualizar una serie de x valores aleatórios generados con distribución normal\n\nver R script en GitHub"
+  },
+  {
+    "objectID": "clases/clase_04.html#consola",
+    "href": "clases/clase_04.html#consola",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Consola",
+    "text": "Consola\nInteractuar con la cónsola indicando comandos-funciones y definir variables:\n\nSumas\nSecuencias\nNúmeros aleatorios\nRaíces cuadradas\nVisualizar una serie de x valores aleatórios generados con distribución normal\n\nver R script en GitHub"
+  },
+  {
+    "objectID": "clases/clase_04.html#trabajar-script-r-en-editor-de-código",
+    "href": "clases/clase_04.html#trabajar-script-r-en-editor-de-código",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Trabajar Script R en Editor de Código",
+    "text": "Trabajar Script R en Editor de Código\n\nTrabajar con conjunto de datos cars\n\nExplorarlo\nVisualizar los datos con funciones\n\nscatter.plot\nggplot2\nplotly\n\n\n\nver R script y qmd en GitHub"
+  },
+  {
+    "objectID": "clases/clase_04.html#reporte-interactivo",
+    "href": "clases/clase_04.html#reporte-interactivo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Reporte Interactivo",
+    "text": "Reporte Interactivo\nMediante las librerías ggplot2, plotly y DT se genera un gráfico y una tabla interactiva\nver qmd en GitHub"
+  },
+  {
+    "objectID": "clases/clase_04.html#tarea",
+    "href": "clases/clase_04.html#tarea",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tarea",
+    "text": "Tarea\nFecha cumplimiento: 1/10/2024\nenlace GitHub\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_05.html#remover-objetos",
+    "href": "clases/clase_05.html#remover-objetos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Remover Objetos",
+    "text": "Remover Objetos\n\nrm(nombre_objeto)\nrm(list=ls())"
+  },
+  {
+    "objectID": "clases/clase_05.html#recursos-ayuda-paquetes",
+    "href": "clases/clase_05.html#recursos-ayuda-paquetes",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Recursos Ayuda Paquetes:",
+    "text": "Recursos Ayuda Paquetes:\n\nVignettes:\n\n?? nombre paquete\nCran\n\nCheat Sheets:\n\nDiscord, canal “Recursos disponibles”\nCheat Sheet RStudio"
+  },
+  {
+    "objectID": "clases/clase_05.html#correlaciones-espureas",
+    "href": "clases/clase_05.html#correlaciones-espureas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Correlaciones Espureas",
+    "text": "Correlaciones Espureas\n\n\n\nCorrelaciones Espúreas"
+  },
+  {
+    "objectID": "clases/clase_05.html#correlaciones-espúreas",
+    "href": "clases/clase_05.html#correlaciones-espúreas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Correlaciones Espúreas",
+    "text": "Correlaciones Espúreas\n\n\n\nCorrelaciones Espúreas"
+  },
+  {
+    "objectID": "clases/clase_05.html#nombres-variables",
+    "href": "clases/clase_05.html#nombres-variables",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Nombres Variables",
+    "text": "Nombres Variables\nMaterial complementario disponible en variables"
+  },
+  {
+    "objectID": "clases/clase_05_complemento_variables.html#nombres",
+    "href": "clases/clase_05_complemento_variables.html#nombres",
+    "title": "Clase 05: Complemento- Nombres Variables",
+    "section": "Nombres",
+    "text": "Nombres\nLos nombres de las variables no deben contener acentos, diéresis ni caracteres especiales. Aunque es posible utilizar algunos caracteres como la “ñ”, no es recomendable."
+  },
+  {
+    "objectID": "clases/clase_05_complemento_variables.html#buenas-prácticas",
+    "href": "clases/clase_05_complemento_variables.html#buenas-prácticas",
+    "title": "Clase 05: Complemento- Nombres Variables",
+    "section": "Buenas Prácticas",
+    "text": "Buenas Prácticas\nPara nombrar variables Es importante que el nombre de la variable describa el valor que está guardando. Por ejemplo, no use nombres ambiguos o no descriptivos como:\n\npupitre &lt;- 10000\n\nEn lugar de eso, use nombres descriptivos como:\n\nmeta_ventas_enero &lt;- 10000"
+  },
+  {
+    "objectID": "clases/clase_05_complemento_variables.html#nombres-descriptivos",
+    "href": "clases/clase_05_complemento_variables.html#nombres-descriptivos",
+    "title": "Clase 05: Complemento- Nombres Variables",
+    "section": "Nombres Descriptivos",
+    "text": "Nombres Descriptivos\nEsto le ayudará a entender el propósito de la variable más adelante en el código, especialmente cuando tiene múltiples variables en su programa."
+  },
+  {
+    "objectID": "clases/clase_05_complemento_variables.html#declaración-de-variables",
+    "href": "clases/clase_05_complemento_variables.html#declaración-de-variables",
+    "title": "Clase 05: Complemento- Nombres Variables",
+    "section": "Declaración de variables",
+    "text": "Declaración de variables\nDespués de elegir el nombre de la variable, es necesario usar el operador de asignación. En R, esto se hace con &lt;-. También puede usar atajos de teclado como Alt + - en Windows para escribir el operador más rápido.\n\nvariable_texto &lt;- \"contiene un texto\""
+  },
+  {
+    "objectID": "clases/clase_05_complemento_variables.html#declaración-de-variables-cont.-1",
+    "href": "clases/clase_05_complemento_variables.html#declaración-de-variables-cont.-1",
+    "title": "Clase 05: Complemento- Nombres Variables",
+    "section": "Declaración de variables (cont. 1)",
+    "text": "Declaración de variables (cont. 1)\nTenga en cuenta que los textos deben ir entre comillas simples (') o dobles (\").\n\nvariable_texto &lt;- \"contiene un texto\" # ✅\nvariable_texto &lt;- 'contiene un texto' # ✅\n\nSi el valor que desea asignar es numérico, no use comillas:\n\nvariable_numero &lt;- 1000"
+  },
+  {
+    "objectID": "clases/clase_05_complemento_variables.html#declaración-de-variables-cont.-2",
+    "href": "clases/clase_05_complemento_variables.html#declaración-de-variables-cont.-2",
+    "title": "Clase 05: Complemento- Nombres Variables",
+    "section": "Declaración de variables (cont. 2)",
+    "text": "Declaración de variables (cont. 2)\nExisten vectores conformados por números enteros (ocupan menos memoria en espacio de trabajo) y se declaran\n\nvector_de_enteros &lt;- c(3L, 5L, 7L)\n\nCada número es seguido por la letra L"
+  },
+  {
+    "objectID": "clases/clase_05_complemento_variables.html#declaración-de-variables-cont.-3",
+    "href": "clases/clase_05_complemento_variables.html#declaración-de-variables-cont.-3",
+    "title": "Clase 05: Complemento- Nombres Variables",
+    "section": "Declaración de variables (cont. 3)",
+    "text": "Declaración de variables (cont. 3)\nSi se va a declarar un vector de datos lógicos tampoco se usan comillas\n\nvector_logico_ejemplo &lt;- c(TRUE, TRUE, FALSE)"
+  },
+  {
+    "objectID": "clases/clase_05_complemento_variables.html#variables-creadas--environment",
+    "href": "clases/clase_05_complemento_variables.html#variables-creadas--environment",
+    "title": "Clase 05: Complemento- Nombres Variables",
+    "section": "Variables Creadas- Environment",
+    "text": "Variables Creadas- Environment\nAl declarar una variable y ejecutar la línea, R creará una variable en el entorno. Puede ver el nuevo objeto creado en la ventana de “Environment”.\n\nmeta_ventas_enero &lt;- 1000"
+  },
+  {
+    "objectID": "clases/clase_05_complemento_variables.html#ejemplos-prácticos",
+    "href": "clases/clase_05_complemento_variables.html#ejemplos-prácticos",
+    "title": "Clase 05: Complemento- Nombres Variables",
+    "section": "Ejemplos prácticos",
+    "text": "Ejemplos prácticos\nEjecute los siguientes ejemplos y asegúrese de que las variables aparezcan en el “Environment”.\n\nvariable_nombre &lt;- 'primera asignacion'\n\nRecuerde siempre seguir las mejores prácticas de nombramiento para facilitar la lectura y el mantenimiento de su código."
+  },
+  {
+    "objectID": "clases/clase_05_complemento_variables.html#reglas-para-la-creación-de-variables",
+    "href": "clases/clase_05_complemento_variables.html#reglas-para-la-creación-de-variables",
+    "title": "Clase 05: Complemento- Nombres Variables",
+    "section": "Reglas para la creación de variables",
+    "text": "Reglas para la creación de variables\n\nEstilo y convención\nMinúsculas: Las variables deben escribirse en minúsculas como una recomendación de estilo. Aunque no es una limitación del lenguaje, es una buena práctica:\n\nprimera_variable &lt;- 'iniciamos un script'"
+  },
+  {
+    "objectID": "clases/clase_05_complemento_variables.html#reglas-cont.",
+    "href": "clases/clase_05_complemento_variables.html#reglas-cont.",
+    "title": "Clase 05: Complemento- Nombres Variables",
+    "section": "Reglas (cont.)",
+    "text": "Reglas (cont.)\n\nRayita abajo para juntar palabras: Puede usar el guion bajo _ para juntar dos o más palabras en el nombre de una variable:\n\n\nvariable_creada &lt;- 'este texto es el contenido de la variable'"
+  },
+  {
+    "objectID": "clases/clase_05_complemento_variables.html#restricciones",
+    "href": "clases/clase_05_complemento_variables.html#restricciones",
+    "title": "Clase 05: Complemento- Nombres Variables",
+    "section": "Restricciones",
+    "text": "Restricciones\n\nNo se pueden colocar espacios en los nombres: El siguiente ejemplo no es válido y dará error:\n\n\n# variable con espacio &lt;- 'esta línea no se podrá ejecutar'\n\n\nNo comenzar con números: Las variables no pueden comenzar con un número. El siguiente ejemplo también genera un error:\n\n\n# 1variable &lt;- 'tampoco se ejecutará este código'\n\nAl ejecutar la línea anterior, se obtendrá un mensaje de error en la Consola."
+  },
+  {
+    "objectID": "clases/clase_05_complemento_variables.html#restricciones-cont.",
+    "href": "clases/clase_05_complemento_variables.html#restricciones-cont.",
+    "title": "Clase 05: Complemento- Nombres Variables",
+    "section": "Restricciones (cont.)",
+    "text": "Restricciones (cont.)\n\nSolo letras o puntos al inicio: Los nombres de las variables solo pueden empezar con una letra o un punto. Si se utiliza un punto al inicio, no debe ser seguido de un número:\n\n\nvariable_tercera &lt;- 'seguimos avanzando'\n.variable_tercera &lt;- 'la variable_tercera es distinta a la .variable_tercera, son dos nombres distintos'"
+  },
+  {
+    "objectID": "clases/clase_05_complemento_variables.html#restricciones-cont.-1",
+    "href": "clases/clase_05_complemento_variables.html#restricciones-cont.-1",
+    "title": "Clase 05: Complemento- Nombres Variables",
+    "section": "Restricciones (cont.)",
+    "text": "Restricciones (cont.)\nEl siguiente ejemplo es incorrecto porque el punto no puede estar seguido de un número:\n\n# .5variable &lt;- 'INCORRECTO'"
+  },
+  {
+    "objectID": "clases/clase_05_complemento_variables.html#caracteres-especiales-no-permitidos",
+    "href": "clases/clase_05_complemento_variables.html#caracteres-especiales-no-permitidos",
+    "title": "Clase 05: Complemento- Nombres Variables",
+    "section": "Caracteres Especiales no Permitidos",
+    "text": "Caracteres Especiales no Permitidos\nAdemás del punto . y la rayita abajo _, no se permite el uso de otros caracteres especiales en los nombres de las variables.\nAquí tienes un listado de los caracteres especiales que no puedes usar:\n\nlistado_caracteres_especiales &lt;- c(\"~\", \"`\", \"!\", \"@\", \"#\", \"$\", \"%\", \"^\", \"&\", \n                                   \"*\", \"(\", \")\", \"-\", \"_\", \"+\", \"=\", \"{\", \"}\", \n                                   \"[\", \"]\", \"|\", \"\\\\\", \"/\", \":\", \";\", \"\\\"\", \n                                   \"'\", \"&lt;\", \"&gt;\", \".\", \"?\")"
+  },
+  {
+    "objectID": "clases/clase_05_complemento_variables.html#ejemplo-de-caracteres-especiales-no-permitidos",
+    "href": "clases/clase_05_complemento_variables.html#ejemplo-de-caracteres-especiales-no-permitidos",
+    "title": "Clase 05: Complemento- Nombres Variables",
+    "section": "Ejemplo de Caracteres Especiales no Permitidos",
+    "text": "Ejemplo de Caracteres Especiales no Permitidos\nEl siguiente ejemplo es incorrecto debido al uso de un carácter especial en el nombre de la variable:\n\n# variable.inasig@nabl_e &lt;- 'INCORRECTO'"
+  },
+  {
+    "objectID": "clases/clase_05_complemento_variables.html",
+    "href": "clases/clase_05_complemento_variables.html",
+    "title": "Clase 05: Complemento- Nombres Variables",
+    "section": "",
+    "text": "En esta clase veremos algunas recomendaciones sobre cómo deben nombrarse las variables en el lenguaje de programación R. Recuerde que el nombre de las variables es fundamental para mantener un código claro y comprensible.\n# Algún día haremos justicia los que tenemos \n# la ñ en nuestro nombre\napellido_avendaño &lt;- 'se ejecutará pero no es recomendable'"
+  },
+  {
+    "objectID": "clases/clase_03_complemento_variables.html#declaración-de-variables-cont.-1",
+    "href": "clases/clase_03_complemento_variables.html#declaración-de-variables-cont.-1",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Declaración de variables (cont. 1)",
+    "text": "Declaración de variables (cont. 1)\nTenga en cuenta que los textos deben ir entre comillas simples (') o dobles (\").\n\nvariable_texto &lt;- \"contiene un texto\" # ✅\nvariable_texto &lt;- 'contiene un texto' # ✅\n\nSi el valor que desea asignar es numérico, no use comillas:\n\nvariable_numero &lt;- 1000"
+  },
+  {
+    "objectID": "clases/clase_03_complemento_variables.html#declaración-de-variables-cont.-2",
+    "href": "clases/clase_03_complemento_variables.html#declaración-de-variables-cont.-2",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Declaración de variables (cont. 2)",
+    "text": "Declaración de variables (cont. 2)\nExisten vectores conformados por números enteros (ocupan menos memoria en espacio de trabajo) y se declaran\n\nvector_de_enteros &lt;- c(3L, 5L, 7L)\n\nCada número es seguido por la letra L"
+  },
+  {
+    "objectID": "clases/clase_03_complemento_variables.html#declaración-de-variables-cont.-3",
+    "href": "clases/clase_03_complemento_variables.html#declaración-de-variables-cont.-3",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Declaración de variables (cont. 3)",
+    "text": "Declaración de variables (cont. 3)\nSi se va a declarar un vector de datos lógicos tampoco se usan comillas\n\nvector_logico_ejemplo &lt;- c(TRUE, TRUE, FALSE)"
+  },
+  {
+    "objectID": "clases/clase_03_complemento_variables.html#variables-creadas--environment",
+    "href": "clases/clase_03_complemento_variables.html#variables-creadas--environment",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Variables Creadas- Environment",
+    "text": "Variables Creadas- Environment\nAl declarar una variable y ejecutar la línea, R creará una variable en el entorno. Puede ver el nuevo objeto creado en la ventana de “Environment”.\n\nmeta_ventas_enero &lt;- 1000"
+  },
+  {
+    "objectID": "clases/clase_03_complemento_variables.html#ejemplo-de-caracteres-especiales-no-permitidos",
+    "href": "clases/clase_03_complemento_variables.html#ejemplo-de-caracteres-especiales-no-permitidos",
+    "title": "Clase 03: complemento- nombres variables",
+    "section": "Ejemplo de Caracteres Especiales no Permitidos",
+    "text": "Ejemplo de Caracteres Especiales no Permitidos\nEl siguiente ejemplo es incorrecto debido al uso de un carácter especial en el nombre de la variable:\n\n# variable.inasig@nabl_e &lt;- 'INCORRECTO'"
   }
 ]

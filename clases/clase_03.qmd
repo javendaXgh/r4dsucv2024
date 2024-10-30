@@ -12,51 +12,6 @@ matriz <- matrix(1:8,2,4)
 
 ## R Base
 
-## Uso de la `Console`
-
-## Objetos
-
-## Variables
-
-## Funciones Precargadas
-
-## Vectores
-
-## Tipos de Vectores![](images/%20clase_3/vectores.png){width="696"}
+Con *R base* nos referimos a los comandos básicos que vienen incorporados en el R, sin necesidad de cargar librerías.
 
 ## 
-
-## Operadores Lógicos
-
--   $>$ (mayor a)
--   $>=$ (mayor o igual a)
--   $<$ (menor a)
--   $<=$ (menor o igual a)
--   $==$ (igual a)
--   $!=$ (distinto a)
-
-## Estructuras de Datos 1
-
-| Objeto | R | Ejemplo |
-|:--:|:--:|:--:|
-| ![](images/%20clase_3/atomo.png){width="80"} | vector atómico | c(1) |
-| ![](images/%20clase_3/molecula.png){width="120" height="80"} ️ | vector | c('a', 'x', 'd') |
-| ![](images/%20clase_3/molecula2.png){width="110"} | mátriz | matrix(1:8,2,4) |
-
-## Estructuras de Datos 2
-
-| Objeto | R | Ejemplo |
-|:--:|:--:|:--:|
-| ![](images/%20clase_3/polimero.png){width="140"} | lista | lista_test \<- list(primer=c('a', 'x'), segun=c(1)) |
-| ![](images/%20clase_3/virus.png){width="94"} | data frame | mtcars |
-| ![](images/%20clase_3/proteina.png){width="76"} | tibble | as_tibble(mtcars) |
-
-## Caracteres Especiales
-
-## Nombres Variables
-
-## Ambientes de Trabajo
-
-## Tipos de de Archivos en R
-
-## Remover Objetos

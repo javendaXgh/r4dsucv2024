@@ -1,4 +1,50 @@
 ---
-title: "Clase 4"
+title: "Ciencia de Datos para Economistas"
+subtitle: "Clase 4- Consola"
+date: "Octubre 28, 2024"
 format: revealjs
 ---
+
+## Consola
+
+Interactuar con la cónsola indicando comandos-funciones y definir variables:
+
+-   Sumas
+
+-   Secuencias
+
+-   Números aleatorios
+
+-   Raíces cuadradas
+
+-   Visualizar una serie de ***x*** valores aleatórios generados con distribución normal
+
+ver R script en [GitHub](https://github.com/UCVeconomia2024-2/scripts/blob/main/soporte_clases/clase_04/clase_04.R)
+
+## Trabajar Script R en Editor de Código
+
+-   Trabajar con conjunto de datos `cars`
+
+    -   Explorarlo
+
+    -   Visualizar los datos con funciones
+
+        -   scatter.plot
+
+        -   ggplot2
+
+        -   plotly
+
+ver [R script](https://github.com/UCVeconomia2024-2/scripts/blob/main/soporte_clases/clase_04/clase_04.R) y [qmd](https://github.com/UCVeconomia2024-2/scripts/blob/main/soporte_clases/clase_04/clase_04_2da_parte.qmd) en GitHub
+
+## Reporte Interactivo
+
+Mediante las librerías ggplot2, plotly y DT se genera un gráfico y una tabla interactiva
+
+ver qmd en [GitHub](https://github.com/UCVeconomia2024-2/scripts/blob/main/soporte_clases/clase_04/clase_04_reporte_interactivo.qmd)
+
+## Tarea
+
+Fecha cumplimiento: 1/10/2024
+
+[enlace GitHub](https://github.com/UCVeconomia2024-2/scripts/blob/main/soporte_clases/clase_04/clase_04_tarea.R)

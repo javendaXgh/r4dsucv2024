@@ -1,0 +1,139 @@
+---
+title: "Ciencia de Datos para Economistas"
+subtitle: "Clase 5- Estructuras de Datos"
+date: "Octubre 30, 2024"
+format: revealjs
+---
+
+## Científicos de Datos 👨‍🔬 👩‍🔬
+
+[![Sesgo del Superviviente](images/clase_5/Survivorship-bias.png){width="600"}](https://es.wikipedia.org/wiki/Sesgo_del_superviviente)
+
+## Correlaciones Espúreas
+
+[![Correlaciones Espúreas](images/clase_5/correlaciones.png)](https://www.tylervigen.com/spurious/correlation/24508_popularity-of-the-first-name-daniella_correlates-with_electricity-generation-in-venezuela)
+
+## Puntos Varios:
+
+-   Tareas: pendiente y actual
+
+-   Elección día clase virtual 1 (configuración GitHib)
+
+-   Clase miércoles 6/nov en Facultad de Ciencias?
+
+-   Materiales: videos apoyo, scripts, qmd´s, videos recomendados, Discord, vignettes
+
+-   Promesa inicial
+
+-   Instalación paquetes
+
+::: notes
+-   Clase virtual: 2da pantalla, uso discord
+-   Clase miércoles: abordar primera tarea y proyecto
+-   Promesa inicial: Fundamentos de CD Realizar un proyecto de inicio a fin Herramientas para la solución de problemas (Venezuela) Defenderse solos paso a paso, soporte, incremental, primero ubicarnos. Cuento hoja primera clase
+-   Materiales: preguntas en discord, videos proximamente, orden de lectura, caso clase 3, canal Discord errores,
+:::
+
+```         
+
+```
+
+## Archivos:
+
+-   .R: script de R
+
+-   .qmd perteneciente al sistema de publicación quarto
+
+-   .rmd : información comprimida de datos de ambiente de trabajo
+
+## Ambiente de Trabajo
+
+Environment
+
+![](images/clase_5/environment.png)
+
+::: notes
+archivo Vs environment
+:::
+
+## Nombres Variables
+
+Material complementario disponible en [variables](https://ucveconomiar4ds.netlify.app/clases/clase_05_complemento_variables)
+
+## Vectores
+
+-   Se declaran con la función `c ()` que permite combinar elementos
+
+-   Elementos de la misma `mode`
+
+    -   `mode (3)`
+
+    -   `mode ('palabras declaradas')`
+
+-   Elementos ordenados
+
+    -   Vector `c (1,3,4,7)`
+
+        != a vector `c (1,4,3,7)`
+
+## Tipos de Vectores![](images/%20clase_3/vectores.png){width="696"}
+
+## 
+
+## Estructuras de Datos 
+
+| Objeto | R | Ejemplo |
+|:----------------------:|:----------------------:|:----------------------:|
+| ![](images/%20clase_3/atomo.png){width="80"} | vector atómico | c(1) |
+| ![](images/%20clase_3/molecula.png){width="120" height="80"} ️ | vector | c('a', 'x', 'd') |
+| ![](images/%20clase_3/molecula2.png){width="110"} | mátriz | matrix(1:8,2,4) |
+
+## Estructuras de Datos 2
+
+| Objeto | R | Ejemplo |
+|:----------------------:|:----------------------:|:----------------------:|
+| ![](images/%20clase_3/polimero.png){width="140"} | lista | lista_test \<- list(primer=c('a', 'x'), segun=c(1)) |
+| ![](images/%20clase_3/virus.png){width="94"} | data frame | mtcars |
+| ![](images/%20clase_3/proteina.png){width="76"} | tibble | as_tibble(mtcars) |
+
+: 
+
+Tipos de de Objetos en R
+
+`mode`
+
+`class`
+
+## Variables / Objetos
+
+-   Definición
+
+-   Creación
+
+-   Environment
+
+::: notes
+-   limpiar ambiente de trabajo
+:::
+
+## Remover Objetos
+
+-   `rm(nombre_objeto)`
+
+-   `rm(list=ls())`
+
+## Recursos Ayuda Paquetes:
+
+-   Vignettes:
+
+    -   ?? nombre paquete
+
+    -   Cran
+
+-   Cheat Sheets:
+
+    -   Discord, canal "Recursos disponibles"
+
+        [Cheat Sheet RStudio](/Users/josemiguelavendanoinfante/R/UCV_ECONOMIA_R4DS/r4dsucv2024/clases/images/rstudio-ide.pdf)
+
+## Ejemplo de obtención y procesamiento
