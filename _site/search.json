@@ -468,7 +468,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\n\n\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\n\n\n🖥️ láminas clase 03  💻/scripts clase 3\n\n\n3\nlun, 28 oct.\n\n\n💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\n\n\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻qmd clase 05: Parte Variables 💻 clase 5: tarea 💻 clase 5: complemento\n\n\n3\nlun, 4 nov.\n\n\n\n\n\n\n\n\nmié, 6 nov.\n\n\n\n\n\n\n4\nlun, 11 nov.\n\n\n\n\n\n\n\n\nmié, 13 nov.\n\n\n\n\n\n\n5\nlun, 18 nov.\n\n\n\n\n\n\n\n\nmié, 20 nov.\n\n\n\n\n\n\n6\nlun, 25 nov.\n\n\n\n\n\n\n\n\nmié, 27 nov.\n\n\n\n\n\n\n7\nlun, 2 dic.\n\n\n\n\n\n\n\n\nmié, 4 dic.\n\n\n\n\n\n\n8\nlun, 9 dic.\n\n\n\n\n\n\n\n\nmié, 11 dic.\n\n\n\n\n\n\n9\nlun, 16 dic.\n\n\n\n\n\n\n\n\nmié, 18 dic.\n\n\n\n\n\n\n10\nlun, 13 ene.\n\n\n\n\n\n\n\n\nmié, 15 ene.\n\n\n\n\n\n\n11\nlun, 20 ene.\n\n\n\n\n\n\n\n\nmié, 22 ene.\n\n\n\n\n\n\n12\nlun, 27 ene.\n\n\n\n\n\n\n\n\nmié, 29 ene.\n\n\n\n\n\n\n13\nlun, 3 feb.\n\n\n\n\n\n\n\n\nmié, 5 feb.\n\n\n\n\n\n\n14\nlun, 10 feb.\n\n\n\n\n\n\n\n\nmié, 12 feb.\n\n\n\n\n\n\n15\nsáb, 15 feb.\n\n\n\n\n\n\n\n\nlun, 17 feb.",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\n\n\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\n\n\n🖥️ láminas clase 03  💻/scripts clase 3\n\n\n3\nlun, 28 oct.\n\n\n💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\n\n\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\n\n\n\n\n\n\n\n\nmié, 6 nov.\n\n\n\n\n\n\n4\nlun, 11 nov.\n\n\n\n\n\n\n\n\nmié, 13 nov.\n\n\n\n\n\n\n5\nlun, 18 nov.\n\n\n\n\n\n\n\n\nmié, 20 nov.\n\n\n\n\n\n\n6\nlun, 25 nov.\n\n\n\n\n\n\n\n\nmié, 27 nov.\n\n\n\n\n\n\n7\nlun, 2 dic.\n\n\n\n\n\n\n\n\nmié, 4 dic.\n\n\n\n\n\n\n8\nlun, 9 dic.\n\n\n\n\n\n\n\n\nmié, 11 dic.\n\n\n\n\n\n\n9\nlun, 16 dic.\n\n\n\n\n\n\n\n\nmié, 18 dic.\n\n\n\n\n\n\n10\nlun, 13 ene.\n\n\n\n\n\n\n\n\nmié, 15 ene.\n\n\n\n\n\n\n11\nlun, 20 ene.\n\n\n\n\n\n\n\n\nmié, 22 ene.\n\n\n\n\n\n\n12\nlun, 27 ene.\n\n\n\n\n\n\n\n\nmié, 29 ene.\n\n\n\n\n\n\n13\nlun, 3 feb.\n\n\n\n\n\n\n\n\nmié, 5 feb.\n\n\n\n\n\n\n14\nlun, 10 feb.\n\n\n\n\n\n\n\n\nmié, 12 feb.\n\n\n\n\n\n\n15\nsáb, 15 feb.\n\n\n\n\n\n\n\n\nlun, 17 feb.",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -1440,7 +1440,7 @@
     "href": "clases/clase_05_complemento_variables.html#reglas-para-la-creación-de-variables",
     "title": "Clase 05: Complemento- Nombres Variables",
     "section": "Reglas para la creación de variables",
-    "text": "Reglas para la creación de variables\n\nEstilo y convención\nMinúsculas: Las variables deben escribirse en minúsculas como una recomendación de estilo. Aunque no es una limitación del lenguaje, es una buena práctica:\n\nprimera_variable &lt;- 'iniciamos un script'"
+    "text": "Reglas para la creación de variables\nEstilo y convención\nMinúsculas: Las variables deben escribirse en minúsculas como una recomendación de estilo. Aunque no es una limitación del lenguaje, es una buena práctica:\n\nprimera_variable &lt;- 'iniciamos un script'"
   },
   {
     "objectID": "clases/clase_05_complemento_variables.html#reglas-cont.",
@@ -1482,7 +1482,7 @@
     "href": "clases/clase_05_complemento_variables.html#ejemplo-de-caracteres-especiales-no-permitidos",
     "title": "Clase 05: Complemento- Nombres Variables",
     "section": "Ejemplo de Caracteres Especiales no Permitidos",
-    "text": "Ejemplo de Caracteres Especiales no Permitidos\nEl siguiente ejemplo es incorrecto debido al uso de un carácter especial en el nombre de la variable:\n\n# variable.inasig@nabl_e &lt;- 'INCORRECTO'"
+    "text": "Ejemplo de Caracteres Especiales no Permitidos\nEl siguiente ejemplo es incorrecto debido al uso de un carácter especial en el nombre de la variable:\n\n# variable.inasig@nabl_e &lt;- 'INCORRECTO'\n\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "clases/clase_05_complemento_variables.html",
