@@ -1525,5 +1525,124 @@
     "title": "Clase 03: complemento- nombres variables",
     "section": "Ejemplo de Caracteres Especiales no Permitidos",
     "text": "Ejemplo de Caracteres Especiales no Permitidos\nEl siguiente ejemplo es incorrecto debido al uso de un carácter especial en el nombre de la variable:\n\n# variable.inasig@nabl_e &lt;- 'INCORRECTO'"
+  },
+  {
+    "objectID": "clases/Clase_virtual_1.html#orígenes-presentación",
+    "href": "clases/Clase_virtual_1.html#orígenes-presentación",
+    "title": "Clase Virtual 1: Configurando Git y GitHub",
+    "section": "Orígenes Presentación",
+    "text": "Orígenes Presentación\nEstas láminas están basadas en el contenido desarrollado por la Profª. Jennifer Bryan en el libro electrónico Happy Git and GitHub for the useR , así como en el taller .. desarrollado por la profª Mine Çetinkaya-Rundel, .Teaching computing with Git and GitHub disponible en el link https://mine-cetinkaya-rundel.github.io/teach-r-online/03-git/03-git.html#1\n\nVerificar que han instalado paquetes"
+  },
+  {
+    "objectID": "clases/Clase_virtual_1.html#objetivos",
+    "href": "clases/Clase_virtual_1.html#objetivos",
+    "title": "Clase Virtual 1: Configurando Git y GitHub",
+    "section": "Objetivos",
+    "text": "Objetivos\n\nInstar Git\nSincronizar cuenta GitHub con RStudio\nClonar y sincronizar un repositorio"
+  },
+  {
+    "objectID": "clases/Clase_virtual_1.html#qué-es-git",
+    "href": "clases/Clase_virtual_1.html#qué-es-git",
+    "title": "Clase Virtual 1: Configurando Git y GitHub",
+    "section": "Qué es Git",
+    "text": "Qué es Git\nUn sistema de control de versiones donde quedan registrados los cambios que se van haciendo a un archivo, que junto con otros archivos, conforman lo que se denomina un repositorio.\nPor ejemplo, el repositorio https://github.com/javendaXgh/r4dsucv2024 contiene todos los archivos de extensiones html, css, js, qmd, R, así como las carpetas que dan sustento al site del curso https://ucveconomiar4ds.netlify.app\n\npropósito original, dar soporte a grupos de desarrolladores de software\nEjemplo variables definidadas o sobreescritas en cónsola que luego no se pueden ejecutar y se interrumpe la ejecución del código\nAceptar o rechazar cambios\nValor de un código de desarrollo, por ejemplo, de un software"
+  },
+  {
+    "objectID": "clases/Clase_virtual_1.html#qué-es-github",
+    "href": "clases/Clase_virtual_1.html#qué-es-github",
+    "title": "Clase Virtual 1: Configurando Git y GitHub",
+    "section": "Qué es GitHub",
+    "text": "Qué es GitHub\nEs un sistema de alojamiento para proyectos que están sustentados en Git. Adicional a una serie muy grande de funcionalidades, actúa como un repositorio público o privado, de códigos en distintos lenguajes.\nLos proyectos alojados en GitHub se sincronizan y pueden ser distribuidos automatizadamente.\n\nEjemplo de Google Drive\ncopilot\nactions\nteams\nrespaldo de los códigos-. valor del trabajo\nreproducibilidad\nEjemplo distribución: códigos de tareas\nEjemplo"
+  },
+  {
+    "objectID": "clases/Clase_virtual_1.html#beneficios",
+    "href": "clases/Clase_virtual_1.html#beneficios",
+    "title": "Clase Virtual 1: Configurando Git y GitHub",
+    "section": "Beneficios",
+    "text": "Beneficios\n\nMaximizar la reproducibilidad de los códigos que soportan una investigación o un desarrollo\nIntegrar códigos cuando se trabaja en equipo\nFlujos de trabajo automatizados\n\nActualización automática de página web\nContar con GitHub actions para ejecutare"
+  },
+  {
+    "objectID": "clases/Clase_virtual_1.html#flujo-de-trabajo",
+    "href": "clases/Clase_virtual_1.html#flujo-de-trabajo",
+    "title": "Clase Virtual 1: Configurando Git y GitHub",
+    "section": "Flujo de Trabajo",
+    "text": "Flujo de Trabajo\n\n↔︎️\n\n↔︎️"
+  },
+  {
+    "objectID": "clases/Clase_virtual_1.html#pasos",
+    "href": "clases/Clase_virtual_1.html#pasos",
+    "title": "Clase Virtual 1: Configurando Git y GitHub",
+    "section": "Pasos",
+    "text": "Pasos"
+  },
+  {
+    "objectID": "clases/Clase_virtual_1.html#verificar-configuraciones-e-instalaciones-previas-de-git",
+    "href": "clases/Clase_virtual_1.html#verificar-configuraciones-e-instalaciones-previas-de-git",
+    "title": "Clase Virtual 1: Configurando Git y GitHub",
+    "section": "Verificar configuraciones e Instalaciones Previas de Git",
+    "text": "Verificar configuraciones e Instalaciones Previas de Git\n\n#which git\n\n\n#git --version\n\nEn caso de no estar instalado no aparecerá nada o indicará que no está instalado\nEn caso de estar instalado ejecutar\n\n#git update-git-for-windows\n\n\nmacos\nInstalar Xcode command line tools\nhttps://forums.developer.apple.com/forums/thread/677124\nxcode-select –install\nHablar con Luis opción brew"
+  },
+  {
+    "objectID": "clases/Clase_virtual_1.html#instalar-git",
+    "href": "clases/Clase_virtual_1.html#instalar-git",
+    "title": "Clase Virtual 1: Configurando Git y GitHub",
+    "section": "Instalar Git",
+    "text": "Instalar Git\nEnlace\n🔗 https://git-scm.com/downloads\nSeleccionar Sistema Operativo y versión Bits\nLinks Alternativos :\n\n🔗 https://gitforwindows.org\n🔗 https://github.com/git-for-windows/git/releases/download/v2.47.0.windows.2/Git-2.47.0.2-64-bit.exe\n\n\nhttps://happygitwithr.com/install-git"
+  },
+  {
+    "objectID": "clases/Clase_virtual_1.html#presentarse-a-git--opción-1",
+    "href": "clases/Clase_virtual_1.html#presentarse-a-git--opción-1",
+    "title": "Clase Virtual 1: Configurando Git y GitHub",
+    "section": "Presentarse a Git- Opción 1",
+    "text": "Presentarse a Git- Opción 1\n\n#git config --global user.name \"Jane Doe\"\n#git config --global user.email \"jane@example.com\"\n\nConfirmar configuración\n\n#git config --global --list"
+  },
+  {
+    "objectID": "clases/Clase_virtual_1.html#presentarse-a-git--opción-2",
+    "href": "clases/Clase_virtual_1.html#presentarse-a-git--opción-2",
+    "title": "Clase Virtual 1: Configurando Git y GitHub",
+    "section": "Presentarse a Git- Opción 2",
+    "text": "Presentarse a Git- Opción 2\nInstalar Paquete R\n\n#install.packages(\"usethis\")\n\n\n#library(usethis) \n#use_git_config(user.name = \"Jane Doe\", user.email = \"jane@example.com\")\n\nVerificar instalación\n\n#git_sitrep()"
+  },
+  {
+    "objectID": "clases/Clase_virtual_1.html#crear-pat",
+    "href": "clases/Clase_virtual_1.html#crear-pat",
+    "title": "Clase Virtual 1: Configurando Git y GitHub",
+    "section": "Crear PAT",
+    "text": "Crear PAT\nPersonal Access Token para conexiones HTTPS que es uno de los dos protocolos habilitados por GitHub para comunicarnos\n\nOpción 1 Crear Token en https://github.com/settings/tokens\nOpción 2 (intentar)Ejecutar esta instrucción\n\n\n#usethis::create_github_token()\n\nScopes: Seleccionar esto valores: “repo”, “user”, y “workflow”.\nTiempo de expiración, al menos 180 días \nCopiar token generado y guardar en lugar seguro\nEjecutar este comando para pegarlo y almacenarlo\n\n#gitcreds::gitcreds_set()"
+  },
+  {
+    "objectID": "clases/Clase_virtual_1.html#usar-protocolo-https",
+    "href": "clases/Clase_virtual_1.html#usar-protocolo-https",
+    "title": "Clase Virtual 1: Configurando Git y GitHub",
+    "section": "Usar protocolo HTTPS",
+    "text": "Usar protocolo HTTPS"
+  },
+  {
+    "objectID": "clases/Clase_virtual_1.html#resto-de-configuraciones---continúa",
+    "href": "clases/Clase_virtual_1.html#resto-de-configuraciones---continúa",
+    "title": "Clase Virtual 1: Configurando Git y GitHub",
+    "section": "Resto de Configuraciones - continúa",
+    "text": "Resto de Configuraciones - continúa"
+  },
+  {
+    "objectID": "clases/Clase_virtual_1.html#crear-repo-en-github",
+    "href": "clases/Clase_virtual_1.html#crear-repo-en-github",
+    "title": "Clase Virtual 1: Configurando Git y GitHub",
+    "section": "Crear Repo en GitHub",
+    "text": "Crear Repo en GitHub\n\nCrear RepoDescripciónDirección HTTPS"
+  },
+  {
+    "objectID": "clases/Clase_virtual_1.html#clonar-repositorio",
+    "href": "clases/Clase_virtual_1.html#clonar-repositorio",
+    "title": "Clase Virtual 1: Configurando Git y GitHub",
+    "section": "Clonar Repositorio",
+    "text": "Clonar Repositorio\nEn la Shell o Terminal\n\n# git clone https://github.com/javendaXgh/github_test.git\n\nMensaje similar a\n\nir a carpeta mendiante shell\n\n#cd github_test"
+  },
+  {
+    "objectID": "clases/Clase_virtual_1.html#clonar-repositorio--cont.",
+    "href": "clases/Clase_virtual_1.html#clonar-repositorio--cont.",
+    "title": "Clase Virtual 1: Configurando Git y GitHub",
+    "section": "Clonar Repositorio -cont.",
+    "text": "Clonar Repositorio -cont.\nEjecutar una a una\n\n#ls\n\n\n#head README.md\n\n\n#git remote show origin\n\n\n\n\n\n🔗 ucveconomiar4ds"
   }
 ]

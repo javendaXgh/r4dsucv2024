@@ -1,0 +1,250 @@
+---
+title: "Clase Virtual 1: Configurando Git y GitHub"
+format: revealjs
+---
+
+## Orígenes Presentación
+
+Estas láminas están basadas en el contenido desarrollado por la Profª. [Jennifer Bryan](https://github.com/jennybc/happy-git-with-r) en el libro electrónico [**Happy Git and GitHub for the useR**](https://happygitwithr.com/) , así como en el taller .. desarrollado por la profª [**Mine Çetinkaya-Rundel**](http://mine-cr.com/), .Teaching computing with Git and GitHub disponible en el link <https://mine-cetinkaya-rundel.github.io/teach-r-online/03-git/03-git.html#1>
+
+::: notes
+Verificar que han instalado paquetes
+:::
+
+## Objetivos
+
+1.  Instar Git
+2.  Sincronizar cuenta GitHub con RStudio
+3.  Clonar y sincronizar un repositorio
+
+## Qué es Git
+
+Un sistema de control de versiones donde quedan registrados los cambios que se van haciendo a un archivo, que junto con otros archivos, conforman lo que se denomina un repositorio.
+
+Por ejemplo, el repositorio <https://github.com/javendaXgh/r4dsucv2024> contiene todos los archivos de extensiones html, css, js, qmd, R, así como las carpetas que dan sustento al site del curso <https://ucveconomiar4ds.netlify.app>
+
+::: notes
+propósito original, dar soporte a grupos de desarrolladores de software
+
+Ejemplo variables definidadas o sobreescritas en cónsola que luego no se pueden ejecutar y se interrumpe la ejecución del código
+
+Aceptar o rechazar cambios
+
+Valor de un código de desarrollo, por ejemplo, de un software
+:::
+
+## Qué es GitHub
+
+Es un sistema de alojamiento para proyectos que están sustentados en Git. Adicional a una serie muy grande de funcionalidades, actúa como un repositorio público o privado, de códigos en distintos lenguajes.
+
+Los proyectos alojados en GitHub se sincronizan y pueden ser distribuidos automatizadamente.
+
+::: notes
+Ejemplo de Google Drive
+
+copilot
+
+actions
+
+teams
+
+respaldo de los códigos-. valor del trabajo
+
+reproducibilidad
+
+Ejemplo distribución: códigos de tareas
+
+Ejemplo
+:::
+
+## Beneficios
+
+-   Maximizar la reproducibilidad de los códigos que soportan una investigación o un desarrollo
+
+-   Integrar códigos cuando se trabaja en equipo
+
+-   Flujos de trabajo automatizados
+
+    -   Actualización automática de página web
+
+    -   Contar con GitHub actions para ejecutare
+
+## Flujo de Trabajo
+
+![](images/clase1_virtual/git.png){width="120"}
+
+### ↔️
+
+![](images/clase1_virtual/github.png){width="120"}
+
+### ↔️
+
+![](images/clase1_virtual/rstudio.png){width="120"}
+
+## Pasos
+
+## Verificar configuraciones e Instalaciones Previas de Git
+
+```{bash}
+#which git
+
+
+```
+
+```{bash}
+#git --version
+```
+
+En caso de no estar instalado no aparecerá nada o indicará que no está instalado
+
+En caso de estar instalado ejecutar
+
+```{bash}
+#git update-git-for-windows
+
+```
+
+::: notes
+macos
+
+Instalar Xcode command line tools
+
+<https://forums.developer.apple.com/forums/thread/677124>
+
+xcode-select --install
+
+Hablar con Luis opción brew
+:::
+
+## Instalar Git
+
+**Enlace**
+
+🔗 <https://git-scm.com/downloads>
+
+Seleccionar Sistema Operativo y versión Bits
+
+Links Alternativos :
+
+-   🔗 <https://gitforwindows.org>
+
+-   🔗 <https://github.com/git-for-windows/git/releases/download/v2.47.0.windows.2/Git-2.47.0.2-64-bit.exe>
+
+::: notes
+<https://happygitwithr.com/install-git>
+:::
+
+## Presentarse a Git- Opción 1
+
+```{bash}
+#git config --global user.name "Jane Doe"
+#git config --global user.email "jane@example.com"
+
+```
+
+Confirmar configuración
+
+```{bash}
+#git config --global --list
+```
+
+## Presentarse a Git- Opción 2
+
+#### Instalar Paquete R
+
+```{r}
+#install.packages("usethis")
+```
+
+```{bash}
+#library(usethis) 
+#use_git_config(user.name = "Jane Doe", user.email = "jane@example.com")
+```
+
+Verificar instalación
+
+```{bash}
+#git_sitrep()
+```
+
+## Crear PAT
+
+Personal Access Token para conexiones HTTPS que es uno de los dos protocolos habilitados por GitHub para comunicarnos
+
+1.  Opción 1 Crear Token en <https://github.com/settings/tokens>
+
+2.  Opción 2 (intentar)Ejecutar esta instrucción
+
+```{r}
+#usethis::create_github_token()
+```
+
+Scopes: Seleccionar esto valores: “repo”, “user”, y “workflow”.
+
+Tiempo de expiración, al menos 180 días 
+
+Copiar token generado y guardar en lugar seguro
+
+Ejecutar este comando para pegarlo y almacenarlo
+
+```{r}
+#gitcreds::gitcreds_set()
+```
+
+## Usar protocolo HTTPS
+
+![](images/clase1_virtual/%20https.png){width="600"}
+
+## Resto de Configuraciones - continúa
+
+## Crear Repo en GitHub
+
+::: panel-tabset
+## Crear Repo
+
+![](images/clase1_virtual/1-repo.png){width="500"}
+
+## Descripción
+
+![](images/clase1_virtual/2-repo.png){width="500"}
+
+## Dirección HTTPS
+
+![](images/clase1_virtual/3-repo.png){width="500"}
+:::
+
+## Clonar Repositorio
+
+En la Shell o Terminal
+
+```{bash}
+# git clone https://github.com/javendaXgh/github_test.git
+```
+
+Mensaje similar a
+
+![](images/clase1_virtual/git clone.png){width="600"}
+
+ir a carpeta mendiante shell
+
+```{bash}
+#cd github_test
+```
+
+## Clonar Repositorio -cont.
+
+Ejecutar una a una
+
+```{bash}
+#ls
+
+```
+
+```{bash}
+#head README.md
+
+```
+
+```{bash}
+#git remote show origin
+```

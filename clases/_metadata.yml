@@ -4,11 +4,11 @@ footer: "[🔗 ucveconomiar4ds](https://ucveconomiar4ds.netlify.app)"
 logo: "images/logo_curso.png"
 format:
   revealjs:
-    embed-resources: true
+    # embed-resources: true
     theme: slides.scss
     transition: fade
     slide-number: true
-    # chalkboard: true
+    chalkboard: true
     highlight-style: a11y-dark
 editor: visual
 execute:
