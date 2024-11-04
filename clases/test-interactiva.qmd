@@ -1,0 +1,19 @@
+---
+title: webR in Quarto HTML Documents
+format: revealjs
+engine: knitr
+filters:
+  - webr
+---
+
+```{webr}
+fit = lm(mpg ~ am, data = mtcars)
+
+summary(fit)
+```
+
+```{webr}
+fit = lm(mpg ~ am, data = mtcars)
+summary(fit)
+plot(fit)
+```

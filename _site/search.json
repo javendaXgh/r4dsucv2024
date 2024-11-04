@@ -468,7 +468,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\n\n\n🖥️ láminas clase 03  💻/scripts clase 3\n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\n\n\n\n\n\n\n\n\nmié, 6 nov.\n\n\n\n\n\n\n4\nlun, 11 nov.\n\n\n\n\n\n\n\n\nmié, 13 nov.\n\n\n\n\n\n\n5\nlun, 18 nov.\n\n\n\n\n\n\n\n\nmié, 20 nov.\n\n\n\n\n\n\n6\nlun, 25 nov.\n\n\n\n\n\n\n\n\nmié, 27 nov.\n\n\n\n\n\n\n7\nlun, 2 dic.\n\n\n\n\n\n\n\n\nmié, 4 dic.\n\n\n\n\n\n\n8\nlun, 9 dic.\n\n\n\n\n\n\n\n\nmié, 11 dic.\n\n\n\n\n\n\n9\nlun, 16 dic.\n\n\n\n\n\n\n\n\nmié, 18 dic.\n\n\n\n\n\n\n10\nlun, 13 ene.\n\n\n\n\n\n\n\n\nmié, 15 ene.\n\n\n\n\n\n\n11\nlun, 20 ene.\n\n\n\n\n\n\n\n\nmié, 22 ene.\n\n\n\n\n\n\n12\nlun, 27 ene.\n\n\n\n\n\n\n\n\nmié, 29 ene.\n\n\n\n\n\n\n13\nlun, 3 feb.\n\n\n\n\n\n\n\n\nmié, 5 feb.\n\n\n\n\n\n\n14\nlun, 10 feb.\n\n\n\n\n\n\n\n\nmié, 12 feb.\n\n\n\n\n\n\n15\nsáb, 15 feb.\n\n\n\n\n\n\n\n\nlun, 17 feb.",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\n\n\n🖥️ láminas clase 03  💻/scripts clase 3\n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\n\n\n🖥️ láminas clase 06\n\n\n\n\nmié, 6 nov.\n\n\n\n\n\n\n4\nlun, 11 nov.\n\n\n\n\n\n\n\n\nmié, 13 nov.\n\n\n\n\n\n\n5\nlun, 18 nov.\n\n\n\n\n\n\n\n\nmié, 20 nov.\n\n\n\n\n\n\n6\nlun, 25 nov.\n\n\n\n\n\n\n\n\nmié, 27 nov.\n\n\n\n\n\n\n7\nlun, 2 dic.\n\n\n\n\n\n\n\n\nmié, 4 dic.\n\n\n\n\n\n\n8\nlun, 9 dic.\n\n\n\n\n\n\n\n\nmié, 11 dic.\n\n\n\n\n\n\n9\nlun, 16 dic.\n\n\n\n\n\n\n\n\nmié, 18 dic.\n\n\n\n\n\n\n10\nlun, 13 ene.\n\n\n\n\n\n\n\n\nmié, 15 ene.\n\n\n\n\n\n\n11\nlun, 20 ene.\n\n\n\n\n\n\n\n\nmié, 22 ene.\n\n\n\n\n\n\n12\nlun, 27 ene.\n\n\n\n\n\n\n\n\nmié, 29 ene.\n\n\n\n\n\n\n13\nlun, 3 feb.\n\n\n\n\n\n\n\n\nmié, 5 feb.\n\n\n\n\n\n\n14\nlun, 10 feb.\n\n\n\n\n\n\n\n\nmié, 12 feb.\n\n\n\n\n\n\n15\nsáb, 15 feb.\n\n\n\n\n\n\n\n\nlun, 17 feb.",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -1181,14 +1181,14 @@
     "href": "clases/clase_05.html",
     "title": "Ciencia de Datos para Economistas",
     "section": "",
-    "text": "Sesgo de supervivencia"
+    "text": "Sesgo del Superviviente"
   },
   {
     "objectID": "clases/clase_05.html#científicos-de-datos",
     "href": "clases/clase_05.html#científicos-de-datos",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Científicos de Datos 👨‍🔬 👩‍🔬",
-    "text": "Científicos de Datos 👨‍🔬 👩‍🔬\n\n\n\nSesgo del Superviviente"
+    "section": "",
+    "text": "Sesgo del Superviviente"
   },
   {
     "objectID": "clases/clase_05.html#puntos-varios",
@@ -1286,7 +1286,7 @@
     "href": "clases/clase_05.html#ejemplo-de-obtención-y-procesamiento",
     "title": "Ciencia de Datos para Economistas",
     "section": "Ejemplo de obtención y procesamiento",
-    "text": "Ejemplo de obtención y procesamiento\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Ejemplo de obtención y procesamiento"
   },
   {
     "objectID": "clases/clase_03.html",
@@ -1530,8 +1530,8 @@
     "objectID": "clases/Clase_virtual_1.html#orígenes-presentación",
     "href": "clases/Clase_virtual_1.html#orígenes-presentación",
     "title": "Clase Virtual 1: Configurando Git y GitHub",
-    "section": "Orígenes Presentación",
-    "text": "Orígenes Presentación\nEstas láminas están basadas en el contenido desarrollado por la Profª. Jennifer Bryan en el libro electrónico Happy Git and GitHub for the useR , así como en el taller .. desarrollado por la profª Mine Çetinkaya-Rundel, .Teaching computing with Git and GitHub disponible en el link https://mine-cetinkaya-rundel.github.io/teach-r-online/03-git/03-git.html#1\n\nVerificar que han instalado paquetes"
+    "section": "",
+    "text": "Estas láminas están basadas en el contenido desarrollado por la Profª. Jennifer Bryan en el libro electrónico Happy Git and GitHub for the useR , así como en el taller .. desarrollado por la profª Mine Çetinkaya-Rundel, .Teaching computing with Git and GitHub disponible en el link https://mine-cetinkaya-rundel.github.io/teach-r-online/03-git/03-git.html#1\n\nVerificar que han instalado paquetes"
   },
   {
     "objectID": "clases/Clase_virtual_1.html#objetivos",
@@ -1566,7 +1566,7 @@
     "href": "clases/Clase_virtual_1.html#flujo-de-trabajo",
     "title": "Clase Virtual 1: Configurando Git y GitHub",
     "section": "Flujo de Trabajo",
-    "text": "Flujo de Trabajo\n\n↔︎️\n\n↔︎️"
+    "text": "Flujo de Trabajo\n\n\n↔︎️\n\n\n\n↔︎️"
   },
   {
     "objectID": "clases/Clase_virtual_1.html#pasos",
@@ -1601,7 +1601,7 @@
     "href": "clases/Clase_virtual_1.html#presentarse-a-git--opción-2",
     "title": "Clase Virtual 1: Configurando Git y GitHub",
     "section": "Presentarse a Git- Opción 2",
-    "text": "Presentarse a Git- Opción 2\nInstalar Paquete R\n\n#install.packages(\"usethis\")\n\n\n#library(usethis) \n#use_git_config(user.name = \"Jane Doe\", user.email = \"jane@example.com\")\n\nVerificar instalación\n\n#git_sitrep()"
+    "text": "Presentarse a Git- Opción 2\n\nInstalar Paquete R\n\n#install.packages(\"usethis\")\n\n\n#library(usethis) \n#use_git_config(user.name = \"Jane Doe\", user.email = \"jane@example.com\")\n\nVerificar instalación\n\n#git_sitrep()"
   },
   {
     "objectID": "clases/Clase_virtual_1.html#crear-pat",
@@ -1643,6 +1643,160 @@
     "href": "clases/Clase_virtual_1.html#clonar-repositorio--cont.",
     "title": "Clase Virtual 1: Configurando Git y GitHub",
     "section": "Clonar Repositorio -cont.",
-    "text": "Clonar Repositorio -cont.\nEjecutar una a una\n\n#ls\n\n\n#head README.md\n\n\n#git remote show origin\n\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Clonar Repositorio -cont.\nEjecutar una a una\n\n#ls\n\n\n#head README.md\n\n\n#git remote show origin"
+  },
+  {
+    "objectID": "clases/test-interactiva.html",
+    "href": "clases/test-interactiva.html",
+    "title": "webR in Quarto HTML Documents",
+    "section": "",
+    "text": "Please enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/Clase_virtual_1.html",
+    "href": "clases/Clase_virtual_1.html",
+    "title": "Clase Virtual 1: Configurando Git y GitHub",
+    "section": "",
+    "text": "Estas láminas están basadas en el contenido desarrollado por la Profª. Jennifer Bryan en el libro electrónico Happy Git and GitHub for the useR , así como en el taller .. desarrollado por la profª Mine Çetinkaya-Rundel, .Teaching computing with Git and GitHub disponible en el link https://mine-cetinkaya-rundel.github.io/teach-r-online/03-git/03-git.html#1\n\nVerificar que han instalado paquetes"
+  },
+  {
+    "objectID": "clases/clase_06.html#construir-funciones",
+    "href": "clases/clase_06.html#construir-funciones",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Construir Funciones:",
+    "text": "Construir Funciones:\nRepresentación de un 🎲\n\n¿Cómo lo hacemos?\nAyuda LLM\n\nFunciones disponibles\nSintaxis"
+  },
+  {
+    "objectID": "clases/clase_06.html#función",
+    "href": "clases/clase_06.html#función",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Función 🎲",
+    "text": "Función 🎲\n\n\n¿Qué hace la fn?\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n¡Juguemos!\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_06.html#función-.",
+    "href": "clases/clase_06.html#función-.",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Función 🎲🎲….🎲",
+    "text": "Función 🎲🎲….🎲\n- ¿Entrada? =&gt; Argumentos\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_06.html#construir-data-frame",
+    "href": "clases/clase_06.html#construir-data-frame",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Construir Data Frame",
+    "text": "Construir Data Frame\n\nVectores Países\n\ncharacter\nnumeric\nlogical"
+  },
+  {
+    "objectID": "clases/clase_06.html#section-1",
+    "href": "clases/clase_06.html#section-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_06.html#acceso-elementos-df",
+    "href": "clases/clase_06.html#acceso-elementos-df",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Acceso Elementos DF",
+    "text": "Acceso Elementos DF\n\n\n\nvector\nlista\nDF\n\n\n\n\n[ ]\n[ ]\n[ ]\n\n\n\n[[ ]]\n[[ ]]\n\n\n\n$\n$"
+  },
+  {
+    "objectID": "clases/clase_06.html#ejemplos-accesos--vectores",
+    "href": "clases/clase_06.html#ejemplos-accesos--vectores",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplos Accesos- Vectores",
+    "text": "Ejemplos Accesos- Vectores\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_06.html",
+    "href": "clases/clase_06.html",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "¿Cómo lo hacemos?\nAyuda LLM\nFunciones disponibles"
+  },
+  {
+    "objectID": "clases/clase_06.html#principios-nombres-funciones",
+    "href": "clases/clase_06.html#principios-nombres-funciones",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Principios Nombres Funciones",
+    "text": "Principios Nombres Funciones\n\nDescripción Clara : El nombre debe claramente indicar qué hace la función. Evita nombres genéricos como funcion o proceso.\nConsistencia y Coherencia : Mantén un estilo de nomenclatura consistente dentro del proyecto o grupo para facilitar la lectura y comprensión del código."
+  },
+  {
+    "objectID": "clases/clase_06.html#construir-data-frame-df",
+    "href": "clases/clase_06.html#construir-data-frame-df",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Construir Data Frame (DF)",
+    "text": "Construir Data Frame (DF)\ndatos World Bank\ncharacter/ nombres países\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nnumeric/ PIB año 2023\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nlogical\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_06.html#ejemplos-accesos--lista",
+    "href": "clases/clase_06.html#ejemplos-accesos--lista",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplos Accesos- Lista",
+    "text": "Ejemplos Accesos- Lista\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nMétodos [ ], $ y [[ ]]\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_06.html#ejemplos-accesos--df",
+    "href": "clases/clase_06.html#ejemplos-accesos--df",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplos Accesos- DF",
+    "text": "Ejemplos Accesos- DF\n[i,j] mediante índices\ni=fila\nj=columna\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_06.html#ejemplos-accesos--df-fila",
+    "href": "clases/clase_06.html#ejemplos-accesos--df-fila",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplos Accesos- DF/ fila",
+    "text": "Ejemplos Accesos- DF/ fila\n[i,j] mediante índices\ni=fila\nj=columna\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_06.html#ejemplos-accesos--dfcolumna",
+    "href": "clases/clase_06.html#ejemplos-accesos--dfcolumna",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplos Accesos- DF/columna",
+    "text": "Ejemplos Accesos- DF/columna\n[i,j] mediante índices\ni=fila\nj=columna\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_06.html#ejemplos-accesos--df-elemento",
+    "href": "clases/clase_06.html#ejemplos-accesos--df-elemento",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplos Accesos- DF/ elemento",
+    "text": "Ejemplos Accesos- DF/ elemento\n[i,j] mediante índices\ni=fila\nj=columna\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_06.html#ejemplos-accesos--lista-1",
+    "href": "clases/clase_06.html#ejemplos-accesos--lista-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplos Accesos- Lista/",
+    "text": "Ejemplos Accesos- Lista/\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_06.html#principios-nombres-funciones---cont.",
+    "href": "clases/clase_06.html#principios-nombres-funciones---cont.",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Principios Nombres Funciones - cont.",
+    "text": "Principios Nombres Funciones - cont.\n\nUsa Minúsculas y Guiones Bajos : Comienza el nombre con una letra minúscula y utiliza guiones bajos (_) para separar palabras. Esto hace que los nombres sean más fáciles de leer y evitar conflictos con palabras reservadas.\nResto de normas para nombrar objetos y variables"
+  },
+  {
+    "objectID": "clases/clase_06.html#construir-data-frame-df--cont.",
+    "href": "clases/clase_06.html#construir-data-frame-df--cont.",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Construir Data Frame (DF)- cont.",
+    "text": "Construir Data Frame (DF)- cont.\n\nlogical\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nLista con vectores del mismo length()\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_06.html#construir-df",
+    "href": "clases/clase_06.html#construir-df",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Construir DF",
+    "text": "Construir DF\nLista con vectores del mismo length()\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_06.html#comparación-elementos",
+    "href": "clases/clase_06.html#comparación-elementos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Comparación Elementos",
+    "text": "Comparación Elementos\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   }
 ]

@@ -1,0 +1,233 @@
+---
+title: "Ciencia de Datos para Economistas"
+subtitle: "Clase 6- Construir Funciones y Data Frames"
+filters:
+  - webr
+engine: knitr
+#format: live-html
+date: "Noviembre 4, 2024"
+format: 
+  revealjs:
+    incremental: true   
+---
+
+## Construir Funciones:
+
+### Representación de un 🎲
+
+-   ¿Cómo lo hacemos?
+
+-   Ayuda LLM
+
+    -   Funciones disponibles
+
+    -   Sintaxis
+
+## Función 🎲
+
+::: columns
+::: {.column width="50%"}
+### ¿Qué hace la fn?
+
+```{webr}
+#
+
+
+
+
+
+
+
+#
+```
+
+:::
+
+::: {.column width="50%"}
+
+###  ¡Juguemos!
+
+```{webr}
+#
+
+
+
+
+
+
+
+#
+```
+
+:::
+:::
+
+## Función 🎲🎲....🎲
+
+### - ¿Entrada? =\> Argumentos
+
+```{webr}
+##########################################################
+
+
+
+
+
+
+#
+```
+
+## Principios Nombres Funciones
+
+1.  **Descripción Clara** : El nombre debe claramente indicar qué hace la función. Evita nombres genéricos como **`funcion`** o **`proceso`**.
+
+2.  **Consistencia y Coherencia** : Mantén un estilo de nomenclatura consistente dentro del proyecto o grupo para facilitar la lectura y comprensión del código.
+
+## Principios Nombres Funciones - cont.
+
+1.  **Usa Minúsculas y Guiones Bajos** : Comienza el nombre con una letra minúscula y utiliza guiones bajos (**`_`**) para separar palabras. Esto hace que los nombres sean más fáciles de leer y evitar conflictos con palabras reservadas.
+
+2.  Resto de normas para nombrar objetos y variables
+
+## Construir Data Frame (DF)
+
+datos [World Bank](https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG)
+
+character/ nombres países
+
+```{webr}
+##########################################################
+
+
+```
+
+numeric/ PIB año 2023
+
+```{webr}
+##########################################################
+
+
+```
+
+logical
+
+```{webr}
+##########################################################
+
+
+```
+
+## Construir DF
+
+Lista con vectores del mismo `length()`
+
+```{webr}
+##########################################################
+
+
+
+
+
+#
+```
+
+## Acceso Elementos DF
+
+| vector | lista     | DF        |
+|--------|-----------|-----------|
+| \[ \]  | \[ \]     | \[ \]     |
+|        | \[\[ \]\] | \[\[ \]\] |
+|        | \$        | \$        |
+
+## Ejemplos Accesos- Vectores
+
+```{webr}
+vector_demo <- seq(from= 5, to =35, by=3)
+vector_demo
+
+```
+
+```{webr}
+vector_demo []
+```
+
+```{webr}
+vector_demo [[]]
+```
+
+## Ejemplos Accesos- Lista
+
+```{webr}
+month.name
+letters
+#lista_demo <- list(meses= month.name, letras= letters)
+#lista_demo
+
+```
+
+### Métodos \[ \], \$ y \[\[ \]\]
+
+```{webr}
+lista_demo[1]
+#lista_demo$meses
+#lista_demo[[1]]
+```
+
+## Comparación Elementos
+
+```{webr}
+lista_demo$meses == lista_demo[[1]]
+
+```
+
+## Ejemplos Accesos- Lista/ 
+
+```{webr}
+lista_demo[[1]][3]
+#lista_demo$meses[3]
+```
+
+## Ejemplos Accesos- DF/ fila
+
+\[i,j\] mediante índices
+
+i=fila
+
+j=columna
+
+```{webr}
+# acceso fila 2
+mtcars[2,]
+#mtcars['Datsun 710',]
+
+```
+
+## Ejemplos Accesos- DF/columna
+
+\[i,j\] mediante índices
+
+i=fila
+
+j=columna
+
+```{webr}
+# acceso columna 3
+mtcars[,3]
+#mtcars[[3]]
+#mtcars$disp
+#mtcars['disp']
+```
+
+## Ejemplos Accesos- DF/ elemento
+
+\[i,j\] mediante índices
+
+i=fila
+
+j=columna
+
+```{webr}
+# elemento determinado i=2, j=3
+mtcars[2,3]
+
+```

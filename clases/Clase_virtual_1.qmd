@@ -223,7 +223,7 @@ En la Shell o Terminal
 
 Mensaje similar a
 
-![](images/clase1_virtual/git clone.png)
+![](images/clase1_virtual/git%20clone.png)
 
 ir a carpeta mendiante shell
 
