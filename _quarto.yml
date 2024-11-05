@@ -53,7 +53,7 @@ website:
           #   text: Preguntas Frecuentes
       - section: "Prácticas"
         contents:
-          - href: laboratorios/lab-1.qmd
+          - href: practicas/clase6_pract1.qmd
             text: Práctica 1
       - section: "Proyectos"
         contents:
