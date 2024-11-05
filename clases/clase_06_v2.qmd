@@ -1,0 +1,252 @@
+---
+title: "Ciencia de Datos para Economistas"
+subtitle: "Clase 6- Construir Funciones y Data Frames"
+#format: live-html
+date: "Noviembre 4, 2024"
+format: 
+  revealjs:
+    incremental: true   
+---
+
+## Construir Funciones:
+
+### Representación de un 🎲
+
+-   ¿Cómo lo hacemos?
+
+-   Ayuda LLM
+
+    -   Funciones disponibles
+
+    -   Sintaxis
+
+## Función 🎲
+
+¿Qué debe hacer la función? ¿Qué debe representar?
+
+```{r}
+# ejecutar código y gradualmente descomentar líneas
+posibles_salidas_dado <- c(1:6)
+# sample(posibles_salidas_dado, 1)
+# sample(posibles_salidas_dado, 2)
+# sample(posibles_salidas_dado, 3)
+# sample(posibles_salidas_dado, 7) # genera error
+# sample(posibles_salidas_dado, 7, replace=TRUE)
+
+```
+
+¡Juguemos!
+
+```{r}
+
+# primera versión función
+
+lanzamiento <- function(cdad_dados){
+  sample(1:6,cdad_dados, replace=TRUE)
+}
+
+# arrojar dado según función que crearmos
+lanzamiento (cdad_dados=3)
+lanzamiento (cdad_dados=6)
+```
+
+## Función 🎲🎲....🎲
+
+### - ¿Entrada? =\> Argumentos
+
+```{r}
+# función con dos argumentos
+lanzamiento <- function (cdad_dados,
+                         nombre_jugador){
+  resultado <- sample (1:6,cdad_dados, replace = TRUE )
+  
+  paste(nombre_jugador, 'obtuvo el siguiente resultado',
+        resultado)
+}
+
+#La siguiente llamada a la función generará error ya que no contiente
+# dentro el valor del segundo argumento que es el nombre del jugador
+
+# lanzamiento(cdad_dados= 4)
+
+lanzamiento(nombre_jugador= 'Braian',
+            cdad_dados= 2)
+
+
+# la siguiente ejecución generará un problema al no nombrar los
+# argumentos y en orden posicional, pasar "Braian" como el primer
+# argumento, que en la función que declaramos como "lanzamiento"
+# corresponde a "cdad_dados", que debe ser de tipo numérico. 
+
+# Lo mismo pasaría con el segundo argumento que estamos pasando que en este caso es 5,
+# pero no lo estamos referenciando con el nombre del argumento en la 
+# función, que corresponde en la segunda posición al de nombre_jugador
+
+#lanzamiento( 'Braian',
+#             5)
+
+lanzamiento(2,'Jose')
+
+
+
+```
+
+Para entender mejor la construcción de las funciones les recomiendo la lectura de esta sección del libro Hands On Promgramming With R <https://rstudio-education.github.io/hopr/basics.html#sample-with-replacement> que va muy similar a lo que revisamos en clase en cuanto al ejemplo del 🎲.
+
+Para revisar documentación de la función `paste` ejecutar `?paste` en la consola.
+
+## Principios Nombres Funciones
+
+1.  **Descripción Clara** : El nombre debe claramente indicar qué hace la función. Evita nombres genéricos como **`funcion`** o **`proceso`**.
+
+2.  **Consistencia y Coherencia** : Mantén un estilo de nomenclatura consistente dentro del proyecto o grupo para facilitar la lectura y comprensión del código.
+
+## Principios Nombres Funciones - cont.
+
+1.  **Usa Minúsculas y Guiones Bajos** : Comienza el nombre con una letra minúscula y utiliza guiones bajos (**`_`**) para separar palabras. Esto hace que los nombres sean más fáciles de leer y evitar conflictos con palabras reservadas.
+
+2.  Resto de normas para nombrar objetos y variables
+
+## Construir Data Frame (DF)
+
+datos [World Bank](https://data.worldbank.org/indicator/NY.GDP.MKTP.KD.ZG)
+
+character/ nombres países
+
+```{r}
+nombre_paises <- c('togo','japon','irlanda')
+nombre_paises
+```
+
+numeric/ PIB año 2023
+
+```{r}
+# vector para registrar variación PIB
+var_pib <- c (-1.7, 2.3, -3.1 ) # separador décimal es el punto! ojo
+# datos inventados, no obtenidos de la página
+var_pib
+```
+
+logical
+
+```{r}
+##########################################################
+crecimiento_presente <- var_pib >0
+crecimiento_presente
+# crear un vector de tipo logical donde se determina si cada elemento de var_pib es mayor que cero
+
+```
+
+## Construir DF
+
+Recordar la relación de orden que tenemos entre los tres vectores
+
+paises - var_pib - crecimiento_presente
+
+Lista con vectores del mismo `length()` . En la consola ejecutar para cada vector la función `length` de la siguiente forma `length(var_pib)` .
+
+```{r}
+# usar la función de R que se llama data_frame
+df_pib_paises <- data.frame(pais= nombre_paises,
+                            delta_PIB= var_pib,
+                            crecimiento= crecimiento_presente)
+# esta función de nombre data.frame, puede tomar tantos argumentos como sean necesarios, siendo cada argumento el nombre que se le dará a cada columna (o atributo) seguido de un signo igual y posteriormente los datos que conformarán cada columna, por ejemplo: pais= nombre_paises
+
+# Al crear la data frame, se colocaran tantos argumentos, como columnas se quieran tener, y como en toda función, serán separados por una coma "," la indicación del argumento.
+
+
+df_pib_paises # mostrar la Data Frame Creada
+
+# recordar que para construir una DF desde distintos vectores necesitamos que cada vector contenta la misma cdad de elementos, en este caso son 3.
+#
+```
+
+## Consultar la clase del objeto creado:
+
+```{r}
+class (df_pib_paises)
+
+```
+
+En el libro electrónico "R para Principiantes" de Juan B. Mendoza, pueden revisar algún complemento sobre las data frames, disponible en <https://bookdown.org/jboscomendoza/r-principiantes4/data-frames.html>
+
+## Acceso Elementos Vectores, Listas y Data Frames
+
+Se disponen de estos operadores para acceder a los elementos que conforman los vectores, listas y Data Frames
+
+| vector | lista     | DF        |
+|--------|-----------|-----------|
+| \[ \]  | \[ \]     | \[ \]     |
+|        | \[\[ \]\] | \[\[ \]\] |
+|        | \$        | \$        |
+
+## Ejemplos Accesos- Vectores
+
+```{r}
+vector_demo <- seq(from= 5, to =35, by=3)
+vector_demo
+
+```
+
+```{r}
+vector_demo [3]
+```
+
+```{r}
+vector_demo [[3]]
+```
+
+Los dos métodos de acceso, mediante los operadores `[` y `[[` generan el mismo resultado cuando se trabaja con vectores.
+
+## Ejemplos Accesos- Lista
+
+En el libro "R para Principiantes" de Juan B. Mendoza , en el acceso <https://bookdown.org/jboscomendoza/r-principiantes4/listas.html> , pueden obtener información adicional sobre qué son las listas
+
+```{r}
+month.name # el objeto month.name viene precargado en R
+letters # el objeto letters viene precargado en R
+lista_demo <- list(meses= month.name, letras= letters, numeros= 1:12)
+lista_demo # verificamos contenido de la lista
+
+```
+
+### Métodos de acceso \[ \], \$ y \[\[ \]\]
+
+```{r}
+
+lista_demo[1]
+# ir descomentando línea a línea para evaluar los resultados
+# lista_demo$meses 
+# lista_demo[[1]]
+```
+
+## Comparación Elementos
+
+Se hace una comparación de tipo lógico, entre la igualdad de cada uno de los elementos que arroja `lista_demo$meses` con los elementos que arroja `lista_demo[[1]]`
+
+```{r}
+lista_demo$meses == lista_demo[[1]]
+
+```
+
+Se puede ver, uno a uno, que todos los elementos que arroja cada uno de los métodos de acceso, son iguales puesto que aparecen todos los valores como `TRUE`
+
+## Ejemplos Accesos- Lista/
+
+```{r}
+# ir descomentando línea a línea para evaluar los resultados
+lista_demo[[1]][3]
+#lista_demo$meses[3]
+```
+
+## Pendiente por Revisar en próxima Clase
+
+Las dos clases pasadas (5 y 6) ha quedado pendiente abordar estos dos temas:
+
+-   Consultar Vignettes y Cheat Sheets
+
+-   Acceso a elementos de df (filas, columnas o valor determinado)
+
+## Vídeo de Interés
+
+La próxima semana empezamos a trabajar con el libro R4DS de Hadley Wickham y el segundo capítulo versa sobre la visualización de los datos, así que el siguiente vídeo puede resultar de interés <https://www.youtube.com/watch?v=jbkSRLYSojo>

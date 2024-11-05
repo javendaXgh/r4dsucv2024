@@ -468,7 +468,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\n\n\n🖥️ láminas clase 03  💻/scripts clase 3\n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\n\n\n🖥️ láminas clase 06\n\n\n\n\nmié, 6 nov.\n\n\n\n\n\n\n4\nlun, 11 nov.\n\n\n\n\n\n\n\n\nmié, 13 nov.\n\n\n\n\n\n\n5\nlun, 18 nov.\n\n\n\n\n\n\n\n\nmié, 20 nov.\n\n\n\n\n\n\n6\nlun, 25 nov.\n\n\n\n\n\n\n\n\nmié, 27 nov.\n\n\n\n\n\n\n7\nlun, 2 dic.\n\n\n\n\n\n\n\n\nmié, 4 dic.\n\n\n\n\n\n\n8\nlun, 9 dic.\n\n\n\n\n\n\n\n\nmié, 11 dic.\n\n\n\n\n\n\n9\nlun, 16 dic.\n\n\n\n\n\n\n\n\nmié, 18 dic.\n\n\n\n\n\n\n10\nlun, 13 ene.\n\n\n\n\n\n\n\n\nmié, 15 ene.\n\n\n\n\n\n\n11\nlun, 20 ene.\n\n\n\n\n\n\n\n\nmié, 22 ene.\n\n\n\n\n\n\n12\nlun, 27 ene.\n\n\n\n\n\n\n\n\nmié, 29 ene.\n\n\n\n\n\n\n13\nlun, 3 feb.\n\n\n\n\n\n\n\n\nmié, 5 feb.\n\n\n\n\n\n\n14\nlun, 10 feb.\n\n\n\n\n\n\n\n\nmié, 12 feb.\n\n\n\n\n\n\n15\nsáb, 15 feb.\n\n\n\n\n\n\n\n\nlun, 17 feb.",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\n\n\n🖥️ láminas clase 03  💻/scripts clase 3\n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\n\n\n🖥️ láminas clase 06  💻 clase 6 versión qmd \n\n\n\n\nmié, 6 nov.\n\n\n\n\n\n\n4\nlun, 11 nov.\n\n\n\n\n\n\n\n\nmié, 13 nov.\n\n\n\n\n\n\n5\nlun, 18 nov.\n\n\n\n\n\n\n\n\nmié, 20 nov.\n\n\n\n\n\n\n6\nlun, 25 nov.\n\n\n\n\n\n\n\n\nmié, 27 nov.\n\n\n\n\n\n\n7\nlun, 2 dic.\n\n\n\n\n\n\n\n\nmié, 4 dic.\n\n\n\n\n\n\n8\nlun, 9 dic.\n\n\n\n\n\n\n\n\nmié, 11 dic.\n\n\n\n\n\n\n9\nlun, 16 dic.\n\n\n\n\n\n\n\n\nmié, 18 dic.\n\n\n\n\n\n\n10\nlun, 13 ene.\n\n\n\n\n\n\n\n\nmié, 15 ene.\n\n\n\n\n\n\n11\nlun, 20 ene.\n\n\n\n\n\n\n\n\nmié, 22 ene.\n\n\n\n\n\n\n12\nlun, 27 ene.\n\n\n\n\n\n\n\n\nmié, 29 ene.\n\n\n\n\n\n\n13\nlun, 3 feb.\n\n\n\n\n\n\n\n\nmié, 5 feb.\n\n\n\n\n\n\n14\nlun, 10 feb.\n\n\n\n\n\n\n\n\nmié, 12 feb.\n\n\n\n\n\n\n15\nsáb, 15 feb.\n\n\n\n\n\n\n\n\nlun, 17 feb.",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -1798,5 +1798,124 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "Comparación Elementos",
     "text": "Comparación Elementos\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_06_v2.html",
+    "href": "clases/clase_06_v2.html",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "¿Cómo lo hacemos?\nAyuda LLM\n\nFunciones disponibles\nSintaxis"
+  },
+  {
+    "objectID": "clases/clase_06_v2.html#construir-funciones",
+    "href": "clases/clase_06_v2.html#construir-funciones",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "¿Cómo lo hacemos?\nAyuda LLM\n\nFunciones disponibles\nSintaxis"
+  },
+  {
+    "objectID": "clases/clase_06_v2.html#función",
+    "href": "clases/clase_06_v2.html#función",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Función 🎲",
+    "text": "Función 🎲\n¿Qué debe hacer la función? ¿Qué debe representar?\n\n# ejecutar código y gradualmente descomentar líneas\nposibles_salidas_dado &lt;- c(1:6)\n# sample(posibles_salidas_dado, 1)\n# sample(posibles_salidas_dado, 2)\n# sample(posibles_salidas_dado, 3)\n# sample(posibles_salidas_dado, 7) # genera error\n# sample(posibles_salidas_dado, 7, replace=TRUE)\n\n¡Juguemos!\n\n# primera versión función\n\nlanzamiento &lt;- function(cdad_dados){\n  sample(1:6,cdad_dados, replace=TRUE)\n}\n\n# arrojar dado según función que crearmos\nlanzamiento (cdad_dados=3)\n\n[1] 2 4 6\n\nlanzamiento (cdad_dados=6)\n\n[1] 4 3 5 2 2 6"
+  },
+  {
+    "objectID": "clases/clase_06_v2.html#función-.",
+    "href": "clases/clase_06_v2.html#función-.",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Función 🎲🎲….🎲",
+    "text": "Función 🎲🎲….🎲\n\n- ¿Entrada? =&gt; Argumentos\n\n# función con dos argumentos\nlanzamiento &lt;- function (cdad_dados,\n                         nombre_jugador){\n  resultado &lt;- sample (1:6,cdad_dados, replace = TRUE )\n  \n  paste(nombre_jugador, 'obtuvo el siguiente resultado',\n        resultado)\n}\n\n#La siguiente llamada a la función generará error ya que no contiente\n# dentro el valor del segundo argumento que es el nombre del jugador\n\n# lanzamiento(cdad_dados= 4)\n\nlanzamiento(nombre_jugador= 'Braian',\n            cdad_dados= 2)\n\n[1] \"Braian obtuvo el siguiente resultado 4\" \"Braian obtuvo el siguiente resultado 3\"\n\n# la siguiente ejecución generará un problema al no nombrar los\n# argumentos y en orden posicional, pasar \"Braian\" como el primer\n# argumento, que en la función que declaramos como \"lanzamiento\"\n# corresponde a \"cdad_dados\", que debe ser de tipo numérico. \n\n# Lo mismo pasaría con el segundo argumento que estamos pasando que en este caso es 5,\n# pero no lo estamos referenciando con el nombre del argumento en la \n# función, que corresponde en la segunda posición al de nombre_jugador\n\n#lanzamiento( 'Braian',\n#             5)\n\nlanzamiento(2,'Jose')\n\n[1] \"Jose obtuvo el siguiente resultado 5\" \"Jose obtuvo el siguiente resultado 1\"\n\n\nPara entender mejor la construcción de las funciones les recomiendo la lectura de esta sección del libro Hands On Promgramming With R https://rstudio-education.github.io/hopr/basics.html#sample-with-replacement que va muy similar a lo que revisamos en clase en cuanto al ejemplo del 🎲.\nPara revisar documentación de la función paste ejecutar ?paste en la consola."
+  },
+  {
+    "objectID": "clases/clase_06_v2.html#principios-nombres-funciones",
+    "href": "clases/clase_06_v2.html#principios-nombres-funciones",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Principios Nombres Funciones",
+    "text": "Principios Nombres Funciones\n\nDescripción Clara : El nombre debe claramente indicar qué hace la función. Evita nombres genéricos como funcion o proceso.\nConsistencia y Coherencia : Mantén un estilo de nomenclatura consistente dentro del proyecto o grupo para facilitar la lectura y comprensión del código."
+  },
+  {
+    "objectID": "clases/clase_06_v2.html#principios-nombres-funciones---cont.",
+    "href": "clases/clase_06_v2.html#principios-nombres-funciones---cont.",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Principios Nombres Funciones - cont.",
+    "text": "Principios Nombres Funciones - cont.\n\nUsa Minúsculas y Guiones Bajos : Comienza el nombre con una letra minúscula y utiliza guiones bajos (_) para separar palabras. Esto hace que los nombres sean más fáciles de leer y evitar conflictos con palabras reservadas.\nResto de normas para nombrar objetos y variables"
+  },
+  {
+    "objectID": "clases/clase_06_v2.html#construir-data-frame-df",
+    "href": "clases/clase_06_v2.html#construir-data-frame-df",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Construir Data Frame (DF)",
+    "text": "Construir Data Frame (DF)\ndatos World Bank\ncharacter/ nombres países\n\nnombre_paises &lt;- c('togo','japon','irlanda')\nnombre_paises\n\n[1] \"togo\"    \"japon\"   \"irlanda\"\n\n\nnumeric/ PIB año 2023\n\n# vector para registrar variación PIB\nvar_pib &lt;- c (-1.7, 2.3, -3.1 ) # separador décimal es el punto! ojo\n# datos inventados, no obtenidos de la página\nvar_pib\n\n[1] -1.7  2.3 -3.1\n\n\nlogical\n\n##########################################################\ncrecimiento_presente &lt;- var_pib &gt;0\ncrecimiento_presente\n\n[1] FALSE  TRUE FALSE\n\n# crear un vector de tipo logical donde se determina si cada elemento de var_pib es mayor que cero"
+  },
+  {
+    "objectID": "clases/clase_06_v2.html#construir-df",
+    "href": "clases/clase_06_v2.html#construir-df",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Construir DF",
+    "text": "Construir DF\nRecordar la relación de orden que tenemos entre los tres vectores\npaises - var_pib - crecimiento_presente\nLista con vectores del mismo length() . En la consola ejecutar para cada vector la función length de la siguiente forma length(var_pib) .\n\n# usar la función de R que se llama data_frame\ndf_pib_paises &lt;- data.frame(pais= nombre_paises,\n                            delta_PIB= var_pib,\n                            crecimiento= crecimiento_presente)\n# esta función de nombre data.frame, puede tomar tantos argumentos como sean necesarios, siendo cada argumento el nombre que se le dará a cada columna (o atributo) seguido de un signo igual y posteriormente los datos que conformarán cada columna, por ejemplo: pais= nombre_paises\n\n# Al crear la data frame, se colocaran tantos argumentos, como columnas se quieran tener, y como en toda función, serán separados por una coma \",\" la indicación del argumento.\n\n\ndf_pib_paises # mostrar la Data Frame Creada\n\n     pais delta_PIB crecimiento\n1    togo      -1.7       FALSE\n2   japon       2.3        TRUE\n3 irlanda      -3.1       FALSE\n\n# recordar que para construir una DF desde distintos vectores necesitamos que cada vector contenta la misma cdad de elementos, en este caso son 3.\n#"
+  },
+  {
+    "objectID": "clases/clase_06_v2.html#consultar-la-clase-del-objeto-creado",
+    "href": "clases/clase_06_v2.html#consultar-la-clase-del-objeto-creado",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Consultar la clase del objeto creado:",
+    "text": "Consultar la clase del objeto creado:\n\nclass (df_pib_paises)\n\n[1] \"data.frame\"\n\n\nEn el libro electrónico “R para Principiantes” de Juan B. Mendoza, pueden revisar algún complemento sobre las data frames, disponible en https://bookdown.org/jboscomendoza/r-principiantes4/data-frames.html"
+  },
+  {
+    "objectID": "clases/clase_06_v2.html#acceso-elementos-vectores-listas-y-data-frames",
+    "href": "clases/clase_06_v2.html#acceso-elementos-vectores-listas-y-data-frames",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Acceso Elementos Vectores, Listas y Data Frames",
+    "text": "Acceso Elementos Vectores, Listas y Data Frames\nSe disponen de estos operadores para acceder a los elementos que conforman los vectores, listas y Data Frames\n\n\n\nvector\nlista\nDF\n\n\n\n\n[ ]\n[ ]\n[ ]\n\n\n\n[[ ]]\n[[ ]]\n\n\n\n$\n$"
+  },
+  {
+    "objectID": "clases/clase_06_v2.html#ejemplos-accesos--vectores",
+    "href": "clases/clase_06_v2.html#ejemplos-accesos--vectores",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplos Accesos- Vectores",
+    "text": "Ejemplos Accesos- Vectores\n\nvector_demo &lt;- seq(from= 5, to =35, by=3)\nvector_demo\n\n [1]  5  8 11 14 17 20 23 26 29 32 35\n\n\n\nvector_demo [3]\n\n[1] 11\n\n\n\nvector_demo [[3]]\n\n[1] 11\n\n\nLos dos métodos de acceso, mediante los operadores [ y [[ generan el mismo resultado cuando se trabaja con vectores."
+  },
+  {
+    "objectID": "clases/clase_06_v2.html#ejemplos-accesos--lista",
+    "href": "clases/clase_06_v2.html#ejemplos-accesos--lista",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplos Accesos- Lista",
+    "text": "Ejemplos Accesos- Lista\nEn el libro “R para Principiantes” de Juan B. Mendoza , en el acceso https://bookdown.org/jboscomendoza/r-principiantes4/listas.html , pueden obtener información adicional sobre qué son las listas\n\nmonth.name # el objeto month.name viene precargado en R\n\n [1] \"January\"   \"February\"  \"March\"     \"April\"     \"May\"       \"June\"      \"July\"     \n [8] \"August\"    \"September\" \"October\"   \"November\"  \"December\" \n\nletters # el objeto letters viene precargado en R\n\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\" \"k\" \"l\" \"m\" \"n\" \"o\" \"p\" \"q\" \"r\" \"s\" \"t\" \"u\"\n[22] \"v\" \"w\" \"x\" \"y\" \"z\"\n\nlista_demo &lt;- list(meses= month.name, letras= letters, numeros= 1:12)\nlista_demo # verificamos contenido de la lista\n\n$meses\n [1] \"January\"   \"February\"  \"March\"     \"April\"     \"May\"       \"June\"      \"July\"     \n [8] \"August\"    \"September\" \"October\"   \"November\"  \"December\" \n\n$letras\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\" \"k\" \"l\" \"m\" \"n\" \"o\" \"p\" \"q\" \"r\" \"s\" \"t\" \"u\"\n[22] \"v\" \"w\" \"x\" \"y\" \"z\"\n\n$numeros\n [1]  1  2  3  4  5  6  7  8  9 10 11 12\n\n\n\nMétodos de acceso [ ], $ y [[ ]]\n\nlista_demo[1]\n\n$meses\n [1] \"January\"   \"February\"  \"March\"     \"April\"     \"May\"       \"June\"      \"July\"     \n [8] \"August\"    \"September\" \"October\"   \"November\"  \"December\" \n\n# ir descomentando línea a línea para evaluar los resultados\n# lista_demo$meses \n# lista_demo[[1]]"
+  },
+  {
+    "objectID": "clases/clase_06_v2.html#comparación-elementos",
+    "href": "clases/clase_06_v2.html#comparación-elementos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Comparación Elementos",
+    "text": "Comparación Elementos\nSe hace una comparación de tipo lógico, entre la igualdad de cada uno de los elementos que arroja lista_demo$meses con los elementos que arroja lista_demo[[1]]\n\nlista_demo$meses == lista_demo[[1]]\n\n [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE\n\n\nSe puede ver, uno a uno, que todos los elementos que arroja cada uno de los métodos de acceso, son iguales puesto que aparecen todos los valores como TRUE"
+  },
+  {
+    "objectID": "clases/clase_06_v2.html#ejemplos-accesos--lista-1",
+    "href": "clases/clase_06_v2.html#ejemplos-accesos--lista-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplos Accesos- Lista/",
+    "text": "Ejemplos Accesos- Lista/\n\n# ir descomentando línea a línea para evaluar los resultados\nlista_demo[[1]][3]\n\n[1] \"March\"\n\n#lista_demo$meses[3]"
+  },
+  {
+    "objectID": "clases/clase_06_v2.html#pendiente-por-revisar-en-próxima-clase",
+    "href": "clases/clase_06_v2.html#pendiente-por-revisar-en-próxima-clase",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Pendiente por Revisar en próxima Clase",
+    "text": "Pendiente por Revisar en próxima Clase\nLas dos clases pasadas (5 y 6) ha quedado pendiente abordar estos dos temas:\n\nConsultar Vignettes y Cheat Sheets\nAcceso a elementos de df (filas, columnas o valor determinado)"
+  },
+  {
+    "objectID": "clases/clase_06_v2.html#vídeo-de-interés",
+    "href": "clases/clase_06_v2.html#vídeo-de-interés",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Vídeo de Interés",
+    "text": "Vídeo de Interés\nLa próxima semana empezamos a trabajar con el libro R4DS de Hadley Wickham y el segundo capítulo versa sobre la visualización de los datos, así que el siguiente vídeo puede resultar de interés https://www.youtube.com/watch?v=jbkSRLYSojo"
+  },
+  {
+    "objectID": "clases/clase_06_codigo.html",
+    "href": "clases/clase_06_codigo.html",
+    "title": "pendiente",
+    "section": "",
+    "text": "codigos ayuda\nlibrary(usethis) ## git_sitrep()\nusethis::git_vaccinate()\nusethis::edit_r_environ()\ngitcreds::gitcreds_set()\nCapitulo PAT y problemas https://happygitwithr.com/https-pat\ngit_sitrep()\n\n\npendiente\n\n\nacceso a elementos de df (filas, columnas o valor determinado)\n\n\ncheat sheets y vignettes\n\n\nhttps://www.youtube.com/watch?v=jbkSRLYSojo"
   }
 ]

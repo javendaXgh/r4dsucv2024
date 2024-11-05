@@ -1,0 +1,24 @@
+### codigos ayuda
+library(usethis) ## 
+git_sitrep()
+
+
+usethis::git_vaccinate()
+
+usethis::edit_r_environ()
+
+gitcreds::gitcreds_set()
+
+
+Capitulo PAT y problemas
+https://happygitwithr.com/https-pat
+
+
+git_sitrep()
+
+
+# pendiente
+# acceso a elementos de df (filas, columnas o valor determinado)
+# cheat sheets y vignettes
+
+# https://www.youtube.com/watch?v=jbkSRLYSojo
