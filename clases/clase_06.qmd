@@ -25,7 +25,7 @@ format:
 
 ## Función 🎲
 
-::: columns
+::::: columns
 ::: {.column width="50%"}
 ### ¿Qué hace la fn?
 
@@ -40,12 +40,10 @@ format:
 
 #
 ```
-
 :::
 
 ::: {.column width="50%"}
-
-###  ¡Juguemos!
+### ¡Juguemos!
 
 ```{webr}
 #
@@ -58,9 +56,8 @@ format:
 
 #
 ```
-
 :::
-:::
+:::::
 
 ## Función 🎲🎲....🎲
 
@@ -180,54 +177,9 @@ lista_demo$meses == lista_demo[[1]]
 
 ```
 
-## Ejemplos Accesos- Lista/ 
+## Ejemplos Accesos- Lista/
 
 ```{webr}
 lista_demo[[1]][3]
 #lista_demo$meses[3]
-```
-
-## Ejemplos Accesos- DF/ fila
-
-\[i,j\] mediante índices
-
-i=fila
-
-j=columna
-
-```{webr}
-# acceso fila 2
-mtcars[2,]
-#mtcars['Datsun 710',]
-
-```
-
-## Ejemplos Accesos- DF/columna
-
-\[i,j\] mediante índices
-
-i=fila
-
-j=columna
-
-```{webr}
-# acceso columna 3
-mtcars[,3]
-#mtcars[[3]]
-#mtcars$disp
-#mtcars['disp']
-```
-
-## Ejemplos Accesos- DF/ elemento
-
-\[i,j\] mediante índices
-
-i=fila
-
-j=columna
-
-```{webr}
-# elemento determinado i=2, j=3
-mtcars[2,3]
-
 ```

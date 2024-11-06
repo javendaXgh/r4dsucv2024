@@ -1,0 +1,189 @@
+---
+title: "Ciencia de Datos para Economistas"
+subtitle: "Clase 7- DF subsetting; Ayudas"
+#format: live-html
+filters:
+  - webr
+engine: knitr
+date: "Noviembre 6, 2024"
+format: 
+  revealjs:
+    incremental: true   
+---
+
+## Estructuras de Datos
+
++---------------------------------------------------------------+----------------------+----------------------+
+| Objeto                                                        | R                    | Ejemplo              |
++:=============================================================:+:====================:+:====================:+
+| ![](images/%20clase_3/atomo.png){width="80"}                  | vector atómico       | c(1)                 |
++---------------------------------------------------------------+----------------------+----------------------+
+| ![](images/%20clase_3/molecula.png){width="120" height="80"} ️ | vector               | c('a', 'x', 'd')     |
++---------------------------------------------------------------+----------------------+----------------------+
+| ![](images/%20clase_3/molecula2.png){width="110"}             | mátriz               | matrix(1:8,2,4)      |
++---------------------------------------------------------------+----------------------+----------------------+
+
+## Estructuras de Datos 2
+
++--------------------------------------------------+----------------------+-----------------------------------------------------+
+| Objeto                                           | R                    | Ejemplo                                             |
++:================================================:+:====================:+:===================================================:+
+| ![](images/%20clase_3/polimero.png){width="140"} | lista                | lista_test \<- list(primer=c('a', 'x'), segun=c(1)) |
++--------------------------------------------------+----------------------+-----------------------------------------------------+
+| ![](images/%20clase_3/virus.png){width="94"}     | data frame           | mtcars                                              |
++--------------------------------------------------+----------------------+-----------------------------------------------------+
+| ![](images/%20clase_3/proteina.png){width="76"}  | tibble               | as_tibble(mtcars)                                   |
++--------------------------------------------------+----------------------+-----------------------------------------------------+
+
+## Data Frames
+
+Las **data frames** son un tipo de estructura de datos en R que permite almacenar y manipular conjuntos de datos tabulares. Es similar a un conjunto de hojas de cálculo o una tabla SQL.
+
+Características principales del data frame:
+
+1.  **Columnas Variadas** : Cada columna puede contener datos de diferentes tipos (numéricos, caracteres, factores, etc.).
+
+2.  **Filas Etiquetadas** : Las filas pueden estar etiquetadas con nombres.
+
+## Data Frames - cont.
+
+3.  **Estructura Tabular** : Los datos están organizados en filas y columnas, lo que hace que sean fáciles de leer y analizar.
+
+4.  **Manipulación Flexible** : Se pueden realizar operaciones complejas sobre los datos, como selección, filtrado, agrupamiento y transformación.
+
+## **Relación Data Frames - Listas**
+
+-   **Estructura Anidada** : Un data frame es una estructura anidada donde cada columna (o columna) es un vector. Esta estructura se puede pensar como una lista de vectores.
+
+-   **Etiquetas de Columnas** : Cada columna en un data frame tiene una etiqueta o nombre, lo que la distingue de una lista ordinaria.
+
+-   **Manipulación y Acceso** : Las operaciones de acceso y manipulación a los data frames se basan en estas estructuras anidadas y etiquetas.
+
+## Acceso Elementos DF
+
+| **Vector** | **lista** | **DF**    |
+|------------|-----------|-----------|
+| \[ \]      | \[ \]     | \[ \]     |
+|            | \[\[ \]\] | \[\[ \]\] |
+|            | \$        | \$        |
+
+## Métodos \[ \], \$ y \[\[ \]\]
+
+1.  \[ \]
+
+2.  \$
+
+3.  \[\[ \]\]
+
+## Ejemplos Accesos- DF/ fila
+
+\[i,j\] mediante índices
+
+i=fila
+
+j=columna
+
+```{webr}
+# acceso fila 2
+mtcars[2,]
+#mtcars['Datsun 710',]
+
+```
+
+## Ejemplos Accesos- DF/columna
+
+\[i,j\] mediante índices
+
+i=fila
+
+j=columna
+
+```{webr}
+# acceso columna 3
+mtcars[,3]
+#mtcars[[3]]
+#mtcars$disp
+#mtcars['disp']
+```
+
+## Ejemplos Accesos- DF/ elemento
+
+\[i,j\] mediante índices
+
+i=fila
+
+j=columna
+
+```{webr}
+# elemento determinado i=2, j=3
+mtcars[2,3]
+
+```
+
+## 2da Parte/ Ayudas
+
+::::: columns
+::: {.column width="50%"}
+![](images/stackoverflow2.jpg){width="400"}
+:::
+
+::: {.column width="50%"}
+¿Para qué necesitamos ayuda? Opciones:
+
+-   Manual del Paquete
+
+-   Vignettes
+
+-   Cheat Sheets
+
+-   Otras (LLM´s, googlear, stackoverflow, foros, etc)
+:::
+:::::
+
+## Documentación Paquetes
+
+La documentación sobre las utilidades y funcionalidades de cada paquete. En el **manual del paquete** se ordenan alfabéticamente las funciones que están contenidas y para cada función se ilustra uno o más caso de usos.
+
+Hay paquetes que tienen flujos de trabajo donde se require usar diversas funciones del mismo, no obstante, con el manual muchas veces no se tiene una perspectiva general sobre cómo lograrlo.
+
+👎 La lectura alfabética de las funciones no resulta práctica, sino sólo referencial.
+
+## Obtención Documetación Paquete
+
+-   Vía Cran
+
+-   Vía RStudio:
+
+    -    Con operador `?` o `??` sino está cargado
+
+    -   Sección derecha-inferior, tab "Packages"
+
+## Vignettes
+
+Son documentos en formato HTML o PDF que proporcionan tutoriales, ejemplos de código y descripciones detalladas sobre el uso de ciertos paquetes.
+
+## Características vignettes:
+
+1.  **Ejemplos**
+
+2.  **Contenido Detallado**
+
+3.  **Versión Interactiva**
+
+4.  **Documentación Adicional**
+
+### Acceso Vignettes
+
+Para acceder a las vignettes de un paquete específico, puedes usar la siguiente función en R `browseVignettes("nombre_del_paquete")`
+
+## Cheat Sheets
+
+Las **cheat sheets** (hojas rápidas o hojas de trucos) son documentos en formato PDF que resumen información esencial sobre un paquete específico.
+
+Estas hojas proporcionan una visión rápida y un resumen conciso de los comandos, funciones de un paquete.
+
+Enlace <https://posit.co/resources/cheatsheets/?type=translations/>
+
+## Ejemplo Paquete readr
+
+![](images/clase_7/cheat.png)

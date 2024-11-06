@@ -1769,7 +1769,7 @@
     "href": "clases/clase_06.html#ejemplos-accesos--lista-1",
     "title": "Ciencia de Datos para Economistas",
     "section": "Ejemplos Accesos- Lista/",
-    "text": "Ejemplos Accesos- Lista/\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Ejemplos Accesos- Lista/\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "clases/clase_06.html#principios-nombres-funciones---cont.",
@@ -1810,22 +1810,22 @@
     "objectID": "clases/clase_06_v2.html#construir-funciones",
     "href": "clases/clase_06_v2.html#construir-funciones",
     "title": "Ciencia de Datos para Economistas",
-    "section": "",
-    "text": "¿Cómo lo hacemos?\nAyuda LLM\n\nFunciones disponibles\nSintaxis"
+    "section": "Construir Funciones:",
+    "text": "Construir Funciones:\nRepresentación de un 🎲\n\n¿Cómo lo hacemos?\nAyuda LLM\n\nFunciones disponibles\nSintaxis"
   },
   {
     "objectID": "clases/clase_06_v2.html#función",
     "href": "clases/clase_06_v2.html#función",
     "title": "Ciencia de Datos para Economistas",
     "section": "Función 🎲",
-    "text": "Función 🎲\n¿Qué debe hacer la función? ¿Qué debe representar?\n\n# ejecutar código y gradualmente descomentar líneas\nposibles_salidas_dado &lt;- c(1:6)\n# sample(posibles_salidas_dado, 1)\n# sample(posibles_salidas_dado, 2)\n# sample(posibles_salidas_dado, 3)\n# sample(posibles_salidas_dado, 7) # genera error\n# sample(posibles_salidas_dado, 7, replace=TRUE)\n\n¡Juguemos!\n\n# primera versión función\n\nlanzamiento &lt;- function(cdad_dados){\n  sample(1:6,cdad_dados, replace=TRUE)\n}\n\n# arrojar dado según función que crearmos\nlanzamiento (cdad_dados=3)\n\n[1] 2 4 6\n\nlanzamiento (cdad_dados=6)\n\n[1] 4 3 5 2 2 6"
+    "text": "Función 🎲\n¿Qué debe hacer la función? ¿Qué debe representar?\n\n# ejecutar código y gradualmente descomentar líneas\nposibles_salidas_dado &lt;- c(1:6)\n# sample(posibles_salidas_dado, 1)\n# sample(posibles_salidas_dado, 2)\n# sample(posibles_salidas_dado, 3)\n# sample(posibles_salidas_dado, 7) # genera error\n# sample(posibles_salidas_dado, 7, replace=TRUE)\n\n¡Juguemos!\n\n# primera versión función\n\nlanzamiento &lt;- function(cdad_dados){\n  sample(1:6,cdad_dados, replace=TRUE)\n}\n\n# arrojar dado según función que crearmos\nlanzamiento (cdad_dados=3)\n\n[1] 4 6 6\n\nlanzamiento (cdad_dados=6)\n\n[1] 2 4 4 3 2 5"
   },
   {
     "objectID": "clases/clase_06_v2.html#función-.",
     "href": "clases/clase_06_v2.html#función-.",
     "title": "Ciencia de Datos para Economistas",
     "section": "Función 🎲🎲….🎲",
-    "text": "Función 🎲🎲….🎲\n\n- ¿Entrada? =&gt; Argumentos\n\n# función con dos argumentos\nlanzamiento &lt;- function (cdad_dados,\n                         nombre_jugador){\n  resultado &lt;- sample (1:6,cdad_dados, replace = TRUE )\n  \n  paste(nombre_jugador, 'obtuvo el siguiente resultado',\n        resultado)\n}\n\n#La siguiente llamada a la función generará error ya que no contiente\n# dentro el valor del segundo argumento que es el nombre del jugador\n\n# lanzamiento(cdad_dados= 4)\n\nlanzamiento(nombre_jugador= 'Braian',\n            cdad_dados= 2)\n\n[1] \"Braian obtuvo el siguiente resultado 4\" \"Braian obtuvo el siguiente resultado 3\"\n\n# la siguiente ejecución generará un problema al no nombrar los\n# argumentos y en orden posicional, pasar \"Braian\" como el primer\n# argumento, que en la función que declaramos como \"lanzamiento\"\n# corresponde a \"cdad_dados\", que debe ser de tipo numérico. \n\n# Lo mismo pasaría con el segundo argumento que estamos pasando que en este caso es 5,\n# pero no lo estamos referenciando con el nombre del argumento en la \n# función, que corresponde en la segunda posición al de nombre_jugador\n\n#lanzamiento( 'Braian',\n#             5)\n\nlanzamiento(2,'Jose')\n\n[1] \"Jose obtuvo el siguiente resultado 5\" \"Jose obtuvo el siguiente resultado 1\"\n\n\nPara entender mejor la construcción de las funciones les recomiendo la lectura de esta sección del libro Hands On Promgramming With R https://rstudio-education.github.io/hopr/basics.html#sample-with-replacement que va muy similar a lo que revisamos en clase en cuanto al ejemplo del 🎲.\nPara revisar documentación de la función paste ejecutar ?paste en la consola."
+    "text": "Función 🎲🎲….🎲\n- ¿Entrada? =&gt; Argumentos\n\n# función con dos argumentos\nlanzamiento &lt;- function (cdad_dados,\n                         nombre_jugador){\n  resultado &lt;- sample (1:6,cdad_dados, replace = TRUE )\n  \n  paste(nombre_jugador, 'obtuvo el siguiente resultado',\n        resultado)\n}\n\n#La siguiente llamada a la función generará error ya que no contiente\n# dentro el valor del segundo argumento que es el nombre del jugador\n\n# lanzamiento(cdad_dados= 4)\n\nlanzamiento(nombre_jugador= 'Braian',\n            cdad_dados= 2)\n\n[1] \"Braian obtuvo el siguiente resultado 2\" \"Braian obtuvo el siguiente resultado 3\"\n\n# la siguiente ejecución generará un problema al no nombrar los\n# argumentos y en orden posicional, pasar \"Braian\" como el primer\n# argumento, que en la función que declaramos como \"lanzamiento\"\n# corresponde a \"cdad_dados\", que debe ser de tipo numérico. \n\n# Lo mismo pasaría con el segundo argumento que estamos pasando que en este caso es 5,\n# pero no lo estamos referenciando con el nombre del argumento en la \n# función, que corresponde en la segunda posición al de nombre_jugador\n\n#lanzamiento( 'Braian',\n#             5)\n\nlanzamiento(2,'Jose')\n\n[1] \"Jose obtuvo el siguiente resultado 5\" \"Jose obtuvo el siguiente resultado 6\"\n\n\nPara entender mejor la construcción de las funciones les recomiendo la lectura de esta sección del libro Hands On Promgramming With R https://rstudio-education.github.io/hopr/basics.html#sample-with-replacement que va muy similar a lo que revisamos en clase en cuanto al ejemplo del 🎲.\nPara revisar documentación de la función paste ejecutar ?paste en la consola."
   },
   {
     "objectID": "clases/clase_06_v2.html#principios-nombres-funciones",
@@ -1881,7 +1881,7 @@
     "href": "clases/clase_06_v2.html#ejemplos-accesos--lista",
     "title": "Ciencia de Datos para Economistas",
     "section": "Ejemplos Accesos- Lista",
-    "text": "Ejemplos Accesos- Lista\nEn el libro “R para Principiantes” de Juan B. Mendoza , en el acceso https://bookdown.org/jboscomendoza/r-principiantes4/listas.html , pueden obtener información adicional sobre qué son las listas\n\nmonth.name # el objeto month.name viene precargado en R\n\n [1] \"January\"   \"February\"  \"March\"     \"April\"     \"May\"       \"June\"      \"July\"     \n [8] \"August\"    \"September\" \"October\"   \"November\"  \"December\" \n\nletters # el objeto letters viene precargado en R\n\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\" \"k\" \"l\" \"m\" \"n\" \"o\" \"p\" \"q\" \"r\" \"s\" \"t\" \"u\"\n[22] \"v\" \"w\" \"x\" \"y\" \"z\"\n\nlista_demo &lt;- list(meses= month.name, letras= letters, numeros= 1:12)\nlista_demo # verificamos contenido de la lista\n\n$meses\n [1] \"January\"   \"February\"  \"March\"     \"April\"     \"May\"       \"June\"      \"July\"     \n [8] \"August\"    \"September\" \"October\"   \"November\"  \"December\" \n\n$letras\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\" \"k\" \"l\" \"m\" \"n\" \"o\" \"p\" \"q\" \"r\" \"s\" \"t\" \"u\"\n[22] \"v\" \"w\" \"x\" \"y\" \"z\"\n\n$numeros\n [1]  1  2  3  4  5  6  7  8  9 10 11 12\n\n\n\nMétodos de acceso [ ], $ y [[ ]]\n\nlista_demo[1]\n\n$meses\n [1] \"January\"   \"February\"  \"March\"     \"April\"     \"May\"       \"June\"      \"July\"     \n [8] \"August\"    \"September\" \"October\"   \"November\"  \"December\" \n\n# ir descomentando línea a línea para evaluar los resultados\n# lista_demo$meses \n# lista_demo[[1]]"
+    "text": "Ejemplos Accesos- Lista\nEn el libro “R para Principiantes” de Juan B. Mendoza , en el acceso https://bookdown.org/jboscomendoza/r-principiantes4/listas.html , pueden obtener información adicional sobre qué son las listas\n\nmonth.name # el objeto month.name viene precargado en R\n\n [1] \"January\"   \"February\"  \"March\"     \"April\"     \"May\"       \"June\"      \"July\"     \n [8] \"August\"    \"September\" \"October\"   \"November\"  \"December\" \n\nletters # el objeto letters viene precargado en R\n\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\" \"k\" \"l\" \"m\" \"n\" \"o\" \"p\" \"q\" \"r\" \"s\" \"t\" \"u\"\n[22] \"v\" \"w\" \"x\" \"y\" \"z\"\n\nlista_demo &lt;- list(meses= month.name, letras= letters, numeros= 1:12)\nlista_demo # verificamos contenido de la lista\n\n$meses\n [1] \"January\"   \"February\"  \"March\"     \"April\"     \"May\"       \"June\"      \"July\"     \n [8] \"August\"    \"September\" \"October\"   \"November\"  \"December\" \n\n$letras\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\" \"k\" \"l\" \"m\" \"n\" \"o\" \"p\" \"q\" \"r\" \"s\" \"t\" \"u\"\n[22] \"v\" \"w\" \"x\" \"y\" \"z\"\n\n$numeros\n [1]  1  2  3  4  5  6  7  8  9 10 11 12\n\n\nMétodos de acceso [ ], $ y [[ ]]\n\nlista_demo[1]\n\n$meses\n [1] \"January\"   \"February\"  \"March\"     \"April\"     \"May\"       \"June\"      \"July\"     \n [8] \"August\"    \"September\" \"October\"   \"November\"  \"December\" \n\n# ir descomentando línea a línea para evaluar los resultados\n# lista_demo$meses \n# lista_demo[[1]]"
   },
   {
     "objectID": "clases/clase_06_v2.html#comparación-elementos",
@@ -1909,7 +1909,7 @@
     "href": "clases/clase_06_v2.html#vídeo-de-interés",
     "title": "Ciencia de Datos para Economistas",
     "section": "Vídeo de Interés",
-    "text": "Vídeo de Interés\nLa próxima semana empezamos a trabajar con el libro R4DS de Hadley Wickham y el segundo capítulo versa sobre la visualización de los datos, así que el siguiente vídeo puede resultar de interés https://www.youtube.com/watch?v=jbkSRLYSojo"
+    "text": "Vídeo de Interés\nLa próxima semana empezamos a trabajar con el libro R4DS de Hadley Wickham y el segundo capítulo versa sobre la visualización de los datos, así que el siguiente vídeo puede resultar de interés https://www.youtube.com/watch?v=jbkSRLYSojo\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "clases/clase_06_codigo.html",
@@ -1953,5 +1953,124 @@
       "Prácticas",
       "Práctica 1"
     ]
+  },
+  {
+    "objectID": "clases/clase_07.html#estructuras-de-datos",
+    "href": "clases/clase_07.html#estructuras-de-datos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Estructuras de Datos",
+    "text": "Estructuras de Datos\n\n\n\n\n\n\n\n\nObjeto\nR\nEjemplo\n\n\n\n\n\nvector atómico\nc(1)\n\n\n ️\nvector\nc(‘a’, ‘x’, ‘d’)\n\n\n\nmátriz\nmatrix(1:8,2,4)"
+  },
+  {
+    "objectID": "clases/clase_07.html#estructuras-de-datos-2",
+    "href": "clases/clase_07.html#estructuras-de-datos-2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Estructuras de Datos 2",
+    "text": "Estructuras de Datos 2\n\n\n\n\n\n\n\n\nObjeto\nR\nEjemplo\n\n\n\n\n\nlista\nlista_test &lt;- list(primer=c(‘a’, ‘x’), segun=c(1))\n\n\n\ndata frame\nmtcars\n\n\n\ntibble\nas_tibble(mtcars)"
+  },
+  {
+    "objectID": "clases/clase_07.html#data-frames",
+    "href": "clases/clase_07.html#data-frames",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Data Frames",
+    "text": "Data Frames\nLas data frames son un tipo de estructura de datos en R que permite almacenar y manipular conjuntos de datos tabulares. Es similar a un conjunto de hojas de cálculo o una tabla SQL.\nCaracterísticas principales del data frame:\n\nColumnas Variadas : Cada columna puede contener datos de diferentes tipos (numéricos, caracteres, factores, etc.).\nFilas Etiquetadas : Las filas pueden estar etiquetadas con nombres."
+  },
+  {
+    "objectID": "clases/clase_07.html#data-frames---cont.",
+    "href": "clases/clase_07.html#data-frames---cont.",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Data Frames - cont.",
+    "text": "Data Frames - cont.\n\nEstructura Tabular : Los datos están organizados en filas y columnas, lo que hace que sean fáciles de leer y analizar.\nManipulación Flexible : Se pueden realizar operaciones complejas sobre los datos, como selección, filtrado, agrupamiento y transformación."
+  },
+  {
+    "objectID": "clases/clase_07.html#acceso-elementos-df",
+    "href": "clases/clase_07.html#acceso-elementos-df",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Acceso Elementos DF",
+    "text": "Acceso Elementos DF\n\n\n\nVector\nlista\nDF\n\n\n\n\n[ ]\n[ ]\n[ ]\n\n\n\n[[ ]]\n[[ ]]\n\n\n\n$\n$"
+  },
+  {
+    "objectID": "clases/clase_07.html#ejemplos-accesos--df-fila",
+    "href": "clases/clase_07.html#ejemplos-accesos--df-fila",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplos Accesos- DF/ fila",
+    "text": "Ejemplos Accesos- DF/ fila\n[i,j] mediante índices\ni=fila\nj=columna\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_07.html#ejemplos-accesos--dfcolumna",
+    "href": "clases/clase_07.html#ejemplos-accesos--dfcolumna",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplos Accesos- DF/columna",
+    "text": "Ejemplos Accesos- DF/columna\n[i,j] mediante índices\ni=fila\nj=columna\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_07.html#ejemplos-accesos--df-elemento",
+    "href": "clases/clase_07.html#ejemplos-accesos--df-elemento",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplos Accesos- DF/ elemento",
+    "text": "Ejemplos Accesos- DF/ elemento\n[i,j] mediante índices\ni=fila\nj=columna\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_07.html#da-parte-ayudas",
+    "href": "clases/clase_07.html#da-parte-ayudas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "2da Parte/ Ayudas",
+    "text": "2da Parte/ Ayudas\n\n\n\n\n¿Para qué necesitamos ayuda? Opciones:\n\nManual del Paquete\nVignettes\nCheat Sheets\nOtras (LLM´s, googlear, stackoverflow, foros, etc)"
+  },
+  {
+    "objectID": "clases/clase_07.html#vignettes",
+    "href": "clases/clase_07.html#vignettes",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Vignettes",
+    "text": "Vignettes\nSon documentos en formato HTML o PDF que proporcionan tutoriales, ejemplos de código y descripciones detalladas sobre el uso de ciertos paquetes."
+  },
+  {
+    "objectID": "clases/clase_07.html#características-vignettes",
+    "href": "clases/clase_07.html#características-vignettes",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Características vignettes:",
+    "text": "Características vignettes:\n\nEjemplos\nContenido Detallado\nVersión Interactiva\nDocumentación Adicional\n\nAcceso Vignettes\nPara acceder a las vignettes de un paquete específico, puedes usar la siguiente función en R browseVignettes(\"nombre_del_paquete\")"
+  },
+  {
+    "objectID": "clases/clase_07.html#cheat-sheets",
+    "href": "clases/clase_07.html#cheat-sheets",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Cheat Sheets",
+    "text": "Cheat Sheets\nLas cheat sheets (hojas rápidas o hojas de trucos) son documentos en formato PDF que resumen información esencial sobre un paquete específico.\nEstas hojas proporcionan una visión rápida y un resumen conciso de los comandos, funciones de un paquete.\nEnlace https://posit.co/resources/cheatsheets/?type=translations/"
+  },
+  {
+    "objectID": "clases/clase_07.html#relación-data-frames---listas",
+    "href": "clases/clase_07.html#relación-data-frames---listas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Relación Data Frames - Listas",
+    "text": "Relación Data Frames - Listas\n\nEstructura Anidada : Un data frame es una estructura anidada donde cada columna (o columna) es un vector. Esta estructura se puede pensar como una lista de vectores.\nEtiquetas de Columnas : Cada columna en un data frame tiene una etiqueta o nombre, lo que la distingue de una lista ordinaria.\nManipulación y Acceso : Las operaciones de acceso y manipulación a los data frames se basan en estas estructuras anidadas y etiquetas."
+  },
+  {
+    "objectID": "clases/clase_07.html#métodos-y",
+    "href": "clases/clase_07.html#métodos-y",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Métodos [ ], $ y [[ ]]",
+    "text": "Métodos [ ], $ y [[ ]]\n\n[ ]\n$\n[[ ]]"
+  },
+  {
+    "objectID": "clases/clase_07.html#documentación-paquetes",
+    "href": "clases/clase_07.html#documentación-paquetes",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Documentación Paquetes",
+    "text": "Documentación Paquetes\nLa documentación sobre las utilidades y funcionalidades de cada paquete. En el manual del paquete se ordenan alfabéticamente las funciones que están contenidas y para cada función se ilustra uno o más caso de usos.\nHay paquetes que tienen flujos de trabajo donde se require usar diversas funciones del mismo, no obstante, con el manual muchas veces no se tiene una perspectiva general sobre cómo lograrlo.\n👎 La lectura alfabética de las funciones no resulta práctica, sino sólo referencial."
+  },
+  {
+    "objectID": "clases/clase_07.html#obtención-documetación-paquete",
+    "href": "clases/clase_07.html#obtención-documetación-paquete",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Obtención Documetación Paquete",
+    "text": "Obtención Documetación Paquete\n\nVía Cran\nVía RStudio:\n\nCon operador ? o ?? sino está cargado\nSección derecha-inferior, tab “Packages”"
+  },
+  {
+    "objectID": "clases/clase_07.html#ejemplo-paquete-readr",
+    "href": "clases/clase_07.html#ejemplo-paquete-readr",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplo Paquete readr",
+    "text": "Ejemplo Paquete readr\n\n\n\n\n\n🔗 ucveconomiar4ds"
   }
 ]
