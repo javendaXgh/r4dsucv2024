@@ -54,7 +54,9 @@ website:
       - section: "Prácticas"
         contents:
           - href: practicas/clase6_pract1.qmd
-            text: Práctica 1
+            text: clase 6 / práctica 1
+          - href: practicas/clase6_pract2.qmd
+            text: clase 6 / práctica 2
       - section: "Proyectos"
         contents:
           - href: project/proyecto-1.qmd
