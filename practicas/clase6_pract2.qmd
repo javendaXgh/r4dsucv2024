@@ -1,5 +1,5 @@
 ---
-title: 'Clase 6 / Práctica 3'
+title: 'Clase 6 / Práctica 2'
 output:
   html_document:
     toc: yes
