@@ -1,6 +1,9 @@
 ---
 title: "Clase Virtual 1: Configurando Git y GitHub"
 format: revealjs
+execute: 
+  echo: true
+  eval: false
 ---
 
 ## Orígenes Presentación
@@ -153,7 +156,7 @@ Confirmar configuración
 #### Instalar Paquete R
 
 ```{r}
-#install.packages("usethis")
+install.packages("usethis")
 ```
 
 ```{bash}
@@ -163,8 +166,8 @@ Confirmar configuración
 
 Verificar instalación
 
-```{bash}
-#git_sitrep()
+```{r}
+usethis::git_sitrep()
 ```
 
 ## Crear PAT
@@ -176,7 +179,7 @@ Personal Access Token para conexiones HTTPS que es uno de los dos protocolos hab
 2.  Opción 2 (intentar)Ejecutar esta instrucción
 
 ```{r}
-#usethis::create_github_token()
+usethis::create_github_token()
 ```
 
 Scopes: Seleccionar esto valores: “repo”, “user”, y “workflow”.
@@ -188,6 +191,7 @@ Copiar token generado y guardar en lugar seguro
 Ejecutar este comando para pegarlo y almacenarlo
 
 ```{r}
+install.packages('gitcreds')
 #gitcreds::gitcreds_set()
 ```
 

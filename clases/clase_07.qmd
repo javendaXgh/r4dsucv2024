@@ -11,29 +11,21 @@ format:
     incremental: true   
 ---
 
-## Estructuras de Datos
+## Estructuras de Datos- Repaso
 
-+---------------------------------------------------------------+----------------------+----------------------+
-| Objeto                                                        | R                    | Ejemplo              |
-+:=============================================================:+:====================:+:====================:+
-| ![](images/%20clase_3/atomo.png){width="80"}                  | vector atómico       | c(1)                 |
-+---------------------------------------------------------------+----------------------+----------------------+
-| ![](images/%20clase_3/molecula.png){width="120" height="80"} ️ | vector               | c('a', 'x', 'd')     |
-+---------------------------------------------------------------+----------------------+----------------------+
-| ![](images/%20clase_3/molecula2.png){width="110"}             | mátriz               | matrix(1:8,2,4)      |
-+---------------------------------------------------------------+----------------------+----------------------+
+| Objeto | R | Ejemplo |
+|:--:|:--:|:--:|
+| ![](images/%20clase_3/atomo.png){width="80"} | vector atómico | c(1) |
+| ![](images/%20clase_3/molecula.png){width="120" height="80"} ️ | vector | c('a', 'x', 'd') |
+| ![](images/%20clase_3/molecula2.png){width="110"} | mátriz | matrix(1:8,2,4) |
 
-## Estructuras de Datos 2
+## Estructuras de Datos 2 - Repaso
 
-+--------------------------------------------------+----------------------+-----------------------------------------------------+
-| Objeto                                           | R                    | Ejemplo                                             |
-+:================================================:+:====================:+:===================================================:+
-| ![](images/%20clase_3/polimero.png){width="140"} | lista                | lista_test \<- list(primer=c('a', 'x'), segun=c(1)) |
-+--------------------------------------------------+----------------------+-----------------------------------------------------+
-| ![](images/%20clase_3/virus.png){width="94"}     | data frame           | mtcars                                              |
-+--------------------------------------------------+----------------------+-----------------------------------------------------+
-| ![](images/%20clase_3/proteina.png){width="76"}  | tibble               | as_tibble(mtcars)                                   |
-+--------------------------------------------------+----------------------+-----------------------------------------------------+
+| Objeto | R | Ejemplo |
+|:--:|:--:|:--:|
+| ![](images/%20clase_3/polimero.png){width="140"} | lista | lista_test \<- list(primer=c('a', 'x'), segun=c(1)) |
+| ![](images/%20clase_3/virus.png){width="94"} | data frame | mtcars |
+| ![](images/%20clase_3/proteina.png){width="76"} | tibble | as_tibble(mtcars) |
 
 ## Data Frames
 
@@ -154,7 +146,7 @@ Hay paquetes que tienen flujos de trabajo donde se require usar diversas funcion
 
 -   Vía RStudio:
 
-    -    Con operador `?` o `??` sino está cargado
+    -   Con operador `?` o `??` sino está cargado
 
     -   Sección derecha-inferior, tab "Packages"
 
