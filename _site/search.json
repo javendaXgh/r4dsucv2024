@@ -2029,7 +2029,7 @@
     "href": "clases/clase_07.html#características-vignettes",
     "title": "Ciencia de Datos para Economistas",
     "section": "Características vignettes:",
-    "text": "Características vignettes:\n\nEjemplos\nContenido Detallado\nVersión Interactiva\nDocumentación Adicional\n\n\nAcceso Vignettes\nPara acceder a las vignettes de un paquete específico, puedes usar la siguiente función en R browseVignettes(\"nombre_del_paquete\")"
+    "text": "Características vignettes:\n\nEjemplos\nContenido Detallado\nVersión Interactiva\nDocumentación Adicional\n\nAcceso Vignettes\nPara acceder a las vignettes de un paquete específico, puedes usar la siguiente función en R browseVignettes(\"nombre_del_paquete\")"
   },
   {
     "objectID": "clases/clase_07.html#cheat-sheets",
@@ -2071,14 +2071,14 @@
     "href": "clases/clase_07.html#ejemplo-paquete-readr",
     "title": "Ciencia de Datos para Economistas",
     "section": "Ejemplo Paquete readr",
-    "text": "Ejemplo Paquete readr"
+    "text": "Ejemplo Paquete readr\n\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "clases/clase_07.html#estructuras-de-datos--repaso",
     "href": "clases/clase_07.html#estructuras-de-datos--repaso",
     "title": "Ciencia de Datos para Economistas",
-    "section": "",
-    "text": "Objeto\nR\nEjemplo\n\n\n\n\n\nvector atómico\nc(1)\n\n\n ️\nvector\nc(‘a’, ‘x’, ‘d’)\n\n\n\nmátriz\nmatrix(1:8,2,4)"
+    "section": "Estructuras de Datos- Repaso",
+    "text": "Estructuras de Datos- Repaso\n\n\n\n\n\n\n\n\nObjeto\nR\nEjemplo\n\n\n\n\n\nvector atómico\nc(1)\n\n\n ️\nvector\nc(‘a’, ‘x’, ‘d’)\n\n\n\nmátriz\nmatrix(1:8,2,4)"
   },
   {
     "objectID": "clases/clase_07.html#estructuras-de-datos-2---repaso",
