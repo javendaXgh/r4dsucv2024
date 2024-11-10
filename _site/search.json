@@ -468,7 +468,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\n\n\n🖥️ láminas clase 03  💻/scripts clase 3\n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\nConstruir Funciones y Data Frames\n🖥️ láminas clase 06  💻 clase 6 versión qmd  💻 clase 6: práctica 1- versión qmd  💻 clase 6: práctica 1- versión site  🎥video render Quarto 💻 clase 6: práctica 2- versión qmd  💻 clase 6: práctica 2- versión site \n\n\n\n\nmié, 6 nov.\nDF subsetting; Ayudas\n🖥️ láminas clase 07 💻 clase 7: tarea \n\n\n4\nlun, 11 nov.\n\n\n🖥️ láminas clase 08 💻 clase 8 versión qmd  💻 clase 8: tarea \n\n\n\n\nmié, 13 nov.\n\n\n\n\n\n\n5\nlun, 18 nov.\n\n\n\n\n\n\n\n\nmié, 20 nov.\n\n\n\n\n\n\n6\nlun, 25 nov.\n\n\n\n\n\n\n\n\nmié, 27 nov.\n\n\n\n\n\n\n7\nlun, 2 dic.\n\n\n\n\n\n\n\n\nmié, 4 dic.\n\n\n\n\n\n\n8\nlun, 9 dic.\n\n\n\n\n\n\n\n\nmié, 11 dic.\n\n\n\n\n\n\n9\nlun, 16 dic.\n\n\n\n\n\n\n\n\nmié, 18 dic.\n\n\n\n\n\n\n10\nlun, 13 ene.\n\n\n\n\n\n\n\n\nmié, 15 ene.\n\n\n\n\n\n\n11\nlun, 20 ene.\n\n\n\n\n\n\n\n\nmié, 22 ene.\n\n\n\n\n\n\n12\nlun, 27 ene.\n\n\n\n\n\n\n\n\nmié, 29 ene.\n\n\n\n\n\n\n13\nlun, 3 feb.\n\n\n\n\n\n\n\n\nmié, 5 feb.\n\n\n\n\n\n\n14\nlun, 10 feb.\n\n\n\n\n\n\n\n\nmié, 12 feb.\n\n\n\n\n\n\n15\nsáb, 15 feb.\n\n\n\n\n\n\n\n\nlun, 17 feb.",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\n\n\n🖥️ láminas clase 03  💻/scripts clase 3\n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\nConstruir Funciones y Data Frames\n🖥️ láminas clase 06  💻 clase 6 versión qmd  💻 clase 6: práctica 1- versión qmd  💻 clase 6: práctica 1- versión site  🎥video render Quarto 💻 clase 6: práctica 2- versión qmd  💻 clase 6: práctica 2- versión site \n\n\n\n\nmié, 6 nov.\nDF subsetting; Ayudas\n🖥️ láminas clase 07 💻 clase 7: tarea \n\n\n4\nlun, 11 nov.\nInspección DF´s / Seleccionar Valores, Subsettings-cont\n🖥️ láminas clase 08 💻 clase 8 versión qmd  💻 clase 8: tarea \n\n\n\n\nmié, 13 nov.\n\n\n\n\n\n\n5\nlun, 18 nov.\n\n\n\n\n\n\n\n\nmié, 20 nov.\n\n\n\n\n\n\n6\nlun, 25 nov.\n\n\n\n\n\n\n\n\nmié, 27 nov.\n\n\n\n\n\n\n7\nlun, 2 dic.\n\n\n\n\n\n\n\n\nmié, 4 dic.\n\n\n\n\n\n\n8\nlun, 9 dic.\n\n\n\n\n\n\n\n\nmié, 11 dic.\n\n\n\n\n\n\n9\nlun, 16 dic.\n\n\n\n\n\n\n\n\nmié, 18 dic.\n\n\n\n\n\n\n10\nlun, 13 ene.\n\n\n\n\n\n\n\n\nmié, 15 ene.\n\n\n\n\n\n\n11\nlun, 20 ene.\n\n\n\n\n\n\n\n\nmié, 22 ene.\n\n\n\n\n\n\n12\nlun, 27 ene.\n\n\n\n\n\n\n\n\nmié, 29 ene.\n\n\n\n\n\n\n13\nlun, 3 feb.\n\n\n\n\n\n\n\n\nmié, 5 feb.\n\n\n\n\n\n\n14\nlun, 10 feb.\n\n\n\n\n\n\n\n\nmié, 12 feb.\n\n\n\n\n\n\n15\nsáb, 15 feb.\n\n\n\n\n\n\n\n\nlun, 17 feb.",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -2269,7 +2269,7 @@
     "href": "clases/clase_08.html#asignación-valores-a-variables",
     "title": "Ciencia de Datos para Economistas",
     "section": "Asignación valores a variables",
-    "text": "Asignación valores a variables\n\nvariable con promedio\ncreación df\nevaluar valores que cumplen ambas condiciones\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Asignación valores a variables\n\nvariable con promedio\ncreación df\nevaluar valores que cumplen ambas condiciones\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nReforzar con lectura propuesta en Tarea Clase 8 sobre “Tabla de Verdad”."
   },
   {
     "objectID": "clases/clase_08.html#inspección-df",
@@ -2360,7 +2360,7 @@
     "href": "clases/clase_08.html#tabla-de-contingencia",
     "title": "Ciencia de Datos para Economistas",
     "section": "Tabla de Contingencia",
-    "text": "Tabla de Contingencia\nConteo de frecuencia de un dato categórico\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Tabla de Contingencia\nCantidad cilindros por observación\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nConteo de frecuencia de un dato categórico\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "clases/clase_08.html#tabla-de-contingencia-cruzada",
@@ -2459,5 +2459,12 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "Combinar DF’s",
     "text": "Combinar DF’s\nFunción bind_rows\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_08.html#inspección-df-que-cumple-condiciones",
+    "href": "clases/clase_08.html#inspección-df-que-cumple-condiciones",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Inspección DF que Cumple Condiciones",
+    "text": "Inspección DF que Cumple Condiciones\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   }
 ]

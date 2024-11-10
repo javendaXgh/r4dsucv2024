@@ -1,6 +1,6 @@
 ---
 title: "Ciencia de Datos para Economistas"
-subtitle: "Clase 8- Inspeccionar Data Frames/borrador"
+subtitle: "Clase 8- Inspeccionar Data Frames"
 date: "Noviembre 11, 2024"
 # output:
 #   html_document:
@@ -38,6 +38,13 @@ Clase 6 práctica 1 construccion vectores
 
 ## Tabla de Contingencia
 
+Cantidad cilindros por observación
+
+```{webr}
+
+mtcars$cyl
+```
+
 Conteo de frecuencia de un dato categórico
 
 ```{webr-r}
@@ -58,6 +65,22 @@ Múltiples categorías
 table(mtcars$cyl, mtcars$vs)
 ```
 
+## Tabla Resumen Estadístico
+
+Representar los valores mínimo y máximo, primer y tercer cuartil, media, promedio de un vector o data frame.
+
+```{webr-r}
+summary(mtcars$mpg)
+```
+
+## Tabla Resumen Estadístico - cont
+
+La salida de función `summary` cambia según el objeto que estemos trabajando
+
+```{webr-r}
+summary(mtcars)
+```
+
 ## Operadores Lógicos
 
 -   $>$ (mayor a)
@@ -75,22 +98,6 @@ Vector seleccionado "millas por galón" `mpg`
 
 ```{webr-r}
 mtcars$mpg
-```
-
-## Tabla Resumen Estadístico
-
-Representar los valores mínimo y máximo, primer y tercer cuartil, media, promedio de un vector o data frame.
-
-```{webr-r}
-summary(mtcars$mpg)
-```
-
-## Tabla Resumen Estadístico - cont
-
-La salida de función `summary` cambia según el objeto que estemos trabajando
-
-```{webr-r}
-summary(mtcars)
 ```
 
 ## Vector Lógico con valores que Cumplen una Condición
@@ -128,7 +135,9 @@ df_mpg <- data.frame(mpg= mtcars$mpg,
 
 ```
 
-## Inspección df
+Reforzar con lectura propuesta en Tarea Clase 8 sobre "[Tabla de Verdad](https://es.wikipedia.org/wiki/Tabla_de_verdad)".
+
+## Inspección DF que Cumple Condiciones
 
 ```{webr-r}
 df_mpg
