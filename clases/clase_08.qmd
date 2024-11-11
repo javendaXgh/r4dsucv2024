@@ -2,6 +2,7 @@
 title: "Ciencia de Datos para Economistas"
 subtitle: "Clase 8- Inspeccionar Data Frames"
 date: "Noviembre 11, 2024"
+author: "MSc. José M. Avendaño"
 # output:
 #   html_document:
 #     toc: yes
@@ -345,6 +346,8 @@ unique(df_gapminder$year)
 
 ## DPLYR (🏇🏽 de batalla)
 
+Una gramática para la manipulación de datos.
+
 ```{webr-r}
 library(dplyr)
 ```
@@ -352,6 +355,8 @@ library(dplyr)
 ## DPLYR / Filtrado
 
 Función `filter`.
+
+Encadenamiento en los procesamientos: operador pipe `%>%`
 
 ```{webr-r}
 df_venezuela <- df_gapminder %>%

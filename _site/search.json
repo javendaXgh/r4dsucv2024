@@ -2451,7 +2451,7 @@
     "href": "clases/clase_08.html#dplyr-filtrado",
     "title": "Ciencia de Datos para Economistas",
     "section": "DPLYR / Filtrado",
-    "text": "DPLYR / Filtrado\nFunción filter.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "DPLYR / Filtrado\nFunción filter.\nEncadenamiento en los procesamientos: operador pipe %&gt;%\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "clases/clase_08.html#combinar-dfs",
