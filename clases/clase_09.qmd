@@ -17,6 +17,12 @@ format:
   # eval: false
 ---
 
+## Objetivo
+
+Realizar manipulaciones a los datos contenidos en una DF según diversos criterios
+
+![](images/im-or-trans.png){width="700"}
+
 ## Cargar Datos en formato XLS
 
 ```{r}
