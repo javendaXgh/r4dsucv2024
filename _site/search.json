@@ -2241,7 +2241,7 @@
     "href": "clases/clase_08.html#dplyr-de-batalla",
     "title": "Ciencia de Datos para Economistas",
     "section": "DPLYR (🏇🏽 de batalla)",
-    "text": "DPLYR (🏇🏽 de batalla)\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "DPLYR (🏇🏽 de batalla)\nUna gramática para la manipulación de datos.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "clases/clase_08.html#tabla-resumen-estadístico",
@@ -2303,15 +2303,15 @@
     "objectID": "clases/clase_08.html#crear-columna-con-nombre-países",
     "href": "clases/clase_08.html#crear-columna-con-nombre-países",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Crear columna con nombre países",
-    "text": "Crear columna con nombre países\nRevisar nombres filas\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n Asignar nueva columa a la DF\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "section": "Crear Columna con Nombre Países",
+    "text": "Crear Columna con Nombre Países\nRevisar nombres filas\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n Asignar nueva columa a la DF\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "clases/clase_08.html#inspección-nuevo-atributo",
     "href": "clases/clase_08.html#inspección-nuevo-atributo",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Inspección nuevo atributo",
-    "text": "Inspección nuevo atributo\nRevisar DF\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "section": "Inspección Nuevo Atributo",
+    "text": "Inspección Nuevo Atributo\nRevisar DF\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "clases/clase_08.html#funciones-valores-extremos",
@@ -2360,7 +2360,7 @@
     "href": "clases/clase_08.html#tabla-de-contingencia",
     "title": "Ciencia de Datos para Economistas",
     "section": "Tabla de Contingencia",
-    "text": "Tabla de Contingencia\nCantidad cilindros por observación\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nConteo de frecuencia de un dato categórico\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Tabla de Contingencia\nCantidad cilindros por observación\n\nmtcars$cyl\nConteo de frecuencia de un dato categórico\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "clases/clase_08.html#tabla-de-contingencia-cruzada",
@@ -2381,7 +2381,7 @@
     "href": "clases/clase_08.html#inspección-data-frame--cont",
     "title": "Ciencia de Datos para Economistas",
     "section": "Inspección Data Frame -cont",
-    "text": "Inspección Data Frame -cont\n\nNúmero de filas\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n Nombres de las columnas\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+    "text": "Inspección Data Frame -cont\nNúmero de filas\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n Nombres de las columnas\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
   },
   {
     "objectID": "clases/clase_08.html#inspección-data-frame--cont2",
@@ -2466,5 +2466,96 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "Inspección DF que Cumple Condiciones",
     "text": "Inspección DF que Cumple Condiciones\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_08.html#crear-columna-con-valor-promedio",
+    "href": "clases/clase_08.html#crear-columna-con-valor-promedio",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Crear Columna con Valor Promedio",
+    "text": "Crear Columna con Valor Promedio\nCon los valores correspondientes a pop15 y pop75 obtener promedio por cada observación\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_08.html#inspección-nuevos-atributos",
+    "href": "clases/clase_08.html#inspección-nuevos-atributos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Inspección Nuevos Atributos",
+    "text": "Inspección Nuevos Atributos\nRevisar DF\n\nPlease enable JavaScript to experience the dynamic code cell content on this page."
+  },
+  {
+    "objectID": "clases/clase_09.html#cargar-datos-en-formato-xls",
+    "href": "clases/clase_09.html#cargar-datos-en-formato-xls",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Cargar Datos en formato XLS",
+    "text": "Cargar Datos en formato XLS\n\nlibrary(readxl)\nlibrary(dplyr)\nruta &lt;- 'data_in/gapminder.xlsx'#'ruta_archivo'\ndf_gapminder &lt;- read_xlsx(ruta)"
+  },
+  {
+    "objectID": "clases/clase_09.html#operaciones-en-filas",
+    "href": "clases/clase_09.html#operaciones-en-filas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Operaciones en Filas",
+    "text": "Operaciones en Filas\n\nglimpse(df_gapminder)\n\nRows: 1,704\nColumns: 6\n$ country   &lt;chr&gt; \"Afghanistan\", \"Afghanistan\", \"Afghanistan\", \"Afghanistan\", \"Afghanist…\n$ continent &lt;chr&gt; \"Asia\", \"Asia\", \"Asia\", \"Asia\", \"Asia\", \"Asia\", \"Asia\", \"Asia\", \"Asia\"…\n$ year      &lt;dbl&gt; 1952, 1957, 1962, 1967, 1972, 1977, 1982, 1987, 1992, 1997, 2002, 2007…\n$ lifeExp   &lt;dbl&gt; 28.801, 30.332, 31.997, 34.020, 36.088, 38.438, 39.854, 40.822, 41.674…\n$ pop       &lt;dbl&gt; 8425333, 9240934, 10267083, 11537966, 13079460, 14880372, 12881816, 13…\n$ gdpPercap &lt;dbl&gt; 779.4453, 820.8530, 853.1007, 836.1971, 739.9811, 786.1134, 978.0114, …"
+  },
+  {
+    "objectID": "clases/clase_09.html#filter",
+    "href": "clases/clase_09.html#filter",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Filter",
+    "text": "Filter\n\nstr_detect()\n!is.na()"
+  },
+  {
+    "objectID": "clases/clase_09.html#slice",
+    "href": "clases/clase_09.html#slice",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Slice",
+    "text": "Slice\n\nslice_min()\nslice_max()\nslice_head()\nslice_tail()\nslice_sample()"
+  },
+  {
+    "objectID": "clases/clase_09.html#arrange",
+    "href": "clases/clase_09.html#arrange",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Arrange",
+    "text": "Arrange\n\ndesc()"
+  },
+  {
+    "objectID": "clases/clase_09.html#operaciones-en-columnas",
+    "href": "clases/clase_09.html#operaciones-en-columnas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Operaciones en Columnas",
+    "text": "Operaciones en Columnas"
+  },
+  {
+    "objectID": "clases/clase_09.html#select",
+    "href": "clases/clase_09.html#select",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Select",
+    "text": "Select\n\nselect(!)\nselect(ends_with())\neverything()"
+  },
+  {
+    "objectID": "clases/clase_09.html#rename",
+    "href": "clases/clase_09.html#rename",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Rename",
+    "text": "Rename"
+  },
+  {
+    "objectID": "clases/clase_09.html#mutate",
+    "href": "clases/clase_09.html#mutate",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Mutate",
+    "text": "Mutate\n\nifelse()\nmean()\nsum()"
+  },
+  {
+    "objectID": "clases/clase_09.html#summarise",
+    "href": "clases/clase_09.html#summarise",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Summarise",
+    "text": "Summarise"
+  },
+  {
+    "objectID": "clases/clase_09.html#group_by",
+    "href": "clases/clase_09.html#group_by",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Group_By",
+    "text": "Group_By\n\n\n\n\n🔗 ucveconomiar4ds"
   }
 ]

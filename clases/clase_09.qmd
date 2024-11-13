@@ -1,0 +1,79 @@
+---
+title: "Ciencia de Datos para Economistas"
+subtitle: "Clase 9- Trabajando con Data Frames"
+date: "Noviembre 13, 2024"
+author: "MSc. José M. Avendaño"
+# output:
+#   html_document:
+#     toc: yes
+filters:
+  - webr
+engine: knitr
+format: 
+  revealjs:
+    incremental: true   
+# execute: 
+#   echo: true
+  # eval: false
+---
+
+## Cargar Datos en formato XLS
+
+```{r}
+library(readxl)
+library(dplyr)
+ruta <- 'data_in/gapminder.xlsx'#'ruta_archivo'
+df_gapminder <- read_xlsx(ruta)
+```
+
+## Operaciones en Filas
+
+```{r}
+glimpse(df_gapminder)
+```
+
+## Filter
+
+-   str_detect()
+
+-   !is.na()
+
+## Slice
+
+-   slice_min()
+
+-   slice_max()
+
+-   slice_head()
+
+-   slice_tail()
+
+-   slice_sample()
+
+## Arrange
+
+-   desc()
+
+## Operaciones en Columnas
+
+## Select
+
+-   select(!)
+
+-   select(ends_with())
+
+-   everything()
+
+## Rename
+
+## Mutate
+
+-   ifelse()
+
+-   mean()
+
+-   sum()
+
+## Summarise
+
+## Group_By
