@@ -468,7 +468,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\n\n\n🖥️ láminas clase 03  💻/scripts clase 3\n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\nConstruir Funciones y Data Frames\n🖥️ láminas clase 06  💻 clase 6 versión qmd  💻 clase 6: práctica 1- versión qmd  💻 clase 6: práctica 1- versión site  🎥video render Quarto 💻 clase 6: práctica 2- versión qmd  💻 clase 6: práctica 2- versión site \n\n\n\n\nmié, 6 nov.\nDF subsetting; Ayudas\n🖥️ láminas clase 07 💻 clase 7: tarea \n\n\n4\nlun, 11 nov.\nInspección DF´s / Seleccionar Valores, Subsettings-cont\n🖥️ láminas clase 08 💻 clase 8 versión qmd  💻 clase 8: tarea \n\n\n\n\nmié, 13 nov.\n\n\n\n\n\n\n5\nlun, 18 nov.\n\n\n\n\n\n\n\n\nmié, 20 nov.\n\n\n\n\n\n\n6\nlun, 25 nov.\n\n\n\n\n\n\n\n\nmié, 27 nov.\n\n\n\n\n\n\n7\nlun, 2 dic.\n\n\n\n\n\n\n\n\nmié, 4 dic.\n\n\n\n\n\n\n8\nlun, 9 dic.\n\n\n\n\n\n\n\n\nmié, 11 dic.\n\n\n\n\n\n\n9\nlun, 16 dic.\n\n\n\n\n\n\n\n\nmié, 18 dic.\n\n\n\n\n\n\n10\nlun, 13 ene.\n\n\n\n\n\n\n\n\nmié, 15 ene.\n\n\n\n\n\n\n11\nlun, 20 ene.\n\n\n\n\n\n\n\n\nmié, 22 ene.\n\n\n\n\n\n\n12\nlun, 27 ene.\n\n\n\n\n\n\n\n\nmié, 29 ene.\n\n\n\n\n\n\n13\nlun, 3 feb.\n\n\n\n\n\n\n\n\nmié, 5 feb.\n\n\n\n\n\n\n14\nlun, 10 feb.\n\n\n\n\n\n\n\n\nmié, 12 feb.\n\n\n\n\n\n\n15\nsáb, 15 feb.\n\n\n\n\n\n\n\n\nlun, 17 feb.",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\n\n\n🖥️ láminas clase 03  💻/scripts clase 3\n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\nConstruir Funciones y Data Frames\n🖥️ láminas clase 06  💻 clase 6 versión qmd  💻 clase 6: práctica 1- versión qmd  💻 clase 6: práctica 1- versión site  🎥video render Quarto 💻 clase 6: práctica 2- versión qmd  💻 clase 6: práctica 2- versión site \n\n\n\n\nmié, 6 nov.\nDF subsetting; Ayudas\n🖥️ láminas clase 07 💻 clase 7: tarea \n\n\n4\nlun, 11 nov.\nInspección DF´s / Seleccionar Valores, Subsettings-cont\n🖥️ láminas clase 08 💻 clase 8 versión qmd  💻 clase 8: tarea \n\n\n\n\nmié, 13 nov.\nTrabajando con Data Frames\n🖥️ láminas clase 09\n\n\n5\nlun, 18 nov.\n\n\n\n\n\n\n\n\nmié, 20 nov.\n\n\n\n\n\n\n6\nlun, 25 nov.\n\n\n\n\n\n\n\n\nmié, 27 nov.\n\n\n\n\n\n\n7\nlun, 2 dic.\n\n\n\n\n\n\n\n\nmié, 4 dic.\n\n\n\n\n\n\n8\nlun, 9 dic.\n\n\n\n\n\n\n\n\nmié, 11 dic.\n\n\n\n\n\n\n9\nlun, 16 dic.\n\n\n\n\n\n\n\n\nmié, 18 dic.\n\n\n\n\n\n\n10\nlun, 13 ene.\n\n\n\n\n\n\n\n\nmié, 15 ene.\n\n\n\n\n\n\n11\nlun, 20 ene.\n\n\n\n\n\n\n\n\nmié, 22 ene.\n\n\n\n\n\n\n12\nlun, 27 ene.\n\n\n\n\n\n\n\n\nmié, 29 ene.\n\n\n\n\n\n\n13\nlun, 3 feb.\n\n\n\n\n\n\n\n\nmié, 5 feb.\n\n\n\n\n\n\n14\nlun, 10 feb.\n\n\n\n\n\n\n\n\nmié, 12 feb.\n\n\n\n\n\n\n15\nsáb, 15 feb.\n\n\n\n\n\n\n\n\nlun, 17 feb.",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -2029,7 +2029,7 @@
     "href": "clases/clase_07.html#características-vignettes",
     "title": "Ciencia de Datos para Economistas",
     "section": "Características vignettes:",
-    "text": "Características vignettes:\n\nEjemplos\nContenido Detallado\nVersión Interactiva\nDocumentación Adicional\n\nAcceso Vignettes\nPara acceder a las vignettes de un paquete específico, puedes usar la siguiente función en R browseVignettes(\"nombre_del_paquete\")"
+    "text": "Características vignettes:\n\nEjemplos\nContenido Detallado\nVersión Interactiva\nDocumentación Adicional\n\n\nAcceso Vignettes\nPara acceder a las vignettes de un paquete específico, puedes usar la siguiente función en R browseVignettes(\"nombre_del_paquete\")"
   },
   {
     "objectID": "clases/clase_07.html#cheat-sheets",
@@ -2071,14 +2071,14 @@
     "href": "clases/clase_07.html#ejemplo-paquete-readr",
     "title": "Ciencia de Datos para Economistas",
     "section": "Ejemplo Paquete readr",
-    "text": "Ejemplo Paquete readr\n\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Ejemplo Paquete readr"
   },
   {
     "objectID": "clases/clase_07.html#estructuras-de-datos--repaso",
     "href": "clases/clase_07.html#estructuras-de-datos--repaso",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Estructuras de Datos- Repaso",
-    "text": "Estructuras de Datos- Repaso\n\n\n\n\n\n\n\n\nObjeto\nR\nEjemplo\n\n\n\n\n\nvector atómico\nc(1)\n\n\n ️\nvector\nc(‘a’, ‘x’, ‘d’)\n\n\n\nmátriz\nmatrix(1:8,2,4)"
+    "section": "",
+    "text": "Objeto\nR\nEjemplo\n\n\n\n\n\nvector atómico\nc(1)\n\n\n ️\nvector\nc(‘a’, ‘x’, ‘d’)\n\n\n\nmátriz\nmatrix(1:8,2,4)"
   },
   {
     "objectID": "clases/clase_07.html#estructuras-de-datos-2---repaso",
