@@ -15,8 +15,7 @@ eval: false
 
 ## Objetivo:
 
-Conocer las "paths" o rutas para ubicar directorios o archivos con los cuales se trabajará. 
-Se asume que existe un archivo que se llama "archivo.txt" que está ubicado dentro de la carpeta "Documentos". La carpeta "Documentos" en Windows se puede llamar "Mis Documentos".
+Conocer las "paths" o rutas para ubicar directorios o archivos con los cuales se trabajará. Se asume que existe un archivo que se llama "archivo.txt" que está ubicado dentro de la carpeta "Documentos". La carpeta "Documentos" en Windows se puede llamar "Mis Documentos".
 
 ## 1. Rutas Absolutas
 
@@ -28,6 +27,8 @@ Una ruta absoluta es la ruta completa desde la raíz del sistema hasta el archiv
 # Ejemplo en Windows
 path_absoluto <- "C:\\Users\\NombreUsuario\\Documentos\\archivo.txt"
 ```
+
+## 1. Rutas Absolutas/cont.
 
 -   macOS/Linux : Comienza desde la raíz del sistema (por ejemplo, /) y luego las carpetas separadas por barras (/).
 
@@ -56,11 +57,15 @@ path_relativo <- "Documentos/archivo.txt"
 
 ## 3. Directorio de Trabajo
 
-El directorio de trabajo es el lugar donde R busca archivos por defecto. Verificar el Directorio de Trabajo :
+El directorio de trabajo es el lugar donde R busca archivos por defecto. 
+
+Verificar el Directorio de Trabajo :
 
 ```{r}
 getwd()
 ```
+
+## 3. Directorio de Trabajo/ cont.
 
 -   Cambiar el Directorio de Trabajo :
 
@@ -68,25 +73,24 @@ getwd()
 
         ![](images/setwd.png){width="200"}
 
-
 ## 3. Directorio de Trabajo/ cont.
 
-  -   Usando código para windows:
+-   Usando código para windows:
 
-      ```{r}
-      #| eval: false
-      # Para Windows
-      setwd("C:\\Users\\NombreUsuario\\Documentos")
+    ```{r}
+    #| eval: false
+    # Para Windows
+    setwd("C:\\Users\\NombreUsuario\\Documentos")
 
-      ```
+    ```
 
-  -   Usando código para MacOS
+-   Usando código para MacOS
 
-      ```{r}
-      #| eval: false
-      # Para macOS/Linux
-      setwd("/Users/NombreUsuario/Documentos")
-      ```
+    ```{r}
+    #| eval: false
+    # Para macOS/Linux
+    setwd("/Users/NombreUsuario/Documentos")
+    ```
 
 ## 4. Leer Archivos
 
@@ -108,7 +112,9 @@ getwd()
     # Ruta absoluta en macOS/Linux
     datos <- read.csv("/Users/NombreUsuario/Documentos/archivo.csv") 
     ```
+
 ## 5 Escribir Archivos
+
 -   Escritura de un archivo en Windows:
 
     ```{r}
@@ -129,7 +135,7 @@ getwd()
 
 ## 6. Consideraciones para Usuarios de Diferentes Sistemas Operativos
 
--   Función file.path : Esta función ayuda a construir rutas que sean compatibles con el sistema operativo que está usando.
+-   Función `file.path` : Esta función ayuda a construir rutas que sean compatibles con el sistema operativo que está usando.
 
     ```{r}
     ruta_archivo <- file.path("Directorio1", "Subdirectorio2", "archivo.txt")
@@ -141,6 +147,8 @@ getwd()
 -   Rutas Absolutas : Comienzan desde la raíz del sistema y usan barras invertidas en Windows () o barras (/) en macOS/Linux.
 
 -   Rutas Relativas : Son rutas desde el directorio de trabajo actual, usando barras invertidas en Windows () o barras (/) en macOS/Linux.
+
+## Resumen/cont.
 
 -   Directorio de Trabajo : Se puede verificar y cambiar usando getwd() y setwd().
 

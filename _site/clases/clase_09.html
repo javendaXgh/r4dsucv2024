@@ -428,6 +428,9 @@ MSc. José M. Avendaño
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># Ejemplo en Windows</span></span>
 <span id="cb1-2"><a></a>path_absoluto <span class="ot">&lt;-</span> <span class="st">"C:</span><span class="sc">\\</span><span class="st">Users</span><span class="sc">\\</span><span class="st">NombreUsuario</span><span class="sc">\\</span><span class="st">Documentos</span><span class="sc">\\</span><span class="st">archivo.txt"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="rutas-absolutascont." class="slide level2">
+<h2>1. Rutas Absolutas/cont.</h2>
 <ul>
 <li>macOS/Linux : Comienza desde la raíz del sistema (por ejemplo, /) y luego las carpetas separadas por barras (/).</li>
 </ul>
@@ -456,10 +459,14 @@ MSc. José M. Avendaño
 </section>
 <section id="directorio-de-trabajo" class="slide level2">
 <h2>3. Directorio de Trabajo</h2>
-<p>El directorio de trabajo es el lugar donde R busca archivos por defecto. Verificar el Directorio de Trabajo :</p>
+<p>El directorio de trabajo es el lugar donde R busca archivos por defecto.</p>
+<p>Verificar el Directorio de Trabajo :</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">getwd</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="directorio-de-trabajo-cont." class="slide level2">
+<h2>3. Directorio de Trabajo/ cont.</h2>
 <ul>
 <li><p>Cambiar el Directorio de Trabajo :</p>
 <ul>
@@ -468,7 +475,7 @@ MSc. José M. Avendaño
 </ul></li>
 </ul>
 </section>
-<section id="directorio-de-trabajo-cont." class="slide level2">
+<section id="directorio-de-trabajo-cont.-1" class="slide level2">
 <h2>3. Directorio de Trabajo/ cont.</h2>
 <ul>
 <li><p>Usando código para windows:</p>
@@ -525,7 +532,7 @@ MSc. José M. Avendaño
 <section id="consideraciones-para-usuarios-de-diferentes-sistemas-operativos" class="slide level2">
 <h2>6. Consideraciones para Usuarios de Diferentes Sistemas Operativos</h2>
 <ul>
-<li><p>Función file.path : Esta función ayuda a construir rutas que sean compatibles con el sistema operativo que está usando.</p>
+<li><p>Función <code>file.path</code> : Esta función ayuda a construir rutas que sean compatibles con el sistema operativo que está usando.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>ruta_archivo <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="st">"Directorio1"</span>, <span class="st">"Subdirectorio2"</span>, <span class="st">"archivo.txt"</span>)</span>
 <span id="cb12-2"><a></a>ruta_archivo</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -537,6 +544,11 @@ MSc. José M. Avendaño
 <ul>
 <li><p>Rutas Absolutas : Comienzan desde la raíz del sistema y usan barras invertidas en Windows () o barras (/) en macOS/Linux.</p></li>
 <li><p>Rutas Relativas : Son rutas desde el directorio de trabajo actual, usando barras invertidas en Windows () o barras (/) en macOS/Linux.</p></li>
+</ul>
+</section>
+<section id="resumencont." class="slide level2">
+<h2>Resumen/cont.</h2>
+<ul>
 <li><p>Directorio de Trabajo : Se puede verificar y cambiar usando getwd() y setwd().</p></li>
 <li><p>Leer/Escribir Archivos : Usar rutas relativas o absolutas según sea necesario, considerando el sistema operativo.</p></li>
 </ul>

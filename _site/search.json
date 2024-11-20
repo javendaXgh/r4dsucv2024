@@ -2612,7 +2612,7 @@
     "href": "clases/clase_09.html#rutas-absolutas",
     "title": "Ciencia de Datos para Economistas",
     "section": "1. Rutas Absolutas",
-    "text": "1. Rutas Absolutas\nUna ruta absoluta es la ruta completa desde la raíz del sistema hasta el archivo o directorio específico.\n\nWindows : Comienza con una letra seguida de dos puntos (por ejemplo, C:) y luego las carpetas separadas por barras invertidas ().\n\n\n# Ejemplo en Windows\npath_absoluto &lt;- \"C:\\\\Users\\\\NombreUsuario\\\\Documentos\\\\archivo.txt\"\n\n\nmacOS/Linux : Comienza desde la raíz del sistema (por ejemplo, /) y luego las carpetas separadas por barras (/).\n\n\n# Ejemplo en macOS/Linux\npath_absoluto &lt;- \"/Users/NombreUsuario/Documentos/archivo.txt\""
+    "text": "1. Rutas Absolutas\nUna ruta absoluta es la ruta completa desde la raíz del sistema hasta el archivo o directorio específico.\n\nWindows : Comienza con una letra seguida de dos puntos (por ejemplo, C:) y luego las carpetas separadas por barras invertidas ().\n\n\n# Ejemplo en Windows\npath_absoluto &lt;- \"C:\\\\Users\\\\NombreUsuario\\\\Documentos\\\\archivo.txt\""
   },
   {
     "objectID": "clases/clase_09.html#rutas-relativas",
@@ -2626,7 +2626,7 @@
     "href": "clases/clase_09.html#directorio-de-trabajo",
     "title": "Ciencia de Datos para Economistas",
     "section": "3. Directorio de Trabajo",
-    "text": "3. Directorio de Trabajo\nEl directorio de trabajo es el lugar donde R busca archivos por defecto. Verificar el Directorio de Trabajo :\n\ngetwd()\n\n\nCambiar el Directorio de Trabajo :\n\nUsando la interfaz gráfica de RStudio: ⚙️ -Set As Working Directory.... Ver sección inferior derecha:"
+    "text": "3. Directorio de Trabajo\nEl directorio de trabajo es el lugar donde R busca archivos por defecto.\nVerificar el Directorio de Trabajo :\n\ngetwd()"
   },
   {
     "objectID": "clases/clase_09.html#leer-y-escribir-archivos",
@@ -2647,14 +2647,14 @@
     "href": "clases/clase_09.html#resumen",
     "title": "Ciencia de Datos para Economistas",
     "section": "Resumen",
-    "text": "Resumen\n\nRutas Absolutas : Comienzan desde la raíz del sistema y usan barras invertidas en Windows () o barras (/) en macOS/Linux.\nRutas Relativas : Son rutas desde el directorio de trabajo actual, usando barras invertidas en Windows () o barras (/) en macOS/Linux.\nDirectorio de Trabajo : Se puede verificar y cambiar usando getwd() y setwd().\nLeer/Escribir Archivos : Usar rutas relativas o absolutas según sea necesario, considerando el sistema operativo.\n\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Resumen\n\nRutas Absolutas : Comienzan desde la raíz del sistema y usan barras invertidas en Windows () o barras (/) en macOS/Linux.\nRutas Relativas : Son rutas desde el directorio de trabajo actual, usando barras invertidas en Windows () o barras (/) en macOS/Linux."
   },
   {
     "objectID": "clases/clase_09.html#directorio-de-trabajo-cont.",
     "href": "clases/clase_09.html#directorio-de-trabajo-cont.",
     "title": "Ciencia de Datos para Economistas",
     "section": "3. Directorio de Trabajo/ cont.",
-    "text": "3. Directorio de Trabajo/ cont.\n\nUsando código para windows:\n\n# Para Windows\nsetwd(\"C:\\\\Users\\\\NombreUsuario\\\\Documentos\")\n\nUsando código para MacOS\n\n# Para macOS/Linux\nsetwd(\"/Users/NombreUsuario/Documentos\")"
+    "text": "3. Directorio de Trabajo/ cont.\n\nCambiar el Directorio de Trabajo :\n\nUsando la interfaz gráfica de RStudio: ⚙️ -Set As Working Directory.... Ver sección inferior derecha:"
   },
   {
     "objectID": "clases/clase_09.html#leer-archivos",
@@ -2725,5 +2725,26 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "Lecturas Recomendadas:",
     "text": "Lecturas Recomendadas:\n\nCapítulo 4 R4DS (temas pasados referente a variables y operaciones básicas)\nCapítulo 5 R4DS: comparaciones, operadores lógicos, arrange, select, mutate, summarise, pipe operator. En el capítulo se tratan los valores faltantes NA que luego serán abordados\n\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_09.html#resumencont.",
+    "href": "clases/clase_09.html#resumencont.",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Resumen/cont.",
+    "text": "Resumen/cont.\n\nDirectorio de Trabajo : Se puede verificar y cambiar usando getwd() y setwd().\nLeer/Escribir Archivos : Usar rutas relativas o absolutas según sea necesario, considerando el sistema operativo.\n\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_09.html#rutas-absolutascont.",
+    "href": "clases/clase_09.html#rutas-absolutascont.",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "1. Rutas Absolutas/cont.",
+    "text": "1. Rutas Absolutas/cont.\n\nmacOS/Linux : Comienza desde la raíz del sistema (por ejemplo, /) y luego las carpetas separadas por barras (/).\n\n\n# Ejemplo en macOS/Linux\npath_absoluto &lt;- \"/Users/NombreUsuario/Documentos/archivo.txt\""
+  },
+  {
+    "objectID": "clases/clase_09.html#directorio-de-trabajo-cont.-1",
+    "href": "clases/clase_09.html#directorio-de-trabajo-cont.-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "3. Directorio de Trabajo/ cont.",
+    "text": "3. Directorio de Trabajo/ cont.\n\nUsando código para windows:\n\n# Para Windows\nsetwd(\"C:\\\\Users\\\\NombreUsuario\\\\Documentos\")\n\nUsando código para MacOS\n\n# Para macOS/Linux\nsetwd(\"/Users/NombreUsuario/Documentos\")"
   }
 ]
