@@ -20,6 +20,16 @@ Realizar manipulaciones a los datos contenidos en una DF según diversos criteri
 
 ![](images/im-or-trans.png)
 
+::: notes
+Anuncios:
+
+-   Chat y lecturas
+
+-   Sesión lunes visualizaciones
+
+-   Sesión miércoles proyecto y tarea ensayo
+:::
+
 ## Operaciones en Columnas
 
 ## Select
@@ -44,7 +54,7 @@ Realizar manipulaciones a los datos contenidos en una DF según diversos criteri
 
 ## Group_By
 
-Lecturas Recomendadas:
+## Lecturas Recomendadas:
 
 -   Capítulo 4 R4DS (temas pasados referente a variables y operaciones básicas)
 

@@ -2675,7 +2675,7 @@
     "href": "clases/clase_11.html#objetivo",
     "title": "Ciencia de Datos para Economistas",
     "section": "Objetivo",
-    "text": "Objetivo\nRealizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las columnas o atributos."
+    "text": "Objetivo\nRealizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las columnas o atributos.\n\n\nAnuncios:\n\nChat y lecturas\nSesión lunes visualizaciones\nSesión miércoles proyecto y tarea ensayo"
   },
   {
     "objectID": "clases/clase_11.html#operaciones-en-columnas",
@@ -2717,6 +2717,13 @@
     "href": "clases/clase_11.html#group_by",
     "title": "Ciencia de Datos para Economistas",
     "section": "Group_By",
-    "text": "Group_By\nLecturas Recomendadas:\n\nCapítulo 4 R4DS (temas pasados referente a variables y operaciones básicas)\nCapítulo 5 R4DS: comparaciones, operadores lógicos, arrange, select, mutate, summarise, pipe operator. En el capítulo se tratan los valores faltantes NA que luego serán abordados\n\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Group_By"
+  },
+  {
+    "objectID": "clases/clase_11.html#lecturas-recomendadas",
+    "href": "clases/clase_11.html#lecturas-recomendadas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Lecturas Recomendadas:",
+    "text": "Lecturas Recomendadas:\n\nCapítulo 4 R4DS (temas pasados referente a variables y operaciones básicas)\nCapítulo 5 R4DS: comparaciones, operadores lógicos, arrange, select, mutate, summarise, pipe operator. En el capítulo se tratan los valores faltantes NA que luego serán abordados\n\n\n\n\n\n🔗 ucveconomiar4ds"
   }
 ]
