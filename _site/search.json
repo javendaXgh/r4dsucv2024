@@ -2674,8 +2674,8 @@
     "objectID": "clases/clase_11.html#objetivo",
     "href": "clases/clase_11.html#objetivo",
     "title": "Ciencia de Datos para Economistas",
-    "section": "",
-    "text": "Realizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las columnas o atributos.\n\n\nAnuncios:\n\nmodificación en presentación clase 9 y 10\nChat y lecturas\nSesión lunes visualizaciones\nSesión miércoles proyecto y tarea ensayo"
+    "section": "Objetivo",
+    "text": "Objetivo\nRealizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las columnas o atributos.\n\n\nAnuncios:\n\nmodificación en presentación clase 9 y 10\nChat y lecturas\nSesión lunes visualizaciones\nSesión miércoles proyecto y tarea ensayo"
   },
   {
     "objectID": "clases/clase_11.html#operaciones-en-columnas",
@@ -2724,7 +2724,7 @@
     "href": "clases/clase_11.html#lecturas-recomendadas",
     "title": "Ciencia de Datos para Economistas",
     "section": "Lecturas Recomendadas:",
-    "text": "Lecturas Recomendadas:\n\nCapítulo 4 R4DS (temas pasados referente a variables y operaciones básicas)\nCapítulo 5 R4DS: comparaciones, operadores lógicos, arrange, select, mutate, summarise, pipe operator. En el capítulo se tratan los valores faltantes NA que luego serán abordados"
+    "text": "Lecturas Recomendadas:\n\nCapítulo 4 R4DS (temas pasados referente a variables y operaciones básicas)\nCapítulo 5 R4DS: comparaciones, operadores lógicos, arrange, select, mutate, summarise, pipe operator. En el capítulo se tratan los valores faltantes NA que luego serán abordados\n\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "clases/clase_09.html#resumencont.",
@@ -2885,14 +2885,14 @@
     "href": "clases/clase_10.html#slice_sample",
     "title": "Ciencia de Datos para Economistas",
     "section": "slice_sample()",
-    "text": "slice_sample()\nUna muestra aleatoria de valores filtrando previamente de acuerdo a un criterio\n\ncontinentes[1]\n\n[1] \"Asia\"\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[1])%&gt;%\n  slice_sample(n=10)\n\n# A tibble: 10 × 6\n   country      continent  year lifeExp       pop gdpPercap\n   &lt;chr&gt;        &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n 1 Iran         Asia       1972    55.2  30614000     9614.\n 2 Jordan       Asia       1982    63.7   2347031     4161.\n 3 Philippines  Asia       1952    47.8  22438691     1273.\n 4 Indonesia    Asia       1997    66.0 199278000     3119.\n 5 India        Asia       1992    60.2 872000000     1164.\n 6 Saudi Arabia Asia       2002    71.6  24501530    19015.\n 7 Myanmar      Asia       1962    45.1  23634436      388 \n 8 Indonesia    Asia       2007    70.6 223547000     3541.\n 9 Syria        Asia       1967    53.7   5680812     1882.\n10 Jordan       Asia       1967    51.6   1255058     2742."
+    "text": "slice_sample()\nUna muestra aleatoria de valores filtrando previamente de acuerdo a un criterio\n\ncontinentes[1]\n\n[1] \"Asia\"\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[1])%&gt;%\n  slice_sample(n=10)\n\n# A tibble: 10 × 6\n   country          continent  year lifeExp       pop gdpPercap\n   &lt;chr&gt;            &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n 1 Korea, Dem. Rep. Asia       2007    67.3  23301725     1593.\n 2 Japan            Asia       1962    68.7  95831757     6577.\n 3 Cambodia         Asia       1972    40.3   7450606      422.\n 4 Korea, Rep.      Asia       1977    64.8  36436000     4657.\n 5 Iraq             Asia       1977    60.4  11882916    14688.\n 6 Korea, Rep.      Asia       1957    52.7  22611552     1488.\n 7 Jordan           Asia       1992    68.0   3867409     3432.\n 8 Japan            Asia       1992    79.4 124329269    26825.\n 9 Saudi Arabia     Asia       1962    45.9   4943029    11626.\n10 Singapore        Asia       1997    77.2   3802309    33519."
   },
   {
     "objectID": "clases/clase_10.html#equivalente-slice_tail-en-rbase-1",
     "href": "clases/clase_10.html#equivalente-slice_tail-en-rbase-1",
     "title": "Ciencia de Datos para Economistas",
     "section": "equivalente slice_tail() en Rbase",
-    "text": "equivalente slice_tail() en Rbase\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[1])%&gt;%\n  .[sample(1:nrow(.),10),]\n\n# A tibble: 10 × 6\n   country     continent  year lifeExp      pop gdpPercap\n   &lt;chr&gt;       &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n 1 Bangladesh  Asia       1972    45.3 70759295      630.\n 2 Myanmar     Asia       1952    36.3 20092996      331 \n 3 Vietnam     Asia       2002    73.0 80908147     1764.\n 4 Yemen, Rep. Asia       1977    44.2  8403990     1830.\n 5 Iran        Asia       1997    68.0 63327987     8264.\n 6 Nepal       Asia       2007    63.8 28901790     1091.\n 7 Iraq        Asia       2007    59.5 27499638     4471.\n 8 Pakistan    Asia       1962    47.7 53100671      803.\n 9 Bahrain     Asia       1977    65.6   297410    19340.\n10 Vietnam     Asia       1977    55.8 50533506      714."
+    "text": "equivalente slice_tail() en Rbase\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[1])%&gt;%\n  .[sample(1:nrow(.),10),]\n\n# A tibble: 10 × 6\n   country      continent  year lifeExp        pop gdpPercap\n   &lt;chr&gt;        &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;\n 1 Yemen, Rep.  Asia       1972    39.8    7407075     1265.\n 2 Saudi Arabia Asia       1962    45.9    4943029    11626.\n 3 Korea, Rep.  Asia       1982    67.1   39326000     5623.\n 4 Israel       Asia       1987    75.6    4203148    17122.\n 5 Iran         Asia       1957    47.2   19792000     3290.\n 6 Oman         Asia       1952    37.6     507833     1828.\n 7 Philippines  Asia       1987    64.2   60017788     2190.\n 8 Bahrain      Asia       2002    74.8     656397    23404.\n 9 Iraq         Asia       1957    48.4    6248643     6229.\n10 China        Asia       1992    68.7 1164970000     1656."
   },
   {
     "objectID": "clases/clase_10.html#reordenar-datos-basado-en-un-criterio-arrange",
