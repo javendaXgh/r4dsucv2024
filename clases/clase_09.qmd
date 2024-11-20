@@ -1,85 +1,147 @@
 ---
 title: "Ciencia de Datos para Economistas"
-subtitle: "Clase 9- Trabajando con Data Frames"
+subtitle: "Clase 09- Rutas (paths)"
 date: "Noviembre 13, 2024"
 author: "MSc. José M. Avendaño"
 # output:
 #   html_document:
 #     toc: yes
-filters:
-  - webr
-engine: knitr
 format: 
-  revealjs:
-    incremental: true   
-# execute: 
-#   echo: true
-  # eval: false
+  revealjs
+execute:
+  echo: true
+eval: false
 ---
 
-## Objetivo
+## Objetivo:
 
-Realizar manipulaciones a los datos contenidos en una DF según diversos criterios
+Conocer las "paths" o rutas para ubicar directorios o archivos con los cuales se trabajará. 
+Se asume que existe un archivo que se llama "archivo.txt" que está ubicado dentro de la carpeta "Documentos". La carpeta "Documentos" en Windows se puede llamar "Mis Documentos".
 
-![](images/im-or-trans.png){width="700"}
+## 1. Rutas Absolutas
 
-## Cargar Datos en formato XLS
+Una ruta absoluta es la ruta completa desde la raíz del sistema hasta el archivo o directorio específico.
 
-```{r}
-library(readxl)
-library(dplyr)
-ruta <- 'data_in/gapminder.xlsx'#'ruta_archivo'
-df_gapminder <- read_xlsx(ruta)
-```
-
-## Operaciones en Filas
+-   Windows : Comienza con una letra seguida de dos puntos (por ejemplo, C:) y luego las carpetas separadas por barras invertidas ().
 
 ```{r}
-glimpse(df_gapminder)
+# Ejemplo en Windows
+path_absoluto <- "C:\\Users\\NombreUsuario\\Documentos\\archivo.txt"
 ```
 
-## Filter
+-   macOS/Linux : Comienza desde la raíz del sistema (por ejemplo, /) y luego las carpetas separadas por barras (/).
 
--   str_detect()
+```{r}
+# Ejemplo en macOS/Linux
+path_absoluto <- "/Users/NombreUsuario/Documentos/archivo.txt"
+```
 
--   !is.na()
+## 2. Rutas Relativas
 
-## Slice
+Una ruta relativa es la ruta desde el directorio de trabajo actual hasta el archivo o directorio específico.
 
--   slice_min()
+-   Windows : Las rutas relativas también usan barras invertidas (\\\\).
 
--   slice_max()
+```{r}
+# Ejemplo en Windows
+path_relativo <- "Documentos\\archivo.txt"
+```
 
--   slice_head()
+-   macOS/Linux : Las rutas relativas usan barras (/).
 
--   slice_tail()
+```{r}
+# Ejemplo en macOS/Linux
+path_relativo <- "Documentos/archivo.txt"
+```
 
--   slice_sample()
+## 3. Directorio de Trabajo
 
-## Arrange
+El directorio de trabajo es el lugar donde R busca archivos por defecto. Verificar el Directorio de Trabajo :
 
--   desc()
+```{r}
+getwd()
+```
 
-## Operaciones en Columnas
+-   Cambiar el Directorio de Trabajo :
 
-## Select
+    -   Usando la interfaz gráfica de RStudio: `⚙️ -Set As Working Directory...`. Ver sección inferior derecha:
 
--   select(!)
+        ![](images/setwd.png){width="200"}
 
--   select(ends_with())
 
--   everything()
+## 3. Directorio de Trabajo/ cont.
 
-## Rename
+  -   Usando código para windows:
 
-## Mutate
+      ```{r}
+      #| eval: false
+      # Para Windows
+      setwd("C:\\Users\\NombreUsuario\\Documentos")
 
--   ifelse()
+      ```
 
--   mean()
+  -   Usando código para MacOS
 
--   sum()
+      ```{r}
+      #| eval: false
+      # Para macOS/Linux
+      setwd("/Users/NombreUsuario/Documentos")
+      ```
 
-## Summarise
+## 4. Leer Archivos
 
-## Group_By
+-   Lectura de un archivo en Windows :
+
+    ```{r}
+    # Ruta relativa
+    datos <- read.csv("archivo.csv")  
+
+    # Ruta absoluta en Windows
+    datos <- read.csv("C:\\Users\\NombreUsuario\\Documentos\\archivo.csv")  
+    ```
+
+-   Lectura de un archivo en MacOS:
+
+    ```{r}
+    # Ruta relativa
+    datos <- read.csv("archivo.csv")  
+    # Ruta absoluta en macOS/Linux
+    datos <- read.csv("/Users/NombreUsuario/Documentos/archivo.csv") 
+    ```
+## 5 Escribir Archivos
+-   Escritura de un archivo en Windows:
+
+    ```{r}
+    # Ruta relativa
+    write.csv(datos, "nuevo_archivo.csv")  
+    # Ruta absoluta en Windows
+    write.csv(datos, "C:\\Users\\NombreUsuario\\Documentos\\nuevo_archivo.csv")  
+    ```
+
+-   Escritura de un archivo en MacOS
+
+    ```{r}
+    # Ruta relativa
+    write.csv(datos, "nuevo_archivo.csv")  
+    # Ruta absoluta en macOS/Linux
+    write.csv(datos, "/Users/NombreUsuario/Documentos/nuevo_archivo.csv")  
+    ```
+
+## 6. Consideraciones para Usuarios de Diferentes Sistemas Operativos
+
+-   Función file.path : Esta función ayuda a construir rutas que sean compatibles con el sistema operativo que está usando.
+
+    ```{r}
+    ruta_archivo <- file.path("Directorio1", "Subdirectorio2", "archivo.txt")
+    ruta_archivo
+    ```
+
+## Resumen
+
+-   Rutas Absolutas : Comienzan desde la raíz del sistema y usan barras invertidas en Windows () o barras (/) en macOS/Linux.
+
+-   Rutas Relativas : Son rutas desde el directorio de trabajo actual, usando barras invertidas en Windows () o barras (/) en macOS/Linux.
+
+-   Directorio de Trabajo : Se puede verificar y cambiar usando getwd() y setwd().
+
+-   Leer/Escribir Archivos : Usar rutas relativas o absolutas según sea necesario, considerando el sistema operativo.

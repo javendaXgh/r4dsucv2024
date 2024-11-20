@@ -390,7 +390,7 @@
     }
   </style>
 <meta property="og:title" content="Ciencia de Datos para Economistas – UCV EconomíaR4DS">
-<meta property="og:description" content="Clase 9- Trabajando con Data Frames">
+<meta property="og:description" content="Clase 09- Rutas (paths)">
 <meta property="og:site_name" content="UCV EconomíaR4DS">
 </head>
 <body class="quarto-light">
@@ -399,7 +399,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Ciencia de Datos para Economistas</h1>
-  <p class="subtitle">Clase 9- Trabajando con Data Frames</p>
+  <p class="subtitle">Clase 09- Rutas (paths)</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -415,85 +415,131 @@ MSc. José M. Avendaño
   <p class="date">2024-11-13</p>
 </section>
 <section id="objetivo" class="slide level2">
-<h2>Objetivo</h2>
-<p>Realizar manipulaciones a los datos contenidos en una DF según diversos criterios</p>
-
-<img data-src="images/im-or-trans.png" width="700" class="r-stretch"></section>
-<section id="cargar-datos-en-formato-xls" class="slide level2">
-<h2>Cargar Datos en formato XLS</h2>
+<h2>Objetivo:</h2>
+<p>Conocer las “paths” o rutas para ubicar directorios o archivos con los cuales se trabajará. Se asume que existe un archivo que se llama “archivo.txt” que está ubicado dentro de la carpeta “Documentos”. La carpeta “Documentos” en Windows se puede llamar “Mis Documentos”.</p>
+</section>
+<section id="rutas-absolutas" class="slide level2">
+<h2>1. Rutas Absolutas</h2>
+<p>Una ruta absoluta es la ruta completa desde la raíz del sistema hasta el archivo o directorio específico.</p>
+<ul>
+<li>Windows : Comienza con una letra seguida de dos puntos (por ejemplo, C:) y luego las carpetas separadas por barras invertidas ().</li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(readxl)</span>
-<span id="cb1-2"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb1-3"><a></a>ruta <span class="ot">&lt;-</span> <span class="st">'data_in/gapminder.xlsx'</span><span class="co">#'ruta_archivo'</span></span>
-<span id="cb1-4"><a></a>df_gapminder <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(ruta)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># Ejemplo en Windows</span></span>
+<span id="cb1-2"><a></a>path_absoluto <span class="ot">&lt;-</span> <span class="st">"C:</span><span class="sc">\\</span><span class="st">Users</span><span class="sc">\\</span><span class="st">NombreUsuario</span><span class="sc">\\</span><span class="st">Documentos</span><span class="sc">\\</span><span class="st">archivo.txt"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="operaciones-en-filas" class="slide level2">
-<h2>Operaciones en Filas</h2>
+<ul>
+<li>macOS/Linux : Comienza desde la raíz del sistema (por ejemplo, /) y luego las carpetas separadas por barras (/).</li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">glimpse</span>(df_gapminder)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Rows: 1,704
-Columns: 6
-$ country   &lt;chr&gt; "Afghanistan", "Afghanistan", "Afghanistan", "Afghanistan", "Afghanist…
-$ continent &lt;chr&gt; "Asia", "Asia", "Asia", "Asia", "Asia", "Asia", "Asia", "Asia", "Asia"…
-$ year      &lt;dbl&gt; 1952, 1957, 1962, 1967, 1972, 1977, 1982, 1987, 1992, 1997, 2002, 2007…
-$ lifeExp   &lt;dbl&gt; 28.801, 30.332, 31.997, 34.020, 36.088, 38.438, 39.854, 40.822, 41.674…
-$ pop       &lt;dbl&gt; 8425333, 9240934, 10267083, 11537966, 13079460, 14880372, 12881816, 13…
-$ gdpPercap &lt;dbl&gt; 779.4453, 820.8530, 853.1007, 836.1971, 739.9811, 786.1134, 978.0114, …</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># Ejemplo en macOS/Linux</span></span>
+<span id="cb2-2"><a></a>path_absoluto <span class="ot">&lt;-</span> <span class="st">"/Users/NombreUsuario/Documentos/archivo.txt"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
-<section id="filter" class="slide level2">
-<h2>Filter</h2>
+<section id="rutas-relativas" class="slide level2">
+<h2>2. Rutas Relativas</h2>
+<p>Una ruta relativa es la ruta desde el directorio de trabajo actual hasta el archivo o directorio específico.</p>
 <ul>
-<li class="fragment"><p>str_detect()</p></li>
-<li class="fragment"><p>!is.na()</p></li>
+<li>Windows : Las rutas relativas también usan barras invertidas (\\).</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># Ejemplo en Windows</span></span>
+<span id="cb3-2"><a></a>path_relativo <span class="ot">&lt;-</span> <span class="st">"Documentos</span><span class="sc">\\</span><span class="st">archivo.txt"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li>macOS/Linux : Las rutas relativas usan barras (/).</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="co"># Ejemplo en macOS/Linux</span></span>
+<span id="cb4-2"><a></a>path_relativo <span class="ot">&lt;-</span> <span class="st">"Documentos/archivo.txt"</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="directorio-de-trabajo" class="slide level2">
+<h2>3. Directorio de Trabajo</h2>
+<p>El directorio de trabajo es el lugar donde R busca archivos por defecto. Verificar el Directorio de Trabajo :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">getwd</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<ul>
+<li><p>Cambiar el Directorio de Trabajo :</p>
+<ul>
+<li><p>Usando la interfaz gráfica de RStudio: <code>⚙️ -Set As Working Directory...</code>. Ver sección inferior derecha:</p>
+<p><img data-src="images/setwd.png" width="200"></p></li>
+</ul></li>
 </ul>
 </section>
-<section id="slice" class="slide level2">
-<h2>Slice</h2>
+<section id="directorio-de-trabajo-cont." class="slide level2">
+<h2>3. Directorio de Trabajo/ cont.</h2>
 <ul>
-<li class="fragment"><p>slice_min()</p></li>
-<li class="fragment"><p>slice_max()</p></li>
-<li class="fragment"><p>slice_head()</p></li>
-<li class="fragment"><p>slice_tail()</p></li>
-<li class="fragment"><p>slice_sample()</p></li>
+<li><p>Usando código para windows:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="co"># Para Windows</span></span>
+<span id="cb6-2"><a></a><span class="fu">setwd</span>(<span class="st">"C:</span><span class="sc">\\</span><span class="st">Users</span><span class="sc">\\</span><span class="st">NombreUsuario</span><span class="sc">\\</span><span class="st">Documentos"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+<li><p>Usando código para MacOS</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="co"># Para macOS/Linux</span></span>
+<span id="cb7-2"><a></a><span class="fu">setwd</span>(<span class="st">"/Users/NombreUsuario/Documentos"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
 </ul>
 </section>
-<section id="arrange" class="slide level2">
-<h2>Arrange</h2>
+<section id="leer-archivos" class="slide level2">
+<h2>4. Leer Archivos</h2>
 <ul>
-<li class="fragment">desc()</li>
+<li><p>Lectura de un archivo en Windows :</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="co"># Ruta relativa</span></span>
+<span id="cb8-2"><a></a>datos <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"archivo.csv"</span>)  </span>
+<span id="cb8-3"><a></a></span>
+<span id="cb8-4"><a></a><span class="co"># Ruta absoluta en Windows</span></span>
+<span id="cb8-5"><a></a>datos <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"C:</span><span class="sc">\\</span><span class="st">Users</span><span class="sc">\\</span><span class="st">NombreUsuario</span><span class="sc">\\</span><span class="st">Documentos</span><span class="sc">\\</span><span class="st">archivo.csv"</span>)  </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+<li><p>Lectura de un archivo en MacOS:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="co"># Ruta relativa</span></span>
+<span id="cb9-2"><a></a>datos <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"archivo.csv"</span>)  </span>
+<span id="cb9-3"><a></a><span class="co"># Ruta absoluta en macOS/Linux</span></span>
+<span id="cb9-4"><a></a>datos <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"/Users/NombreUsuario/Documentos/archivo.csv"</span>) </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
 </ul>
 </section>
-<section id="operaciones-en-columnas" class="slide level2">
-<h2>Operaciones en Columnas</h2>
-</section>
-<section id="select" class="slide level2">
-<h2>Select</h2>
+<section id="escribir-archivos" class="slide level2">
+<h2>5 Escribir Archivos</h2>
 <ul>
-<li class="fragment"><p>select(!)</p></li>
-<li class="fragment"><p>select(ends_with())</p></li>
-<li class="fragment"><p>everything()</p></li>
+<li><p>Escritura de un archivo en Windows:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="co"># Ruta relativa</span></span>
+<span id="cb10-2"><a></a><span class="fu">write.csv</span>(datos, <span class="st">"nuevo_archivo.csv"</span>)  </span>
+<span id="cb10-3"><a></a><span class="co"># Ruta absoluta en Windows</span></span>
+<span id="cb10-4"><a></a><span class="fu">write.csv</span>(datos, <span class="st">"C:</span><span class="sc">\\</span><span class="st">Users</span><span class="sc">\\</span><span class="st">NombreUsuario</span><span class="sc">\\</span><span class="st">Documentos</span><span class="sc">\\</span><span class="st">nuevo_archivo.csv"</span>)  </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
+<li><p>Escritura de un archivo en MacOS</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="co"># Ruta relativa</span></span>
+<span id="cb11-2"><a></a><span class="fu">write.csv</span>(datos, <span class="st">"nuevo_archivo.csv"</span>)  </span>
+<span id="cb11-3"><a></a><span class="co"># Ruta absoluta en macOS/Linux</span></span>
+<span id="cb11-4"><a></a><span class="fu">write.csv</span>(datos, <span class="st">"/Users/NombreUsuario/Documentos/nuevo_archivo.csv"</span>)  </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
 </ul>
 </section>
-<section id="rename" class="slide level2">
-<h2>Rename</h2>
-</section>
-<section id="mutate" class="slide level2">
-<h2>Mutate</h2>
+<section id="consideraciones-para-usuarios-de-diferentes-sistemas-operativos" class="slide level2">
+<h2>6. Consideraciones para Usuarios de Diferentes Sistemas Operativos</h2>
 <ul>
-<li class="fragment"><p>ifelse()</p></li>
-<li class="fragment"><p>mean()</p></li>
-<li class="fragment"><p>sum()</p></li>
+<li><p>Función file.path : Esta función ayuda a construir rutas que sean compatibles con el sistema operativo que está usando.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>ruta_archivo <span class="ot">&lt;-</span> <span class="fu">file.path</span>(<span class="st">"Directorio1"</span>, <span class="st">"Subdirectorio2"</span>, <span class="st">"archivo.txt"</span>)</span>
+<span id="cb12-2"><a></a>ruta_archivo</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></li>
 </ul>
 </section>
-<section id="summarise" class="slide level2">
-<h2>Summarise</h2>
-</section>
-<section id="group_by" class="slide level2">
-<h2>Group_By</h2>
+<section id="resumen" class="slide level2">
+<h2>Resumen</h2>
+<ul>
+<li><p>Rutas Absolutas : Comienzan desde la raíz del sistema y usan barras invertidas en Windows () o barras (/) en macOS/Linux.</p></li>
+<li><p>Rutas Relativas : Son rutas desde el directorio de trabajo actual, usando barras invertidas en Windows () o barras (/) en macOS/Linux.</p></li>
+<li><p>Directorio de Trabajo : Se puede verificar y cambiar usando getwd() y setwd().</p></li>
+<li><p>Leer/Escribir Archivos : Usar rutas relativas o absolutas según sea necesario, considerando el sistema operativo.</p></li>
+</ul>
 
 <div class="quarto-auto-generated-content">
 <p><img src="images/logo_curso.png" class="slide-logo"></p>

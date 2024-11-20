@@ -41,7 +41,7 @@ Clase 6 práctica 1 construccion vectores
 
 Cantidad cilindros por observación
 
-```{webr}
+```{web-r}
 
 mtcars$cyl
 ```
@@ -223,7 +223,7 @@ ncol(df_ahorro)
 
 ## Inspección Data Frame -cont
 
--   Número de filas
+Número de filas
 
 ```{webr-r}
 nrow(df_ahorro)
@@ -259,7 +259,7 @@ str(df_ahorro)
 summary(df_ahorro)
 ```
 
-## Crear columna con nombre países
+## Crear Columna con Nombre Países
 
 Revisar nombres filas
 
@@ -273,12 +273,14 @@ rownames(df_ahorro)[1:10]
 df_ahorro$pais <- rownames(df_ahorro)
 ```
 
-## Inspección nuevo atributo
+
+
+## Inspección Nuevo Atributo
 
 Revisar DF
 
 ```{webr-r}
-head(df_ahorro, 3)
+head(df_ahorro, 5)
 ```
 
 ## Funciones Valores Extremos

@@ -1,0 +1,51 @@
+---
+title: "Ciencia de Datos para Economistas"
+subtitle: "Clase 11- Trabajando con Data Frames-columnas"
+date: "Noviembre 18, 2024"
+author: "MSc. José M. Avendaño"
+# output:
+#   html_document:
+#     toc: yes
+format: 
+  revealjs:
+    incremental: true   
+execute:
+  echo: true
+eval: false
+---
+
+## Objetivo
+
+Realizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las columnas o atributos.
+
+![](images/im-or-trans.png)
+
+## Operaciones en Columnas
+
+## Select
+
+-   select(!)
+
+-   select(ends_with())
+
+-   everything()
+
+## Rename
+
+## Mutate
+
+-   ifelse()
+
+-   mean()
+
+-   sum()
+
+## Summarise
+
+## Group_By
+
+Lecturas Recomendadas:
+
+-   Capítulo 4 R4DS (temas pasados referente a variables y operaciones básicas)
+
+-   Capítulo 5 R4DS: comparaciones, operadores lógicos, arrange, select, mutate, summarise, pipe operator. En el capítulo se tratan los valores faltantes `NA` que luego serán abordados
