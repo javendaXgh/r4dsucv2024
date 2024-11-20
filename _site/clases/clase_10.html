@@ -423,38 +423,510 @@ MSc. José M. Avendaño
 <h2>Cargar Datos en formato XLS</h2>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(readxl)</span>
-<span id="cb1-2"><a></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb1-3"><a></a>ruta <span class="ot">&lt;-</span> <span class="st">'data_in/gapminder.xlsx'</span><span class="co">#'ruta_archivo'</span></span>
-<span id="cb1-4"><a></a>df_gapminder <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(ruta)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a></a><span class="do">## tidyverse carga los paquetes stringr y dplyr con los que se trabará en esta clas</span></span>
+<span id="cb1-4"><a></a></span>
+<span id="cb1-5"><a></a>ruta <span class="ot">&lt;-</span> <span class="st">'data_in/gapminder.xlsx'</span> <span class="co">#'ruta_archivo'</span></span>
+<span id="cb1-6"><a></a>df_gapminder <span class="ot">&lt;-</span> <span class="fu">read_xlsx</span>(ruta)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="valores-únicos-presentes-en-un-vector" class="slide level2">
+<h2>Valores únicos presentes en un Vector</h2>
+<p>Si queremos determinar el nombre de los continentes</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>continentes <span class="ot">&lt;-</span> <span class="fu">unique</span>(df_gapminder<span class="sc">$</span>continent)</span>
+<span id="cb2-2"><a></a>continentes</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Asia"     "Europe"   "Africa"   "Americas" "Oceania" </code></pre>
+</div>
 </div>
 </section>
 <section id="operaciones-en-filas" class="slide level2">
 <h2>Operaciones en Filas</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">glimpse</span>(df_gapminder)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">glimpse</span>(df_gapminder)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 1,704
+Columns: 6
+$ country   &lt;chr&gt; "Afghanistan", "Afghanistan", "Afghanistan", "Afghanistan", "Afghanist…
+$ continent &lt;chr&gt; "Asia", "Asia", "Asia", "Asia", "Asia", "Asia", "Asia", "Asia", "Asia"…
+$ year      &lt;dbl&gt; 1952, 1957, 1962, 1967, 1972, 1977, 1982, 1987, 1992, 1997, 2002, 2007…
+$ lifeExp   &lt;dbl&gt; 28.801, 30.332, 31.997, 34.020, 36.088, 38.438, 39.854, 40.822, 41.674…
+$ pop       &lt;dbl&gt; 8425333, 9240934, 10267083, 11537966, 13079460, 14880372, 12881816, 13…
+$ gdpPercap &lt;dbl&gt; 779.4453, 820.8530, 853.1007, 836.1971, 739.9811, 786.1134, 978.0114, …</code></pre>
+</div>
 </div>
 </section>
-<section id="filter" class="slide level2">
-<h2>Filter</h2>
-<ul>
-<li class="fragment"><p>str_detect()</p></li>
-<li class="fragment"><p>!is.na()</p></li>
-</ul>
+<section id="filter-por-una-variable" class="slide level2">
+<h2><code>Filter</code> por una Variable</h2>
+<p>Filtrar datos de acuerdo a un criterio</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb6-2"><a></a>  <span class="fu">filter</span>(country<span class="sc">==</span><span class="st">'Venezuela'</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 12 × 6
+   country   continent  year lifeExp      pop gdpPercap
+   &lt;chr&gt;     &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+ 1 Venezuela Americas   1952    55.1  5439568     7690.
+ 2 Venezuela Americas   1957    57.9  6702668     9802.
+ 3 Venezuela Americas   1962    60.8  8143375     8423.
+ 4 Venezuela Americas   1967    63.5  9709552     9541.
+ 5 Venezuela Americas   1972    65.7 11515649    10505.
+ 6 Venezuela Americas   1977    67.5 13503563    13144.
+ 7 Venezuela Americas   1982    68.6 15620766    11152.
+ 8 Venezuela Americas   1987    70.2 17910182     9884.
+ 9 Venezuela Americas   1992    71.2 20265563    10734.
+10 Venezuela Americas   1997    72.1 22374398    10165.
+11 Venezuela Americas   2002    72.8 24287670     8605.
+12 Venezuela Americas   2007    73.7 26084662    11416.</code></pre>
+</div>
+</div>
 </section>
-<section id="slice" class="slide level2">
-<h2>Slice</h2>
-<ul>
-<li class="fragment"><p>slice_min()</p></li>
-<li class="fragment"><p>slice_max()</p></li>
-<li class="fragment"><p>slice_head()</p></li>
-<li class="fragment"><p>slice_tail()</p></li>
-<li class="fragment"><p>slice_sample()</p></li>
-</ul>
+<section id="filter-por-dos-criterios" class="slide level2">
+<h2><code>Filter</code> por dos criterios</h2>
+<p>Filtrar datos cuando se cumplen dos criterios sobre dos atributos</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a></a>  <span class="fu">filter</span>(country<span class="sc">==</span><span class="st">'Venezuela'</span> <span class="sc">&amp;</span> year <span class="sc">&gt;</span><span class="dv">1992</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 6
+  country   continent  year lifeExp      pop gdpPercap
+  &lt;chr&gt;     &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+1 Venezuela Americas   1997    72.1 22374398    10165.
+2 Venezuela Americas   2002    72.8 24287670     8605.
+3 Venezuela Americas   2007    73.7 26084662    11416.</code></pre>
+</div>
+</div>
 </section>
-<section id="arrange" class="slide level2">
-<h2>Arrange</h2>
+<section id="filter-por-dos-criterios-sobre-un-mismo-atributo" class="slide level2">
+<h2><code>Filter</code> por dos criterios sobre un mismo atributo</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb10-2"><a></a>  <span class="fu">filter</span>(country<span class="sc">==</span><span class="st">'Venezuela'</span> <span class="sc">|</span> country <span class="sc">==</span><span class="st">'Colombia'</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 24 × 6
+   country  continent  year lifeExp      pop gdpPercap
+   &lt;chr&gt;    &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+ 1 Colombia Americas   1952    50.6 12350771     2144.
+ 2 Colombia Americas   1957    55.1 14485993     2324.
+ 3 Colombia Americas   1962    57.9 17009885     2492.
+ 4 Colombia Americas   1967    60.0 19764027     2679.
+ 5 Colombia Americas   1972    61.6 22542890     3265.
+ 6 Colombia Americas   1977    63.8 25094412     3816.
+ 7 Colombia Americas   1982    66.7 27764644     4398.
+ 8 Colombia Americas   1987    67.8 30964245     4903.
+ 9 Colombia Americas   1992    68.4 34202721     5445.
+10 Colombia Americas   1997    70.3 37657830     6117.
+# ℹ 14 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="filter-por-dos-criterios-sobre-dos-atributos" class="slide level2">
+<h2><code>Filter</code> por dos criterios sobre dos atributos</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb12-2"><a></a>  <span class="fu">filter</span>(country<span class="sc">==</span><span class="st">'Venezuela'</span> <span class="sc">|</span> country <span class="sc">==</span><span class="st">'Colombia'</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb12-3"><a></a>  <span class="fu">filter</span>(year<span class="sc">&gt;=</span><span class="dv">1992</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 8 × 6
+  country   continent  year lifeExp      pop gdpPercap
+  &lt;chr&gt;     &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+1 Colombia  Americas   1992    68.4 34202721     5445.
+2 Colombia  Americas   1997    70.3 37657830     6117.
+3 Colombia  Americas   2002    71.7 41008227     5755.
+4 Colombia  Americas   2007    72.9 44227550     7007.
+5 Venezuela Americas   1992    71.2 20265563    10734.
+6 Venezuela Americas   1997    72.1 22374398    10165.
+7 Venezuela Americas   2002    72.8 24287670     8605.
+8 Venezuela Americas   2007    73.7 26084662    11416.</code></pre>
+</div>
+</div>
+</section>
+<section id="filter-por-dos-criterios-sobre-dos-atributos-1" class="slide level2">
+<h2><code>Filter</code> por dos criterios sobre dos atributos,</h2>
+<p>Dos atributos a filtrar por cada criterio. En <code>country</code> se filtran un país o el otro país. En <code>year</code> se tienen que cumplir los dos criterios <code>&amp;</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb14-2"><a></a>  <span class="fu">filter</span>(country<span class="sc">==</span><span class="st">'Venezuela'</span> <span class="sc">|</span> country <span class="sc">==</span><span class="st">'Colombia'</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb14-3"><a></a>  <span class="fu">filter</span>(year<span class="sc">&gt;=</span><span class="dv">1977</span> <span class="sc">&amp;</span> year<span class="sc">&lt;=</span> <span class="dv">2002</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 12 × 6
+   country   continent  year lifeExp      pop gdpPercap
+   &lt;chr&gt;     &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+ 1 Colombia  Americas   1977    63.8 25094412     3816.
+ 2 Colombia  Americas   1982    66.7 27764644     4398.
+ 3 Colombia  Americas   1987    67.8 30964245     4903.
+ 4 Colombia  Americas   1992    68.4 34202721     5445.
+ 5 Colombia  Americas   1997    70.3 37657830     6117.
+ 6 Colombia  Americas   2002    71.7 41008227     5755.
+ 7 Venezuela Americas   1977    67.5 13503563    13144.
+ 8 Venezuela Americas   1982    68.6 15620766    11152.
+ 9 Venezuela Americas   1987    70.2 17910182     9884.
+10 Venezuela Americas   1992    71.2 20265563    10734.
+11 Venezuela Americas   1997    72.1 22374398    10165.
+12 Venezuela Americas   2002    72.8 24287670     8605.</code></pre>
+</div>
+</div>
+</section>
+<section id="filter-por-dos-criterios-con-operadores-y-and-y-or" class="slide level2">
+<h2><code>Filter</code> por dos criterios con operadores <code>&amp;</code> y <code>|</code> (AND y OR)</h2>
+<p>Se introduce la función <code>between</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb16-2"><a></a>  <span class="fu">filter</span>(country<span class="sc">==</span><span class="st">'Venezuela'</span> <span class="sc">|</span> country <span class="sc">==</span><span class="st">'Colombia'</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb16-3"><a></a>  <span class="fu">filter</span>(<span class="fu">between</span>(<span class="at">x=</span> year, <span class="at">left=</span> <span class="dv">1977</span>,<span class="at">right=</span> <span class="dv">2002</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 12 × 6
+   country   continent  year lifeExp      pop gdpPercap
+   &lt;chr&gt;     &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+ 1 Colombia  Americas   1977    63.8 25094412     3816.
+ 2 Colombia  Americas   1982    66.7 27764644     4398.
+ 3 Colombia  Americas   1987    67.8 30964245     4903.
+ 4 Colombia  Americas   1992    68.4 34202721     5445.
+ 5 Colombia  Americas   1997    70.3 37657830     6117.
+ 6 Colombia  Americas   2002    71.7 41008227     5755.
+ 7 Venezuela Americas   1977    67.5 13503563    13144.
+ 8 Venezuela Americas   1982    68.6 15620766    11152.
+ 9 Venezuela Americas   1987    70.2 17910182     9884.
+10 Venezuela Americas   1992    71.2 20265563    10734.
+11 Venezuela Americas   1997    72.1 22374398    10165.
+12 Venezuela Americas   2002    72.8 24287670     8605.</code></pre>
+</div>
+</div>
+</section>
+<section id="filter-con-la-función-in" class="slide level2">
+<h2><code>Filter</code> con la función <code>%in%</code></h2>
+<p>Se filtran elementos que se encuentran en un vector que en este caso es <code>c('Colombia','Venezuela')</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb18-2"><a></a>  <span class="fu">filter</span>(country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">'Colombia'</span>,<span class="st">'Venezuela'</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 24 × 6
+   country  continent  year lifeExp      pop gdpPercap
+   &lt;chr&gt;    &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+ 1 Colombia Americas   1952    50.6 12350771     2144.
+ 2 Colombia Americas   1957    55.1 14485993     2324.
+ 3 Colombia Americas   1962    57.9 17009885     2492.
+ 4 Colombia Americas   1967    60.0 19764027     2679.
+ 5 Colombia Americas   1972    61.6 22542890     3265.
+ 6 Colombia Americas   1977    63.8 25094412     3816.
+ 7 Colombia Americas   1982    66.7 27764644     4398.
+ 8 Colombia Americas   1987    67.8 30964245     4903.
+ 9 Colombia Americas   1992    68.4 34202721     5445.
+10 Colombia Americas   1997    70.3 37657830     6117.
+# ℹ 14 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="filter-usando-str_detect" class="slide level2">
+<h2><code>Filter</code> usando <code>str_detect</code></h2>
+<p>Cuando no existe certeza para aplicaer el criterio de igualdad, se puede usar la función <code>str_detect</code> del paquete <code>stringr</code> la cual evalúa coincidencias parciales sobre la presencia de un patrón sobre una determinada <code>string</code> (cadena de texto)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb20-2"><a></a>  <span class="fu">filter</span>(<span class="fu">str_detect</span>(<span class="at">string=</span> country,</span>
+<span id="cb20-3"><a></a>                    <span class="at">pattern=</span><span class="st">'nistan'</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 12 × 6
+   country     continent  year lifeExp      pop gdpPercap
+   &lt;chr&gt;       &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+ 1 Afghanistan Asia       1952    28.8  8425333      779.
+ 2 Afghanistan Asia       1957    30.3  9240934      821.
+ 3 Afghanistan Asia       1962    32.0 10267083      853.
+ 4 Afghanistan Asia       1967    34.0 11537966      836.
+ 5 Afghanistan Asia       1972    36.1 13079460      740.
+ 6 Afghanistan Asia       1977    38.4 14880372      786.
+ 7 Afghanistan Asia       1982    39.9 12881816      978.
+ 8 Afghanistan Asia       1987    40.8 13867957      852.
+ 9 Afghanistan Asia       1992    41.7 16317921      649.
+10 Afghanistan Asia       1997    41.8 22227415      635.
+11 Afghanistan Asia       2002    42.1 25268405      727.
+12 Afghanistan Asia       2007    43.8 31889923      975.</code></pre>
+</div>
+</div>
+</section>
+<section id="funciones-slice-y-sus-varianzas" class="slide level2">
+<h2>Funciones <code>slice</code> y sus varianzas</h2>
+<p>Rebana, equivalente a seleccionar filas de la DF basadas en algún criterio.</p>
+</section>
+<section id="slice_min" class="slide level2">
+<h2><code>slice_min()</code></h2>
+<p>Valore mínimo según un criterio</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb22-2"><a></a>  <span class="fu">filter</span>(country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">'Colombia'</span>,<span class="st">'Venezuela'</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb22-3"><a></a>  <span class="fu">slice_min</span>(gdpPercap)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 6
+  country  continent  year lifeExp      pop gdpPercap
+  &lt;chr&gt;    &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+1 Colombia Americas   1952    50.6 12350771     2144.</code></pre>
+</div>
+</div>
+</section>
+<section id="slice_min-con-parámetro-n" class="slide level2">
+<h2><code>slice_min()</code> con parámetro <code>n</code></h2>
+<p><code>n</code> Valores mínimos según un criterio. En este caso <code>n=5</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb24-2"><a></a>  <span class="fu">filter</span>(country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">'Colombia'</span>,<span class="st">'Venezuela'</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb24-3"><a></a>  <span class="fu">slice_min</span>(gdpPercap, <span class="at">n=</span><span class="dv">5</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 6
+  country  continent  year lifeExp      pop gdpPercap
+  &lt;chr&gt;    &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+1 Colombia Americas   1952    50.6 12350771     2144.
+2 Colombia Americas   1957    55.1 14485993     2324.
+3 Colombia Americas   1962    57.9 17009885     2492.
+4 Colombia Americas   1967    60.0 19764027     2679.
+5 Colombia Americas   1972    61.6 22542890     3265.</code></pre>
+</div>
+</div>
+</section>
+<section id="equivalente-slice_min-en-rbase" class="slide level2">
+<h2>equivalente <code>slice_min()</code> en Rbase</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb26-2"><a></a>  <span class="fu">filter</span>(country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">'Colombia'</span>,<span class="st">'Venezuela'</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb26-3"><a></a>  <span class="fu">filter</span>(gdpPercap <span class="sc">==</span><span class="fu">min</span>(gdpPercap))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 6
+  country  continent  year lifeExp      pop gdpPercap
+  &lt;chr&gt;    &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+1 Colombia Americas   1952    50.6 12350771     2144.</code></pre>
+</div>
+</div>
+</section>
+<section id="slice_max" class="slide level2">
+<h2><code>slice_max()</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb28-2"><a></a>  <span class="fu">filter</span>(country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">'Colombia'</span>,<span class="st">'Venezuela'</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb28-3"><a></a>  <span class="fu">slice_max</span>(<span class="at">order_by=</span> gdpPercap)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 6
+  country   continent  year lifeExp      pop gdpPercap
+  &lt;chr&gt;     &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+1 Venezuela Americas   1977    67.5 13503563    13144.</code></pre>
+</div>
+</div>
+<p>aplica usar <code>n</code> igual que <code>slice_min()</code></p>
+</section>
+<section id="equivalente-slice_max-en-rbase" class="slide level2">
+<h2>equivalente <code>slice_max()</code> en Rbase</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb30-2"><a></a>  <span class="fu">filter</span>(country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">'Colombia'</span>,<span class="st">'Venezuela'</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb30-3"><a></a>  <span class="fu">filter</span>(gdpPercap <span class="sc">==</span><span class="fu">max</span>(gdpPercap))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 6
+  country   continent  year lifeExp      pop gdpPercap
+  &lt;chr&gt;     &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+1 Venezuela Americas   1977    67.5 13503563    13144.</code></pre>
+</div>
+</div>
+</section>
+<section id="slice_head" class="slide level2">
+<h2><code>slice_head()</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb32-2"><a></a>  <span class="fu">filter</span>(continent<span class="sc">==</span>continentes[<span class="dv">2</span>])<span class="sc">%&gt;%</span></span>
+<span id="cb32-3"><a></a>  <span class="fu">slice_head</span>(<span class="at">n=</span><span class="dv">10</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 6
+   country continent  year lifeExp     pop gdpPercap
+   &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;
+ 1 Albania Europe     1952    55.2 1282697     1601.
+ 2 Albania Europe     1957    59.3 1476505     1942.
+ 3 Albania Europe     1962    64.8 1728137     2313.
+ 4 Albania Europe     1967    66.2 1984060     2760.
+ 5 Albania Europe     1972    67.7 2263554     3313.
+ 6 Albania Europe     1977    68.9 2509048     3533.
+ 7 Albania Europe     1982    70.4 2780097     3631.
+ 8 Albania Europe     1987    72   3075321     3739.
+ 9 Albania Europe     1992    71.6 3326498     2497.
+10 Albania Europe     1997    73.0 3428038     3193.</code></pre>
+</div>
+</div>
+</section>
+<section id="equivalente-slice_head-en-rbase" class="slide level2">
+<h2>equivalente <code>slice_head()</code> en Rbase</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb34-2"><a></a>  <span class="fu">filter</span>(continent<span class="sc">==</span>continentes[<span class="dv">2</span>])<span class="sc">%&gt;%</span></span>
+<span id="cb34-3"><a></a>  .[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>, ]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 6
+   country continent  year lifeExp     pop gdpPercap
+   &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;
+ 1 Albania Europe     1952    55.2 1282697     1601.
+ 2 Albania Europe     1957    59.3 1476505     1942.
+ 3 Albania Europe     1962    64.8 1728137     2313.
+ 4 Albania Europe     1967    66.2 1984060     2760.
+ 5 Albania Europe     1972    67.7 2263554     3313.
+ 6 Albania Europe     1977    68.9 2509048     3533.
+ 7 Albania Europe     1982    70.4 2780097     3631.
+ 8 Albania Europe     1987    72   3075321     3739.
+ 9 Albania Europe     1992    71.6 3326498     2497.
+10 Albania Europe     1997    73.0 3428038     3193.</code></pre>
+</div>
+</div>
+</section>
+<section id="slice_tail" class="slide level2">
+<h2><code>slice_tail()</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>continentes[<span class="dv">3</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Africa"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb38-2"><a></a>  <span class="fu">filter</span>(continent<span class="sc">==</span>continentes[<span class="dv">3</span>])<span class="sc">%&gt;%</span></span>
+<span id="cb38-3"><a></a>  <span class="fu">slice_tail</span>(<span class="at">n=</span><span class="dv">10</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 6
+   country  continent  year lifeExp      pop gdpPercap
+   &lt;chr&gt;    &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+ 1 Zimbabwe Africa     1962    52.4  4277736      527.
+ 2 Zimbabwe Africa     1967    54.0  4995432      570.
+ 3 Zimbabwe Africa     1972    55.6  5861135      799.
+ 4 Zimbabwe Africa     1977    57.7  6642107      686.
+ 5 Zimbabwe Africa     1982    60.4  7636524      789.
+ 6 Zimbabwe Africa     1987    62.4  9216418      706.
+ 7 Zimbabwe Africa     1992    60.4 10704340      693.
+ 8 Zimbabwe Africa     1997    46.8 11404948      792.
+ 9 Zimbabwe Africa     2002    40.0 11926563      672.
+10 Zimbabwe Africa     2007    43.5 12311143      470.</code></pre>
+</div>
+</div>
+</section>
+<section id="equivalente-slice_tail-en-rbase" class="slide level2">
+<h2>equivalente <code>slice_tail()</code> en Rbase</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb40-2"><a></a>  <span class="fu">filter</span>(continent<span class="sc">==</span>continentes[<span class="dv">3</span>])<span class="sc">%&gt;%</span></span>
+<span id="cb40-3"><a></a>  .[(<span class="fu">nrow</span>(.)<span class="sc">-</span><span class="dv">10</span>)<span class="sc">:</span><span class="fu">nrow</span>(.), ]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 11 × 6
+   country  continent  year lifeExp      pop gdpPercap
+   &lt;chr&gt;    &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+ 1 Zimbabwe Africa     1957    50.5  3646340      519.
+ 2 Zimbabwe Africa     1962    52.4  4277736      527.
+ 3 Zimbabwe Africa     1967    54.0  4995432      570.
+ 4 Zimbabwe Africa     1972    55.6  5861135      799.
+ 5 Zimbabwe Africa     1977    57.7  6642107      686.
+ 6 Zimbabwe Africa     1982    60.4  7636524      789.
+ 7 Zimbabwe Africa     1987    62.4  9216418      706.
+ 8 Zimbabwe Africa     1992    60.4 10704340      693.
+ 9 Zimbabwe Africa     1997    46.8 11404948      792.
+10 Zimbabwe Africa     2002    40.0 11926563      672.
+11 Zimbabwe Africa     2007    43.5 12311143      470.</code></pre>
+</div>
+</div>
+</section>
+<section id="slice_sample" class="slide level2">
+<h2><code>slice_sample()</code></h2>
+<p>Una muestra aleatoria de valores filtrando previamente de acuerdo a un criterio</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a>continentes[<span class="dv">1</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Asia"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb44-2"><a></a>  <span class="fu">filter</span>(continent<span class="sc">==</span>continentes[<span class="dv">1</span>])<span class="sc">%&gt;%</span></span>
+<span id="cb44-3"><a></a>  <span class="fu">slice_sample</span>(<span class="at">n=</span><span class="dv">10</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 6
+   country      continent  year lifeExp       pop gdpPercap
+   &lt;chr&gt;        &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+ 1 Iran         Asia       1972    55.2  30614000     9614.
+ 2 Jordan       Asia       1982    63.7   2347031     4161.
+ 3 Philippines  Asia       1952    47.8  22438691     1273.
+ 4 Indonesia    Asia       1997    66.0 199278000     3119.
+ 5 India        Asia       1992    60.2 872000000     1164.
+ 6 Saudi Arabia Asia       2002    71.6  24501530    19015.
+ 7 Myanmar      Asia       1962    45.1  23634436      388 
+ 8 Indonesia    Asia       2007    70.6 223547000     3541.
+ 9 Syria        Asia       1967    53.7   5680812     1882.
+10 Jordan       Asia       1967    51.6   1255058     2742.</code></pre>
+</div>
+</div>
+</section>
+<section id="equivalente-slice_tail-en-rbase-1" class="slide level2">
+<h2>equivalente <code>slice_tail()</code> en Rbase</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb46-2"><a></a>  <span class="fu">filter</span>(continent<span class="sc">==</span>continentes[<span class="dv">1</span>])<span class="sc">%&gt;%</span></span>
+<span id="cb46-3"><a></a>  .[<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(.),<span class="dv">10</span>),]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 6
+   country     continent  year lifeExp      pop gdpPercap
+   &lt;chr&gt;       &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+ 1 Bangladesh  Asia       1972    45.3 70759295      630.
+ 2 Myanmar     Asia       1952    36.3 20092996      331 
+ 3 Vietnam     Asia       2002    73.0 80908147     1764.
+ 4 Yemen, Rep. Asia       1977    44.2  8403990     1830.
+ 5 Iran        Asia       1997    68.0 63327987     8264.
+ 6 Nepal       Asia       2007    63.8 28901790     1091.
+ 7 Iraq        Asia       2007    59.5 27499638     4471.
+ 8 Pakistan    Asia       1962    47.7 53100671      803.
+ 9 Bahrain     Asia       1977    65.6   297410    19340.
+10 Vietnam     Asia       1977    55.8 50533506      714.</code></pre>
+</div>
+</div>
+</section>
+<section id="reordenar-datos-basado-en-un-criterio-arrange" class="slide level2">
+<h2>Reordenar datos basado en un criterio arrange</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb48-2"><a></a>  <span class="fu">filter</span>(continent<span class="sc">==</span>continentes[<span class="dv">4</span>])<span class="sc">%&gt;%</span></span>
+<span id="cb48-3"><a></a>  <span class="fu">arrange</span>(gdpPercap)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 300 × 6
+   country            continent  year lifeExp     pop gdpPercap
+   &lt;chr&gt;              &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;
+ 1 Haiti              Americas   2007    60.9 8502814     1202.
+ 2 Haiti              Americas   2002    58.1 7607651     1270.
+ 3 Haiti              Americas   1997    56.7 6913545     1342.
+ 4 Dominican Republic Americas   1952    45.9 2491346     1398.
+ 5 Haiti              Americas   1967    46.2 4318137     1452.
+ 6 Haiti              Americas   1992    55.1 6326682     1456.
+ 7 Dominican Republic Americas   1957    49.8 2923186     1544.
+ 8 Dominican Republic Americas   1967    56.8 4049146     1654.
+ 9 Haiti              Americas   1972    48.0 4698301     1654.
+10 Dominican Republic Americas   1962    53.5 3453434     1662.
+# ℹ 290 more rows</code></pre>
+</div>
+</div>
+<p>ojo con la sobreescritura</p>
+</section>
+<section id="reordenar-en-forma-descendente-desc" class="slide level2">
+<h2>Reordenar en forma descendente <code>desc()</code></h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb50-2"><a></a>  <span class="fu">filter</span>(continent<span class="sc">==</span>continentes[<span class="dv">4</span>])<span class="sc">%&gt;%</span></span>
+<span id="cb50-3"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(gdpPercap))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 300 × 6
+   country       continent  year lifeExp       pop gdpPercap
+   &lt;chr&gt;         &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;
+ 1 United States Americas   2007    78.2 301139947    42952.
+ 2 United States Americas   2002    77.3 287675526    39097.
+ 3 Canada        Americas   2007    80.7  33390141    36319.
+ 4 United States Americas   1997    76.8 272911760    35767.
+ 5 Canada        Americas   2002    79.8  31902268    33329.
+ 6 United States Americas   1992    76.1 256894189    32004.
+ 7 United States Americas   1987    75.0 242803533    29884.
+ 8 Canada        Americas   1997    78.6  30305843    28955.
+ 9 Canada        Americas   1987    76.9  26549700    26627.
+10 Canada        Americas   1992    78.0  28523502    26343.
+# ℹ 290 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="notas-finales" class="slide level2">
+<h2>Notas finales:</h2>
 <ul>
-<li class="fragment">desc()</li>
+<li class="fragment">Revisar documentación de funciones para comprender los argumentos y su uso</li>
+<li class="fragment">Revisar funcionamiento de las equivalencias que se presentaron usando RBase</li>
 </ul>
 
 <div class="quarto-auto-generated-content">

@@ -23,6 +23,8 @@ Realizar manipulaciones a los datos contenidos en una DF según diversos criteri
 ::: notes
 Anuncios:
 
+-   modificación en presentación clase 9 y 10
+
 -   Chat y lecturas
 
 -   Sesión lunes visualizaciones

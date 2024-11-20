@@ -9,9 +9,7 @@ author: "MSc. José M. Avendaño"
 format: 
   revealjs:
     incremental: true   
-execute:
-  echo: true
-eval: false
+
 ---
 
 ## Objetivo
@@ -24,9 +22,18 @@ Realizar manipulaciones a los datos contenidos en una DF según diversos criteri
 
 ```{r}
 library(readxl)
-library(dplyr)
-ruta <- 'data_in/gapminder.xlsx'#'ruta_archivo'
+library(tidyverse)
+## tidyverse carga los paquetes stringr y dplyr con los que se trabará en esta clas
+
+ruta <- 'data_in/gapminder.xlsx' #'ruta_archivo'
 df_gapminder <- read_xlsx(ruta)
+```
+
+## Valores únicos presentes en un Vector
+Si queremos determinar el nombre de los continentes
+```{r}
+continentes <- unique(df_gapminder$continent)
+continentes
 ```
 
 ## Operaciones en Filas
@@ -35,24 +42,191 @@ df_gapminder <- read_xlsx(ruta)
 glimpse(df_gapminder)
 ```
 
-## Filter
+## `Filter` por una Variable
+Filtrar datos de acuerdo a un criterio
 
--   str_detect()
+```{r}
+df_gapminder%>%
+  filter(country=='Venezuela')
+```
 
--   !is.na()
+## `Filter` por dos criterios
+Filtrar datos cuando se cumplen dos criterios sobre dos atributos
 
-## Slice
+```{r}
+df_gapminder%>%
+  filter(country=='Venezuela' & year >1992)
+```
 
--   slice_min()
 
--   slice_max()
+## `Filter` por dos criterios sobre un mismo atributo
 
--   slice_head()
+```{r}
+df_gapminder%>%
+  filter(country=='Venezuela' | country =='Colombia')
 
--   slice_tail()
+```
 
--   slice_sample()
 
-## Arrange
+## `Filter` por dos criterios sobre dos atributos
 
--   desc()
+```{r}
+df_gapminder%>%
+  filter(country=='Venezuela' | country =='Colombia')%>%
+  filter(year>=1992)
+```
+
+
+## `Filter` por dos criterios sobre dos atributos, 
+Dos atributos a filtrar por cada criterio. En `country` se filtran un país o el otro país. En `year` se tienen que cumplir los dos criterios `&` 
+
+```{r}
+df_gapminder%>%
+  filter(country=='Venezuela' | country =='Colombia')%>%
+  filter(year>=1977 & year<= 2002)
+
+```
+
+
+## `Filter` por dos criterios con operadores `&` y `|` (AND y OR)
+Se introduce la función `between`
+
+```{r}
+df_gapminder%>%
+  filter(country=='Venezuela' | country =='Colombia')%>%
+  filter(between(x= year, left= 1977,right= 2002))
+
+```
+
+
+## `Filter` con la función `%in%`
+Se filtran elementos que se encuentran en un vector que en este caso es `c('Colombia','Venezuela')`
+```{r}
+df_gapminder%>%
+  filter(country %in% c('Colombia','Venezuela'))
+```
+
+
+
+## `Filter` usando `str_detect`
+Cuando no existe certeza para aplicaer el criterio de igualdad, se puede usar la función `str_detect` del paquete `stringr` la cual evalúa coincidencias parciales sobre la presencia de un patrón sobre una determinada `string` (cadena de texto)
+
+```{r}
+df_gapminder%>%
+  filter(str_detect(string= country,
+                    pattern='nistan'))
+```
+
+
+## Funciones `slice` y sus varianzas
+Rebana, equivalente a seleccionar filas de la DF basadas en algún criterio.
+
+## `slice_min()`
+Valore mínimo según un criterio
+```{r}
+df_gapminder%>%
+  filter(country %in% c('Colombia','Venezuela'))%>%
+  slice_min(gdpPercap)
+```
+
+## `slice_min()` con parámetro `n`
+`n` Valores mínimos según un criterio. En este caso `n=5`
+```{r}
+df_gapminder%>%
+  filter(country %in% c('Colombia','Venezuela'))%>%
+  slice_min(gdpPercap, n=5)
+```
+
+## equivalente `slice_min()` en Rbase
+```{r}
+df_gapminder%>%
+  filter(country %in% c('Colombia','Venezuela'))%>%
+  filter(gdpPercap ==min(gdpPercap))
+```
+
+##  `slice_max()`
+```{r}
+df_gapminder%>%
+  filter(country %in% c('Colombia','Venezuela'))%>%
+  slice_max(order_by= gdpPercap)
+
+```
+aplica usar `n` igual que `slice_min()`
+
+## equivalente `slice_max()` en Rbase
+```{r}
+df_gapminder%>%
+  filter(country %in% c('Colombia','Venezuela'))%>%
+  filter(gdpPercap ==max(gdpPercap))
+```
+
+##  `slice_head()`
+```{r}
+df_gapminder%>%
+  filter(continent==continentes[2])%>%
+  slice_head(n=10)
+```
+
+
+
+## equivalente `slice_head()` en Rbase
+```{r}
+df_gapminder%>%
+  filter(continent==continentes[2])%>%
+  .[1:10, ]
+```
+
+## `slice_tail()`
+```{r}
+continentes[3]
+df_gapminder%>%
+  filter(continent==continentes[3])%>%
+  slice_tail(n=10)
+```
+
+## equivalente `slice_tail()`  en Rbase
+```{r}
+df_gapminder%>%
+  filter(continent==continentes[3])%>%
+  .[(nrow(.)-10):nrow(.), ]
+```
+
+##  `slice_sample()`
+Una muestra aleatoria de valores filtrando previamente de acuerdo a un criterio
+
+```{r}
+continentes[1]
+df_gapminder%>%
+  filter(continent==continentes[1])%>%
+  slice_sample(n=10)
+
+```
+
+## equivalente `slice_tail()` en Rbase
+```{r}
+df_gapminder%>%
+  filter(continent==continentes[1])%>%
+  .[sample(1:nrow(.),10),]
+```
+
+
+## Reordenar datos basado en un criterio arrange
+```{r}
+df_gapminder%>%
+  filter(continent==continentes[4])%>%
+  arrange(gdpPercap)
+```
+
+ojo con la sobreescritura
+
+## Reordenar en forma descendente `desc()`
+```{r}
+df_gapminder%>%
+  filter(continent==continentes[4])%>%
+  arrange(desc(gdpPercap))
+
+```
+
+## Notas finales:
+- Revisar documentación de funciones para comprender los argumentos y su uso
+- Revisar funcionamiento de las equivalencias que se presentaron usando RBase

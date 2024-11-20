@@ -2577,14 +2577,14 @@
     "href": "clases/clase_10.html#cargar-datos-en-formato-xls",
     "title": "Ciencia de Datos para Economistas",
     "section": "Cargar Datos en formato XLS",
-    "text": "Cargar Datos en formato XLS\n\nlibrary(readxl)\nlibrary(dplyr)\nruta &lt;- 'data_in/gapminder.xlsx'#'ruta_archivo'\ndf_gapminder &lt;- read_xlsx(ruta)"
+    "text": "Cargar Datos en formato XLS\n\nlibrary(readxl)\nlibrary(tidyverse)\n## tidyverse carga los paquetes stringr y dplyr con los que se trabará en esta clas\n\nruta &lt;- 'data_in/gapminder.xlsx' #'ruta_archivo'\ndf_gapminder &lt;- read_xlsx(ruta)"
   },
   {
     "objectID": "clases/clase_10.html#operaciones-en-filas",
     "href": "clases/clase_10.html#operaciones-en-filas",
     "title": "Ciencia de Datos para Economistas",
     "section": "Operaciones en Filas",
-    "text": "Operaciones en Filas\n\nglimpse(df_gapminder)"
+    "text": "Operaciones en Filas\n\nglimpse(df_gapminder)\n\nRows: 1,704\nColumns: 6\n$ country   &lt;chr&gt; \"Afghanistan\", \"Afghanistan\", \"Afghanistan\", \"Afghanistan\", \"Afghanist…\n$ continent &lt;chr&gt; \"Asia\", \"Asia\", \"Asia\", \"Asia\", \"Asia\", \"Asia\", \"Asia\", \"Asia\", \"Asia\"…\n$ year      &lt;dbl&gt; 1952, 1957, 1962, 1967, 1972, 1977, 1982, 1987, 1992, 1997, 2002, 2007…\n$ lifeExp   &lt;dbl&gt; 28.801, 30.332, 31.997, 34.020, 36.088, 38.438, 39.854, 40.822, 41.674…\n$ pop       &lt;dbl&gt; 8425333, 9240934, 10267083, 11537966, 13079460, 14880372, 12881816, 13…\n$ gdpPercap &lt;dbl&gt; 779.4453, 820.8530, 853.1007, 836.1971, 739.9811, 786.1134, 978.0114, …"
   },
   {
     "objectID": "clases/clase_10.html#filter",
@@ -2746,5 +2746,173 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "3. Directorio de Trabajo/ cont.",
     "text": "3. Directorio de Trabajo/ cont.\n\nUsando código para windows:\n\n# Para Windows\nsetwd(\"C:\\\\Users\\\\NombreUsuario\\\\Documentos\")\n\nUsando código para MacOS\n\n# Para macOS/Linux\nsetwd(\"/Users/NombreUsuario/Documentos\")"
+  },
+  {
+    "objectID": "clases/clase_10.html#valores-únicos-presentes-en-un-vector",
+    "href": "clases/clase_10.html#valores-únicos-presentes-en-un-vector",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Valores únicos presentes en un Vector",
+    "text": "Valores únicos presentes en un Vector\nSi queremos determinar el nombre de los continentes\n\ncontinentes &lt;- unique(df_gapminder$continent)\ncontinentes\n\n[1] \"Asia\"     \"Europe\"   \"Africa\"   \"Americas\" \"Oceania\""
+  },
+  {
+    "objectID": "clases/clase_10.html#filter-por-una-variable",
+    "href": "clases/clase_10.html#filter-por-una-variable",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Filter por una Variable",
+    "text": "Filter por una Variable\nFiltrar datos de acuerdo a un criterio\n\ndf_gapminder%&gt;%\n  filter(country=='Venezuela')\n\n# A tibble: 12 × 6\n   country   continent  year lifeExp      pop gdpPercap\n   &lt;chr&gt;     &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n 1 Venezuela Americas   1952    55.1  5439568     7690.\n 2 Venezuela Americas   1957    57.9  6702668     9802.\n 3 Venezuela Americas   1962    60.8  8143375     8423.\n 4 Venezuela Americas   1967    63.5  9709552     9541.\n 5 Venezuela Americas   1972    65.7 11515649    10505.\n 6 Venezuela Americas   1977    67.5 13503563    13144.\n 7 Venezuela Americas   1982    68.6 15620766    11152.\n 8 Venezuela Americas   1987    70.2 17910182     9884.\n 9 Venezuela Americas   1992    71.2 20265563    10734.\n10 Venezuela Americas   1997    72.1 22374398    10165.\n11 Venezuela Americas   2002    72.8 24287670     8605.\n12 Venezuela Americas   2007    73.7 26084662    11416."
+  },
+  {
+    "objectID": "clases/clase_10.html#filter-por-dos-criterios",
+    "href": "clases/clase_10.html#filter-por-dos-criterios",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Filter por dos criterios",
+    "text": "Filter por dos criterios\nFiltrar datos cuando se cumplen dos criterios sobre dos atributos\n\ndf_gapminder%&gt;%\n  filter(country=='Venezuela' & year &gt;1992)\n\n# A tibble: 3 × 6\n  country   continent  year lifeExp      pop gdpPercap\n  &lt;chr&gt;     &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n1 Venezuela Americas   1997    72.1 22374398    10165.\n2 Venezuela Americas   2002    72.8 24287670     8605.\n3 Venezuela Americas   2007    73.7 26084662    11416."
+  },
+  {
+    "objectID": "clases/clase_10.html#filter-por-dos-criterios-sobre-un-mismo-atributo",
+    "href": "clases/clase_10.html#filter-por-dos-criterios-sobre-un-mismo-atributo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Filter por dos criterios sobre un mismo atributo",
+    "text": "Filter por dos criterios sobre un mismo atributo\n\ndf_gapminder%&gt;%\n  filter(country=='Venezuela' | country =='Colombia')\n\n# A tibble: 24 × 6\n   country  continent  year lifeExp      pop gdpPercap\n   &lt;chr&gt;    &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n 1 Colombia Americas   1952    50.6 12350771     2144.\n 2 Colombia Americas   1957    55.1 14485993     2324.\n 3 Colombia Americas   1962    57.9 17009885     2492.\n 4 Colombia Americas   1967    60.0 19764027     2679.\n 5 Colombia Americas   1972    61.6 22542890     3265.\n 6 Colombia Americas   1977    63.8 25094412     3816.\n 7 Colombia Americas   1982    66.7 27764644     4398.\n 8 Colombia Americas   1987    67.8 30964245     4903.\n 9 Colombia Americas   1992    68.4 34202721     5445.\n10 Colombia Americas   1997    70.3 37657830     6117.\n# ℹ 14 more rows"
+  },
+  {
+    "objectID": "clases/clase_10.html#filter-por-dos-criterios-sobre-dos-atributos",
+    "href": "clases/clase_10.html#filter-por-dos-criterios-sobre-dos-atributos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Filter por dos criterios sobre dos atributos",
+    "text": "Filter por dos criterios sobre dos atributos\n\ndf_gapminder%&gt;%\n  filter(country=='Venezuela' | country =='Colombia')%&gt;%\n  filter(year&gt;=1992)\n\n# A tibble: 8 × 6\n  country   continent  year lifeExp      pop gdpPercap\n  &lt;chr&gt;     &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n1 Colombia  Americas   1992    68.4 34202721     5445.\n2 Colombia  Americas   1997    70.3 37657830     6117.\n3 Colombia  Americas   2002    71.7 41008227     5755.\n4 Colombia  Americas   2007    72.9 44227550     7007.\n5 Venezuela Americas   1992    71.2 20265563    10734.\n6 Venezuela Americas   1997    72.1 22374398    10165.\n7 Venezuela Americas   2002    72.8 24287670     8605.\n8 Venezuela Americas   2007    73.7 26084662    11416."
+  },
+  {
+    "objectID": "clases/clase_10.html#filter-por-dos-criterios-sobre-dos-atributos-1",
+    "href": "clases/clase_10.html#filter-por-dos-criterios-sobre-dos-atributos-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Filter por dos criterios sobre dos atributos,",
+    "text": "Filter por dos criterios sobre dos atributos,\nDos atributos a filtrar por cada criterio. En country se filtran un país o el otro país. En year se tienen que cumplir los dos criterios &\n\ndf_gapminder%&gt;%\n  filter(country=='Venezuela' | country =='Colombia')%&gt;%\n  filter(year&gt;=1977 & year&lt;= 2002)\n\n# A tibble: 12 × 6\n   country   continent  year lifeExp      pop gdpPercap\n   &lt;chr&gt;     &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n 1 Colombia  Americas   1977    63.8 25094412     3816.\n 2 Colombia  Americas   1982    66.7 27764644     4398.\n 3 Colombia  Americas   1987    67.8 30964245     4903.\n 4 Colombia  Americas   1992    68.4 34202721     5445.\n 5 Colombia  Americas   1997    70.3 37657830     6117.\n 6 Colombia  Americas   2002    71.7 41008227     5755.\n 7 Venezuela Americas   1977    67.5 13503563    13144.\n 8 Venezuela Americas   1982    68.6 15620766    11152.\n 9 Venezuela Americas   1987    70.2 17910182     9884.\n10 Venezuela Americas   1992    71.2 20265563    10734.\n11 Venezuela Americas   1997    72.1 22374398    10165.\n12 Venezuela Americas   2002    72.8 24287670     8605."
+  },
+  {
+    "objectID": "clases/clase_10.html#filter-por-dos-criterios-con-operadores-y-and-y-or",
+    "href": "clases/clase_10.html#filter-por-dos-criterios-con-operadores-y-and-y-or",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Filter por dos criterios con operadores & y | (AND y OR)",
+    "text": "Filter por dos criterios con operadores & y | (AND y OR)\nSe introduce la función between\n\ndf_gapminder%&gt;%\n  filter(country=='Venezuela' | country =='Colombia')%&gt;%\n  filter(between(x= year, left= 1977,right= 2002))\n\n# A tibble: 12 × 6\n   country   continent  year lifeExp      pop gdpPercap\n   &lt;chr&gt;     &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n 1 Colombia  Americas   1977    63.8 25094412     3816.\n 2 Colombia  Americas   1982    66.7 27764644     4398.\n 3 Colombia  Americas   1987    67.8 30964245     4903.\n 4 Colombia  Americas   1992    68.4 34202721     5445.\n 5 Colombia  Americas   1997    70.3 37657830     6117.\n 6 Colombia  Americas   2002    71.7 41008227     5755.\n 7 Venezuela Americas   1977    67.5 13503563    13144.\n 8 Venezuela Americas   1982    68.6 15620766    11152.\n 9 Venezuela Americas   1987    70.2 17910182     9884.\n10 Venezuela Americas   1992    71.2 20265563    10734.\n11 Venezuela Americas   1997    72.1 22374398    10165.\n12 Venezuela Americas   2002    72.8 24287670     8605."
+  },
+  {
+    "objectID": "clases/clase_10.html#filter-con-la-función-in",
+    "href": "clases/clase_10.html#filter-con-la-función-in",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Filter con la función %in%",
+    "text": "Filter con la función %in%\nSe filtran elementos que se encuentran en un vector que en este caso es c('Colombia','Venezuela')\n\ndf_gapminder%&gt;%\n  filter(country %in% c('Colombia','Venezuela'))\n\n# A tibble: 24 × 6\n   country  continent  year lifeExp      pop gdpPercap\n   &lt;chr&gt;    &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n 1 Colombia Americas   1952    50.6 12350771     2144.\n 2 Colombia Americas   1957    55.1 14485993     2324.\n 3 Colombia Americas   1962    57.9 17009885     2492.\n 4 Colombia Americas   1967    60.0 19764027     2679.\n 5 Colombia Americas   1972    61.6 22542890     3265.\n 6 Colombia Americas   1977    63.8 25094412     3816.\n 7 Colombia Americas   1982    66.7 27764644     4398.\n 8 Colombia Americas   1987    67.8 30964245     4903.\n 9 Colombia Americas   1992    68.4 34202721     5445.\n10 Colombia Americas   1997    70.3 37657830     6117.\n# ℹ 14 more rows"
+  },
+  {
+    "objectID": "clases/clase_10.html#filter-usando-str_detect",
+    "href": "clases/clase_10.html#filter-usando-str_detect",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Filter usando str_detect",
+    "text": "Filter usando str_detect\nCuando no existe certeza para aplicaer el criterio de igualdad, se puede usar la función str_detect del paquete stringr la cual evalúa coincidencias parciales sobre la presencia de un patrón sobre una determinada string (cadena de texto)\n\ndf_gapminder%&gt;%\n  filter(str_detect(string= country,\n                    pattern='nistan'))\n\n# A tibble: 12 × 6\n   country     continent  year lifeExp      pop gdpPercap\n   &lt;chr&gt;       &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n 1 Afghanistan Asia       1952    28.8  8425333      779.\n 2 Afghanistan Asia       1957    30.3  9240934      821.\n 3 Afghanistan Asia       1962    32.0 10267083      853.\n 4 Afghanistan Asia       1967    34.0 11537966      836.\n 5 Afghanistan Asia       1972    36.1 13079460      740.\n 6 Afghanistan Asia       1977    38.4 14880372      786.\n 7 Afghanistan Asia       1982    39.9 12881816      978.\n 8 Afghanistan Asia       1987    40.8 13867957      852.\n 9 Afghanistan Asia       1992    41.7 16317921      649.\n10 Afghanistan Asia       1997    41.8 22227415      635.\n11 Afghanistan Asia       2002    42.1 25268405      727.\n12 Afghanistan Asia       2007    43.8 31889923      975."
+  },
+  {
+    "objectID": "clases/clase_10.html#funciones-slice-y-sus-varianzas",
+    "href": "clases/clase_10.html#funciones-slice-y-sus-varianzas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Funciones slice y sus varianzas",
+    "text": "Funciones slice y sus varianzas\nRebana, equivalente a seleccionar filas de la DF basadas en algún criterio."
+  },
+  {
+    "objectID": "clases/clase_10.html#slice_min",
+    "href": "clases/clase_10.html#slice_min",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "slice_min()",
+    "text": "slice_min()\nValore mínimo según un criterio\n\ndf_gapminder%&gt;%\n  filter(country %in% c('Colombia','Venezuela'))%&gt;%\n  slice_min(gdpPercap)\n\n# A tibble: 1 × 6\n  country  continent  year lifeExp      pop gdpPercap\n  &lt;chr&gt;    &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n1 Colombia Americas   1952    50.6 12350771     2144."
+  },
+  {
+    "objectID": "clases/clase_10.html#slice_min-con-parámetro-n",
+    "href": "clases/clase_10.html#slice_min-con-parámetro-n",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "slice_min() con parámetro n",
+    "text": "slice_min() con parámetro n\nn Valores mínimos según un criterio. En este caso n=5\n\ndf_gapminder%&gt;%\n  filter(country %in% c('Colombia','Venezuela'))%&gt;%\n  slice_min(gdpPercap, n=5)\n\n# A tibble: 5 × 6\n  country  continent  year lifeExp      pop gdpPercap\n  &lt;chr&gt;    &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n1 Colombia Americas   1952    50.6 12350771     2144.\n2 Colombia Americas   1957    55.1 14485993     2324.\n3 Colombia Americas   1962    57.9 17009885     2492.\n4 Colombia Americas   1967    60.0 19764027     2679.\n5 Colombia Americas   1972    61.6 22542890     3265."
+  },
+  {
+    "objectID": "clases/clase_10.html#equivalente-slice_min-en-rbase",
+    "href": "clases/clase_10.html#equivalente-slice_min-en-rbase",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "equivalente slice_min() en Rbase",
+    "text": "equivalente slice_min() en Rbase\n\ndf_gapminder%&gt;%\n  filter(country %in% c('Colombia','Venezuela'))%&gt;%\n  filter(gdpPercap ==min(gdpPercap))\n\n# A tibble: 1 × 6\n  country  continent  year lifeExp      pop gdpPercap\n  &lt;chr&gt;    &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n1 Colombia Americas   1952    50.6 12350771     2144."
+  },
+  {
+    "objectID": "clases/clase_10.html#slice_max",
+    "href": "clases/clase_10.html#slice_max",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "slice_max()",
+    "text": "slice_max()\n\ndf_gapminder%&gt;%\n  filter(country %in% c('Colombia','Venezuela'))%&gt;%\n  slice_max(order_by= gdpPercap)\n\n# A tibble: 1 × 6\n  country   continent  year lifeExp      pop gdpPercap\n  &lt;chr&gt;     &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n1 Venezuela Americas   1977    67.5 13503563    13144.\n\n\naplica usar n igual que slice_min()"
+  },
+  {
+    "objectID": "clases/clase_10.html#equivalente-slice_max-en-rbase",
+    "href": "clases/clase_10.html#equivalente-slice_max-en-rbase",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "equivalente slice_max() en Rbase",
+    "text": "equivalente slice_max() en Rbase\n\ndf_gapminder%&gt;%\n  filter(country %in% c('Colombia','Venezuela'))%&gt;%\n  filter(gdpPercap ==max(gdpPercap))\n\n# A tibble: 1 × 6\n  country   continent  year lifeExp      pop gdpPercap\n  &lt;chr&gt;     &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n1 Venezuela Americas   1977    67.5 13503563    13144."
+  },
+  {
+    "objectID": "clases/clase_10.html#slice_head",
+    "href": "clases/clase_10.html#slice_head",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "slice_head()",
+    "text": "slice_head()\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[2])%&gt;%\n  slice_head(n=10)\n\n# A tibble: 10 × 6\n   country continent  year lifeExp     pop gdpPercap\n   &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;\n 1 Albania Europe     1952    55.2 1282697     1601.\n 2 Albania Europe     1957    59.3 1476505     1942.\n 3 Albania Europe     1962    64.8 1728137     2313.\n 4 Albania Europe     1967    66.2 1984060     2760.\n 5 Albania Europe     1972    67.7 2263554     3313.\n 6 Albania Europe     1977    68.9 2509048     3533.\n 7 Albania Europe     1982    70.4 2780097     3631.\n 8 Albania Europe     1987    72   3075321     3739.\n 9 Albania Europe     1992    71.6 3326498     2497.\n10 Albania Europe     1997    73.0 3428038     3193."
+  },
+  {
+    "objectID": "clases/clase_10.html#equivalente-slice_head-en-rbase",
+    "href": "clases/clase_10.html#equivalente-slice_head-en-rbase",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "equivalente slice_head() en Rbase",
+    "text": "equivalente slice_head() en Rbase\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[2])%&gt;%\n  .[1:10, ]\n\n# A tibble: 10 × 6\n   country continent  year lifeExp     pop gdpPercap\n   &lt;chr&gt;   &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;\n 1 Albania Europe     1952    55.2 1282697     1601.\n 2 Albania Europe     1957    59.3 1476505     1942.\n 3 Albania Europe     1962    64.8 1728137     2313.\n 4 Albania Europe     1967    66.2 1984060     2760.\n 5 Albania Europe     1972    67.7 2263554     3313.\n 6 Albania Europe     1977    68.9 2509048     3533.\n 7 Albania Europe     1982    70.4 2780097     3631.\n 8 Albania Europe     1987    72   3075321     3739.\n 9 Albania Europe     1992    71.6 3326498     2497.\n10 Albania Europe     1997    73.0 3428038     3193."
+  },
+  {
+    "objectID": "clases/clase_10.html#slice_tail",
+    "href": "clases/clase_10.html#slice_tail",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "slice_tail()",
+    "text": "slice_tail()\n\ncontinentes[3]\n\n[1] \"Africa\"\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[3])%&gt;%\n  slice_tail(n=10)\n\n# A tibble: 10 × 6\n   country  continent  year lifeExp      pop gdpPercap\n   &lt;chr&gt;    &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n 1 Zimbabwe Africa     1962    52.4  4277736      527.\n 2 Zimbabwe Africa     1967    54.0  4995432      570.\n 3 Zimbabwe Africa     1972    55.6  5861135      799.\n 4 Zimbabwe Africa     1977    57.7  6642107      686.\n 5 Zimbabwe Africa     1982    60.4  7636524      789.\n 6 Zimbabwe Africa     1987    62.4  9216418      706.\n 7 Zimbabwe Africa     1992    60.4 10704340      693.\n 8 Zimbabwe Africa     1997    46.8 11404948      792.\n 9 Zimbabwe Africa     2002    40.0 11926563      672.\n10 Zimbabwe Africa     2007    43.5 12311143      470."
+  },
+  {
+    "objectID": "clases/clase_10.html#equivalente-slice_tail-en-rbase",
+    "href": "clases/clase_10.html#equivalente-slice_tail-en-rbase",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "equivalente slice_tail() en Rbase",
+    "text": "equivalente slice_tail() en Rbase\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[3])%&gt;%\n  .[(nrow(.)-10):nrow(.), ]\n\n# A tibble: 11 × 6\n   country  continent  year lifeExp      pop gdpPercap\n   &lt;chr&gt;    &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n 1 Zimbabwe Africa     1957    50.5  3646340      519.\n 2 Zimbabwe Africa     1962    52.4  4277736      527.\n 3 Zimbabwe Africa     1967    54.0  4995432      570.\n 4 Zimbabwe Africa     1972    55.6  5861135      799.\n 5 Zimbabwe Africa     1977    57.7  6642107      686.\n 6 Zimbabwe Africa     1982    60.4  7636524      789.\n 7 Zimbabwe Africa     1987    62.4  9216418      706.\n 8 Zimbabwe Africa     1992    60.4 10704340      693.\n 9 Zimbabwe Africa     1997    46.8 11404948      792.\n10 Zimbabwe Africa     2002    40.0 11926563      672.\n11 Zimbabwe Africa     2007    43.5 12311143      470."
+  },
+  {
+    "objectID": "clases/clase_10.html#slice_sample",
+    "href": "clases/clase_10.html#slice_sample",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "slice_sample()",
+    "text": "slice_sample()\nUna muestra aleatoria de valores filtrando previamente de acuerdo a un criterio\n\ncontinentes[1]\n\n[1] \"Asia\"\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[1])%&gt;%\n  slice_sample(n=10)\n\n# A tibble: 10 × 6\n   country      continent  year lifeExp       pop gdpPercap\n   &lt;chr&gt;        &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n 1 Iran         Asia       1972    55.2  30614000     9614.\n 2 Jordan       Asia       1982    63.7   2347031     4161.\n 3 Philippines  Asia       1952    47.8  22438691     1273.\n 4 Indonesia    Asia       1997    66.0 199278000     3119.\n 5 India        Asia       1992    60.2 872000000     1164.\n 6 Saudi Arabia Asia       2002    71.6  24501530    19015.\n 7 Myanmar      Asia       1962    45.1  23634436      388 \n 8 Indonesia    Asia       2007    70.6 223547000     3541.\n 9 Syria        Asia       1967    53.7   5680812     1882.\n10 Jordan       Asia       1967    51.6   1255058     2742."
+  },
+  {
+    "objectID": "clases/clase_10.html#equivalente-slice_tail-en-rbase-1",
+    "href": "clases/clase_10.html#equivalente-slice_tail-en-rbase-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "equivalente slice_tail() en Rbase",
+    "text": "equivalente slice_tail() en Rbase\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[1])%&gt;%\n  .[sample(1:nrow(.),10),]\n\n# A tibble: 10 × 6\n   country     continent  year lifeExp      pop gdpPercap\n   &lt;chr&gt;       &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n 1 Bangladesh  Asia       1972    45.3 70759295      630.\n 2 Myanmar     Asia       1952    36.3 20092996      331 \n 3 Vietnam     Asia       2002    73.0 80908147     1764.\n 4 Yemen, Rep. Asia       1977    44.2  8403990     1830.\n 5 Iran        Asia       1997    68.0 63327987     8264.\n 6 Nepal       Asia       2007    63.8 28901790     1091.\n 7 Iraq        Asia       2007    59.5 27499638     4471.\n 8 Pakistan    Asia       1962    47.7 53100671      803.\n 9 Bahrain     Asia       1977    65.6   297410    19340.\n10 Vietnam     Asia       1977    55.8 50533506      714."
+  },
+  {
+    "objectID": "clases/clase_10.html#reordenar-datos-basado-en-un-criterio-arrange",
+    "href": "clases/clase_10.html#reordenar-datos-basado-en-un-criterio-arrange",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Reordenar datos basado en un criterio arrange",
+    "text": "Reordenar datos basado en un criterio arrange\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[4])%&gt;%\n  arrange(gdpPercap)\n\n# A tibble: 300 × 6\n   country            continent  year lifeExp     pop gdpPercap\n   &lt;chr&gt;              &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;\n 1 Haiti              Americas   2007    60.9 8502814     1202.\n 2 Haiti              Americas   2002    58.1 7607651     1270.\n 3 Haiti              Americas   1997    56.7 6913545     1342.\n 4 Dominican Republic Americas   1952    45.9 2491346     1398.\n 5 Haiti              Americas   1967    46.2 4318137     1452.\n 6 Haiti              Americas   1992    55.1 6326682     1456.\n 7 Dominican Republic Americas   1957    49.8 2923186     1544.\n 8 Dominican Republic Americas   1967    56.8 4049146     1654.\n 9 Haiti              Americas   1972    48.0 4698301     1654.\n10 Dominican Republic Americas   1962    53.5 3453434     1662.\n# ℹ 290 more rows\n\n\nojo con la sobreescritura"
+  },
+  {
+    "objectID": "clases/clase_10.html#reordenar-en-forma-descendente-desc",
+    "href": "clases/clase_10.html#reordenar-en-forma-descendente-desc",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Reordenar en forma descendente desc()",
+    "text": "Reordenar en forma descendente desc()\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[4])%&gt;%\n  arrange(desc(gdpPercap))\n\n# A tibble: 300 × 6\n   country       continent  year lifeExp       pop gdpPercap\n   &lt;chr&gt;         &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n 1 United States Americas   2007    78.2 301139947    42952.\n 2 United States Americas   2002    77.3 287675526    39097.\n 3 Canada        Americas   2007    80.7  33390141    36319.\n 4 United States Americas   1997    76.8 272911760    35767.\n 5 Canada        Americas   2002    79.8  31902268    33329.\n 6 United States Americas   1992    76.1 256894189    32004.\n 7 United States Americas   1987    75.0 242803533    29884.\n 8 Canada        Americas   1997    78.6  30305843    28955.\n 9 Canada        Americas   1987    76.9  26549700    26627.\n10 Canada        Americas   1992    78.0  28523502    26343.\n# ℹ 290 more rows"
+  },
+  {
+    "objectID": "clases/clase_10.html#notas-finales",
+    "href": "clases/clase_10.html#notas-finales",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Notas finales:",
+    "text": "Notas finales:\n\nRevisar documentación de funciones para comprender los argumentos y su uso\nRevisar funcionamiento de las equivalencias que se presentaron usando RBase\n\n\n\n\n\n🔗 ucveconomiar4ds"
   }
 ]
