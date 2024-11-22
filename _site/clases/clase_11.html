@@ -12,7 +12,7 @@
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="author" content="MSc. José M. Avendaño">
-  <meta name="dcterms.date" content="2024-11-18">
+  <meta name="dcterms.date" content="2024-11-20">
   <title>UCV EconomíaR4DS – Ciencia de Datos para Economistas</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -31,6 +31,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -347,59 +412,412 @@ MSc. José M. Avendaño
     </div>
 </div>
 
-  <p class="date">2024-11-18</p>
+  <p class="date">2024-11-20</p>
 </section>
 <section id="objetivo" class="slide level2">
 <h2>Objetivo</h2>
 <p>Realizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las columnas o atributos.</p>
 
-<img data-src="images/im-or-trans.png" class="r-stretch"><aside class="notes">
-<p>Anuncios:</p>
-<ul>
-<li><p>modificación en presentación clase 9 y 10</p></li>
-<li><p>Chat y lecturas</p></li>
-<li><p>Sesión lunes visualizaciones</p></li>
-<li><p>Sesión miércoles proyecto y tarea ensayo</p></li>
-</ul>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
+<img data-src="images/im-or-trans.png" class="r-stretch"></section>
 <section id="operaciones-en-columnas" class="slide level2">
 <h2>Operaciones en Columnas</h2>
+<p>A diferencia de las operaciones que revisamos en la Clase 10 donde aplicamos ciertas funciones para actuar sobre las filas, en esta oportunidad vamos a actuar sobre las columnas con una serie de funciones.</p>
+<p>Revisar presentación e igualmente el qmd disponible en <a href="https://github.com/javendaXgh/r4dsucv2024/blob/main/clases/clase_11.qmd" class="uri">https://github.com/javendaXgh/r4dsucv2024/blob/main/clases/clase_11.qmd</a></p>
+</section>
+<section id="selección-de-columnas" class="slide level2">
+<h2>Selección de Columnas</h2>
+<p>Se revisarán distintos métodos para seleccionar o deseleccionar columas de una data frame.</p>
 </section>
 <section id="select" class="slide level2">
 <h2>Select</h2>
-<ul>
-<li class="fragment"><p>select(!)</p></li>
-<li class="fragment"><p>select(ends_with())</p></li>
-<li class="fragment"><p>everything()</p></li>
-</ul>
+<p>Selecciona columnas de una DF</p>
+<ol type="1">
+<li class="fragment"><p>Por nombre de las columnas:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb1-2"><a></a>  <span class="fu">select</span>(country, year, lifeExp)<span class="sc">%&gt;%</span></span>
+<span id="cb1-3"><a></a>  <span class="fu">slice</span>(<span class="dv">1</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  country      year lifeExp
+  &lt;fct&gt;       &lt;int&gt;   &lt;dbl&gt;
+1 Afghanistan  1952    28.8</code></pre>
+</div>
+</div></li>
+<li class="fragment"><p>Por índice de la columna</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a></a>  <span class="fu">select</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">4</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb3-3"><a></a>  <span class="fu">slice</span>(<span class="dv">1</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  country      year lifeExp
+  &lt;fct&gt;       &lt;int&gt;   &lt;dbl&gt;
+1 Afghanistan  1952    28.8</code></pre>
+</div>
+</div></li>
+</ol>
+</section>
+<section id="select-" class="slide level2">
+<h2>select(-)</h2>
+<p>Uso de operador sustracción para no selección</p>
+<ol type="1">
+<li class="fragment"><p>Por nombre</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a></a>  <span class="fu">select</span>(<span class="sc">-</span>continent, <span class="sc">-</span>gdpPercap, <span class="sc">-</span>continent, <span class="sc">-</span>pop )<span class="sc">%&gt;%</span></span>
+<span id="cb5-3"><a></a>  <span class="fu">slice</span>(<span class="dv">1</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  country      year lifeExp
+  &lt;fct&gt;       &lt;int&gt;   &lt;dbl&gt;
+1 Afghanistan  1952    28.8</code></pre>
+</div>
+</div></li>
+<li class="fragment"><p>Por índice</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">6</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb7-3"><a></a>  <span class="fu">slice</span>(<span class="dv">1</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  country      year lifeExp
+  &lt;fct&gt;       &lt;int&gt;   &lt;dbl&gt;
+1 Afghanistan  1952    28.8</code></pre>
+</div>
+</div></li>
+</ol>
+</section>
+<section id="select-1" class="slide level2">
+<h2>select(!)</h2>
+<p>Deseleccionar usando el operador de negación <code>!</code></p>
+<ol type="1">
+<li class="fragment"><p>Por nombre</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb9-2"><a></a>  <span class="fu">select</span>(<span class="sc">!</span><span class="fu">c</span>(continent, gdpPercap, pop))<span class="sc">%&gt;%</span></span>
+<span id="cb9-3"><a></a>  <span class="fu">slice</span>(<span class="dv">1</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  country      year lifeExp
+  &lt;fct&gt;       &lt;int&gt;   &lt;dbl&gt;
+1 Afghanistan  1952    28.8</code></pre>
+</div>
+</div></li>
+<li class="fragment"><p>Por índice</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb11-2"><a></a>  <span class="fu">select</span>(<span class="sc">!</span><span class="fu">c</span>(<span class="dv">2</span>,<span class="dv">5</span>,<span class="dv">6</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb11-3"><a></a>  <span class="fu">slice</span>(<span class="dv">1</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 3
+  country      year lifeExp
+  &lt;fct&gt;       &lt;int&gt;   &lt;dbl&gt;
+1 Afghanistan  1952    28.8</code></pre>
+</div>
+</div></li>
+</ol>
 </section>
 <section id="rename" class="slide level2">
 <h2>Rename</h2>
+<p>Cambiar el nombre de una columna. Primero se coloca el nombre nuevo y luego</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a></a>  <span class="fu">rename</span>(<span class="at">anno=</span>year, <span class="at">pais=</span> country)<span class="sc">%&gt;%</span></span>
+<span id="cb13-3"><a></a>  <span class="fu">select</span>(anno, pais)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,704 × 2
+    anno pais       
+   &lt;int&gt; &lt;fct&gt;      
+ 1  1952 Afghanistan
+ 2  1957 Afghanistan
+ 3  1962 Afghanistan
+ 4  1967 Afghanistan
+ 5  1972 Afghanistan
+ 6  1977 Afghanistan
+ 7  1982 Afghanistan
+ 8  1987 Afghanistan
+ 9  1992 Afghanistan
+10  1997 Afghanistan
+# ℹ 1,694 more rows</code></pre>
+</div>
+</div>
 </section>
 <section id="mutate" class="slide level2">
 <h2>Mutate</h2>
-<ul>
-<li class="fragment"><p>ifelse()</p></li>
-<li class="fragment"><p>mean()</p></li>
-<li class="fragment"><p>sum()</p></li>
-</ul>
+<p>Crear una nueva columna en una DF, en este caso una columna que calcula el PIB</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>df_gapminder_pib <span class="ot">&lt;-</span> df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb15-2"><a></a>  <span class="fu">mutate</span>(<span class="at">pib=</span> gdpPercap<span class="sc">*</span> pop)<span class="sc">%&gt;%</span></span>
+<span id="cb15-3"><a></a>  <span class="fu">select</span>(country, year, pib)</span>
+<span id="cb15-4"><a></a></span>
+<span id="cb15-5"><a></a><span class="fu">head</span>(df_gapminder_pib, <span class="dv">3</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 3
+  country      year         pib
+  &lt;fct&gt;       &lt;int&gt;       &lt;dbl&gt;
+1 Afghanistan  1952 6567086330.
+2 Afghanistan  1957 7585448670.
+3 Afghanistan  1962 8758855797.</code></pre>
+</div>
+</div>
 </section>
-<section id="summarise" class="slide level2">
-<h2>Summarise</h2>
+<section id="mutate-ifelse" class="slide level2">
+<h2>Mutate /ifelse</h2>
+<p>La función <code>ifelse</code> funciona vectorizadamente, es decir, se aplica sobre cada valor de una determinada fila de la data frame y su objetivo es evaluar si una determinada condición que es establecida se cumple o no, para un determinado valor.</p>
+<p>La condición evaluada solo puede arrojar un valor verdadero (TRUE) o uno falso (FALSE). Si arroja un verdadero ocurrirá un suceso A y en caso de no cumplirse ocurrirá un suceso B.</p>
 </section>
-<section id="group_by" class="slide level2">
-<h2>Group_By</h2>
+<section id="mutate-ifelse--cont." class="slide level2">
+<h2>Mutate /ifelse -cont.</h2>
+<p>La sintáxis es <code>ifelse(condición a evaluar, ocurre A, ocurre b)</code> , por ejemplo:</p>
+<p><code>a &lt;- 4</code></p>
+<p><code>b &lt;- 7</code></p>
+<p><code>ifelse (a&gt;b, "es mayor", "es menor")</code></p>
+<p>dando de resultado la ejecución anterior “es menor” ya que al evaluar si 4 es mayor que 7, el resultado es <code>FALSE</code> y por lo tanto se irá al suceso B que es arrojar el valor “es menor”.</p>
+</section>
+<section id="mutate-ifelse--ejemplo--planteamiento-problema" class="slide level2">
+<h2>Mutate /ifelse- ejemplo- Planteamiento Problema</h2>
+<p>Vamos a estudiar cuáles países tienen un PIB por encima del promedio de los PIB´s para el año 2007. A los países que estén por encima les vamos a asignar una categoría que se llamará “pib_up_mean” y a los que estén por debajo otra que se llame “pib_down_mean”.</p>
+<p>Primero creamos la DF con los valores que vamos a evaluar</p>
+</section>
+<section id="mutate-ifelse--ejemplo--crear-df" class="slide level2">
+<h2>Mutate /ifelse- ejemplo- crear DF</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>df_pib_2007 <span class="ot">&lt;-</span> df_gapminder <span class="sc">%&gt;%</span></span>
+<span id="cb17-2"><a></a>  <span class="fu">filter</span>(year<span class="sc">==</span><span class="dv">2007</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb17-3"><a></a>  <span class="fu">mutate</span>(<span class="at">pib=</span> gdpPercap<span class="sc">*</span> pop)<span class="sc">%&gt;%</span></span>
+<span id="cb17-4"><a></a>  <span class="fu">select</span>(country, pib)</span>
+<span id="cb17-5"><a></a></span>
+<span id="cb17-6"><a></a><span class="fu">head</span>(df_pib_2007, <span class="dv">2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 2
+  country              pib
+  &lt;fct&gt;              &lt;dbl&gt;
+1 Afghanistan 31079291949.
+2 Albania     21376411360.</code></pre>
+</div>
+</div>
+</section>
+<section id="mutate-ifelse---ejemplo---pasos-intermedios" class="slide level2">
+<h2>Mutate / ifelse - ejemplo - pasos intermedios</h2>
+<p>En caso de que los PIBs se presenten con notación exponencial o científica se hace el siguiente <em>setting</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">options</span>(<span class="at">scipen=</span><span class="dv">999</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Igualmente vamos a evaluar cuál es el promedio del PIB y lo asignamos a la variable <code>pib_promedio</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a>pib_promedio <span class="ot">=</span><span class="fu">mean</span>(df_pib_2007<span class="sc">$</span>pib)</span>
+<span id="cb20-2"><a></a>pib_promedio</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 409220666999</code></pre>
+</div>
+</div>
+</section>
+<section id="mutate-ifelse---ejemplo--aplicar" class="slide level2">
+<h2>Mutate / ifelse - ejemplo- Aplicar</h2>
+<p>La columna que vamos a crear se llama “tipo_pib”</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a>df_pib_2007 <span class="ot">&lt;-</span> df_pib_2007<span class="sc">%&gt;%</span></span>
+<span id="cb22-2"><a></a>  <span class="fu">mutate</span>(<span class="at">tipo_pib =</span><span class="fu">ifelse</span>(pib<span class="sc">&gt;=</span>pib_promedio, <span class="co"># condición a evaluar</span></span>
+<span id="cb22-3"><a></a>                          <span class="st">"pib_up_mean"</span>, <span class="co"># caso verdadero =&gt; ocurre a</span></span>
+<span id="cb22-4"><a></a>                          <span class="st">"pib_down_mean"</span>))  <span class="co">#caso falso =&gt; ocurre b</span></span>
+<span id="cb22-5"><a></a></span>
+<span id="cb22-6"><a></a>df_pib_2007<span class="sc">%&gt;%</span></span>
+<span id="cb22-7"><a></a>  <span class="fu">sample_n</span>(<span class="dv">4</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 3
+  country              pib tipo_pib     
+  &lt;fct&gt;              &lt;dbl&gt; &lt;chr&gt;        
+1 France           1.86e12 pib_up_mean  
+2 Yemen, Rep.      5.07e10 pib_down_mean
+3 Switzerland      2.83e11 pib_down_mean
+4 Korea, Dem. Rep. 3.71e10 pib_down_mean</code></pre>
+</div>
+</div>
+</section>
+<section id="mutate-doble-ifelse---problema" class="slide level2">
+<h2>Mutate / doble ifelse - problema</h2>
+<p>Ahora vamos a asignar tres categorías según el tamaño del PIB.</p>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th>Condición</th>
+<th>Categoría a asignar</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>pib mayor a tercer cuantil</td>
+<td>‘super_pib’</td>
+</tr>
+<tr class="even">
+<td>pib entre 1 er cuantil y 3 er cuantil</td>
+<td>‘medio_pib’</td>
+</tr>
+<tr class="odd">
+<td>pib por debajo de 3 er cuantil</td>
+<td>‘bajo_pib’</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="mutate-doble-ifelse---pasos-intermedios" class="slide level2">
+<h2>Mutate /doble ifelse - pasos intermedios</h2>
+<p>Obtener cuantiles.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a>cuantiles_pib <span class="ot">&lt;-</span> <span class="fu">quantile</span>(df_pib_2007<span class="sc">$</span>pib)</span>
+<span id="cb24-2"><a></a></span>
+<span id="cb24-3"><a></a>cuantiles_pib</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>            0%            25%            50%            75%           100% 
+     319014077    17438491194    57869055458   275959963297 12934458535085 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="co">#fijar variables</span></span>
+<span id="cb26-2"><a></a>tercer_cuantil <span class="ot">&lt;-</span> cuantiles_pib[<span class="dv">4</span>]</span>
+<span id="cb26-3"><a></a>primer_cuantil <span class="ot">&lt;-</span> cuantiles_pib[<span class="dv">2</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="nota" class="slide level2">
+<h2>Nota:</h2>
+<p>Nayuha, de forma apropiada investigó cuál función se usa para obtener estos valores <code>quantile</code> y cómo se pueden asignar a una variable, dado que la salida que genera la función <code>summary</code> no es maleable para extraer datos individuales como los valores asociados a un cuantil u otro.</p>
+<h3 id="section">🙌🏼</h3>
+</section>
+<section id="mutate-doble-ifelse---ejemplo-2--aplicar" class="slide level2">
+<h2>Mutate /doble ifelse - ejemplo 2- Aplicar</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>df_pib_2007 <span class="ot">&lt;-</span> df_pib_2007<span class="sc">%&gt;%</span></span>
+<span id="cb27-2"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(pib))<span class="sc">%&gt;%</span></span>
+<span id="cb27-3"><a></a>  <span class="fu">mutate</span>(<span class="at">tipo_pib2 =</span><span class="fu">ifelse</span>(pib<span class="sc">&lt;=</span> primer_cuantil, <span class="co"># condición a evaluar</span></span>
+<span id="cb27-4"><a></a>                          <span class="st">"bajo_pib"</span>,<span class="co"># caso verdadero =&gt; ocurre a</span></span>
+<span id="cb27-5"><a></a>                          <span class="fu">ifelse</span>(pib<span class="sc">&gt;=</span> tercer_cuantil, <span class="co"># caso falso =&gt; ocurre b y lleva a una 2da eval</span></span>
+<span id="cb27-6"><a></a>                                 <span class="st">'super_pib'</span>, <span class="co"># caso verdadero =&gt; ocurre b-a</span></span>
+<span id="cb27-7"><a></a>                                 <span class="st">'medio_pib'</span>) <span class="co"># caso falso =&gt; ocurre b-b</span></span>
+<span id="cb27-8"><a></a>                          )</span>
+<span id="cb27-9"><a></a>         )</span>
+<span id="cb27-10"><a></a></span>
+<span id="cb27-11"><a></a><span class="fu">head</span>(df_pib_2007,<span class="dv">3</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 4
+  country           pib tipo_pib    tipo_pib2
+  &lt;fct&gt;           &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;    
+1 United States 1.29e13 pib_up_mean super_pib
+2 China         6.54e12 pib_up_mean super_pib
+3 Japan         4.04e12 pib_up_mean super_pib</code></pre>
+</div>
+</div>
+</section>
+<section id="tablas-sumarios-e-histograma" class="slide level2">
+<h2>Tablas Sumarios e Histograma</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">table</span>(df_pib_2007<span class="sc">$</span>tipo_pib)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+pib_down_mean   pib_up_mean 
+          117            25 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">table</span>(df_pib_2007<span class="sc">$</span>tipo_pib2)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+ bajo_pib medio_pib super_pib 
+       36        70        36 </code></pre>
+</div>
+</div>
+</section>
+<section id="histograma" class="slide level2">
+<h2>Histograma</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a><span class="fu">hist</span> (df_pib_2007<span class="sc">$</span>pib<span class="sc">/</span><span class="dv">1000000</span>,</span>
+<span id="cb33-2"><a></a>      <span class="at">col =</span> <span class="dv">4</span>,</span>
+<span id="cb33-3"><a></a>      <span class="at">breaks=</span><span class="dv">20</span>,</span>
+<span id="cb33-4"><a></a>      <span class="at">main =</span> <span class="st">"Histograma PIB Países"</span>, </span>
+<span id="cb33-5"><a></a>      <span class="at">xlab =</span> <span class="st">"Valor PIB"</span>, </span>
+<span id="cb33-6"><a></a>      <span class="at">ylab =</span> <span class="st">"Frecuencia"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="clase_11_files/figure-revealjs/unnamed-chunk-17-1.png" width="960" class="r-stretch"></section>
+<section id="explorar-países-con-mayor-pib" class="slide level2">
+<h2>Explorar Países con mayor PIB</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a><span class="fu">head</span>(df_pib_2007,<span class="dv">10</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 4
+   country            pib tipo_pib    tipo_pib2
+   &lt;fct&gt;            &lt;dbl&gt; &lt;chr&gt;       &lt;chr&gt;    
+ 1 United States  1.29e13 pib_up_mean super_pib
+ 2 China          6.54e12 pib_up_mean super_pib
+ 3 Japan          4.04e12 pib_up_mean super_pib
+ 4 India          2.72e12 pib_up_mean super_pib
+ 5 Germany        2.65e12 pib_up_mean super_pib
+ 6 United Kingdom 2.02e12 pib_up_mean super_pib
+ 7 France         1.86e12 pib_up_mean super_pib
+ 8 Brazil         1.72e12 pib_up_mean super_pib
+ 9 Italy          1.66e12 pib_up_mean super_pib
+10 Mexico         1.30e12 pib_up_mean super_pib</code></pre>
+</div>
+</div>
+</section>
+<section id="explorar-países-con-menor-pib" class="slide level2">
+<h2>Explorar Países con menor PIB</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>df_pib_2007<span class="sc">%&gt;%</span></span>
+<span id="cb36-2"><a></a>  <span class="fu">slice_tail</span>(<span class="at">n=</span><span class="dv">10</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 4
+   country                          pib tipo_pib      tipo_pib2
+   &lt;fct&gt;                          &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;    
+ 1 Burundi                  3608510288. pib_down_mean bajo_pib 
+ 2 Lesotho                  3158513357. pib_down_mean bajo_pib 
+ 3 Eritrea                  3146934084. pib_down_mean bajo_pib 
+ 4 Central African Republic 3084613079. pib_down_mean bajo_pib 
+ 5 Liberia                  1323912407. pib_down_mean bajo_pib 
+ 6 Gambia                   1270911775. pib_down_mean bajo_pib 
+ 7 Djibouti                 1033689705. pib_down_mean bajo_pib 
+ 8 Guinea-Bissau             852652874. pib_down_mean bajo_pib 
+ 9 Comoros                   701111696. pib_down_mean bajo_pib 
+10 Sao Tome and Principe     319014077. pib_down_mean bajo_pib </code></pre>
+</div>
+</div>
+</section>
+<section id="exporar-países-con-medio-pib" class="slide level2">
+<h2>Exporar Países con medio PIB</h2>
+<p>Muestra aleatoria</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a>df_pib_2007<span class="sc">%&gt;%</span></span>
+<span id="cb38-2"><a></a>  <span class="fu">filter</span>(tipo_pib2<span class="sc">==</span> <span class="st">'medio_pib'</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb38-3"><a></a>  <span class="fu">sample_n</span>(<span class="dv">8</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 8 × 4
+  country               pib tipo_pib      tipo_pib2
+  &lt;fct&gt;               &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;    
+1 Senegal      21007739941. pib_down_mean medio_pib
+2 Myanmar      45087309120  pib_down_mean medio_pib
+3 Angola       59583895818. pib_down_mean medio_pib
+4 Bulgaria     78213929148. pib_down_mean medio_pib
+5 Gabon        19213678514. pib_down_mean medio_pib
+6 Panama       31803076821. pib_down_mean medio_pib
+7 Norway      228421423675. pib_down_mean medio_pib
+8 El Salvador  39752986141. pib_down_mean medio_pib</code></pre>
+</div>
+</div>
+</section>
+<section id="asignación-a-un-nuevo-objeto" class="slide level2">
+<h2>Asignación a un Nuevo Objeto</h2>
+<p>Todas las operaciones realizadas anteriormente, tiene sentido asignarlas a un nuevo objeto, ya que se está modificando la estructura de los datos de entrada con los que estamos trabando. P.ej:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a>df_gap_pib <span class="ot">&lt;-</span> df_gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb40-2"><a></a>  <span class="fu">mutate</span>(<span class="at">pib=</span> gdpPercap<span class="sc">*</span> pop) <span class="sc">%&gt;%</span></span>
+<span id="cb40-3"><a></a>  <span class="fu">rename</span>(<span class="at">pais=</span> country, <span class="at">anno=</span>year) <span class="sc">%&gt;%</span></span>
+<span id="cb40-4"><a></a>  <span class="fu">select</span>(pais, anno, pib)</span>
+<span id="cb40-5"><a></a></span>
+<span id="cb40-6"><a></a><span class="fu">head</span>(df_gap_pib, <span class="dv">2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 3
+  pais         anno         pib
+  &lt;fct&gt;       &lt;int&gt;       &lt;dbl&gt;
+1 Afghanistan  1952 6567086330.
+2 Afghanistan  1957 7585448670.</code></pre>
+</div>
+</div>
 </section>
 <section id="lecturas-recomendadas" class="slide level2">
 <h2>Lecturas Recomendadas:</h2>
@@ -627,6 +1045,44 @@ MSc. José M. Avendaño
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
