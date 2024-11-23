@@ -54,10 +54,13 @@ website:
           #   text: Preguntas Frecuentes
       - section: "Prácticas"
         contents:
-          - href: practicas/clase3_apoyo.qmd
-            text: clase 3 / apoyo
+
           - href: practicas/clase4_apoyo.qmd
             text: clase 4 / apoyo
+          - href: practicas/clase3_apoyo.qmd
+            text: clase 5 / apoyo
+          - href: practicas/clase6_v2.qmd
+            text: clase 6 / versión códigos
           - href: practicas/clase6_pract1.qmd
             text: clase 6 / práctica 1
           - href: practicas/clase6_pract2.qmd
