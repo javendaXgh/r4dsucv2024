@@ -2562,8 +2562,8 @@
     "objectID": "clases/clase_09.html#objetivo",
     "href": "clases/clase_09.html#objetivo",
     "title": "Ciencia de Datos para Economistas",
-    "section": "",
-    "text": "Conocer las “paths” o rutas para ubicar directorios o archivos con los cuales se trabajará. Se asume que existe un archivo que se llama “archivo.txt” que está ubicado dentro de la carpeta “Documentos”. La carpeta “Documentos” en Windows se puede llamar “Mis Documentos”."
+    "section": "Objetivo:",
+    "text": "Objetivo:\nConocer las “paths” o rutas para ubicar directorios o archivos con los cuales se trabajará. Se asume que existe un archivo que se llama “archivo.txt” que está ubicado dentro de la carpeta “Documentos”. La carpeta “Documentos” en Windows se puede llamar “Mis Documentos”."
   },
   {
     "objectID": "clases/clase_10.html#objetivo",
@@ -2731,7 +2731,7 @@
     "href": "clases/clase_09.html#resumencont.",
     "title": "Ciencia de Datos para Economistas",
     "section": "Resumen/cont.",
-    "text": "Resumen/cont.\n\nDirectorio de Trabajo : Se puede verificar y cambiar usando getwd() y setwd().\nLeer/Escribir Archivos : Usar rutas relativas o absolutas según sea necesario, considerando el sistema operativo."
+    "text": "Resumen/cont.\n\nDirectorio de Trabajo : Se puede verificar y cambiar usando getwd() y setwd().\nLeer/Escribir Archivos : Usar rutas relativas o absolutas según sea necesario, considerando el sistema operativo.\n\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "clases/clase_09.html#rutas-absolutascont.",
@@ -3327,177 +3327,518 @@
   {
     "objectID": "practicas/clase6_v2.html",
     "href": "practicas/clase6_v2.html",
-    "title": "Ciencia de Datos para Economistas",
+    "title": "Clase 6- Construir Funciones y Data Frames",
     "section": "",
     "text": "¿Cómo lo hacemos?\nAyuda LLM\n\nFunciones disponibles\nSintaxis",
     "crumbs": [
       "Prácticas",
-      "clase 6 / versión códigos"
+      "clase 6 / versión reporte"
     ]
   },
   {
     "objectID": "practicas/clase6_v2.html#construir-funciones",
     "href": "practicas/clase6_v2.html#construir-funciones",
-    "title": "Ciencia de Datos para Economistas",
+    "title": "Clase 6- Construir Funciones y Data Frames",
     "section": "",
     "text": "¿Cómo lo hacemos?\nAyuda LLM\n\nFunciones disponibles\nSintaxis",
     "crumbs": [
       "Prácticas",
-      "clase 6 / versión códigos"
+      "clase 6 / versión reporte"
     ]
   },
   {
     "objectID": "practicas/clase6_v2.html#función",
     "href": "practicas/clase6_v2.html#función",
-    "title": "Ciencia de Datos para Economistas",
+    "title": "Clase 6- Construir Funciones y Data Frames",
     "section": "Función 🎲",
-    "text": "Función 🎲\n¿Qué debe hacer la función? ¿Qué debe representar?\n\n# ejecutar código y gradualmente descomentar líneas\nposibles_salidas_dado &lt;- c(1:6)\nsample(posibles_salidas_dado, 1)\n\n[1] 2\n\nsample(posibles_salidas_dado, 2)\n\n[1] 3 2\n\nsample(posibles_salidas_dado, 3)\n\n[1] 3 2 5\n\n# sample(posibles_salidas_dado, 7) # genera error\nsample(posibles_salidas_dado, 7, replace=TRUE)\n\n[1] 5 2 5 1 3 2 4\n\n\n¡Juguemos!\n\n# primera versión función\n\nlanzamiento &lt;- function(cdad_dados){\n  sample(1:6,cdad_dados, replace=TRUE)\n}\n\n# arrojar dado según función que crearmos\nlanzamiento (cdad_dados=3)\n\n[1] 1 5 1\n\nlanzamiento (cdad_dados=6)\n\n[1] 4 4 4 4 5 3",
+    "text": "Función 🎲\n¿Qué debe hacer la función? ¿Qué debe representar?\n\n# ejecutar código y gradualmente descomentar líneas\nposibles_salidas_dado &lt;- c(1:6)\nsample(posibles_salidas_dado, 1)\n\n[1] 4\n\nsample(posibles_salidas_dado, 2)\n\n[1] 6 2\n\nsample(posibles_salidas_dado, 3)\n\n[1] 2 3 1\n\n# sample(posibles_salidas_dado, 7) # genera error\nsample(posibles_salidas_dado, 7, replace=TRUE)\n\n[1] 2 1 2 3 4 2 4\n\n\n¡Juguemos!\n\n# primera versión función\n\nlanzamiento &lt;- function(cdad_dados){\n  sample(1:6,cdad_dados, replace=TRUE)\n}\n\n# arrojar dado según función que crearmos\nlanzamiento (cdad_dados=3)\n\n[1] 3 4 6\n\nlanzamiento (cdad_dados=6)\n\n[1] 2 6 1 6 2 1",
     "crumbs": [
       "Prácticas",
-      "clase 6 / versión códigos"
+      "clase 6 / versión reporte"
     ]
   },
   {
     "objectID": "practicas/clase6_v2.html#función-.",
     "href": "practicas/clase6_v2.html#función-.",
-    "title": "Ciencia de Datos para Economistas",
+    "title": "Clase 6- Construir Funciones y Data Frames",
     "section": "Función 🎲🎲….🎲",
-    "text": "Función 🎲🎲….🎲\n\n- ¿Entrada? =&gt; Argumentos\n\n# función con dos argumentos\nlanzamiento &lt;- function (cdad_dados,\n                         nombre_jugador){\n  resultado &lt;- sample (1:6,cdad_dados, replace = TRUE )\n  \n  paste(nombre_jugador, 'obtuvo el siguiente resultado',\n        resultado)\n}\n\n#La siguiente llamada a la función generará error ya que no contiente\n# dentro el valor del segundo argumento que es el nombre del jugador\n\n# lanzamiento(cdad_dados= 4)\n\nlanzamiento(nombre_jugador= 'Braian',\n            cdad_dados= 2)\n\n[1] \"Braian obtuvo el siguiente resultado 2\"\n[2] \"Braian obtuvo el siguiente resultado 2\"\n\n# la siguiente ejecución generará un problema al no nombrar los\n# argumentos y en orden posicional, pasar \"Braian\" como el primer\n# argumento, que en la función que declaramos como \"lanzamiento\"\n# corresponde a \"cdad_dados\", que debe ser de tipo numérico. \n\n# Lo mismo pasaría con el segundo argumento que estamos pasando que en este caso es 5,\n# pero no lo estamos referenciando con el nombre del argumento en la \n# función, que corresponde en la segunda posición al de nombre_jugador\n\n# lanzamiento( 'Braian',\n#             5)\n\nlanzamiento(2,'Jose')\n\n[1] \"Jose obtuvo el siguiente resultado 3\"\n[2] \"Jose obtuvo el siguiente resultado 4\"\n\n\nPara entender mejor la construcción de las funciones les recomiendo la lectura de esta sección del libro Hands On Promgramming With R https://rstudio-education.github.io/hopr/basics.html#sample-with-replacement que va muy similar a lo que revisamos en clase en cuanto al ejemplo del 🎲.\nPara revisar documentación de la función paste ejecutar ?paste en la consola.",
+    "text": "Función 🎲🎲….🎲\n\n- ¿Entrada? =&gt; Argumentos\n\n# función con dos argumentos\nlanzamiento &lt;- function (cdad_dados,\n                         nombre_jugador){\n  resultado &lt;- sample (1:6,cdad_dados, replace = TRUE )\n  \n  paste(nombre_jugador, 'obtuvo el siguiente resultado',\n        resultado)\n}\n\n#La siguiente llamada a la función generará error ya que no contiente\n# dentro el valor del segundo argumento que es el nombre del jugador\n\n# lanzamiento(cdad_dados= 4)\n\nlanzamiento(nombre_jugador= 'Braian',\n            cdad_dados= 2)\n\n[1] \"Braian obtuvo el siguiente resultado 4\"\n[2] \"Braian obtuvo el siguiente resultado 4\"\n\n# la siguiente ejecución generará un problema al no nombrar los\n# argumentos y en orden posicional, pasar \"Braian\" como el primer\n# argumento, que en la función que declaramos como \"lanzamiento\"\n# corresponde a \"cdad_dados\", que debe ser de tipo numérico. \n\n# Lo mismo pasaría con el segundo argumento que estamos pasando que en este caso es 5,\n# pero no lo estamos referenciando con el nombre del argumento en la \n# función, que corresponde en la segunda posición al de nombre_jugador\n\n# lanzamiento( 'Braian',\n#             5)\n\nlanzamiento(2,'Jose')\n\n[1] \"Jose obtuvo el siguiente resultado 1\"\n[2] \"Jose obtuvo el siguiente resultado 6\"\n\n\nPara entender mejor la construcción de las funciones les recomiendo la lectura de esta sección del libro Hands On Promgramming With R https://rstudio-education.github.io/hopr/basics.html#sample-with-replacement que va muy similar a lo que revisamos en clase en cuanto al ejemplo del 🎲.\nPara revisar documentación de la función paste ejecutar ?paste en la consola.",
     "crumbs": [
       "Prácticas",
-      "clase 6 / versión códigos"
+      "clase 6 / versión reporte"
     ]
   },
   {
     "objectID": "practicas/clase6_v2.html#principios-nombres-funciones",
     "href": "practicas/clase6_v2.html#principios-nombres-funciones",
-    "title": "Ciencia de Datos para Economistas",
+    "title": "Clase 6- Construir Funciones y Data Frames",
     "section": "Principios Nombres Funciones",
     "text": "Principios Nombres Funciones\n\nDescripción Clara : El nombre debe claramente indicar qué hace la función. Evita nombres genéricos como funcion o proceso.\nConsistencia y Coherencia : Mantén un estilo de nomenclatura consistente dentro del proyecto o grupo para facilitar la lectura y comprensión del código.",
     "crumbs": [
       "Prácticas",
-      "clase 6 / versión códigos"
+      "clase 6 / versión reporte"
     ]
   },
   {
     "objectID": "practicas/clase6_v2.html#principios-nombres-funciones---cont.",
     "href": "practicas/clase6_v2.html#principios-nombres-funciones---cont.",
-    "title": "Ciencia de Datos para Economistas",
+    "title": "Clase 6- Construir Funciones y Data Frames",
     "section": "Principios Nombres Funciones - cont.",
     "text": "Principios Nombres Funciones - cont.\n\nUsa Minúsculas y Guiones Bajos : Comienza el nombre con una letra minúscula y utiliza guiones bajos (_) para separar palabras. Esto hace que los nombres sean más fáciles de leer y evitar conflictos con palabras reservadas.\nResto de normas para nombrar objetos y variables",
     "crumbs": [
       "Prácticas",
-      "clase 6 / versión códigos"
+      "clase 6 / versión reporte"
     ]
   },
   {
     "objectID": "practicas/clase6_v2.html#construir-data-frame-df",
     "href": "practicas/clase6_v2.html#construir-data-frame-df",
-    "title": "Ciencia de Datos para Economistas",
+    "title": "Clase 6- Construir Funciones y Data Frames",
     "section": "Construir Data Frame (DF)",
     "text": "Construir Data Frame (DF)\ndatos World Bank\ncharacter/ nombres países\n\nnombre_paises &lt;- c('togo','japon','irlanda')\nnombre_paises\n\n[1] \"togo\"    \"japon\"   \"irlanda\"\n\n\nnumeric/ PIB año 2023\n\n# vector para registrar variación PIB\nvar_pib &lt;- c (-1.7, 2.3, -3.1 ) # separador décimal es el punto! ojo\n# datos inventados, no obtenidos de la página\nvar_pib\n\n[1] -1.7  2.3 -3.1\n\n\nlogical\n\n##########################################################\ncrecimiento_presente &lt;- var_pib &gt;0\ncrecimiento_presente\n\n[1] FALSE  TRUE FALSE\n\n# crear un vector de tipo logical donde se determina si cada elemento de var_pib es mayor que cero",
     "crumbs": [
       "Prácticas",
-      "clase 6 / versión códigos"
+      "clase 6 / versión reporte"
     ]
   },
   {
     "objectID": "practicas/clase6_v2.html#construir-df",
     "href": "practicas/clase6_v2.html#construir-df",
-    "title": "Ciencia de Datos para Economistas",
+    "title": "Clase 6- Construir Funciones y Data Frames",
     "section": "Construir DF",
     "text": "Construir DF\nRecordar la relación de orden que tenemos entre los tres vectores\npaises - var_pib - crecimiento_presente\nLista con vectores del mismo length() . En la consola ejecutar para cada vector la función length de la siguiente forma length(var_pib) .\n\n# usar la función de R que se llama data_frame\ndf_pib_paises &lt;- data.frame(pais= nombre_paises,\n                            delta_PIB= var_pib,\n                            crecimiento= crecimiento_presente)\n# esta función de nombre data.frame, puede tomar tantos argumentos como sean necesarios, siendo cada argumento el nombre que se le dará a cada columna (o atributo) seguido de un signo igual y posteriormente los datos que conformarán cada columna, por ejemplo: pais= nombre_paises\n\n# Al crear la data frame, se colocaran tantos argumentos, como columnas se quieran tener, y como en toda función, serán separados por una coma \",\" la indicación del argumento.\n\n\ndf_pib_paises # mostrar la Data Frame Creada\n\n     pais delta_PIB crecimiento\n1    togo      -1.7       FALSE\n2   japon       2.3        TRUE\n3 irlanda      -3.1       FALSE\n\n# recordar que para construir una DF desde distintos vectores necesitamos que cada vector contenta la misma cdad de elementos, en este caso son 3.\n#",
     "crumbs": [
       "Prácticas",
-      "clase 6 / versión códigos"
+      "clase 6 / versión reporte"
     ]
   },
   {
     "objectID": "practicas/clase6_v2.html#consultar-la-clase-del-objeto-creado",
     "href": "practicas/clase6_v2.html#consultar-la-clase-del-objeto-creado",
-    "title": "Ciencia de Datos para Economistas",
+    "title": "Clase 6- Construir Funciones y Data Frames",
     "section": "Consultar la clase del objeto creado:",
     "text": "Consultar la clase del objeto creado:\n\nclass (df_pib_paises)\n\n[1] \"data.frame\"\n\n\nEn el libro electrónico “R para Principiantes” de Juan B. Mendoza, pueden revisar algún complemento sobre las data frames, disponible en https://bookdown.org/jboscomendoza/r-principiantes4/data-frames.html",
     "crumbs": [
       "Prácticas",
-      "clase 6 / versión códigos"
+      "clase 6 / versión reporte"
     ]
   },
   {
     "objectID": "practicas/clase6_v2.html#acceso-elementos-vectores-listas-y-data-frames",
     "href": "practicas/clase6_v2.html#acceso-elementos-vectores-listas-y-data-frames",
-    "title": "Ciencia de Datos para Economistas",
+    "title": "Clase 6- Construir Funciones y Data Frames",
     "section": "Acceso Elementos Vectores, Listas y Data Frames",
     "text": "Acceso Elementos Vectores, Listas y Data Frames\nSe disponen de estos operadores para acceder a los elementos que conforman los vectores, listas y Data Frames\n\n\n\nvector\nlista\nDF\n\n\n\n\n[ ]\n[ ]\n[ ]\n\n\n\n[[ ]]\n[[ ]]\n\n\n\n$\n$",
     "crumbs": [
       "Prácticas",
-      "clase 6 / versión códigos"
+      "clase 6 / versión reporte"
     ]
   },
   {
     "objectID": "practicas/clase6_v2.html#ejemplos-accesos--vectores",
     "href": "practicas/clase6_v2.html#ejemplos-accesos--vectores",
-    "title": "Ciencia de Datos para Economistas",
+    "title": "Clase 6- Construir Funciones y Data Frames",
     "section": "Ejemplos Accesos- Vectores",
     "text": "Ejemplos Accesos- Vectores\n\nvector_demo &lt;- seq(from= 5, to =35, by=3)\nvector_demo\n\n [1]  5  8 11 14 17 20 23 26 29 32 35\n\n\n\nvector_demo [3]\n\n[1] 11\n\n\n\nvector_demo [[3]]\n\n[1] 11\n\n\nLos dos métodos de acceso, mediante los operadores [ y [[ generan el mismo resultado cuando se trabaja con vectores.",
     "crumbs": [
       "Prácticas",
-      "clase 6 / versión códigos"
+      "clase 6 / versión reporte"
     ]
   },
   {
     "objectID": "practicas/clase6_v2.html#ejemplos-accesos--lista",
     "href": "practicas/clase6_v2.html#ejemplos-accesos--lista",
-    "title": "Ciencia de Datos para Economistas",
+    "title": "Clase 6- Construir Funciones y Data Frames",
     "section": "Ejemplos Accesos- Lista",
     "text": "Ejemplos Accesos- Lista\nEn el libro “R para Principiantes” de Juan B. Mendoza , en el acceso https://bookdown.org/jboscomendoza/r-principiantes4/listas.html , pueden obtener información adicional sobre qué son las listas\n\nmonth.name # el objeto month.name viene precargado en R\n\n [1] \"January\"   \"February\"  \"March\"     \"April\"     \"May\"       \"June\"     \n [7] \"July\"      \"August\"    \"September\" \"October\"   \"November\"  \"December\" \n\nletters # el objeto letters viene precargado en R\n\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\" \"k\" \"l\" \"m\" \"n\" \"o\" \"p\" \"q\" \"r\" \"s\"\n[20] \"t\" \"u\" \"v\" \"w\" \"x\" \"y\" \"z\"\n\nlista_demo &lt;- list(meses= month.name, letras= letters, numeros= 1:12)\nlista_demo # verificamos contenido de la lista\n\n$meses\n [1] \"January\"   \"February\"  \"March\"     \"April\"     \"May\"       \"June\"     \n [7] \"July\"      \"August\"    \"September\" \"October\"   \"November\"  \"December\" \n\n$letras\n [1] \"a\" \"b\" \"c\" \"d\" \"e\" \"f\" \"g\" \"h\" \"i\" \"j\" \"k\" \"l\" \"m\" \"n\" \"o\" \"p\" \"q\" \"r\" \"s\"\n[20] \"t\" \"u\" \"v\" \"w\" \"x\" \"y\" \"z\"\n\n$numeros\n [1]  1  2  3  4  5  6  7  8  9 10 11 12\n\n\n\nMétodos de acceso [ ], $ y [[ ]]\n\nlista_demo[1]\n\n$meses\n [1] \"January\"   \"February\"  \"March\"     \"April\"     \"May\"       \"June\"     \n [7] \"July\"      \"August\"    \"September\" \"October\"   \"November\"  \"December\" \n\n# ir descomentando línea a línea para evaluar los resultados\n# lista_demo$meses \n# lista_demo[[1]]",
     "crumbs": [
       "Prácticas",
-      "clase 6 / versión códigos"
+      "clase 6 / versión reporte"
     ]
   },
   {
     "objectID": "practicas/clase6_v2.html#comparación-elementos",
     "href": "practicas/clase6_v2.html#comparación-elementos",
-    "title": "Ciencia de Datos para Economistas",
+    "title": "Clase 6- Construir Funciones y Data Frames",
     "section": "Comparación Elementos",
     "text": "Comparación Elementos\nSe hace una comparación de tipo lógico, entre la igualdad de cada uno de los elementos que arroja lista_demo$meses con los elementos que arroja lista_demo[[1]]\n\nlista_demo$meses == lista_demo[[1]]\n\n [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE\n\n\nSe puede ver, uno a uno, que todos los elementos que arroja cada uno de los métodos de acceso, son iguales puesto que aparecen todos los valores como TRUE",
     "crumbs": [
       "Prácticas",
-      "clase 6 / versión códigos"
+      "clase 6 / versión reporte"
     ]
   },
   {
     "objectID": "practicas/clase6_v2.html#ejemplos-accesos--lista-1",
     "href": "practicas/clase6_v2.html#ejemplos-accesos--lista-1",
-    "title": "Ciencia de Datos para Economistas",
+    "title": "Clase 6- Construir Funciones y Data Frames",
     "section": "Ejemplos Accesos- Lista/",
     "text": "Ejemplos Accesos- Lista/\n\n# ir descomentando línea a línea para evaluar los resultados\nlista_demo[[1]][3]\n\n[1] \"March\"\n\n#lista_demo$meses[3]",
     "crumbs": [
       "Prácticas",
-      "clase 6 / versión códigos"
+      "clase 6 / versión reporte"
     ]
   },
   {
     "objectID": "practicas/clase6_v2.html#pendiente-por-revisar-en-próxima-clase",
     "href": "practicas/clase6_v2.html#pendiente-por-revisar-en-próxima-clase",
-    "title": "Ciencia de Datos para Economistas",
+    "title": "Clase 6- Construir Funciones y Data Frames",
     "section": "Pendiente por Revisar en próxima Clase",
     "text": "Pendiente por Revisar en próxima Clase\nLas dos clases pasadas (5 y 6) ha quedado pendiente abordar estos dos temas:\n\nConsultar Vignettes y Cheat Sheets\nAcceso a elementos de df (filas, columnas o valor determinado)",
     "crumbs": [
       "Prácticas",
-      "clase 6 / versión códigos"
+      "clase 6 / versión reporte"
     ]
   },
   {
     "objectID": "practicas/clase6_v2.html#vídeo-de-interés",
     "href": "practicas/clase6_v2.html#vídeo-de-interés",
-    "title": "Ciencia de Datos para Economistas",
+    "title": "Clase 6- Construir Funciones y Data Frames",
     "section": "Vídeo de Interés",
     "text": "Vídeo de Interés\nLa próxima semana empezamos a trabajar con el libro R4DS de Hadley Wickham y el segundo capítulo versa sobre la visualización de los datos, así que el siguiente vídeo puede resultar de interés https://www.youtube.com/watch?v=jbkSRLYSojo",
     "crumbs": [
       "Prácticas",
-      "clase 6 / versión códigos"
+      "clase 6 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html",
+    "href": "practicas/clase_8.html",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "",
+    "text": "Presentar operadores lógicos y trabajar con ellos\nAcceder a elementos de vectores y DF’s según condiciones lógicas\nInspeccionar valores, rangos y estructura de una DF",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#objetivos-de-la-actividad",
+    "href": "practicas/clase_8.html#objetivos-de-la-actividad",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "",
+    "text": "Presentar operadores lógicos y trabajar con ellos\nAcceder a elementos de vectores y DF’s según condiciones lógicas\nInspeccionar valores, rangos y estructura de una DF",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#tabla-de-contingencia",
+    "href": "practicas/clase_8.html#tabla-de-contingencia",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Tabla de Contingencia",
+    "text": "Tabla de Contingencia\nConteo de frecuencia de un dato categórico\n\ntable(mtcars$cyl)\n\n\n 4  6  8 \n11  7 14",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#tabla-de-contingencia-cruzada",
+    "href": "practicas/clase_8.html#tabla-de-contingencia-cruzada",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Tabla de Contingencia Cruzada",
+    "text": "Tabla de Contingencia Cruzada\nMúltiples categorías\n\n\n\ncyl\nNumber of cylinders\n\n\nvs\nEngine (0 = V-shaped, 1 = straight)\n\n\n\n\ntable(mtcars$cyl, mtcars$vs)\n\n   \n     0  1\n  4  1 10\n  6  3  4\n  8 14  0",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#tabla-resumen-estadístico",
+    "href": "practicas/clase_8.html#tabla-resumen-estadístico",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Tabla Resumen Estadístico",
+    "text": "Tabla Resumen Estadístico\nRepresentar los valores mínimo y máximo, primer y tercer cuartil, media, promedio de un vector o data frame.\n\nsummary(mtcars$mpg)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  10.40   15.43   19.20   20.09   22.80   33.90",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#tabla-resumen-estadístico---cont",
+    "href": "practicas/clase_8.html#tabla-resumen-estadístico---cont",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Tabla Resumen Estadístico - cont",
+    "text": "Tabla Resumen Estadístico - cont\nLa salida de función summary cambia según el objeto que estemos trabajando\n\nsummary(mtcars)\n\n      mpg             cyl             disp             hp       \n Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  \n 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  \n Median :19.20   Median :6.000   Median :196.3   Median :123.0  \n Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  \n 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  \n Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  \n      drat             wt             qsec             vs        \n Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  \n 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  \n Median :3.695   Median :3.325   Median :17.71   Median :0.0000  \n Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  \n 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  \n Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  \n       am              gear            carb      \n Min.   :0.0000   Min.   :3.000   Min.   :1.000  \n 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  \n Median :0.0000   Median :4.000   Median :2.000  \n Mean   :0.4062   Mean   :3.688   Mean   :2.812  \n 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  \n Max.   :1.0000   Max.   :5.000   Max.   :8.000",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#operadores-lógicos",
+    "href": "practicas/clase_8.html#operadores-lógicos",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Operadores Lógicos",
+    "text": "Operadores Lógicos\n\n\\(&gt;\\) (mayor a)\n\\(&gt;=\\) (mayor o igual a)\n\\(&lt;\\) (menor a)\n\\(&lt;=\\) (menor o igual a)\n\\(==\\) (igual a)\n\\(!=\\) (distinto a)\n& (y)\n\\(|\\) (o)",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#uso-de-operadores-lógicos-en-un-vector",
+    "href": "practicas/clase_8.html#uso-de-operadores-lógicos-en-un-vector",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Uso de Operadores Lógicos en un Vector",
+    "text": "Uso de Operadores Lógicos en un Vector\nVector seleccionado “millas por galón” mpg\n\nmtcars$mpg\n\n [1] 21.0 21.0 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 17.8 16.4 17.3 15.2 10.4\n[16] 10.4 14.7 32.4 30.4 33.9 21.5 15.5 15.2 13.3 19.2 27.3 26.0 30.4 15.8 19.7\n[31] 15.0 21.4",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#vector-lógico-con-valores-que-cumplen-una-condición",
+    "href": "practicas/clase_8.html#vector-lógico-con-valores-que-cumplen-una-condición",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Vector Lógico con valores que Cumplen una Condición",
+    "text": "Vector Lógico con valores que Cumplen una Condición\nMayor que un valor dado\n\n  mtcars$mpg&gt;19.20\n\n [1]  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE  TRUE  TRUE FALSE FALSE FALSE\n[13] FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE\n[25] FALSE  TRUE  TRUE  TRUE FALSE  TRUE FALSE  TRUE\n\n\nMayor que el valor que retorna una función\n\nmtcars$mpg&gt;mean(mtcars$mpg)\n\n [1]  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE  TRUE  TRUE FALSE FALSE FALSE\n[13] FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE\n[25] FALSE  TRUE  TRUE  TRUE FALSE FALSE FALSE  TRUE",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#asignación-valores-a-variables",
+    "href": "practicas/clase_8.html#asignación-valores-a-variables",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Asignación valores a variables",
+    "text": "Asignación valores a variables\n\nvariable con promedio\ncreación DF\nevaluar valores que cumplen ambas condiciones\n\n\npromedio_mpg &lt;- mean(mtcars$mpg)\nvalor_3ercuartil &lt;- 33.90 \n\ndf_mpg &lt;- data.frame(mpg= mtcars$mpg,\n                     may_mean= mtcars$mpg&gt;promedio_mpg,\n                     men_3cuar= mtcars$mpg&lt;valor_3ercuartil )",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#inspección-df",
+    "href": "practicas/clase_8.html#inspección-df",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Inspección df",
+    "text": "Inspección df\n\ndf_mpg\n\n    mpg may_mean men_3cuar\n1  21.0     TRUE      TRUE\n2  21.0     TRUE      TRUE\n3  22.8     TRUE      TRUE\n4  21.4     TRUE      TRUE\n5  18.7    FALSE      TRUE\n6  18.1    FALSE      TRUE\n7  14.3    FALSE      TRUE\n8  24.4     TRUE      TRUE\n9  22.8     TRUE      TRUE\n10 19.2    FALSE      TRUE\n11 17.8    FALSE      TRUE\n12 16.4    FALSE      TRUE\n13 17.3    FALSE      TRUE\n14 15.2    FALSE      TRUE\n15 10.4    FALSE      TRUE\n16 10.4    FALSE      TRUE\n17 14.7    FALSE      TRUE\n18 32.4     TRUE      TRUE\n19 30.4     TRUE      TRUE\n20 33.9     TRUE     FALSE\n21 21.5     TRUE      TRUE\n22 15.5    FALSE      TRUE\n23 15.2    FALSE      TRUE\n24 13.3    FALSE      TRUE\n25 19.2    FALSE      TRUE\n26 27.3     TRUE      TRUE\n27 26.0     TRUE      TRUE\n28 30.4     TRUE      TRUE\n29 15.8    FALSE      TRUE\n30 19.7    FALSE      TRUE\n31 15.0    FALSE      TRUE\n32 21.4     TRUE      TRUE",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#forma-vectorizada",
+    "href": "practicas/clase_8.html#forma-vectorizada",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Forma Vectorizada:",
+    "text": "Forma Vectorizada:\nSe aplica el condicional lógico sobre el elemento i del vector analizado teniendo de resultado un vector del mismo length del vector de entrada.\nPor ejemplo, si i vale 3, se compara si 22.8 es mayor que el promedio_mpg y si es menor que valor_3ercuartil\n\nmtcars$mpg&gt;promedio_mpg & mtcars$mpg&lt;valor_3ercuartil \n\n [1]  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE  TRUE  TRUE FALSE FALSE FALSE\n[13] FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE FALSE  TRUE FALSE FALSE FALSE\n[25] FALSE  TRUE  TRUE  TRUE FALSE FALSE FALSE  TRUE",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#múltiples-condiciones",
+    "href": "practicas/clase_8.html#múltiples-condiciones",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Múltiples Condiciones",
+    "text": "Múltiples Condiciones\nOperador & (y)\n\nmtcars$mpg[mtcars$mpg&gt;promedio_mpg & mtcars$mpg&lt;valor_3ercuartil ]\n\n [1] 21.0 21.0 22.8 21.4 24.4 22.8 32.4 30.4 21.5 27.3 26.0 30.4 21.4\n\n\nOperador == doble igualdad (👀 es distinto a asignación)\n\n which (mtcars$mpg == 19.2  )\n\n[1] 10 25\n\n\nwhich indica el índice de los elementos extraídos según una condición\n\nmtcars[ mtcars$mpg==21, ]\n\n              mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4      21   6  160 110  3.9 2.620 16.46  0  1    4    4\nMazda RX4 Wag  21   6  160 110  3.9 2.875 17.02  0  1    4    4\n\n\nOperador != diferente\n\nmtcars[mtcars$mpg!=21,c(1,4:6)]\n\n                     mpg  hp drat    wt\nDatsun 710          22.8  93 3.85 2.320\nHornet 4 Drive      21.4 110 3.08 3.215\nHornet Sportabout   18.7 175 3.15 3.440\nValiant             18.1 105 2.76 3.460\nDuster 360          14.3 245 3.21 3.570\nMerc 240D           24.4  62 3.69 3.190\nMerc 230            22.8  95 3.92 3.150\nMerc 280            19.2 123 3.92 3.440\nMerc 280C           17.8 123 3.92 3.440\nMerc 450SE          16.4 180 3.07 4.070\nMerc 450SL          17.3 180 3.07 3.730\nMerc 450SLC         15.2 180 3.07 3.780\nCadillac Fleetwood  10.4 205 2.93 5.250\nLincoln Continental 10.4 215 3.00 5.424\nChrysler Imperial   14.7 230 3.23 5.345\nFiat 128            32.4  66 4.08 2.200\nHonda Civic         30.4  52 4.93 1.615\nToyota Corolla      33.9  65 4.22 1.835\nToyota Corona       21.5  97 3.70 2.465\nDodge Challenger    15.5 150 2.76 3.520\nAMC Javelin         15.2 150 3.15 3.435\nCamaro Z28          13.3 245 3.73 3.840\nPontiac Firebird    19.2 175 3.08 3.845\nFiat X1-9           27.3  66 4.08 1.935\nPorsche 914-2       26.0  91 4.43 2.140\nLotus Europa        30.4 113 3.77 1.513\nFord Pantera L      15.8 264 4.22 3.170\nFerrari Dino        19.7 175 3.62 2.770\nMaserati Bora       15.0 335 3.54 3.570\nVolvo 142E          21.4 109 4.11 2.780\n\n\nOperador | or (o)\n\nmtcars[which(mtcars$mpg==21 | mtcars$mpg==22.8),1:3]\n\n               mpg cyl  disp\nMazda RX4     21.0   6 160.0\nMazda RX4 Wag 21.0   6 160.0\nDatsun 710    22.8   4 108.0\nMerc 230      22.8   4 140.8",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#data-frame-a-trabajar",
+    "href": "practicas/clase_8.html#data-frame-a-trabajar",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Data Frame a Trabajar",
+    "text": "Data Frame a Trabajar\n\n# View(datasets::LifeCycleSavings)\n\nSobre el contenido de la df: según la hipótesis del ahorro a lo largo del ciclo vital desarrollada por Franco Modigliani, el coeficiente de ahorro (ahorro personal agregado dividido por la renta disponible) se explica por la renta disponible per cápita, la tasa porcentual de variación de la renta disponible per cápita y dos variables demográficas: el porcentaje de población menor de 15 años y el porcentaje de población mayor de 75 años. Los datos se promedian a lo largo de la década 1960-1970 para eliminar el ciclo económico u otras fluctuaciones a corto plazo",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#asignar-a-una-variable-la-df",
+    "href": "practicas/clase_8.html#asignar-a-una-variable-la-df",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Asignar a una variable la DF",
+    "text": "Asignar a una variable la DF\n\ndf_ahorro &lt;- datasets::LifeCycleSavings\nhead(df_ahorro, 8)\n\n             sr pop15 pop75     dpi ddpi\nAustralia 11.43 29.35  2.87 2329.68 2.87\nAustria   12.07 23.32  4.41 1507.99 3.93\nBelgium   13.17 23.80  4.43 2108.47 3.82\nBolivia    5.75 41.89  1.67  189.13 0.22\nBrazil    12.88 42.19  0.83  728.47 4.56\nCanada     8.79 31.72  2.85 2982.88 2.43\nChile      0.60 39.74  1.34  662.86 2.67\nChina     11.90 44.75  0.67  289.52 6.51",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#inspección-data-frame",
+    "href": "practicas/clase_8.html#inspección-data-frame",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Inspección Data Frame",
+    "text": "Inspección Data Frame\nDimensiones\n\ndim(df_ahorro)\n\n[1] 50  5\n\n\nNúmero de columnas\n\nncol(df_ahorro)\n\n[1] 5\n\n\nNúmero de filas\n\nnrow(df_ahorro)\n\n[1] 50\n\n\nNombres de las columnas\n\ncolnames(df_ahorro)\n\n[1] \"sr\"    \"pop15\" \"pop75\" \"dpi\"   \"ddpi\" \n\n\nNombres de las filas\n\nrownames(df_ahorro)\n\n [1] \"Australia\"      \"Austria\"        \"Belgium\"        \"Bolivia\"       \n [5] \"Brazil\"         \"Canada\"         \"Chile\"          \"China\"         \n [9] \"Colombia\"       \"Costa Rica\"     \"Denmark\"        \"Ecuador\"       \n[13] \"Finland\"        \"France\"         \"Germany\"        \"Greece\"        \n[17] \"Guatamala\"      \"Honduras\"       \"Iceland\"        \"India\"         \n[21] \"Ireland\"        \"Italy\"          \"Japan\"          \"Korea\"         \n[25] \"Luxembourg\"     \"Malta\"          \"Norway\"         \"Netherlands\"   \n[29] \"New Zealand\"    \"Nicaragua\"      \"Panama\"         \"Paraguay\"      \n[33] \"Peru\"           \"Philippines\"    \"Portugal\"       \"South Africa\"  \n[37] \"South Rhodesia\" \"Spain\"          \"Sweden\"         \"Switzerland\"   \n[41] \"Turkey\"         \"Tunisia\"        \"United Kingdom\" \"United States\" \n[45] \"Venezuela\"      \"Zambia\"         \"Jamaica\"        \"Uruguay\"       \n[49] \"Libya\"          \"Malaysia\"      \n\n\nEstructura de un objeto\n\nstr(df_ahorro)\n\n'data.frame':   50 obs. of  5 variables:\n $ sr   : num  11.43 12.07 13.17 5.75 12.88 ...\n $ pop15: num  29.4 23.3 23.8 41.9 42.2 ...\n $ pop75: num  2.87 4.41 4.43 1.67 0.83 2.85 1.34 0.67 1.06 1.14 ...\n $ dpi  : num  2330 1508 2108 189 728 ...\n $ ddpi : num  2.87 3.93 3.82 0.22 4.56 2.43 2.67 6.51 3.08 2.8 ...\n\n\nResumen Estadístico\n\nsummary(df_ahorro)\n\n       sr             pop15           pop75            dpi         \n Min.   : 0.600   Min.   :21.44   Min.   :0.560   Min.   :  88.94  \n 1st Qu.: 6.970   1st Qu.:26.21   1st Qu.:1.125   1st Qu.: 288.21  \n Median :10.510   Median :32.58   Median :2.175   Median : 695.66  \n Mean   : 9.671   Mean   :35.09   Mean   :2.293   Mean   :1106.76  \n 3rd Qu.:12.617   3rd Qu.:44.06   3rd Qu.:3.325   3rd Qu.:1795.62  \n Max.   :21.100   Max.   :47.64   Max.   :4.700   Max.   :4001.89  \n      ddpi       \n Min.   : 0.220  \n 1st Qu.: 2.002  \n Median : 3.000  \n Mean   : 3.758  \n 3rd Qu.: 4.478  \n Max.   :16.710",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#crear-columna-con-nombre-países",
+    "href": "practicas/clase_8.html#crear-columna-con-nombre-países",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Crear columna con nombre países",
+    "text": "Crear columna con nombre países\nRevisar nombres filas\n\nrownames(df_ahorro)[1:10]\n\n [1] \"Australia\"  \"Austria\"    \"Belgium\"    \"Bolivia\"    \"Brazil\"    \n [6] \"Canada\"     \"Chile\"      \"China\"      \"Colombia\"   \"Costa Rica\"\n\n\nAsignar nueva columa a la DF\n\ndf_ahorro$pais &lt;- rownames(df_ahorro)",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#crear-columna-con-valor-promedio",
+    "href": "practicas/clase_8.html#crear-columna-con-valor-promedio",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Crear Columna con Valor Promedio",
+    "text": "Crear Columna con Valor Promedio\nCon los valores correspondientes a pop15 y pop75 obtener promedio por cada observación\n\ndf_ahorro$edad_promedio &lt;- mean(df_ahorro$pop15, df_ahorro$pop75)",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#inspección-nuevos-atributos",
+    "href": "practicas/clase_8.html#inspección-nuevos-atributos",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Inspección Nuevos Atributos",
+    "text": "Inspección Nuevos Atributos\nRevisar DF\nhead(df_ahorro, 5)",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#funciones-valores-extremos",
+    "href": "practicas/clase_8.html#funciones-valores-extremos",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Funciones Valores Extremos",
+    "text": "Funciones Valores Extremos\nMínimo en vector\n\nmin(df_ahorro$pop15)\n\n[1] 21.44\n\n\nMáximo en vector\n\nmax(df_ahorro$pop15)\n\n[1] 47.64",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#importar-en-formato-csv-una-data-frame",
+    "href": "practicas/clase_8.html#importar-en-formato-csv-una-data-frame",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Importar en Formato csv una Data Frame",
+    "text": "Importar en Formato csv una Data Frame\n\ndf_gapminder &lt;- read.csv('https://raw.githubusercontent.com/javendaXgh/datos/refs/heads/master/gapminder.csv') \n\n\nhead(df_gapminder,3)\n\n  X     country continent year lifeExp      pop gdpPercap\n1 1 Afghanistan      Asia 1952  28.801  8425333  779.4453\n2 2 Afghanistan      Asia 1957  30.332  9240934  820.8530\n3 3 Afghanistan      Asia 1962  31.997 10267083  853.1007\n\n\n👀: los datos tienen estructura tabular. Observaciones son filas y atributos las columnas",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#estructura-gapminder",
+    "href": "practicas/clase_8.html#estructura-gapminder",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Estructura Gapminder",
+    "text": "Estructura Gapminder\nEstructura DF\n\nstr(df_gapminder)\n\n'data.frame':   1704 obs. of  7 variables:\n $ X        : int  1 2 3 4 5 6 7 8 9 10 ...\n $ country  : chr  \"Afghanistan\" \"Afghanistan\" \"Afghanistan\" \"Afghanistan\" ...\n $ continent: chr  \"Asia\" \"Asia\" \"Asia\" \"Asia\" ...\n $ year     : int  1952 1957 1962 1967 1972 1977 1982 1987 1992 1997 ...\n $ lifeExp  : num  28.8 30.3 32 34 36.1 ...\n $ pop      : int  8425333 9240934 10267083 11537966 13079460 14880372 12881816 13867957 16317921 22227415 ...\n $ gdpPercap: num  779 821 853 836 740 ...",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#tabla-sumario-gapminder",
+    "href": "practicas/clase_8.html#tabla-sumario-gapminder",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Tabla Sumario Gapminder",
+    "text": "Tabla Sumario Gapminder\n\nsummary(df_gapminder)\n\n       X            country           continent              year     \n Min.   :   1.0   Length:1704        Length:1704        Min.   :1952  \n 1st Qu.: 426.8   Class :character   Class :character   1st Qu.:1966  \n Median : 852.5   Mode  :character   Mode  :character   Median :1980  \n Mean   : 852.5                                         Mean   :1980  \n 3rd Qu.:1278.2                                         3rd Qu.:1993  \n Max.   :1704.0                                         Max.   :2007  \n    lifeExp           pop              gdpPercap       \n Min.   :23.60   Min.   :6.001e+04   Min.   :   241.2  \n 1st Qu.:48.20   1st Qu.:2.794e+06   1st Qu.:  1202.1  \n Median :60.71   Median :7.024e+06   Median :  3531.8  \n Mean   :59.47   Mean   :2.960e+07   Mean   :  7215.3  \n 3rd Qu.:70.85   3rd Qu.:1.959e+07   3rd Qu.:  9325.5  \n Max.   :82.60   Max.   :1.319e+09   Max.   :113523.1  \n\n\n\nTiene estructura tabular",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#valores-únicos-por-atributo",
+    "href": "practicas/clase_8.html#valores-únicos-por-atributo",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Valores Únicos por Atributo",
+    "text": "Valores Únicos por Atributo\nPaíses\n\nunique(df_gapminder$country)\n\n  [1] \"Afghanistan\"              \"Albania\"                 \n  [3] \"Algeria\"                  \"Angola\"                  \n  [5] \"Argentina\"                \"Australia\"               \n  [7] \"Austria\"                  \"Bahrain\"                 \n  [9] \"Bangladesh\"               \"Belgium\"                 \n [11] \"Benin\"                    \"Bolivia\"                 \n [13] \"Bosnia and Herzegovina\"   \"Botswana\"                \n [15] \"Brazil\"                   \"Bulgaria\"                \n [17] \"Burkina Faso\"             \"Burundi\"                 \n [19] \"Cambodia\"                 \"Cameroon\"                \n [21] \"Canada\"                   \"Central African Republic\"\n [23] \"Chad\"                     \"Chile\"                   \n [25] \"China\"                    \"Colombia\"                \n [27] \"Comoros\"                  \"Congo, Dem. Rep.\"        \n [29] \"Congo, Rep.\"              \"Costa Rica\"              \n [31] \"Cote d'Ivoire\"            \"Croatia\"                 \n [33] \"Cuba\"                     \"Czech Republic\"          \n [35] \"Denmark\"                  \"Djibouti\"                \n [37] \"Dominican Republic\"       \"Ecuador\"                 \n [39] \"Egypt\"                    \"El Salvador\"             \n [41] \"Equatorial Guinea\"        \"Eritrea\"                 \n [43] \"Ethiopia\"                 \"Finland\"                 \n [45] \"France\"                   \"Gabon\"                   \n [47] \"Gambia\"                   \"Germany\"                 \n [49] \"Ghana\"                    \"Greece\"                  \n [51] \"Guatemala\"                \"Guinea\"                  \n [53] \"Guinea-Bissau\"            \"Haiti\"                   \n [55] \"Honduras\"                 \"Hong Kong, China\"        \n [57] \"Hungary\"                  \"Iceland\"                 \n [59] \"India\"                    \"Indonesia\"               \n [61] \"Iran\"                     \"Iraq\"                    \n [63] \"Ireland\"                  \"Israel\"                  \n [65] \"Italy\"                    \"Jamaica\"                 \n [67] \"Japan\"                    \"Jordan\"                  \n [69] \"Kenya\"                    \"Korea, Dem. Rep.\"        \n [71] \"Korea, Rep.\"              \"Kuwait\"                  \n [73] \"Lebanon\"                  \"Lesotho\"                 \n [75] \"Liberia\"                  \"Libya\"                   \n [77] \"Madagascar\"               \"Malawi\"                  \n [79] \"Malaysia\"                 \"Mali\"                    \n [81] \"Mauritania\"               \"Mauritius\"               \n [83] \"Mexico\"                   \"Mongolia\"                \n [85] \"Montenegro\"               \"Morocco\"                 \n [87] \"Mozambique\"               \"Myanmar\"                 \n [89] \"Namibia\"                  \"Nepal\"                   \n [91] \"Netherlands\"              \"New Zealand\"             \n [93] \"Nicaragua\"                \"Niger\"                   \n [95] \"Nigeria\"                  \"Norway\"                  \n [97] \"Oman\"                     \"Pakistan\"                \n [99] \"Panama\"                   \"Paraguay\"                \n[101] \"Peru\"                     \"Philippines\"             \n[103] \"Poland\"                   \"Portugal\"                \n[105] \"Puerto Rico\"              \"Reunion\"                 \n[107] \"Romania\"                  \"Rwanda\"                  \n[109] \"Sao Tome and Principe\"    \"Saudi Arabia\"            \n[111] \"Senegal\"                  \"Serbia\"                  \n[113] \"Sierra Leone\"             \"Singapore\"               \n[115] \"Slovak Republic\"          \"Slovenia\"                \n[117] \"Somalia\"                  \"South Africa\"            \n[119] \"Spain\"                    \"Sri Lanka\"               \n[121] \"Sudan\"                    \"Swaziland\"               \n[123] \"Sweden\"                   \"Switzerland\"             \n[125] \"Syria\"                    \"Taiwan\"                  \n[127] \"Tanzania\"                 \"Thailand\"                \n[129] \"Togo\"                     \"Trinidad and Tobago\"     \n[131] \"Tunisia\"                  \"Turkey\"                  \n[133] \"Uganda\"                   \"United Kingdom\"          \n[135] \"United States\"            \"Uruguay\"                 \n[137] \"Venezuela\"                \"Vietnam\"                 \n[139] \"West Bank and Gaza\"       \"Yemen, Rep.\"             \n[141] \"Zambia\"                   \"Zimbabwe\"                \n\n\nAños\n\nunique(df_gapminder$year)\n\n [1] 1952 1957 1962 1967 1972 1977 1982 1987 1992 1997 2002 2007",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#dplyr-de-batalla",
+    "href": "practicas/clase_8.html#dplyr-de-batalla",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "DPLYR (🏇🏽 de batalla)",
+    "text": "DPLYR (🏇🏽 de batalla)\n\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#dplyr-filtrado",
+    "href": "practicas/clase_8.html#dplyr-filtrado",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "DPLYR / Filtrado",
+    "text": "DPLYR / Filtrado\nFunción filter.\n\ndf_venezuela &lt;- df_gapminder %&gt;%\n  filter(country=='Venezuela')\n\ndf_venezuela\n\n      X   country continent year lifeExp      pop gdpPercap\n1  1633 Venezuela  Americas 1952  55.088  5439568  7689.800\n2  1634 Venezuela  Americas 1957  57.907  6702668  9802.467\n3  1635 Venezuela  Americas 1962  60.770  8143375  8422.974\n4  1636 Venezuela  Americas 1967  63.479  9709552  9541.474\n5  1637 Venezuela  Americas 1972  65.712 11515649 10505.260\n6  1638 Venezuela  Americas 1977  67.456 13503563 13143.951\n7  1639 Venezuela  Americas 1982  68.557 15620766 11152.410\n8  1640 Venezuela  Americas 1987  70.190 17910182  9883.585\n9  1641 Venezuela  Americas 1992  71.150 20265563 10733.926\n10 1642 Venezuela  Americas 1997  72.146 22374398 10165.495\n11 1643 Venezuela  Americas 2002  72.766 24287670  8605.048\n12 1644 Venezuela  Americas 2007  73.747 26084662 11415.806",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#revisar-tabla-venezuela",
+    "href": "practicas/clase_8.html#revisar-tabla-venezuela",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Revisar Tabla Venezuela",
+    "text": "Revisar Tabla Venezuela\nTabla sumario\n\nsummary(df_venezuela)\n\n       X          country           continent              year     \n Min.   :1633   Length:12          Length:12          Min.   :1952  \n 1st Qu.:1636   Class :character   Class :character   1st Qu.:1966  \n Median :1638   Mode  :character   Mode  :character   Median :1980  \n Mean   :1638                                         Mean   :1980  \n 3rd Qu.:1641                                         3rd Qu.:1993  \n Max.   :1644                                         Max.   :2007  \n    lifeExp           pop             gdpPercap    \n Min.   :55.09   Min.   : 5439568   Min.   : 7690  \n 1st Qu.:62.80   1st Qu.: 9318008   1st Qu.: 9307  \n Median :68.01   Median :14562164   Median :10025  \n Mean   :66.58   Mean   :15129801   Mean   :10089  \n 3rd Qu.:71.40   3rd Qu.:20792772   3rd Qu.:10839  \n Max.   :73.75   Max.   :26084662   Max.   :13144",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#juntar-dfs",
+    "href": "practicas/clase_8.html#juntar-dfs",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Juntar DF´s",
+    "text": "Juntar DF´s\n\ndf_colombia &lt;- df_gapminder %&gt;%\n  filter(country=='Colombia')\n\ndf_colombia\n\n     X  country continent year lifeExp      pop gdpPercap\n1  301 Colombia  Americas 1952  50.643 12350771  2144.115\n2  302 Colombia  Americas 1957  55.118 14485993  2323.806\n3  303 Colombia  Americas 1962  57.863 17009885  2492.351\n4  304 Colombia  Americas 1967  59.963 19764027  2678.730\n5  305 Colombia  Americas 1972  61.623 22542890  3264.660\n6  306 Colombia  Americas 1977  63.837 25094412  3815.808\n7  307 Colombia  Americas 1982  66.653 27764644  4397.576\n8  308 Colombia  Americas 1987  67.768 30964245  4903.219\n9  309 Colombia  Americas 1992  68.421 34202721  5444.649\n10 310 Colombia  Americas 1997  70.313 37657830  6117.362\n11 311 Colombia  Americas 2002  71.682 41008227  5755.260\n12 312 Colombia  Americas 2007  72.889 44227550  7006.580",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#combinar-dfs",
+    "href": "practicas/clase_8.html#combinar-dfs",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Combinar DF’s",
+    "text": "Combinar DF’s\nFunción bind_rows\n\ndf_gran_colombia &lt;- bind_rows(df_venezuela,\n                              df_colombia )",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#revisar-nueva-df",
+    "href": "practicas/clase_8.html#revisar-nueva-df",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Revisar Nueva DF",
+    "text": "Revisar Nueva DF\n\ndf_gran_colombia\n\n      X   country continent year lifeExp      pop gdpPercap\n1  1633 Venezuela  Americas 1952  55.088  5439568  7689.800\n2  1634 Venezuela  Americas 1957  57.907  6702668  9802.467\n3  1635 Venezuela  Americas 1962  60.770  8143375  8422.974\n4  1636 Venezuela  Americas 1967  63.479  9709552  9541.474\n5  1637 Venezuela  Americas 1972  65.712 11515649 10505.260\n6  1638 Venezuela  Americas 1977  67.456 13503563 13143.951\n7  1639 Venezuela  Americas 1982  68.557 15620766 11152.410\n8  1640 Venezuela  Americas 1987  70.190 17910182  9883.585\n9  1641 Venezuela  Americas 1992  71.150 20265563 10733.926\n10 1642 Venezuela  Americas 1997  72.146 22374398 10165.495\n11 1643 Venezuela  Americas 2002  72.766 24287670  8605.048\n12 1644 Venezuela  Americas 2007  73.747 26084662 11415.806\n13  301  Colombia  Americas 1952  50.643 12350771  2144.115\n14  302  Colombia  Americas 1957  55.118 14485993  2323.806\n15  303  Colombia  Americas 1962  57.863 17009885  2492.351\n16  304  Colombia  Americas 1967  59.963 19764027  2678.730\n17  305  Colombia  Americas 1972  61.623 22542890  3264.660\n18  306  Colombia  Americas 1977  63.837 25094412  3815.808\n19  307  Colombia  Americas 1982  66.653 27764644  4397.576\n20  308  Colombia  Americas 1987  67.768 30964245  4903.219\n21  309  Colombia  Americas 1992  68.421 34202721  5444.649\n22  310  Colombia  Americas 1997  70.313 37657830  6117.362\n23  311  Colombia  Americas 2002  71.682 41008227  5755.260\n24  312  Colombia  Americas 2007  72.889 44227550  7006.580",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase_8.html#continuar-inspección",
+    "href": "practicas/clase_8.html#continuar-inspección",
+    "title": "Clase 8- Inspeccionar Data Frames",
+    "section": "Continuar Inspección…",
+    "text": "Continuar Inspección…",
+    "crumbs": [
+      "Prácticas",
+      "clase 8 / versión reporte"
     ]
   }
 ]

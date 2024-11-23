@@ -1,0 +1,357 @@
+---
+title: "Clase 8- Inspeccionar Data Frames"
+date: "Noviembre 11, 2024"
+output:
+  html_document:
+    toc: yes
+execute:
+  echo: true
+  eval: true
+---
+
+## Objetivos de la Actividad
+
+-   Presentar operadores lógicos y trabajar con ellos
+
+-   Acceder a elementos de vectores y DF's según condiciones lógicas
+
+-   Inspeccionar valores, rangos y estructura de una DF
+
+## Tabla de Contingencia
+
+Conteo de frecuencia de un dato categórico
+
+```{r}
+
+table(mtcars$cyl)
+```
+
+## Tabla de Contingencia Cruzada
+
+Múltiples categorías
+
+|       |                                     |
+|:------|:------------------------------------|
+| `cyl` | Number of cylinders                 |
+| `vs`  | Engine (0 = V-shaped, 1 = straight) |
+
+```{r}
+table(mtcars$cyl, mtcars$vs)
+```
+
+## Tabla Resumen Estadístico
+
+Representar los valores mínimo y máximo, primer y tercer cuartil, media, promedio de un vector o data frame.
+
+```{r}
+summary(mtcars$mpg)
+```
+
+## Tabla Resumen Estadístico - cont
+
+La salida de función `summary` cambia según el objeto que estemos trabajando
+
+```{r}
+summary(mtcars)
+```
+
+## Operadores Lógicos
+
+-   $>$ (mayor a)
+-   $>=$ (mayor o igual a)
+-   $<$ (menor a)
+-   $<=$ (menor o igual a)
+-   $==$ (igual a)
+-   $!=$ (distinto a)
+-   & (y)
+-   $|$ (o)
+
+## Uso de Operadores Lógicos en un Vector
+
+Vector seleccionado "millas por galón" `mpg`
+
+```{r}
+mtcars$mpg
+```
+
+## Vector Lógico con valores que Cumplen una Condición
+
+Mayor que un valor dado
+
+```{r}
+  mtcars$mpg>19.20
+```
+
+Mayor que el valor que retorna una función
+
+```{r}
+mtcars$mpg>mean(mtcars$mpg)
+```
+
+## Asignación valores a variables
+
+-   variable con promedio
+
+-   creación DF
+
+-   evaluar valores que cumplen ambas condiciones
+
+```{r}
+promedio_mpg <- mean(mtcars$mpg)
+valor_3ercuartil <- 33.90 
+
+df_mpg <- data.frame(mpg= mtcars$mpg,
+                     may_mean= mtcars$mpg>promedio_mpg,
+                     men_3cuar= mtcars$mpg<valor_3ercuartil )
+
+
+```
+
+## Inspección df
+
+```{r}
+df_mpg
+```
+
+## Forma Vectorizada:
+
+Se aplica el condicional lógico sobre el elemento *i* del vector analizado teniendo de resultado un vector del mismo `length` del vector de entrada.
+
+Por ejemplo, si *i* vale 3, se compara si 22.8 es mayor que el `promedio_mpg` **y** si es menor que `valor_3ercuartil`
+
+```{r}
+mtcars$mpg>promedio_mpg & mtcars$mpg<valor_3ercuartil 
+```
+
+## Múltiples Condiciones
+
+Operador `&` (y)
+
+```{r}
+mtcars$mpg[mtcars$mpg>promedio_mpg & mtcars$mpg<valor_3ercuartil ]
+```
+
+Operador `==` doble igualdad (👀 es distinto a asignación)
+
+```{r}
+ which (mtcars$mpg == 19.2  )
+```
+
+`which` indica el índice de los elementos extraídos según una condición
+
+```{r}
+mtcars[ mtcars$mpg==21, ]
+```
+
+Operador `!=` diferente
+
+```{r}
+mtcars[mtcars$mpg!=21,c(1,4:6)]
+```
+
+Operador `|` or (o)
+
+```{r}
+mtcars[which(mtcars$mpg==21 | mtcars$mpg==22.8),1:3]
+```
+
+## Data Frame a Trabajar
+
+```{r}
+# View(datasets::LifeCycleSavings)
+```
+
+```         
+Sobre el contenido de la df: según la hipótesis del ahorro a lo largo del ciclo vital desarrollada por Franco Modigliani, el coeficiente de ahorro (ahorro personal agregado dividido por la renta disponible) se explica por la renta disponible per cápita, la tasa porcentual de variación de la renta disponible per cápita y dos variables demográficas: el porcentaje de población menor de 15 años y el porcentaje de población mayor de 75 años. Los datos se promedian a lo largo de la década 1960-1970 para eliminar el ciclo económico u otras fluctuaciones a corto plazo
+```
+
+## Asignar a una variable la DF
+
+```{r}
+df_ahorro <- datasets::LifeCycleSavings
+head(df_ahorro, 8)
+```
+
+## Inspección Data Frame
+
+Dimensiones
+
+```{r}
+dim(df_ahorro)
+```
+
+Número de columnas
+
+```{r}
+ncol(df_ahorro)
+```
+
+Número de filas
+
+```{r}
+nrow(df_ahorro)
+```
+
+Nombres de las columnas
+
+```{r}
+colnames(df_ahorro)
+```
+
+Nombres de las filas
+
+```{r}
+rownames(df_ahorro)
+```
+
+Estructura de un objeto
+
+```{r}
+str(df_ahorro)
+```
+
+Resumen Estadístico
+
+```{r}
+summary(df_ahorro)
+```
+
+## Crear columna con nombre países
+
+Revisar nombres filas
+
+```{r}
+rownames(df_ahorro)[1:10]
+```
+
+Asignar nueva columa a la DF
+
+```{r}
+df_ahorro$pais <- rownames(df_ahorro)
+```
+
+## Crear Columna con Valor Promedio
+
+Con los valores correspondientes a pop15 y pop75 obtener promedio por cada observación
+
+```{webr}
+df_ahorro$edad_promedio <- mean(df_ahorro$pop15, df_ahorro$pop75)
+```
+
+## Inspección Nuevos Atributos
+
+Revisar DF
+
+```{webr-r}
+head(df_ahorro, 5)
+```
+
+## Funciones Valores Extremos
+
+Mínimo en vector
+
+```{r}
+min(df_ahorro$pop15)
+```
+
+Máximo en vector
+
+```{r}
+max(df_ahorro$pop15)
+```
+
+## Importar en Formato csv una Data Frame
+
+```{r}
+df_gapminder <- read.csv('https://raw.githubusercontent.com/javendaXgh/datos/refs/heads/master/gapminder.csv') 
+
+```
+
+```{r}
+head(df_gapminder,3)
+```
+
+👀: los datos tienen estructura tabular. Observaciones son filas y atributos las columnas
+
+## Estructura Gapminder
+
+Estructura DF
+
+```{r}
+str(df_gapminder)
+```
+
+## Tabla Sumario Gapminder
+
+```{r}
+summary(df_gapminder)
+```
+
+::: notes
+Tiene estructura tabular
+:::
+
+## Valores Únicos por Atributo
+
+Países
+
+```{r}
+unique(df_gapminder$country)
+```
+
+Años
+
+```{r}
+unique(df_gapminder$year)
+```
+
+## DPLYR (🏇🏽 de batalla)
+
+```{r}
+library(dplyr)
+```
+
+## DPLYR / Filtrado
+
+Función `filter`.
+
+```{r}
+df_venezuela <- df_gapminder %>%
+  filter(country=='Venezuela')
+
+df_venezuela
+```
+
+## Revisar Tabla Venezuela
+
+Tabla sumario
+
+```{r}
+summary(df_venezuela)
+```
+
+## Juntar DF´s
+
+```{r}
+df_colombia <- df_gapminder %>%
+  filter(country=='Colombia')
+
+df_colombia
+```
+
+## Combinar DF's
+
+Función `bind_rows`
+
+```{r}
+df_gran_colombia <- bind_rows(df_venezuela,
+                              df_colombia )
+```
+
+## Revisar Nueva DF
+
+```{r}
+df_gran_colombia
+```
+
+## Continuar Inspección...

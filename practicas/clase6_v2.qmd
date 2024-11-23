@@ -1,6 +1,5 @@
 ---
-title: "Ciencia de Datos para Economistas"
-subtitle: "Clase 6- Construir Funciones y Data Frames"
+title: "Clase 6- Construir Funciones y Data Frames"
 #format: live-html
 date: "Noviembre 4, 2024"
 execute: 

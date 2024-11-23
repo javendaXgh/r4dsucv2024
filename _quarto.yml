@@ -60,11 +60,13 @@ website:
           - href: practicas/clase3_apoyo.qmd
             text: clase 5 / apoyo
           - href: practicas/clase6_v2.qmd
-            text: clase 6 / versión códigos
+            text: clase 6 / versión reporte
           - href: practicas/clase6_pract1.qmd
             text: clase 6 / práctica 1
           - href: practicas/clase6_pract2.qmd
             text: clase 6 / práctica 2
+          - href: practicas/clase_8.qmd
+            text: clase 8 / versión reporte
       - section: "Proyectos"
         contents:
           - href: project/proyecto-1.qmd

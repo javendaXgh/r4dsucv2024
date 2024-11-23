@@ -57,7 +57,7 @@ path_relativo <- "Documentos/archivo.txt"
 
 ## 3. Directorio de Trabajo
 
-El directorio de trabajo es el lugar donde R busca archivos por defecto. 
+El directorio de trabajo es el lugar donde R busca archivos por defecto.
 
 Verificar el Directorio de Trabajo :
 
