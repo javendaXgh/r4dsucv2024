@@ -520,7 +520,7 @@ MSc. José M. Avendaño
 </section>
 <section id="rename" class="slide level2">
 <h2>Rename</h2>
-<p>Cambiar el nombre de una columna. Primero se coloca el nombre nuevo y luego</p>
+<p>Cambiar el nombre de una columna. Primero se coloca el nombre nuevo y luego el operador de igualdad y posteriormente el nombre que tiene actualmente la columna</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>df_gapminder<span class="sc">%&gt;%</span></span>
 <span id="cb13-2"><a></a>  <span class="fu">rename</span>(<span class="at">anno=</span>year, <span class="at">pais=</span> country)<span class="sc">%&gt;%</span></span>
@@ -626,12 +626,12 @@ MSc. José M. Avendaño
 <span id="cb22-7"><a></a>  <span class="fu">sample_n</span>(<span class="dv">4</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
-  country              pib tipo_pib     
-  &lt;fct&gt;              &lt;dbl&gt; &lt;chr&gt;        
-1 France           1.86e12 pib_up_mean  
-2 Yemen, Rep.      5.07e10 pib_down_mean
-3 Switzerland      2.83e11 pib_down_mean
-4 Korea, Dem. Rep. 3.71e10 pib_down_mean</code></pre>
+  country             pib tipo_pib     
+  &lt;fct&gt;             &lt;dbl&gt; &lt;chr&gt;        
+1 Iran      806058303731. pib_up_mean  
+2 Cameroon   36137515701. pib_down_mean
+3 Nicaragua  15603375235. pib_down_mean
+4 Guatemala  65203833292. pib_down_mean</code></pre>
 </div>
 </div>
 </section>
@@ -655,7 +655,7 @@ MSc. José M. Avendaño
 <td>‘medio_pib’</td>
 </tr>
 <tr class="odd">
-<td>pib por debajo de 3 er cuantil</td>
+<td>pib por debajo de 1 er cuantil</td>
 <td>‘bajo_pib’</td>
 </tr>
 </tbody>
@@ -787,16 +787,16 @@ pib_down_mean   pib_up_mean
 <span id="cb38-3"><a></a>  <span class="fu">sample_n</span>(<span class="dv">8</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 8 × 4
-  country               pib tipo_pib      tipo_pib2
-  &lt;fct&gt;               &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;    
-1 Senegal      21007739941. pib_down_mean medio_pib
-2 Myanmar      45087309120  pib_down_mean medio_pib
-3 Angola       59583895818. pib_down_mean medio_pib
-4 Bulgaria     78213929148. pib_down_mean medio_pib
-5 Gabon        19213678514. pib_down_mean medio_pib
-6 Panama       31803076821. pib_down_mean medio_pib
-7 Norway      228421423675. pib_down_mean medio_pib
-8 El Salvador  39752986141. pib_down_mean medio_pib</code></pre>
+  country            pib tipo_pib      tipo_pib2
+  &lt;fct&gt;            &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;    
+1 Ghana     30366847330. pib_down_mean medio_pib
+2 Chad      17447579586. pib_down_mean medio_pib
+3 Myanmar   45087309120  pib_down_mean medio_pib
+4 Tunisia   72887997687. pib_down_mean medio_pib
+5 Cameroon  36137515701. pib_down_mean medio_pib
+6 Morocco  128958323770. pib_down_mean medio_pib
+7 Paraguay  27820927447. pib_down_mean medio_pib
+8 Nepal     31542251118. pib_down_mean medio_pib</code></pre>
 </div>
 </div>
 </section>

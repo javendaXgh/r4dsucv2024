@@ -2696,7 +2696,7 @@
     "href": "clases/clase_11.html#rename",
     "title": "Ciencia de Datos para Economistas",
     "section": "Rename",
-    "text": "Rename\nCambiar el nombre de una columna. Primero se coloca el nombre nuevo y luego\n\ndf_gapminder%&gt;%\n  rename(anno=year, pais= country)%&gt;%\n  select(anno, pais)\n\n# A tibble: 1,704 × 2\n    anno pais       \n   &lt;int&gt; &lt;fct&gt;      \n 1  1952 Afghanistan\n 2  1957 Afghanistan\n 3  1962 Afghanistan\n 4  1967 Afghanistan\n 5  1972 Afghanistan\n 6  1977 Afghanistan\n 7  1982 Afghanistan\n 8  1987 Afghanistan\n 9  1992 Afghanistan\n10  1997 Afghanistan\n# ℹ 1,694 more rows"
+    "text": "Rename\nCambiar el nombre de una columna. Primero se coloca el nombre nuevo y luego el operador de igualdad y posteriormente el nombre que tiene actualmente la columna\n\ndf_gapminder%&gt;%\n  rename(anno=year, pais= country)%&gt;%\n  select(anno, pais)\n\n# A tibble: 1,704 × 2\n    anno pais       \n   &lt;int&gt; &lt;fct&gt;      \n 1  1952 Afghanistan\n 2  1957 Afghanistan\n 3  1962 Afghanistan\n 4  1967 Afghanistan\n 5  1972 Afghanistan\n 6  1977 Afghanistan\n 7  1982 Afghanistan\n 8  1987 Afghanistan\n 9  1992 Afghanistan\n10  1997 Afghanistan\n# ℹ 1,694 more rows"
   },
   {
     "objectID": "clases/clase_11.html#mutate",
@@ -2990,14 +2990,14 @@
     "href": "clases/clase_11.html#mutate-ifelse---ejemplo--aplicar",
     "title": "Ciencia de Datos para Economistas",
     "section": "Mutate / ifelse - ejemplo- Aplicar",
-    "text": "Mutate / ifelse - ejemplo- Aplicar\nLa columna que vamos a crear se llama “tipo_pib”\n\ndf_pib_2007 &lt;- df_pib_2007%&gt;%\n  mutate(tipo_pib =ifelse(pib&gt;=pib_promedio, # condición a evaluar\n                          \"pib_up_mean\", # caso verdadero =&gt; ocurre a\n                          \"pib_down_mean\"))  #caso falso =&gt; ocurre b\n\ndf_pib_2007%&gt;%\n  sample_n(4)\n\n# A tibble: 4 × 3\n  country              pib tipo_pib     \n  &lt;fct&gt;              &lt;dbl&gt; &lt;chr&gt;        \n1 France           1.86e12 pib_up_mean  \n2 Yemen, Rep.      5.07e10 pib_down_mean\n3 Switzerland      2.83e11 pib_down_mean\n4 Korea, Dem. Rep. 3.71e10 pib_down_mean"
+    "text": "Mutate / ifelse - ejemplo- Aplicar\nLa columna que vamos a crear se llama “tipo_pib”\n\ndf_pib_2007 &lt;- df_pib_2007%&gt;%\n  mutate(tipo_pib =ifelse(pib&gt;=pib_promedio, # condición a evaluar\n                          \"pib_up_mean\", # caso verdadero =&gt; ocurre a\n                          \"pib_down_mean\"))  #caso falso =&gt; ocurre b\n\ndf_pib_2007%&gt;%\n  sample_n(4)\n\n# A tibble: 4 × 3\n  country             pib tipo_pib     \n  &lt;fct&gt;             &lt;dbl&gt; &lt;chr&gt;        \n1 Iran      806058303731. pib_up_mean  \n2 Cameroon   36137515701. pib_down_mean\n3 Nicaragua  15603375235. pib_down_mean\n4 Guatemala  65203833292. pib_down_mean"
   },
   {
     "objectID": "clases/clase_11.html#mutate-doble-ifelse---problema",
     "href": "clases/clase_11.html#mutate-doble-ifelse---problema",
     "title": "Ciencia de Datos para Economistas",
     "section": "Mutate / doble ifelse - problema",
-    "text": "Mutate / doble ifelse - problema\nAhora vamos a asignar tres categorías según el tamaño del PIB.\n\n\n\nCondición\nCategoría a asignar\n\n\n\n\npib mayor a tercer cuantil\n‘super_pib’\n\n\npib entre 1 er cuantil y 3 er cuantil\n‘medio_pib’\n\n\npib por debajo de 3 er cuantil\n‘bajo_pib’"
+    "text": "Mutate / doble ifelse - problema\nAhora vamos a asignar tres categorías según el tamaño del PIB.\n\n\n\nCondición\nCategoría a asignar\n\n\n\n\npib mayor a tercer cuantil\n‘super_pib’\n\n\npib entre 1 er cuantil y 3 er cuantil\n‘medio_pib’\n\n\npib por debajo de 1 er cuantil\n‘bajo_pib’"
   },
   {
     "objectID": "clases/clase_11.html#mutate-doble-ifelse---pasos-intermedios",
@@ -3060,6 +3060,6 @@
     "href": "clases/clase_11.html#exporar-países-con-medio-pib",
     "title": "Ciencia de Datos para Economistas",
     "section": "Exporar Países con medio PIB",
-    "text": "Exporar Países con medio PIB\nMuestra aleatoria\n\ndf_pib_2007%&gt;%\n  filter(tipo_pib2== 'medio_pib')%&gt;%\n  sample_n(8)\n\n# A tibble: 8 × 4\n  country               pib tipo_pib      tipo_pib2\n  &lt;fct&gt;               &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;    \n1 Senegal      21007739941. pib_down_mean medio_pib\n2 Myanmar      45087309120  pib_down_mean medio_pib\n3 Angola       59583895818. pib_down_mean medio_pib\n4 Bulgaria     78213929148. pib_down_mean medio_pib\n5 Gabon        19213678514. pib_down_mean medio_pib\n6 Panama       31803076821. pib_down_mean medio_pib\n7 Norway      228421423675. pib_down_mean medio_pib\n8 El Salvador  39752986141. pib_down_mean medio_pib"
+    "text": "Exporar Países con medio PIB\nMuestra aleatoria\n\ndf_pib_2007%&gt;%\n  filter(tipo_pib2== 'medio_pib')%&gt;%\n  sample_n(8)\n\n# A tibble: 8 × 4\n  country            pib tipo_pib      tipo_pib2\n  &lt;fct&gt;            &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;    \n1 Ghana     30366847330. pib_down_mean medio_pib\n2 Chad      17447579586. pib_down_mean medio_pib\n3 Myanmar   45087309120  pib_down_mean medio_pib\n4 Tunisia   72887997687. pib_down_mean medio_pib\n5 Cameroon  36137515701. pib_down_mean medio_pib\n6 Morocco  128958323770. pib_down_mean medio_pib\n7 Paraguay  27820927447. pib_down_mean medio_pib\n8 Nepal     31542251118. pib_down_mean medio_pib"
   }
 ]

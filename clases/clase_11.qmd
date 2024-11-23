@@ -106,7 +106,7 @@ Deseleccionar usando el operador de negación `!`
 
 ## Rename
 
-Cambiar el nombre de una columna. Primero se coloca el nombre nuevo y luego
+Cambiar el nombre de una columna. Primero se coloca el nombre nuevo y luego el operador de igualdad y posteriormente el nombre que tiene actualmente la columna
 
 ```{r}
 df_gapminder%>%
@@ -198,7 +198,7 @@ Ahora vamos a asignar tres categorías según el tamaño del PIB.
 |---------------------------------------|---------------------|
 | pib mayor a tercer cuantil            | 'super_pib'         |
 | pib entre 1 er cuantil y 3 er cuantil | 'medio_pib'         |
-| pib por debajo de 3 er cuantil        | 'bajo_pib'          |
+| pib por debajo de 1 er cuantil        | 'bajo_pib'          |
 
 ## Mutate /doble ifelse - pasos intermedios
 
