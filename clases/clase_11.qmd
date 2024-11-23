@@ -214,7 +214,7 @@ tercer_cuantil <- cuantiles_pib[4]
 primer_cuantil <- cuantiles_pib[2]
 ```
 
-## Nota: 
+## Nota:
 
 Nayuha, de forma apropiada investigó cuál función se usa para obtener estos valores `quantile` y cómo se pueden asignar a una variable, dado que la salida que genera la función `summary` no es maleable para extraer datos individuales como los valores asociados a un cuantil u otro.
 
@@ -256,7 +256,7 @@ hist (df_pib_2007$pib/1000000,
       ylab = "Frecuencia")
 ```
 
-## Explorar  Países con mayor PIB
+## Explorar Países con mayor PIB
 
 ```{r}
 head(df_pib_2007,10)
