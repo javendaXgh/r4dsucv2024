@@ -1,5 +1,17 @@
 ---
-title: "Clase 03: complemento- nombres variables"
+title: "Ciencia de Datos para Economistas" 
+subtitle: "Clase 03: complemento- nombres variables"
+date: "Octubre 23, 2024"
+author: "MSc. José M. Avendaño"
+# output:
+#   html_document:
+#     toc: yes
+format: 
+  revealjs:
+    incremental: true   
+execute:
+  echo: true
+  eval: false
 ---
 
 En esta clase veremos algunas recomendaciones sobre cómo deben nombrarse las variables en el lenguaje de programación R. Recuerde que el nombre de las variables es fundamental para mantener un código claro y comprensible.
@@ -14,7 +26,7 @@ apellido_avendaño <- 'se ejecutará pero no es recomendable'
 
 Los nombres de las variables **no** deben contener acentos, diéresis ni caracteres especiales. Aunque es posible utilizar algunos caracteres como la "ñ", no es recomendable.
 
-## Buenas Prácticas 
+## Buenas Prácticas
 
 Para nombrar variables Es importante que el nombre de la variable describa el valor que está guardando. Por ejemplo, no use nombres ambiguos o no descriptivos como:
 
@@ -121,14 +133,14 @@ variable_creada <- 'este texto es el contenido de la variable'
 -   **No se pueden colocar espacios en los nombres:** El siguiente ejemplo no es válido y dará error:
 
 ```{r}
-# variable con espacio <- 'esta línea no se podrá ejecutar'
+variable con espacio <- 'esta línea no se podrá ejecutar'
 
 ```
 
 -   **No comenzar con números:** Las variables no pueden comenzar con un número. El siguiente ejemplo también genera un error:
 
 ```{r}
-# 1variable <- 'tampoco se ejecutará este código'
+1variable <- 'tampoco se ejecutará este código'
 ```
 
 Al ejecutar la línea anterior, se obtendrá un mensaje de error en la Consola.
@@ -143,12 +155,12 @@ variable_tercera <- 'seguimos avanzando'
 
 ```
 
-## Restricciones (cont.) 
+## Restricciones (cont.)
 
 El siguiente ejemplo es incorrecto porque el punto no puede estar seguido de un número:
 
 ```{r}
-# .5variable <- 'INCORRECTO'
+.5variable <- 'INCORRECTO'
 
 ```
 
@@ -171,6 +183,6 @@ listado_caracteres_especiales <- c("~", "`", "!", "@", "#", "$", "%", "^", "&",
 El siguiente ejemplo es incorrecto debido al uso de un carácter especial en el nombre de la variable:
 
 ```{r}
-# variable.inasig@nabl_e <- 'INCORRECTO'
+variable.inasig@nabl_e <- 'INCORRECTO'
 
 ```

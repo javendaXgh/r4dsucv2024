@@ -1,0 +1,447 @@
+---
+title: "Clase 3- Apoyo"
+date: "Octubre 23, 2024"
+author: "MSc. José M. Avendaño"
+output:
+  html_document:
+    toc: yes
+    code_folding: show
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Este material fue compilado y adaptado por José M. Avendaño teniendo parcialmente códigos y conceptos desarrollados por [Diego Kozlowski y Juan Barriola](https://github.com/DiegoKoz/intro_ds) para un curso de R.
+
+## R base
+
+Con *R base* nos referimos a los comandos básicos que vienen incorporados en el R, sin necesidad de cargar librerías.
+
+## Uso de la consola como una calculadora- operaciones aritméticas
+
+-   En la consola podemos hacer calculos tal cual si estuviesemos usando una calculadora
+
+```{r calculadora, include=TRUE, echo=TRUE}
+5*3+6
+
+5*(3+6)
+
+```
+
+tener presente el uso de los paréntesis y el orden en que serán ejecutadas las operaciones matemáticas
+
+## Definición de objetos
+
+Los **Objetos/Elementos** constituyen la categoría esencial del R. De hecho, todo en R es un objeto, y se almacena con un nombre específico que **no debe poseer espacios**. Un número, un vector, una función, la progresión de letras del abecedario, una base de datos, un gráfico, constituyen para R objetos de distinto tipo. Los objetos que vamos creando a medida que trabajamos pueden visualizarse en el panel derecho superior de la pantalla (el *Environment*).
+
+El operador **`<-`** (**Alt + Guión**) sirve para definir un objeto. **A la izquierda** del **`<-`** debe ubicarse el nombre que tomará el elemento a crear. **Del lado derecho** debe ir la definición del mismo.
+
+```{r}
+A <- 1
+```
+
+Por ejemplo, podemos crear el elemento **A**, cuyo valor será 1. Para esto, debemos *correr* el código presionando **Ctrl + Enter**, con el cursor ubicado en cualquier parte de la línea. Al definir un elemento, el mismo queda guardado en el ambiente del programa, y podrá ser utilizado posteriormente para observar su contenido o para realizar una operación con el mismo.
+
+```{r}
+A 
+A+6
+```
+
+Al correr una linea con el nombre del objeto, la consola del programa nos muestra su contenido. Entre corchetes observamos el número de orden del elemento en cuestión. Si corremos una operación, la consola nos muestra el resultado de la misma.
+
+El operador **`=`** es **equivalente** a **`<-`**, pero en la práctica no se utiliza para la definición de objetos.
+
+```{r}
+B = 2
+B
+```
+
+**`<-`** es un operador **Unidireccional**, es decir que:\
+`A <- B` implica que **A** va tomar como valor el contenido del objeto **B**, y no al revés.
+
+```{r}
+A <- B
+A      # Ahora A toma el valor de B, y B continúa conservando el mismo valor
+B
+```
+
+## Variables
+
+Pueden contener cualquier estructura de datos como una matriz, un valor numérico, un texto, un vector y otras que se verán más adelante. Son creadas mediante el uso del operador de asignación.
+
+## Funciones Precargadas:
+
+RBase cuenta con diversas funciones que ya vienen definidas con el lenguaje de programación. Muchas de ellas son comandos básicos para realizar rutinas de programación. Otro lote de funciones, distinto a otros lenguajes, son funciones para aplicar métodos inherentes a la estadística. Cuando se vea un texto en un script que está asociado a un verbo, o proceso, y posterior al nombre, viene acompañado de un signo de inicio de paréntesis y finaliza con otro signo de cierre de paréntesis, se está en presencia de una función. En algunos casos entre ambos signos de paréntesis aparecerá un texto que puede estar entre comillas, sin comillas y en otros casos varios textos separados por comas. Cuando se da este último caso se refiere a que la función necesita distintos argumentos para poder ejecutarse.
+
+Ejemplos:
+
+1.  Función sin argumento
+
+    ```{r}
+    Sys.Date()
+    ```
+
+2.  Función con un argumento
+
+    ```{r}
+    head(mtcars)
+    ```
+
+3.  Función con múltiples argumentos
+
+    ```{r}
+
+    # asignación variables
+    velocidad <- cars$speed
+    distancia <- cars$dist
+
+    # crear un gráfico de tipo scatter plot (diagrama de dispersión )
+    plot(velocidad, distancia)
+     
+
+    ```
+
+## Tipos de datos
+
+Cuando queremos saber con cuál tipo de datos estamos trabajando necesitamos usar la función class()
+
+\`\`\`{r data_types, include=TRUE, echo=TRUE
+
+Las funciones son series de procedimientos estandarizados, que toman como imput determinados argumentos a fijar por el usuario, y devuelven un resultado acorde a la aplicación de dichos procedimientos. Su lógica de funcionamiento es:\
+`funcion(argumento1 = arg1, argumento2 = arg2)`
+
+### Otros ejemplos de funciones:
+
+-   paste() : concatena una serie de caracteres, pudiendo indicarse cómo separar a cada uno de ellos\
+-   paste0(): concatena una serie de caracteres sin separar
+-   sum(): suma de todos los elementos de un vector\
+-   mean() promedio aritmético de todos los elementos de un vector
+
+```{r}
+paste("Pega", "estas", 4, "palabras", sep = " ")
+
+#Puedo concatenar caracteres almacenados en objetos
+A= 'nombre'
+B= 'apellido'
+C= 'ciudad'
+paste(A, B, C, sep = "**")
+
+# Paste0 pega los caracteres sin separador
+paste0(A, B, C)
+
+1:5
+
+sum(1:5)
+
+mean(1:5, na.rm = TRUE)
+```
+
+## Vectores
+
+Son colecciones de elementos que tienen que ser exclusivamente del mismo tipo, de la misma clase. Se usa la c () para declarar un vector. Los elementos que conforman el vector van separados por comas. Los vectores pueden, y es lo más común, les asignamos nombre como lo vimos con las variables. Incluso podemos tener vectores con una solo elemento (que de por si son las variables que ya estudiamos).
+
+## Tipos de vectores
+
+### vectores - numeric
+
+Si queremos preguntar lo hacemos con la función is.numeric()
+
+```{r is_numeric, include=TRUE, echo=TRUE}
+x=10
+is.numeric(x)
+
+```
+
+En la lámina anterior vimos que el valor que retornó class(x) fue "numeric".
+
+-   **Númericos**: son aquellos que incluyen números enteros y decimales. En otros lenguajes se les conocen como números de tipo "float" y "double".
+
+```{r data_types.cont, include=TRUE, echo=TRUE}
+x <- 2
+
+class(x)
+
+```
+
+### vectores - integer
+
+-   **Enteros**: hay casos en los que es necesario trabajar con números enteros sin que contenga ningún decimal. Estos números se declaran con el uso de una L posterior al número.
+
+```{r integer, include=TRUE, echo=TRUE}
+y <- 2L
+y
+class(y)
+```
+
+Ejemplo de una operación:
+
+```{r operacion, include=TRUE, echo=TRUE}
+x <- 2.7
+class(x)
+y <- 3L
+class(y)
+
+
+```
+
+### vectores - lógicos
+
+-   **Lógicos:** Sirven para representar datos que solo pueden tener uno de estos dos valores
+
+    -   verdadero - TRUE
+    -   falso - FALSE
+
+### Operadores lógicos:
+
+-   $>$ (mayor a)
+-   $>=$ (mayor o igual a)
+-   $<$ (menor a)
+-   $<=$ (menor o igual a)
+-   $==$ (igual a)
+-   $!=$ (distinto a)
+
+```{r}
+# Redefinimos los valores A y B
+A <- 10
+B <- 20
+
+# Realizamos comparaciones lógicas
+A >  B
+A >= B
+A <  B
+A <= B
+A == B
+A != B
+
+C <- A != B
+C
+```
+
+Como muestra el último ejemplo, el resultado de una operación lógica puede almacenarse como el valor de un objeto.
+
+```{r logicos, include=TRUE, echo=TRUE}
+x <- 2.7
+y <-3L
+z <- x==y
+z
+class(z)
+
+```
+
+acabamos de usar el operador '==' que nos sirve para hacer una comparación de igualdad entre dos **objetos**. Lo que estamos es preguntando si son iguales el uno al otro y la respuesta que obtenemos es de tipo lógica booleana TRUE o FALSE
+
+```{r logicos.cont, include=TRUE, echo=TRUE}
+TRUE*4
+FALSE*2
+
+```
+
+acabamos de ver coerción. Forzar a un cambio de un tipo de dato en otro tipo de dato. Los TRUE pueden ser interpretados mediante la coerción como 1 y los FALSE como 0
+
+```{r logicos.cont.2, include=TRUE, echo=TRUE}
+# dos es igual a 3?
+2==3
+
+# dos es distinto de tres? (tener presente que el ! 
+# precediendo al igual quiere decir que es lo inverso 
+# al igual, es decir, distinto)
+2!=3
+#dos es menor que tres?
+2<3
+
+```
+
+```{r logicos.cont.3, include=TRUE, echo=TRUE}
+#juan es igual a pedro? (hablamos del texto)
+'juan'=='pedro'
+
+# el texto jose es igual a jose?
+'jose'=='jose'
+
+#dos es igual a dos?
+2==2
+
+```
+
+```{r logicos.cont.4, include=TRUE, echo=TRUE}
+# a es menor que b?
+'a'<'b'
+
+# a es mayor que 8?
+'a'>8
+
+# a es igual a 1?
+'a'==1
+
+```
+
+### vectores - character
+
+-   **Datos de caracteres:** se usan para almacenar cadenas de caracteres como por ejemplo un nombre, una oración, o cualquier valor que el computador no deba entender como un objeto lógico, número entero, númerico, matriz, etc. El valor debe estar declarado entre comillas simples " o comilla sencilla '. Prestar atención a no usar la tipo tilde ´ o cualquiera diferente a las mencionadas
+
+```{r caracteres, include=TRUE, echo=TRUE}
+nombre <- 'jose miguel'
+no_es_numero <- '2'
+no_es_numero
+class(no_es_numero)
+
+
+nchar(x)
+
+```
+
+```{r caracteres.cont, include=TRUE, echo=TRUE}
+nchar('hola')
+
+nchar(5)
+
+nchar(1532)
+
+
+
+```
+
+### vectores - Date
+
+-   **Fechas** El trabajo con las fechas puede llegar a ser un tanto complejo y será abordado de forma más intensiva adelante. Revisando algunas de las formas de trabajar con fechas tenemos el uso de las funciones Date y POSIXct
+    -   La función Date solo almacena la fecha calendario
+
+    -   La función POSIXct puede almacenar en conjunto hora y fecha
+
+Las fechas se representan, en cualquiera de los casos como la cantidad de días (date) o segundos (POSIXct) que han transcurrido desde el 1 ero de enero de 1970.
+
+```{r fechas, include=TRUE, echo=TRUE}
+fecha1 <- as.Date('2020-01-31')
+fecha1
+
+class(fecha1)
+
+as.numeric(fecha1)
+
+
+```
+
+```{r fechas.cont, include=TRUE, echo=TRUE}
+fecha2 <- as.POSIXct('2020-01-31 11:15')
+fecha2
+as.numeric(fecha2)
+class(fecha2)
+```
+
+## Vectores repaso:
+
+```{r vectores, include=TRUE, echo=TRUE}
+numeros <- c(1,2,5,7)
+numeros
+class(numeros)
+textos <- c('juan','eliana','maria')
+class(textos)
+textos
+logicos <- c(TRUE, FALSE, TRUE)
+class(logicos)
+is.numeric(numeros)
+is.logical(textos)
+is.character(textos)
+
+```
+
+```{r vectores1, include=TRUE, echo=TRUE}
+
+unico <- c('aula')
+unico
+class(unico)
+
+errado <- c('texto', 1)
+errado
+class(errado)
+```
+
+```{r vectores2, include=TRUE, echo=TRUE}
+
+
+errado <- c('texto', 1)
+errado
+class(errado)
+#aplicó la coercion
+```
+
+## Estructuras de Datos/ Objetos:
+
+Todo lo que existe dentro de R es un objeto: funciones, vectores, etc. En R se puede trabajar con una gran cantidad de objetos distintos tanto en su tipo como tenerlos dentro de una sesión de trabajo.
+
+Estas son algunos de los objetos que contienen datos con los cuales trabajaremos a lo largo del curso.
+
+-   Valores
+-   Vectores
+-   Listas
+-   Data Frames
+-   Tibbles
+
+No obstante, existen estructuras más complejas que no son de tipo tabular que no serán abordadas como la raster layers.
+
+## Caracteres especiales
+
+-   R es sensible a mayúsculas y minúsculas, tanto para los nombres de las variables, como para las funciones y parámetros.
+
+-   El **numeral** `#` se utiliza para hacer comentarios. Todo lo que se escribe después del \# no es interpretado por R. Se debe utilizar un \# por cada línea de código que se desea anular
+
+-   Los **corchetes** `[]` se utilizan para acceder a un objeto:
+
+    -   en un vector\[n° orden\]
+    -   en una tabla\[fila, columna\]
+    -   en una lista\[n° elemento\]
+
+-   el signo **\$** también es un método de acceso. Particularmente, en los dataframes, nos permitira acceder a una determinada columna de una tabla
+
+-   Los **paréntesis**`()` se utilizan en las funciones para definir los parámetros.
+
+-   Las **comas** `,` se utilizan para separar los parametros al interior de una función.
+
+## Nombres Variables
+
+## Ambientes de trabajo
+
+Hay algunas cosas que tenemos que tener en cuenta respecto del orden del ambiente en el que trabajamos:
+
+-   Working Directory: Es el directorio de trabajo. Pueden ver el suyo con `getwd()`, es *hacia donde apunta el código*, por ejemplo, si quieren leer un archivo, la ruta del archivo tiene que estar explicitada como el recorrido desde el Working Directory.
+-   Environment: Esto engloba tanto la información que tenemos cargada en *Data* y *Values*, como las librerías que tenemos cargadas mientras trabajamos.
+
+Es importante que mantengamos bien delimitadas estas cosas entre diferentes trabajos, sino:
+
+1.  El directorio queda referido a un lugar específico en nuestra computadora.
+
+-   Si se lo compartimos a otro **se rompe**
+-   Si cambiamos de computadora **se rompe**
+-   Si lo cambiamos de lugar **se rompe**
+-   Si primero abrimos otro script **se rompe**
+
+2.  Tenemos mezclados resultados de diferentes trabajos:
+
+-   Nunca sabemos si esa variable/tabla/lista se creo en ese script y no otro
+-   Perdemos espacio de la memoria
+-   No estamos seguros de que el script cargue todas las librerías que necesita
+
+Rstudio tiene una herramienta muy útil de trabajo que son los **proyectos**. Estos permiten mantener un ambiente de trabajo delimitado por cada uno de nuestros trabajos. Es decir:
+
+-   El directorio de trabajo se refiere a donde esta ubicado el archivo .Rproj
+-   El Environment es específico de nuestro proyecto.
+
+Un proyecto no es un sólo script, sino toda una carpeta de trabajo.
+
+Para crearlo, vamos al logo de nuevo projecto (Arriba a la derecha de la panatalla), y elegimos la carpeta de trabajo.
+
+## Tipos de archivos de R
+
+-   **Script**: Es un archivo de texto plano, donde podemos poner el código que utilizamos para preservarlo
+-   **Rmd**: También sirve para guardar el código, pero a diferencia de los scripts, se puede compilar, e intercalar código con resultados (este archivo es un rmarkdown)
+-   **Rproject**: Es un archivo que define la metadata del proyecto
+-   **RDS y Rdata**: Dos formatos de archivos propios de R para guardar datos.
+-   **qmd**: archivo de Quarto, el cual es un sistema de publicaciones (página web, blogs, que puede contener códigos y otros objetos resultados de una rutina de programación acompañados por texto legible.
+-   
+
+## Remover objetos del Global Environment
+
+En caso de querer remover un objeto (todo lo que existe dentro del programa que estamos ejecutando) del "global environment" podemos usar la función rm() teniendo como argumento el nombre del objeto que queremos remover
+
+rm("nombre")
