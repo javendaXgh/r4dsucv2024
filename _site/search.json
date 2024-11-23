@@ -3251,5 +3251,77 @@
       "Prácticas",
       "clase 3 / apoyo"
     ]
+  },
+  {
+    "objectID": "clases/clase_04_2da_parte.html",
+    "href": "clases/clase_04_2da_parte.html",
+    "title": "clase 04 parte 2",
+    "section": "",
+    "text": "Se inspecciona un conjunto de datos (dataset) que trae pregargado R\n\nvisualizar conjunto de datos\n\n\nView(cars) # visualizar conjunto de datos\n\n\ninvestigar cuál información contiene el conjunto\n\n\n?cars\n\n\nSumar todos los valores presentes en la columna speed. Luego se explicará\n\n\nsum(cars$speed)\n\n[1] 770\n\n\nel papel que juega el signo $ presente en la expresión anterior\n\nobtener valor promedio de la columna distancia\n\n\nmean(cars$dist)\n\n[1] 42.98"
+  },
+  {
+    "objectID": "clases/clase_04_2da_parte.html#inspección-conjunto-de-datos",
+    "href": "clases/clase_04_2da_parte.html#inspección-conjunto-de-datos",
+    "title": "clase 04 parte 2",
+    "section": "",
+    "text": "Se inspecciona un conjunto de datos (dataset) que trae pregargado R\n\nvisualizar conjunto de datos\n\n\nView(cars) # visualizar conjunto de datos\n\n\ninvestigar cuál información contiene el conjunto\n\n\n?cars\n\n\nSumar todos los valores presentes en la columna speed. Luego se explicará\n\n\nsum(cars$speed)\n\n[1] 770\n\n\nel papel que juega el signo $ presente en la expresión anterior\n\nobtener valor promedio de la columna distancia\n\n\nmean(cars$dist)\n\n[1] 42.98"
+  },
+  {
+    "objectID": "clases/clase_04_2da_parte.html#visualización-valores-del-conjunto-de-datos",
+    "href": "clases/clase_04_2da_parte.html#visualización-valores-del-conjunto-de-datos",
+    "title": "clase 04 parte 2",
+    "section": "Visualización valores del conjunto de datos",
+    "text": "Visualización valores del conjunto de datos\nEn cada gráfico que generemos mejoraremos la visualización representada\n\nFunción plot para representar puntos generados por speed y dist\n\n\nplot(cars)\n\n\n\n\n\n\n\n\n\nAñadir etiquetas en los ejes\n\n\nplot(cars,\n     xlab = \"Velocidad (mph)\", \n     ylab = \"Distancia detenido (ft) \")\n\n\n\n\n\n\n\n\nObservar que a nivel de código, en las líneas inferiores que siguen a plot queda un espacio al inicio de cada línea. Ese espacio lo coloca automáticamente el editor de código, si estamos escribiendo el código de la función plot o la que sea, y luego apretamos enter. Esos espacios que aparecen, se llaman indentado, y son de ayuda para leer el código de una forma más legible. Al avanzar en las otras clases, se comprenderá mejor de qué va esto\n\nGráfico de dispersión\n\nLos gráficos de dispersión pueden ayudar a visualizar cualquier relación lineal entre la variable dependiente (respuesta) y las variables independientes (predictoras). Lo ideal es que, si se dispone de múltiples variables predictoras, se dibuje un gráfico de dispersión para cada una de ellas frente a la respuesta\n\nscatter.smooth(x=cars$dist,\n               y=cars$speed, \n               main=\"Distancia ~ Velocidad\")  \n\n\n\n\n\n\n\n\nEjercicio: - Analizar cuál es la relación que pueden presentar las dos variables - Si el gráfico lo represento de esta forma, tiene el mismo significado? - Cuál puede ser la relación que presuponemos que tienen las variables?\n\nModificación en la representación (ejes):\n\n\nscatter.smooth(y=cars$dist,\n               x=cars$speed, \n               main=\"Distancia ~ Velocidad\")  \n\n\n\n\n\n\n\n\nPreguntas: - Si el comportamiento de dependencia cumple determinados supuestos, se puede predecir? - Se puede modelar?"
+  },
+  {
+    "objectID": "clases/clase_04_2da_parte.html#mejorar-el-gráfico",
+    "href": "clases/clase_04_2da_parte.html#mejorar-el-gráfico",
+    "title": "clase 04 parte 2",
+    "section": "Mejorar el gráfico",
+    "text": "Mejorar el gráfico\nLa siguiente sección usa una librería llamada ggplot2 para crear el gráfico que tienemucho mejor aspecto. Luego, en clases venideras, se explicará línea a línea, cómo se creó el gráfico, pero se coloca para crear entusiasmo hacia el aprendizaje del lenguaje\n\nlibrary(ggplot2) # debemos tener instalados los paquetes\nggplot(cars,\n       mapping= aes(x=speed,y=dist))+\n  geom_point(colour = 'red', size = 3)\n\n\n\n\n\n\n\n\nmismos valores pero con puntos en color rojo, líneas en ambos ejes para crear una grilla\ny ahora el mismo gráfico con la línea de tendencia y lo asignamos a una variable que se llama grafico\nahora llamamos a la variable grafico para ver la nueva versión\n\ngrafico\n\n\n\n\n\n\n\n\nFinalmente, mediante un paquete de nombre plotly lo convertimos en interactivo. Pasar el mouse sobre el gráfico para que se pueda apreciar la interactividad\n\nlibrary(plotly)# cargamos la librería\n\ngrafico%&gt;%\n  ggplotly()"
+  },
+  {
+    "objectID": "practicas/clase4_apoyo.html",
+    "href": "practicas/clase4_apoyo.html",
+    "title": "clase 04 parte 2",
+    "section": "",
+    "text": "Se inspecciona un conjunto de datos (dataset) que trae pregargado R\n\nvisualizar conjunto de datos\n\n\n# View(cars) # visualizar conjunto de datos\n\n\ninvestigar cuál información contiene el conjunto\n\n\n?cars\n\n\nSumar todos los valores presentes en la columna speed. Luego se explicará\n\n\nsum(cars$speed)\n\n[1] 770\n\n\nel papel que juega el signo $ presente en la expresión anterior\n\nobtener valor promedio de la columna distancia\n\n\nmean(cars$dist)\n\n[1] 42.98",
+    "crumbs": [
+      "Prácticas",
+      "clase 4 / apoyo"
+    ]
+  },
+  {
+    "objectID": "practicas/clase4_apoyo.html#inspección-conjunto-de-datos",
+    "href": "practicas/clase4_apoyo.html#inspección-conjunto-de-datos",
+    "title": "clase 04 parte 2",
+    "section": "",
+    "text": "Se inspecciona un conjunto de datos (dataset) que trae pregargado R\n\nvisualizar conjunto de datos\n\n\n# View(cars) # visualizar conjunto de datos\n\n\ninvestigar cuál información contiene el conjunto\n\n\n?cars\n\n\nSumar todos los valores presentes en la columna speed. Luego se explicará\n\n\nsum(cars$speed)\n\n[1] 770\n\n\nel papel que juega el signo $ presente en la expresión anterior\n\nobtener valor promedio de la columna distancia\n\n\nmean(cars$dist)\n\n[1] 42.98",
+    "crumbs": [
+      "Prácticas",
+      "clase 4 / apoyo"
+    ]
+  },
+  {
+    "objectID": "practicas/clase4_apoyo.html#visualización-valores-del-conjunto-de-datos",
+    "href": "practicas/clase4_apoyo.html#visualización-valores-del-conjunto-de-datos",
+    "title": "clase 04 parte 2",
+    "section": "Visualización valores del conjunto de datos",
+    "text": "Visualización valores del conjunto de datos\nEn cada gráfico que generemos mejoraremos la visualización representada\n\nFunción plot para representar puntos generados por speed y dist\n\n\nplot(cars)\n\n\n\n\n\n\n\n\n\nAñadir etiquetas en los ejes\n\n\nplot(cars,\n     xlab = \"Velocidad (mph)\", \n     ylab = \"Distancia detenido (ft) \")\n\n\n\n\n\n\n\n\nObservar que a nivel de código, en las líneas inferiores que siguen a plot queda un espacio al inicio de cada línea. Ese espacio lo coloca automáticamente el editor de código, si estamos escribiendo el código de la función plot o la que sea, y luego apretamos enter. Esos espacios que aparecen, se llaman indentado, y son de ayuda para leer el código de una forma más legible. Al avanzar en las otras clases, se comprenderá mejor de qué va esto\n\nGráfico de dispersión\n\nLos gráficos de dispersión pueden ayudar a visualizar cualquier relación lineal entre la variable dependiente (respuesta) y las variables independientes (predictoras). Lo ideal es que, si se dispone de múltiples variables predictoras, se dibuje un gráfico de dispersión para cada una de ellas frente a la respuesta\n\nscatter.smooth(x=cars$dist,\n               y=cars$speed, \n               main=\"Distancia ~ Velocidad\")  \n\n\n\n\n\n\n\n\nEjercicio: - Analizar cuál es la relación que pueden presentar las dos variables - Si el gráfico lo represento de esta forma, tiene el mismo significado? - Cuál puede ser la relación que presuponemos que tienen las variables?\n\nModificación en la representación (ejes):\n\n\nscatter.smooth(y=cars$dist,\n               x=cars$speed, \n               main=\"Distancia ~ Velocidad\")  \n\n\n\n\n\n\n\n\nPreguntas: - Si el comportamiento de dependencia cumple determinados supuestos, se puede predecir? - Se puede modelar?",
+    "crumbs": [
+      "Prácticas",
+      "clase 4 / apoyo"
+    ]
+  },
+  {
+    "objectID": "practicas/clase4_apoyo.html#mejorar-el-gráfico",
+    "href": "practicas/clase4_apoyo.html#mejorar-el-gráfico",
+    "title": "clase 04 parte 2",
+    "section": "Mejorar el gráfico",
+    "text": "Mejorar el gráfico\nLa siguiente sección usa una librería llamada ggplot2 para crear el gráfico que tienemucho mejor aspecto. Luego, en clases venideras, se explicará línea a línea, cómo se creó el gráfico, pero se coloca para crear entusiasmo hacia el aprendizaje del lenguaje\n\nlibrary(ggplot2) # debemos tener instalados los paquetes\nggplot(cars,\n       mapping= aes(x=speed,y=dist))+\n  geom_point(colour = 'red', size = 3)\n\n\n\n\n\n\n\n\nmismos valores pero con puntos en color rojo, líneas en ambos ejes para crear una grilla\ny ahora el mismo gráfico con la línea de tendencia y lo asignamos a una variable que se llama grafico\nahora llamamos a la variable grafico para ver la nueva versión\n\ngrafico\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\nFinalmente, mediante un paquete de nombre plotly lo convertimos en interactivo. Pasar el mouse sobre el gráfico para que se pueda apreciar la interactividad\n\nlibrary(plotly)# cargamos la librería\n\n\nAttaching package: 'plotly'\n\n\nThe following object is masked from 'package:ggplot2':\n\n    last_plot\n\n\nThe following object is masked from 'package:stats':\n\n    filter\n\n\nThe following object is masked from 'package:graphics':\n\n    layout\n\ngrafico%&gt;%\n  ggplotly()\n\n`geom_smooth()` using method = 'loess' and formula = 'y ~ x'",
+    "crumbs": [
+      "Prácticas",
+      "clase 4 / apoyo"
+    ]
   }
 ]
