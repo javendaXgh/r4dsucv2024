@@ -76,6 +76,7 @@ lang: es
 format:
   html:
     embed-resources: true
+    include-before-body: 'google_tags/gtag.js'
     theme:
       light: [cosmo, style/stat101_of.scss]
       dark: [cosmo,  style/dark.scss]
