@@ -2,7 +2,6 @@
 title: "Contenido (sujeto a modificaciones)"
 ---
 
-
 Se detallan la mayoría de los contenidos de programación que serán abordados. Es necesario destacar que en cada actividad serán abordados transversalmente contenidos asociados a problemas que son estudiados por la ciencia de datos. Se espera en cada clase incorporar ejercicios prácticos que desarrollen las habilidades de programación en computadoras.
 
 ### Clase 1:
