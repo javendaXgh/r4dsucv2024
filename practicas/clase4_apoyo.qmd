@@ -1,0 +1,115 @@
+---
+title: "clase 04 parte 2"
+format: html
+editor: visual
+---
+
+## Inspección conjunto de datos
+
+Se inspecciona un conjunto de datos (dataset) que trae pregargado R
+
+1.  visualizar conjunto de datos
+
+```{r}
+# View(cars) # visualizar conjunto de datos
+```
+
+2.  investigar cuál información contiene el conjunto
+
+```{r}
+?cars
+```
+
+3.  Sumar todos los valores presentes en la columna speed. Luego se explicará
+
+```{r}
+sum(cars$speed)
+```
+
+el papel que juega el signo \$ presente en la expresión anterior
+
+4.  obtener valor promedio de la columna distancia
+
+```{r}
+mean(cars$dist)
+```
+
+## Visualización valores del conjunto de datos
+
+En cada gráfico que generemos mejoraremos la visualización representada
+
+1.  Función plot para representar puntos generados por speed y dist
+
+```{r}
+plot(cars)
+```
+
+2.  Añadir etiquetas en los ejes
+
+```{r}
+plot(cars,
+     xlab = "Velocidad (mph)", 
+     ylab = "Distancia detenido (ft) ")
+```
+
+Observar que a nivel de código, en las líneas inferiores que siguen a plot queda un espacio al inicio de cada línea. Ese espacio lo coloca automáticamente el editor de código, si estamos escribiendo el código de la función plot o la que sea, y luego apretamos enter. Esos espacios que aparecen, se llaman indentado, y son de ayuda para leer el código de una forma más legible. Al avanzar en las otras clases, se comprenderá mejor de qué va esto
+
+3.  Gráfico de dispersión
+
+Los gráficos de dispersión pueden ayudar a visualizar cualquier relación lineal entre la variable dependiente (respuesta) y las variables independientes (predictoras). Lo ideal es que, si se dispone de múltiples variables predictoras, se dibuje un gráfico de dispersión para cada una de ellas frente a la respuesta
+
+```{r}
+scatter.smooth(x=cars$dist,
+               y=cars$speed, 
+               main="Distancia ~ Velocidad")  
+```
+
+Ejercicio: - Analizar cuál es la relación que pueden presentar las dos variables - Si el gráfico lo represento de esta forma, tiene el mismo significado? - Cuál puede ser la relación que presuponemos que tienen las variables?
+
+4.  Modificación en la representación (ejes):
+
+```{r}
+scatter.smooth(y=cars$dist,
+               x=cars$speed, 
+               main="Distancia ~ Velocidad")  
+```
+
+Preguntas: - Si el comportamiento de dependencia cumple determinados supuestos, se puede predecir? - Se puede modelar?
+
+## Mejorar el gráfico
+
+La siguiente sección usa una librería llamada ggplot2 para crear el gráfico que tienemucho mejor aspecto. Luego, en clases venideras, se explicará línea a línea, cómo se creó el gráfico, pero se coloca para crear entusiasmo hacia el aprendizaje del lenguaje
+
+```{r}
+library(ggplot2) # debemos tener instalados los paquetes
+ggplot(cars,
+       mapping= aes(x=speed,y=dist))+
+  geom_point(colour = 'red', size = 3)
+```
+
+mismos valores pero con puntos en color rojo, líneas en ambos ejes para crear una grilla
+
+y ahora el mismo gráfico con la línea de tendencia y lo asignamos a una variable que se llama `grafico`
+
+```{r}
+#| echo: false
+grafico <- ggplot(cars,
+       mapping= aes(x=speed,y=dist))+
+  geom_point(colour = 'red', size = 3)+
+  geom_smooth(aes(x=speed,y=dist))
+```
+
+ahora llamamos a la variable `grafico` para ver la nueva versión
+
+```{r}
+grafico
+```
+
+Finalmente, mediante un paquete de nombre plotly lo convertimos en interactivo. Pasar el mouse sobre el gráfico para que se pueda apreciar la interactividad
+
+```{r}
+library(plotly)# cargamos la librería
+
+grafico%>%
+  ggplotly()
+```
