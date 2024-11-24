@@ -3285,7 +3285,7 @@
     "href": "practicas/clase4_apoyo.html",
     "title": "clase 04 parte 2",
     "section": "",
-    "text": "Se inspecciona un conjunto de datos (dataset) que trae pregargado R\n\nvisualizar conjunto de datos\n\n\n# View(cars) # visualizar conjunto de datos\n\n\ninvestigar cuál información contiene el conjunto\n\n\n?cars\n\n\nSumar todos los valores presentes en la columna speed. Luego se explicará\n\n\nsum(cars$speed)\n\n[1] 770\n\n\nel papel que juega el signo $ presente en la expresión anterior\n\nobtener valor promedio de la columna distancia\n\n\nmean(cars$dist)\n\n[1] 42.98",
+    "text": "Se inspecciona un conjunto de datos (dataset) que trae pregargado R\n\nvisualizar conjunto de datos\n\n\n# View(cars) # visualizar conjunto de datos\nhead(cars) # ver primeras filas\n\n  speed dist\n1     4    2\n2     4   10\n3     7    4\n4     7   22\n5     8   16\n6     9   10\n\n\n\ninvestigar cuál información contiene el conjunto\n\n\n?cars\n# Los datos indican la velocidad de los carros y la distancia que tardan en detenerse. \n# Ten en cuenta que los datos se registraron en la década de 1920.\n\n\nSumar todos los valores presentes en la columna speed. Luego se explicará\n\n\nsum(cars$speed)\n\n[1] 770\n\n\nel papel que juega el signo $ presente en la expresión anterior\n\nobtener valor promedio de la columna distancia\n\n\nmean(cars$dist)\n\n[1] 42.98",
     "crumbs": [
       "Prácticas",
       "clase 4 / apoyo"
@@ -3296,7 +3296,7 @@
     "href": "practicas/clase4_apoyo.html#inspección-conjunto-de-datos",
     "title": "clase 04 parte 2",
     "section": "",
-    "text": "Se inspecciona un conjunto de datos (dataset) que trae pregargado R\n\nvisualizar conjunto de datos\n\n\n# View(cars) # visualizar conjunto de datos\n\n\ninvestigar cuál información contiene el conjunto\n\n\n?cars\n\n\nSumar todos los valores presentes en la columna speed. Luego se explicará\n\n\nsum(cars$speed)\n\n[1] 770\n\n\nel papel que juega el signo $ presente en la expresión anterior\n\nobtener valor promedio de la columna distancia\n\n\nmean(cars$dist)\n\n[1] 42.98",
+    "text": "Se inspecciona un conjunto de datos (dataset) que trae pregargado R\n\nvisualizar conjunto de datos\n\n\n# View(cars) # visualizar conjunto de datos\nhead(cars) # ver primeras filas\n\n  speed dist\n1     4    2\n2     4   10\n3     7    4\n4     7   22\n5     8   16\n6     9   10\n\n\n\ninvestigar cuál información contiene el conjunto\n\n\n?cars\n# Los datos indican la velocidad de los carros y la distancia que tardan en detenerse. \n# Ten en cuenta que los datos se registraron en la década de 1920.\n\n\nSumar todos los valores presentes en la columna speed. Luego se explicará\n\n\nsum(cars$speed)\n\n[1] 770\n\n\nel papel que juega el signo $ presente en la expresión anterior\n\nobtener valor promedio de la columna distancia\n\n\nmean(cars$dist)\n\n[1] 42.98",
     "crumbs": [
       "Prácticas",
       "clase 4 / apoyo"

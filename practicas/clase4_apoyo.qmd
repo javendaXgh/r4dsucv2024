@@ -16,12 +16,15 @@ Se inspecciona un conjunto de datos (dataset) que trae pregargado R
 
 ```{r}
 # View(cars) # visualizar conjunto de datos
+head(cars) # ver primeras filas
 ```
 
 2.  investigar cuál información contiene el conjunto
 
 ```{r}
 ?cars
+# Los datos indican la velocidad de los carros y la distancia que tardan en detenerse. 
+# Ten en cuenta que los datos se registraron en la década de 1920.
 ```
 
 3.  Sumar todos los valores presentes en la columna speed. Luego se explicará
