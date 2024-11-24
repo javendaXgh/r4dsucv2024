@@ -31,73 +31,17 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-5BVQ49LXJG"></script>
+
+  <script type="text/javascript">
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5BVQ49LXJG', { 'anonymize_ip': true});
+  </script>
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -689,7 +633,7 @@
   };
 
   // Store cell data
-  globalThis.qwebrCellDetails = [{"id":1,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-1","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"table(mtcars$cyl)"},{"id":2,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-2","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"table(mtcars$cyl, mtcars$vs)"},{"id":3,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-3","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"summary(mtcars$mpg)"},{"id":4,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-4","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"summary(mtcars)"},{"id":5,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-5","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"mtcars$mpg"},{"id":6,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-6","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"  mtcars$mpg>19.20"},{"id":7,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-7","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"mtcars$mpg>mean(mtcars$mpg)"},{"id":8,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-8","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"promedio_mpg <- mean(mtcars$mpg)\nvalor_3ercuartil <- 33.90 \n\ndf_mpg <- data.frame(mpg= mtcars$mpg,\n                     may_mean= mtcars$mpg>promedio_mpg,\n                     men_3cuar= mtcars$mpg<valor_3ercuartil )\n"},{"id":9,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-9","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"df_mpg"},{"id":10,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-10","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"mtcars$mpg>promedio_mpg & mtcars$mpg<valor_3ercuartil "},{"id":11,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-11","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"mtcars$mpg[mtcars$mpg>promedio_mpg & mtcars$mpg<valor_3ercuartil ]"},{"id":12,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-12","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":" which (mtcars$mpg == 19.2  )"},{"id":13,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-13","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"mtcars[ mtcars$mpg==21, ]"},{"id":14,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-14","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"mtcars[mtcars$mpg!=21,c(1,4:6)]"},{"id":15,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-15","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"mtcars[which(mtcars$mpg==21 | mtcars$mpg==22.8),1:3]"},{"id":16,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-16","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"# View(datasets::LifeCycleSavings)"},{"id":17,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-17","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"df_ahorro <- datasets::LifeCycleSavings\nhead(df_ahorro, 8)"},{"id":18,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-18","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"dim(df_ahorro)"},{"id":19,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-19","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"ncol(df_ahorro)"},{"id":20,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-20","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"nrow(df_ahorro)"},{"id":21,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-21","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"colnames(df_ahorro)"},{"id":22,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-22","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"rownames(df_ahorro)"},{"id":23,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-23","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"str(df_ahorro)"},{"id":24,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-24","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"summary(df_ahorro)"},{"id":25,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-25","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"rownames(df_ahorro)[1:10]"},{"id":26,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-26","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"df_ahorro$pais <- rownames(df_ahorro)"},{"id":27,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-27","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"head(df_ahorro, 5)"},{"id":28,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-28","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"min(df_ahorro$pop15)"},{"id":29,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-29","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"max(df_ahorro$pop15)"},{"id":30,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-30","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"df_gapminder <- read.csv('https://raw.githubusercontent.com/javendaXgh/datos/refs/heads/master/gapminder.csv') "},{"id":31,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-31","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"head(df_gapminder,3)"},{"id":32,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-32","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"str(df_gapminder)"},{"id":33,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-33","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"summary(df_gapminder)"},{"id":34,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-34","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"unique(df_gapminder$country)"},{"id":35,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-35","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"unique(df_gapminder$year)"},{"id":36,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-36","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"library(dplyr)"},{"id":37,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-37","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"df_venezuela <- df_gapminder %>%\n  filter(country=='Venezuela')\n\ndf_venezuela"},{"id":38,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-38","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"summary(df_venezuela)"},{"id":39,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-39","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"df_colombia <- df_gapminder %>%\n  filter(country=='Colombia')\n\ndf_colombia"},{"id":40,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-40","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"df_gran_colombia <- bind_rows(df_venezuela,\n                              df_colombia )"},{"id":41,"options":{"fig-cap":"","fig-width":7,"message":"true","output":"true","warning":"true","classes":"","label":"unnamed-chunk-41","context":"interactive","editor-font-scale":"0.5","comment":"","editor-max-height":"","dpi":72,"out-height":"","autorun":"false","out-width":"700px","fig-height":5,"read-only":"false","editor-quick-suggestions":"false","results":"markup","editor-word-wrap":"true"},"code":"df_gran_colombia"}];
+  globalThis.qwebrCellDetails = [{"id":1,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-1","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"mtcars$cyl"},{"id":2,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-2","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"table(mtcars$cyl)"},{"id":3,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-3","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"table(mtcars$cyl, mtcars$vs)"},{"id":4,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-4","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"summary(mtcars$mpg)"},{"id":5,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-5","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"summary(mtcars)"},{"id":6,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-6","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"mtcars$mpg"},{"id":7,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-7","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"  mtcars$mpg>19.20"},{"id":8,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-8","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"mtcars$mpg>mean(mtcars$mpg)"},{"id":9,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-9","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"promedio_mpg <- mean(mtcars$mpg)\nvalor_3ercuartil <- 33.90 \n\ndf_mpg <- data.frame(mpg= mtcars$mpg,\n                     may_mean= mtcars$mpg>promedio_mpg,\n                     men_3cuar= mtcars$mpg<valor_3ercuartil )\n"},{"id":10,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-10","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"df_mpg"},{"id":11,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-11","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"mtcars$mpg>promedio_mpg & mtcars$mpg<valor_3ercuartil "},{"id":12,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-12","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"mtcars$mpg[mtcars$mpg>promedio_mpg & mtcars$mpg<valor_3ercuartil ]"},{"id":13,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-13","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":" which (mtcars$mpg == 19.2  )"},{"id":14,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-14","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"mtcars[ mtcars$mpg==21, ]"},{"id":15,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-15","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"mtcars[mtcars$mpg!=21,c(1,4:6)]"},{"id":16,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-16","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"mtcars[which(mtcars$mpg==21 | mtcars$mpg==22.8),1:3]"},{"id":17,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-17","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"# View(datasets::LifeCycleSavings)"},{"id":18,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-18","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"df_ahorro <- datasets::LifeCycleSavings\nhead(df_ahorro, 8)"},{"id":19,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-19","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"dim(df_ahorro)"},{"id":20,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-20","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"ncol(df_ahorro)"},{"id":21,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-21","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"nrow(df_ahorro)"},{"id":22,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-22","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"colnames(df_ahorro)"},{"id":23,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-23","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"rownames(df_ahorro)"},{"id":24,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-24","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"str(df_ahorro)"},{"id":25,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-25","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"summary(df_ahorro)"},{"id":26,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-26","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"rownames(df_ahorro)[1:10]"},{"id":27,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-27","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"df_ahorro$pais <- rownames(df_ahorro)"},{"id":28,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-28","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"head(df_ahorro, 5)"},{"id":29,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-29","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"min(df_ahorro$pop15)"},{"id":30,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-30","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"max(df_ahorro$pop15)"},{"id":31,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-31","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"df_gapminder <- read.csv('https://raw.githubusercontent.com/javendaXgh/datos/refs/heads/master/gapminder.csv') "},{"id":32,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-32","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"head(df_gapminder,3)"},{"id":33,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-33","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"str(df_gapminder)"},{"id":34,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-34","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"summary(df_gapminder)"},{"id":35,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-35","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"unique(df_gapminder$country)"},{"id":36,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-36","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"unique(df_gapminder$year)"},{"id":37,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-37","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"library(dplyr)"},{"id":38,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-38","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"df_venezuela <- df_gapminder %>%\n  filter(country=='Venezuela')\n\ndf_venezuela"},{"id":39,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-39","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"summary(df_venezuela)"},{"id":40,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-40","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"df_colombia <- df_gapminder %>%\n  filter(country=='Colombia')\n\ndf_colombia"},{"id":41,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-41","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"df_gran_colombia <- bind_rows(df_venezuela,\n                              df_colombia )"},{"id":42,"options":{"output":"true","results":"markup","comment":"","context":"interactive","autorun":"false","fig-width":7,"warning":"true","out-width":"700px","editor-word-wrap":"true","classes":"","read-only":"false","fig-cap":"","editor-max-height":"","message":"true","editor-font-scale":"0.5","dpi":72,"label":"unnamed-chunk-42","editor-quick-suggestions":"false","fig-height":5,"out-height":""},"code":"df_gran_colombia"}];
 
   </script>
   <script type="module">
@@ -2281,10 +2225,10 @@ MSc. José M. Avendaño
 <section id="tabla-de-contingencia" class="slide level2">
 <h2>Tabla de Contingencia</h2>
 <p>Cantidad cilindros por observación</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {web-r} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a></span>
-<span id="cb1-2"><a></a>mtcars$cyl</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Conteo de frecuencia de un dato categórico</p>
 <div id="qwebr-insertion-location-1"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Conteo de frecuencia de un dato categórico</p>
+<div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="tabla-de-contingencia-cruzada" class="slide level2">
@@ -2302,19 +2246,19 @@ MSc. José M. Avendaño
 </tr>
 </tbody>
 </table>
-<div id="qwebr-insertion-location-2"></div>
+<div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="tabla-resumen-estadístico" class="slide level2">
 <h2>Tabla Resumen Estadístico</h2>
 <p>Representar los valores mínimo y máximo, primer y tercer cuartil, media, promedio de un vector o data frame.</p>
-<div id="qwebr-insertion-location-3"></div>
+<div id="qwebr-insertion-location-4"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="tabla-resumen-estadístico---cont" class="slide level2">
 <h2>Tabla Resumen Estadístico - cont</h2>
 <p>La salida de función <code>summary</code> cambia según el objeto que estemos trabajando</p>
-<div id="qwebr-insertion-location-4"></div>
+<div id="qwebr-insertion-location-5"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="operadores-lógicos" class="slide level2">
@@ -2333,19 +2277,19 @@ MSc. José M. Avendaño
 <section id="uso-de-operadores-lógicos-en-un-vector" class="slide level2">
 <h2>Uso de Operadores Lógicos en un Vector</h2>
 <p>Vector seleccionado “millas por galón” <code>mpg</code></p>
-<div id="qwebr-insertion-location-5"></div>
+<div id="qwebr-insertion-location-6"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="vector-lógico-con-valores-que-cumplen-una-condición" class="slide level2">
 <h2>Vector Lógico con valores que Cumplen una Condición</h2>
 <p>Mayor que un valor dado</p>
-<div id="qwebr-insertion-location-6"></div>
+<div id="qwebr-insertion-location-7"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="vector-lógico-con-valores-que-cumplen-una-condición--cont." class="slide level2">
 <h2>Vector Lógico con valores que Cumplen una Condición -cont.</h2>
 <p><br> Mayor que el valor que retorna una función</p>
-<div id="qwebr-insertion-location-7"></div>
+<div id="qwebr-insertion-location-8"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="asignación-valores-a-variables" class="slide level2">
@@ -2355,135 +2299,135 @@ MSc. José M. Avendaño
 <li class="fragment"><p>creación df</p></li>
 <li class="fragment"><p>evaluar valores que cumplen ambas condiciones</p></li>
 </ul>
-<div id="qwebr-insertion-location-8"></div>
+<div id="qwebr-insertion-location-9"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>Reforzar con lectura propuesta en Tarea Clase 8 sobre “<a href="https://es.wikipedia.org/wiki/Tabla_de_verdad">Tabla de Verdad</a>”.</p>
 </section>
 <section id="inspección-df-que-cumple-condiciones" class="slide level2">
 <h2>Inspección DF que Cumple Condiciones</h2>
-<div id="qwebr-insertion-location-9"></div>
+<div id="qwebr-insertion-location-10"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="forma-vectorizada" class="slide level2">
 <h2>Forma vectorizada:</h2>
 <p>Se aplica el condicional lógico sobre el elemento <em>i</em> del vector analizado teniendo de resultado un vector del mismo <code>length</code> del vector de entrada.</p>
 <p>Por ejemplo, si <em>i</em> vale 3, se compara si 22.8 es mayor que el <code>promedio_mpg</code> <strong>y</strong> si es menor que <code>valor_3ercuartil</code></p>
-<div id="qwebr-insertion-location-10"></div>
+<div id="qwebr-insertion-location-11"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="múltiples-condiciones" class="slide level2">
 <h2>Múltiples Condiciones</h2>
 <p>Operador <code>&amp;</code> (y)</p>
-<div id="qwebr-insertion-location-11"></div>
+<div id="qwebr-insertion-location-12"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p><br> Operador <code>==</code> doble igualdad (👀 es distinto a asignación)</p>
-<div id="qwebr-insertion-location-12"></div>
+<div id="qwebr-insertion-location-13"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p><code>which</code> indica el índice de los elementos extraídos según una condición</p>
 </section>
 <section id="múltiples-condiciones---cont" class="slide level2">
 <h2>Múltiples Condiciones - cont</h2>
-<div id="qwebr-insertion-location-13"></div>
+<div id="qwebr-insertion-location-14"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p><br> Operador <code>!=</code> diferente</p>
-<div id="qwebr-insertion-location-14"></div>
+<div id="qwebr-insertion-location-15"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="múltiples-condiciones---cont-2" class="slide level2">
 <h2>Múltiples Condiciones - cont 2</h2>
 <p><br> Operador <code>|</code> or (o)</p>
-<div id="qwebr-insertion-location-15"></div>
+<div id="qwebr-insertion-location-16"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="data-frame-a-trabajar" class="slide level2">
 <h2>Data Frame a Trabajar</h2>
-<div id="qwebr-insertion-location-16"></div>
+<div id="qwebr-insertion-location-17"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <pre><code>Sobre el contenido de la df: según la hipótesis del ahorro a lo largo del ciclo vital desarrollada por Franco Modigliani, el coeficiente de ahorro (ahorro personal agregado dividido por la renta disponible) se explica por la renta disponible per cápita, la tasa porcentual de variación de la renta disponible per cápita y dos variables demográficas: el porcentaje de población menor de 15 años y el porcentaje de población mayor de 75 años. Los datos se promedian a lo largo de la década 1960-1970 para eliminar el ciclo económico u otras fluctuaciones a corto plazo</code></pre>
 </section>
 <section id="asignar-a-una-variable-la-df" class="slide level2">
 <h2>Asignar a una variable la DF</h2>
-<div id="qwebr-insertion-location-17"></div>
+<div id="qwebr-insertion-location-18"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="inspección-data-frame" class="slide level2">
 <h2>Inspección Data Frame</h2>
 <p>Dimensiones</p>
-<div id="qwebr-insertion-location-18"></div>
+<div id="qwebr-insertion-location-19"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p><br> Número de columnas</p>
-<div id="qwebr-insertion-location-19"></div>
+<div id="qwebr-insertion-location-20"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="inspección-data-frame--cont" class="slide level2">
 <h2>Inspección Data Frame -cont</h2>
 <p>Número de filas</p>
-<div id="qwebr-insertion-location-20"></div>
+<div id="qwebr-insertion-location-21"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p><br> Nombres de las columnas</p>
-<div id="qwebr-insertion-location-21"></div>
+<div id="qwebr-insertion-location-22"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="inspección-data-frame--cont2" class="slide level2">
 <h2>Inspección Data Frame -cont2</h2>
 <p><br> Nombres de las filas</p>
-<div id="qwebr-insertion-location-22"></div>
+<div id="qwebr-insertion-location-23"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="inspección-data-frame--cont3" class="slide level2">
 <h2>Inspección Data Frame -cont3</h2>
 <p>Estructura de un objeto</p>
-<div id="qwebr-insertion-location-23"></div>
+<div id="qwebr-insertion-location-24"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="inspección-data-frame--cont4" class="slide level2">
 <h2>Inspección Data Frame -cont4</h2>
 <p><br> Resumen Estadístico</p>
-<div id="qwebr-insertion-location-24"></div>
+<div id="qwebr-insertion-location-25"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="crear-columna-con-nombre-países" class="slide level2">
 <h2>Crear Columna con Nombre Países</h2>
 <p>Revisar nombres filas</p>
-<div id="qwebr-insertion-location-25"></div>
+<div id="qwebr-insertion-location-26"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p><br> Asignar nueva columa a la DF</p>
-<div id="qwebr-insertion-location-26"></div>
+<div id="qwebr-insertion-location-27"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="inspección-nuevo-atributo" class="slide level2">
 <h2>Inspección Nuevo Atributo</h2>
 <p>Revisar DF</p>
-<div id="qwebr-insertion-location-27"></div>
+<div id="qwebr-insertion-location-28"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="funciones-valores-extremos" class="slide level2">
 <h2>Funciones Valores Extremos</h2>
 <p>Mínimo en vector</p>
-<div id="qwebr-insertion-location-28"></div>
+<div id="qwebr-insertion-location-29"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p><br> Máximo en vector</p>
-<div id="qwebr-insertion-location-29"></div>
+<div id="qwebr-insertion-location-30"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="importar-en-formato-csv-una-data-frame" class="slide level2">
 <h2>Importar en Formato csv una Data Frame</h2>
-<div id="qwebr-insertion-location-30"></div>
+<div id="qwebr-insertion-location-31"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p><br></p>
-<div id="qwebr-insertion-location-31"></div>
+<div id="qwebr-insertion-location-32"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p>👀: los datos tienen estructura tabular. Observaciones son filas y atributos las columnas</p>
 </section>
 <section id="estructura-gapminder" class="slide level2">
 <h2>Estructura Gapminder</h2>
 <p>Estructura DF</p>
-<div id="qwebr-insertion-location-32"></div>
+<div id="qwebr-insertion-location-33"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="tabla-sumario-gapminder" class="slide level2">
 <h2>Tabla Sumario Gapminder</h2>
-<div id="qwebr-insertion-location-33"></div>
+<div id="qwebr-insertion-location-34"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <aside class="notes">
 <p>Tiene estructura tabular</p>
@@ -2502,48 +2446,48 @@ MSc. José M. Avendaño
 <section id="valores-únicos-por-atributo" class="slide level2">
 <h2>Valores Únicos por Atributo</h2>
 <p>Países</p>
-<div id="qwebr-insertion-location-34"></div>
+<div id="qwebr-insertion-location-35"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="valores-únicos-por-atributo---cont" class="slide level2">
 <h2>Valores Únicos por Atributo - cont</h2>
 <p><br> Años</p>
-<div id="qwebr-insertion-location-35"></div>
+<div id="qwebr-insertion-location-36"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="dplyr-de-batalla" class="slide level2">
 <h2>DPLYR (🏇🏽 de batalla)</h2>
 <p>Una gramática para la manipulación de datos.</p>
-<div id="qwebr-insertion-location-36"></div>
+<div id="qwebr-insertion-location-37"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="dplyr-filtrado" class="slide level2">
 <h2>DPLYR / Filtrado</h2>
 <p>Función <code>filter</code>.</p>
 <p>Encadenamiento en los procesamientos: operador pipe <code>%&gt;%</code></p>
-<div id="qwebr-insertion-location-37"></div>
+<div id="qwebr-insertion-location-38"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="revisar-tabla-venezuela" class="slide level2">
 <h2>Revisar Tabla Venezuela</h2>
 <p>Tabla sumario</p>
-<div id="qwebr-insertion-location-38"></div>
+<div id="qwebr-insertion-location-39"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="juntar-dfs" class="slide level2">
 <h2>Juntar DF´s</h2>
-<div id="qwebr-insertion-location-39"></div>
+<div id="qwebr-insertion-location-40"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="combinar-dfs" class="slide level2">
 <h2>Combinar DF’s</h2>
 <p>Función <code>bind_rows</code></p>
-<div id="qwebr-insertion-location-40"></div>
+<div id="qwebr-insertion-location-41"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="revisar-nueva-df" class="slide level2">
 <h2>Revisar Nueva DF</h2>
-<div id="qwebr-insertion-location-41"></div>
+<div id="qwebr-insertion-location-42"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </section>
 <section id="continuar-inspección" class="slide level2">

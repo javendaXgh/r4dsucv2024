@@ -144,12 +144,12 @@ getwd()
 
 ## Resumen
 
--   Rutas Absolutas : Comienzan desde la raíz del sistema y usan barras invertidas en Windows () o barras (/) en macOS/Linux.
+-   **Rutas Absolutas:** Comienzan desde la raíz del sistema y usan barras invertidas en Windows () o barras (/) en macOS/Linux.
 
--   Rutas Relativas : Son rutas desde el directorio de trabajo actual, usando barras invertidas en Windows () o barras (/) en macOS/Linux.
+-   **Rutas Relativas:** Son rutas desde el directorio de trabajo actual, usando barras invertidas en Windows () o barras (/) en macOS/Linux.
 
 ## Resumen/cont.
 
--   Directorio de Trabajo : Se puede verificar y cambiar usando getwd() y setwd().
+-   **Directorio de Trabajo:** Se puede verificar y cambiar usando getwd() y setwd().
 
--   Leer/Escribir Archivos : Usar rutas relativas o absolutas según sea necesario, considerando el sistema operativo.
+-   **Leer/Escribir Archivos:** Usar rutas relativas o absolutas según sea necesario, considerando el sistema operativo.

@@ -173,7 +173,7 @@ Extraer conocimiento desde un conjunto de datos
 
 ## Evaluación
 
-| Categoría                  | Percentage |
+| Categoría                  | Porcentaje |
 |----------------------------|------------|
 | Laboratorios-tareas        | 40%        |
 | Proyecto Intermedio Curso  | 20%        |

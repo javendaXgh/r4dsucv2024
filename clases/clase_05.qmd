@@ -77,12 +77,10 @@ Material complementario disponible en [variables](https://ucveconomiar4ds.netlif
 
 ## Tipos de Vectores![](images/%20clase_3/vectores.png){width="696"}
 
-## 
-
 ## Estructuras de Datos
 
 | Objeto | R | Ejemplo |
-|:--:|:--:|:--:|
+|:----------------------:|:----------------------:|:----------------------:|
 | ![](images/%20clase_3/atomo.png){width="80"} | vector atómico | c(1) |
 | ![](images/%20clase_3/molecula.png){width="120" height="80"} ️ | vector | c('a', 'x', 'd') |
 | ![](images/%20clase_3/molecula2.png){width="110"} | mátriz | matrix(1:8,2,4) |
@@ -90,16 +88,16 @@ Material complementario disponible en [variables](https://ucveconomiar4ds.netlif
 ## Estructuras de Datos 2
 
 | Objeto | R | Ejemplo |
-|:--:|:--:|:--:|
+|:----------------------:|:----------------------:|:----------------------:|
 | ![](images/%20clase_3/polimero.png){width="140"} | lista | lista_test \<- list(primer=c('a', 'x'), segun=c(1)) |
 | ![](images/%20clase_3/virus.png){width="94"} | data frame | mtcars |
 | ![](images/%20clase_3/proteina.png){width="76"} | tibble | as_tibble(mtcars) |
 
-Tipos de de Objetos en R
+## Tipos de de Objetos en R
 
-`mode`
+`mode` : la forma en la que R almacena un objeto
 
-`class`
+`class` : la clase del objeto que estamos trabajando
 
 ## Variables / Objetos
 
@@ -132,5 +130,3 @@ Tipos de de Objetos en R
     -   Discord, canal "Recursos disponibles"
 
         [Cheat Sheet RStudio](/Users/josemiguelavendanoinfante/R/UCV_ECONOMIA_R4DS/r4dsucv2024/clases/images/rstudio-ide.pdf)
-
-## Ejemplo de obtención y procesamiento

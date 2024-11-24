@@ -50,9 +50,9 @@ library(stringr)
 
 -   **¿Cómo crear un vector?** Se utiliza la función `c()` para combinar elementos en un vector.
 
--   Variables: es similar a una caja con un nombre, donde guardamos información que puede cambiar. En programación, usamos variables para almacenar datos que necesitamos más tarde.
+-   **Variables:** es similar a una caja con un nombre, donde guardamos información que puede cambiar. En programación, usamos variables para almacenar datos que necesitamos más tarde.
 
--   Operador de asignación: El operador `<-` es como una flecha que apunta desde el valor hacia la caja, indicando que el valor de la derecha se asigna a la variable de la izquierda.
+-   **Operador de asignación:** El operador `<-` es como una flecha que apunta desde el valor hacia la caja, indicando que el valor de la derecha se asigna a la variable de la izquierda.
 
 **Ejemplos Completos:**
 
@@ -120,7 +120,7 @@ print(fechas_nacimiento)
 
 ```{r}
 # descomentar línea de abajo (quitar numeral)
-#mayor_que_cinco < - c(6, 8, 10)
+# mayor_que_cinco < - c(6, 8, 10)
 ```
 
 ### Ejercicios para realizar en aula:
@@ -143,7 +143,8 @@ print(fechas_nacimiento)
 
 3.  **Crear un vector lógico:**
 
-    -   Indicando si cada número del 1 al 5 es mayor que 3.Indicando si cada letra de la palabra "banana" es una "a".
+    -   Indicando si cada número del 1 al 5 es mayor que 3.I
+    -   ndicando si cada letra de la palabra "banana" es una "a".
 
 4.  **Crear un vector de fechas:**
 

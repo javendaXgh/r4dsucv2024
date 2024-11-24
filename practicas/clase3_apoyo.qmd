@@ -108,38 +108,54 @@ Ejemplos:
 
 ## Tipos de datos
 
-Cuando queremos saber con cuál tipo de datos estamos trabajando necesitamos usar la función class()
+Cuando queremos saber con cuál tipo de datos estamos trabajando necesitamos usar la función `class()`.
 
-\`\`\`{r data_types, include=TRUE, echo=TRUE
+Las funciones son series de procedimientos estandarizados, que toman como imput determinados argumentos a fijar por el usuario, y devuelven un resultado acorde a la aplicación de dichos procedimientos.
 
-Las funciones son series de procedimientos estandarizados, que toman como imput determinados argumentos a fijar por el usuario, y devuelven un resultado acorde a la aplicación de dichos procedimientos. Su lógica de funcionamiento es:\
+Su lógica de funcionamiento es:\
 `funcion(argumento1 = arg1, argumento2 = arg2)`
 
 ### Otros ejemplos de funciones:
 
--   paste() : concatena una serie de caracteres, pudiendo indicarse cómo separar a cada uno de ellos\
--   paste0(): concatena una serie de caracteres sin separar
--   sum(): suma de todos los elementos de un vector\
--   mean() promedio aritmético de todos los elementos de un vector
+-   `paste()` : concatena una serie de caracteres, pudiendo indicarse cómo separar a cada uno de ellos
 
-```{r}
-paste("Pega", "estas", 4, "palabras", sep = " ")
+    ```{r}
+    paste('el valor de la variable A es:', A)
 
-#Puedo concatenar caracteres almacenados en objetos
-A= 'nombre'
-B= 'apellido'
-C= 'ciudad'
-paste(A, B, C, sep = "**")
+    # se puede añadir el argumento "sep =" que será el que separará cada uno de los elementos que se están pegando en una sola string
+    paste("Pega", "estas", 4, "palabras", sep = "_/")
+    #Puedo concatenar caracteres almacenados en objetos
+    var_nombre= 'nombre'
+    var_apellido= 'apellido'
+    var_ciudad= 'ciudad'
+    paste(var_nombre, var_apellido, var_ciudad, sep = "**")
+    ```
 
-# Paste0 pega los caracteres sin separador
-paste0(A, B, C)
+    \
 
-1:5
+-   `paste0()`: concatena una serie de caracteres sin separar con ningún espacio.
 
-sum(1:5)
+    ```{r}
+    paste0('el valor de la variable A es:',A)
+    # Paste0 pega los caracteres sin separador
+    paste(var_nombre, var_apellido, var_ciudad, sep = "**")
+    ```
 
-mean(1:5, na.rm = TRUE)
-```
+-   `sum()`: suma de todos los elementos de un vector
+
+    ```{r}
+    sum(A,B)
+
+    sum(1:5)
+    ```
+
+-   `mean()` promedio aritmético de todos los elementos de un vector
+
+    ```{r}
+    mean(A, B, 8)
+
+    mean(1:5)
+    ```
 
 ## Vectores
 
@@ -438,14 +454,12 @@ Para crearlo, vamos al logo de nuevo projecto (Arriba a la derecha de la panatal
 ## Tipos de archivos de R
 
 -   **Script**: Es un archivo de texto plano, donde podemos poner el código que utilizamos para preservarlo
--   **Rmd**: También sirve para guardar el código, pero a diferencia de los scripts, se puede compilar, e intercalar código con resultados (este archivo es un rmarkdown)
 -   **Rproject**: Es un archivo que define la metadata del proyecto
 -   **RDS y Rdata**: Dos formatos de archivos propios de R para guardar datos.
 -   **qmd**: archivo de Quarto, el cual es un sistema de publicaciones (página web, blogs, que puede contener códigos y otros objetos resultados de una rutina de programación acompañados por texto legible.
--   
 
 ## Remover objetos del Global Environment
 
 En caso de querer remover un objeto (todo lo que existe dentro del programa que estamos ejecutando) del "global environment" podemos usar la función rm() teniendo como argumento el nombre del objeto que queremos remover
 
-rm("nombre")
+`rm("nombre")`

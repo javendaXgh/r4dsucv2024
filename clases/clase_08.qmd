@@ -41,7 +41,7 @@ Clase 6 práctica 1 construccion vectores
 
 Cantidad cilindros por observación
 
-```{web-r}
+```{webr-r}
 
 mtcars$cyl
 ```
@@ -272,8 +272,6 @@ rownames(df_ahorro)[1:10]
 ```{webr-r}
 df_ahorro$pais <- rownames(df_ahorro)
 ```
-
-
 
 ## Inspección Nuevo Atributo
 
