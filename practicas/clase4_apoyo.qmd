@@ -2,6 +2,10 @@
 title: "clase 04 parte 2"
 format: html
 editor: visual
+execute:
+  echo: true
+  eval: true
+  warning: false
 ---
 
 ## Inspección conjunto de datos

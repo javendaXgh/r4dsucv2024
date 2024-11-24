@@ -4,6 +4,10 @@ output:
   html_document:
     toc: yes
     code_folding: show
+execute:
+  echo: true
+  eval: true
+  warning: false
 ---
 
 ## Ejercicios Prácticos

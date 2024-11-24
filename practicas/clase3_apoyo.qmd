@@ -1,11 +1,15 @@
 ---
-title: "Clase 3- Apoyo"
+title: "Clase 5- Apoyo"
 date: "Octubre 23, 2024"
 author: "MSc. José M. Avendaño"
 output:
   html_document:
     toc: yes
     code_folding: show
+execute:
+  echo: true
+  eval: true
+  warning: false
 ---
 
 ```{r setup, include=FALSE}

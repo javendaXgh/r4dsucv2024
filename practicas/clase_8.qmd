@@ -7,6 +7,7 @@ output:
 execute:
   echo: true
   eval: true
+  warning: false
 ---
 
 ## Objetivos de la Actividad
@@ -234,15 +235,15 @@ df_ahorro$pais <- rownames(df_ahorro)
 
 Con los valores correspondientes a pop15 y pop75 obtener promedio por cada observación
 
-```{webr}
-df_ahorro$edad_promedio <- mean(df_ahorro$pop15, df_ahorro$pop75)
+```{r}
+df_ahorro$edad_promedio <- mean(c(df_ahorro$pop15, df_ahorro$pop75))
 ```
 
 ## Inspección Nuevos Atributos
 
 Revisar DF
 
-```{webr-r}
+```{r}
 head(df_ahorro, 5)
 ```
 
