@@ -13,6 +13,8 @@ format:
 
 ## Varios y Puntos Pendientes
 
+-   Cronograma- Propuesta
+
 -   Investigación de funciones no vistas: método sugerido
 
 -   Verificar salidas
