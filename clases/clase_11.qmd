@@ -270,7 +270,7 @@ df_pib_2007%>%
   
 ```
 
-## Exporar Países con medio PIB
+## Explorar Países con medio PIB
 
 Muestra aleatoria
 

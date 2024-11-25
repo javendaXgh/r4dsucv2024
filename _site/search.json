@@ -468,7 +468,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\nAsignar Nombres Objetos y Variables\n🖥️ láminas clase 03 apoyo  💻 clase 3 apoyo versión qmd \n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n🖥️ láminas clase 04  💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\nConstruir Funciones y Data Frames\n🖥️ láminas clase 06  💻 clase 6 versión qmd  🖥️ clase 6 versión códigos  💻 clase 6: práctica 1- versión qmd  💻 clase 6: práctica 1- versión site  🎥video render Quarto 💻 clase 6: práctica 2- versión qmd  💻 clase 6: práctica 2- versión site \n\n\n\n\nmié, 6 nov.\nDF subsetting; Ayudas\n🖥️ láminas clase 07 💻 clase 7: tarea \n\n\n4\nlun, 11 nov.\nInspección DF´s / Seleccionar Valores, Subsettings-cont\n🖥️ láminas clase 08 💻 clase 8 versión qmd  💻 clase 8: tarea \n\n\n\n\nmié, 13 nov.\nPaths o Rutas de trabajo\n🖥️ láminas clase 09\n\n\n5\nlun, 18 nov.\nTrabajando con Data Frames por filas\n🖥️ láminas clase 10\n\n\n\n\nmié, 20 nov.\nTrabajando con Data Frames por columnas\n🖥️ láminas clase 11 💻 clase 11 versión qmd \n\n\n6\nlun, 25 nov.\n\n\n\n\n\n\n\n\nmié, 27 nov.\n\n\n\n\n\n\n7\nlun, 2 dic.\n\n\n\n\n\n\n\n\nmié, 4 dic.\n\n\n\n\n\n\n8\nlun, 9 dic.\n\n\n\n\n\n\n\n\nmié, 11 dic.\n\n\n\n\n\n\n9\nlun, 16 dic.\n\n\n\n\n\n\n\n\nmié, 18 dic.\n\n\n\n\n\n\n10\nlun, 13 ene.\n\n\n\n\n\n\n\n\nmié, 15 ene.\n\n\n\n\n\n\n11\nlun, 20 ene.\n\n\n\n\n\n\n\n\nmié, 22 ene.\n\n\n\n\n\n\n12\nlun, 27 ene.\n\n\n\n\n\n\n\n\nmié, 29 ene.\n\n\n\n\n\n\n13\nlun, 3 feb.\n\n\n\n\n\n\n\n\nmié, 5 feb.\n\n\n\n\n\n\n14\nlun, 10 feb.\n\n\n\n\n\n\n\n\nmié, 12 feb.\n\n\n\n\n\n\n15\nsáb, 15 feb.\n\n\n\n\n\n\n\n\nlun, 17 feb.",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\nAsignar Nombres Objetos y Variables\n🖥️ láminas clase 03 apoyo  💻 clase 3 apoyo versión qmd \n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n🖥️ láminas clase 04  💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\nConstruir Funciones y Data Frames\n🖥️ láminas clase 06  💻 clase 6 versión qmd  🖥️ clase 6 versión códigos  💻 clase 6: práctica 1- versión qmd  💻 clase 6: práctica 1- versión site  🎥video render Quarto 💻 clase 6: práctica 2- versión qmd  💻 clase 6: práctica 2- versión site \n\n\n\n\nmié, 6 nov.\nDF subsetting; Ayudas\n🖥️ láminas clase 07 💻 clase 7: tarea \n\n\n4\nlun, 11 nov.\nInspección DF´s / Seleccionar Valores, Subsettings-cont\n🖥️ láminas clase 08 🖥️ clase 08, versión reporte 💻 clase 8 versión qmd  💻 clase 8: tarea \n\n\n\n\nmié, 13 nov.\nPaths o Rutas de trabajo\n🖥️ láminas clase 09\n\n\n5\nlun, 18 nov.\nTrabajando con Data Frames por filas\n🖥️ láminas clase 10\n\n\n\n\nmié, 20 nov.\nTrabajando con Data Frames por columnas\n🖥️ láminas clase 11 💻 clase 11 versión qmd \n\n\n6\nlun, 25 nov.\nTrabajando con Data Frames: agrupamientos y Reframes\n🖥️ láminas clase 12 💻 clase 12 script  🖥️ clase 12, versión reporte 💻 clase 12 versión qmd \n\n\n\n\nmié, 27 nov.\n\n\n\n\n\n\n7\nlun, 2 dic.\n\n\n\n\n\n\n\n\nmié, 4 dic.\n\n\n\n\n\n\n8\nlun, 9 dic.\n\n\n\n\n\n\n\n\nmié, 11 dic.\n\n\n\n\n\n\n9\nlun, 16 dic.\n\n\n\n\n\n\n\n\nmié, 18 dic.\n\n\n\n\n\n\n10\nlun, 13 ene.\n\n\n\n\n\n\n\n\nmié, 15 ene.\n\n\n\n\n\n\n11\nlun, 20 ene.\n\n\n\n\n\n\n\n\nmié, 22 ene.\n\n\n\n\n\n\n12\nlun, 27 ene.\n\n\n\n\n\n\n\n\nmié, 29 ene.\n\n\n\n\n\n\n13\nlun, 3 feb.\n\n\n\n\n\n\n\n\nmié, 5 feb.\n\n\n\n\n\n\n14\nlun, 10 feb.\n\n\n\n\n\n\n\n\nmié, 12 feb.\n\n\n\n\n\n\n15\nsáb, 15 feb.\n\n\n\n\n\n\n\n\nlun, 17 feb.",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -1187,8 +1187,8 @@
     "objectID": "clases/clase_05.html#científicos-de-datos",
     "href": "clases/clase_05.html#científicos-de-datos",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Científicos de Datos 👨‍🔬 👩‍🔬",
-    "text": "Científicos de Datos 👨‍🔬 👩‍🔬\n\n\n\nSesgo del Superviviente"
+    "section": "",
+    "text": "Sesgo del Superviviente"
   },
   {
     "objectID": "clases/clase_05.html#puntos-varios",
@@ -1349,7 +1349,7 @@
     "href": "clases/clase_05.html#recursos-ayuda-paquetes",
     "title": "Ciencia de Datos para Economistas",
     "section": "Recursos Ayuda Paquetes:",
-    "text": "Recursos Ayuda Paquetes:\n\nVignettes:\n\n?? nombre paquete\nCran\n\nCheat Sheets:\n\nDiscord, canal “Recursos disponibles”\nCheat Sheet RStudio\n\n\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Recursos Ayuda Paquetes:\n\nVignettes:\n\n?? nombre paquete\nCran\n\nCheat Sheets:\n\nDiscord, canal “Recursos disponibles”\nCheat Sheet RStudio"
   },
   {
     "objectID": "clases/clase_05.html#correlaciones-espureas",
@@ -2177,8 +2177,8 @@
     "objectID": "clases/clase_08.html#varios-y-puntos-pendientes",
     "href": "clases/clase_08.html#varios-y-puntos-pendientes",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Varios y Puntos Pendientes",
-    "text": "Varios y Puntos Pendientes\n\nintervenciones en clase 13-11 sobre la visualizaciones que se hagan con ggplot2 que viene de tarea clase 5. Cambio de fecha del 11-11 al 13-11\nModificación tarea clase 5 ggplot\nTareas clase 7 (entrega 13 y 18) y clase 8 (20-11)\nClase 6 práctica 1 construccion vectores"
+    "section": "",
+    "text": "intervenciones en clase 13-11 sobre la visualizaciones que se hagan con ggplot2 que viene de tarea clase 5. Cambio de fecha del 11-11 al 13-11\nModificación tarea clase 5 ggplot\nTareas clase 7 (entrega 13 y 18) y clase 8 (20-11)\nClase 6 práctica 1 construccion vectores"
   },
   {
     "objectID": "clases/clase_08.html#objetivo",
@@ -2353,7 +2353,7 @@
     "href": "clases/clase_08.html#continuar-inspección",
     "title": "Ciencia de Datos para Economistas",
     "section": "Continuar Inspección…",
-    "text": "Continuar Inspección…\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Continuar Inspección…"
   },
   {
     "objectID": "clases/clase_08.html#tabla-de-contingencia",
@@ -2674,8 +2674,8 @@
     "objectID": "clases/clase_11.html#objetivo",
     "href": "clases/clase_11.html#objetivo",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Objetivo",
-    "text": "Objetivo\nRealizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las columnas o atributos."
+    "section": "",
+    "text": "Realizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las columnas o atributos."
   },
   {
     "objectID": "clases/clase_11.html#operaciones-en-columnas",
@@ -2724,7 +2724,7 @@
     "href": "clases/clase_11.html#lecturas-recomendadas",
     "title": "Ciencia de Datos para Economistas",
     "section": "Lecturas Recomendadas:",
-    "text": "Lecturas Recomendadas:\n\nCapítulo 4 R4DS (temas pasados referente a variables y operaciones básicas)\nCapítulo 5 R4DS: comparaciones, operadores lógicos, arrange, select, mutate, summarise, pipe operator. En el capítulo se tratan los valores faltantes NA que luego serán abordados\n\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Lecturas Recomendadas:\n\nCapítulo 4 R4DS (temas pasados referente a variables y operaciones básicas)\nCapítulo 5 R4DS: comparaciones, operadores lógicos, arrange, select, mutate, summarise, pipe operator. En el capítulo se tratan los valores faltantes NA que luego serán abordados"
   },
   {
     "objectID": "clases/clase_09.html#resumencont.",
@@ -2990,7 +2990,7 @@
     "href": "clases/clase_11.html#mutate-ifelse---ejemplo--aplicar",
     "title": "Ciencia de Datos para Economistas",
     "section": "Mutate / ifelse - ejemplo- Aplicar",
-    "text": "Mutate / ifelse - ejemplo- Aplicar\nLa columna que vamos a crear se llama “tipo_pib”\n\ndf_pib_2007 &lt;- df_pib_2007%&gt;%\n  mutate(tipo_pib =ifelse(pib&gt;=pib_promedio, # condición a evaluar\n                          \"pib_up_mean\", # caso verdadero =&gt; ocurre a\n                          \"pib_down_mean\"))  #caso falso =&gt; ocurre b\n\ndf_pib_2007%&gt;%\n  sample_n(4)\n\n# A tibble: 4 × 3\n  country     pib tipo_pib     \n  &lt;fct&gt;     &lt;dbl&gt; &lt;chr&gt;        \n1 Albania 2.14e10 pib_down_mean\n2 Egypt   4.48e11 pib_up_mean  \n3 Germany 2.65e12 pib_up_mean  \n4 Hungary 1.79e11 pib_down_mean"
+    "text": "Mutate / ifelse - ejemplo- Aplicar\nLa columna que vamos a crear se llama “tipo_pib”\n\ndf_pib_2007 &lt;- df_pib_2007%&gt;%\n  mutate(tipo_pib =ifelse(pib&gt;=pib_promedio, # condición a evaluar\n                          \"pib_up_mean\", # caso verdadero =&gt; ocurre a\n                          \"pib_down_mean\"))  #caso falso =&gt; ocurre b\n\ndf_pib_2007%&gt;%\n  sample_n(4)\n\n# A tibble: 4 × 3\n  country                 pib tipo_pib     \n  &lt;fct&gt;                 &lt;dbl&gt; &lt;chr&gt;        \n1 Israel        164029908950. pib_down_mean\n2 Mozambique     16433892152. pib_down_mean\n3 Guinea-Bissau    852652874. pib_down_mean\n4 Kuwait        118530454006. pib_down_mean"
   },
   {
     "objectID": "clases/clase_11.html#mutate-doble-ifelse---problema",
@@ -3046,7 +3046,7 @@
     "href": "clases/clase_11.html#nota",
     "title": "Ciencia de Datos para Economistas",
     "section": "Nota:",
-    "text": "Nota:\nNayuha, de forma apropiada investigó cuál función se usa para obtener estos valores quantile y cómo se pueden asignar a una variable, dado que la salida que genera la función summary no es maleable para extraer datos individuales como los valores asociados a un cuantil u otro.\n🙌🏼"
+    "text": "Nota:\nNayuha, de forma apropiada investigó cuál función se usa para obtener estos valores quantile y cómo se pueden asignar a una variable, dado que la salida que genera la función summary no es maleable para extraer datos individuales como los valores asociados a un cuantil u otro.\n\n🙌🏼"
   },
   {
     "objectID": "clases/clase_11.html#histograma",
@@ -3136,7 +3136,7 @@
     "href": "practicas/clase3_apoyo.html#funciones-precargadas",
     "title": "Clase 5- Apoyo",
     "section": "Funciones Precargadas:",
-    "text": "Funciones Precargadas:\nRBase cuenta con diversas funciones que ya vienen definidas con el lenguaje de programación. Muchas de ellas son comandos básicos para realizar rutinas de programación. Otro lote de funciones, distinto a otros lenguajes, son funciones para aplicar métodos inherentes a la estadística. Cuando se vea un texto en un script que está asociado a un verbo, o proceso, y posterior al nombre, viene acompañado de un signo de inicio de paréntesis y finaliza con otro signo de cierre de paréntesis, se está en presencia de una función. En algunos casos entre ambos signos de paréntesis aparecerá un texto que puede estar entre comillas, sin comillas y en otros casos varios textos separados por comas. Cuando se da este último caso se refiere a que la función necesita distintos argumentos para poder ejecutarse.\nEjemplos:\n\nFunción sin argumento\n\nSys.Date()\n\n[1] \"2024-11-24\"\n\n\nFunción con un argumento\n\nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1\n\n\nFunción con múltiples argumentos\n\n# asignación variables\nvelocidad &lt;- cars$speed\ndistancia &lt;- cars$dist\n\n# crear un gráfico de tipo scatter plot (diagrama de dispersión )\nplot(velocidad, distancia)",
+    "text": "Funciones Precargadas:\nRBase cuenta con diversas funciones que ya vienen definidas con el lenguaje de programación. Muchas de ellas son comandos básicos para realizar rutinas de programación. Otro lote de funciones, distinto a otros lenguajes, son funciones para aplicar métodos inherentes a la estadística. Cuando se vea un texto en un script que está asociado a un verbo, o proceso, y posterior al nombre, viene acompañado de un signo de inicio de paréntesis y finaliza con otro signo de cierre de paréntesis, se está en presencia de una función. En algunos casos entre ambos signos de paréntesis aparecerá un texto que puede estar entre comillas, sin comillas y en otros casos varios textos separados por comas. Cuando se da este último caso se refiere a que la función necesita distintos argumentos para poder ejecutarse.\nEjemplos:\n\nFunción sin argumento\n\nSys.Date()\n\n[1] \"2024-11-25\"\n\n\nFunción con un argumento\n\nhead(mtcars)\n\n                   mpg cyl disp  hp drat    wt  qsec vs am gear carb\nMazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4\nMazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4\nDatsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1\nHornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1\nHornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2\nValiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1\n\n\nFunción con múltiples argumentos\n\n# asignación variables\nvelocidad &lt;- cars$speed\ndistancia &lt;- cars$dist\n\n# crear un gráfico de tipo scatter plot (diagrama de dispersión )\nplot(velocidad, distancia)",
     "crumbs": [
       "Prácticas",
       "clase 5 / apoyo"
@@ -3351,7 +3351,7 @@
     "href": "practicas/clase6_v2.html#función",
     "title": "Clase 6- Construir Funciones y Data Frames",
     "section": "Función 🎲",
-    "text": "Función 🎲\n¿Qué debe hacer la función? ¿Qué debe representar?\n\n# ejecutar código y gradualmente descomentar líneas\nposibles_salidas_dado &lt;- c(1:6)\nsample(posibles_salidas_dado, 1)\n\n[1] 4\n\nsample(posibles_salidas_dado, 2)\n\n[1] 5 3\n\nsample(posibles_salidas_dado, 3)\n\n[1] 6 5 2\n\n# sample(posibles_salidas_dado, 7) # genera error\nsample(posibles_salidas_dado, 7, replace=TRUE)\n\n[1] 3 3 2 2 3 5 1\n\n\n¡Juguemos!\n\n# primera versión función\n\nlanzamiento &lt;- function(cdad_dados){\n  sample(1:6,cdad_dados, replace=TRUE)\n}\n\n# arrojar dado según función que crearmos\nlanzamiento (cdad_dados=3)\n\n[1] 3 4 2\n\nlanzamiento (cdad_dados=6)\n\n[1] 6 2 3 5 4 3",
+    "text": "Función 🎲\n¿Qué debe hacer la función? ¿Qué debe representar?\n\n# ejecutar código y gradualmente descomentar líneas\nposibles_salidas_dado &lt;- c(1:6)\nsample(posibles_salidas_dado, 1)\n\n[1] 1\n\nsample(posibles_salidas_dado, 2)\n\n[1] 6 5\n\nsample(posibles_salidas_dado, 3)\n\n[1] 6 4 3\n\n# sample(posibles_salidas_dado, 7) # genera error\nsample(posibles_salidas_dado, 7, replace=TRUE)\n\n[1] 1 5 4 3 4 6 6\n\n\n¡Juguemos!\n\n# primera versión función\n\nlanzamiento &lt;- function(cdad_dados){\n  sample(1:6,cdad_dados, replace=TRUE)\n}\n\n# arrojar dado según función que crearmos\nlanzamiento (cdad_dados=3)\n\n[1] 5 4 4\n\nlanzamiento (cdad_dados=6)\n\n[1] 3 1 1 4 4 1",
     "crumbs": [
       "Prácticas",
       "clase 6 / versión reporte"
@@ -3362,7 +3362,7 @@
     "href": "practicas/clase6_v2.html#función-.",
     "title": "Clase 6- Construir Funciones y Data Frames",
     "section": "Función 🎲🎲….🎲",
-    "text": "Función 🎲🎲….🎲\n\n- ¿Entrada? =&gt; Argumentos\n\n# función con dos argumentos\nlanzamiento &lt;- function (cdad_dados,\n                         nombre_jugador){\n  resultado &lt;- sample (1:6,cdad_dados, replace = TRUE )\n  \n  paste(nombre_jugador, 'obtuvo el siguiente resultado',\n        resultado)\n}\n\n#La siguiente llamada a la función generará error ya que no contiente\n# dentro el valor del segundo argumento que es el nombre del jugador\n\n# lanzamiento(cdad_dados= 4)\n\nlanzamiento(nombre_jugador= 'Braian',\n            cdad_dados= 2)\n\n[1] \"Braian obtuvo el siguiente resultado 1\"\n[2] \"Braian obtuvo el siguiente resultado 4\"\n\n# la siguiente ejecución generará un problema al no nombrar los\n# argumentos y en orden posicional, pasar \"Braian\" como el primer\n# argumento, que en la función que declaramos como \"lanzamiento\"\n# corresponde a \"cdad_dados\", que debe ser de tipo numérico. \n\n# Lo mismo pasaría con el segundo argumento que estamos pasando que en este caso es 5,\n# pero no lo estamos referenciando con el nombre del argumento en la \n# función, que corresponde en la segunda posición al de nombre_jugador\n\n# lanzamiento( 'Braian',\n#             5)\n\nlanzamiento(2,'Jose')\n\n[1] \"Jose obtuvo el siguiente resultado 5\"\n[2] \"Jose obtuvo el siguiente resultado 6\"\n\n\nPara entender mejor la construcción de las funciones les recomiendo la lectura de esta sección del libro Hands On Promgramming With R https://rstudio-education.github.io/hopr/basics.html#sample-with-replacement que va muy similar a lo que revisamos en clase en cuanto al ejemplo del 🎲.\nPara revisar documentación de la función paste ejecutar ?paste en la consola.",
+    "text": "Función 🎲🎲….🎲\n\n- ¿Entrada? =&gt; Argumentos\n\n# función con dos argumentos\nlanzamiento &lt;- function (cdad_dados,\n                         nombre_jugador){\n  resultado &lt;- sample (1:6,cdad_dados, replace = TRUE )\n  \n  paste(nombre_jugador, 'obtuvo el siguiente resultado',\n        resultado)\n}\n\n#La siguiente llamada a la función generará error ya que no contiente\n# dentro el valor del segundo argumento que es el nombre del jugador\n\n# lanzamiento(cdad_dados= 4)\n\nlanzamiento(nombre_jugador= 'Braian',\n            cdad_dados= 2)\n\n[1] \"Braian obtuvo el siguiente resultado 4\"\n[2] \"Braian obtuvo el siguiente resultado 2\"\n\n# la siguiente ejecución generará un problema al no nombrar los\n# argumentos y en orden posicional, pasar \"Braian\" como el primer\n# argumento, que en la función que declaramos como \"lanzamiento\"\n# corresponde a \"cdad_dados\", que debe ser de tipo numérico. \n\n# Lo mismo pasaría con el segundo argumento que estamos pasando que en este caso es 5,\n# pero no lo estamos referenciando con el nombre del argumento en la \n# función, que corresponde en la segunda posición al de nombre_jugador\n\n# lanzamiento( 'Braian',\n#             5)\n\nlanzamiento(2,'Jose')\n\n[1] \"Jose obtuvo el siguiente resultado 5\"\n[2] \"Jose obtuvo el siguiente resultado 6\"\n\n\nPara entender mejor la construcción de las funciones les recomiendo la lectura de esta sección del libro Hands On Promgramming With R https://rstudio-education.github.io/hopr/basics.html#sample-with-replacement que va muy similar a lo que revisamos en clase en cuanto al ejemplo del 🎲.\nPara revisar documentación de la función paste ejecutar ?paste en la consola.",
     "crumbs": [
       "Prácticas",
       "clase 6 / versión reporte"
@@ -3889,5 +3889,183 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "equivalente de slice_tail() en Rbase",
     "text": "equivalente de slice_tail() en Rbase\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[1])%&gt;%\n  .[sample(1:nrow(.),10),]\n\n# A tibble: 10 × 6\n   country          continent  year lifeExp        pop gdpPercap\n   &lt;chr&gt;            &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;\n 1 China            Asia       1992    68.7 1164970000     1656.\n 2 Afghanistan      Asia       1957    30.3    9240934      821.\n 3 Japan            Asia       1972    73.4  107188273    14779.\n 4 Yemen, Rep.      Asia       1957    34.0    5498090      805.\n 5 Jordan           Asia       2002    71.3    5307470     3845.\n 6 Hong Kong, China Asia       1957    64.8    2736300     3629.\n 7 Sri Lanka        Asia       1977    65.9   14116836     1349.\n 8 Kuwait           Asia       1992    75.2    1418095    34933.\n 9 Bahrain          Asia       2007    75.6     708573    29796.\n10 Sri Lanka        Asia       1962    62.2   10421936     1074."
+  },
+  {
+    "objectID": "clases/clase_12.html",
+    "href": "clases/clase_12.html",
+    "title": "Clase 12- Selección, Agrupar y Crear Sumarios",
+    "section": "",
+    "text": "# cargar librerías\nlibrary(tidyverse)\nlibrary(gapminder)\n\n# la df de gapminder viene precargada en el paquete gapminder. Por eso no la vamos a importar con read_xlsx\ndf_gapminder &lt;- gapminder"
+  },
+  {
+    "objectID": "clases/clase_12.html#varios-y-puntos-pendientes",
+    "href": "clases/clase_12.html#varios-y-puntos-pendientes",
+    "title": "Clase 12- Selección, Agrupar y Crear Sumarios",
+    "section": "Varios y Puntos Pendientes",
+    "text": "Varios y Puntos Pendientes\n\nInvestigación de funciones no vistas: método sugerido\nVerificar salidas\nNA´s\nAspectos para hacer render del qmd:\n\nenvironment\nfunciones no compatibles\n\nLáminas pasadas contienen información complementaria"
+  },
+  {
+    "objectID": "clases/clase_12.html#objetivo",
+    "href": "clases/clase_12.html#objetivo",
+    "title": "Clase 12- Selección, Agrupar y Crear Sumarios",
+    "section": "Objetivo",
+    "text": "Objetivo\nRealizar agrupaciones de datos contenidos en una DF según uno o más criterios. Posterior a tener los datos agrupados obtendremos valores que totalizan valores por los grupos creados."
+  },
+  {
+    "objectID": "clases/clase_12.html#agrupar",
+    "href": "clases/clase_12.html#agrupar",
+    "title": "Clase 12- Selección, Agrupar y Crear Sumarios",
+    "section": "Agrupar",
+    "text": "Agrupar\nLa mayoría de las operaciones de datos se realizan en grupos definidos por variables. group_by() toma un tbl existente y lo convierte en un tbl agrupado donde las operaciones se realizan «por grupo». ungroup() elimina la agrupación."
+  },
+  {
+    "objectID": "clases/clase_12.html#agrupar-por-un-atributo",
+    "href": "clases/clase_12.html#agrupar-por-un-atributo",
+    "title": "Clase 12- Selección, Agrupar y Crear Sumarios",
+    "section": "Agrupar por un Atributo",
+    "text": "Agrupar por un Atributo\nlos datos se pueden agrupar según un criterio, por ejemplo, según el año o según el continente o alguna variable categórica que contenga el conjunto de datos"
+  },
+  {
+    "objectID": "clases/clase_12.html#agrupar-por-más-de-un-atributo",
+    "href": "clases/clase_12.html#agrupar-por-más-de-un-atributo",
+    "title": "Clase 12- Selección, Agrupar y Crear Sumarios",
+    "section": "Agrupar por más de un Atributo",
+    "text": "Agrupar por más de un Atributo\nTambién se pueden agrupar por diversos criterios, los cuales serán aplicados jerarquicamente según el orden de aparición de los criterios pudiendo llevar a resultados distintos."
+  },
+  {
+    "objectID": "clases/clase_12.html#reframe",
+    "href": "clases/clase_12.html#reframe",
+    "title": "Clase 12- Selección, Agrupar y Crear Sumarios",
+    "section": "Reframe",
+    "text": "Reframe\nCrea una nueva df aplicando funciones a las columnas de una df existente. También se usa summarise, pero es recomendable usar esta función que es más reciente\nExiste pérdida de estructura de datos original\nSe puede hacer en algunos casos el ungrup para desagrupar"
+  },
+  {
+    "objectID": "clases/clase_12.html#filtrado-según-datos-externos",
+    "href": "clases/clase_12.html#filtrado-según-datos-externos",
+    "title": "Clase 12- Selección, Agrupar y Crear Sumarios",
+    "section": "Filtrado según datos Externos",
+    "text": "Filtrado según datos Externos\nPuede ser necesario que los datos a filtrar provengan de una fuente distinta a los datos disponibles en una DF. Es necesario realizar el trabajo con precisión y cuidado para evitar perder valores."
+  },
+  {
+    "objectID": "clases/clase_12.html#factores",
+    "href": "clases/clase_12.html#factores",
+    "title": "Clase 12- Selección, Agrupar y Crear Sumarios",
+    "section": "Factores",
+    "text": "Factores\nSon una estructura de datos que agrupa valores categóricos, como nombres de días de la semana, categorías de productos o cualquier otro tipo de variable que tenga un conjunto limitado de posibles valores.\nLos factores son útiles porque permiten a las funciones estadísticas tratar estos tipos de datos de manera más eficiente.\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_11.html#explorar-países-con-medio-pib",
+    "href": "clases/clase_11.html#explorar-países-con-medio-pib",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Explorar Países con medio PIB",
+    "text": "Explorar Países con medio PIB\nMuestra aleatoria\n\ndf_pib_2007%&gt;%\n  filter(tipo_pib2== 'medio_pib')%&gt;%\n  sample_n(8)\n\n# A tibble: 8 × 4\n  country               pib tipo_pib      tipo_pib2\n  &lt;fct&gt;               &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;    \n1 Bahrain      21112675360. pib_down_mean medio_pib\n2 Iraq        122952583891. pib_down_mean medio_pib\n3 Botswana     20603633702. pib_down_mean medio_pib\n4 Sudan       110062906753. pib_down_mean medio_pib\n5 Ireland     167141167138. pib_down_mean medio_pib\n6 Libya        72790086208. pib_down_mean medio_pib\n7 Morocco     128958323770. pib_down_mean medio_pib\n8 Afghanistan  31079291949. pib_down_mean medio_pib"
+  },
+  {
+    "objectID": "practicas/clase11.html",
+    "href": "practicas/clase11.html",
+    "title": "Clase 12- Agrupamientos, Reframes",
+    "section": "",
+    "text": "Usar funciones de dplyr para poder agrupar datos y obtener valores al # aplicar una función para cada grupo"
+  },
+  {
+    "objectID": "practicas/clase11.html#objetivo",
+    "href": "practicas/clase11.html#objetivo",
+    "title": "Clase 12- Agrupamientos, Reframes",
+    "section": "",
+    "text": "Usar funciones de dplyr para poder agrupar datos y obtener valores al # aplicar una función para cada grupo"
+  },
+  {
+    "objectID": "practicas/clase11.html#cargar-datos-y-paquetes",
+    "href": "practicas/clase11.html#cargar-datos-y-paquetes",
+    "title": "Clase 12- Agrupamientos, Reframes",
+    "section": "Cargar Datos y Paquetes",
+    "text": "Cargar Datos y Paquetes\n\nlibrary(tidyverse)\n\ndf_gapminder_csv &lt;- read.csv('https://raw.githubusercontent.com/javendaXgh/datos/refs/heads/master/gapminder.csv')%&gt;%\n  select(-X)%&gt;%\n  as_tibble()\n\ndf_gapminder &lt;- gapminder::gapminder\n\ndf_gastosaludmundial &lt;- read.csv('https://raw.githubusercontent.com/UCVeconomia2024-2/scripts/refs/heads/main/data_in/clase_12/IHME/IHME_HEALTH_SPENDING_1995_2021/IHME_HEALTH_SPENDING_1995_2021_Y2024M07D23.CSV')\n\nInfo sobre el conjunto de datos df_gastosaludmundial disponible en\n\nhttps://ghdx.healthdata.org/record/ihme-data/global-health-spending-1995-2021\nhttps://github.com/UCVeconomia2024-2/scripts/tree/main/data_in/clase_12/IHME"
+  },
+  {
+    "objectID": "practicas/clase11.html#procesamientos",
+    "href": "practicas/clase11.html#procesamientos",
+    "title": "Clase 12- Agrupamientos, Reframes",
+    "section": "Procesamientos:",
+    "text": "Procesamientos:\nCada enunciado es un problema a resolver\n\n0- Funcionamiento group_by\n\ndf_gapminder_csv%&gt;%\n  group_by(country)\n\n# A tibble: 1,704 × 6\n# Groups:   country [142]\n   country     continent  year lifeExp      pop gdpPercap\n   &lt;chr&gt;       &lt;chr&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;\n 1 Afghanistan Asia       1952    28.8  8425333      779.\n 2 Afghanistan Asia       1957    30.3  9240934      821.\n 3 Afghanistan Asia       1962    32.0 10267083      853.\n 4 Afghanistan Asia       1967    34.0 11537966      836.\n 5 Afghanistan Asia       1972    36.1 13079460      740.\n 6 Afghanistan Asia       1977    38.4 14880372      786.\n 7 Afghanistan Asia       1982    39.9 12881816      978.\n 8 Afghanistan Asia       1987    40.8 13867957      852.\n 9 Afghanistan Asia       1992    41.7 16317921      649.\n10 Afghanistan Asia       1997    41.8 22227415      635.\n# ℹ 1,694 more rows\n\n\n\n\n1- Obtener cantidad observaciones por país\n\ndf_gapminder_csv%&gt;%\n  group_by(country)%&gt;%\n  reframe(cdad_obs=n())\n\n# A tibble: 142 × 2\n   country     cdad_obs\n   &lt;chr&gt;          &lt;int&gt;\n 1 Afghanistan       12\n 2 Albania           12\n 3 Algeria           12\n 4 Angola            12\n 5 Argentina         12\n 6 Australia         12\n 7 Austria           12\n 8 Bahrain           12\n 9 Bangladesh        12\n10 Belgium           12\n# ℹ 132 more rows\n\n\n\n\n2- Obtener cantidad observaciones por continente\n\ndf_gapminder_csv%&gt;%\n  group_by(continent)%&gt;%\n  reframe(cdad_obs=n())\n\n# A tibble: 5 × 2\n  continent cdad_obs\n  &lt;chr&gt;        &lt;int&gt;\n1 Africa         624\n2 Americas       300\n3 Asia           396\n4 Europe         360\n5 Oceania         24\n\n\n\n# equivalente, aunque no es la misma estructura de datos\ndf_gapminder_csv%&gt;%\n  group_by(continent)%&gt;%\n  count()\n\n# A tibble: 5 × 2\n# Groups:   continent [5]\n  continent     n\n  &lt;chr&gt;     &lt;int&gt;\n1 Africa      624\n2 Americas    300\n3 Asia        396\n4 Europe      360\n5 Oceania      24\n\n\n\n\n3- Obtener gdpPercap promedio por período y continente\n\ndf_gapminder_csv%&gt;%\n  group_by(continent, year)%&gt;%\n  reframe(gdpPercap_promedio= mean(gdpPercap))#\n\n# A tibble: 60 × 3\n   continent  year gdpPercap_promedio\n   &lt;chr&gt;     &lt;int&gt;              &lt;dbl&gt;\n 1 Africa     1952              1253.\n 2 Africa     1957              1385.\n 3 Africa     1962              1598.\n 4 Africa     1967              2050.\n 5 Africa     1972              2340.\n 6 Africa     1977              2586.\n 7 Africa     1982              2482.\n 8 Africa     1987              2283.\n 9 Africa     1992              2282.\n10 Africa     1997              2379.\n# ℹ 50 more rows\n\n\n\n\n4- Obtener gdpPercap total por período\n\ndf_gapminder_csv%&gt;%\n  group_by(year)%&gt;%\n  reframe(gdpPercap_promedio= mean(gdpPercap))\n\n# A tibble: 12 × 2\n    year gdpPercap_promedio\n   &lt;int&gt;              &lt;dbl&gt;\n 1  1952              3725.\n 2  1957              4299.\n 3  1962              4726.\n 4  1967              5484.\n 5  1972              6770.\n 6  1977              7313.\n 7  1982              7519.\n 8  1987              7901.\n 9  1992              8159.\n10  1997              9090.\n11  2002              9918.\n12  2007             11680.\n\n\n\n\n5- Obtener población promedio por país para todos los períodos\n\ndf_gapminder_csv%&gt;%\n  group_by(country)%&gt;%\n  reframe(poblacion_promedio= mean(pop))#%&gt;%\n\n# A tibble: 142 × 2\n   country     poblacion_promedio\n   &lt;chr&gt;                    &lt;dbl&gt;\n 1 Afghanistan          15823715.\n 2 Albania               2580249.\n 3 Algeria              19875406.\n 4 Angola                7309390.\n 5 Argentina            28602240.\n 6 Australia            14649312.\n 7 Austria               7583298.\n 8 Bahrain                373913.\n 9 Bangladesh           90755395.\n10 Belgium               9725119.\n# ℹ 132 more rows\n\n  # filter(country=='Venezuela')\n\n\n\n6- Crear una serie de valores estadísticos por país para todos los períodos\n\ndf_gapminder_csv%&gt;%\n  group_by(country)%&gt;%\n  reframe(poblacion_prom= mean(pop), \n            gdpPercap_sum= sum(gdpPercap),\n            gdp_prom= mean(gdpPercap),\n            gdp_max= max(gdpPercap),\n            gdp_min= min(gdpPercap))#%&gt;%\n\n# A tibble: 142 × 6\n   country     poblacion_prom gdpPercap_sum gdp_prom gdp_max gdp_min\n   &lt;chr&gt;                &lt;dbl&gt;         &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;\n 1 Afghanistan      15823715.         9632.     803.    978.    635.\n 2 Albania           2580249.        39064.    3255.   5937.   1601.\n 3 Algeria          19875406.        53112.    4426.   6223.   2449.\n 4 Angola            7309390.        43285.    3607.   5523.   2277.\n 5 Argentina        28602240.       107467.    8956.  12779.   5911.\n 6 Australia        14649312.       239767.   19981.  34435.  10040.\n 7 Austria           7583298.       244943.   20412.  36126.   6137.\n 8 Bahrain            373913.       216932.   18078.  29796.   9867.\n 9 Bangladesh       90755395.         9811.     818.   1391.    630.\n10 Belgium           9725119.       238809.   19901.  33693.   8343.\n# ℹ 132 more rows\n\n  # filter(country=='Venezuela')"
+  },
+  {
+    "objectID": "practicas/clase11.html#encadenamiento-para-clasificar-por-continente-a-los-países-según-su-pib",
+    "href": "practicas/clase11.html#encadenamiento-para-clasificar-por-continente-a-los-países-según-su-pib",
+    "title": "Clase 12- Agrupamientos, Reframes",
+    "section": "7- Encadenamiento para clasificar por continente a los países según su PIB",
+    "text": "7- Encadenamiento para clasificar por continente a los países según su PIB\n\n7.a- crear columna pib_mm\n\ndf_gapminder_csv%&gt;%\n  filter(year==2007)%&gt;%\n  mutate(pib_mm=(gdpPercap*pop)/1000000) # cifras en mm\n\n# A tibble: 142 × 7\n   country     continent  year lifeExp       pop gdpPercap  pib_mm\n   &lt;chr&gt;       &lt;chr&gt;     &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n 1 Afghanistan Asia       2007    43.8  31889923      975.  31079.\n 2 Albania     Europe     2007    76.4   3600523     5937.  21376.\n 3 Algeria     Africa     2007    72.3  33333216     6223. 207445.\n 4 Angola      Africa     2007    42.7  12420476     4797.  59584.\n 5 Argentina   Americas   2007    75.3  40301927    12779. 515034.\n 6 Australia   Oceania    2007    81.2  20434176    34435. 703658.\n 7 Austria     Europe     2007    79.8   8199783    36126. 296229.\n 8 Bahrain     Asia       2007    75.6    708573    29796.  21113.\n 9 Bangladesh  Asia       2007    64.1 150448339     1391. 209312.\n10 Belgium     Europe     2007    79.4  10392226    33693. 350141.\n# ℹ 132 more rows\n\n\n\n\n7.b- cuantiles según agrupamiento por continente\n\ndf_gapminder_csv%&gt;%\n  filter(year==2007)%&gt;%\n  mutate(pib_mm=(gdpPercap*pop)/1000000)%&gt;%\n  group_by(continent)%&gt;%\n  reframe(cuantil_1=quantile(pib_mm ,p=0.25),\n          cuantil_3=quantile(pib_mm, p=0.75),\n          country,\n          pib_mm)\n\n# A tibble: 142 × 5\n   continent cuantil_1 cuantil_3 country                   pib_mm\n   &lt;chr&gt;         &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;                      &lt;dbl&gt;\n 1 Africa        5662.    32146. Algeria                  207445.\n 2 Africa        5662.    32146. Angola                    59584.\n 3 Africa        5662.    32146. Benin                     11643.\n 4 Africa        5662.    32146. Botswana                  20604.\n 5 Africa        5662.    32146. Burkina Faso              17435.\n 6 Africa        5662.    32146. Burundi                    3609.\n 7 Africa        5662.    32146. Cameroon                  36138.\n 8 Africa        5662.    32146. Central African Republic   3085.\n 9 Africa        5662.    32146. Chad                      17448.\n10 Africa        5662.    32146. Comoros                     701.\n# ℹ 132 more rows\n\n\n\n\n7.c- crear columna para asignación de categorías con función case_when\n\ndf_gapminder_csv%&gt;%\n  filter(year==2007)%&gt;%\n  mutate(pib_mm=(gdpPercap*pop)/1000000)%&gt;%\n  group_by(continent)%&gt;%\n  reframe(cuantil_1=quantile(pib_mm,p=0.25),\n          cuantil_3=quantile(pib_mm,p=0.75),\n          country,\n          pib_mm)%&gt;%\n  mutate(pib_clasificacion=case_when(pib_mm &lt; cuantil_1~'bajo',\n                                     pib_mm&gt;= cuantil_1 & pib_mm &lt;= cuantil_3 ~ 'medio',\n                                     pib_mm&gt; cuantil_3 ~ 'alto'))\n\n# A tibble: 142 × 6\n   continent cuantil_1 cuantil_3 country                pib_mm pib_clasificacion\n   &lt;chr&gt;         &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;                   &lt;dbl&gt; &lt;chr&gt;            \n 1 Africa        5662.    32146. Algeria                2.07e5 alto             \n 2 Africa        5662.    32146. Angola                 5.96e4 alto             \n 3 Africa        5662.    32146. Benin                  1.16e4 medio            \n 4 Africa        5662.    32146. Botswana               2.06e4 medio            \n 5 Africa        5662.    32146. Burkina Faso           1.74e4 medio            \n 6 Africa        5662.    32146. Burundi                3.61e3 bajo             \n 7 Africa        5662.    32146. Cameroon               3.61e4 alto             \n 8 Africa        5662.    32146. Central African Repub… 3.08e3 bajo             \n 9 Africa        5662.    32146. Chad                   1.74e4 medio            \n10 Africa        5662.    32146. Comoros                7.01e2 bajo             \n# ℹ 132 more rows\n\n\n\n\n7.d- asignar a un nuevo objeto\n\ndf_gap_clasi_pibcontinent &lt;- df_gapminder_csv%&gt;%\n  filter(year==2007)%&gt;%\n  mutate(pib_mm=(gdpPercap*pop)/1000000)%&gt;%\n  group_by(continent)%&gt;%\n  reframe(cuantil_1=quantile(pib_mm,p=0.25),\n          cuantil_3=quantile(pib_mm,p=0.75),\n          country,\n          pib_mm)%&gt;%\n  mutate(pib_clasificacion=case_when(pib_mm &lt; cuantil_1~'bajo',\n                                     pib_mm&gt;= cuantil_1 & pib_mm &lt;= cuantil_3 ~ 'medio',\n                                     pib_mm&gt; cuantil_3 ~ 'alto'))%&gt;%\n  select(-cuantil_1, -cuantil_3)\n\n\n\n7.e- subsetting países de América reordenados por criterio de pib_mm\n\ndf_gap_clasi_pibcontinent_ame &lt;- df_gap_clasi_pibcontinent%&gt;%\n  filter(continent=='Americas')%&gt;%\n  arrange(desc(pib_mm))\n\n\nVisualizar los datos\n\nggplot(data=df_gap_clasi_pibcontinent_ame)+\n  geom_col(mapping = aes(x=country, \n                         y= pib_mm,\n                         fill = pib_clasificacion))\n\n\n\n\n\n\n\n\n\n\n\n7.f- crear factor para dato categórico y resolver orden de visualización de las columnas\n\ndf_gap_clasi_pibcontinent_ame &lt;- df_gap_clasi_pibcontinent%&gt;%\n  filter(continent=='Americas')%&gt;%\n  arrange(desc(pib_mm))%&gt;%\n  mutate(country =  factor(country, levels = country))\n\n\nVisualizar Datos con columna de países como factor\n\nggplot(data=df_gap_clasi_pibcontinent_ame)+\n  geom_col(mapping = aes(x=country, \n                         y= pib_mm,\n                         fill = pib_clasificacion))"
+  },
+  {
+    "objectID": "practicas/clase11.html#salidas-distintas-en-group_by-según-más-de-un-criterio",
+    "href": "practicas/clase11.html#salidas-distintas-en-group_by-según-más-de-un-criterio",
+    "title": "Clase 12- Agrupamientos, Reframes",
+    "section": "8. Salidas distintas en group_by según más de un criterio",
+    "text": "8. Salidas distintas en group_by según más de un criterio\n\n8.1 según criterio country & continent\n\ndf_gapminder_csv%&gt;%\n  group_by( country, continent)%&gt;%\n  reframe(gdpPercap_promedio= mean(gdpPercap))\n\n# A tibble: 142 × 3\n   country     continent gdpPercap_promedio\n   &lt;chr&gt;       &lt;chr&gt;                  &lt;dbl&gt;\n 1 Afghanistan Asia                    803.\n 2 Albania     Europe                 3255.\n 3 Algeria     Africa                 4426.\n 4 Angola      Africa                 3607.\n 5 Argentina   Americas               8956.\n 6 Australia   Oceania               19981.\n 7 Austria     Europe                20412.\n 8 Bahrain     Asia                  18078.\n 9 Bangladesh  Asia                    818.\n10 Belgium     Europe                19901.\n# ℹ 132 more rows\n\n\n\n\n8.2 según criterio continent & country\n\ndf_gapminder_csv%&gt;%\n  group_by(continent, country)%&gt;%\n  reframe(gdpPercap_promedio= mean(gdpPercap))\n\n# A tibble: 142 × 3\n   continent country                  gdpPercap_promedio\n   &lt;chr&gt;     &lt;chr&gt;                                 &lt;dbl&gt;\n 1 Africa    Algeria                               4426.\n 2 Africa    Angola                                3607.\n 3 Africa    Benin                                 1155.\n 4 Africa    Botswana                              5032.\n 5 Africa    Burkina Faso                           844.\n 6 Africa    Burundi                                472.\n 7 Africa    Cameroon                              1775.\n 8 Africa    Central African Republic               959.\n 9 Africa    Chad                                  1165.\n10 Africa    Comoros                               1314.\n# ℹ 132 more rows"
+  },
+  {
+    "objectID": "practicas/clase12.html",
+    "href": "practicas/clase12.html",
+    "title": "Clase 12- Agrupamientos, Reframes",
+    "section": "",
+    "text": "Usar funciones de dplyr para poder agrupar datos y obtener valores al # aplicar una función para cada grupo",
+    "crumbs": [
+      "Prácticas",
+      "clase 12 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase12.html#objetivo",
+    "href": "practicas/clase12.html#objetivo",
+    "title": "Clase 12- Agrupamientos, Reframes",
+    "section": "",
+    "text": "Usar funciones de dplyr para poder agrupar datos y obtener valores al # aplicar una función para cada grupo",
+    "crumbs": [
+      "Prácticas",
+      "clase 12 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase12.html#cargar-datos-y-paquetes",
+    "href": "practicas/clase12.html#cargar-datos-y-paquetes",
+    "title": "Clase 12- Agrupamientos, Reframes",
+    "section": "Cargar Datos y Paquetes",
+    "text": "Cargar Datos y Paquetes\n\nlibrary(tidyverse)\n\ndf_gapminder_csv &lt;- read.csv('https://raw.githubusercontent.com/javendaXgh/datos/refs/heads/master/gapminder.csv')%&gt;%\n  select(-X)%&gt;%\n  as_tibble()\n\ndf_gapminder &lt;- gapminder::gapminder\n\ndf_gastosaludmundial &lt;- read.csv('https://raw.githubusercontent.com/UCVeconomia2024-2/scripts/refs/heads/main/data_in/clase_12/IHME/IHME_HEALTH_SPENDING_1995_2021/IHME_HEALTH_SPENDING_1995_2021_Y2024M07D23.CSV')\n\nInfo sobre el conjunto de datos df_gastosaludmundial disponible en\n\nhttps://ghdx.healthdata.org/record/ihme-data/global-health-spending-1995-2021\nhttps://github.com/UCVeconomia2024-2/scripts/tree/main/data_in/clase_12/IHME",
+    "crumbs": [
+      "Prácticas",
+      "clase 12 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase12.html#procesamientos",
+    "href": "practicas/clase12.html#procesamientos",
+    "title": "Clase 12- Agrupamientos, Reframes",
+    "section": "Procesamientos:",
+    "text": "Procesamientos:\nCada enunciado es un problema a resolver\n\n0- Funcionamiento group_by\n\ndf_gapminder_csv%&gt;%\n  group_by(country)\n\n# A tibble: 1,704 × 6\n# Groups:   country [142]\n   country     continent  year lifeExp      pop gdpPercap\n   &lt;chr&gt;       &lt;chr&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;\n 1 Afghanistan Asia       1952    28.8  8425333      779.\n 2 Afghanistan Asia       1957    30.3  9240934      821.\n 3 Afghanistan Asia       1962    32.0 10267083      853.\n 4 Afghanistan Asia       1967    34.0 11537966      836.\n 5 Afghanistan Asia       1972    36.1 13079460      740.\n 6 Afghanistan Asia       1977    38.4 14880372      786.\n 7 Afghanistan Asia       1982    39.9 12881816      978.\n 8 Afghanistan Asia       1987    40.8 13867957      852.\n 9 Afghanistan Asia       1992    41.7 16317921      649.\n10 Afghanistan Asia       1997    41.8 22227415      635.\n# ℹ 1,694 more rows\n\n\n\n\n1- Obtener cantidad observaciones por país\n\ndf_gapminder_csv%&gt;%\n  group_by(country)%&gt;%\n  reframe(cdad_obs=n())\n\n# A tibble: 142 × 2\n   country     cdad_obs\n   &lt;chr&gt;          &lt;int&gt;\n 1 Afghanistan       12\n 2 Albania           12\n 3 Algeria           12\n 4 Angola            12\n 5 Argentina         12\n 6 Australia         12\n 7 Austria           12\n 8 Bahrain           12\n 9 Bangladesh        12\n10 Belgium           12\n# ℹ 132 more rows\n\n\n\n\n2- Obtener cantidad observaciones por continente\n\ndf_gapminder_csv%&gt;%\n  group_by(continent)%&gt;%\n  reframe(cdad_obs=n())\n\n# A tibble: 5 × 2\n  continent cdad_obs\n  &lt;chr&gt;        &lt;int&gt;\n1 Africa         624\n2 Americas       300\n3 Asia           396\n4 Europe         360\n5 Oceania         24\n\n\n\n# equivalente, aunque no es la misma estructura de datos\ndf_gapminder_csv%&gt;%\n  group_by(continent)%&gt;%\n  count()\n\n# A tibble: 5 × 2\n# Groups:   continent [5]\n  continent     n\n  &lt;chr&gt;     &lt;int&gt;\n1 Africa      624\n2 Americas    300\n3 Asia        396\n4 Europe      360\n5 Oceania      24\n\n\n\n\n3- Obtener gdpPercap promedio por período y continente\n\ndf_gapminder_csv%&gt;%\n  group_by(continent, year)%&gt;%\n  reframe(gdpPercap_promedio= mean(gdpPercap))#\n\n# A tibble: 60 × 3\n   continent  year gdpPercap_promedio\n   &lt;chr&gt;     &lt;int&gt;              &lt;dbl&gt;\n 1 Africa     1952              1253.\n 2 Africa     1957              1385.\n 3 Africa     1962              1598.\n 4 Africa     1967              2050.\n 5 Africa     1972              2340.\n 6 Africa     1977              2586.\n 7 Africa     1982              2482.\n 8 Africa     1987              2283.\n 9 Africa     1992              2282.\n10 Africa     1997              2379.\n# ℹ 50 more rows\n\n\n\n\n4- Obtener gdpPercap total por período\n\ndf_gapminder_csv%&gt;%\n  group_by(year)%&gt;%\n  reframe(gdpPercap_promedio= mean(gdpPercap))\n\n# A tibble: 12 × 2\n    year gdpPercap_promedio\n   &lt;int&gt;              &lt;dbl&gt;\n 1  1952              3725.\n 2  1957              4299.\n 3  1962              4726.\n 4  1967              5484.\n 5  1972              6770.\n 6  1977              7313.\n 7  1982              7519.\n 8  1987              7901.\n 9  1992              8159.\n10  1997              9090.\n11  2002              9918.\n12  2007             11680.\n\n\n\n\n5- Obtener población promedio por país para todos los períodos\n\ndf_gapminder_csv%&gt;%\n  group_by(country)%&gt;%\n  reframe(poblacion_promedio= mean(pop))#%&gt;%\n\n# A tibble: 142 × 2\n   country     poblacion_promedio\n   &lt;chr&gt;                    &lt;dbl&gt;\n 1 Afghanistan          15823715.\n 2 Albania               2580249.\n 3 Algeria              19875406.\n 4 Angola                7309390.\n 5 Argentina            28602240.\n 6 Australia            14649312.\n 7 Austria               7583298.\n 8 Bahrain                373913.\n 9 Bangladesh           90755395.\n10 Belgium               9725119.\n# ℹ 132 more rows\n\n  # filter(country=='Venezuela')\n\n\n\n6- Crear una serie de valores estadísticos por país para todos los períodos\n\ndf_gapminder_csv%&gt;%\n  group_by(country)%&gt;%\n  reframe(poblacion_prom= mean(pop), \n            gdpPercap_sum= sum(gdpPercap),\n            gdp_prom= mean(gdpPercap),\n            gdp_max= max(gdpPercap),\n            gdp_min= min(gdpPercap))#%&gt;%\n\n# A tibble: 142 × 6\n   country     poblacion_prom gdpPercap_sum gdp_prom gdp_max gdp_min\n   &lt;chr&gt;                &lt;dbl&gt;         &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;\n 1 Afghanistan      15823715.         9632.     803.    978.    635.\n 2 Albania           2580249.        39064.    3255.   5937.   1601.\n 3 Algeria          19875406.        53112.    4426.   6223.   2449.\n 4 Angola            7309390.        43285.    3607.   5523.   2277.\n 5 Argentina        28602240.       107467.    8956.  12779.   5911.\n 6 Australia        14649312.       239767.   19981.  34435.  10040.\n 7 Austria           7583298.       244943.   20412.  36126.   6137.\n 8 Bahrain            373913.       216932.   18078.  29796.   9867.\n 9 Bangladesh       90755395.         9811.     818.   1391.    630.\n10 Belgium           9725119.       238809.   19901.  33693.   8343.\n# ℹ 132 more rows\n\n  # filter(country=='Venezuela')",
+    "crumbs": [
+      "Prácticas",
+      "clase 12 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase12.html#encadenamiento-para-clasificar-por-continente-a-los-países-según-su-pib",
+    "href": "practicas/clase12.html#encadenamiento-para-clasificar-por-continente-a-los-países-según-su-pib",
+    "title": "Clase 12- Agrupamientos, Reframes",
+    "section": "7- Encadenamiento para clasificar por continente a los países según su PIB",
+    "text": "7- Encadenamiento para clasificar por continente a los países según su PIB\n\n7.a- crear columna pib_mm\n\ndf_gapminder_csv%&gt;%\n  filter(year==2007)%&gt;%\n  mutate(pib_mm=(gdpPercap*pop)/1000000) # cifras en mm\n\n# A tibble: 142 × 7\n   country     continent  year lifeExp       pop gdpPercap  pib_mm\n   &lt;chr&gt;       &lt;chr&gt;     &lt;int&gt;   &lt;dbl&gt;     &lt;int&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n 1 Afghanistan Asia       2007    43.8  31889923      975.  31079.\n 2 Albania     Europe     2007    76.4   3600523     5937.  21376.\n 3 Algeria     Africa     2007    72.3  33333216     6223. 207445.\n 4 Angola      Africa     2007    42.7  12420476     4797.  59584.\n 5 Argentina   Americas   2007    75.3  40301927    12779. 515034.\n 6 Australia   Oceania    2007    81.2  20434176    34435. 703658.\n 7 Austria     Europe     2007    79.8   8199783    36126. 296229.\n 8 Bahrain     Asia       2007    75.6    708573    29796.  21113.\n 9 Bangladesh  Asia       2007    64.1 150448339     1391. 209312.\n10 Belgium     Europe     2007    79.4  10392226    33693. 350141.\n# ℹ 132 more rows\n\n\n\n\n7.b- cuantiles según agrupamiento por continente\n\ndf_gapminder_csv%&gt;%\n  filter(year==2007)%&gt;%\n  mutate(pib_mm=(gdpPercap*pop)/1000000)%&gt;%\n  group_by(continent)%&gt;%\n  reframe(cuantil_1=quantile(pib_mm ,p=0.25),\n          cuantil_3=quantile(pib_mm, p=0.75),\n          country,\n          pib_mm)\n\n# A tibble: 142 × 5\n   continent cuantil_1 cuantil_3 country                   pib_mm\n   &lt;chr&gt;         &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;                      &lt;dbl&gt;\n 1 Africa        5662.    32146. Algeria                  207445.\n 2 Africa        5662.    32146. Angola                    59584.\n 3 Africa        5662.    32146. Benin                     11643.\n 4 Africa        5662.    32146. Botswana                  20604.\n 5 Africa        5662.    32146. Burkina Faso              17435.\n 6 Africa        5662.    32146. Burundi                    3609.\n 7 Africa        5662.    32146. Cameroon                  36138.\n 8 Africa        5662.    32146. Central African Republic   3085.\n 9 Africa        5662.    32146. Chad                      17448.\n10 Africa        5662.    32146. Comoros                     701.\n# ℹ 132 more rows\n\n\n\n\n7.c- crear columna para asignación de categorías con función case_when\n\ndf_gapminder_csv%&gt;%\n  filter(year==2007)%&gt;%\n  mutate(pib_mm=(gdpPercap*pop)/1000000)%&gt;%\n  group_by(continent)%&gt;%\n  reframe(cuantil_1=quantile(pib_mm,p=0.25),\n          cuantil_3=quantile(pib_mm,p=0.75),\n          country,\n          pib_mm)%&gt;%\n  mutate(pib_clasificacion=case_when(pib_mm &lt; cuantil_1~'bajo',\n                                     pib_mm&gt;= cuantil_1 & pib_mm &lt;= cuantil_3 ~ 'medio',\n                                     pib_mm&gt; cuantil_3 ~ 'alto'))\n\n# A tibble: 142 × 6\n   continent cuantil_1 cuantil_3 country                pib_mm pib_clasificacion\n   &lt;chr&gt;         &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;                   &lt;dbl&gt; &lt;chr&gt;            \n 1 Africa        5662.    32146. Algeria                2.07e5 alto             \n 2 Africa        5662.    32146. Angola                 5.96e4 alto             \n 3 Africa        5662.    32146. Benin                  1.16e4 medio            \n 4 Africa        5662.    32146. Botswana               2.06e4 medio            \n 5 Africa        5662.    32146. Burkina Faso           1.74e4 medio            \n 6 Africa        5662.    32146. Burundi                3.61e3 bajo             \n 7 Africa        5662.    32146. Cameroon               3.61e4 alto             \n 8 Africa        5662.    32146. Central African Repub… 3.08e3 bajo             \n 9 Africa        5662.    32146. Chad                   1.74e4 medio            \n10 Africa        5662.    32146. Comoros                7.01e2 bajo             \n# ℹ 132 more rows\n\n\n\n\n7.d- asignar a un nuevo objeto\n\ndf_gap_clasi_pibcontinent &lt;- df_gapminder_csv%&gt;%\n  filter(year==2007)%&gt;%\n  mutate(pib_mm=(gdpPercap*pop)/1000000)%&gt;%\n  group_by(continent)%&gt;%\n  reframe(cuantil_1=quantile(pib_mm,p=0.25),\n          cuantil_3=quantile(pib_mm,p=0.75),\n          country,\n          pib_mm)%&gt;%\n  mutate(pib_clasificacion=case_when(pib_mm &lt; cuantil_1~'bajo',\n                                     pib_mm&gt;= cuantil_1 & pib_mm &lt;= cuantil_3 ~ 'medio',\n                                     pib_mm&gt; cuantil_3 ~ 'alto'))%&gt;%\n  select(-cuantil_1, -cuantil_3)\n\n\n\n7.e- subsetting países de América reordenados por criterio de pib_mm\n\ndf_gap_clasi_pibcontinent_ame &lt;- df_gap_clasi_pibcontinent%&gt;%\n  filter(continent=='Americas')%&gt;%\n  arrange(desc(pib_mm))\n\n\nVisualizar los datos\n\nggplot(data=df_gap_clasi_pibcontinent_ame)+\n  geom_col(mapping = aes(x=country, \n                         y= pib_mm,\n                         fill = pib_clasificacion))\n\n\n\n\n\n\n\n\n\n\n\n7.f- crear factor para dato categórico y resolver orden de visualización de las columnas\n\ndf_gap_clasi_pibcontinent_ame &lt;- df_gap_clasi_pibcontinent%&gt;%\n  filter(continent=='Americas')%&gt;%\n  arrange(desc(pib_mm))%&gt;%\n  mutate(country =  factor(country, levels = country))\n\n\nVisualizar Datos con columna de países como factor\n\nggplot(data=df_gap_clasi_pibcontinent_ame)+\n  geom_col(mapping = aes(x=country, \n                         y= pib_mm,\n                         fill = pib_clasificacion))",
+    "crumbs": [
+      "Prácticas",
+      "clase 12 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase12.html#salidas-distintas-en-group_by-según-más-de-un-criterio",
+    "href": "practicas/clase12.html#salidas-distintas-en-group_by-según-más-de-un-criterio",
+    "title": "Clase 12- Agrupamientos, Reframes",
+    "section": "8. Salidas distintas en group_by según más de un criterio",
+    "text": "8. Salidas distintas en group_by según más de un criterio\n\n8.1 según criterio country & continent\n\ndf_gapminder_csv%&gt;%\n  group_by( country, continent)%&gt;%\n  reframe(gdpPercap_promedio= mean(gdpPercap))\n\n# A tibble: 142 × 3\n   country     continent gdpPercap_promedio\n   &lt;chr&gt;       &lt;chr&gt;                  &lt;dbl&gt;\n 1 Afghanistan Asia                    803.\n 2 Albania     Europe                 3255.\n 3 Algeria     Africa                 4426.\n 4 Angola      Africa                 3607.\n 5 Argentina   Americas               8956.\n 6 Australia   Oceania               19981.\n 7 Austria     Europe                20412.\n 8 Bahrain     Asia                  18078.\n 9 Bangladesh  Asia                    818.\n10 Belgium     Europe                19901.\n# ℹ 132 more rows\n\n\n\n\n8.2 según criterio continent & country\n\ndf_gapminder_csv%&gt;%\n  group_by(continent, country)%&gt;%\n  reframe(gdpPercap_promedio= mean(gdpPercap))\n\n# A tibble: 142 × 3\n   continent country                  gdpPercap_promedio\n   &lt;chr&gt;     &lt;chr&gt;                                 &lt;dbl&gt;\n 1 Africa    Algeria                               4426.\n 2 Africa    Angola                                3607.\n 3 Africa    Benin                                 1155.\n 4 Africa    Botswana                              5032.\n 5 Africa    Burkina Faso                           844.\n 6 Africa    Burundi                                472.\n 7 Africa    Cameroon                              1775.\n 8 Africa    Central African Republic               959.\n 9 Africa    Chad                                  1165.\n10 Africa    Comoros                               1314.\n# ℹ 132 more rows",
+    "crumbs": [
+      "Prácticas",
+      "clase 12 / versión reporte"
+    ]
   }
 ]

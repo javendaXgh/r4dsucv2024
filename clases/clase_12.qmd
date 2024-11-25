@@ -1,0 +1,64 @@
+---
+title: "Clase 12- Selección, Agrupar y Crear Sumarios"
+#format: live-html
+date: "Noviembre 25, 2024"
+author: "MSc. José M. Avendaño"
+# output:
+#   html_document:
+#     toc: yes
+format: 
+  revealjs:
+    incremental: true   
+---
+
+## Varios y Puntos Pendientes
+
+-   Investigación de funciones no vistas: método sugerido
+
+-   Verificar salidas
+
+-   NA´s
+
+-   Aspectos para hacer render del qmd:
+
+    -   environment
+
+    -   funciones no compatibles
+
+-   Láminas pasadas contienen información complementaria
+
+## Objetivo
+
+Realizar agrupaciones de datos contenidos en una DF según uno o más criterios. Posterior a tener los datos agrupados obtendremos valores que totalizan valores por los grupos creados.
+
+![](images/im-or-trans.png)
+
+## Agrupar
+
+La mayoría de las operaciones de datos se realizan en grupos definidos por variables. group_by() toma un tbl existente y lo convierte en un tbl agrupado donde las operaciones se realizan «por grupo». ungroup() elimina la agrupación.
+
+## Agrupar por un Atributo
+
+los datos se pueden agrupar según un criterio, por ejemplo, según el año o según el continente o alguna variable categórica que contenga el conjunto de datos
+
+## Agrupar por más de un Atributo
+
+También se pueden agrupar por diversos criterios, los cuales serán aplicados jerarquicamente según el orden de aparición de los criterios pudiendo llevar a resultados distintos.
+
+## Reframe
+
+Crea una nueva df aplicando funciones a las columnas de una df existente. También se usa summarise, pero es recomendable usar esta función que es más reciente
+
+Existe pérdida de estructura de datos original
+
+Se puede hacer en algunos casos el ungrup para desagrupar
+
+## Filtrado según datos Externos
+
+Puede ser necesario que los datos a filtrar provengan de una fuente distinta a los datos disponibles en una DF. Es necesario realizar el trabajo con precisión y cuidado para evitar perder valores.
+
+## Factores
+
+Son una estructura de datos que agrupa valores categóricos, como nombres de días de la semana, categorías de productos o cualquier otro tipo de variable que tenga un conjunto limitado de posibles valores.
+
+Los factores son útiles porque permiten a las funciones estadísticas tratar estos tipos de datos de manera más eficiente.

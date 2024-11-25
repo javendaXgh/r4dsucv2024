@@ -1,0 +1,235 @@
+---
+title: "Clase 12- Agrupamientos, Reframes"
+date: "Noviembre 25, 2024"
+output:
+  html_document:
+    toc: yes
+execute:
+  echo: true
+  eval: true
+  warning: false
+---
+
+## Objetivo:
+
+Usar funciones de dplyr para poder agrupar datos y obtener valores al \# aplicar una función para cada grupo
+
+## Cargar Datos y Paquetes
+
+```{r}
+library(tidyverse)
+
+df_gapminder_csv <- read.csv('https://raw.githubusercontent.com/javendaXgh/datos/refs/heads/master/gapminder.csv')%>%
+  select(-X)%>%
+  as_tibble()
+
+df_gapminder <- gapminder::gapminder
+
+df_gastosaludmundial <- read.csv('https://raw.githubusercontent.com/UCVeconomia2024-2/scripts/refs/heads/main/data_in/clase_12/IHME/IHME_HEALTH_SPENDING_1995_2021/IHME_HEALTH_SPENDING_1995_2021_Y2024M07D23.CSV')
+
+```
+
+Info sobre el conjunto de datos `df_gastosaludmundial` disponible en
+
+1.  <https://ghdx.healthdata.org/record/ihme-data/global-health-spending-1995-2021>
+
+2.  <https://github.com/UCVeconomia2024-2/scripts/tree/main/data_in/clase_12/IHME>
+
+## Procesamientos:
+
+Cada enunciado es un problema a resolver
+
+### 0- Funcionamiento group_by
+
+```{r}
+
+df_gapminder_csv%>%
+  group_by(country)
+```
+
+### 1- Obtener cantidad observaciones por país
+
+```{r}
+
+df_gapminder_csv%>%
+  group_by(country)%>%
+  reframe(cdad_obs=n())
+```
+
+### 2- Obtener cantidad observaciones por continente
+
+```{r}
+
+df_gapminder_csv%>%
+  group_by(continent)%>%
+  reframe(cdad_obs=n())
+
+```
+
+```{r}
+# equivalente, aunque no es la misma estructura de datos
+df_gapminder_csv%>%
+  group_by(continent)%>%
+  count()
+
+```
+
+### 3- Obtener gdpPercap promedio por período y continente
+
+```{r}
+df_gapminder_csv%>%
+  group_by(continent, year)%>%
+  reframe(gdpPercap_promedio= mean(gdpPercap))#
+
+```
+
+### 4- Obtener gdpPercap total por período
+
+```{r}
+df_gapminder_csv%>%
+  group_by(year)%>%
+  reframe(gdpPercap_promedio= mean(gdpPercap))
+```
+
+### 5- Obtener población promedio por país para todos los períodos
+
+```{r}
+
+df_gapminder_csv%>%
+  group_by(country)%>%
+  reframe(poblacion_promedio= mean(pop))#%>%
+  # filter(country=='Venezuela')
+
+```
+
+### 6- Crear una serie de valores estadísticos por país para todos los períodos
+
+```{r}
+df_gapminder_csv%>%
+  group_by(country)%>%
+  reframe(poblacion_prom= mean(pop), 
+            gdpPercap_sum= sum(gdpPercap),
+            gdp_prom= mean(gdpPercap),
+            gdp_max= max(gdpPercap),
+            gdp_min= min(gdpPercap))#%>%
+  # filter(country=='Venezuela')
+```
+
+## 7- Encadenamiento para clasificar por continente a los países según su PIB
+
+### 7.a- crear columna pib_mm
+
+```{r}
+
+
+df_gapminder_csv%>%
+  filter(year==2007)%>%
+  mutate(pib_mm=(gdpPercap*pop)/1000000) # cifras en mm
+```
+
+### 7.b- cuantiles según agrupamiento por continente
+
+```{r}
+
+df_gapminder_csv%>%
+  filter(year==2007)%>%
+  mutate(pib_mm=(gdpPercap*pop)/1000000)%>%
+  group_by(continent)%>%
+  reframe(cuantil_1=quantile(pib_mm ,p=0.25),
+          cuantil_3=quantile(pib_mm, p=0.75),
+          country,
+          pib_mm)
+```
+
+### 7.c- crear columna para asignación de categorías con función case_when
+
+```{r}
+df_gapminder_csv%>%
+  filter(year==2007)%>%
+  mutate(pib_mm=(gdpPercap*pop)/1000000)%>%
+  group_by(continent)%>%
+  reframe(cuantil_1=quantile(pib_mm,p=0.25),
+          cuantil_3=quantile(pib_mm,p=0.75),
+          country,
+          pib_mm)%>%
+  mutate(pib_clasificacion=case_when(pib_mm < cuantil_1~'bajo',
+                                     pib_mm>= cuantil_1 & pib_mm <= cuantil_3 ~ 'medio',
+                                     pib_mm> cuantil_3 ~ 'alto'))
+```
+
+### 7.d- asignar a un nuevo objeto
+
+```{r}
+
+df_gap_clasi_pibcontinent <- df_gapminder_csv%>%
+  filter(year==2007)%>%
+  mutate(pib_mm=(gdpPercap*pop)/1000000)%>%
+  group_by(continent)%>%
+  reframe(cuantil_1=quantile(pib_mm,p=0.25),
+          cuantil_3=quantile(pib_mm,p=0.75),
+          country,
+          pib_mm)%>%
+  mutate(pib_clasificacion=case_when(pib_mm < cuantil_1~'bajo',
+                                     pib_mm>= cuantil_1 & pib_mm <= cuantil_3 ~ 'medio',
+                                     pib_mm> cuantil_3 ~ 'alto'))%>%
+  select(-cuantil_1, -cuantil_3)
+```
+
+### 7.e- subsetting países de América reordenados por criterio de pib_mm
+
+```{r}
+df_gap_clasi_pibcontinent_ame <- df_gap_clasi_pibcontinent%>%
+  filter(continent=='Americas')%>%
+  arrange(desc(pib_mm))
+
+
+```
+
+#### Visualizar los datos
+
+```{r}
+ggplot(data=df_gap_clasi_pibcontinent_ame)+
+  geom_col(mapping = aes(x=country, 
+                         y= pib_mm,
+                         fill = pib_clasificacion))
+
+
+```
+
+### 7.f- crear factor para dato categórico y resolver orden de visualización de las columnas
+
+```{r}
+
+df_gap_clasi_pibcontinent_ame <- df_gap_clasi_pibcontinent%>%
+  filter(continent=='Americas')%>%
+  arrange(desc(pib_mm))%>%
+  mutate(country =  factor(country, levels = country))
+```
+
+#### Visualizar Datos con columna de países como factor
+
+```{r}
+ggplot(data=df_gap_clasi_pibcontinent_ame)+
+  geom_col(mapping = aes(x=country, 
+                         y= pib_mm,
+                         fill = pib_clasificacion))
+```
+
+## 8. Salidas distintas en group_by según más de un criterio
+
+### 8.1 según criterio `country` & `continent`
+
+```{r}
+df_gapminder_csv%>%
+  group_by( country, continent)%>%
+  reframe(gdpPercap_promedio= mean(gdpPercap))
+
+```
+
+### 8.2 según criterio `continent` & `country`
+
+```{r}
+df_gapminder_csv%>%
+  group_by(continent, country)%>%
+  reframe(gdpPercap_promedio= mean(gdpPercap))
+```
