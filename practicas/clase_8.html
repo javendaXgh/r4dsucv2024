@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es" xml:lang="es"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Clase 8- Inspeccionar Data Frames – UCV EconomíaR4DS</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<link href="../images/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "Sin resultados",
+    "search-matching-documents-text": "documentos encontrados",
+    "search-copy-link-title": "Copiar el enlace en la búsqueda",
+    "search-hide-matches-text": "Ocultar resultados adicionales",
+    "search-more-match-text": "resultado adicional en este documento",
+    "search-more-matches-text": "resultados adicionales en este documento",
+    "search-clear-button-title": "Borrar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Buscar"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-5BVQ49LXJG"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-5BVQ49LXJG', { 'anonymize_ip': true});
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  
+  <script>
+    (function () {
+      var script = document.createElement("script");
+      script.type = "text/javascript";
+      script.src  = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+    })();
+  </script>
+
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<meta property="og:title" content="Clase 8- Inspeccionar Data Frames – UCV EconomíaR4DS">
+<meta property="og:description" content="Ciencia de Datos Basada en Programación en R para Economistas">
+<meta property="og:site_name" content="UCV EconomíaR4DS">
+</head>
+
+<body class="nav-sidebar docked">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../practicas/clase4_apoyo.html">Prácticas</a></li><li class="breadcrumb-item"><a href="../practicas/clase_8.html">clase 8 / versión reporte</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Buscar" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+      <a href="../index.html" class="sidebar-logo-link">
+      <img src="../images/logo_curso_sinBG.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
+      <div class="sidebar-tools-main tools-wide">
+    <a href="mailto:ucveconomiar4ds@gmail.com" title="Correo" class="quarto-navigation-tool px-1" aria-label="Correo"><i class="bi bi-envelope"></i></a>
+    <a href="https://discord.gg/fxXcEHH2" title="Discord" class="quarto-navigation-tool px-1" aria-label="Discord"><i class="bi bi-discord"></i></a>
+    <a href="https://github.com/orgs/UCVeconomia2024-2/dashboard" title="GitHub" class="quarto-navigation-tool px-1" aria-label="GitHub"><i class="bi bi-github"></i></a>
+    <a href="https://posit.cloud/" title="Posit Cloud" class="quarto-navigation-tool px-1" aria-label="Posit Cloud"><i class="bi bi-cloud"></i></a>
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Alternar modo oscuro"><i class="bi"></i></a>
+</div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Buscar"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
+ <span class="menu-text">Sobre el Curso</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso-infogeneral.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Información General</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../curso-programa.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Contenido</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Actividades</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Prácticas</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practicas/clase4_apoyo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">clase 4 / apoyo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practicas/clase3_apoyo.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">clase 5 / apoyo</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practicas/clase6_v2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">clase 6 / versión reporte</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practicas/clase6_pract1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">clase 6 / práctica 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practicas/clase6_pract2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">clase 6 / práctica 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practicas/clase_8.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">clase 8 / versión reporte</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../practicas/clase12.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">clase 12 / versión reporte</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
+ <span class="menu-text">Proyectos</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Alternar sección">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/proyecto-1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proyectos mitad de curso</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../project/proyecto-2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Proyecto Final de Curso</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">En esta página</h2>
+   
+  <ul>
+  <li><a href="#objetivos-de-la-actividad" id="toc-objetivos-de-la-actividad" class="nav-link active" data-scroll-target="#objetivos-de-la-actividad">Objetivos de la Actividad</a></li>
+  <li><a href="#tabla-de-contingencia" id="toc-tabla-de-contingencia" class="nav-link" data-scroll-target="#tabla-de-contingencia">Tabla de Contingencia</a></li>
+  <li><a href="#tabla-de-contingencia-cruzada" id="toc-tabla-de-contingencia-cruzada" class="nav-link" data-scroll-target="#tabla-de-contingencia-cruzada">Tabla de Contingencia Cruzada</a></li>
+  <li><a href="#tabla-resumen-estadístico" id="toc-tabla-resumen-estadístico" class="nav-link" data-scroll-target="#tabla-resumen-estadístico">Tabla Resumen Estadístico</a></li>
+  <li><a href="#tabla-resumen-estadístico---cont" id="toc-tabla-resumen-estadístico---cont" class="nav-link" data-scroll-target="#tabla-resumen-estadístico---cont">Tabla Resumen Estadístico - cont</a></li>
+  <li><a href="#operadores-lógicos" id="toc-operadores-lógicos" class="nav-link" data-scroll-target="#operadores-lógicos">Operadores Lógicos</a></li>
+  <li><a href="#uso-de-operadores-lógicos-en-un-vector" id="toc-uso-de-operadores-lógicos-en-un-vector" class="nav-link" data-scroll-target="#uso-de-operadores-lógicos-en-un-vector">Uso de Operadores Lógicos en un Vector</a></li>
+  <li><a href="#vector-lógico-con-valores-que-cumplen-una-condición" id="toc-vector-lógico-con-valores-que-cumplen-una-condición" class="nav-link" data-scroll-target="#vector-lógico-con-valores-que-cumplen-una-condición">Vector Lógico con valores que Cumplen una Condición</a></li>
+  <li><a href="#asignación-valores-a-variables" id="toc-asignación-valores-a-variables" class="nav-link" data-scroll-target="#asignación-valores-a-variables">Asignación valores a variables</a></li>
+  <li><a href="#inspección-df" id="toc-inspección-df" class="nav-link" data-scroll-target="#inspección-df">Inspección df</a></li>
+  <li><a href="#forma-vectorizada" id="toc-forma-vectorizada" class="nav-link" data-scroll-target="#forma-vectorizada">Forma Vectorizada:</a></li>
+  <li><a href="#múltiples-condiciones" id="toc-múltiples-condiciones" class="nav-link" data-scroll-target="#múltiples-condiciones">Múltiples Condiciones</a></li>
+  <li><a href="#data-frame-a-trabajar" id="toc-data-frame-a-trabajar" class="nav-link" data-scroll-target="#data-frame-a-trabajar">Data Frame a Trabajar</a></li>
+  <li><a href="#asignar-a-una-variable-la-df" id="toc-asignar-a-una-variable-la-df" class="nav-link" data-scroll-target="#asignar-a-una-variable-la-df">Asignar a una variable la DF</a></li>
+  <li><a href="#inspección-data-frame" id="toc-inspección-data-frame" class="nav-link" data-scroll-target="#inspección-data-frame">Inspección Data Frame</a></li>
+  <li><a href="#crear-columna-con-nombre-países" id="toc-crear-columna-con-nombre-países" class="nav-link" data-scroll-target="#crear-columna-con-nombre-países">Crear columna con nombre países</a></li>
+  <li><a href="#crear-columna-con-valor-promedio" id="toc-crear-columna-con-valor-promedio" class="nav-link" data-scroll-target="#crear-columna-con-valor-promedio">Crear Columna con Valor Promedio</a></li>
+  <li><a href="#inspección-nuevos-atributos" id="toc-inspección-nuevos-atributos" class="nav-link" data-scroll-target="#inspección-nuevos-atributos">Inspección Nuevos Atributos</a></li>
+  <li><a href="#funciones-valores-extremos" id="toc-funciones-valores-extremos" class="nav-link" data-scroll-target="#funciones-valores-extremos">Funciones Valores Extremos</a></li>
+  <li><a href="#importar-en-formato-csv-una-data-frame" id="toc-importar-en-formato-csv-una-data-frame" class="nav-link" data-scroll-target="#importar-en-formato-csv-una-data-frame">Importar en Formato csv una Data Frame</a></li>
+  <li><a href="#estructura-gapminder" id="toc-estructura-gapminder" class="nav-link" data-scroll-target="#estructura-gapminder">Estructura Gapminder</a></li>
+  <li><a href="#tabla-sumario-gapminder" id="toc-tabla-sumario-gapminder" class="nav-link" data-scroll-target="#tabla-sumario-gapminder">Tabla Sumario Gapminder</a></li>
+  <li><a href="#valores-únicos-por-atributo" id="toc-valores-únicos-por-atributo" class="nav-link" data-scroll-target="#valores-únicos-por-atributo">Valores Únicos por Atributo</a></li>
+  <li><a href="#dplyr-de-batalla" id="toc-dplyr-de-batalla" class="nav-link" data-scroll-target="#dplyr-de-batalla">DPLYR (🏇🏽 de batalla)</a></li>
+  <li><a href="#dplyr-filtrado" id="toc-dplyr-filtrado" class="nav-link" data-scroll-target="#dplyr-filtrado">DPLYR / Filtrado</a></li>
+  <li><a href="#revisar-tabla-venezuela" id="toc-revisar-tabla-venezuela" class="nav-link" data-scroll-target="#revisar-tabla-venezuela">Revisar Tabla Venezuela</a></li>
+  <li><a href="#juntar-dfs" id="toc-juntar-dfs" class="nav-link" data-scroll-target="#juntar-dfs">Juntar DF´s</a></li>
+  <li><a href="#combinar-dfs" id="toc-combinar-dfs" class="nav-link" data-scroll-target="#combinar-dfs">Combinar DF’s</a></li>
+  <li><a href="#revisar-nueva-df" id="toc-revisar-nueva-df" class="nav-link" data-scroll-target="#revisar-nueva-df">Revisar Nueva DF</a></li>
+  <li><a href="#continuar-inspección" id="toc-continuar-inspección" class="nav-link" data-scroll-target="#continuar-inspección">Continuar Inspección…</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-5BVQ49LXJG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5BVQ49LXJG');
+</script>
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../practicas/clase4_apoyo.html">Prácticas</a></li><li class="breadcrumb-item"><a href="../practicas/clase_8.html">clase 8 / versión reporte</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Clase 8- Inspeccionar Data Frames</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Fecha de publicación</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">11 de noviembre de 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="objetivos-de-la-actividad" class="level2">
+<h2 class="anchored" data-anchor-id="objetivos-de-la-actividad">Objetivos de la Actividad</h2>
+<ul>
+<li><p>Presentar operadores lógicos y trabajar con ellos</p></li>
+<li><p>Acceder a elementos de vectores y DF’s según condiciones lógicas</p></li>
+<li><p>Inspeccionar valores, rangos y estructura de una DF</p></li>
+</ul>
+</section>
+<section id="tabla-de-contingencia" class="level2">
+<h2 class="anchored" data-anchor-id="tabla-de-contingencia">Tabla de Contingencia</h2>
+<p>Conteo de frecuencia de un dato categórico</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(mtcars<span class="sc">$</span>cyl)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+ 4  6  8 
+11  7 14 </code></pre>
+</div>
+</div>
+</section>
+<section id="tabla-de-contingencia-cruzada" class="level2">
+<h2 class="anchored" data-anchor-id="tabla-de-contingencia-cruzada">Tabla de Contingencia Cruzada</h2>
+<p>Múltiples categorías</p>
+<table class="caption-top table">
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><code>cyl</code></td>
+<td style="text-align: left;">Number of cylinders</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><code>vs</code></td>
+<td style="text-align: left;">Engine (0 = V-shaped, 1 = straight)</td>
+</tr>
+</tbody>
+</table>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">table</span>(mtcars<span class="sc">$</span>cyl, mtcars<span class="sc">$</span>vs)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   
+     0  1
+  4  1 10
+  6  3  4
+  8 14  0</code></pre>
+</div>
+</div>
+</section>
+<section id="tabla-resumen-estadístico" class="level2">
+<h2 class="anchored" data-anchor-id="tabla-resumen-estadístico">Tabla Resumen Estadístico</h2>
+<p>Representar los valores mínimo y máximo, primer y tercer cuartil, media, promedio de un vector o data frame.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mtcars<span class="sc">$</span>mpg)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  10.40   15.43   19.20   20.09   22.80   33.90 </code></pre>
+</div>
+</div>
+</section>
+<section id="tabla-resumen-estadístico---cont" class="level2">
+<h2 class="anchored" data-anchor-id="tabla-resumen-estadístico---cont">Tabla Resumen Estadístico - cont</h2>
+<p>La salida de función <code>summary</code> cambia según el objeto que estemos trabajando</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(mtcars)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      mpg             cyl             disp             hp       
+ Min.   :10.40   Min.   :4.000   Min.   : 71.1   Min.   : 52.0  
+ 1st Qu.:15.43   1st Qu.:4.000   1st Qu.:120.8   1st Qu.: 96.5  
+ Median :19.20   Median :6.000   Median :196.3   Median :123.0  
+ Mean   :20.09   Mean   :6.188   Mean   :230.7   Mean   :146.7  
+ 3rd Qu.:22.80   3rd Qu.:8.000   3rd Qu.:326.0   3rd Qu.:180.0  
+ Max.   :33.90   Max.   :8.000   Max.   :472.0   Max.   :335.0  
+      drat             wt             qsec             vs        
+ Min.   :2.760   Min.   :1.513   Min.   :14.50   Min.   :0.0000  
+ 1st Qu.:3.080   1st Qu.:2.581   1st Qu.:16.89   1st Qu.:0.0000  
+ Median :3.695   Median :3.325   Median :17.71   Median :0.0000  
+ Mean   :3.597   Mean   :3.217   Mean   :17.85   Mean   :0.4375  
+ 3rd Qu.:3.920   3rd Qu.:3.610   3rd Qu.:18.90   3rd Qu.:1.0000  
+ Max.   :4.930   Max.   :5.424   Max.   :22.90   Max.   :1.0000  
+       am              gear            carb      
+ Min.   :0.0000   Min.   :3.000   Min.   :1.000  
+ 1st Qu.:0.0000   1st Qu.:3.000   1st Qu.:2.000  
+ Median :0.0000   Median :4.000   Median :2.000  
+ Mean   :0.4062   Mean   :3.688   Mean   :2.812  
+ 3rd Qu.:1.0000   3rd Qu.:4.000   3rd Qu.:4.000  
+ Max.   :1.0000   Max.   :5.000   Max.   :8.000  </code></pre>
+</div>
+</div>
+</section>
+<section id="operadores-lógicos" class="level2">
+<h2 class="anchored" data-anchor-id="operadores-lógicos">Operadores Lógicos</h2>
+<ul>
+<li><span class="math inline">\(&gt;\)</span> (mayor a)</li>
+<li><span class="math inline">\(&gt;=\)</span> (mayor o igual a)</li>
+<li><span class="math inline">\(&lt;\)</span> (menor a)</li>
+<li><span class="math inline">\(&lt;=\)</span> (menor o igual a)</li>
+<li><span class="math inline">\(==\)</span> (igual a)</li>
+<li><span class="math inline">\(!=\)</span> (distinto a)</li>
+<li>&amp; (y)</li>
+<li><span class="math inline">\(|\)</span> (o)</li>
+</ul>
+</section>
+<section id="uso-de-operadores-lógicos-en-un-vector" class="level2">
+<h2 class="anchored" data-anchor-id="uso-de-operadores-lógicos-en-un-vector">Uso de Operadores Lógicos en un Vector</h2>
+<p>Vector seleccionado “millas por galón” <code>mpg</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>mtcars<span class="sc">$</span>mpg</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 21.0 21.0 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 17.8 16.4 17.3 15.2 10.4
+[16] 10.4 14.7 32.4 30.4 33.9 21.5 15.5 15.2 13.3 19.2 27.3 26.0 30.4 15.8 19.7
+[31] 15.0 21.4</code></pre>
+</div>
+</div>
+</section>
+<section id="vector-lógico-con-valores-que-cumplen-una-condición" class="level2">
+<h2 class="anchored" data-anchor-id="vector-lógico-con-valores-que-cumplen-una-condición">Vector Lógico con valores que Cumplen una Condición</h2>
+<p>Mayor que un valor dado</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>  mtcars<span class="sc">$</span>mpg<span class="sc">&gt;</span><span class="fl">19.20</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE  TRUE  TRUE FALSE FALSE FALSE
+[13] FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE
+[25] FALSE  TRUE  TRUE  TRUE FALSE  TRUE FALSE  TRUE</code></pre>
+</div>
+</div>
+<p>Mayor que el valor que retorna una función</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>mtcars<span class="sc">$</span>mpg<span class="sc">&gt;</span><span class="fu">mean</span>(mtcars<span class="sc">$</span>mpg)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE  TRUE  TRUE FALSE FALSE FALSE
+[13] FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE
+[25] FALSE  TRUE  TRUE  TRUE FALSE FALSE FALSE  TRUE</code></pre>
+</div>
+</div>
+</section>
+<section id="asignación-valores-a-variables" class="level2">
+<h2 class="anchored" data-anchor-id="asignación-valores-a-variables">Asignación valores a variables</h2>
+<ul>
+<li><p>variable con promedio</p></li>
+<li><p>creación DF</p></li>
+<li><p>evaluar valores que cumplen ambas condiciones</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>promedio_mpg <span class="ot">&lt;-</span> <span class="fu">mean</span>(mtcars<span class="sc">$</span>mpg)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>valor_3ercuartil <span class="ot">&lt;-</span> <span class="fl">33.90</span> </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>df_mpg <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">mpg=</span> mtcars<span class="sc">$</span>mpg,</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>                     <span class="at">may_mean=</span> mtcars<span class="sc">$</span>mpg<span class="sc">&gt;</span>promedio_mpg,</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>                     <span class="at">men_3cuar=</span> mtcars<span class="sc">$</span>mpg<span class="sc">&lt;</span>valor_3ercuartil )</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="inspección-df" class="level2">
+<h2 class="anchored" data-anchor-id="inspección-df">Inspección df</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>df_mpg</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    mpg may_mean men_3cuar
+1  21.0     TRUE      TRUE
+2  21.0     TRUE      TRUE
+3  22.8     TRUE      TRUE
+4  21.4     TRUE      TRUE
+5  18.7    FALSE      TRUE
+6  18.1    FALSE      TRUE
+7  14.3    FALSE      TRUE
+8  24.4     TRUE      TRUE
+9  22.8     TRUE      TRUE
+10 19.2    FALSE      TRUE
+11 17.8    FALSE      TRUE
+12 16.4    FALSE      TRUE
+13 17.3    FALSE      TRUE
+14 15.2    FALSE      TRUE
+15 10.4    FALSE      TRUE
+16 10.4    FALSE      TRUE
+17 14.7    FALSE      TRUE
+18 32.4     TRUE      TRUE
+19 30.4     TRUE      TRUE
+20 33.9     TRUE     FALSE
+21 21.5     TRUE      TRUE
+22 15.5    FALSE      TRUE
+23 15.2    FALSE      TRUE
+24 13.3    FALSE      TRUE
+25 19.2    FALSE      TRUE
+26 27.3     TRUE      TRUE
+27 26.0     TRUE      TRUE
+28 30.4     TRUE      TRUE
+29 15.8    FALSE      TRUE
+30 19.7    FALSE      TRUE
+31 15.0    FALSE      TRUE
+32 21.4     TRUE      TRUE</code></pre>
+</div>
+</div>
+</section>
+<section id="forma-vectorizada" class="level2">
+<h2 class="anchored" data-anchor-id="forma-vectorizada">Forma Vectorizada:</h2>
+<p>Se aplica el condicional lógico sobre el elemento <em>i</em> del vector analizado teniendo de resultado un vector del mismo <code>length</code> del vector de entrada.</p>
+<p>Por ejemplo, si <em>i</em> vale 3, se compara si 22.8 es mayor que el <code>promedio_mpg</code> <strong>y</strong> si es menor que <code>valor_3ercuartil</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>mtcars<span class="sc">$</span>mpg<span class="sc">&gt;</span>promedio_mpg <span class="sc">&amp;</span> mtcars<span class="sc">$</span>mpg<span class="sc">&lt;</span>valor_3ercuartil </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1]  TRUE  TRUE  TRUE  TRUE FALSE FALSE FALSE  TRUE  TRUE FALSE FALSE FALSE
+[13] FALSE FALSE FALSE FALSE FALSE  TRUE  TRUE FALSE  TRUE FALSE FALSE FALSE
+[25] FALSE  TRUE  TRUE  TRUE FALSE FALSE FALSE  TRUE</code></pre>
+</div>
+</div>
+</section>
+<section id="múltiples-condiciones" class="level2">
+<h2 class="anchored" data-anchor-id="múltiples-condiciones">Múltiples Condiciones</h2>
+<p>Operador <code>&amp;</code> (y)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>mtcars<span class="sc">$</span>mpg[mtcars<span class="sc">$</span>mpg<span class="sc">&gt;</span>promedio_mpg <span class="sc">&amp;</span> mtcars<span class="sc">$</span>mpg<span class="sc">&lt;</span>valor_3ercuartil ]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 21.0 21.0 22.8 21.4 24.4 22.8 32.4 30.4 21.5 27.3 26.0 30.4 21.4</code></pre>
+</div>
+</div>
+<p>Operador <code>==</code> doble igualdad (👀 es distinto a asignación)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a> <span class="fu">which</span> (mtcars<span class="sc">$</span>mpg <span class="sc">==</span> <span class="fl">19.2</span>  )</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 10 25</code></pre>
+</div>
+</div>
+<p><code>which</code> indica el índice de los elementos extraídos según una condición</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>mtcars[ mtcars<span class="sc">$</span>mpg<span class="sc">==</span><span class="dv">21</span>, ]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>              mpg cyl disp  hp drat    wt  qsec vs am gear carb
+Mazda RX4      21   6  160 110  3.9 2.620 16.46  0  1    4    4
+Mazda RX4 Wag  21   6  160 110  3.9 2.875 17.02  0  1    4    4</code></pre>
+</div>
+</div>
+<p>Operador <code>!=</code> diferente</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>mtcars[mtcars<span class="sc">$</span>mpg<span class="sc">!=</span><span class="dv">21</span>,<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">4</span><span class="sc">:</span><span class="dv">6</span>)]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                     mpg  hp drat    wt
+Datsun 710          22.8  93 3.85 2.320
+Hornet 4 Drive      21.4 110 3.08 3.215
+Hornet Sportabout   18.7 175 3.15 3.440
+Valiant             18.1 105 2.76 3.460
+Duster 360          14.3 245 3.21 3.570
+Merc 240D           24.4  62 3.69 3.190
+Merc 230            22.8  95 3.92 3.150
+Merc 280            19.2 123 3.92 3.440
+Merc 280C           17.8 123 3.92 3.440
+Merc 450SE          16.4 180 3.07 4.070
+Merc 450SL          17.3 180 3.07 3.730
+Merc 450SLC         15.2 180 3.07 3.780
+Cadillac Fleetwood  10.4 205 2.93 5.250
+Lincoln Continental 10.4 215 3.00 5.424
+Chrysler Imperial   14.7 230 3.23 5.345
+Fiat 128            32.4  66 4.08 2.200
+Honda Civic         30.4  52 4.93 1.615
+Toyota Corolla      33.9  65 4.22 1.835
+Toyota Corona       21.5  97 3.70 2.465
+Dodge Challenger    15.5 150 2.76 3.520
+AMC Javelin         15.2 150 3.15 3.435
+Camaro Z28          13.3 245 3.73 3.840
+Pontiac Firebird    19.2 175 3.08 3.845
+Fiat X1-9           27.3  66 4.08 1.935
+Porsche 914-2       26.0  91 4.43 2.140
+Lotus Europa        30.4 113 3.77 1.513
+Ford Pantera L      15.8 264 4.22 3.170
+Ferrari Dino        19.7 175 3.62 2.770
+Maserati Bora       15.0 335 3.54 3.570
+Volvo 142E          21.4 109 4.11 2.780</code></pre>
+</div>
+</div>
+<p>Operador <code>|</code> or (o)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>mtcars[<span class="fu">which</span>(mtcars<span class="sc">$</span>mpg<span class="sc">==</span><span class="dv">21</span> <span class="sc">|</span> mtcars<span class="sc">$</span>mpg<span class="sc">==</span><span class="fl">22.8</span>),<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>               mpg cyl  disp
+Mazda RX4     21.0   6 160.0
+Mazda RX4 Wag 21.0   6 160.0
+Datsun 710    22.8   4 108.0
+Merc 230      22.8   4 140.8</code></pre>
+</div>
+</div>
+</section>
+<section id="data-frame-a-trabajar" class="level2">
+<h2 class="anchored" data-anchor-id="data-frame-a-trabajar">Data Frame a Trabajar</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># View(datasets::LifeCycleSavings)</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<pre><code>Sobre el contenido de la df: según la hipótesis del ahorro a lo largo del ciclo vital desarrollada por Franco Modigliani, el coeficiente de ahorro (ahorro personal agregado dividido por la renta disponible) se explica por la renta disponible per cápita, la tasa porcentual de variación de la renta disponible per cápita y dos variables demográficas: el porcentaje de población menor de 15 años y el porcentaje de población mayor de 75 años. Los datos se promedian a lo largo de la década 1960-1970 para eliminar el ciclo económico u otras fluctuaciones a corto plazo</code></pre>
+</section>
+<section id="asignar-a-una-variable-la-df" class="level2">
+<h2 class="anchored" data-anchor-id="asignar-a-una-variable-la-df">Asignar a una variable la DF</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>df_ahorro <span class="ot">&lt;-</span> datasets<span class="sc">::</span>LifeCycleSavings</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_ahorro, <span class="dv">8</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             sr pop15 pop75     dpi ddpi
+Australia 11.43 29.35  2.87 2329.68 2.87
+Austria   12.07 23.32  4.41 1507.99 3.93
+Belgium   13.17 23.80  4.43 2108.47 3.82
+Bolivia    5.75 41.89  1.67  189.13 0.22
+Brazil    12.88 42.19  0.83  728.47 4.56
+Canada     8.79 31.72  2.85 2982.88 2.43
+Chile      0.60 39.74  1.34  662.86 2.67
+China     11.90 44.75  0.67  289.52 6.51</code></pre>
+</div>
+</div>
+</section>
+<section id="inspección-data-frame" class="level2">
+<h2 class="anchored" data-anchor-id="inspección-data-frame">Inspección Data Frame</h2>
+<p>Dimensiones</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(df_ahorro)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 50  5</code></pre>
+</div>
+</div>
+<p>Número de columnas</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ncol</span>(df_ahorro)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 5</code></pre>
+</div>
+</div>
+<p>Número de filas</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(df_ahorro)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 50</code></pre>
+</div>
+</div>
+<p>Nombres de las columnas</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(df_ahorro)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "sr"    "pop15" "pop75" "dpi"   "ddpi" </code></pre>
+</div>
+</div>
+<p>Nombres de las filas</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(df_ahorro)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Australia"      "Austria"        "Belgium"        "Bolivia"       
+ [5] "Brazil"         "Canada"         "Chile"          "China"         
+ [9] "Colombia"       "Costa Rica"     "Denmark"        "Ecuador"       
+[13] "Finland"        "France"         "Germany"        "Greece"        
+[17] "Guatamala"      "Honduras"       "Iceland"        "India"         
+[21] "Ireland"        "Italy"          "Japan"          "Korea"         
+[25] "Luxembourg"     "Malta"          "Norway"         "Netherlands"   
+[29] "New Zealand"    "Nicaragua"      "Panama"         "Paraguay"      
+[33] "Peru"           "Philippines"    "Portugal"       "South Africa"  
+[37] "South Rhodesia" "Spain"          "Sweden"         "Switzerland"   
+[41] "Turkey"         "Tunisia"        "United Kingdom" "United States" 
+[45] "Venezuela"      "Zambia"         "Jamaica"        "Uruguay"       
+[49] "Libya"          "Malaysia"      </code></pre>
+</div>
+</div>
+<p>Estructura de un objeto</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(df_ahorro)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   50 obs. of  5 variables:
+ $ sr   : num  11.43 12.07 13.17 5.75 12.88 ...
+ $ pop15: num  29.4 23.3 23.8 41.9 42.2 ...
+ $ pop75: num  2.87 4.41 4.43 1.67 0.83 2.85 1.34 0.67 1.06 1.14 ...
+ $ dpi  : num  2330 1508 2108 189 728 ...
+ $ ddpi : num  2.87 3.93 3.82 0.22 4.56 2.43 2.67 6.51 3.08 2.8 ...</code></pre>
+</div>
+</div>
+<p>Resumen Estadístico</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df_ahorro)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       sr             pop15           pop75            dpi         
+ Min.   : 0.600   Min.   :21.44   Min.   :0.560   Min.   :  88.94  
+ 1st Qu.: 6.970   1st Qu.:26.21   1st Qu.:1.125   1st Qu.: 288.21  
+ Median :10.510   Median :32.58   Median :2.175   Median : 695.66  
+ Mean   : 9.671   Mean   :35.09   Mean   :2.293   Mean   :1106.76  
+ 3rd Qu.:12.617   3rd Qu.:44.06   3rd Qu.:3.325   3rd Qu.:1795.62  
+ Max.   :21.100   Max.   :47.64   Max.   :4.700   Max.   :4001.89  
+      ddpi       
+ Min.   : 0.220  
+ 1st Qu.: 2.002  
+ Median : 3.000  
+ Mean   : 3.758  
+ 3rd Qu.: 4.478  
+ Max.   :16.710  </code></pre>
+</div>
+</div>
+</section>
+<section id="crear-columna-con-nombre-países" class="level2">
+<h2 class="anchored" data-anchor-id="crear-columna-con-nombre-países">Crear columna con nombre países</h2>
+<p>Revisar nombres filas</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rownames</span>(df_ahorro)[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Australia"  "Austria"    "Belgium"    "Bolivia"    "Brazil"    
+ [6] "Canada"     "Chile"      "China"      "Colombia"   "Costa Rica"</code></pre>
+</div>
+</div>
+<p>Asignar nueva columa a la DF</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>df_ahorro<span class="sc">$</span>pais <span class="ot">&lt;-</span> <span class="fu">rownames</span>(df_ahorro)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="crear-columna-con-valor-promedio" class="level2">
+<h2 class="anchored" data-anchor-id="crear-columna-con-valor-promedio">Crear Columna con Valor Promedio</h2>
+<p>Con los valores correspondientes a pop15 y pop75 obtener promedio por cada observación</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>df_ahorro<span class="sc">$</span>edad_promedio <span class="ot">&lt;-</span> <span class="fu">mean</span>(<span class="fu">c</span>(df_ahorro<span class="sc">$</span>pop15, df_ahorro<span class="sc">$</span>pop75))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="inspección-nuevos-atributos" class="level2">
+<h2 class="anchored" data-anchor-id="inspección-nuevos-atributos">Inspección Nuevos Atributos</h2>
+<p>Revisar DF</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_ahorro, <span class="dv">5</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>             sr pop15 pop75     dpi ddpi      pais edad_promedio
+Australia 11.43 29.35  2.87 2329.68 2.87 Australia       18.6913
+Austria   12.07 23.32  4.41 1507.99 3.93   Austria       18.6913
+Belgium   13.17 23.80  4.43 2108.47 3.82   Belgium       18.6913
+Bolivia    5.75 41.89  1.67  189.13 0.22   Bolivia       18.6913
+Brazil    12.88 42.19  0.83  728.47 4.56    Brazil       18.6913</code></pre>
+</div>
+</div>
+</section>
+<section id="funciones-valores-extremos" class="level2">
+<h2 class="anchored" data-anchor-id="funciones-valores-extremos">Funciones Valores Extremos</h2>
+<p>Mínimo en vector</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">min</span>(df_ahorro<span class="sc">$</span>pop15)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 21.44</code></pre>
+</div>
+</div>
+<p>Máximo en vector</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">max</span>(df_ahorro<span class="sc">$</span>pop15)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 47.64</code></pre>
+</div>
+</div>
+</section>
+<section id="importar-en-formato-csv-una-data-frame" class="level2">
+<h2 class="anchored" data-anchor-id="importar-en-formato-csv-una-data-frame">Importar en Formato csv una Data Frame</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>df_gapminder <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">'https://raw.githubusercontent.com/javendaXgh/datos/refs/heads/master/gapminder.csv'</span>) </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_gapminder,<span class="dv">3</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  X     country continent year lifeExp      pop gdpPercap
+1 1 Afghanistan      Asia 1952  28.801  8425333  779.4453
+2 2 Afghanistan      Asia 1957  30.332  9240934  820.8530
+3 3 Afghanistan      Asia 1962  31.997 10267083  853.1007</code></pre>
+</div>
+</div>
+<p>👀: los datos tienen estructura tabular. Observaciones son filas y atributos las columnas</p>
+</section>
+<section id="estructura-gapminder" class="level2">
+<h2 class="anchored" data-anchor-id="estructura-gapminder">Estructura Gapminder</h2>
+<p>Estructura DF</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a href="#cb61-1" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(df_gapminder)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>'data.frame':   1704 obs. of  7 variables:
+ $ X        : int  1 2 3 4 5 6 7 8 9 10 ...
+ $ country  : chr  "Afghanistan" "Afghanistan" "Afghanistan" "Afghanistan" ...
+ $ continent: chr  "Asia" "Asia" "Asia" "Asia" ...
+ $ year     : int  1952 1957 1962 1967 1972 1977 1982 1987 1992 1997 ...
+ $ lifeExp  : num  28.8 30.3 32 34 36.1 ...
+ $ pop      : int  8425333 9240934 10267083 11537966 13079460 14880372 12881816 13867957 16317921 22227415 ...
+ $ gdpPercap: num  779 821 853 836 740 ...</code></pre>
+</div>
+</div>
+</section>
+<section id="tabla-sumario-gapminder" class="level2">
+<h2 class="anchored" data-anchor-id="tabla-sumario-gapminder">Tabla Sumario Gapminder</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df_gapminder)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       X            country           continent              year     
+ Min.   :   1.0   Length:1704        Length:1704        Min.   :1952  
+ 1st Qu.: 426.8   Class :character   Class :character   1st Qu.:1966  
+ Median : 852.5   Mode  :character   Mode  :character   Median :1980  
+ Mean   : 852.5                                         Mean   :1980  
+ 3rd Qu.:1278.2                                         3rd Qu.:1993  
+ Max.   :1704.0                                         Max.   :2007  
+    lifeExp           pop              gdpPercap       
+ Min.   :23.60   Min.   :6.001e+04   Min.   :   241.2  
+ 1st Qu.:48.20   1st Qu.:2.794e+06   1st Qu.:  1202.1  
+ Median :60.71   Median :7.024e+06   Median :  3531.8  
+ Mean   :59.47   Mean   :2.960e+07   Mean   :  7215.3  
+ 3rd Qu.:70.85   3rd Qu.:1.959e+07   3rd Qu.:  9325.5  
+ Max.   :82.60   Max.   :1.319e+09   Max.   :113523.1  </code></pre>
+</div>
+</div>
+<div class="notes">
+<p>Tiene estructura tabular</p>
+</div>
+</section>
+<section id="valores-únicos-por-atributo" class="level2">
+<h2 class="anchored" data-anchor-id="valores-únicos-por-atributo">Valores Únicos por Atributo</h2>
+<p>Países</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(df_gapminder<span class="sc">$</span>country)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  [1] "Afghanistan"              "Albania"                 
+  [3] "Algeria"                  "Angola"                  
+  [5] "Argentina"                "Australia"               
+  [7] "Austria"                  "Bahrain"                 
+  [9] "Bangladesh"               "Belgium"                 
+ [11] "Benin"                    "Bolivia"                 
+ [13] "Bosnia and Herzegovina"   "Botswana"                
+ [15] "Brazil"                   "Bulgaria"                
+ [17] "Burkina Faso"             "Burundi"                 
+ [19] "Cambodia"                 "Cameroon"                
+ [21] "Canada"                   "Central African Republic"
+ [23] "Chad"                     "Chile"                   
+ [25] "China"                    "Colombia"                
+ [27] "Comoros"                  "Congo, Dem. Rep."        
+ [29] "Congo, Rep."              "Costa Rica"              
+ [31] "Cote d'Ivoire"            "Croatia"                 
+ [33] "Cuba"                     "Czech Republic"          
+ [35] "Denmark"                  "Djibouti"                
+ [37] "Dominican Republic"       "Ecuador"                 
+ [39] "Egypt"                    "El Salvador"             
+ [41] "Equatorial Guinea"        "Eritrea"                 
+ [43] "Ethiopia"                 "Finland"                 
+ [45] "France"                   "Gabon"                   
+ [47] "Gambia"                   "Germany"                 
+ [49] "Ghana"                    "Greece"                  
+ [51] "Guatemala"                "Guinea"                  
+ [53] "Guinea-Bissau"            "Haiti"                   
+ [55] "Honduras"                 "Hong Kong, China"        
+ [57] "Hungary"                  "Iceland"                 
+ [59] "India"                    "Indonesia"               
+ [61] "Iran"                     "Iraq"                    
+ [63] "Ireland"                  "Israel"                  
+ [65] "Italy"                    "Jamaica"                 
+ [67] "Japan"                    "Jordan"                  
+ [69] "Kenya"                    "Korea, Dem. Rep."        
+ [71] "Korea, Rep."              "Kuwait"                  
+ [73] "Lebanon"                  "Lesotho"                 
+ [75] "Liberia"                  "Libya"                   
+ [77] "Madagascar"               "Malawi"                  
+ [79] "Malaysia"                 "Mali"                    
+ [81] "Mauritania"               "Mauritius"               
+ [83] "Mexico"                   "Mongolia"                
+ [85] "Montenegro"               "Morocco"                 
+ [87] "Mozambique"               "Myanmar"                 
+ [89] "Namibia"                  "Nepal"                   
+ [91] "Netherlands"              "New Zealand"             
+ [93] "Nicaragua"                "Niger"                   
+ [95] "Nigeria"                  "Norway"                  
+ [97] "Oman"                     "Pakistan"                
+ [99] "Panama"                   "Paraguay"                
+[101] "Peru"                     "Philippines"             
+[103] "Poland"                   "Portugal"                
+[105] "Puerto Rico"              "Reunion"                 
+[107] "Romania"                  "Rwanda"                  
+[109] "Sao Tome and Principe"    "Saudi Arabia"            
+[111] "Senegal"                  "Serbia"                  
+[113] "Sierra Leone"             "Singapore"               
+[115] "Slovak Republic"          "Slovenia"                
+[117] "Somalia"                  "South Africa"            
+[119] "Spain"                    "Sri Lanka"               
+[121] "Sudan"                    "Swaziland"               
+[123] "Sweden"                   "Switzerland"             
+[125] "Syria"                    "Taiwan"                  
+[127] "Tanzania"                 "Thailand"                
+[129] "Togo"                     "Trinidad and Tobago"     
+[131] "Tunisia"                  "Turkey"                  
+[133] "Uganda"                   "United Kingdom"          
+[135] "United States"            "Uruguay"                 
+[137] "Venezuela"                "Vietnam"                 
+[139] "West Bank and Gaza"       "Yemen, Rep."             
+[141] "Zambia"                   "Zimbabwe"                </code></pre>
+</div>
+</div>
+<p>Años</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">unique</span>(df_gapminder<span class="sc">$</span>year)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] 1952 1957 1962 1967 1972 1977 1982 1987 1992 1997 2002 2007</code></pre>
+</div>
+</div>
+</section>
+<section id="dplyr-de-batalla" class="level2">
+<h2 class="anchored" data-anchor-id="dplyr-de-batalla">DPLYR (🏇🏽 de batalla)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="dplyr-filtrado" class="level2">
+<h2 class="anchored" data-anchor-id="dplyr-filtrado">DPLYR / Filtrado</h2>
+<p>Función <code>filter</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a>df_venezuela <span class="ot">&lt;-</span> df_gapminder <span class="sc">%&gt;%</span></span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(country<span class="sc">==</span><span class="st">'Venezuela'</span>)</span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a>df_venezuela</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      X   country continent year lifeExp      pop gdpPercap
+1  1633 Venezuela  Americas 1952  55.088  5439568  7689.800
+2  1634 Venezuela  Americas 1957  57.907  6702668  9802.467
+3  1635 Venezuela  Americas 1962  60.770  8143375  8422.974
+4  1636 Venezuela  Americas 1967  63.479  9709552  9541.474
+5  1637 Venezuela  Americas 1972  65.712 11515649 10505.260
+6  1638 Venezuela  Americas 1977  67.456 13503563 13143.951
+7  1639 Venezuela  Americas 1982  68.557 15620766 11152.410
+8  1640 Venezuela  Americas 1987  70.190 17910182  9883.585
+9  1641 Venezuela  Americas 1992  71.150 20265563 10733.926
+10 1642 Venezuela  Americas 1997  72.146 22374398 10165.495
+11 1643 Venezuela  Americas 2002  72.766 24287670  8605.048
+12 1644 Venezuela  Americas 2007  73.747 26084662 11415.806</code></pre>
+</div>
+</div>
+</section>
+<section id="revisar-tabla-venezuela" class="level2">
+<h2 class="anchored" data-anchor-id="revisar-tabla-venezuela">Revisar Tabla Venezuela</h2>
+<p>Tabla sumario</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df_venezuela)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       X          country           continent              year     
+ Min.   :1633   Length:12          Length:12          Min.   :1952  
+ 1st Qu.:1636   Class :character   Class :character   1st Qu.:1966  
+ Median :1638   Mode  :character   Mode  :character   Median :1980  
+ Mean   :1638                                         Mean   :1980  
+ 3rd Qu.:1641                                         3rd Qu.:1993  
+ Max.   :1644                                         Max.   :2007  
+    lifeExp           pop             gdpPercap    
+ Min.   :55.09   Min.   : 5439568   Min.   : 7690  
+ 1st Qu.:62.80   1st Qu.: 9318008   1st Qu.: 9307  
+ Median :68.01   Median :14562164   Median :10025  
+ Mean   :66.58   Mean   :15129801   Mean   :10089  
+ 3rd Qu.:71.40   3rd Qu.:20792772   3rd Qu.:10839  
+ Max.   :73.75   Max.   :26084662   Max.   :13144  </code></pre>
+</div>
+</div>
+</section>
+<section id="juntar-dfs" class="level2">
+<h2 class="anchored" data-anchor-id="juntar-dfs">Juntar DF´s</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>df_colombia <span class="ot">&lt;-</span> df_gapminder <span class="sc">%&gt;%</span></span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(country<span class="sc">==</span><span class="st">'Colombia'</span>)</span>
+<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb74-4"><a href="#cb74-4" aria-hidden="true" tabindex="-1"></a>df_colombia</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     X  country continent year lifeExp      pop gdpPercap
+1  301 Colombia  Americas 1952  50.643 12350771  2144.115
+2  302 Colombia  Americas 1957  55.118 14485993  2323.806
+3  303 Colombia  Americas 1962  57.863 17009885  2492.351
+4  304 Colombia  Americas 1967  59.963 19764027  2678.730
+5  305 Colombia  Americas 1972  61.623 22542890  3264.660
+6  306 Colombia  Americas 1977  63.837 25094412  3815.808
+7  307 Colombia  Americas 1982  66.653 27764644  4397.576
+8  308 Colombia  Americas 1987  67.768 30964245  4903.219
+9  309 Colombia  Americas 1992  68.421 34202721  5444.649
+10 310 Colombia  Americas 1997  70.313 37657830  6117.362
+11 311 Colombia  Americas 2002  71.682 41008227  5755.260
+12 312 Colombia  Americas 2007  72.889 44227550  7006.580</code></pre>
+</div>
+</div>
+</section>
+<section id="combinar-dfs" class="level2">
+<h2 class="anchored" data-anchor-id="combinar-dfs">Combinar DF’s</h2>
+<p>Función <code>bind_rows</code></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>df_gran_colombia <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(df_venezuela,</span>
+<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a>                              df_colombia )</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="revisar-nueva-df" class="level2">
+<h2 class="anchored" data-anchor-id="revisar-nueva-df">Revisar Nueva DF</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>df_gran_colombia</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      X   country continent year lifeExp      pop gdpPercap
+1  1633 Venezuela  Americas 1952  55.088  5439568  7689.800
+2  1634 Venezuela  Americas 1957  57.907  6702668  9802.467
+3  1635 Venezuela  Americas 1962  60.770  8143375  8422.974
+4  1636 Venezuela  Americas 1967  63.479  9709552  9541.474
+5  1637 Venezuela  Americas 1972  65.712 11515649 10505.260
+6  1638 Venezuela  Americas 1977  67.456 13503563 13143.951
+7  1639 Venezuela  Americas 1982  68.557 15620766 11152.410
+8  1640 Venezuela  Americas 1987  70.190 17910182  9883.585
+9  1641 Venezuela  Americas 1992  71.150 20265563 10733.926
+10 1642 Venezuela  Americas 1997  72.146 22374398 10165.495
+11 1643 Venezuela  Americas 2002  72.766 24287670  8605.048
+12 1644 Venezuela  Americas 2007  73.747 26084662 11415.806
+13  301  Colombia  Americas 1952  50.643 12350771  2144.115
+14  302  Colombia  Americas 1957  55.118 14485993  2323.806
+15  303  Colombia  Americas 1962  57.863 17009885  2492.351
+16  304  Colombia  Americas 1967  59.963 19764027  2678.730
+17  305  Colombia  Americas 1972  61.623 22542890  3264.660
+18  306  Colombia  Americas 1977  63.837 25094412  3815.808
+19  307  Colombia  Americas 1982  66.653 27764644  4397.576
+20  308  Colombia  Americas 1987  67.768 30964245  4903.219
+21  309  Colombia  Americas 1992  68.421 34202721  5444.649
+22  310  Colombia  Americas 1997  70.313 37657830  6117.362
+23  311  Colombia  Americas 2002  71.682 41008227  5755.260
+24  312  Colombia  Americas 2007  72.889 44227550  7006.580</code></pre>
+</div>
+</div>
+</section>
+<section id="continuar-inspección" class="level2">
+<h2 class="anchored" data-anchor-id="continuar-inspección">Continuar Inspección…</h2>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiado");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiado");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/ucveconomiar4ds\.netlify\.app");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p><a href="http://www.ucv.ve/economia"><img src="images/escuelaeconomiawbg.png" class="img-fluid" alt="Escuela de Economía" width="75"></a></p>
+</div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+<p>Este sitio fue elaborado con <a href="https://quarto.org/">Quarto</a> inspirado en el site <a href="https://mine-cr.com/teaching/sta199/">sta199 de Mine Çetinkaya-Rundel</a></p>
+</div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

@@ -138,8 +138,9 @@ df_gapminder_csv%>%
 ```{r}
 df_gapminder_csv %>% 
   group_by(country) %>% 
-  reframe(max_gdp = max(gdpPercap), year) %>% 
-  arrange(desc(max_gdp))
+  reframe(max_gdp = max(gdpPercap), year, gdpPercap) %>% 
+  arrange(desc(max_gdp))%>%
+  print(n=36) 
 
 ```
 
