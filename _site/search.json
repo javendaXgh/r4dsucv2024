@@ -468,7 +468,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\nAsignar Nombres Objetos y Variables\n🖥️ láminas clase 03 apoyo  💻 clase 3 apoyo versión qmd \n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n🖥️ láminas clase 04  💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\nConstruir Funciones y Data Frames\n🖥️ láminas clase 06  💻 clase 6 versión qmd  🖥️ clase 6 versión códigos  💻 clase 6: práctica 1- versión qmd  💻 clase 6: práctica 1- versión site  🎥video render Quarto 💻 clase 6: práctica 2- versión qmd  💻 clase 6: práctica 2- versión site \n\n\n\n\nmié, 6 nov.\nDF subsetting; Ayudas\n🖥️ láminas clase 07 💻 clase 7: tarea \n\n\n4\nlun, 11 nov.\nInspección DF´s / Seleccionar Valores, Subsettings-cont\n🖥️ láminas clase 08 🖥️ clase 08, versión reporte 💻 clase 8 versión qmd  💻 clase 8: tarea \n\n\n\n\nmié, 13 nov.\nPaths o Rutas de trabajo\n🖥️ láminas clase 09\n\n\n5\nlun, 18 nov.\nTrabajando con Data Frames por filas\n🖥️ láminas clase 10\n\n\n\n\nmié, 20 nov.\nTrabajando con Data Frames por columnas\n🖥️ láminas clase 11 💻 clase 11 versión qmd \n\n\n6\nlun, 25 nov.\nTrabajando con Data Frames: agrupamientos y Reframes\n🖥️ láminas clase 12 💻 clase 12 script  🖥️ clase 12, versión reporte 💻 clase 12 versión qmd \n\n\n\n\nmié, 27 nov.\nTrabajando con Data Frames: agrupamientos y Reframes/ Asignación Ensayo\n💻 clase 13 script  🖥️ clase 13, versión reporte 💻 clase 13 versión qmd \n\n\n\n\nvie, 29 nov.\n(remota) Coerce, trabajando con NA´s\n\n\n\n\n7\nlun, 2 dic.\nTrabajando con Data Frames: Formatos Long y Wide, pivoteo\n\n\n\n\n\n\nmié, 4 dic.\nFamilia de Funciones Applys\n\n\n\n\n\n\nvie, 6 dic.\n(remota) Trabajando con fechas\n\n\n\n\n8\nlun, 9 dic.\nVisualizacion Datos Entrada, Análisis Exploratorio de Datos (EDA)\n\n\n\n\n\n\nmié, 11 dic.\nVisualizáción - 2 da parte\n\n\n\n\n\n\nvie, 13 dic.\n(remota voluntaria) Trabajando con strings\n\n\n\n\n9\nvie, 8 nov.\nRepaso / purrr (vectorización)/Lectura en Bucle\n\n\n\n\n10\nlun, 13 ene.\nReportes/Tablas DT y GT/Nombres Columnas /Presentacion Preproyecto\n\n\n\n\n\n\nmié, 15 ene.\nDashboard\n\n\n\n\n\n\nvie, 17 ene.\n(remota voluntaria) dashboard segunda parte\n\n\n\n\n11\nlun, 20 ene.\nConexiones API´s, Scrapy\n\n\n\n\n\n\nmié, 22 ene.\nAplicaciones Web Interactivas: Shiny\n\n\n\n\n\n\nsáb, 25 ene.\n(remota voluntaria) Shiny segunda parte\n\n\n\n\n12\nlun, 27 ene.\nClustering, Reglas Asociación (sujeta a modificación según avances en el curso)\n\n\n\n\n\n\nmié, 29 ene.\nAutomatizacion Jobs, Github Actions (sujeta a modificación según avances en el curso)\n\n\n\n\n\n\nvie, 31 ene.\n(remota voluntaria) Publicacion: Reportes , ShinyApps\n\n\n\n\n13\nlun, 3 feb.\nRevisión Preliminar Proyectos\n\n\n\n\n\n\nmié, 5 feb.\nConexiones a DB´s, lectura y escritura\n\n\n\n\n14\nlun, 10 feb.\nJoins de DF´s\n\n\n\n\n\n\nmié, 12 feb.\nPresentacion Proyecto",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\nAsignar Nombres Objetos y Variables\n🖥️ láminas clase 03 apoyo  💻 clase 3 apoyo versión qmd \n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n🖥️ láminas clase 04  💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\nConstruir Funciones y Data Frames\n🖥️ láminas clase 06  💻 clase 6 versión qmd  🖥️ clase 6 versión códigos  💻 clase 6: práctica 1- versión qmd  💻 clase 6: práctica 1- versión site  🎥video render Quarto 💻 clase 6: práctica 2- versión qmd  💻 clase 6: práctica 2- versión site \n\n\n\n\nmié, 6 nov.\nDF subsetting; Ayudas\n🖥️ láminas clase 07 💻 clase 7: tarea \n\n\n4\nlun, 11 nov.\nInspección DF´s / Seleccionar Valores, Subsettings-cont\n🖥️ láminas clase 08 🖥️ clase 08, versión reporte 💻 clase 8 versión qmd  💻 clase 8: tarea \n\n\n\n\nmié, 13 nov.\nPaths o Rutas de trabajo\n🖥️ láminas clase 09\n\n\n5\nlun, 18 nov.\nTrabajando con Data Frames por filas\n🖥️ láminas clase 10\n\n\n\n\nmié, 20 nov.\nTrabajando con Data Frames por columnas\n🖥️ láminas clase 11 💻 clase 11 versión qmd \n\n\n6\nlun, 25 nov.\nTrabajando con Data Frames: agrupamientos y Reframes\n🖥️ láminas clase 12 💻 clase 12 script  🖥️ clase 12, versión reporte 💻 clase 12 versión qmd \n\n\n\n\nmié, 27 nov.\nTrabajando con Data Frames: Agrupamientos y Reframes/ Asignación Ensayo\n💻 clase 13 script  🖥️ clase 13, versión reporte 💻 clase 13 versión qmd \n\n\n7\nlun, 2 dic.\nTrabajando con Data Frames: factores, selects, remoción duplicados\n🖥️ láminas clase 14 💻 clase 14 script \n\n\n\n\nmié, 4 dic.\nFamilia de Funciones Applys\n\n\n\n\n\n\nvie, 6 dic.\n(remota) por definir: trabajando con fechas\n\n\n\n\n8\nlun, 9 dic.\nVisualizacion Datos, Análisis Exploratorio de Datos (EDA)\n\n\n\n\n\n\nmié, 11 dic.\nUsando R para Análisis Económico\n\n\n\n\n\n\nvie, 13 dic.\n(remota voluntaria) Trabajando con strings\n\n\n\n\n9\nvie, 8 nov.\nFormatos Long y Wide de datos / purrr (vectorización)/Lectura en Bucle\n\n\n\n\n10\nlun, 13 ene.\nReportes/Tablas DT y GT/Nombres Columnas /Presentacion Preproyecto\n\n\n\n\n\n\nmié, 15 ene.\nDashboard\n\n\n\n\n\n\nvie, 17 ene.\n(remota voluntaria) dashboard segunda parte\n\n\n\n\n11\nlun, 20 ene.\nConexiones API´s, Scrapy\n\n\n\n\n\n\nmié, 22 ene.\nAplicaciones Web Interactivas: Shiny\n\n\n\n\n\n\nsáb, 25 ene.\n(remota voluntaria) Shiny segunda parte\n\n\n\n\n12\nlun, 27 ene.\nClustering, Reglas Asociación (sujeta a modificación según avances en el curso)\n\n\n\n\n\n\nmié, 29 ene.\nAutomatizacion Jobs, Github Actions (sujeta a modificación según avances en el curso)\n\n\n\n\n\n\nvie, 31 ene.\n(remota voluntaria) Publicacion: Reportes , ShinyApps\n\n\n\n\n13\nlun, 3 feb.\nRevisión Preliminar Proyectos\n\n\n\n\n\n\nmié, 5 feb.\nConexiones a DB´s, lectura y escritura\n\n\n\n\n14\nlun, 10 feb.\nJoins de DF´s\n\n\n\n\n\n\nmié, 12 feb.\nPresentacion Proyecto",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -4087,7 +4087,7 @@
     "href": "practicas/clase13.html#cargar-datos-y-paquetes",
     "title": "Clase 13- Agrupamientos, Reframes, RL",
     "section": "Cargar Datos y Paquetes",
-    "text": "Cargar Datos y Paquetes"
+    "text": "Cargar Datos y Paquetes\n\nlibrary(tidyverse)\n\ndf_gapminder_csv &lt;- read.csv('https://raw.githubusercontent.com/javendaXgh/datos/refs/heads/master/gapminder.csv')%&gt;%\n  select(-X)%&gt;%\n  as_tibble()"
   },
   {
     "objectID": "practicas/clase13.html#obtener-keys-del-agrupamiento",
@@ -4129,7 +4129,7 @@
     "href": "practicas/clase13.html#obtener-por-país-maximo-gdp-indicando-el-año-en-que-lo-tuvo",
     "title": "Clase 13- Agrupamientos, Reframes, RL",
     "section": "6) obtener por país maximo gdp indicando el año en que lo tuvo",
-    "text": "6) obtener por país maximo gdp indicando el año en que lo tuvo\n\n6.1) Aproximaciones para resolver el problema\n\n6.1.1)\n\ndf_gapminder_csv%&gt;%\n  group_by(country)%&gt;%\n  reframe(valor=max(gdpPercap))\n\n# A tibble: 142 × 2\n   country      valor\n   &lt;chr&gt;        &lt;dbl&gt;\n 1 Afghanistan   978.\n 2 Albania      5937.\n 3 Algeria      6223.\n 4 Angola       5523.\n 5 Argentina   12779.\n 6 Australia   34435.\n 7 Austria     36126.\n 8 Bahrain     29796.\n 9 Bangladesh   1391.\n10 Belgium     33693.\n# ℹ 132 more rows\n\n\n\n\n6.1.2)\n\ndf_gapminder_csv %&gt;% \n  group_by(country) %&gt;% \n  reframe(max_gdp = max(gdpPercap), year, gdpPercap) %&gt;% \n  arrange(desc(max_gdp))%&gt;%\n  print(n=36)\n\n# A tibble: 1,704 × 4\n   country   max_gdp  year gdpPercap\n   &lt;chr&gt;       &lt;dbl&gt; &lt;int&gt;     &lt;dbl&gt;\n 1 Kuwait    113523.  1952   108382.\n 2 Kuwait    113523.  1957   113523.\n 3 Kuwait    113523.  1962    95458.\n 4 Kuwait    113523.  1967    80895.\n 5 Kuwait    113523.  1972   109348.\n 6 Kuwait    113523.  1977    59265.\n 7 Kuwait    113523.  1982    31354.\n 8 Kuwait    113523.  1987    28118.\n 9 Kuwait    113523.  1992    34933.\n10 Kuwait    113523.  1997    40301.\n11 Kuwait    113523.  2002    35110.\n12 Kuwait    113523.  2007    47307.\n13 Norway     49357.  1952    10095.\n14 Norway     49357.  1957    11654.\n15 Norway     49357.  1962    13450.\n16 Norway     49357.  1967    16362.\n17 Norway     49357.  1972    18965.\n18 Norway     49357.  1977    23311.\n19 Norway     49357.  1982    26299.\n20 Norway     49357.  1987    31541.\n21 Norway     49357.  1992    33966.\n22 Norway     49357.  1997    41283.\n23 Norway     49357.  2002    44684.\n24 Norway     49357.  2007    49357.\n25 Singapore  47143.  1952     2315.\n26 Singapore  47143.  1957     2843.\n27 Singapore  47143.  1962     3675.\n28 Singapore  47143.  1967     4977.\n29 Singapore  47143.  1972     8598.\n30 Singapore  47143.  1977    11210.\n31 Singapore  47143.  1982    15169.\n32 Singapore  47143.  1987    18862.\n33 Singapore  47143.  1992    24770.\n34 Singapore  47143.  1997    33519.\n35 Singapore  47143.  2002    36023.\n36 Singapore  47143.  2007    47143.\n# ℹ 1,668 more rows\n\n\n\n\n\n6.2) Mezcla RBase (which.max) con dplyr\n\ndf_gapminder_csv%&gt;%\n  group_by(country)%&gt;%\n  reframe(valor=max(gdpPercap),\n          year_max_gdpPercap = year[which.max(gdpPercap)])%&gt;%\n  arrange(desc(valor))#%&gt;%\n\n# A tibble: 142 × 3\n   country            valor year_max_gdpPercap\n   &lt;chr&gt;              &lt;dbl&gt;              &lt;int&gt;\n 1 Kuwait           113523.               1957\n 2 Norway            49357.               2007\n 3 Singapore         47143.               2007\n 4 United States     42952.               2007\n 5 Ireland           40676.               2007\n 6 Hong Kong, China  39725.               2007\n 7 Switzerland       37506.               2007\n 8 Netherlands       36798.               2007\n 9 Canada            36319.               2007\n10 Iceland           36181.               2007\n# ℹ 132 more rows\n\n  # filter(year_max_gdpPercap!=2007)\n\n\n\n6.3) Enfoque alternativo con mezcla RBase (which) con dplyr\n\ndf_gapminder_csv%&gt;%\n  group_by(country)%&gt;%\n  reframe(valor=max(gdpPercap),\n          year_max_gdpPercap = year[which(gdpPercap==max(gdpPercap))])%&gt;%\n  arrange(desc(valor))%&gt;%\n  filter(year_max_gdpPercap!=2007)\n\n# A tibble: 40 × 3\n   country        valor year_max_gdpPercap\n   &lt;chr&gt;          &lt;dbl&gt;              &lt;int&gt;\n 1 Kuwait       113523.               1957\n 2 Saudi Arabia  34168.               1977\n 3 Libya         21951.               1977\n 4 Gabon         21746.               1977\n 5 Serbia        15871.               1987\n 6 Iraq          14688.               1977\n 7 Venezuela     13144.               1977\n 8 Iran          11889.               1977\n 9 Montenegro    11733.               1987\n10 Jamaica        7434.               1972\n# ℹ 30 more rows\n\n\n\n\n6.4) Enfoque con con filter\n\ndf_gapminder_csv%&gt;%\n  group_by(country)%&gt;%\n  filter(gdpPercap==max(gdpPercap))%&gt;%\n  select(country, year, gdpPercap)%&gt;%\n  arrange(desc(gdpPercap))%&gt;%\n  filter(year!=2007)\n\n# A tibble: 40 × 3\n# Groups:   country [40]\n   country       year gdpPercap\n   &lt;chr&gt;        &lt;int&gt;     &lt;dbl&gt;\n 1 Kuwait        1957   113523.\n 2 Saudi Arabia  1977    34168.\n 3 Libya         1977    21951.\n 4 Gabon         1977    21746.\n 5 Serbia        1987    15871.\n 6 Iraq          1977    14688.\n 7 Venezuela     1977    13144.\n 8 Iran          1977    11889.\n 9 Montenegro    1987    11733.\n10 Jamaica       1972     7434.\n# ℹ 30 more rows\n\n\n\n\n6.5) Obtener índices\n\ndf_gapminder_csv%&gt;%\n  group_by(country)%&gt;%\n  filter(gdpPercap==max(gdpPercap))%&gt;%\n  select(country, year, gdpPercap)%&gt;%\n  arrange(desc(gdpPercap))%&gt;%\n  filter(year!=2007)%&gt;%\n  group_indices()\n\n [1] 22 32 24 13 33 19 37 18 26 20 11 38  2 27  8 29 21 10  9  4 17  6 31 39 25\n[26] 36 34 35  5 28  1 15 12  7 14 30 16 23 40  3"
+    "text": "6) obtener por país maximo gdp indicando el año en que lo tuvo\n\n6.1) Aproximaciones para resolver el problema\n\n6.1.1)\n\ndf_gapminder_csv%&gt;%\n  group_by(country)%&gt;%\n  reframe(valor=max(gdpPercap))\n\n# A tibble: 142 × 2\n   country      valor\n   &lt;chr&gt;        &lt;dbl&gt;\n 1 Afghanistan   978.\n 2 Albania      5937.\n 3 Algeria      6223.\n 4 Angola       5523.\n 5 Argentina   12779.\n 6 Australia   34435.\n 7 Austria     36126.\n 8 Bahrain     29796.\n 9 Bangladesh   1391.\n10 Belgium     33693.\n# ℹ 132 more rows\n\n\n\n\n6.1.2)\n\ndf_gapminder_csv %&gt;% \n  group_by(country) %&gt;% \n  reframe(max_gdp = max(gdpPercap), year, gdpPercap) %&gt;% \n  arrange(desc(max_gdp))%&gt;%\n  print(n=36) \n\n# A tibble: 1,704 × 4\n   country   max_gdp  year gdpPercap\n   &lt;chr&gt;       &lt;dbl&gt; &lt;int&gt;     &lt;dbl&gt;\n 1 Kuwait    113523.  1952   108382.\n 2 Kuwait    113523.  1957   113523.\n 3 Kuwait    113523.  1962    95458.\n 4 Kuwait    113523.  1967    80895.\n 5 Kuwait    113523.  1972   109348.\n 6 Kuwait    113523.  1977    59265.\n 7 Kuwait    113523.  1982    31354.\n 8 Kuwait    113523.  1987    28118.\n 9 Kuwait    113523.  1992    34933.\n10 Kuwait    113523.  1997    40301.\n11 Kuwait    113523.  2002    35110.\n12 Kuwait    113523.  2007    47307.\n13 Norway     49357.  1952    10095.\n14 Norway     49357.  1957    11654.\n15 Norway     49357.  1962    13450.\n16 Norway     49357.  1967    16362.\n17 Norway     49357.  1972    18965.\n18 Norway     49357.  1977    23311.\n19 Norway     49357.  1982    26299.\n20 Norway     49357.  1987    31541.\n21 Norway     49357.  1992    33966.\n22 Norway     49357.  1997    41283.\n23 Norway     49357.  2002    44684.\n24 Norway     49357.  2007    49357.\n25 Singapore  47143.  1952     2315.\n26 Singapore  47143.  1957     2843.\n27 Singapore  47143.  1962     3675.\n28 Singapore  47143.  1967     4977.\n29 Singapore  47143.  1972     8598.\n30 Singapore  47143.  1977    11210.\n31 Singapore  47143.  1982    15169.\n32 Singapore  47143.  1987    18862.\n33 Singapore  47143.  1992    24770.\n34 Singapore  47143.  1997    33519.\n35 Singapore  47143.  2002    36023.\n36 Singapore  47143.  2007    47143.\n# ℹ 1,668 more rows\n\n\n\n\n\n6.2) Mezcla RBase (which.max) con dplyr\n\ndf_gapminder_csv%&gt;%\n  group_by(country)%&gt;%\n  reframe(valor=max(gdpPercap),\n          year_max_gdpPercap = year[which.max(gdpPercap)])%&gt;%\n  arrange(desc(valor))#%&gt;%\n\n# A tibble: 142 × 3\n   country            valor year_max_gdpPercap\n   &lt;chr&gt;              &lt;dbl&gt;              &lt;int&gt;\n 1 Kuwait           113523.               1957\n 2 Norway            49357.               2007\n 3 Singapore         47143.               2007\n 4 United States     42952.               2007\n 5 Ireland           40676.               2007\n 6 Hong Kong, China  39725.               2007\n 7 Switzerland       37506.               2007\n 8 Netherlands       36798.               2007\n 9 Canada            36319.               2007\n10 Iceland           36181.               2007\n# ℹ 132 more rows\n\n  # filter(year_max_gdpPercap!=2007)\n\n\n\n6.3) Enfoque alternativo con mezcla RBase (which) con dplyr\n\ndf_gapminder_csv%&gt;%\n  group_by(country)%&gt;%\n  reframe(valor=max(gdpPercap),\n          year_max_gdpPercap = year[which(gdpPercap==max(gdpPercap))])%&gt;%\n  arrange(desc(valor))%&gt;%\n  filter(year_max_gdpPercap!=2007)\n\n# A tibble: 40 × 3\n   country        valor year_max_gdpPercap\n   &lt;chr&gt;          &lt;dbl&gt;              &lt;int&gt;\n 1 Kuwait       113523.               1957\n 2 Saudi Arabia  34168.               1977\n 3 Libya         21951.               1977\n 4 Gabon         21746.               1977\n 5 Serbia        15871.               1987\n 6 Iraq          14688.               1977\n 7 Venezuela     13144.               1977\n 8 Iran          11889.               1977\n 9 Montenegro    11733.               1987\n10 Jamaica        7434.               1972\n# ℹ 30 more rows\n\n\n\n\n6.4) Enfoque con con filter\n\ndf_gapminder_csv%&gt;%\n  group_by(country)%&gt;%\n  filter(gdpPercap==max(gdpPercap))%&gt;%\n  select(country, year, gdpPercap)%&gt;%\n  arrange(desc(gdpPercap))%&gt;%\n  filter(year!=2007)\n\n# A tibble: 40 × 3\n# Groups:   country [40]\n   country       year gdpPercap\n   &lt;chr&gt;        &lt;int&gt;     &lt;dbl&gt;\n 1 Kuwait        1957   113523.\n 2 Saudi Arabia  1977    34168.\n 3 Libya         1977    21951.\n 4 Gabon         1977    21746.\n 5 Serbia        1987    15871.\n 6 Iraq          1977    14688.\n 7 Venezuela     1977    13144.\n 8 Iran          1977    11889.\n 9 Montenegro    1987    11733.\n10 Jamaica       1972     7434.\n# ℹ 30 more rows\n\n\n\n\n6.5) Obtener índices\n\ndf_gapminder_csv%&gt;%\n  group_by(country)%&gt;%\n  filter(gdpPercap==max(gdpPercap))%&gt;%\n  select(country, year, gdpPercap)%&gt;%\n  arrange(desc(gdpPercap))%&gt;%\n  filter(year!=2007)%&gt;%\n  group_indices()\n\n [1] 22 32 24 13 33 19 37 18 26 20 11 38  2 27  8 29 21 10  9  4 17  6 31 39 25\n[26] 36 34 35  5 28  1 15 12  7 14 30 16 23 40  3"
   },
   {
     "objectID": "practicas/clase13.html#regresión-lineal-predecir-lifeexp-dado-el-gdppercap",
@@ -4151,5 +4151,108 @@
     "title": "UCV EconomíaR4DS",
     "section": "",
     "text": "Links\nRutas\n\nrelatiovas\nabsolutas\n\nExplorador window\nComprimir, descomprimir\nDescargas\nCrear carpetas\nOrdenar espacio de trabajo"
+  },
+  {
+    "objectID": "practicas/clase14.html",
+    "href": "practicas/clase14.html",
+    "title": "Clase 14- DPLYR 3",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(gapminder)",
+    "crumbs": [
+      "Prácticas",
+      "clase 14 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase14.html#cargar-librerías",
+    "href": "practicas/clase14.html#cargar-librerías",
+    "title": "Clase 14- DPLYR 3",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(gapminder)",
+    "crumbs": [
+      "Prácticas",
+      "clase 14 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "practicas/clase14.html#cargar-conjuntos-de-datos",
+    "href": "practicas/clase14.html#cargar-conjuntos-de-datos",
+    "title": "Clase 14- DPLYR 3",
+    "section": "Cargar Conjuntos de Datos",
+    "text": "Cargar Conjuntos de Datos\n\ndf_gapminder_csv &lt;- read.csv('https://raw.githubusercontent.com/javendaXgh/datos/refs/heads/master/gapminder.csv')%&gt;%\n  select(-X)%&gt;%\n  as_tibble()\n\ndf_gapminder &lt;- gapminder\n\ndf_gastosaludmundial &lt;- read.csv('https://raw.githubusercontent.com/UCVeconomia2024-2/scripts/refs/heads/main/data_in/clase_12/IHME/IHME_HEALTH_SPENDING_1995_2021/IHME_HEALTH_SPENDING_1995_2021_Y2024M07D23.CSV')\n\n# info sobre este conjunto de datos disponible en\n#https://ghdx.healthdata.org/record/ihme-data/global-health-spending-1995-2021\n#https://github.com/UCVeconomia2024-2/scripts/tree/main/data_in/clase_12/IHME",
+    "crumbs": [
+      "Prácticas",
+      "clase 14 / versión reporte"
+    ]
+  },
+  {
+    "objectID": "clases/clase_14.html#objetivo",
+    "href": "clases/clase_14.html#objetivo",
+    "title": "Clase 14- DPLYR 3",
+    "section": "Objetivo:",
+    "text": "Objetivo:\n\nUsar funciones de dplyr para poder remover duplicados, seleccionar columnas\nUso de factores para datos categóricos"
+  },
+  {
+    "objectID": "clases/clase_14.html#varios-y-puntos-pendientes",
+    "href": "clases/clase_14.html#varios-y-puntos-pendientes",
+    "title": "Clase 14- DPLYR 3",
+    "section": "Varios y Puntos Pendientes",
+    "text": "Varios y Puntos Pendientes\n\nEntrega de ensayo idealmente antes del 11 de diciembre\nContenido ensayo:\n\nQué es de su interés\nLecturas y vista de materiales recomendados\n\nConformación grupos Proyecto\nReinicio actividades 8/1/25 - plan contingencia"
+  },
+  {
+    "objectID": "clases/clase_14.html#varios-y-puntos-pendientes-2",
+    "href": "clases/clase_14.html#varios-y-puntos-pendientes-2",
+    "title": "Clase 14- DPLYR 3",
+    "section": "Varios y Puntos Pendientes-2",
+    "text": "Varios y Puntos Pendientes-2\n\nPróxima clase en FC\nConsultas:\n\nExtender clase 4-12 Vs. clase viernes 6/12\n¿Parte II R4DS?\n\nEjercicios están en el libro de HW\nFormatos scripts: estilo, espaciado, comentarios"
+  },
+  {
+    "objectID": "clases/clase_14.html#lecturas-recomendadas",
+    "href": "clases/clase_14.html#lecturas-recomendadas",
+    "title": "Clase 14- DPLYR 3",
+    "section": "Lecturas Recomendadas",
+    "text": "Lecturas Recomendadas\n\nRevisar r4ds tidyr https://es.r4ds.hadley.nz/05-transform.html :\n\nOperadores lógicos\nProblemas en Comparaciones por representación computacional\n\nViñetas dplyr:\n\nhttps://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html\nhttps://cran.r-project.org/web/packages/dplyr/vignettes/grouping.html"
+  },
+  {
+    "objectID": "clases/clase_14.html#llms--r4ds-economía",
+    "href": "clases/clase_14.html#llms--r4ds-economía",
+    "title": "Clase 14- DPLYR 3",
+    "section": "LLM´s- R4DS Economía",
+    "text": "LLM´s- R4DS Economía\nModelo R4DS-Economía\nprompt: ¿qué hace el siguiente código:\nbmi_breaks &lt;- c(0, 18.5, 25, 30, Inf)\nstarwars %&gt;%\ngroup_by(bmi_cat = cut(mass/(height/100)^2, breaks=bmi_breaks)) %&gt;%\ntally()"
+  },
+  {
+    "objectID": "clases/clase_14.html#section",
+    "href": "clases/clase_14.html#section",
+    "title": "Clase 14- DPLYR 3",
+    "section": "",
+    "text": "LLM´s Análisis Imágenes- Multimodales\n\nModelo Multimodal Open Weights\n\nhttps://huggingface.co/spaces/MaziyarPanahi/Phi-3.5-Vision\n\nImagen a analizar:\n\nhttps://www.coindesk.com/price/bitcoin\n\nPrompt: You are going to behave like an expert economist and I need an economic analysis of the graph in the image. Try to give as much detail as possible. Make an analysis of the variations presented in the whole period. you must be very detailed.\nAlucinaciones"
+  },
+  {
+    "objectID": "clases/clase_14.html#ias-remplazo-trabajos",
+    "href": "clases/clase_14.html#ias-remplazo-trabajos",
+    "title": "Clase 14- DPLYR 3",
+    "section": "IA´s Remplazo Trabajos:",
+    "text": "IA´s Remplazo Trabajos:"
+  },
+  {
+    "objectID": "clases/clase_14.html#section-1",
+    "href": "clases/clase_14.html#section-1",
+    "title": "Clase 14- DPLYR 3",
+    "section": "",
+    "text": "DPLYR - fn´s complementarias select\n\ncontains(): Selecciona variables cuyo nombre contiene la cadena de texto\nends_with(): Selecciona variables cuyo nombre termina con la cadena de caracteres\neverything(): Selecciona todas las columnas"
+  },
+  {
+    "objectID": "clases/clase_14.html#dplyr---fns-complementarias-select--2",
+    "href": "clases/clase_14.html#dplyr---fns-complementarias-select--2",
+    "title": "Clase 14- DPLYR 3",
+    "section": "DPLYR - fn´s complementarias select -2",
+    "text": "DPLYR - fn´s complementarias select -2\n\nmatches(): Selecciona las variables cuyos nombres coinciden con una expresión regular\nnum_range(): Selecciona las variables por posición\none_of(): Selecciona variables cuyos nombres están en un grupo de nombres\nstart_with(): Selecciona variables cuyos nombres empiezan con la cadena de caracteres"
+  },
+  {
+    "objectID": "clases/clase_14.html#factores",
+    "href": "clases/clase_14.html#factores",
+    "title": "Clase 14- DPLYR 3",
+    "section": "Factores",
+    "text": "Factores\n\nEstructura de datos que agrupa elementos en niveles o categorías. Son útiles cuando tienes variables categóricas, como género (hombre/mujer), tipo de producto (libro/revista) o cualquier otra variable que tenga un conjunto limitado de posibles valores.\n\n\n\n\n🔗 ucveconomiar4ds"
   }
 ]

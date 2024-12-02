@@ -17,21 +17,20 @@ rm(list= ls())
 ######## Cargar librerías                                                          #######
 ##########################################################################################
 library(tidyverse)
+library(gapminder)
+
+##########################################################################################
+######## Primera Parte: 
+# binds_rows, 
+# str_detect
+# select, 
+# ends_with, 
+# factores
+##########################################################################################
 
 ##########################################################################################
 ######## Cargar conjuntos de datos                                                 #######
 ##########################################################################################
-df_gapminder_csv <- read.csv('https://raw.githubusercontent.com/javendaXgh/datos/refs/heads/master/gapminder.csv')%>%
-  select(-X)%>%
-  as_tibble()
-
-df_gapminder <- gapminder::gapminder
-
-df_gastosaludmundial <- read.csv('https://raw.githubusercontent.com/UCVeconomia2024-2/scripts/refs/heads/main/data_in/clase_12/IHME/IHME_HEALTH_SPENDING_1995_2021/IHME_HEALTH_SPENDING_1995_2021_Y2024M07D23.CSV')
-
-# info sobre este conjunto de datos disponible en
-#https://ghdx.healthdata.org/record/ihme-data/global-health-spending-1995-2021
-#https://github.com/UCVeconomia2024-2/scripts/tree/main/data_in/clase_12/IHME
 
 ##########################################################################################
 ######## Procesamientos. Cada enunciado es un problema a resolver                  #######
@@ -46,30 +45,57 @@ unique(df_gastosaludmundial$location_name)
 # de datos
 
 #2. obtener listado de países de América según gapminder
+df_paises_america <- df_gapminder_csv%>%
+  filter(continent=='Americas')
+
+#3. crear df con valores duplicados uniendo dos df's
+df_paises_america2 <- bind_rows(df_paises_america,
+                                df_paises_america%>%
+                                  sample_n(30)
+                                )%>%
+  arrange(country, year)
+
+df_paises_america2%>%
+  print(n=30) # presencia de valores duplicados
+
+dim(df_paises_america)
+dim(df_paises_america2) #presencia de valores duplicados
+
+#4. remover filas duplicadas
+df_paises_america_limpio <- df_paises_america2%>%
+  filter(continent=='Americas')%>%
+  distinct(country, lifeExp) #, .keep_all=TRUE
+
+dim(df_paises_america_limpio)
+str(df_paises_america_limpio)
+df_paises_america_limpio
+
+#4.1 remover filas duplicadas conservando todos los atributos
+df_paises_america_limpio <- df_paises_america2%>%
+  filter(continent=='Americas')%>%
+  distinct(country, lifeExp, .keep_all=TRUE) 
+
+dim(df_paises_america_limpio)
+str(df_paises_america_limpio)
+df_paises_america_limpio
+
+
+#5. obtener listado de países de América según gapminder
 paises_america <- df_gapminder_csv%>%
   filter(continent=='Americas')%>%
   select(country)%>%
   distinct(country)%>% #.keep_all
   pull(country)
 
-#3. seleccionar sólo las columnas asociadas a valores promedios
+length(paises_america) # cdad de paises
+
+#6. seleccionar sólo las columnas asociadas a valores promedios
 df_gsm_mean <- df_gastosaludmundial%>%
   filter(location_name %in% paises_america)%>%
   select(location_name,year, ends_with('mean'))
 
-#select(storms, contains("essure"))
-
-# contains()	Selecciona variables cuyo nombre contiene la cadena de texto
-# ends_with()	Selecciona variables cuyo nombre termina con la cadena de caracteres
-# everything()	Selecciona todas las columnas
-# matches()	Selecciona las variables cuyos nombres coinciden con una expresión regular
-# num_range()	Selecciona las variables por posición
-# one_of()	Selecciona variables cuyos nombres están en un grupo de nombres
-# start_with()	Selecciona variables cuyos nombres empiezan con la cadena de caracteres
-
-
 names(df_gsm_mean)
-unique(df_gsm_mean$location_name)
+unique(df_gsm_mean$location_name) # 22 valores Vs. 25 en paises_america
 dim(df_gsm_mean)
 
 string_paises <- paste0(paises_america,collapse = '|')
@@ -85,6 +111,9 @@ paises1 <- df_gastosaludmundial%>%
   filter(location_name %in% paises_america)%>%
   distinct(location_name)%>%
   pull(location_name)
+
+library(stringr)
+?str_detect # consultar función
 
 paises2 <- df_gastosaludmundial%>%
   filter(str_detect(location_name, string_paises))%>%
@@ -104,7 +133,7 @@ library(forcats) # fue cargada previamente con tidyverse
 paises_america2 <- df_gapminder%>%
   filter(continent=='Americas')%>%
   select(country)%>%
-  distinct(country)%>% #.keep_all
+  distinct(country)%>% 
   pull(country)
 
 

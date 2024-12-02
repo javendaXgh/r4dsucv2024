@@ -69,6 +69,8 @@ website:
             text: clase 8 / versión reporte
           - href: practicas/clase12.qmd
             text: clase 12 / versión reporte
+          - href: practicas/clase14.qmd
+            text: clase 14 / versión reporte
       - section: "Proyectos"
         contents:
           - href: project/proyecto-1.qmd

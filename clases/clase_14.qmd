@@ -1,0 +1,118 @@
+---
+title: "Clase 14- DPLYR 3"
+#format: live-html
+date: "December 02, 2024"
+author: "MSc. José M. Avendaño"
+# output:
+#   html_document:
+#     toc: yes
+format: 
+  revealjs:
+    incremental: true   
+---
+
+## Objetivo:
+
+1.  Usar funciones de dplyr para poder remover duplicados, seleccionar columnas
+
+2.  Uso de factores para datos categóricos
+
+## Varios y Puntos Pendientes
+
+1.  Entrega de ensayo idealmente antes del 11 de diciembre
+
+2.  Contenido ensayo:
+
+    1.  Qué es de su interés
+
+    2.  Lecturas y vista de materiales recomendados
+
+3.  Conformación grupos Proyecto
+
+4.  Reinicio actividades 8/1/25 - plan contingencia
+
+## Varios y Puntos Pendientes-2
+
+5.  Próxima clase en FC
+
+6.  Consultas:
+
+    1.  Extender clase 4-12 Vs. clase viernes 6/12
+    2.  ¿Parte II R4DS?
+
+7.  Ejercicios están en el libro de HW
+
+8.  Formatos scripts: estilo, espaciado, comentarios
+
+## Lecturas Recomendadas
+
+-   Revisar r4ds tidyr <https://es.r4ds.hadley.nz/05-transform.html> :
+
+    -   Operadores lógicos
+
+    -   Problemas en Comparaciones por representación computacional
+
+-   [Viñetas dplyr](https://cran.r-project.org/web/packages/dplyr/vignettes/grouping.html):
+
+    -   <https://cran.r-project.org/web/packages/dplyr/vignettes/dplyr.html>
+
+    -   <https://cran.r-project.org/web/packages/dplyr/vignettes/grouping.html>
+
+## LLM´s- R4DS Economía
+
+Modelo R4DS-Economía
+
+prompt: `¿qué hace el siguiente código:`
+
+bmi_breaks \<- c(0, 18.5, 25, 30, Inf)
+
+starwars %\>%
+
+group_by(bmi_cat = cut(mass/(height/100)\^2, breaks=bmi_breaks)) %\>%
+
+tally()
+
+## 
+
+LLM´s Análisis Imágenes- Multimodales
+
+-   Modelo Multimodal Open Weights
+
+    -   <https://huggingface.co/spaces/MaziyarPanahi/Phi-3.5-Vision>
+
+-   Imagen a analizar:
+
+    -   <https://www.coindesk.com/price/bitcoin>
+
+-   Prompt: `You are going to behave like an expert economist and I need an economic analysis of the graph in the image. Try to give as much detail as possible. Make an analysis of the variations presented in the whole period. you must be very detailed.`
+
+-   Alucinaciones
+
+## IA´s Remplazo Trabajos:
+
+![](images/robots.png)
+
+## 
+
+DPLYR - fn´s complementarias `select`
+
+1.  `contains()`: Selecciona variables cuyo nombre contiene la cadena de texto
+
+2.  `ends_with()`: Selecciona variables cuyo nombre termina con la cadena de caracteres
+
+3.  `everything()`: Selecciona todas las columnas
+
+## DPLYR - fn´s complementarias `select` -2
+
+1.  `matches()`: Selecciona las variables cuyos nombres coinciden con una expresión regular
+
+2.  `num_range()`: Selecciona las variables por posición
+
+3.  `one_of()`: Selecciona variables cuyos nombres están en un grupo de nombres
+
+4.  `start_with()`: Selecciona variables cuyos nombres empiezan con la cadena de caracteres
+
+## Factores
+
+\
+Estructura de datos que agrupa elementos en niveles o categorías. Son útiles cuando tienes variables categóricas, como género (hombre/mujer), tipo de producto (libro/revista) o cualquier otra variable que tenga un conjunto limitado de posibles valores.
