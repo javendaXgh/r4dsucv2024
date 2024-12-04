@@ -2,3 +2,7 @@
 .Rproj.user
 .Rhistory
 google_tags
+clases/insumos/*
+2025_observaciones/
+.gitignore
+en_curso.R

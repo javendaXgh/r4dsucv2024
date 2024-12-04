@@ -1,0 +1,82 @@
+---
+title: "Clase 15: DPLYR, Factores, Coerce, Recycle, NA's, tidyr"
+#format: live-html
+date: "December 4, 2024"
+author: "MSc. José M. Avendaño"
+# output:
+#   html_document:
+#     toc: yes
+format: 
+  revealjs:
+    incremental: true   
+---
+
+## DPLYR - fn´s complementarias `select`
+
+1.  `contains()`: Selecciona variables cuyo nombre contiene la cadena de texto
+
+2.  `ends_with()`: Selecciona variables cuyo nombre termina con la cadena de caracteres
+
+3.  `everything()`: Selecciona todas las columnas
+
+## DPLYR - fn´s complementarias `select` -2
+
+1.  `matches()`: Selecciona las variables cuyos nombres coinciden con una expresión regular
+
+2.  `num_range()`: Selecciona las variables por posición
+
+3.  `one_of()`: Selecciona variables cuyos nombres están en un grupo de nombres
+
+4.  `start_with()`: Selecciona variables cuyos nombres empiezan con la cadena de caracteres
+
+## Factores
+
+Estructura de datos que agrupa elementos en niveles o categorías. Son útiles cuando tienes variables categóricas, como género (hombre/mujer), tipo de producto (libro/revista) o cualquier otra variable que tenga un conjunto limitado de posibles valores.
+
+## Coerce
+
+Se refiere al proceso automático de conversión de un tipo de dato a otro (`class`). Esto puede ocurrir cuando se realizan operaciones entre diferentes tipos de datos, y R intenta adaptar los datos para que puedan ser utilizados juntos.
+
+### Tipos:
+
+#### Coerción Implícita
+
+#### Coerción Explícita
+
+## Recycle
+
+Proceso por el cual R repite los elementos de un vector más corto hasta que pueda combinarlo con otro vector más largo. Esto ocurre cuando intentas realizar una operación entre dos vectores y uno tiene menos elementos que el otro.
+
+## Trabajando con Valores Ausentes
+
+Los valores `NA` Not Available’ / Missing Values son valores no asignados. Son distintos a `""` o a `0`.
+
+NA es una constante lógica de longitud 1 que contiene un indicador de valor omitido. NA se puede coercionar a cualquier otro tipo de vector excepto raw.
+
+También hay constantes NA_integer\_, NA_real\_, NA_complex\_ y NA_character\_ de los otros tipos de vectores atómicos que admiten valores omitidos
+
+## Formatos Long y Wide
+
+### Long
+
+El formato long es donde:
+
+-   cada columna es una variable
+
+-   cada fila es una observación
+
+En el formato "largo", generalmente tienes una columna para la variable observada y las otras columnas son variables de ID.
+
+## Formato Wide
+
+Para el formato "ancho", cada fila es un tema, por ejemplo un lugar o un paciente. Tendrás múltiples variables de observación, que contienen el mismo tipo de datos, para cada tema. Estas observaciones pueden ser repetidas a lo largo del tiempo, o puede ser la observación de múltiples variables (o una mezcla de ambos). Para algunas aplicaciones, es preferible el formato "ancho". Sin embargo, muchas de las funciones de `R` han sido diseñadas para datos de formato "largo".
+
+## ¿Cuándo se Usa un Formato u Otro?
+
+Para los humanos, el formato "ancho" es a menudo más intuitivo ya que podemos ver más de los datos en la pantalla debido a su forma. Sin embargo, el formato "largo" es más legible para las máquinas y está más cerca al formateo de las bases de datos. Las variables de ID en nuestros marcos de datos son similares a los campos en una base de datos y las variables observadas son como los valores de la base de datos.
+
+## Tareas 
+
+Revisar viñeta <https://tidyr.tidyverse.org/articles/pivot.html#longer-then-wider>
+
+Cambiar gapminder de formato mixto a longer. Fecha 8-1-25

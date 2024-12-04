@@ -1,0 +1,939 @@
+---
+title: "Clase 15: DPLYR, Factores, Coerce, Recycle, NA's, tidyr"
+date: "Diciembre 4, 2024"
+output:
+  html_document:
+    toc: yes
+execute:
+  echo: true
+  eval: true
+  warning: false
+---
+
+## Parte 1: Trabajando con Múltiples Conjuntos de Datos
+
+### Cargar Librerías
+
+```{r}
+library(tidyverse)
+library(gapminder)
+
+```
+
+### Cargar Conjuntos de Datos
+
+```{r}
+df_gapminder_csv <- read.csv('https://raw.githubusercontent.com/javendaXgh/datos/refs/heads/master/gapminder.csv')%>%
+  select(-X)%>%
+  as_tibble()
+
+df_gapminder <- gapminder
+
+df_gastosaludmundial <- read.csv('https://raw.githubusercontent.com/UCVeconomia2024-2/scripts/refs/heads/main/data_in/clase_12/IHME/IHME_HEALTH_SPENDING_1995_2021/IHME_HEALTH_SPENDING_1995_2021_Y2024M07D23.CSV')
+
+# info sobre este conjunto de datos disponible en
+#https://ghdx.healthdata.org/record/ihme-data/global-health-spending-1995-2021
+#https://github.com/UCVeconomia2024-2/scripts/tree/main/data_in/clase_12/IHME
+
+
+df_ventas <- read.csv('https://raw.githubusercontent.com/UCVeconomia2024-2/scripts/refs/heads/main/data_in/df_ventas.csv')
+```
+
+### DF Global Health Data Exchange.
+
+Revisar contenido a forma de hacer un pre *EDA* (Exploratory Data Analysis)
+
+```{r}
+dim(df_gastosaludmundial)
+names(df_gastosaludmundial)
+summary(df_gastosaludmundial[,1:10])
+str(df_gastosaludmundial[,1:10])
+
+```
+
+### Listado de Países con Datos
+
+Vamos a evaluar cuáles países disponen de datos en esta df:
+
+```{r}
+unique(df_gastosaludmundial$location_name)
+```
+
+Al trabajar con conjuntos de datos de este estilo es recomendable leer la documentación que les acompaña para tener nociones sobre cuáles son los datos representados y la metodología usada para el levantamiento de los mismos.
+
+<https://ghdx.healthdata.org/record/ihme-data/global-health-spending-1995-2021>
+
+<https://github.com/UCVeconomia2024-2/scripts/tree/main/data_in/clase_12/IHME>
+
+### Listado de Países América
+
+```{r}
+df_paises_america <- df_gapminder_csv%>%
+  filter(continent=='Americas')
+```
+
+### crear df con valores duplicados uniendo dos df's
+
+```{r}
+df_paises_america2 <- bind_rows(df_paises_america,
+                                df_paises_america%>%
+                                  sample_n(30)
+                                )%>%
+  arrange(country, year)
+```
+
+En la DF creada `df_paises_america2` existen valores duplicados a los fines de crear un ejemplo de una DF con filas duplicadas
+
+```{r}
+df_paises_america2%>%
+  print(n=30) # presencia de valores duplicados
+
+dim(df_paises_america)
+dim(df_paises_america2) # se incrementa por la presencia de valores duplicados
+```
+
+### Remoción de filas duplicadas:
+
+```{r}
+df_paises_america_limpio <- df_paises_america2%>%
+  filter(continent=='Americas')%>%
+  distinct(country, lifeExp) #, .keep_all=TRUE
+
+dim(df_paises_america_limpio)
+str(df_paises_america_limpio)
+df_paises_america_limpio
+```
+
+Se están removiendo con base en la repetición de dos atributos por fila, pero pudieran ser más o menos los atributos a evaluar si se repiten implicando que la repetición puede ser evaluada parcial o totalmente
+
+## Remover filas duplicadas conservando todos los atributos
+
+```{r}
+df_paises_america_limpio <- df_paises_america2%>%
+  filter(continent=='Americas')%>%
+  distinct(country, lifeExp, .keep_all=TRUE) 
+
+dim(df_paises_america_limpio)
+str(df_paises_america_limpio)
+df_paises_america_limpio
+
+```
+
+## Extracción países de América en Gapminder que estén en datos de GastosSaludMundial
+
+La idea es poder extraer de la df de gastos en salud los países de América que están en Gapminder, suponiendo que queremos obtener otros datos que nos permitan enriquecer nuestro análisis sobre ambos conjuntos de datos y que estos se complementen.
+
+### Obtener listado de países de América según gapminder
+
+```{r}
+paises_america <- df_gapminder_csv%>%
+  filter(continent=='Americas')%>%
+  select(country)%>%
+  distinct(country)%>% 
+  pull(country)
+```
+
+Notar uso de función `pull` para extraer los resultados en la estructura de un vector. Comparar sino se usará esa última línea, cuál sería el resultado.
+
+Ahora se evalúa cuántos países únicos contiene el vector `paises_america`
+
+```{r}
+length(paises_america) # cdad de paises
+```
+
+### Seleccionar columnas por aparición de una string en el nombre
+
+Sabiendo que la palabra **mean** en inglés quiere decir promedio, a fines de ejemplificar el uso de la función `select` en conjunto con `ends_with` se propone el siguiente ejercicio:
+
+```{r}
+df_gsm_mean <- df_gastosaludmundial%>%
+  filter(location_name %in% paises_america)%>%
+  select(location_name, year, ends_with('mean'))
+```
+
+Sabiendo que la df en uso contiene `r ncol(df_gsm_mean)`, se propone seleccionar sólo los columnas que representen valores promedio y se hace aplicación conjunta de `select` y `ends_with('mean')`. También se seleccionan las columnas "location_name" y "year" ya que van a identificar dos atributos clave, como lo son el país y año que se representa en cada fila.
+
+Igualmente, en el paso anterior se filtraron sólo los países de América que están contenidos en el vector `paises_america`.
+
+Ahora inspeccionamos los nombres de los países de `df_gsm_mean`:
+
+```{r}
+unique(df_gsm_mean$location_name)
+```
+
+y en cuanto a las dimensiones de la df
+
+```{r}
+dim(df_gsm_mean)
+```
+
+Existe una diferencia, ya que hay `r length(unique(df_gsm_mean$location_name))` países en `df_gsm_mean` mientras que en `paises_america` hay `r length(paises_america)`, lo que implica que no se filtraron todos los países que se encuentran listados.
+
+Esto se motiva en que los nombres difieren en escritura en las dos data frame´s.
+
+Para evaluar un mecanismo alterno se va a crear una string con todos los nombres de los países con miras de detectar coincidencias no exactas sino parciales.
+
+La función `%in%` aplica para detecciones de coincidencias exactas mientras que con `str_detect` hace la detección parcial.
+
+El operador `|` sabemos que indica *OR* lo que quiere decir que o aparece Argentina o aparece Bolivia o ...., etc.
+
+```{r}
+string_paises <- paste0(paises_america,collapse = '|')
+
+string_paises
+```
+
+Nuevamente intentamos crear la `df_gsm_mean`:
+
+```{r}
+df_gsm_mean <- df_gastosaludmundial%>%
+  filter(str_detect(location_name, string_paises))%>%
+  select(location_name,year, ends_with('mean'))
+
+unique(df_gsm_mean$location_name)
+```
+
+Para entender mejor el funcionamiento de `str_detect` consultamos la documentación.
+
+```{r}
+library(stringr)
+#?str_detect # consultar función
+```
+
+Hay que recordar que esta función está contenida en el paquete `stringr` que fue cargado previamente con la suite `tidiverse`.
+
+### Detección Países Faltantes
+
+```{r}
+paises1 <- df_gastosaludmundial%>%
+  filter(location_name %in% paises_america)%>%
+  distinct(location_name)%>%
+  pull(location_name)
+
+
+paises2 <- df_gastosaludmundial%>%
+  filter(str_detect(location_name, string_paises))%>%
+  distinct(location_name)%>%
+  pull(location_name)
+
+paises2[paises2 %in% paises1]
+paises2[!paises2 %in% paises1]
+```
+
+Más adelante, en otra clase veremos cómo podemos juntar ambas data frames combinando los datos de una y otra por país haciendo `joins` de distinto tipo.
+
+## Parte 2: Factores
+
+Estructura de datos que agrupa elementos en niveles o categorías. Son útiles cuando tienes variables categóricas, como género (hombre/mujer), tipo de producto (libro/revista) o cualquier otra variable que tenga un conjunto limitado de posibles valores.
+
+```{r}
+library(forcats) # fue cargada previamente con tidyverse
+
+paises_america2 <- df_gapminder%>%
+  filter(continent=='Americas')%>%
+  select(country)%>%
+  distinct(country)%>% 
+  pull(country)
+
+paises_america2
+```
+
+La representación de los datos varía en formato a un vector de tipo caracter
+
+```{r}
+levels(paises_america2)
+levels(paises_america)
+```
+
+### Niveles
+
+Contar elementos por nivel
+
+```{r}
+fct_count(paises_america, sort = FALSE,
+          prop = FALSE)
+
+```
+
+No muestra los niveles que contienen NA´s
+
+```{r}
+fct_drop(paises_america)
+```
+
+Se retoma al revisar contenido sobre los NA´s.
+
+### Vectores con factores
+
+Crear un vector con factores
+
+```{r}
+vector_factores <- factor(sample(1:10, 20, replace = TRUE),
+                          levels = 1:11)
+vector_factores
+
+levels(vector_factores)
+```
+
+### Remover factores mediante RBase
+
+Usando la familia de funciones `as`:
+
+```{r}
+as.numeric(levels(vector_factores))[vector_factores]
+```
+
+### Remover factores mediante paquete varhandle
+
+```{r}
+# install.packages('varhandle')
+library(varhandle)
+unfactor(vector_factores)
+```
+
+### Versión factor categorías
+
+Crear un vector con factores
+
+```{r}
+categorias <- c('muy bajo','bajo','medio','alto','muy alto')
+vector_fact_categorias <- factor(sample(categorias, 30, replace = TRUE))
+vector_fact_categorias
+```
+
+Remover factores mediante RBase
+
+```{r}
+as.character(levels(vector_fact_categorias))[vector_fact_categorias]
+```
+
+Remover factores mediante paquete varhandle
+
+```{r}
+unfactor(vector_fact_categorias)
+```
+
+Remover factores de paises_america2
+
+```{r}
+as.character(levels(paises_america2))[paises_america2]
+```
+
+## Parte 3: Coerce
+
+Coerción (coerce) en R se refiere al proceso automático de conversión de un tipo de dato a otro. Esto puede ocurrir cuando se realizan operaciones entre diferentes tipos de datos, y R intenta adaptar los datos para que puedan ser utilizados juntos.
+
+### Tipos de Coerción:
+
+1.  **Coerción Implícita (Implicit Coercion)**: Ocurre automáticamente cuando realizas operaciones con diferentes tipos de datos.
+
+2.  **Coerción Explícita (Explicit Coercion)**: Se realiza manualmente utilizando funciones específicas para convertir un tipo de dato a otro.
+
+#### Coerción Implícita
+
+Cuando intentas sumar un número entero y un número decimal, R convierte el número entero en un número decimal antes de realizar la operación.
+
+```{r}
+# Coerción implícita: Suma de un número entero y un número decimal
+entero <- 5L
+decimal <- 3.2
+
+resultado <- entero + decimal
+resultado  
+```
+
+En este ejemplo, `entero` es un número entero (`integer`) y `decimal` es un número decimal (`numeric`). Cuando se suman, R convierte el `integer` en `numeric` para que puedan ser sumados.
+
+#### Coerción Explícita
+
+Puedes convertir manualmente un tipo de dato a otro utilizando funciones como `as.numeric()`, `as.character()`, `as.logical()` y más.
+
+```{r}
+# Coerción explícita: Convertir un carácter a un número decimal
+numero_como_cadena <- "3.2"
+numero_decimal <- as.numeric(numero_como_cadena)
+numero_decimal  # Salida: 3.2
+
+# Coerción explícita: Convertir un número entero a un carácter
+entero <- 5L
+cadena <- as.character(entero)
+cadena  # Salida: "5"
+```
+
+En el primer ejemplo, `as.numeric()` convierte la cadena `"3.2"` en un número decimal `3.2`. En el segundo ejemplo, `as.character()` convierte el entero `5L` en la cadena `"5"`.
+
+#### Coerción en Data Frames
+
+Cuando se crea un data frame con columnas de diferentes tipos de datos, R intenta coercer las columnas al tipo común más amplio.
+
+```{r}
+# Crear un data frame con diferentes tipos de datos
+df <- data.frame(
+  edad = c(25L, 30L, 35L),
+  nombre = c("Juan", "Ana", "Carlos"),
+  altura = c(1.75, 1.68, 1.80)
+)
+
+df
+```
+
+En este ejemplo, `edad` es una columna de enteros (`integer`), `nombre` es una columna de caracteres (`character`), y `altura` es una columna numérica (`numeric`). R convierte todas las columnas a tipo `character` para que puedan estar en el mismo formato.
+
+## Parte 4: Recycle
+
+El recycle es el proceso por el cual R repite los elementos de un vector más corto hasta que pueda combinarlo con otro vector más largo. Esto ocurre cuando intentas realizar una operación entre dos vectores y uno tiene menos elementos que el otro.
+
+### Ejemplo 1: Suma de Vectores
+
+Supongamos que tienes dos vectores:
+
+```{r}
+vector_corto <- c(1, 2)
+vector_largo <- c(3, 4, 5, 6)
+```
+
+Si intentas sumar estos vectores:
+
+```{r}
+resultado <- vector_corto + vector_largo
+```
+
+R reciclará `vector_corto` para que tenga la misma longitud que `vector_largo`. Es decir, R repite los elementos de `vector_corto` hasta que coincida con la longitud de `vector_largo`.
+
+El proceso sería algo así:
+
+-   `vector_corto`: 1, 2
+-   Repetir: 1, 2, 1, 2
+
+Luego, realiza la suma elemento por elemento:
+
+```{r}
+resultado <- c(1+3, 2+4, 1+5, 2+6)
+
+resultado
+```
+
+### Multiplicación de Vectores
+
+Ahora, considera otro ejemplo con multiplicación:
+
+```{r}
+vector_corto <- c(2, 3)
+vector_largo <- c(5, 7, 9, 11)
+```
+
+Si intentas multiplicar estos vectores:
+
+```{r}
+resultado <- vector_corto * vector_largo
+```
+
+R reciclará `vector_corto`:
+
+-   `vector_corto`: 2, 3
+-   Repetir: 2, 3, 2, 3
+
+Luego, realiza la multiplicación elemento por elemento:
+
+```{r}
+resultado <- c(2*5, 3*7, 2*9, 3*11)
+resultado
+```
+
+### Asignación de Valores
+
+El recycle también se aplica cuando asignas valores a un vector más largo que el valor que estás asignando.
+
+Supongamos que tienes un vector:
+
+```{r}
+vector_largo <- c(0, 0, 0, 0)
+```
+
+Y quieres asignarle los valores de otro vector más corto:
+
+```{r}
+vector_corto <- c(1, 2)
+vector_largo[] <- vector_corto
+```
+
+R reciclará `vector_corto` para que tenga la misma longitud que `vector_largo`:
+
+-   `vector_corto`: 1, 2
+-   Repetir: 1, 2, 1, 2
+
+El resultado será:
+
+```{r}
+vector_largo
+```
+
+### Consideraciones Importantes
+
+1.  **Longitud Exacta**: Si el vector más corto no se puede reciclar exactamente para coincidir con la longitud del vector más largo (es decir, si no es un múltiplo), R producirá una advertencia y repetirá los elementos hasta que termine el vector más largo.
+
+```{r}
+vector_corto <- c(1, 2)
+vector_largo <- c(3, 4, 5)
+resultado <- vector_corto + vector_largo
+```
+
+Esto producirá una advertencia:
+
+```         
+Warning message:
+longer object length is not a multiple of shorter object length
+```
+
+Y el resultado será:
+
+```{r}
+resultado
+
+```
+
+2.  **Operaciones Lógicas**: El recycle también se aplica en operaciones lógicas.
+
+```{r}
+vector_corto <- c(TRUE, FALSE)
+vector_largo <- c(1, 2, 3, 4)
+resultado <- vector_corto & (vector_largo > 2)
+```
+
+R reciclará `vector_corto`:
+
+-   `vector_corto`: TRUE, FALSE
+-   Repetir: TRUE, FALSE, TRUE, FALSE
+
+Luego, realiza la operación lógica elemento por elemento:
+
+```{r}
+resultado <- c(TRUE & (1 > 2), FALSE & (2 > 2), TRUE & (3 > 2), FALSE & (4 > 2))
+```
+
+El resultado será:
+
+```{r}
+resultado
+```
+
+### Reciclado en una Data Frame
+
+El recycle también se aplica cuando asignas un valor de un vector de menor lenght junto a otros en la construcción de una data frame.
+
+```{r}
+df_recycle <- data.frame(vector_corto = '1',
+                         vector_largo = 1:5)
+
+df_recycle
+```
+
+El recycle es una característica de R que facilita operaciones entre vectores de diferentes longitudes. Sin embargo, es importante tener en cuenta las advertencias y asegurarse de que el reciclado produzca los resultados esperados.
+
+## Parte 5: Trabajando con Valores Faltantes
+
+Los valores `NA` (que representan datos faltantes) es una tarea común en análisis de datos utilizando R. A
+
+### ¿Qué son los valores NA?
+
+Los valores `NA` en R representan "Not Available" y se utilizan para indicar que un dato está faltante o desconocido. Estos valores pueden surgir por diversas razones, como errores de entrada de datos, fallos en las mediciones, etc.
+
+### 1. Identificación de Valores NA
+
+Primero, es importante saber cómo identificar los valores `NA` en tus conjuntos de datos. Puedes usar la función `is.na()` para esto.
+
+#### Ejemplo:
+
+```{r}
+# Crear un vector con algunos valores NA
+datos <- c(1, 2, NA, 4, NA, 6)
+
+datos
+# Identificar los valores NA
+is.na(datos)
+```
+
+### Contar Valores NA
+
+Para saber cuántos valores `NA` hay en un conjunto de datos, puedes usar la función `sum()` junto con `is.na()`.
+
+#### Ejemplo:
+
+```{r}
+# Contar los valores NA en el vector 'datos'
+sum(is.na(datos))
+```
+
+### Eliminar Valores NA
+
+Si deseas eliminar las observaciones que contienen valores `NA`, puedes usar la función `na.omit()`.
+
+#### Ejemplo:
+
+```{r}
+# Eliminar filas con valores NA en un data frame
+df <- data.frame(a = c(1, 2, NA), b = c(4, NA, 6))
+df_sin_na <- na.omit(df)
+df_sin_na
+```
+
+### Reemplazar Valores NA
+
+A veces es útil reemplazar los valores `NA` con algún otro valor, como la media o mediana de la columna.
+
+#### Ejemplo:
+
+```{r}
+# Reemplazar valores NA con la media de la columna 'a'
+df$a[is.na(df$a)] <- mean(df$a, na.rm = TRUE)
+df
+```
+
+### Manejo de Valores `NA` en Operaciones
+
+Cuando realizas operaciones matemáticas, los valores `NA` pueden propagarse. Para evitar esto, puedes usar el parámetro `na.rm = TRUE`.
+
+#### Ejemplo:
+
+```{r}
+# Calcular la media ignorando los valores NA
+mean(df$a, na.rm = TRUE)
+```
+
+### Uso de la función `complete.cases()`
+
+La función `complete.cases()` te permite seleccionar solo las filas que no contienen valores `NA`.
+
+#### Ejemplo:
+
+```{r}
+# Seleccionar filas sin valores NA
+df_completos <- df[complete.cases(df), ]
+df_completos
+```
+
+### Funciones de Apoyo al trabajar con NA
+
+-   **Identificación:** `is.na()`
+-   **Conteo:** `sum(is.na())`
+-   **Eliminación:** `na.omit()`
+-   **Reemplazo:** `[is.na(columna)] <- valor_reemplazo`
+-   **Operaciones:** `na.rm = TRUE`
+-   **Selección de casos completos:** `complete.cases()`
+
+### Coerción de NA´s
+
+Los NA conservan sus propiedas al ser sometidos a coerciones explícitas
+
+```{r}
+as.numeric(c(1,NA))
+as.character(c('Prop',NA))
+as.character(c(1,NA))
+```
+
+### Ejemplo: trabajando con NA´s
+
+Ver script
+
+### Filtrado de NA's
+
+## Parte 6: Formatos de Datos Long y Wide
+
+-   **Formato Ancho (Wide):** En este formato, cada columna representa una variable diferente y cada fila representa un caso o observación, por ejemplo un lugar o un paciente. Tendrás múltiples variables de observación, que contienen el mismo tipo de datos, para cada tema. Estas observaciones pueden ser repetidas a lo largo del tiempo, o puede ser la observación de múltiples variables (o una mezcla de ambos). Para algunas aplicaciones, es preferible el formato "ancho". Sin embargo, muchas de las funciones de `R` han sido diseñadas para datos de formato "largo".
+
+    Para los humanos, el formato "ancho" es a menudo más intuitivo ya que podemos ver más de los datos en la pantalla debido a su forma. Sin embargo, el formato "largo" es más legible para las máquinas y está más cerca al formateo de las bases de datos. Las variables de ID en nuestras data frames son similares a los campos en una base de datos y las variables observadas son como los valores de la base de datos.
+
+-   **Formato Largo (Long):** En este formato, todas las variables están en una sola columna, y cada fila representa una combinación única de caso y variable. El formato "largo" es donde:
+
+    -   cada columna es una variable
+
+    -   cada fila es una observación
+
+    En el formato "largo", generalmente tienes una columna para la variable observada y las otras columnas son variables de ID.
+
+### Explicación Gráfica:
+
+#### Formatos Wide y Long
+
+![Imagen obtenida de swcarpentry.github.io](images/wideVslong.png)
+
+#### Proceso de Conversión de Wide a Long
+
+```         
+pivot_longer(cols = starts_with("a"),
+             names_to = "key",
+             values_to = "value")
+```
+
+![Imagen obtenida de swcarpentry.github.io](images/convertirW2L.png){width="800"}
+
+Material complementario: en la página <https://swcarpentry.github.io/r-novice-gapminder-es/14-tidyr.html> hay informaciones complementarias sobre estos formatos.
+
+### De dplyr a tidyr
+
+Para trabajar con estas estructuras de datos y poder convertirlas de un formato long a widder o viceversa, es necesario incorporar en nuestra caja de herramientas el paquete `tidyr` que también se encuentra incluido en la suite tidyverse.
+
+### Creando Tibbles
+
+Primero, vamos a crear algunos ejemplos de tibbles en R utilizando el paquete `dplyr` y `tidyverse`.
+
+```{r}
+library(tidyverse)
+
+# Crear un tibble ancho (wide)
+datos_ancho <- tribble(
+  ~nombre, ~edad_2015, ~edad_2016, ~edad_2017,
+  "Juan",   20,         21,         22,
+  "Ana",    23,         24,         25
+)
+
+
+datos_ancho
+
+
+# Crear un tibble largo (long)
+datos_largo <- tribble(
+  ~nombre, ~año, ~edad,
+  "Juan",   2015, 20,
+  "Juan",   2016, 21,
+  "Juan",   2017, 22,
+  "Ana",    2015, 23,
+  "Ana",    2016, 24,
+  "Ana",    2017, 25
+)
+
+datos_largo
+```
+
+### Cambiando de Wide a Long
+
+Para transformar un tibble ancho en largo, se utiliza la función `pivot_longer()` del paquete `tidyr`.
+
+```{r}
+# Convertir datos_ancho a datos_largo
+datos_largo <- datos_ancho %>%
+  pivot_longer(cols = starts_with("edad"),
+               names_to = "año",
+               values_to = "edad")
+
+datos_largo
+```
+
+### Cambiando de Long a Wide
+
+Para transformar un tibble largo en ancho, se utiliza la función `pivot_wider()` del paquete `tidyr`.
+
+```{r}
+# Convertir datos_largo a datos_ancho
+datos_ancho <- datos_largo %>%
+  pivot_wider(names_from = año,
+               values_from = edad)
+
+datos_ancho
+```
+
+### Explicación de las Funciones
+
+-   **pivot_longer()**: Esta función se utiliza para convertir un tibble ancho en largo. Los argumentos principales son:
+    -   `cols`: Especifica qué columnas se deben convertir a formato largo.
+    -   `names_to`: Define el nombre de la nueva columna que contendrá los nombres originales de las columnas.
+    -   `values_to`: Define el nombre de la nueva columna que contendrá los valores.
+-   **pivot_wider()**: Esta función se utiliza para convertir un tibble largo en ancho. Los argumentos principales son:
+    -   `names_from`: Especifica qué columna contiene los nombres de las nuevas columnas.
+    -   `values_from`: Especifica qué columna contiene los valores que se asignarán a las nuevas columnas.
+
+### Ventajas y Uso
+
+-   **Formato Ancho (Wide):**
+    -   Ventaja: Facilita visualizar y comparar múltiples variables en una sola tabla.
+    -   Uso: Útil cuando se necesita comparar fácilmente distintos valores de la misma variable para diferentes casos.
+-   **Formato Largo (Long):**
+    -   Ventaja: Permite realizar análisis estadísticos más complejos, como modelos de series temporales o análisís longitudinales.
+    -   Uso: Útil cuando se necesita realizar operaciones que requieren agrupar datos por una variable y luego aplicar funciones a los valores correspondientes.
+
+### Ejemplo Práctico
+
+Supongamos que tienes un conjunto de datos sobre las ventas de diferentes productos en varios meses. Quieres analizar cómo ha evolucionado la venta de cada producto a lo largo del tiempo.
+
+```{r}
+# Datos ancho (ejemplo)
+ventas_ancho <- tribble(
+  ~producto, ~enero, ~febrero, ~marzo,
+  "A",        100,    200,      150,
+  "B",        120,    220,      180
+)
+
+ventas_ancho
+
+# Convertir a formato largo
+ventas_largo <- ventas_ancho %>%
+  pivot_longer(cols = starts_with("enero"),
+               names_to = "mes",
+               values_to = "venta")
+
+ventas_largo
+```
+
+Con el tibble en formato largo, puedes fácilmente calcular la tendencia de las ventas para cada producto utilizando funciones como `group_by()` y `summarize()`.
+
+```{r}
+# Calcular promedio de ventas por producto
+promedio_ventas <- ventas_largo %>%
+  group_by(producto) %>%
+  summarize(promedio = mean(venta))
+
+promedio_ventas
+```
+
+### Ejercicios Pivots Longer:
+
+#### Simulación de Precios de Accciones
+
+En formato wider esta sería la df:
+
+```{r}
+precio_acciones <- tibble(
+  fecha = as.Date("2024-01-01") + 0:9,
+  precio_x = rnorm(10, 0, 1),
+  precio_y = rnorm(10, 0, 2),
+  precio_z = rnorm(10, 0, 4)
+)
+
+precio_acciones
+
+```
+
+Anteriormente en `tidyr` la función usada para convertir los datos a formanto longer era `gather`
+
+```{r}
+# versión anterior con gather
+precio_acciones %>% 
+  gather("accion_nombe",
+         "precio_accion",
+         -fecha)
+
+```
+
+Precios de acciones en formato longer mediante el uso de `pivot_longer`
+
+```{r}
+precio_acciones %>% 
+  pivot_longer(cols = starts_with("precio"),
+               names_to = "accion_nombre",
+               values_to = "precio_accion")%>%
+  print(n=23)
+
+```
+
+#### Ingresos Anuales según Religión o Creencia Practicada:
+
+Información basada en una encuesta sobre religión/creencia e ingresos obtenidos
+
+```{r}
+head(relig_income)
+
+relig_income %>%
+  pivot_longer(cols =!religion, 
+               names_to = "income", 
+               values_to = "count")
+```
+
+#### Cartelera de Éxitos Billoard:
+
+```{r}
+head(billboard)
+dim(billboard)
+
+billboard %>%
+  pivot_longer(
+    cols = starts_with("wk"),
+    names_to = "week",
+    # names_prefix = "wk",
+    values_to = "rank",
+    values_drop_na = TRUE
+  )
+
+
+
+```
+
+Añadir prefijo a remover en la columna de destino
+
+```{r}
+billboard %>%
+  pivot_longer(
+    cols = starts_with("wk"),
+    names_to = "week",
+    names_prefix = "wk",
+    values_to = "rank",
+    values_drop_na = TRUE
+  )
+
+```
+
+#### Informe Mundial Tuberculosis:
+
+Un subconjunto de datos del Informe Mundial sobre la Tuberculosis de la Organización Mundial de la Salud. que utiliza los códigos originales de la Organización Mundial de la Salud.
+
+Inspección Datos Entrada
+
+```{r}
+names(who)
+dim(who)
+head(who[,1:10])
+```
+
+Convertir a formato longer
+
+```{r}
+who %>% 
+  pivot_longer(
+    cols = new_sp_m014:newrel_f65,
+    names_to = c("diagnosis", "gender", "age"),
+    names_pattern = "new_?(.*)_(.)(.*)",
+    values_to = "count"
+  )
+
+```
+
+Análisis patrón usado en `names_pattern`
+
+```{r}
+library(stringr) # ya está cargada en tidyverse
+str_split("new_sp_m2534", "new_?(.*)_(.)(.*)")
+
+# Hacer consultar a LLM sobre este patrón
+cadena <- "new_user_123"
+patron <- "new_?(.*)_(.)(.*)"
+
+resultados <- str_match(cadena, patron)
+resultados
+
+```
+
+### Ejercicios Pivots Widder:
+
+#### Peces en Ríos
+
+Información sobre los peces que nadan por un río: cada estación representa un monitor autónomo que registra si un pez marcado ha sido visto en ese lugar.
+
+```{r}
+######## pivot_wider()
+head(fish_encounters, 8)
+
+fish_encounters %>%
+  pivot_wider(names_from = station, 
+              values_from = seen)
+```
+
+### Análisis Gapminder
+
+¿Cuál estructura (longer o widder) tiene el conjunto de datos Gapminder?
+
+```{r}
+head(df_gapminder_csv)
+```
+
+### Consideraciones Finales
+
+Entender los formatos de datos long y wide es crucial para trabajar eficazmente con datos en R. Dependiendo del análisis que quieras realizar, uno de estos formatos puede ser más apropiado que el otro. Afortunadamente, las funciones `pivot_longer()` y `pivot_wider()` facilitan la transición entre ambos formatos.

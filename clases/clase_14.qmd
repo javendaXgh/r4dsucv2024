@@ -1,5 +1,5 @@
 ---
-title: "Clase 14- DPLYR 3"
+title: 'Clase 14: Uso del LLM "R4DS Economía"'
 #format: live-html
 date: "December 02, 2024"
 author: "MSc. José M. Avendaño"
@@ -93,26 +93,3 @@ LLM´s Análisis Imágenes- Multimodales
 ![](images/robots.png)
 
 ## 
-
-DPLYR - fn´s complementarias `select`
-
-1.  `contains()`: Selecciona variables cuyo nombre contiene la cadena de texto
-
-2.  `ends_with()`: Selecciona variables cuyo nombre termina con la cadena de caracteres
-
-3.  `everything()`: Selecciona todas las columnas
-
-## DPLYR - fn´s complementarias `select` -2
-
-1.  `matches()`: Selecciona las variables cuyos nombres coinciden con una expresión regular
-
-2.  `num_range()`: Selecciona las variables por posición
-
-3.  `one_of()`: Selecciona variables cuyos nombres están en un grupo de nombres
-
-4.  `start_with()`: Selecciona variables cuyos nombres empiezan con la cadena de caracteres
-
-## Factores
-
-\
-Estructura de datos que agrupa elementos en niveles o categorías. Son útiles cuando tienes variables categóricas, como género (hombre/mujer), tipo de producto (libro/revista) o cualquier otra variable que tenga un conjunto limitado de posibles valores.
