@@ -1,0 +1,178 @@
+---
+title: "Ciencia de Datos para Economistas"
+subtitle: "Clase 17- Trabajando con Fechas y Textos"
+date: "December 9, 2024"
+author: "MSc. José M. Avendaño"
+# output:
+#   html_document:
+#     toc: yes
+filters:
+  - webr
+engine: knitr
+format: revealjs
+# execute: 
+#   echo: true
+  # eval: false
+---
+
+## Objetivo:
+
+Conocer las estructuras y formas de manipular las fechas y horas, así como las distintas representaciones de este tipo de datos en R
+
+## **Conceptos Básicos de Fechas en R**
+
+En R, las fechas se manejan principalmente mediante dos tipos: **`Date`** y **`POSIXct`**.
+
+-   **Date** : Almacena solo la fecha (año, mes, día).
+
+-   **POSIXct** : Almacena tanto la fecha como la hora.
+
+Ambos tipos de objetos están representados internamente como el número de días (para **`Date`**) o segundos (para **`POSIXct`**) desde el 1 de enero de 1970.
+
+## Ejemplos Fechas
+
+```{webr}
+# Crear una fecha con POSIXct
+fecha1 <- as.POSIXct("2012-06-28")
+print(fecha1)
+```
+
+```{webr}
+fecha2 <- Sys.Date()
+print(fecha2)
+```
+
+```{webr}
+fecha_hora_actual <- Sys.time()
+print(fecha_hora_actual)
+```
+
+## Ejemplos Fechas/2
+
+```{webr}
+print(as.Date(fecha_hora_actual))
+```
+
+```{webr}
+options("digits.secs"=6) 
+Sys.time()
+```
+
+## **Trabajando con Fechas en Base R**
+
+```{webr}
+# Usando la función as.Date()
+fecha_character <-"2023-10-05"
+print(class(fecha_character))
+fecha_ejemplo<- as.Date(fecha_character)
+print(fecha_ejemplo)
+print(class(fecha_ejemplo))
+
+
+```
+
+```{webr}
+# Usando Sys.Date() para obtener la fecha actual
+fecha_actual <- Sys.Date()
+print(fecha_actual)
+```
+
+## Extraer Datos de la Fechas
+
+```{webr}
+weekdays(fecha_actual)
+```
+
+```{webr}
+months(fecha_actual)
+```
+
+```{webr}
+quarters(fecha_actual)
+```
+
+## **Operaciones con Fechas:**
+
+```{webr}
+# Sumar días a una fecha
+fecha_futura <- fecha_ejemplo + 7
+print(fecha_futura)
+```
+
+```{webr}
+# Restar días a una fecha
+fecha_pasada <- fecha_ejemplo - 14
+print(fecha_pasada)
+```
+
+## Formato **POSIXlt**
+
+Está optimizado para el almacenamiento y los cálculos. Permite extraer rápidamente alguna parte de los datos (por ejemplo, los meses). La clase POSIXlt almacena la información de fecha y hora en un formato que estamos acostumbrados a ver (por ejemplo, segundo, min, hora, día del mes, mes, año, día numérico del año, etc).
+
+## Formato **POSIXlt - Ejemplos**
+
+```{webr}
+FechaHora_lt<- as.POSIXlt("2024-10-19 10:15")  
+str(FechaHora_lt)
+```
+
+```{webr}
+FechaHora_lt
+```
+
+```{webr}
+unclass(FechaHora_lt)
+```
+
+## Diferencias **POSIXct** \~ **POSIXlt**
+
+```{webr}
+fecha_ct <- as.POSIXct(1268736919, origin="1970-01-01", tz="GMT")
+fecha_lt <- as.POSIXlt(1268736919, origin="1970-01-01", tz="GMT")
+fecha_ct; fecha_lt
+
+```
+
+```{webr}
+unclass(fecha_ct)
+```
+
+```{webr}
+fecha_lt$min
+```
+
+```{webr}
+unclass(fecha_lt)
+```
+
+## Formatear Fechas
+
+`strftime` : Funciones para convertir entre representaciones de caracteres y objetos de las clases «POSIXlt» y «POSIXct» que representan fechas y horas de calendario. Consultar documentación `?strftime`
+
+```{webr}
+# Usando strftime() para formatear fechas
+fecha_formateada <- strftime(fecha_ct, "%Y-%m-%d")
+print(fecha_formateada)
+print(strftime(Sys.time(), "%Y-%m-%d Time %H:%M"))
+```
+
+## Asignar `Time Zone`
+
+```{webr}
+# Conocer la timezona definida en nuestro computador
+Sys.timezone()
+```
+
+```{webr}
+as.POSIXct(fecha_lt,
+           format = "%Y-%m-%d T %H:%M",
+           tz = "Europe/Berlin")
+```
+
+## Lecturas Recomendadas
+
+-   <http://ianmadd.github.io/pages/POSIXct_and_POSIXlt.html>
+
+-   <https://www.stat.berkeley.edu/~s133/dates.html>
+
+-   <https://clock.r-lib.org/reference/posixt-formatting.html>
