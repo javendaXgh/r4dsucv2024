@@ -1,0 +1,211 @@
+---
+title: "Lineamientos y Consideraciones para la Escritura del Ensayo"
+---
+
+## **Lineamientos para Escritura de Ensayo:**
+
+El ensayo debe estar asociado a una propuesta de realizar a futuro un proyecto de Ciencia de Datos y para esto se tendrán presente las siguientes consideraciones.
+
+1.  Seleccionar un tema de mucho interés para el alumno, dentro del área económica y/o social enmarcada en Venezuela, que pueda ser sometido a un "ciclo de ciencia de datos". Cuando se habla de económico y/o social, puede ser un sector muy pequeño, ya que la propuesta de tema de estudio no debe aspirar a resolver un gran tema.
+
+2.  Sobre este tema, el alumno debe hacer un desarrollo escrito, cercano a dos cuartillas, donde evalúe si considera que el tema seleccionado resulta de interés, puede hacer algún aporte, por diminuto que sea, a la investigación económica, a la comunidad o a los científicos sociales.
+
+Teniendo como base lo anterior, podemos entender que el Ensayo se define como: un **texto argumentativo y reflexivo** que sirva como una introducción y justificación para el futuro proyecto de ciencia de datos que haremos. En lugar de presentar resultados, el ensayo busca explorar y comunicar ideas, planteando un tema relevante y viable que pueda someterse al análisis dentro de un ciclo de ciencia de datos.
+
+## Ejemplos:
+
+1.  **Análisis de patrones de consumo en pequeños negocios locales**
+    -   **Descripción:** Evaluar los factores que afectan las ventas diarias en comercios minoristas en una zona de determinada.
+    -   **Fuentes de datos:**
+        -   Datos de transacciones de punto de venta.
+        -   Encuestas locales sobre hábitos de compra.
+        -   Datos de tráfico peatonal.
+2.  **Optimización del transporte público en zonas urbanas pequeñas**
+    -   **Descripción:** Identificar rutas y horarios óptimos basados en la demanda real de los usuarios.
+    -   **Fuentes de datos:**
+        -   Datos de tarjetas de transporte o aplicaciones de movilidad.
+        -   Información de GPS en autobuses.
+        -   Encuestas a usuarios.
+3.  **Impacto de la digitalización en la competitividad de microempresas rurales**
+    -   **Descripción:** Analizar si el acceso a herramientas digitales mejora la rentabilidad.
+    -   **Fuentes de datos:**
+        -   Encuestas realizadas en comunidades rurales.
+        -   Datos de transacciones antes y después de la implementación de herramientas digitales.
+        -   Indicadores de conectividad de la región.
+4.  **Efectos de las remesas en el emprendimiento local**
+    -   **Descripción:** Analizar si las remesas fomentan la creación de microempresas.
+    -   **Fuentes de datos:**
+        -   Bases de datos gubernamentales sobre remesas.
+        -   Encuestas sobre empleo informal.
+        -   Registros empresariales locales.
+5.  **Impacto del cambio climático en la producción agrícola de cultivos específicos**
+    -   **Descripción:** Analizar cómo las variables climáticas están afectando los rendimientos agrícolas.
+    -   **Fuentes de datos:**
+        -   Datos meteorológicos históricos y de estaciones locales.
+        -   Registros de producción agrícola.
+        -   Sensores de humedad y temperatura en cultivos.
+6.  **Efectos del comercio electrónico en mercados tradicionales**
+    -   **Descripción:** Evaluar el impacto del crecimiento del comercio electrónico sobre el comercio minorista.
+    -   **Fuentes de datos:**
+        -   Datos de ventas en plataformas de comercio electrónico.
+        -   Encuestas a pequeños comerciantes.
+        -   Registros de cierres de negocios locales.
+        -   Texto en reseñas de consumidores.
+7.  **Análisis del impacto económico de un evento local:**
+    -   **Descripción:** analizar el impacto económico de un evento específico, como un festival, una nueva empresa o un desastre natural, en una comunidad local.
+    -   **Fuentes de datos:**
+        -   Datos de ventas de negocios locales.
+        -   Encuestas a residentes.
+        -   Datos de movilidad.
+        -   Datos de redes sociales.
+8.  **Estudio de la desigualdad económica en una ciudad:**
+    -   **Descripción:** analizar la distribución del ingreso y la riqueza en una ciudad, identificando áreas con mayor desigualdad y explorando las posibles causas.
+    -   **Fuentes de datos:**
+        -   Censos, datos fiscales.
+
+        -   datos de propiedad inmobiliaria.
+9.  **Análisis del comportamiento del consumidor en un sector específico:**
+    -   **Descripción:** analizar el comportamiento de los consumidores en un sector específico, como el comercio electrónico, la restauración o el turismo.
+    -   **Fuentes de datos:**
+        -   Datos de transacciones.
+        -   encuestas a consumidores.
+        -   datos de redes sociales.
+10. **Evaluación del impacto de un programa social:**
+    -   **Descripción:** evaluar el impacto de un programa social específico, como un programa de capacitación laboral o un programa de asistencia alimentaria, en los beneficiarios.
+    -   **Fuentes de datos:**
+        -   Datos administrativos del programa.
+        -   encuestas a los beneficiarios.
+
+------------------------------------------------------------------------
+
+## Propuesta de Proyecto Final de Ciencia de Datos:
+
+### **Objetivo General:**
+
+El objetivo principal de este proyecto es que los estudiantes apliquen sus conocimientos y habilidades en el lenguaje de programación R para analizar un problema relevante para Venezuela o un sector de la sociedad. Los estudiantes deberán seguir las fases estándar del ciclo de vida de proyectos de ciencia de datos: importar, ordenar, transformar-limpiar, visualizar, modelar y comunicar.
+
+En general, sobre el Ensayo que están trabajando, dentro de las siguientes fases y puntos, es de la Fase 1 en sus puntos 1, 2 y 3, los que estamos abordando en este momento.
+
+### **Fase 1: Selección de la Problemátic**a
+
+#### **1. Identificación de Temas Relevantes:**
+
+   - Los estudiantes deben identificar un tema relevante para Venezuela que les interese personalmente. Algunos ejemplos pueden incluir:
+
+-   Análisis de la inflación y su impacto en el consumo
+
+-   Evaluación del desempleo y las tendencias laborales
+
+-   Estudio de la distribución de ingresos y pobreza
+
+-   Análisis de la calidad de vida en diferentes regiones del país
+
+-   Investigación sobre el acceso a servicios básicos (agua, electricidad, salud)
+
+-   Los estudiantes deben justificar por qué este tema les interesa y cómo creen que puede contribuir al campo de la ciencia de datos.
+
+#### 2. **Definición de la Pregunta de Investigación:**
+
+   - Basándose en el tema seleccionado, los estudiantes deben formular una pregunta de investigación clara y específica.
+
+   - La pregunta debe ser susceptible de análisis mediante técnicas estadísticas y visualización de datos.
+
+#### **3. Evaluar posibles Fuentes de Datos:**
+
+\- Junto con el profesor se evaluará la viabilidad de obtener y recolectar periódicamente datos que sirvan para el proyecto. Se puede evaluar que es factible o no realizar la investigación.
+
+**Nota: En la siguiente Fase 4, debería empezar el AnteProyecto, juntando todas las ideas de cada participante de su correspondiente equipo**
+
+#### **4. Selección de Fuentes de Datos:**
+
+    - Los estudiantes deben identificar y seleccionar fuentes de datos relevantes para su proyecto.
+
+     - Las fuentes pueden incluir:
+
+     - Estadísticas oficiales del INE (Instituto Nacional de Estadística)
+
+     - Informes económicos del Banco Mundial
+
+     - Datos de encuestas sociales
+
+     - Series temporales económicas
+
+     - Datos abiertos disponibles en plataformas como Kaggle o Data.gov
+
+     - Los estudiantes deben presentar una propuesta detallada de las fuentes de datos que planean utilizar, incluyendo un análisis de la calidad y relevancia de los mismos.
+
+**Nota:** La selección final de las fuentes de datos será revisada por los profesores de la materia para asegurar su adecuación al proyecto y la factibilidad de recolectar tales datos, dado la realidad nacional.
+
+**Lo que sigue, es lo que se trabajará en el Proyecto.**
+
+### **Fase 2: Importar y Ordenar Datos**
+
+#### 1**. Importar Datos:**
+
+   - Los estudiantes deben aprender a importar datos desde diferentes formatos (CSV, Excel, JSON, bases de datos SQL) utilizando R.
+
+#### **2. Ordenamiento y Exploración Inicial:**
+
+   - Los estudiantes deben explorar los datos importados para entender su estructura y contenido.
+
+   - Deben identificar variables relevantes, tipos de datos y posibles problemas de calidad (valores faltantes, outliers, etc.).
+
+### **Fase 3: Transformar y Limpiar Datos**
+
+#### **1. Transformación de Datos:**
+
+   - Los estudiantes deben aprender a transformar los datos para prepararlos para el análisis.
+
+   - Esto puede incluir la creación de nuevas variables, la recodificación de variables existentes o la aplicación de funciones matemáticas.
+
+#### **2. Limpieza de Datos:**
+
+   - Los estudiantes deben identificar y manejar valores faltantes, outliers y otros problemas de calidad en los datos.
+
+   - Se les recomienda utilizar paquetes como \`dplyr\` para realizar operaciones de transformación y limpieza eficientes.
+
+### **Fase 4: Visualización de Datos**
+
+#### **1. Creación de Gráficos y Tablas:**
+
+   - Los estudiantes deben aprender a crear gráficos y tablas que ayuden a visualizar los datos y responder la pregunta de investigación.
+
+   - Se les recomienda utilizar paquetes como \`ggplot2\`, plotly y otros paquetes que sean vistos en clase, para crear gráficos estéticamente atractivos y informativos.
+
+#### **2. Interpretación de Visualizaciones:**
+
+   - Los estudiantes deben interpretar las visualizaciones creadas y relacionarlas con la pregunta de investigación.
+
+   - Deben ser capaces de comunicar claramente los hallazgos visuales en un contexto narrativo.
+
+### **Fase 5: Modelado de Datos: (no es obligatorio esta fase)**
+
+#### 1. **Selección de Modelos Estadísticos**  
+
+\- Los estudiantes deben seleccionar y aplicar modelos estadísticos apropiados para responder la pregunta de investigación.
+
+\- Esto puede incluir regresiones lineales, análisis de variancia (ANOVA), series temporales o otros métodos según sea necesario.
+
+#### **2. Interpretación de Modelos:**
+
+   - Los estudiantes deben interpretar los resultados obtenidos de los modelos y relacionarlos con la pregunta de investigación.
+
+   - Deben ser capaces de comunicar claramente las implicaciones de los hallazgos estadísticos en un contexto narrativo.
+
+### **Fase 6: Comunicación de Resultados** **una de las fases más importantes en lo que estamos haciendo**
+
+#### **1. Creación de Informes, Dashboard o Aplicación Web:**
+
+   - Los estudiantes deben aprender a crear informes que presenten sus análisis y resultados.
+
+   - Se les recomienda utilizar herramientas como qmd para combinar código, texto y visualizaciones en un solo documento. De esto hablaremos con detalle a lo largo del curso.
+
+#### **2. Presentación Oral:**
+
+   - Los estudiantes deben preparar una presentación oral breve (10-15 minutos) que resuma su proyecto, incluyendo la pregunta de investigación, los métodos utilizados, los resultados obtenidos y las conclusiones.
+
+   - La presentación debe ser clara, concisa y visualmente atractiva.
+
+#### **3. Presentación en un Afiche:**
+
+\- Luego conversaremos sobre este punto

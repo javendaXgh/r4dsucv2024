@@ -73,6 +73,8 @@ website:
             text: clase 15 / versión reporte
       - section: "Proyectos"
         contents:
+          - href: project/Ensayo.qmd
+            text: "Ensayo: Propuesta de Proyecto de CD"
           - href: project/proyecto-1.qmd
             text: "Proyectos mitad de curso"
           - href: project/proyecto-2.qmd
