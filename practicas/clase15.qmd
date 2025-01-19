@@ -792,6 +792,8 @@ promedio_ventas
 En formato wider esta sería la df:
 
 ```{r}
+## Ejemplo promedio acciones
+
 precio_acciones <- tibble(
   fecha = as.Date("2024-01-01") + 0:9,
   precio_x = rnorm(10, 0, 1),
@@ -817,6 +819,7 @@ precio_acciones %>%
 Precios de acciones en formato longer mediante el uso de `pivot_longer`
 
 ```{r}
+# acciones pivot_longer
 precio_acciones %>% 
   pivot_longer(cols = starts_with("precio"),
                names_to = "accion_nombre",
@@ -830,6 +833,7 @@ precio_acciones %>%
 Información basada en una encuesta sobre religión/creencia e ingresos obtenidos
 
 ```{r}
+# caso relig income
 head(relig_income)
 
 relig_income %>%
@@ -841,6 +845,7 @@ relig_income %>%
 #### Cartelera de Éxitos Billoard:
 
 ```{r}
+# caso éxitos Billboard
 head(billboard)
 dim(billboard)
 
@@ -860,6 +865,7 @@ billboard %>%
 Añadir prefijo a remover en la columna de destino
 
 ```{r}
+## remover prefijos wk
 billboard %>%
   pivot_longer(
     cols = starts_with("wk"),
@@ -878,6 +884,7 @@ Un subconjunto de datos del Informe Mundial sobre la Tuberculosis de la Organiza
 Inspección Datos Entrada
 
 ```{r}
+# Caso WHO
 names(who)
 dim(who)
 head(who[,1:10])

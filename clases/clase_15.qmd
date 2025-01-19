@@ -75,7 +75,7 @@ Para el formato "ancho", cada fila es un tema, por ejemplo un lugar o un pacient
 
 Para los humanos, el formato "ancho" es a menudo más intuitivo ya que podemos ver más de los datos en la pantalla debido a su forma. Sin embargo, el formato "largo" es más legible para las máquinas y está más cerca al formateo de las bases de datos. Las variables de ID en nuestros marcos de datos son similares a los campos en una base de datos y las variables observadas son como los valores de la base de datos.
 
-## Tareas 
+## Tareas
 
 Revisar viñeta <https://tidyr.tidyverse.org/articles/pivot.html#longer-then-wider>
 

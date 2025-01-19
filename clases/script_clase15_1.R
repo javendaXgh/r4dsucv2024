@@ -216,16 +216,106 @@ as.character(levels(paises_america2))[paises_america2]
 ######## Parte 3: Coerce
 ##########################################################################################
 
+# Coerción implícita: Suma de un número entero y un número decimal
+entero <- 5L
+decimal <- 3.2
 
+resultado <- entero + decimal
+resultado  
+
+
+# Coerción explícita: Convertir un carácter a un número decimal
+numero_como_cadena <- "3.2"
+numero_decimal <- as.numeric(numero_como_cadena)
+numero_decimal  # Salida: 3.2
+
+# Coerción explícita: Convertir un número entero a un carácter
+entero <- 5L
+cadena <- as.character(entero)
+cadena  # Salida: "5"
+
+# Crear un data frame con diferentes tipos de datos
+df <- data.frame(
+  edad = c(25L, 30L, 35L),
+  nombre = c("Juan", "Ana", "Carlos"),
+  altura = c(1.75, 1.68, 1.80)
+)
+
+df
 ##########################################################################################
 ######## Parte 4: Recycle
 ##########################################################################################
+# Ejemplo sumas
+vector_corto <- c(1, 2)
+vector_largo <- c(3, 4, 5, 6)
+
+resultado_suma <- vector_corto + vector_largo
+resultado_suma
 
 
+# Ejemplo multiplicaciones
+vector_corto <- c(2, 3)
+vector_largo <- c(5, 7, 9, 11)
+
+resultado_mult <- vector_corto * vector_largo
+resultado_mult
+
+# Ejemplo asignaciones
+vector_largo <- c(0, 0, 0, 0)
+vector_corto <- c(1, 2)
+vector_largo[] <- vector_corto
+vector_largo
+
+# Cuando no son múltiplos ambos vectores
+
+vector_corto <- c(1, 2)
+vector_largo <- c(3, 4, 5)
+resultado <- vector_corto + vector_largo
+
+# se genera una warning
+resultado
+
+# Operaciones lógicas
+vector_corto <- c(TRUE, FALSE)
+vector_largo <- c(1, 2, 3, 4)
+resultado_logico <- vector_corto & (vector_largo > 2)
+resultado_logico
+
+# en una DF
+df_recycle <- data.frame(vector_corto = '1',
+                         vector_largo = 1:5)
+
+df_recycle
 ##########################################################################################
 ######## Parte 5: NA's
 ##########################################################################################
+# Crear un vector con algunos valores NA
+datos <- c(1, 2, NA, 4, NA, 6)
 
+datos
+# Identificar los valores NA
+is.na(datos)
+
+# Contar los valores NA en el vector 'datos'
+sum(is.na(datos))
+
+# Eliminar filas con valores NA en un data frame
+df <- data.frame(a = c(1, 2, NA), b = c(4, NA, 6))
+df_sin_na <- na.omit(df)
+df_sin_na
+
+# Reemplazar valores NA con la media de la columna 'a'
+df$a[is.na(df$a)] <- mean(df$a, na.rm = TRUE)
+df
+
+mean(df$a, na.rm = TRUE)
+
+df_completos <- df[complete.cases(df), ]
+df_completos
+
+# Coercion en NA´s
+
+## Ejemplo df_ventas
 View(head(df_ventas))
 df_ventas%>%
   filter(is.na(VAT))
@@ -241,5 +331,151 @@ df_ventas%>%
 ##########################################################################################
 ######## Parte 6: tidyr formatos long y wide
 ##########################################################################################
+
+# Crear un tibble ancho (wide)
+datos_ancho <- tribble(
+  ~nombre, ~edad_2015, ~edad_2016, ~edad_2017,
+  "Juan",   20,         21,         22,
+  "Ana",    23,         24,         25
+)
+
+
+datos_ancho
+
+
+# Crear un tibble largo (long)
+datos_largo <- tribble(
+  ~nombre, ~año, ~edad,
+  "Juan",   2015, 20,
+  "Juan",   2016, 21,
+  "Juan",   2017, 22,
+  "Ana",    2015, 23,
+  "Ana",    2016, 24,
+  "Ana",    2017, 25
+)
+
+datos_largo
+
+# Convertir datos_ancho a datos_largo
+datos_largo <- datos_ancho %>%
+  pivot_longer(cols = starts_with("edad"),
+               names_to = "año",
+               values_to = "edad")
+
+datos_largo
+
+
+# Convertir datos_largo a datos_ancho
+datos_ancho <- datos_largo %>%
+  pivot_wider(names_from = año,
+              values_from = edad)
+
+datos_ancho
+
+# Datos ancho (ejemplo)
+ventas_ancho <- tribble(
+  ~producto, ~enero, ~febrero, ~marzo,
+  "A",        100,    200,      150,
+  "B",        120,    220,      180
+)
+
+ventas_ancho
+
+# Convertir a formato largo
+ventas_largo <- ventas_ancho %>%
+  pivot_longer(cols = starts_with("enero"),
+               names_to = "mes",
+               values_to = "venta")
+
+ventas_largo
+
+# Calcular promedio de ventas por producto
+promedio_ventas <- ventas_largo %>%
+  group_by(producto) %>%
+  summarize(promedio = mean(venta))
+
+promedio_ventas
+
+# Ejemplo promedio acciones
+precio_acciones <- tibble(
+  fecha = as.Date("2024-01-01") + 0:9,
+  precio_x = rnorm(10, 0, 1),
+  precio_y = rnorm(10, 0, 2),
+  precio_z = rnorm(10, 0, 4)
+)
+
+precio_acciones
+
+# versión anterior con gather
+precio_acciones %>% 
+  gather("accion_nombe",
+         "precio_accion",
+         -fecha)
+
+# caso relig income
+head(relig_income)
+
+relig_income %>%
+  pivot_longer(cols =!religion, 
+               names_to = "income", 
+               values_to = "count")
+
+
+# caso éxitos Billboard
+head(billboard)
+dim(billboard)
+
+billboard %>%
+  pivot_longer(
+    cols = starts_with("wk"),
+    names_to = "week",
+    # names_prefix = "wk",
+    values_to = "rank",
+    values_drop_na = TRUE
+  )
+
+## remover prefijos wk
+billboard %>%
+  pivot_longer(
+    cols = starts_with("wk"),
+    names_to = "week",
+    names_prefix = "wk",
+    values_to = "rank",
+    values_drop_na = TRUE
+  )
+
+# Caso WHO
+names(who)
+dim(who)
+
+who %>% 
+  pivot_longer(
+    cols = new_sp_m014:newrel_f65,
+    names_to = c("diagnosis", "gender", "age"),
+    names_pattern = "new_?(.*)_(.)(.*)",
+    values_to = "count"
+  )
+
+## análisis patrón en string
+library(stringr) # ya está cargada en tidyverse
+str_split("new_sp_m2534", "new_?(.*)_(.)(.*)")
+
+# Hacer consultar a LLM sobre este patrón
+cadena <- "new_user_123"
+patron <- "new_?(.*)_(.)(.*)"
+
+resultados <- str_match(cadena, patron)
+resultados
+
+# Ejercicio pivot wider
+# fish encounter
+######## pivot_wider()
+head(fish_encounters, 8)
+
+fish_encounters %>%
+  pivot_wider(names_from = station, 
+              values_from = seen)
+
+
 
 
