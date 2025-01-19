@@ -485,3 +485,17 @@ Ejemplos obtenidos de "Same Stats, Different Graphs: Generating Datasets with Va
 ## Ejemplos de Códigos GGplot2
 
 ![https://r-graph-gallery.com](images/clase19/otros/galeria_ggplot.png){fig-align="center" width="581"}
+
+## Recursos Adicionales de Interés
+
+-   Códigos con gráficos para el sistema GGplot [r-graph-gallery](https://r-graph-gallery.com)
+
+-   Visualización Datos Abiertos [https://datos.gob.es](https://datos.gob.es/es/blog/como-elegir-el-grafico-correcto-para-visualizar-datos-abiertos)
+
+-   BBC R cookbook [https://bbc.github.io](https://bbc.github.io/rcookbook/)
+
+-   Visualización de Datos en R4DS [R4DS](https://r4ds.hadley.nz/data-visualize.html)
+
+-   Modern Data Visualization [datavis](https://rkabacoff.github.io/datavis/)
+
+-   Sitio de Edward Tufte <https://www.edwardtufte.com>

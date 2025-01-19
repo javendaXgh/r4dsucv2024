@@ -6109,7 +6109,7 @@
     "href": "clases/clase_19_site.html#ejemplos-de-códigos-ggplot2",
     "title": "Ciencia de Datos para Economistas",
     "section": "Ejemplos de Códigos GGplot2",
-    "text": "Ejemplos de Códigos GGplot2\n\n\n\nhttps://r-graph-gallery.com\n\n\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Ejemplos de Códigos GGplot2\n\nhttps://r-graph-gallery.com"
   },
   {
     "objectID": "clases/clase_19_completa.html#section",
@@ -6551,5 +6551,12 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "",
     "text": "Conocer las estructuras y formas de manipular las fechas y horas, así como las distintas representaciones de este tipo de datos en R"
+  },
+  {
+    "objectID": "clases/clase_19_site.html#recursos-adicionales-de-interés",
+    "href": "clases/clase_19_site.html#recursos-adicionales-de-interés",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Recursos Adicionales de Interés",
+    "text": "Recursos Adicionales de Interés\n\nCódigos con gráficos para el sistema GGplot r-graph-gallery\nVisualización Datos Abiertos https://datos.gob.es\nBBC R cookbook https://bbc.github.io\nVisualización de Datos en R4DS R4DS\nModern Data Visualization datavis\nSitio de Edward Tufte https://www.edwardtufte.com\n\n\n\n\n\n🔗 ucveconomiar4ds"
   }
 ]
