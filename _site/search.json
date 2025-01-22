@@ -468,7 +468,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\nAsignar Nombres Objetos y Variables\n🖥️ láminas clase 03 apoyo  💻 clase 3 apoyo versión qmd \n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n🖥️ láminas clase 04  💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\nConstruir Funciones y Data Frames\n🖥️ láminas clase 06  💻 clase 6 versión qmd  🖥️ clase 6 versión códigos  💻 clase 6: práctica 1- versión qmd  💻 clase 6: práctica 1- versión site  🎥video render Quarto 💻 clase 6: práctica 2- versión qmd  💻 clase 6: práctica 2- versión site \n\n\n\n\nmié, 6 nov.\nDF subsetting; Ayudas\n🖥️ láminas clase 07 💻 clase 7: tarea \n\n\n4\nlun, 11 nov.\nInspección DF´s / Seleccionar Valores, Subsettings-cont\n🖥️ láminas clase 08 🖥️ clase 08, versión reporte 💻 clase 8 versión qmd  💻 clase 8: tarea \n\n\n\n\nmié, 13 nov.\nPaths o Rutas de trabajo\n🖥️ láminas clase 09\n\n\n5\nlun, 18 nov.\nTrabajando con Data Frames por filas\n🖥️ láminas clase 10\n\n\n\n\nmié, 20 nov.\nTrabajando con Data Frames por columnas\n🖥️ láminas clase 11 💻 clase 11 versión qmd \n\n\n6\nlun, 25 nov.\nTrabajando con Data Frames: agrupamientos y Reframes\n🖥️ láminas clase 12 💻 clase 12 script  🖥️ clase 12, versión reporte 💻 clase 12 versión qmd \n\n\n\n\nmié, 27 nov.\nTrabajando con Data Frames: Agrupamientos y Reframes/ Asignación Ensayo\n💻 clase 13 script  🖥️ clase 13, versión reporte 💻 clase 13 versión qmd \n\n\n7\nlun, 2 dic.\nTrabajando con LLM R4DS Escuela Economía UCV\n🖥️ láminas clase 14 💻 clase 14 script \n\n\n\n\nmié, 4 dic.\nTrabajando con Data Frames y Tibbles: factores, selects, remoción duplicados. RBase: Coercion\n🖥️ láminas clase 15 💻 clase 15 script  🖥️ clase 15, versión reporte 💻 clase 15 versión qmd \n\n\n\n\nvie, 6 dic.\nTrabajando con Tibbles:Formatos Long y Wide, Valores Ausentes\nmismos materiales de clase 15\n\n\n8\nlun, 9 dic.\ntrabajando con: fechas y strings\n🖥️ láminas clase 17 💻 clase 17 script \n\n\n\n\nmié, 11 dic.\nUsando R para Análisis Económico\n💻 clase 18 script  🛢️ conjunto de datos clase 18 \n\n\n10\nlun, 13 ene.\nAvances anteproyecto- Discusión\n\n\n\n\n\n\nmié, 15 ene.\nIntroducción a la Visualizacion de Datos\n🖥️ láminas clase 19\n\n\n\n\nvie, 17 ene.\nIntroducción al Scrapy\n\n\n\n\n11\nlun, 20 ene.\nVisualizacion de Datos/ Análisis Exploratorio\n\n\n\n\n\n\nmié, 22 ene.\nIntroducción a uso de API´s\n\n\n\n\n\n\nmié, 22 ene.\nVisualización de Datos: GGplot y otras opciones\n\n\n\n\n12\nlun, 27 ene.\nConexiones API´s, Scrapy (segunda parte)\n\n\n\n\n\n\nmié, 29 ene.\nReportes/Tablas DT y GT/Nombres Columnas /Presentacion Preproyecto\n\n\n\n\n13\nlun, 3 feb.\nDashboard\n\n\n\n\n\n\nmié, 5 feb.\nAplicaciones Web Interactivas: Shiny\n\n\n\n\n14\nlun, 10 feb.\nRevisión Preliminar Proyectos\n\n\n\n\n\n\nmié, 12 feb.\nConexiones a DB´s, lectura y escritura\n\n\n\n\n\n\nlun, 17 feb.\nJoins de DF´s\n\n\n\n\n\n\nmié, 19 feb.\nPresentacion Proyecto",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\nAsignar Nombres Objetos y Variables\n🖥️ láminas clase 03 apoyo  💻 clase 3 apoyo versión qmd \n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n🖥️ láminas clase 04  💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\nConstruir Funciones y Data Frames\n🖥️ láminas clase 06  💻 clase 6 versión qmd  🖥️ clase 6 versión códigos  💻 clase 6: práctica 1- versión qmd  💻 clase 6: práctica 1- versión site  🎥video render Quarto 💻 clase 6: práctica 2- versión qmd  💻 clase 6: práctica 2- versión site \n\n\n\n\nmié, 6 nov.\nDF subsetting; Ayudas\n🖥️ láminas clase 07 💻 clase 7: tarea \n\n\n4\nlun, 11 nov.\nInspección DF´s / Seleccionar Valores, Subsettings-cont\n🖥️ láminas clase 08 🖥️ clase 08, versión reporte 💻 clase 8 versión qmd  💻 clase 8: tarea \n\n\n\n\nmié, 13 nov.\nPaths o Rutas de trabajo\n🖥️ láminas clase 09\n\n\n5\nlun, 18 nov.\nTrabajando con Data Frames por filas\n🖥️ láminas clase 10\n\n\n\n\nmié, 20 nov.\nTrabajando con Data Frames por columnas\n🖥️ láminas clase 11 💻 clase 11 versión qmd \n\n\n6\nlun, 25 nov.\nTrabajando con Data Frames: agrupamientos y Reframes\n🖥️ láminas clase 12 💻 clase 12 script  🖥️ clase 12, versión reporte 💻 clase 12 versión qmd \n\n\n\n\nmié, 27 nov.\nTrabajando con Data Frames: Agrupamientos y Reframes/ Asignación Ensayo\n💻 clase 13 script  🖥️ clase 13, versión reporte 💻 clase 13 versión qmd \n\n\n7\nlun, 2 dic.\nTrabajando con LLM R4DS Escuela Economía UCV\n🖥️ láminas clase 14 💻 clase 14 script \n\n\n\n\nmié, 4 dic.\nTrabajando con Data Frames y Tibbles: factores, selects, remoción duplicados. RBase: Coercion\n🖥️ láminas clase 15 💻 clase 15 script  🖥️ clase 15, versión reporte 💻 clase 15 versión qmd \n\n\n\n\nvie, 6 dic.\nTrabajando con Tibbles:Formatos Long y Wide, Valores Ausentes\nmismos materiales de clase 15\n\n\n8\nlun, 9 dic.\ntrabajando con: fechas y strings\n🖥️ láminas clase 17 💻 clase 17 script \n\n\n\n\nmié, 11 dic.\nUsando R para Análisis Económico\n💻 clase 18 script  🛢️ conjunto de datos clase 18 \n\n\n10\nlun, 13 ene.\nAvances anteproyecto- Discusión\n\n\n\n\n\n\nmié, 15 ene.\nIntroducción a la Visualizacion de Datos\n🖥️ láminas clase 19\n\n\n\n\nvie, 17 ene.\nIntroducción al Scrapy\n\n\n\n\n11\nlun, 20 ene.\nVisualizacion de Datos/ Análisis Exploratorio\n🖥️ láminas clase 20-1 🖥️ láminas clase 20-2 🖥️ láminas clase 20-3 💻 clase 20 script \n\n\n\n\nmié, 22 ene.\nIntroducción a uso de API´s\n\n\n\n\n\n\nmié, 22 ene.\nVisualización de Datos: GGplot y otras opciones\n\n\n\n\n12\nlun, 27 ene.\nConexiones API´s, Scrapy (segunda parte)\n\n\n\n\n\n\nmié, 29 ene.\nReportes/Tablas DT y GT/Nombres Columnas /Presentacion Preproyecto\n\n\n\n\n13\nlun, 3 feb.\nDashboard\n\n\n\n\n\n\nmié, 5 feb.\nAplicaciones Web Interactivas: Shiny\n\n\n\n\n14\nlun, 10 feb.\nRevisión Preliminar Proyectos\n\n\n\n\n\n\nmié, 12 feb.\nConexiones a DB´s, lectura y escritura\n\n\n\n\n\n\nlun, 17 feb.\nJoins de DF´s\n\n\n\n\n\n\nmié, 19 feb.\nPresentacion Proyecto",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -4189,8 +4189,8 @@
     "objectID": "clases/clase_14.html#objetivo",
     "href": "clases/clase_14.html#objetivo",
     "title": "Clase 14: Uso del LLM “R4DS Economía”",
-    "section": "Objetivo:",
-    "text": "Objetivo:\n\nUsar funciones de dplyr para poder remover duplicados, seleccionar columnas\nUso de factores para datos categóricos"
+    "section": "",
+    "text": "Usar funciones de dplyr para poder remover duplicados, seleccionar columnas\nUso de factores para datos categóricos"
   },
   {
     "objectID": "clases/clase_14.html#varios-y-puntos-pendientes",
@@ -5703,28 +5703,28 @@
     "href": "clases/clase_19_site.html#y-en-el-inicio",
     "title": "Ciencia de Datos para Economistas",
     "section": "y en el inicio",
-    "text": "y en el inicio\n\nMapa del Mundo Babilónico - VII AC"
+    "text": "y en el inicio\n\n\n\nMapa del Mundo Babilónico - VII AC"
   },
   {
     "objectID": "clases/clase_19_site.html#mapa-orbis-terrarum-o-t",
     "href": "clases/clase_19_site.html#mapa-orbis-terrarum-o-t",
     "title": "Ciencia de Datos para Economistas",
     "section": "Mapa Orbis Terrarum (O-T)",
-    "text": "Mapa Orbis Terrarum (O-T)\n\nhttps://en.wikipedia.org/wiki/T_and_O_map\nEs de suponer que se consideró tácitamente una proyección conveniente de la porción habitada del mundo conocida en época romana y medieval . La T es el Mediterráneo, que divide los tres continentes, Asia, Europa y África, y la O es el Océano circundante."
+    "text": "Mapa Orbis Terrarum (O-T)\n\n\n\nhttps://en.wikipedia.org/wiki/T_and_O_map\n\n\n\nEs de suponer que se consideró tácitamente una proyección conveniente de la porción habitada del mundo conocida en época romana y medieval . La T es el Mediterráneo, que divide los tres continentes, Asia, Europa y África, y la O es el Océano circundante."
   },
   {
     "objectID": "clases/clase_19_site.html#mapa-mahmud-al-kashgaris",
     "href": "clases/clase_19_site.html#mapa-mahmud-al-kashgaris",
     "title": "Ciencia de Datos para Economistas",
     "section": "Mapa Mahmud al-Kashgari’s",
-    "text": "Mapa Mahmud al-Kashgari’s\n\nAproximadamente siglo XI. Tomado de https://en.wikipedia.org/wiki/Mahmud_al-Kashgari\nSe utilizan símbolos:\nlíneas azules para los ríos,\nlíneas rojas para las cadenas montañosas\nEl mundo está rodeado por el océano."
+    "text": "Mapa Mahmud al-Kashgari’s\n\n\n\nAproximadamente siglo XI. Tomado de https://en.wikipedia.org/wiki/Mahmud_al-Kashgari\n\n\n\nSe utilizan símbolos:\nlíneas azules para los ríos,\nlíneas rojas para las cadenas montañosas\nEl mundo está rodeado por el océano."
   },
   {
     "objectID": "clases/clase_19_site.html#el-reloj-cosmográfico",
     "href": "clases/clase_19_site.html#el-reloj-cosmográfico",
     "title": "Ciencia de Datos para Economistas",
     "section": "El Reloj Cosmográfico",
-    "text": "El Reloj Cosmográfico\n\nJohn Carte, aprox. 1700 en The Book of Trees: Visualizing Branches of Knowledge de Manuel Lima"
+    "text": "El Reloj Cosmográfico\n\n\n\nJohn Carte, aprox. 1700 en The Book of Trees: Visualizing Branches of Knowledge de Manuel Lima"
   },
   {
     "objectID": "clases/clase_19_site.html#problema-representación-en-mapas",
@@ -5745,7 +5745,7 @@
     "href": "clases/clase_19_site.html#en-distintas-proyecciones-1",
     "title": "Ciencia de Datos para Economistas",
     "section": "🇻🇪 - 🇨🇴 en Distintas Proyecciones",
-    "text": "🇻🇪 - 🇨🇴 en Distintas Proyecciones\n\ncódigo disponible en https://github.com/UCVeconomia2024-2/scripts/tree/main/soporte_clases/clase_19/mapa_proyecciones.R"
+    "text": "🇻🇪 - 🇨🇴 en Distintas Proyecciones\n\n\n\ncódigo disponible en https://github.com/UCVeconomia2024-2/scripts/tree/main/soporte_clases/clase_19/mapa_proyecciones.R"
   },
   {
     "objectID": "clases/clase_19_site.html#elementos-mapas",
@@ -5759,21 +5759,21 @@
     "href": "clases/clase_19_site.html#herencia-de-los-mapas",
     "title": "Ciencia de Datos para Economistas",
     "section": "Herencia de los Mapas",
-    "text": "Herencia de los Mapas\n\nMapa realizado por John Snow en 1854. Tomado de Visual Explanations, Images and Quantities de Edward R. Tufte"
+    "text": "Herencia de los Mapas\n\n\n\nMapa realizado por John Snow en 1854. Tomado de Visual Explanations, Images and Quantities de Edward R. Tufte"
   },
   {
     "objectID": "clases/clase_19_site.html#representación-de-flujos-comerciales",
     "href": "clases/clase_19_site.html#representación-de-flujos-comerciales",
     "title": "Ciencia de Datos para Economistas",
     "section": "Representación de Flujos Comerciales",
-    "text": "Representación de Flujos Comerciales\n\n1864, Exportaciones de Vino Frances por Charles Joseph Minard, cartógrafo fránces. Tomado de Visual Explanations, Images and Quantities de Edward R. Tufte"
+    "text": "Representación de Flujos Comerciales\n\n\n\n1864, Exportaciones de Vino Frances por Charles Joseph Minard, cartógrafo fránces. Tomado de Visual Explanations, Images and Quantities de Edward R. Tufte"
   },
   {
     "objectID": "clases/clase_19_site.html#visualización-de-observaciones--galileo-galilei",
     "href": "clases/clase_19_site.html#visualización-de-observaciones--galileo-galilei",
     "title": "Ciencia de Datos para Economistas",
     "section": "Visualización de Observaciones- Galileo Galilei",
-    "text": "Visualización de Observaciones- Galileo Galilei\n\n1610, año de las observaciones de G.G. obtenido de https://www.esa.int/ESA_Multimedia/Images/2005/11/Galileo_s_observations_of_Jupiter_s_moons"
+    "text": "Visualización de Observaciones- Galileo Galilei\n\n\n\n1610, año de las observaciones de G.G. obtenido de https://www.esa.int/ESA_Multimedia/Images/2005/11/Galileo_s_observations_of_Jupiter_s_moons"
   },
   {
     "objectID": "clases/clase_19_site.html#detalle-observación-lunas-júpiter",
@@ -5787,14 +5787,14 @@
     "href": "clases/clase_19_site.html#contar-historias-espacio-y-tiempo",
     "title": "Ciencia de Datos para Economistas",
     "section": "Contar Historias: Espacio y Tiempo",
-    "text": "Contar Historias: Espacio y Tiempo\n\nAvance de Campaña del Ejercito Francés al mando de Napoleón Bonaparte por Charles Joseph Minard, 1869. Tomado de The Visual Display of Quantitative Information de Edward Tufte"
+    "text": "Contar Historias: Espacio y Tiempo\n\n\n\nAvance de Campaña del Ejercito Francés al mando de Napoleón Bonaparte por Charles Joseph Minard, 1869. Tomado de The Visual Display of Quantitative Information de Edward Tufte"
   },
   {
     "objectID": "clases/clase_19_site.html#el-eslabón",
     "href": "clases/clase_19_site.html#el-eslabón",
     "title": "Ciencia de Datos para Economistas",
     "section": "El Eslabón",
-    "text": "El Eslabón\n\nThe Comertial and Political Atlas de William Payfair, 1786"
+    "text": "El Eslabón\n\n\n\nThe Comertial and Political Atlas de William Payfair, 1786"
   },
   {
     "objectID": "clases/clase_19_site.html#encontrar-patrones",
@@ -5843,14 +5843,14 @@
     "href": "clases/clase_19_site.html#marketing",
     "title": "Ciencia de Datos para Economistas",
     "section": "🛑 Marketing",
-    "text": "🛑 Marketing\n\nPresentación del Iphone por Steve Jobs 2008. Tomado de https://www.labo.mathieurella.fr/?p=403"
+    "text": "🛑 Marketing\n\n\n\nPresentación del Iphone por Steve Jobs 2008. Tomado de https://www.labo.mathieurella.fr/?p=403"
   },
   {
     "objectID": "clases/clase_19_site.html#section-1",
     "href": "clases/clase_19_site.html#section-1",
     "title": "Ciencia de Datos para Economistas",
     "section": "",
-    "text": "https://elpais.com/tecnologia/2024-11-24/de-bannon-a-musk-la-decada-que-convirtio-la-desinformacion-en-la-nueva-normalidad.html\nLa libertad depende de ciudadanos capaces de distinguir distinguir entre lo que es verdad y lo que quieren oír. El autoritarismo llega no porque la gente diga que lo quiere, sino porque pierde la capacidad de distinguir entre hechos y deseos.\nTIMOTHY SNYDER, EL CAMINO HACIA LA FALTA DE LIBERTAD (2018)"
+    "text": "https://elpais.com/tecnologia/2024-11-24/de-bannon-a-musk-la-decada-que-convirtio-la-desinformacion-en-la-nueva-normalidad.html\n\n\n\nLa libertad depende de ciudadanos capaces de distinguir distinguir entre lo que es verdad y lo que quieren oír. El autoritarismo llega no porque la gente diga que lo quiere, sino porque pierde la capacidad de distinguir entre hechos y deseos.\nTIMOTHY SNYDER, EL CAMINO HACIA LA FALTA DE LIBERTAD (2018)"
   },
   {
     "objectID": "clases/clase_19_site.html#formalidades",
@@ -5864,7 +5864,7 @@
     "href": "clases/clase_19_site.html#canales-de-comunicación-recomendados",
     "title": "Ciencia de Datos para Economistas",
     "section": "Canales de Comunicación Recomendados",
-    "text": "Canales de Comunicación Recomendados\n\nGuía de Munzner para agrupar los canales visuales en magnitud e identidad y clasificarlos por eficacia. Imágen extraída de «Visualization Analysis and Design» de Tamara Munzner"
+    "text": "Canales de Comunicación Recomendados\n\n\n\nGuía de Munzner para agrupar los canales visuales en magnitud e identidad y clasificarlos por eficacia. Imágen extraída de «Visualization Analysis and Design» de Tamara Munzner"
   },
   {
     "objectID": "clases/clase_19_site.html#uso-de-colores",
@@ -5899,7 +5899,7 @@
     "href": "clases/clase_19_site.html#viridis",
     "title": "Ciencia de Datos para Economistas",
     "section": "Viridis",
-    "text": "Viridis\n\ncolores diseñados para mejorar la legibilidad de los gráficos para lectores con formas comunes de daltonismo y/o deficiencia de visión cromática"
+    "text": "Viridis\n\n\n\ncolores diseñados para mejorar la legibilidad de los gráficos para lectores con formas comunes de daltonismo y/o deficiencia de visión cromática"
   },
   {
     "objectID": "clases/clase_19_site.html#uso-de-escalas-de-representación",
@@ -5927,21 +5927,21 @@
     "href": "clases/clase_19_site.html#logarítmica",
     "title": "Ciencia de Datos para Economistas",
     "section": "Logarítmica",
-    "text": "Logarítmica\n\nmás información en https://pmc.ncbi.nlm.nih.gov/articles/PMC7200843/"
+    "text": "Logarítmica\n\n\n\nmás información en https://pmc.ncbi.nlm.nih.gov/articles/PMC7200843/"
   },
   {
     "objectID": "clases/clase_19_site.html#gráficos-interactivos-owd",
     "href": "clases/clase_19_site.html#gráficos-interactivos-owd",
     "title": "Ciencia de Datos para Economistas",
     "section": "Gráficos Interactivos OWD",
-    "text": "Gráficos Interactivos OWD\n\nen este tipo de gráficos se incorporan métodos alternativos para acceder a los datos. https://ourworldindata.org/poverty"
+    "text": "Gráficos Interactivos OWD\n\n\n\nen este tipo de gráficos se incorporan métodos alternativos para acceder a los datos. https://ourworldindata.org/poverty"
   },
   {
     "objectID": "clases/clase_19_site.html#gráficos-interactivos-patria",
     "href": "clases/clase_19_site.html#gráficos-interactivos-patria",
     "title": "Ciencia de Datos para Economistas",
     "section": "Gráficos Interactivos Patria",
-    "text": "Gráficos Interactivos Patria\n\nhttps://covid19.patria.org.ve/estadisticas-venezuela/"
+    "text": "Gráficos Interactivos Patria\n\n\n\nhttps://covid19.patria.org.ve/estadisticas-venezuela/"
   },
   {
     "objectID": "clases/clase_19_site.html#gráficos-recomendados-según-caso-de-uso",
@@ -5962,7 +5962,7 @@
     "href": "clases/clase_19_site.html#representación-de-áreas-dispersas-2",
     "title": "Ciencia de Datos para Economistas",
     "section": "Representación de Áreas Dispersas 2",
-    "text": "Representación de Áreas Dispersas 2\nRepresentación 3d interactiva con resultados elecciones presidenciales EEUU 2016 por County\n\nDisponible en https://carto.maps.arcgis.com/apps/webappviewer3d/index.html?id=02b618528b7b458cb5d05557ebd44"
+    "text": "Representación de Áreas Dispersas 2\nRepresentación 3d interactiva con resultados elecciones presidenciales EEUU 2016 por County\n\n\n\nDisponible en https://carto.maps.arcgis.com/apps/webappviewer3d/index.html?id=02b618528b7b458cb5d05557ebd44"
   },
   {
     "objectID": "clases/clase_19_site.html#representaciones-sin-ejes",
@@ -5990,7 +5990,7 @@
     "href": "clases/clase_19_site.html#desproporciones--comparaciones-no-apropiadas",
     "title": "Ciencia de Datos para Economistas",
     "section": "Desproporciones- Comparaciones no Apropiadas",
-    "text": "Desproporciones- Comparaciones no Apropiadas\n\nhttps://www.vtv.gob.ve/dia-1125-lucha-covid-14042023/"
+    "text": "Desproporciones- Comparaciones no Apropiadas\n\n\n\nhttps://www.vtv.gob.ve/dia-1125-lucha-covid-14042023/"
   },
   {
     "objectID": "clases/clase_19_site.html#truncado-de-ejes",
@@ -6011,28 +6011,28 @@
     "href": "clases/clase_19_site.html#representaciones-no-honestas",
     "title": "Ciencia de Datos para Economistas",
     "section": "Representaciones “No Honestas”",
-    "text": "Representaciones “No Honestas”\n\nTruncating the Y-Axis: Threat or Menace?, Michael Correll, disponible en https://arxiv.org/pdf/1907.02035"
+    "text": "Representaciones “No Honestas”\n\n\n\nTruncating the Y-Axis: Threat or Menace?, Michael Correll, disponible en https://arxiv.org/pdf/1907.02035"
   },
   {
     "objectID": "clases/clase_19_site.html#doble-eje-y",
     "href": "clases/clase_19_site.html#doble-eje-y",
     "title": "Ciencia de Datos para Economistas",
     "section": "Doble Eje Y",
-    "text": "Doble Eje Y\n\nhttps://cedice.org.ve/ogp/wp-content/uploads/2024/02/CII-2024-febrero.pdf"
+    "text": "Doble Eje Y\n\n\n\n\n\nhttps://cedice.org.ve/ogp/wp-content/uploads/2024/02/CII-2024-febrero.pdf"
   },
   {
     "objectID": "clases/clase_19_site.html#fuentes-de-datos-no-apropiadas",
     "href": "clases/clase_19_site.html#fuentes-de-datos-no-apropiadas",
     "title": "Ciencia de Datos para Economistas",
     "section": "Fuentes de Datos no Apropiadas",
-    "text": "Fuentes de Datos no Apropiadas\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://cedice.org.ve/ogp/wp-content/uploads/2024/02/CII-2024-febrero.pdf"
+    "text": "Fuentes de Datos no Apropiadas\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://cedice.org.ve/ogp/wp-content/uploads/2024/02/CII-2024-febrero.pdf"
   },
   {
     "objectID": "clases/clase_19_site.html#mentir-con-los-gráficos",
     "href": "clases/clase_19_site.html#mentir-con-los-gráficos",
     "title": "Ciencia de Datos para Economistas",
     "section": "Mentir con los gráficos",
-    "text": "Mentir con los gráficos\n\nmás info en https://www.linkedin.com/pulse/when-numbers-mislead-groww-in/"
+    "text": "Mentir con los gráficos\n\n\n\nmás info en https://www.linkedin.com/pulse/when-numbers-mislead-groww-in/"
   },
   {
     "objectID": "clases/clase_19_site.html#gráficos-no-apropiados-u-óptimos",
@@ -6053,7 +6053,7 @@
     "href": "clases/clase_19_site.html#eda",
     "title": "Ciencia de Datos para Economistas",
     "section": "EDA",
-    "text": "EDA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEjemplos obtenidos de “Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics through Simulated Annealing” por Justin Matejka et all."
+    "text": "EDA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEjemplos obtenidos de “Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics through Simulated Annealing” por Justin Matejka et all."
   },
   {
     "objectID": "clases/clase_19_site.html#ii-comunicar-resultados",
@@ -6074,7 +6074,7 @@
     "href": "clases/clase_19_site.html#presentar-resultados-grafos",
     "title": "Ciencia de Datos para Economistas",
     "section": "Presentar Resultados Grafos",
-    "text": "Presentar Resultados Grafos\n\nInvestigación de El Gato y la Caja sobre el crecimiento de los nuevos medios digitales en Argentina, disponible en https://elgatoylacaja.com/el-dia-que-prendieron-la-luz"
+    "text": "Presentar Resultados Grafos\n\n\n\nInvestigación de El Gato y la Caja sobre el crecimiento de los nuevos medios digitales en Argentina, disponible en https://elgatoylacaja.com/el-dia-que-prendieron-la-luz"
   },
   {
     "objectID": "clases/clase_19_site.html#variaciones-mensuales-de-valores",
@@ -6088,14 +6088,14 @@
     "href": "clases/clase_19_site.html#clusters---tópicos",
     "title": "Ciencia de Datos para Economistas",
     "section": "Clusters - Tópicos",
-    "text": "Clusters - Tópicos\n\nVisualización elaborada por José Avendaño disponible en https://atlas.nomic.ai/data/javenda/saber-ucv/map"
+    "text": "Clusters - Tópicos\n\n\n\nVisualización elaborada por José Avendaño disponible en https://atlas.nomic.ai/data/javenda/saber-ucv/map"
   },
   {
     "objectID": "clases/clase_19_site.html#treemaps",
     "href": "clases/clase_19_site.html#treemaps",
     "title": "Ciencia de Datos para Economistas",
     "section": "Treemaps",
-    "text": "Treemaps\n\nCovid 19 en Venezuela, cifras Patria,org.ve, procesadas por José Avendaño https://javenda.netlify.app/covid19venezuela"
+    "text": "Treemaps\n\n\n\nCovid 19 en Venezuela, cifras Patria,org.ve, procesadas por José Avendaño https://javenda.netlify.app/covid19venezuela"
   },
   {
     "objectID": "clases/clase_19_site.html#distribuciones",
@@ -6109,7 +6109,7 @@
     "href": "clases/clase_19_site.html#ejemplos-de-códigos-ggplot2",
     "title": "Ciencia de Datos para Economistas",
     "section": "Ejemplos de Códigos GGplot2",
-    "text": "Ejemplos de Códigos GGplot2\n\nhttps://r-graph-gallery.com"
+    "text": "Ejemplos de Códigos GGplot2\n\n\n\nhttps://r-graph-gallery.com"
   },
   {
     "objectID": "clases/clase_19_completa.html#section",
@@ -6557,7 +6557,7 @@
     "href": "clases/clase_19_site.html#recursos-adicionales-de-interés",
     "title": "Ciencia de Datos para Economistas",
     "section": "Recursos Adicionales de Interés",
-    "text": "Recursos Adicionales de Interés\n\nCódigos con gráficos para el sistema GGplot r-graph-gallery\nVisualización Datos Abiertos https://datos.gob.es\nBBC R cookbook https://bbc.github.io\nVisualización de Datos en R4DS R4DS\nModern Data Visualization datavis\nSitio de Edward Tufte https://www.edwardtufte.com\n\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Recursos Adicionales de Interés\n\nCódigos con gráficos para el sistema GGplot r-graph-gallery\nVisualización Datos Abiertos https://datos.gob.es\nBBC R cookbook https://bbc.github.io\nVisualización de Datos en R4DS R4DS\nModern Data Visualization datavis\nSitio de Edward Tufte https://www.edwardtufte.com\nTruncating the Y-Axis, Michael Correll, https://arxiv.org/pdf/1907.02035"
   },
   {
     "objectID": "clases/clase_19_completa.html#recursos-adicionales-de-interés",
@@ -6565,5 +6565,663 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "Recursos Adicionales de Interés",
     "text": "Recursos Adicionales de Interés\n\nCódigos con gráficos para el sistema GGplot r-graph-gallery\nVisualización Datos Abiertos https://datos.gob.es\nBBC R cookbook https://bbc.github.io\nVisualización de Datos en R4DS R4DS\nModern Data Visualization datavis\nSitio de Edward Tufte https://www.edwardtufte.com\n\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_20_1.html#principios-de-gráficos-analíticos--1",
+    "href": "clases/clase_20_1.html#principios-de-gráficos-analíticos--1",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Principios de Gráficos Analíticos -1",
+    "text": "Principios de Gráficos Analíticos -1\n\nPrincipio 1: Mostrar comparaciones\n\nLa evidencia para una hipótesis es siempre relativa a otra hipótesis compitiendo.\nSiempre pregunta “¿En comparación con qué?”"
+  },
+  {
+    "objectID": "clases/clase_20_1.html#mostrar-comparaciones",
+    "href": "clases/clase_20_1.html#mostrar-comparaciones",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Mostrar Comparaciones",
+    "text": "Mostrar Comparaciones\nReferencia: Butz AM, et al., JAMA Pediatrics, 2011."
+  },
+  {
+    "objectID": "clases/clase_20_1.html#mostrar-comparaciones-1",
+    "href": "clases/clase_20_1.html#mostrar-comparaciones-1",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Mostrar Comparaciones",
+    "text": "Mostrar Comparaciones\nReferencia: Butz AM, et al., JAMA Pediatrics, 2011."
+  },
+  {
+    "objectID": "clases/clase_20_1.html#principios-de-gráficos-analíticos--2",
+    "href": "clases/clase_20_1.html#principios-de-gráficos-analíticos--2",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Principios de Gráficos Analíticos -2",
+    "text": "Principios de Gráficos Analíticos -2\n\nPrincipio 2: Mostrar causalidad, mecanismos, explicaciones, estructura sistemática:\n\nCuál es el marco conceptual-teórico para sustentar la causalidad que quieres analizar"
+  },
+  {
+    "objectID": "clases/clase_20_1.html#principios-de-gráficos-analíticos--3",
+    "href": "clases/clase_20_1.html#principios-de-gráficos-analíticos--3",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Principios de Gráficos Analíticos -3",
+    "text": "Principios de Gráficos Analíticos -3\n\nPrincipio 3: Mostrar datos multivariable:\n\nmultivariable =&gt; más de dos variables\nEl mundo real es multivariable\nHay que escapar de la “tierra plana”"
+  },
+  {
+    "objectID": "clases/clase_20_1.html#principios-de-gráficos-analíticos--4",
+    "href": "clases/clase_20_1.html#principios-de-gráficos-analíticos--4",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Principios de Gráficos Analíticos -4",
+    "text": "Principios de Gráficos Analíticos -4\n\nPrincipio 4: Integrar múltiples modos de evidencia\n\nIntegre completamente palabras, números, imágenes, diagramas\nLos gráficos de datos deben hacer uso de muchos modos de presentación de datos\nNo permita que la herramienta dirija el análisisx"
+  },
+  {
+    "objectID": "clases/clase_20_1.html#integrar-distintas-formas-de-evidencia",
+    "href": "clases/clase_20_1.html#integrar-distintas-formas-de-evidencia",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Integrar Distintas Formas de Evidencia",
+    "text": "Integrar Distintas Formas de Evidencia"
+  },
+  {
+    "objectID": "clases/clase_20_1.html#principios-de-gráficos-analíticos--5",
+    "href": "clases/clase_20_1.html#principios-de-gráficos-analíticos--5",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Principios de Gráficos Analíticos -5",
+    "text": "Principios de Gráficos Analíticos -5\n\nPrincipio 5: Describa y documente la evidencia con etiquetas, escalas, fuentes, etc., apropiadas.\n\nUn gráfico de datos debe contar una historia completa y creíble."
+  },
+  {
+    "objectID": "clases/clase_20_1.html#principios-de-gráficos-analíticos--6",
+    "href": "clases/clase_20_1.html#principios-de-gráficos-analíticos--6",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Principios de Gráficos Analíticos -6",
+    "text": "Principios de Gráficos Analíticos -6\n\nPrincipio 6: El contenido es rey\n\nLas presentaciones analíticas finalmente prosperan o fracasan dependiendo de la calidad, relevancia e integridad de su contenido."
+  },
+  {
+    "objectID": "clases/clase_20_1.html#resumen",
+    "href": "clases/clase_20_1.html#resumen",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Resumen",
+    "text": "Resumen\n\nPrincipio 1: Mostrar comparaciones\nPrincipio 2: Mostrar causalidad, mecanismo, explicación\nPrincipio 3: Mostrar datos multivariables\nPrincipio 4: Integrar múltiples modos de evidencia\nPrincipio 5: Describir y documentar la evidencia\nPrincipio 6: El contenido es rey"
+  },
+  {
+    "objectID": "clases/clase_20_1.html#referencias",
+    "href": "clases/clase_20_1.html#referencias",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Referencias",
+    "text": "Referencias\nEdward Tufte (2006). Beautiful Evidence, Graphics Press LLC. www.edwardtufte.com\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clase_20_1.html#principios-de-gráficos-analíticos--1",
+    "href": "clase_20_1.html#principios-de-gráficos-analíticos--1",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Principios de Gráficos Analíticos -1",
+    "text": "Principios de Gráficos Analíticos -1\n\nPrincipio 1: Mostrar comparaciones\n\nLa evidencia para una hipótesis es siempre relativa a otra hipótesis compitiendo.\nSiempre pregunta “¿En comparación con qué?”"
+  },
+  {
+    "objectID": "clase_20_1.html#mostrar-comparaciones",
+    "href": "clase_20_1.html#mostrar-comparaciones",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Mostrar Comparaciones",
+    "text": "Mostrar Comparaciones\n\nReferencia: Butz AM, et al., JAMA Pediatrics, 2011."
+  },
+  {
+    "objectID": "clase_20_1.html#mostrar-comparaciones-1",
+    "href": "clase_20_1.html#mostrar-comparaciones-1",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Mostrar Comparaciones",
+    "text": "Mostrar Comparaciones\n\nReferencia: Butz AM, et al., JAMA Pediatrics, 2011."
+  },
+  {
+    "objectID": "clase_20_1.html#principios-de-gráficos-analíticos--2",
+    "href": "clase_20_1.html#principios-de-gráficos-analíticos--2",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Principios de Gráficos Analíticos -2",
+    "text": "Principios de Gráficos Analíticos -2\n\nPrincipio 2: Mostrar causalidad, mecanismos, explicaciones, estructura sistemática:\n\nCuál es el marco conceptual-teórico para sustentar la causalidad que quieres analizar"
+  },
+  {
+    "objectID": "clase_20_1.html#principios-de-gráficos-analíticos--3",
+    "href": "clase_20_1.html#principios-de-gráficos-analíticos--3",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Principios de Gráficos Analíticos -3",
+    "text": "Principios de Gráficos Analíticos -3\n\nPrincipio 3: Mostrar datos multivariable:\n\nmultivariable =&gt; más de dos variables\nEl mundo real es multivariable\nHay que escapar de la “tierra plana”"
+  },
+  {
+    "objectID": "clase_20_1.html#principios-de-gráficos-analíticos--4",
+    "href": "clase_20_1.html#principios-de-gráficos-analíticos--4",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Principios de Gráficos Analíticos -4",
+    "text": "Principios de Gráficos Analíticos -4\n\nPrincipio 4: Integrar múltiples modos de evidencia\n\nIntegre completamente palabras, números, imágenes, diagramas\nLos gráficos de datos deben hacer uso de muchos modos de presentación de datos\nNo permita que la herramienta dirija el análisisx"
+  },
+  {
+    "objectID": "clase_20_1.html#integrar-distintas-formas-de-evidencia",
+    "href": "clase_20_1.html#integrar-distintas-formas-de-evidencia",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Integrar Distintas Formas de Evidencia",
+    "text": "Integrar Distintas Formas de Evidencia"
+  },
+  {
+    "objectID": "clase_20_1.html#principios-de-gráficos-analíticos--5",
+    "href": "clase_20_1.html#principios-de-gráficos-analíticos--5",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Principios de Gráficos Analíticos -5",
+    "text": "Principios de Gráficos Analíticos -5\n\nPrincipio 5: Describa y documente la evidencia con etiquetas, escalas, fuentes, etc., apropiadas.\n\nUn gráfico de datos debe contar una historia completa y creíble."
+  },
+  {
+    "objectID": "clase_20_1.html#principios-de-gráficos-analíticos--6",
+    "href": "clase_20_1.html#principios-de-gráficos-analíticos--6",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Principios de Gráficos Analíticos -6",
+    "text": "Principios de Gráficos Analíticos -6\n\nPrincipio 6: El contenido es rey\n\nLas presentaciones analíticas finalmente prosperan o fracasan dependiendo de la calidad, relevancia e integridad de su contenido."
+  },
+  {
+    "objectID": "clase_20_1.html#resumen",
+    "href": "clase_20_1.html#resumen",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Resumen",
+    "text": "Resumen\n\nPrincipio 1: Mostrar comparaciones\nPrincipio 2: Mostrar causalidad, mecanismo, explicación\nPrincipio 3: Mostrar datos multivariables\nPrincipio 4: Integrar múltiples modos de evidencia\nPrincipio 5: Describir y documentar la evidencia\nPrincipio 6: El contenido es rey"
+  },
+  {
+    "objectID": "clase_20_1.html#referencias",
+    "href": "clase_20_1.html#referencias",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Referencias",
+    "text": "Referencias\nEdward Tufte (2006). Beautiful Evidence, Graphics Press LLC. www.edwardtufte.com"
+  },
+  {
+    "objectID": "clase_20_1.html#nota",
+    "href": "clase_20_1.html#nota",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "",
+    "text": "Esta presentación es una traducción de “Principles of Analytic Graphics” de Roger D. Peng, quien es “Associate Professor of Biostatistics” en la “Johns Hopkins Bloomberg School of Public Health” y se encuentra contenida en el curso “Exploratory Data Analysis” de la especialización en “Data Science” impartida en la plataforma educacional Coursera.\nLos textos han sido traducidos sin consentimiento del autor ni revisión del mismo.\nLos gráficos que se muestran no son los incluidos en la presentación original."
+  },
+  {
+    "objectID": "clase_20_1.html#objetivo",
+    "href": "clase_20_1.html#objetivo",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Objetivo",
+    "text": "Objetivo\nConocer los “principios de gráficos analíticos” para crear visualizaciones de datos para el análisis exploratorio de los datos (exploratory data analysis - EDA)."
+  },
+  {
+    "objectID": "clase_20_1.html#mostrar-comparaciones--1",
+    "href": "clase_20_1.html#mostrar-comparaciones--1",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Mostrar Comparaciones -1",
+    "text": "Mostrar Comparaciones -1"
+  },
+  {
+    "objectID": "clase_20_1.html#mostrar-comparaciones--2",
+    "href": "clase_20_1.html#mostrar-comparaciones--2",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Mostrar Comparaciones -2",
+    "text": "Mostrar Comparaciones -2"
+  },
+  {
+    "objectID": "clase_20_1.html#mostrar-comparaciones--3",
+    "href": "clase_20_1.html#mostrar-comparaciones--3",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Mostrar Comparaciones -3",
+    "text": "Mostrar Comparaciones -3"
+  },
+  {
+    "objectID": "clase_20_1.html#estimación-impacto",
+    "href": "clase_20_1.html#estimación-impacto",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Estimación Impacto",
+    "text": "Estimación Impacto"
+  },
+  {
+    "objectID": "clase_20_1.html#estimación-impacto-2",
+    "href": "clase_20_1.html#estimación-impacto-2",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Estimación Impacto 2",
+    "text": "Estimación Impacto 2\n\n\n\n\n\nTomado de La Evaluación de Impacto en la Práctica, Banco Mundial enlace"
+  },
+  {
+    "objectID": "clase_20_1.html#multivariable-1",
+    "href": "clase_20_1.html#multivariable-1",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Multivariable 1:",
+    "text": "Multivariable 1:"
+  },
+  {
+    "objectID": "clase_20_1.html#multivariable-2",
+    "href": "clase_20_1.html#multivariable-2",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Multivariable 2:",
+    "text": "Multivariable 2:"
+  },
+  {
+    "objectID": "clase_20_1.html#mostrar-comparaciones--4",
+    "href": "clase_20_1.html#mostrar-comparaciones--4",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Mostrar Comparaciones -4",
+    "text": "Mostrar Comparaciones -4"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#gráficos-exploratorios-ge",
+    "href": "clases/clases_20_2.html#gráficos-exploratorios-ge",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Gráficos Exploratorios (GE)",
+    "text": "Gráficos Exploratorios (GE)\n\nComprender características que presentan los datos\nEncontrar patrones presentes o implícitos\nEvaluar posibles estrategias de modelización\nDepurar el análisis\nComunicar los resultados del proceso de obtención-levantamiento de los datos"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#características-de-los-ge",
+    "href": "clases/clases_20_2.html#características-de-los-ge",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Características de los GE",
+    "text": "Características de los GE\n\nSe hacen rápidamente\nSe hace un gran número\nEl objetivo es la comprensión personal\nLos ejes/leyendas se limpian generalmente (más tarde)\nEl color/tamaño se utilizan principalmente como información"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#características-de-los-ge--2",
+    "href": "clases/clases_20_2.html#características-de-los-ge--2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Características de los GE- 2",
+    "text": "Características de los GE- 2\n\nLos gráficos exploratorios son «rápidos y sucios».\nPermiten resumir los datos (normalmente de forma gráfica) y resaltar las características generales.\nExplorar preguntas e hipótesis básicas (y quizás descartarlas)\nSugieren estrategias de modelización para el «siguiente paso»"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#sumarios-en-una-dimensión",
+    "href": "clases/clases_20_2.html#sumarios-en-una-dimensión",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Sumarios en una Dimensión",
+    "text": "Sumarios en una Dimensión\n\nTablas sumario: table , summary\nGráficos:\n\nBoxplot - Diagrama de Caja\nHistograms - Histogramas\nDensity Plot - Gráfico de Densidad\nBarplot - Diagrama/gráfico de Barras\nScatterPlots (bidimensional) - Diagrama de Dispersión"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#tablas-sumario",
+    "href": "clases/clases_20_2.html#tablas-sumario",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tablas Sumario",
+    "text": "Tablas Sumario\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  39.61   57.16   71.94   67.01   76.41   82.60 \n\n\n\n  Africa Americas     Asia   Europe  Oceania \n      52       25       33       30        2"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#test",
+    "href": "clases/clases_20_2.html#test",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "test",
+    "text": "test\n\nlibrary(tidyverse)\nlibrary(palmerpenguins)\npenguins |&gt;\n  mutate(\n    bill_ratio = bill_depth_mm / bill_length_mm,\n    bill_area  = bill_depth_mm * bill_length_mm\n  )\n\n# A tibble: 344 × 10\n   species island   bill_length_mm bill_depth_mm flipper_length_mm body_mass_g sex    year\n   &lt;fct&gt;   &lt;fct&gt;             &lt;dbl&gt;         &lt;dbl&gt;             &lt;int&gt;       &lt;int&gt; &lt;fct&gt; &lt;int&gt;\n 1 Adelie  Torgers…           39.1          18.7               181        3750 male   2007\n 2 Adelie  Torgers…           39.5          17.4               186        3800 fema…  2007\n 3 Adelie  Torgers…           40.3          18                 195        3250 fema…  2007\n 4 Adelie  Torgers…           NA            NA                  NA          NA &lt;NA&gt;   2007\n 5 Adelie  Torgers…           36.7          19.3               193        3450 fema…  2007\n 6 Adelie  Torgers…           39.3          20.6               190        3650 male   2007\n 7 Adelie  Torgers…           38.9          17.8               181        3625 fema…  2007\n 8 Adelie  Torgers…           39.2          19.6               195        4675 male   2007\n 9 Adelie  Torgers…           34.1          18.1               193        3475 &lt;NA&gt;   2007\n10 Adelie  Torgers…           42            20.2               190        4250 &lt;NA&gt;   2007\n# ℹ 334 more rows\n# ℹ 2 more variables: bill_ratio &lt;dbl&gt;, bill_area &lt;dbl&gt;\n\n\n1. Take `penguins`, and then, 2. add new columns for the bill ratio and bill area."
+  },
+  {
+    "objectID": "clases/clases_20_2.html#t2",
+    "href": "clases/clases_20_2.html#t2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "t2",
+    "text": "t2"
+  },
+  {
+    "objectID": "clases/clases_20_2.html",
+    "href": "clases/clases_20_2.html",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "Comprender características que presentan los datos\nEncontrar patrones presentes o implícitos\nEvaluar posibles estrategias de modelización\nDepurar el análisis\nComunicar los resultados del proceso de obtención-levantamiento de los datos"
+  },
+  {
+    "objectID": "clase_20_0.html#anuncios",
+    "href": "clase_20_0.html#anuncios",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "Tramitar API key Google AI Studio\nTramitar API key RapidApi\nRetardos en tareas. Fin del plazo\nProgramación Actividades\nClase faltante lunes 20-01.\n\npresencial miércoles 29 en la mañana\nremota, fecha por definir semana 27 al 31-01"
+  },
+  {
+    "objectID": "clase_20_0.html#objetivo",
+    "href": "clase_20_0.html#objetivo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Objetivo",
+    "text": "Objetivo\nConocer los “principios de gráficos analíticos” para crear visualizaciones de datos para el análisis exploratorio de los datos (exploratory data analysis - EDA).\n90% del tiempo…"
+  },
+  {
+    "objectID": "clase_20_0.html#contenido",
+    "href": "clase_20_0.html#contenido",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Contenido",
+    "text": "Contenido\n\nRepaso clase IAVD\nPrincipios de Gráficos Analíticos\nGráficos Exploratorios (GE)\nLibrerías para EDA"
+  },
+  {
+    "objectID": "clases/clase_20_1.html#nota",
+    "href": "clases/clase_20_1.html#nota",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Nota",
+    "text": "Nota\nEsta presentación es una traducción de “Principles of Analytic Graphics” de Roger D. Peng, quien es “Associate Professor of Biostatistics” en la “Johns Hopkins Bloomberg School of Public Health” y se encuentra contenida en el curso “Exploratory Data Analysis” de la especialización en “Data Science” impartida en la plataforma educacional Coursera.\nLos textos han sido traducidos sin consentimiento del autor ni revisión del mismo.\nLos gráficos que se muestran no son los incluidos en la presentación original."
+  },
+  {
+    "objectID": "clases/clase_20_1.html#mostrar-comparaciones--1",
+    "href": "clases/clase_20_1.html#mostrar-comparaciones--1",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Mostrar Comparaciones -1",
+    "text": "Mostrar Comparaciones -1"
+  },
+  {
+    "objectID": "clases/clase_20_1.html#mostrar-comparaciones--2",
+    "href": "clases/clase_20_1.html#mostrar-comparaciones--2",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Mostrar Comparaciones -2",
+    "text": "Mostrar Comparaciones -2"
+  },
+  {
+    "objectID": "clases/clase_20_1.html#mostrar-comparaciones--3",
+    "href": "clases/clase_20_1.html#mostrar-comparaciones--3",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Mostrar Comparaciones -3",
+    "text": "Mostrar Comparaciones -3\n\nboxplot(lifeExp ~ continent, \n        data = gapminder_2007,\n        col = \"#fb8b24\",\n        xlab='Continente',\n        ylab='Expectativa de Vida')"
+  },
+  {
+    "objectID": "clases/clase_20_1.html#mostrar-comparaciones--4",
+    "href": "clases/clase_20_1.html#mostrar-comparaciones--4",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Mostrar Comparaciones -4",
+    "text": "Mostrar Comparaciones -4\n\nboxplot(lifeExp ~ year, \n        data = gapminder_anno,\n        col = \"#fb8b24\",\n        xlab='Período',\n        ylab='Expectativa de Vida')"
+  },
+  {
+    "objectID": "clases/clase_20_1.html#estimación-impacto",
+    "href": "clases/clase_20_1.html#estimación-impacto",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Estimación Impacto",
+    "text": "Estimación Impacto"
+  },
+  {
+    "objectID": "clases/clase_20_1.html#estimación-impacto-2",
+    "href": "clases/clase_20_1.html#estimación-impacto-2",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Estimación Impacto 2",
+    "text": "Estimación Impacto 2\n\nTomado de La Evaluación de Impacto en la Práctica, Banco Mundial enlace"
+  },
+  {
+    "objectID": "clases/clase_20_1.html#multivariable-1",
+    "href": "clases/clase_20_1.html#multivariable-1",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Multivariable 1:",
+    "text": "Multivariable 1:\n\nggplot(data= gapminder_afeu,\n       mapping =aes(lifeExp, gdpPercap))+\n  geom_point(color =c(\"#9d0208\"))+\n  geom_smooth()+\n  facet_wrap(~year)"
+  },
+  {
+    "objectID": "clases/clase_20_1.html#multivariable-2",
+    "href": "clases/clase_20_1.html#multivariable-2",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "Multivariable 2:",
+    "text": "Multivariable 2:\n\nggplot(data= gapminder_afeu,\n       mapping =aes(lifeExp, gdpPercap))+\n  geom_point(color =c(\"#9d0208\"))+\n  geom_smooth()+\n  facet_wrap(~year~continent)"
+  },
+  {
+    "objectID": "clases/clase_20_0.html#anuncios",
+    "href": "clases/clase_20_0.html#anuncios",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "Tramitar API key Google AI Studio\nTramitar API key RapidApi\nRetardos en tareas. Fin del plazo\nProgramación Actividades\nClase faltante lunes 20-01.\n\npresencial miércoles 29 en la mañana\nremota, fecha por definir semana 27 al 31-01"
+  },
+  {
+    "objectID": "clases/clase_20_0.html#objetivo",
+    "href": "clases/clase_20_0.html#objetivo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Objetivo",
+    "text": "Objetivo\nConocer los “principios de gráficos analíticos” para crear visualizaciones de datos para el análisis exploratorio de los datos (exploratory data analysis - EDA).\n90% del tiempo…"
+  },
+  {
+    "objectID": "clases/clase_20_0.html#contenido",
+    "href": "clases/clase_20_0.html#contenido",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Contenido",
+    "text": "Contenido\n\nRepaso clase IAVD\nPrincipios de Gráficos Analíticos\nGráficos Exploratorios (GE)\nLibrerías para EDA"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#conjuntos-de-datos-a-usar-1",
+    "href": "clases/clases_20_2.html#conjuntos-de-datos-a-usar-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Conjuntos de Datos a Usar 1",
+    "text": "Conjuntos de Datos a Usar 1\nGapminder\n\nhead(gapminder)\n\n# A tibble: 6 × 6\n  country     continent  year lifeExp      pop gdpPercap\n  &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;\n1 Afghanistan Asia       1952    28.8  8425333      779.\n2 Afghanistan Asia       1957    30.3  9240934      821.\n3 Afghanistan Asia       1962    32.0 10267083      853.\n4 Afghanistan Asia       1967    34.0 11537966      836.\n5 Afghanistan Asia       1972    36.1 13079460      740.\n6 Afghanistan Asia       1977    38.4 14880372      786."
+  },
+  {
+    "objectID": "clases/clases_20_2.html#conjuntos-de-datos-a-usar-2",
+    "href": "clases/clases_20_2.html#conjuntos-de-datos-a-usar-2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Conjuntos de Datos a Usar 2",
+    "text": "Conjuntos de Datos a Usar 2\nGapminder 2007\n\ngapminder_2007 &lt;- gapminder%&gt;%\n  filter(year==2007)"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#conjuntos-de-datos-a-usar-3",
+    "href": "clases/clases_20_2.html#conjuntos-de-datos-a-usar-3",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Conjuntos de Datos a Usar 3",
+    "text": "Conjuntos de Datos a Usar 3\nGapminder África y Europa\n\ngapminder_afeu &lt;- gapminder%&gt;%\n  filter(continent %in% c('Africa','Europe'))%&gt;%\n  mutate(continent= as.character(continent))"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#conjuntos-de-datos-a-usar-4",
+    "href": "clases/clases_20_2.html#conjuntos-de-datos-a-usar-4",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Conjuntos de Datos a Usar 4",
+    "text": "Conjuntos de Datos a Usar 4\nGapminder África y Europa 2007\n\ngapminder_2007_afeu &lt;- gapminder_2007%&gt;%\n  filter(continent %in% c('Africa','Europe'))%&gt;%\n  mutate(continent= as.character(continent))"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#opciones-para-graficación---sistemas",
+    "href": "clases/clases_20_2.html#opciones-para-graficación---sistemas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Opciones para Graficación - Sistemas",
+    "text": "Opciones para Graficación - Sistemas\n\nBase: hoy\nGGplot: próxima clase"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#diagrama-de-caja-y-bigotes-boxplot",
+    "href": "clases/clases_20_2.html#diagrama-de-caja-y-bigotes-boxplot",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Diagrama de Caja y Bigotes (Boxplot)",
+    "text": "Diagrama de Caja y Bigotes (Boxplot)\n\n\n\nboxplot(gapminder_2007$lifeExp,\n        col = \"#c1121f\")\n\n\n\n\n\n\n\n\n\n\nboxplot(lifeExp ~ continent, \n        data = gapminder_2007,\n        col = \"#fb8b24\",\n        xlab='Continente',\n        ylab='Expectativa de Vida')"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#diagrama-de-caja---concepto",
+    "href": "clases/clases_20_2.html#diagrama-de-caja---concepto",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Diagrama de Caja - Concepto",
+    "text": "Diagrama de Caja - Concepto\n\nEs un gráfico que resume las características principales de un conjunto de datos numéricos, como la mediana, el rango intercuartil (IQR) (25%, 50% y 75%) y los valores atípicos."
+  },
+  {
+    "objectID": "clases/clases_20_2.html#diagrama-de-caja---casos-de-uso",
+    "href": "clases/clases_20_2.html#diagrama-de-caja---casos-de-uso",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Diagrama de Caja - Casos de Uso",
+    "text": "Diagrama de Caja - Casos de Uso\n\n\n\n\n\n\n\n\n\n\nComparar distribuciones de diferentes grupos.\nIdentificar outliers (valores atípicos).\nAnalizar la centralización, dispersión y simetría de los datos.\nDetectar diferencias significativas entre grupos."
+  },
+  {
+    "objectID": "clases/clases_20_2.html#histogramas",
+    "href": "clases/clases_20_2.html#histogramas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Histogramas",
+    "text": "Histogramas\n\n\n\nhist(main = 'Hist. ExpVida',\n     gapminder_2007$lifeExp,\n     col = \"green\",\n     xlab='Expectativa de Vida',\n     breaks = 20)\n\n\n\n\n\n\n\n\n\n\nhist(main = 'Hist PIBpercap',\n     gapminder$gdpPercap,\n     col = \"orange\",\n     xlab='PIB per Cápita',\n     breaks = 50)\n\nabline(v = median(gapminder$gdpPercap), \n       col = \"red\",\n       lwd = 2)"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#histogramas--concepto",
+    "href": "clases/clases_20_2.html#histogramas--concepto",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Histogramas- Concepto",
+    "text": "Histogramas- Concepto\nMuestra la distribución de frecuencias de un conjunto de datos numéricos. Se divide el rango de datos en intervalos (bins) y se representa la frecuencia de los valores que caen dentro de cada intervalo como barras."
+  },
+  {
+    "objectID": "clases/clases_20_2.html#histogramas--casos-de-uso",
+    "href": "clases/clases_20_2.html#histogramas--casos-de-uso",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Histogramas- Casos de Uso",
+    "text": "Histogramas- Casos de Uso\n\nVisualizar la forma y simetría de una distribución.\nIdentificar picos, modas y áreas con baja frecuencia.\nComparar distribuciones entre diferentes grupos.\nDetectar valores atípicos."
+  },
+  {
+    "objectID": "clases/clases_20_2.html#múltiples-histogramas",
+    "href": "clases/clases_20_2.html#múltiples-histogramas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Múltiples Histogramas",
+    "text": "Múltiples Histogramas\n\npar(mfrow = c(2, 1), \n    mar = c(4, 4, 2, 1))\n\nhist(subset(gapminder_2007, \n            continent == \"Europe\")$lifeExp, \n     col =\"#219ebc\" )\n\nhist(subset(gapminder_2007, \n            continent == \"Africa\")$lifeExp, \n     col = \"#c1121f\")"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#gráfico-de-densidad-density-plot",
+    "href": "clases/clases_20_2.html#gráfico-de-densidad-density-plot",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Gráfico de Densidad (Density Plot)",
+    "text": "Gráfico de Densidad (Density Plot)\n\n\n\ndens &lt;- density(gapminder_2007$lifeExp)\n# plot density\nplot(dens, \n     col = \"#ef233c\", \n     main = \"Gr. Densidad ExpVida Gap 2007\") \n\n\n\n\n\n\n\n\n\n\ndens1 &lt;- density(gapminder$lifeExp)\n# plot density\nplot(dens1, \n     col = \"#023e8a\", \n     main = \"Gr. Densidad ExpVida Gap\")"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#gráfico-de-densidad--concepto",
+    "href": "clases/clases_20_2.html#gráfico-de-densidad--concepto",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Gráfico de Densidad- Concepto",
+    "text": "Gráfico de Densidad- Concepto\nGráfico que muestra la densidad de probabilidad de un conjunto de datos numéricos. Se utiliza una curva suave para representar la distribución, donde la altura de la curva en un punto indica la densidad de los valores cercanos a ese punto."
+  },
+  {
+    "objectID": "clases/clases_20_2.html#gráfico-de-densidad--casos-de-uso",
+    "href": "clases/clases_20_2.html#gráfico-de-densidad--casos-de-uso",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Gráfico de Densidad- Casos de uso",
+    "text": "Gráfico de Densidad- Casos de uso\n\nVisualizar la forma y simetría de una distribución de manera más continua que el histograma.\nComparar distribuciones entre diferentes grupos.\nIdentificar picos, modas y áreas con baja densidad."
+  },
+  {
+    "objectID": "clases/clases_20_2.html#diagrama-de-barras-barplot",
+    "href": "clases/clases_20_2.html#diagrama-de-barras-barplot",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Diagrama de Barras (Barplot)",
+    "text": "Diagrama de Barras (Barplot)\n\nbarplot(table(gapminder_2007$continent),\n        col = \"#ffbe0b\", \n        main = \"Cdad. de Países en Cada Continente\")"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#diagrama-de-barras--concepto",
+    "href": "clases/clases_20_2.html#diagrama-de-barras--concepto",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Diagrama de Barras- Concepto",
+    "text": "Diagrama de Barras- Concepto\nEs un gráfico que utiliza barras para representar la frecuencia o magnitud de variables categóricas-discretas. La altura de cada barra corresponde a la frecuencia o magnitud de la categoría correspondiente."
+  },
+  {
+    "objectID": "clases/clases_20_2.html#diagrama-de-barras--casos-de-uso",
+    "href": "clases/clases_20_2.html#diagrama-de-barras--casos-de-uso",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Diagrama de Barras- Casos de uso",
+    "text": "Diagrama de Barras- Casos de uso\n\nComparar frecuencias o magnitudes entre diferentes categorías.\nMostrar tendencias a lo largo del tiempo.\nRepresentar datos nominales o ordinales."
+  },
+  {
+    "objectID": "clases/clases_20_2.html#diagrama-de-dispersión-scatterplot",
+    "href": "clases/clases_20_2.html#diagrama-de-dispersión-scatterplot",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Diagrama de Dispersión (ScatterPlot)",
+    "text": "Diagrama de Dispersión (ScatterPlot)\n\nwith(gapminder,\n     plot(lifeExp, gdpPercap,\n          col= \"#9d0208\"))"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#diagrama-de-dispersión--concepto",
+    "href": "clases/clases_20_2.html#diagrama-de-dispersión--concepto",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Diagrama de Dispersión- Concepto",
+    "text": "Diagrama de Dispersión- Concepto\nGráfico que muestra la relación entre dos variables numéricas. Cada punto en el gráfico representa una observación, con su posición determinada por los valores de las dos variables."
+  },
+  {
+    "objectID": "clases/clases_20_2.html#diagrama-de-dispersión--casos-de-uso",
+    "href": "clases/clases_20_2.html#diagrama-de-dispersión--casos-de-uso",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Diagrama de Dispersión- Casos de uso",
+    "text": "Diagrama de Dispersión- Casos de uso\n\n\nVisualizar la correlación entre dos variables.\nIdentificar tendencias y patrones en los datos.\nDetectar outliers (valores atípicos).\nAnalizar la relación lineal o no lineal entre variables."
+  },
+  {
+    "objectID": "clases/clases_20_2.html#consideraciones-sobre-sistema-base",
+    "href": "clases/clases_20_2.html#consideraciones-sobre-sistema-base",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Consideraciones Sobre Sistema Base",
+    "text": "Consideraciones Sobre Sistema Base"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#parámetros-comunes-sistema-base",
+    "href": "clases/clases_20_2.html#parámetros-comunes-sistema-base",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Parámetros Comunes Sistema Base",
+    "text": "Parámetros Comunes Sistema Base\n\npch: el símbolo de trazado (por defecto es círculo abierto)\nlty: el tipo de línea (por defecto es línea continua), puede ser discontinua, punteada, etc.\nlwd: la anchura de la línea, especificada como un múltiplo entero col: el color de trazado, especificado como número, cadena o código hexadecimal;"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#parámetros-comunes-sistema-base--2",
+    "href": "clases/clases_20_2.html#parámetros-comunes-sistema-base--2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Parámetros Comunes Sistema Base -2",
+    "text": "Parámetros Comunes Sistema Base -2\n\ncol: el color de trazado, especificado como número, cadena o código hexadecimal; la función colors() le proporciona un vector de colores por nombre.\nxlab: cadena de caracteres para la etiqueta del eje x\nylab: cadena de caracteres para la etiqueta del eje y"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#parámetros-globales-sistema-base",
+    "href": "clases/clases_20_2.html#parámetros-globales-sistema-base",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Parámetros Globales Sistema Base",
+    "text": "Parámetros Globales Sistema Base\nLa función par() se utiliza para especificar parámetros gráficos globales que afectan a todos los gráficos de una sesión de R. Estos parámetros pueden anularse cuando se especifican como argumentos de funciones de trazado específicas.\n\nlas: la orientación de las etiquetas de los ejes en el gráfico\nbg: color de fondo\nmar: el tamaño del margen"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#ejemplo-de-construcción-de-gráfico-en-base",
+    "href": "clases/clases_20_2.html#ejemplo-de-construcción-de-gráfico-en-base",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplo de Construcción de Gráfico en Base",
+    "text": "Ejemplo de Construcción de Gráfico en Base\n\nwith(airquality, \n     plot(Wind,\n          Ozone, \n          main = \"Ozono y Viento en ciudad de New York \",\n          # type = \"n\",\n          col='orange'))\n\nwith(subset(airquality,\n            Month == 5), \n     points(Wind, \n            Ozone, \n            col = \"blue\"))\n\nwith(subset(airquality,\n            Month != 5), \n     points(Wind, \n            Ozone, \n            col = \"#fb5607\"))\n\nlegend(\"topright\", \n       pch = 1, \n       col = c(\"blue\",\n               \"#fb5607\"), \n       legend = c(\"Mayo\", \"Otros Meses\"))"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#resultado-gráfico-base",
+    "href": "clases/clases_20_2.html#resultado-gráfico-base",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Resultado Gráfico Base",
+    "text": "Resultado Gráfico Base"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#paquete-datasaurus",
+    "href": "clases/clases_20_2.html#paquete-datasaurus",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Paquete datasauRus",
+    "text": "Paquete datasauRus"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#paquetes-eda",
+    "href": "clases/clases_20_2.html#paquetes-eda",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Paquetes EDA",
+    "text": "Paquetes EDA\n\nskimr\nDataExplorer\nsummarytools\ndataReporter\nvisdat\n\ncódigos disponibles en enlace"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#resumen-eda",
+    "href": "clases/clases_20_2.html#resumen-eda",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Resumen EDA",
+    "text": "Resumen EDA\n\nLos gráficos exploratorios son «rápidos y sucios».\nPermiten resumir los datos (normalmente de forma gráfica) y resaltar las características generales.\nExplorar preguntas e hipótesis básicas (y quizás descartarlas)\nSugieren estrategias de modelización para el «siguiente paso».\n\nEnlace Material de Apoyo https://ucveconomiar4ds.netlify.app/scripts/04_PlottingBase.pdf\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clase_20_0.html",
+    "href": "clase_20_0.html",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "Tramitar API key Google AI Studio\nTramitar API key RapidApi\nRetardos en tareas. Fin del plazo\nProgramación Actividades\nClase faltante lunes 20-01.\n\npresencial miércoles 29 en la mañana\nremota, fecha por definir semana 27 al 31-01"
+  },
+  {
+    "objectID": "clases/clase_14.html",
+    "href": "clases/clase_14.html",
+    "title": "Clase 14: Uso del LLM “R4DS Economía”",
+    "section": "",
+    "text": "Usar funciones de dplyr para poder remover duplicados, seleccionar columnas\nUso de factores para datos categóricos"
+  },
+  {
+    "objectID": "clases/clase_19_site.html",
+    "href": "clases/clase_19_site.html",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "Una imagen vale más que mil palabras…\nsólo si sabes como leerla \n\n\nHow Charts Lie (2019), Alberto Cairo"
+  },
+  {
+    "objectID": "clases/clases_20_2.html#nota",
+    "href": "clases/clases_20_2.html#nota",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "NOTA:",
+    "text": "NOTA:\nEl contenido de las tres anteriores láminas se basa en la presentación “Exploratory Graphs” del Prof. Roger Peng, complementada por su libro “Exploratory Data Analysis with R” disponible en el enlace."
+  },
+  {
+    "objectID": "clases/clases_20_2.html#diagrama-de-caja---casos-de-uso---1",
+    "href": "clases/clases_20_2.html#diagrama-de-caja---casos-de-uso---1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Diagrama de Caja - Casos de Uso - 1",
+    "text": "Diagrama de Caja - Casos de Uso - 1\n\n\nComparar distribuciones de diferentes grupos."
+  },
+  {
+    "objectID": "clases/clases_20_2.html#diagrama-de-caja---casos-de-uso---2",
+    "href": "clases/clases_20_2.html#diagrama-de-caja---casos-de-uso---2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Diagrama de Caja - Casos de Uso - 2",
+    "text": "Diagrama de Caja - Casos de Uso - 2\n\nIdentificar outliers (valores atípicos).\nAnalizar la centralización, dispersión y simetría de los datos."
+  },
+  {
+    "objectID": "clases/clases_20_2.html#diagrama-de-caja---casos-de-uso---3",
+    "href": "clases/clases_20_2.html#diagrama-de-caja---casos-de-uso---3",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Diagrama de Caja - Casos de Uso - 3",
+    "text": "Diagrama de Caja - Casos de Uso - 3\n\nDetectar diferencias significativas entre grupos."
+  },
+  {
+    "objectID": "clase_20_1.html",
+    "href": "clase_20_1.html",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "",
+    "text": "Esta presentación es una traducción de “Principles of Analytic Graphics” de Roger D. Peng, quien es “Associate Professor of Biostatistics” en la “Johns Hopkins Bloomberg School of Public Health” y se encuentra contenida en el curso “Exploratory Data Analysis” de la especialización en “Data Science” impartida en la plataforma educacional Coursera.\nLos textos han sido traducidos sin consentimiento del autor ni revisión del mismo.\nLos gráficos que se muestran no son los incluidos en la presentación original."
+  },
+  {
+    "objectID": "clases/clase_20_0.html",
+    "href": "clases/clase_20_0.html",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "Tramitar API key Google AI Studio\nTramitar API key RapidApi\nRetardos en tareas. Fin del plazo\nProgramación Actividades\nClase faltante lunes 20-01.\n\npresencial miércoles 29 en la mañana\nremota, fecha por definir semana 27 al 31-01"
   }
 ]

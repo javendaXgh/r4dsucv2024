@@ -1,0 +1,544 @@
+---
+title: "Ciencia de Datos para Economistas"
+subtitle: "Clase 20 - Gráficos Exploratorios (GE)"
+date: "January 22, 2025"
+author: "M.Sc. José M. Avendaño"
+output:
+  html_document:
+    toc: yes
+    incremental: true
+# filters:
+#   - webr
+engine: knitr
+format:
+  revealjs:
+    incremental: true
+execute:
+ echo: false
+---
+
+```{r}
+#| echo: false
+#| warning: false
+
+library(tidyverse)
+library(gapminder)
+library(datasets)
+data(cars)
+
+gapminder_2007 <- gapminder%>%
+  filter(year==2007)
+
+gapminder_anno <- gapminder%>%
+  group_by(year)
+
+gapminder_2007_afeu <- gapminder_2007%>%
+  filter(continent %in% c('Africa','Europe'))%>%
+  mutate(continent= as.character(continent))
+
+
+gapminder_afeu <- gapminder%>%
+  filter(continent %in% c('Africa','Europe'))%>%
+  mutate(continent= as.character(continent))
+```
+
+```{r}
+#| echo: false
+#| warning: false
+
+library(tidyverse)
+library(gapminder)
+
+gapminder_2007 <- gapminder%>%
+  filter(year==2007)
+
+gapminder_anno <- gapminder%>%
+  group_by(year)
+
+gapminder_2007_afeu <- gapminder_2007%>%
+  filter(continent %in% c('Africa','Europe'))%>%
+  mutate(continent= as.character(continent))
+
+
+gapminder_afeu <- gapminder%>%
+  filter(continent %in% c('Africa','Europe'))%>%
+  mutate(continent= as.character(continent))
+```
+
+## Gráficos Exploratorios (GE)
+
+-   Comprender características que presentan los datos
+-   Encontrar patrones presentes o implícitos
+-   Evaluar posibles estrategias de modelización
+-   Depurar el análisis
+-   Comunicar los resultados del proceso de obtención-levantamiento de los datos
+
+## Características de los GE
+
+-   Se hacen rápidamente
+
+-   Se hace un gran número
+
+-   El objetivo es la comprensión personal
+
+-   Los ejes/leyendas se limpian generalmente (más tarde)
+
+-   El color/tamaño se utilizan principalmente como información
+
+## Características de los GE- 2
+
+-   Los gráficos exploratorios son «rápidos y sucios».
+
+-   Permiten resumir los datos (normalmente de forma gráfica) y resaltar las características generales.
+
+-   Explorar preguntas e hipótesis básicas (y quizás descartarlas)
+
+-   Sugieren estrategias de modelización para el «siguiente paso»
+
+## NOTA:
+
+El contenido de las tres anteriores láminas se basa en la presentación "Exploratory Graphs" del Prof. Roger Peng, complementada por su libro "Exploratory Data Analysis with R" disponible en el [enlace](https://bookdown.org/rdpeng/exdata/).
+
+## Sumarios en una Dimensión
+
+-   Tablas sumario: `table` , `summary`
+
+-   Gráficos:
+
+    -   Boxplot - Diagrama de Caja
+
+    -   Histograms - Histogramas
+
+    -   Density Plot - Gráfico de Densidad
+
+    -   Barplot - Diagrama/gráfico de Barras
+
+    -   ScatterPlots (bidimensional) - Diagrama de Dispersión
+
+## Conjuntos de Datos a Usar 1
+
+### Gapminder
+
+```{r}
+#| echo: true
+head(gapminder)
+
+
+```
+
+## Conjuntos de Datos a Usar 2
+
+### Gapminder 2007
+
+```{r}
+#| echo: true
+#| eval: false
+
+
+gapminder_2007 <- gapminder%>%
+  filter(year==2007)
+
+
+```
+
+## Conjuntos de Datos a Usar 3
+
+### Gapminder África y Europa
+
+```{r}
+#| echo: true
+#| eval: false
+
+gapminder_afeu <- gapminder%>%
+  filter(continent %in% c('Africa','Europe'))%>%
+  mutate(continent= as.character(continent))
+```
+
+## Conjuntos de Datos a Usar 4
+
+### Gapminder África y Europa 2007
+
+```{r}
+#| echo: true
+#| eval: false
+
+gapminder_2007_afeu <- gapminder_2007%>%
+  filter(continent %in% c('Africa','Europe'))%>%
+  mutate(continent= as.character(continent))
+```
+
+## Tablas Sumario
+
+```{r}
+
+summary(gapminder_2007$lifeExp)
+
+table(gapminder_2007$continent)
+```
+
+## Opciones para Graficación - Sistemas
+
+-   Base: hoy
+
+-   GGplot: próxima clase
+
+## Diagrama de Caja y Bigotes (Boxplot)
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: true
+boxplot(gapminder_2007$lifeExp,
+        col = "#c1121f")
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: true
+
+boxplot(lifeExp ~ continent, 
+        data = gapminder_2007,
+        col = "#fb8b24",
+        xlab='Continente',
+        ylab='Expectativa de Vida')
+
+```
+:::
+:::::
+
+## Diagrama de Caja - Concepto
+
+```{r}
+#| fig-align: center
+
+boxplot(lifeExp ~ year, 
+        data = gapminder_anno,
+        col = "#fb8b24",
+        xlab='Período',
+        ylab='Expectativa de Vida')
+```
+
+Es un gráfico que resume las características principales de un conjunto de datos numéricos, como la mediana, el rango intercuartil (IQR) (25%, 50% y 75%) y los valores atípicos.
+
+## Diagrama de Caja - Casos de Uso - 1
+
+```{r}
+#| fig-align: center
+#| echo: false
+
+boxplot(lifeExp ~ continent, 
+        data = gapminder_anno,
+        col = "#fb8b24",
+        xlab='Continente',
+        ylab='Expectativa de Vida')
+
+```
+
+-   Comparar distribuciones de diferentes grupos.
+
+## Diagrama de Caja - Casos de Uso - 2
+
+-   Identificar *outliers* (valores atípicos).
+
+-   Analizar la centralización, dispersión y simetría de los datos.
+
+## Diagrama de Caja - Casos de Uso - 3
+
+-   Detectar diferencias significativas entre grupos.
+
+    ```{r}
+    #| fig-align: center
+    #| echo: false
+    boxplot(lifeExp ~ continent, 
+            data = gapminder_2007_afeu,
+            col = "#fb8b24",
+            xlab='Continente',
+            ylab='Expectativa de Vida')
+    ```
+
+## Histogramas
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: true
+hist(main = 'Hist. ExpVida',
+     gapminder_2007$lifeExp,
+     col = "green",
+     xlab='Expectativa de Vida',
+     breaks = 20)
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: true
+hist(main = 'Hist PIBpercap',
+     gapminder$gdpPercap,
+     col = "orange",
+     xlab='PIB per Cápita',
+     breaks = 50)
+
+abline(v = median(gapminder$gdpPercap), 
+       col = "red",
+       lwd = 2)
+
+
+```
+:::
+:::::
+
+## Histogramas- Concepto
+
+Muestra la distribución de frecuencias de un conjunto de datos numéricos. Se divide el rango de datos en intervalos (bins) y se representa la frecuencia de los valores que caen dentro de cada intervalo como barras.
+
+```{r}
+#| fig-align: center
+hist(gapminder_2007$lifeExp,
+     col = "green")
+
+rug(gapminder_2007$lifeExp)
+```
+
+## Histogramas- Casos de Uso
+
+-   Visualizar la forma y simetría de una distribución.
+
+-   Identificar picos, modas y áreas con baja frecuencia.
+
+-   Comparar distribuciones entre diferentes grupos.
+
+-   Detectar valores atípicos.
+
+## Múltiples Histogramas
+
+```{r}
+#| echo: true
+#| fig-align: center
+par(mfrow = c(2, 1), 
+    mar = c(4, 4, 2, 1))
+
+hist(subset(gapminder_2007, 
+            continent == "Europe")$lifeExp, 
+     col ="#219ebc" )
+
+hist(subset(gapminder_2007, 
+            continent == "Africa")$lifeExp, 
+     col = "#c1121f")
+```
+
+## Gráfico de Densidad (Density Plot)
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: true
+dens <- density(gapminder_2007$lifeExp)
+# plot density
+plot(dens, 
+     col = "#ef233c", 
+     main = "Gr. Densidad ExpVida Gap 2007") 
+
+ 
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: true
+dens1 <- density(gapminder$lifeExp)
+# plot density
+plot(dens1, 
+     col = "#023e8a", 
+     main = "Gr. Densidad ExpVida Gap") 
+ 
+```
+:::
+:::::
+
+## Gráfico de Densidad- Concepto
+
+Gráfico que muestra la densidad de probabilidad de un conjunto de datos numéricos. Se utiliza una curva suave para representar la distribución, donde la altura de la curva en un punto indica la densidad de los valores cercanos a ese punto.
+
+## Gráfico de Densidad- Casos de uso
+
+-   Visualizar la forma y simetría de una distribución de manera más continua que el histograma.
+
+-   Comparar distribuciones entre diferentes grupos.
+
+-   Identificar picos, modas y áreas con baja densidad.
+
+## Diagrama de Barras (Barplot)
+
+```{r}
+#| echo: true
+barplot(table(gapminder_2007$continent),
+        col = "#ffbe0b", 
+        main = "Cdad. de Países en Cada Continente")
+```
+
+## Diagrama de Barras- Concepto
+
+Es un gráfico que utiliza barras para representar la frecuencia o magnitud de variables categóricas-discretas. La altura de cada barra corresponde a la frecuencia o magnitud de la categoría correspondiente.
+
+## Diagrama de Barras- Casos de uso
+
+-   Comparar frecuencias o magnitudes entre diferentes categorías.
+
+-   Mostrar tendencias a lo largo del tiempo.
+
+-   Representar datos nominales o ordinales.
+
+## Diagrama de Dispersión (ScatterPlot)
+
+```{r}
+#| echo: true
+with(gapminder,
+     plot(lifeExp, gdpPercap,
+          col= "#9d0208"))
+```
+
+## Diagrama de Dispersión- Concepto
+
+Gráfico que muestra la relación entre dos variables numéricas. Cada punto en el gráfico representa una observación, con su posición determinada por los valores de las dos variables.
+
+```{r}
+#| fig-align: center
+with(gapminder,
+     plot(gdpPercap,
+           pop,
+          col= continent))
+```
+
+## Diagrama de Dispersión- Casos de uso
+
+```{r}
+#| fig-align: center
+
+with(gapminder_2007,
+     plot( gdpPercap,
+           pop,
+          col= "#2a9d8f"))
+```
+
+-   Visualizar la correlación entre dos variables.
+
+-   Identificar tendencias y patrones en los datos.
+
+-   Detectar *outliers* (valores atípicos).
+
+-   Analizar la relación lineal o no lineal entre variables.
+
+## Consideraciones Sobre Sistema Base
+
+## Parámetros Comunes Sistema Base
+
+-   pch: el símbolo de trazado (por defecto es círculo abierto)
+
+-   lty: el tipo de línea (por defecto es línea continua), puede ser discontinua, punteada, etc.
+
+-   lwd: la anchura de la línea, especificada como un múltiplo entero col: el color de trazado, especificado como número, cadena o código hexadecimal;
+
+## Parámetros Comunes Sistema Base -2
+
+-   col: el color de trazado, especificado como número, cadena o código hexadecimal; la función colors() le proporciona un vector de colores por nombre.
+
+-   xlab: cadena de caracteres para la etiqueta del eje x
+
+-   ylab: cadena de caracteres para la etiqueta del eje y
+
+## Parámetros Globales Sistema Base
+
+La función par() se utiliza para especificar parámetros gráficos globales que afectan a todos los gráficos de una sesión de R. Estos parámetros pueden anularse cuando se especifican como argumentos de funciones de trazado específicas.
+
+-   las: la orientación de las etiquetas de los ejes en el gráfico
+
+-   bg: color de fondo
+
+-   mar: el tamaño del margen
+
+## Ejemplo de Construcción de Gráfico en Base
+
+```{r}
+#| eval: false
+#| echo: true
+with(airquality, 
+     plot(Wind,
+          Ozone, 
+          main = "Ozono y Viento en ciudad de New York ",
+          # type = "n",
+          col='orange'))
+
+with(subset(airquality,
+            Month == 5), 
+     points(Wind, 
+            Ozone, 
+            col = "blue"))
+
+with(subset(airquality,
+            Month != 5), 
+     points(Wind, 
+            Ozone, 
+            col = "#fb5607"))
+
+legend("topright", 
+       pch = 1, 
+       col = c("blue",
+               "#fb5607"), 
+       legend = c("Mayo", "Otros Meses"))
+```
+
+## Resultado Gráfico Base
+
+```{r}
+with(airquality, 
+     plot(Wind,
+          Ozone, 
+          main = "Ozono y Viento en ciudad de New York ",
+          type = "n"))
+
+with(subset(airquality,
+            Month == 5), 
+     points(Wind, 
+            Ozone, 
+            col = "blue"))
+
+with(subset(airquality,
+            Month != 5), 
+     points(Wind, 
+            Ozone, 
+            col = "#fb5607"))
+
+legend("topright", 
+       pch = 1, 
+       col = c("blue",
+               "#fb5607"), 
+       legend = c("Mayo", "Otros Meses"))
+```
+
+## Paquetes EDA
+
+-   skimr
+
+-   DataExplorer
+
+-   summarytools
+
+-   dataReporter
+
+-   visdat
+
+códigos disponibles en [enlace](https://github.com/UCVeconomia2024-2/scripts/blob/main/soporte_clases/clase_20/script_clase20.R)
+
+## Resumen EDA
+
+-   Los gráficos exploratorios son «rápidos y sucios».
+
+-   Permiten resumir los datos (normalmente de forma gráfica) y resaltar las características generales.
+
+-   Explorar preguntas e hipótesis básicas (y quizás descartarlas)
+
+-   Sugieren estrategias de modelización para el «siguiente paso».
+
+Enlace Material de Apoyo [https://ucveconomiar4ds.netlify.app/scripts/](https://ucveconomiar4ds.netlify.app/scripts/c)[04_PlottingBase.pdf](https://ucveconomiar4ds.netlify.app/scripts/04_PlottingBase.pdf)

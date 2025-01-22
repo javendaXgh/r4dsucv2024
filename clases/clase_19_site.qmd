@@ -499,3 +499,7 @@ Ejemplos obtenidos de "Same Stats, Different Graphs: Generating Datasets with Va
 -   Modern Data Visualization [datavis](https://rkabacoff.github.io/datavis/)
 
 -   Sitio de Edward Tufte <https://www.edwardtufte.com>
+
+-   Truncating the Y-Axis, Michael Correll, <https://arxiv.org/pdf/1907.02035>
+
+-   
