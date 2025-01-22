@@ -6893,14 +6893,14 @@
     "href": "clases/clase_20_1.html#mostrar-comparaciones--3",
     "title": "Principios de Gráficos Analíticos",
     "section": "Mostrar Comparaciones -3",
-    "text": "Mostrar Comparaciones -3\n\nboxplot(lifeExp ~ continent, \n        data = gapminder_2007,\n        col = \"#fb8b24\",\n        xlab='Continente',\n        ylab='Expectativa de Vida')"
+    "text": "Mostrar Comparaciones -3"
   },
   {
     "objectID": "clases/clase_20_1.html#mostrar-comparaciones--4",
     "href": "clases/clase_20_1.html#mostrar-comparaciones--4",
     "title": "Principios de Gráficos Analíticos",
     "section": "Mostrar Comparaciones -4",
-    "text": "Mostrar Comparaciones -4\n\nboxplot(lifeExp ~ year, \n        data = gapminder_anno,\n        col = \"#fb8b24\",\n        xlab='Período',\n        ylab='Expectativa de Vida')"
+    "text": "Mostrar Comparaciones -4"
   },
   {
     "objectID": "clases/clase_20_1.html#estimación-impacto",
@@ -6921,14 +6921,14 @@
     "href": "clases/clase_20_1.html#multivariable-1",
     "title": "Principios de Gráficos Analíticos",
     "section": "Multivariable 1:",
-    "text": "Multivariable 1:\n\nggplot(data= gapminder_afeu,\n       mapping =aes(lifeExp, gdpPercap))+\n  geom_point(color =c(\"#9d0208\"))+\n  geom_smooth()+\n  facet_wrap(~year)"
+    "text": "Multivariable 1:"
   },
   {
     "objectID": "clases/clase_20_1.html#multivariable-2",
     "href": "clases/clase_20_1.html#multivariable-2",
     "title": "Principios de Gráficos Analíticos",
     "section": "Multivariable 2:",
-    "text": "Multivariable 2:\n\nggplot(data= gapminder_afeu,\n       mapping =aes(lifeExp, gdpPercap))+\n  geom_point(color =c(\"#9d0208\"))+\n  geom_smooth()+\n  facet_wrap(~year~continent)"
+    "text": "Multivariable 2:"
   },
   {
     "objectID": "clases/clase_20_0.html#anuncios",

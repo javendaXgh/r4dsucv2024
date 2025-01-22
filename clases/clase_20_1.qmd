@@ -53,6 +53,7 @@ Los gráficos que se muestran no son los incluidos en la presentación original.
 ## Mostrar Comparaciones -1
 
 ```{r,echo=FALSE,fig.width=6,fig.height=6.5}
+#| fig-align: center
 boxplot(gapminder_2007$lifeExp, 
         # data = gapminder_2007,
         col = "#fb8b24",
@@ -60,15 +61,7 @@ boxplot(gapminder_2007$lifeExp,
         ylab='Expectativa de Vida')
 
 
-# setwd("~/projects/PREACH")
-# source("regmodel.R")
-# with(subset(dd, group == 1),
-#      boxplot(diffsymfree
-#              , xaxt = "n",
-#              ylab = "Cambio en días sin síntomas"))
-# 
-# axis(1, 1, "Limpiador de aire")
-# abline(h = 0, lty = 3, lwd = 1.5)
+
 
 ```
 
@@ -77,6 +70,7 @@ boxplot(gapminder_2007$lifeExp,
 ## Mostrar Comparaciones -2
 
 ```{r,echo=FALSE,fig.width=6,fig.height=6.5}
+#| fig-align: center
 boxplot(lifeExp ~ continent, 
         data = gapminder_2007_afeu,
         col = "#fb8b24",
@@ -95,6 +89,8 @@ boxplot(lifeExp ~ continent,
 ## Mostrar Comparaciones -3
 
 ```{r}
+#| fig-align: center
+#| echo: false
 boxplot(lifeExp ~ continent, 
         data = gapminder_2007,
         col = "#fb8b24",
@@ -112,6 +108,8 @@ boxplot(lifeExp ~ continent,
 ## Mostrar Comparaciones -4
 
 ```{r}
+#| fig-align: center
+#| echo: false
 boxplot(lifeExp ~ year, 
         data = gapminder_anno,
         col = "#fb8b24",
@@ -126,11 +124,11 @@ boxplot(lifeExp ~ year,
 
 ## Estimación Impacto
 
-![](clases/images/bm_impacto2.png){fig-align="center"}
+![](images/bm_impacto2.png){fig-align="center" width="646"}
 
 ## Estimación Impacto 2
 
-![](clases/images/bm_impacto1.png){fig-align="center" width="637"}
+![](images/bm_impacto1.png){fig-align="center" width="637"}
 
 Tomado de La Evaluación de Impacto en la Práctica, Banco Mundial [enlace](https://openknowledge.worldbank.org/server/api/core/bitstreams/6f2eebf7-1a3c-5f67-a9c3-c39f68299ed9/content)
 
@@ -144,6 +142,8 @@ Tomado de La Evaluación de Impacto en la Práctica, Banco Mundial [enlace](http
 ## Multivariable 1:
 
 ```{r}
+#| fig-align: center
+#| echo: false
 ggplot(data= gapminder_afeu,
        mapping =aes(lifeExp, gdpPercap))+
   geom_point(color =c("#9d0208"))+
@@ -154,6 +154,8 @@ ggplot(data= gapminder_afeu,
 ## Multivariable 2:
 
 ```{r}
+#| fig-align: center
+#| echo: false
 ggplot(data= gapminder_afeu,
        mapping =aes(lifeExp, gdpPercap))+
   geom_point(color =c("#9d0208"))+
