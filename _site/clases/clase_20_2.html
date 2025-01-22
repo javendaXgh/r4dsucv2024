@@ -31,6 +31,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-5BVQ49LXJG"></script>
@@ -334,7 +399,7 @@
     }
   </style>
 <meta property="og:title" content="Ciencia de Datos para Economistas – UCV EconomíaR4DS">
-<meta property="og:description" content="Clase 20: Presentación">
+<meta property="og:description" content="Clase 20 - Gráficos Exploratorios (GE)">
 <meta property="og:site_name" content="UCV EconomíaR4DS">
 </head>
 <body class="quarto-light">
@@ -343,7 +408,7 @@
 
 <section id="title-slide" class="quarto-title-block center">
   <h1 class="title">Ciencia de Datos para Economistas</h1>
-  <p class="subtitle">Clase 20: Presentación</p>
+  <p class="subtitle">Clase 20 - Gráficos Exploratorios (GE)</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -358,34 +423,426 @@ M.Sc. José M. Avendaño
 
   <p class="date">2025-01-22</p>
 </section>
-<section id="anuncios" class="slide level2">
-<h2>Anuncios</h2>
+<section id="gráficos-exploratorios-ge" class="slide level2">
+<h2>Gráficos Exploratorios (GE)</h2>
 <ul>
-<li class="fragment"><p>Tramitar API key <a href="https://aistudio.google.com/">Google AI Studio</a></p></li>
-<li class="fragment"><p>Tramitar API key <a href="https://rapidapi.com">RapidApi</a></p></li>
-<li class="fragment"><p>Retardos en tareas. Fin del plazo</p></li>
-<li class="fragment"><p>Programación Actividades</p></li>
-<li class="fragment"><p>Clase faltante lunes 20-01.</p>
+<li class="fragment">Comprender características que presentan los datos</li>
+<li class="fragment">Encontrar patrones presentes o implícitos</li>
+<li class="fragment">Evaluar posibles estrategias de modelización</li>
+<li class="fragment">Depurar el análisis</li>
+<li class="fragment">Comunicar los resultados del proceso de obtención-levantamiento de los datos</li>
+</ul>
+</section>
+<section id="características-de-los-ge" class="slide level2">
+<h2>Características de los GE</h2>
 <ul>
-<li class="fragment"><p>presencial miércoles 29 en la mañana</p></li>
-<li class="fragment"><p>remota, fecha por definir semana 27 al 31-01</p></li>
+<li class="fragment"><p>Se hacen rápidamente</p></li>
+<li class="fragment"><p>Se hace un gran número</p></li>
+<li class="fragment"><p>El objetivo es la comprensión personal</p></li>
+<li class="fragment"><p>Los ejes/leyendas se limpian generalmente (más tarde)</p></li>
+<li class="fragment"><p>El color/tamaño se utilizan principalmente como información</p></li>
+</ul>
+</section>
+<section id="características-de-los-ge--2" class="slide level2">
+<h2>Características de los GE- 2</h2>
+<ul>
+<li class="fragment"><p>Los gráficos exploratorios son «rápidos y sucios».</p></li>
+<li class="fragment"><p>Permiten resumir los datos (normalmente de forma gráfica) y resaltar las características generales.</p></li>
+<li class="fragment"><p>Explorar preguntas e hipótesis básicas (y quizás descartarlas)</p></li>
+<li class="fragment"><p>Sugieren estrategias de modelización para el «siguiente paso»</p></li>
+</ul>
+</section>
+<section id="nota" class="slide level2">
+<h2>NOTA:</h2>
+<p>El contenido de las tres anteriores láminas se basa en la presentación “Exploratory Graphs” del Prof.&nbsp;Roger Peng, complementada por su libro “Exploratory Data Analysis with R” disponible en el <a href="https://bookdown.org/rdpeng/exdata/">enlace</a>.</p>
+</section>
+<section id="sumarios-en-una-dimensión" class="slide level2">
+<h2>Sumarios en una Dimensión</h2>
+<ul>
+<li class="fragment"><p>Tablas sumario: <code>table</code> , <code>summary</code></p></li>
+<li class="fragment"><p>Gráficos:</p>
+<ul>
+<li class="fragment"><p>Boxplot - Diagrama de Caja</p></li>
+<li class="fragment"><p>Histograms - Histogramas</p></li>
+<li class="fragment"><p>Density Plot - Gráfico de Densidad</p></li>
+<li class="fragment"><p>Barplot - Diagrama/gráfico de Barras</p></li>
+<li class="fragment"><p>ScatterPlots (bidimensional) - Diagrama de Dispersión</p></li>
 </ul></li>
 </ul>
 </section>
-<section id="objetivo" class="slide level2">
-<h2>Objetivo</h2>
-<p>Conocer los “principios de gráficos analíticos” para crear visualizaciones de datos para el análisis exploratorio de los datos (exploratory data analysis - EDA).</p>
-<p><strong><em>90% del tiempo…</em></strong></p>
-
-<img data-src="clases/images/cd_ciclo_3.png" class="r-stretch"></section>
-<section id="contenido" class="slide level2">
-<h2>Contenido</h2>
+<section id="conjuntos-de-datos-a-usar-1" class="slide level2">
+<h2>Conjuntos de Datos a Usar 1</h2>
+<h3 id="gapminder">Gapminder</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">head</span>(gapminder)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 6
+  country     continent  year lifeExp      pop gdpPercap
+  &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;
+1 Afghanistan Asia       1952    28.8  8425333      779.
+2 Afghanistan Asia       1957    30.3  9240934      821.
+3 Afghanistan Asia       1962    32.0 10267083      853.
+4 Afghanistan Asia       1967    34.0 11537966      836.
+5 Afghanistan Asia       1972    36.1 13079460      740.
+6 Afghanistan Asia       1977    38.4 14880372      786.</code></pre>
+</div>
+</div>
+</section>
+<section id="conjuntos-de-datos-a-usar-2" class="slide level2">
+<h2>Conjuntos de Datos a Usar 2</h2>
+<h3 id="gapminder-2007">Gapminder 2007</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>gapminder_2007 <span class="ot">&lt;-</span> gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a></a>  <span class="fu">filter</span>(year<span class="sc">==</span><span class="dv">2007</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="conjuntos-de-datos-a-usar-3" class="slide level2">
+<h2>Conjuntos de Datos a Usar 3</h2>
+<h3 id="gapminder-áfrica-y-europa">Gapminder África y Europa</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>gapminder_afeu <span class="ot">&lt;-</span> gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb4-2"><a></a>  <span class="fu">filter</span>(continent <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">'Africa'</span>,<span class="st">'Europe'</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb4-3"><a></a>  <span class="fu">mutate</span>(<span class="at">continent=</span> <span class="fu">as.character</span>(continent))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="conjuntos-de-datos-a-usar-4" class="slide level2">
+<h2>Conjuntos de Datos a Usar 4</h2>
+<h3 id="gapminder-áfrica-y-europa-2007">Gapminder África y Europa 2007</h3>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>gapminder_2007_afeu <span class="ot">&lt;-</span> gapminder_2007<span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a></a>  <span class="fu">filter</span>(continent <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">'Africa'</span>,<span class="st">'Europe'</span>))<span class="sc">%&gt;%</span></span>
+<span id="cb5-3"><a></a>  <span class="fu">mutate</span>(<span class="at">continent=</span> <span class="fu">as.character</span>(continent))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="tablas-sumario" class="slide level2">
+<h2>Tablas Sumario</h2>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+  39.61   57.16   71.94   67.01   76.41   82.60 </code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+  Africa Americas     Asia   Europe  Oceania 
+      52       25       33       30        2 </code></pre>
+</div>
+</div>
+</section>
+<section id="opciones-para-graficación---sistemas" class="slide level2">
+<h2>Opciones para Graficación - Sistemas</h2>
 <ul>
-<li class="fragment"><p>Repaso clase IAVD</p></li>
-<li class="fragment"><p>Principios de Gráficos Analíticos</p></li>
-<li class="fragment"><p>Gráficos Exploratorios (GE)</p></li>
-<li class="fragment"><p>Librerías para EDA</p></li>
+<li class="fragment"><p>Base: hoy</p></li>
+<li class="fragment"><p>GGplot: próxima clase</p></li>
 </ul>
+</section>
+<section id="diagrama-de-caja-y-bigotes-boxplot" class="slide level2">
+<h2>Diagrama de Caja y Bigotes (Boxplot)</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">boxplot</span>(gapminder_2007<span class="sc">$</span>lifeExp,</span>
+<span id="cb8-2"><a></a>        <span class="at">col =</span> <span class="st">"#c1121f"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_20_2_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">boxplot</span>(lifeExp <span class="sc">~</span> continent, </span>
+<span id="cb9-2"><a></a>        <span class="at">data =</span> gapminder_2007,</span>
+<span id="cb9-3"><a></a>        <span class="at">col =</span> <span class="st">"#fb8b24"</span>,</span>
+<span id="cb9-4"><a></a>        <span class="at">xlab=</span><span class="st">'Continente'</span>,</span>
+<span id="cb9-5"><a></a>        <span class="at">ylab=</span><span class="st">'Expectativa de Vida'</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_20_2_files/figure-revealjs/unnamed-chunk-9-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="diagrama-de-caja---concepto" class="slide level2">
+<h2>Diagrama de Caja - Concepto</h2>
+
+<img data-src="clase_20_2_files/figure-revealjs/unnamed-chunk-10-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><p>Es un gráfico que resume las características principales de un conjunto de datos numéricos, como la mediana, el rango intercuartil (IQR) (25%, 50% y 75%) y los valores atípicos.</p>
+</section>
+<section id="diagrama-de-caja---casos-de-uso---1" class="slide level2">
+<h2>Diagrama de Caja - Casos de Uso - 1</h2>
+
+<img data-src="clase_20_2_files/figure-revealjs/unnamed-chunk-11-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><ul>
+<li class="fragment">Comparar distribuciones de diferentes grupos.</li>
+</ul>
+</section>
+<section id="diagrama-de-caja---casos-de-uso---2" class="slide level2">
+<h2>Diagrama de Caja - Casos de Uso - 2</h2>
+<ul>
+<li class="fragment"><p>Identificar <em>outliers</em> (valores atípicos).</p></li>
+<li class="fragment"><p>Analizar la centralización, dispersión y simetría de los datos.</p></li>
+</ul>
+</section>
+<section id="diagrama-de-caja---casos-de-uso---3" class="slide level2">
+<h2>Diagrama de Caja - Casos de Uso - 3</h2>
+<ul>
+<li class="fragment"><p>Detectar diferencias significativas entre grupos.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="clase_20_2_files/figure-revealjs/unnamed-chunk-12-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+</div></li>
+</ul>
+</section>
+<section id="histogramas" class="slide level2">
+<h2>Histogramas</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">hist</span>(<span class="at">main =</span> <span class="st">'Hist. ExpVida'</span>,</span>
+<span id="cb10-2"><a></a>     gapminder_2007<span class="sc">$</span>lifeExp,</span>
+<span id="cb10-3"><a></a>     <span class="at">col =</span> <span class="st">"green"</span>,</span>
+<span id="cb10-4"><a></a>     <span class="at">xlab=</span><span class="st">'Expectativa de Vida'</span>,</span>
+<span id="cb10-5"><a></a>     <span class="at">breaks =</span> <span class="dv">20</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_20_2_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">hist</span>(<span class="at">main =</span> <span class="st">'Hist PIBpercap'</span>,</span>
+<span id="cb11-2"><a></a>     gapminder<span class="sc">$</span>gdpPercap,</span>
+<span id="cb11-3"><a></a>     <span class="at">col =</span> <span class="st">"orange"</span>,</span>
+<span id="cb11-4"><a></a>     <span class="at">xlab=</span><span class="st">'PIB per Cápita'</span>,</span>
+<span id="cb11-5"><a></a>     <span class="at">breaks =</span> <span class="dv">50</span>)</span>
+<span id="cb11-6"><a></a></span>
+<span id="cb11-7"><a></a><span class="fu">abline</span>(<span class="at">v =</span> <span class="fu">median</span>(gapminder<span class="sc">$</span>gdpPercap), </span>
+<span id="cb11-8"><a></a>       <span class="at">col =</span> <span class="st">"red"</span>,</span>
+<span id="cb11-9"><a></a>       <span class="at">lwd =</span> <span class="dv">2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_20_2_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="histogramas--concepto" class="slide level2">
+<h2>Histogramas- Concepto</h2>
+<p>Muestra la distribución de frecuencias de un conjunto de datos numéricos. Se divide el rango de datos en intervalos (bins) y se representa la frecuencia de los valores que caen dentro de cada intervalo como barras.</p>
+
+<img data-src="clase_20_2_files/figure-revealjs/unnamed-chunk-15-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="histogramas--casos-de-uso" class="slide level2">
+<h2>Histogramas- Casos de Uso</h2>
+<ul>
+<li class="fragment"><p>Visualizar la forma y simetría de una distribución.</p></li>
+<li class="fragment"><p>Identificar picos, modas y áreas con baja frecuencia.</p></li>
+<li class="fragment"><p>Comparar distribuciones entre diferentes grupos.</p></li>
+<li class="fragment"><p>Detectar valores atípicos.</p></li>
+</ul>
+</section>
+<section id="múltiples-histogramas" class="slide level2">
+<h2>Múltiples Histogramas</h2>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">1</span>), </span>
+<span id="cb12-2"><a></a>    <span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">1</span>))</span>
+<span id="cb12-3"><a></a></span>
+<span id="cb12-4"><a></a><span class="fu">hist</span>(<span class="fu">subset</span>(gapminder_2007, </span>
+<span id="cb12-5"><a></a>            continent <span class="sc">==</span> <span class="st">"Europe"</span>)<span class="sc">$</span>lifeExp, </span>
+<span id="cb12-6"><a></a>     <span class="at">col =</span><span class="st">"#219ebc"</span> )</span>
+<span id="cb12-7"><a></a></span>
+<span id="cb12-8"><a></a><span class="fu">hist</span>(<span class="fu">subset</span>(gapminder_2007, </span>
+<span id="cb12-9"><a></a>            continent <span class="sc">==</span> <span class="st">"Africa"</span>)<span class="sc">$</span>lifeExp, </span>
+<span id="cb12-10"><a></a>     <span class="at">col =</span> <span class="st">"#c1121f"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="clase_20_2_files/figure-revealjs/unnamed-chunk-16-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="gráfico-de-densidad-density-plot" class="slide level2">
+<h2>Gráfico de Densidad (Density Plot)</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>dens <span class="ot">&lt;-</span> <span class="fu">density</span>(gapminder_2007<span class="sc">$</span>lifeExp)</span>
+<span id="cb13-2"><a></a><span class="co"># plot density</span></span>
+<span id="cb13-3"><a></a><span class="fu">plot</span>(dens, </span>
+<span id="cb13-4"><a></a>     <span class="at">col =</span> <span class="st">"#ef233c"</span>, </span>
+<span id="cb13-5"><a></a>     <span class="at">main =</span> <span class="st">"Gr. Densidad ExpVida Gap 2007"</span>) </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_20_2_files/figure-revealjs/unnamed-chunk-17-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>dens1 <span class="ot">&lt;-</span> <span class="fu">density</span>(gapminder<span class="sc">$</span>lifeExp)</span>
+<span id="cb14-2"><a></a><span class="co"># plot density</span></span>
+<span id="cb14-3"><a></a><span class="fu">plot</span>(dens1, </span>
+<span id="cb14-4"><a></a>     <span class="at">col =</span> <span class="st">"#023e8a"</span>, </span>
+<span id="cb14-5"><a></a>     <span class="at">main =</span> <span class="st">"Gr. Densidad ExpVida Gap"</span>) </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_20_2_files/figure-revealjs/unnamed-chunk-18-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="gráfico-de-densidad--concepto" class="slide level2">
+<h2>Gráfico de Densidad- Concepto</h2>
+<p>Gráfico que muestra la densidad de probabilidad de un conjunto de datos numéricos. Se utiliza una curva suave para representar la distribución, donde la altura de la curva en un punto indica la densidad de los valores cercanos a ese punto.</p>
+</section>
+<section id="gráfico-de-densidad--casos-de-uso" class="slide level2">
+<h2>Gráfico de Densidad- Casos de uso</h2>
+<ul>
+<li class="fragment"><p>Visualizar la forma y simetría de una distribución de manera más continua que el histograma.</p></li>
+<li class="fragment"><p>Comparar distribuciones entre diferentes grupos.</p></li>
+<li class="fragment"><p>Identificar picos, modas y áreas con baja densidad.</p></li>
+</ul>
+</section>
+<section id="diagrama-de-barras-barplot" class="slide level2">
+<h2>Diagrama de Barras (Barplot)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">barplot</span>(<span class="fu">table</span>(gapminder_2007<span class="sc">$</span>continent),</span>
+<span id="cb15-2"><a></a>        <span class="at">col =</span> <span class="st">"#ffbe0b"</span>, </span>
+<span id="cb15-3"><a></a>        <span class="at">main =</span> <span class="st">"Cdad. de Países en Cada Continente"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="clase_20_2_files/figure-revealjs/unnamed-chunk-19-1.png" width="960" class="r-stretch"></section>
+<section id="diagrama-de-barras--concepto" class="slide level2">
+<h2>Diagrama de Barras- Concepto</h2>
+<p>Es un gráfico que utiliza barras para representar la frecuencia o magnitud de variables categóricas-discretas. La altura de cada barra corresponde a la frecuencia o magnitud de la categoría correspondiente.</p>
+</section>
+<section id="diagrama-de-barras--casos-de-uso" class="slide level2">
+<h2>Diagrama de Barras- Casos de uso</h2>
+<ul>
+<li class="fragment"><p>Comparar frecuencias o magnitudes entre diferentes categorías.</p></li>
+<li class="fragment"><p>Mostrar tendencias a lo largo del tiempo.</p></li>
+<li class="fragment"><p>Representar datos nominales o ordinales.</p></li>
+</ul>
+</section>
+<section id="diagrama-de-dispersión-scatterplot" class="slide level2">
+<h2>Diagrama de Dispersión (ScatterPlot)</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">with</span>(gapminder,</span>
+<span id="cb16-2"><a></a>     <span class="fu">plot</span>(lifeExp, gdpPercap,</span>
+<span id="cb16-3"><a></a>          <span class="at">col=</span> <span class="st">"#9d0208"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="clase_20_2_files/figure-revealjs/unnamed-chunk-20-1.png" width="960" class="r-stretch"></section>
+<section id="diagrama-de-dispersión--concepto" class="slide level2">
+<h2>Diagrama de Dispersión- Concepto</h2>
+<p>Gráfico que muestra la relación entre dos variables numéricas. Cada punto en el gráfico representa una observación, con su posición determinada por los valores de las dos variables.</p>
+
+<img data-src="clase_20_2_files/figure-revealjs/unnamed-chunk-21-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="diagrama-de-dispersión--casos-de-uso" class="slide level2">
+<h2>Diagrama de Dispersión- Casos de uso</h2>
+
+<img data-src="clase_20_2_files/figure-revealjs/unnamed-chunk-22-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"><ul>
+<li class="fragment"><p>Visualizar la correlación entre dos variables.</p></li>
+<li class="fragment"><p>Identificar tendencias y patrones en los datos.</p></li>
+<li class="fragment"><p>Detectar <em>outliers</em> (valores atípicos).</p></li>
+<li class="fragment"><p>Analizar la relación lineal o no lineal entre variables.</p></li>
+</ul>
+</section>
+<section id="consideraciones-sobre-sistema-base" class="slide level2">
+<h2>Consideraciones Sobre Sistema Base</h2>
+</section>
+<section id="parámetros-comunes-sistema-base" class="slide level2">
+<h2>Parámetros Comunes Sistema Base</h2>
+<ul>
+<li class="fragment"><p>pch: el símbolo de trazado (por defecto es círculo abierto)</p></li>
+<li class="fragment"><p>lty: el tipo de línea (por defecto es línea continua), puede ser discontinua, punteada, etc.</p></li>
+<li class="fragment"><p>lwd: la anchura de la línea, especificada como un múltiplo entero col: el color de trazado, especificado como número, cadena o código hexadecimal;</p></li>
+</ul>
+</section>
+<section id="parámetros-comunes-sistema-base--2" class="slide level2">
+<h2>Parámetros Comunes Sistema Base -2</h2>
+<ul>
+<li class="fragment"><p>col: el color de trazado, especificado como número, cadena o código hexadecimal; la función colors() le proporciona un vector de colores por nombre.</p></li>
+<li class="fragment"><p>xlab: cadena de caracteres para la etiqueta del eje x</p></li>
+<li class="fragment"><p>ylab: cadena de caracteres para la etiqueta del eje y</p></li>
+</ul>
+</section>
+<section id="parámetros-globales-sistema-base" class="slide level2">
+<h2>Parámetros Globales Sistema Base</h2>
+<p>La función par() se utiliza para especificar parámetros gráficos globales que afectan a todos los gráficos de una sesión de R. Estos parámetros pueden anularse cuando se especifican como argumentos de funciones de trazado específicas.</p>
+<ul>
+<li class="fragment"><p>las: la orientación de las etiquetas de los ejes en el gráfico</p></li>
+<li class="fragment"><p>bg: color de fondo</p></li>
+<li class="fragment"><p>mar: el tamaño del margen</p></li>
+</ul>
+</section>
+<section id="ejemplo-de-construcción-de-gráfico-en-base" class="slide level2">
+<h2>Ejemplo de Construcción de Gráfico en Base</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">with</span>(airquality, </span>
+<span id="cb17-2"><a></a>     <span class="fu">plot</span>(Wind,</span>
+<span id="cb17-3"><a></a>          Ozone, </span>
+<span id="cb17-4"><a></a>          <span class="at">main =</span> <span class="st">"Ozono y Viento en ciudad de New York "</span>,</span>
+<span id="cb17-5"><a></a>          <span class="co"># type = "n",</span></span>
+<span id="cb17-6"><a></a>          <span class="at">col=</span><span class="st">'orange'</span>))</span>
+<span id="cb17-7"><a></a></span>
+<span id="cb17-8"><a></a><span class="fu">with</span>(<span class="fu">subset</span>(airquality,</span>
+<span id="cb17-9"><a></a>            Month <span class="sc">==</span> <span class="dv">5</span>), </span>
+<span id="cb17-10"><a></a>     <span class="fu">points</span>(Wind, </span>
+<span id="cb17-11"><a></a>            Ozone, </span>
+<span id="cb17-12"><a></a>            <span class="at">col =</span> <span class="st">"blue"</span>))</span>
+<span id="cb17-13"><a></a></span>
+<span id="cb17-14"><a></a><span class="fu">with</span>(<span class="fu">subset</span>(airquality,</span>
+<span id="cb17-15"><a></a>            Month <span class="sc">!=</span> <span class="dv">5</span>), </span>
+<span id="cb17-16"><a></a>     <span class="fu">points</span>(Wind, </span>
+<span id="cb17-17"><a></a>            Ozone, </span>
+<span id="cb17-18"><a></a>            <span class="at">col =</span> <span class="st">"#fb5607"</span>))</span>
+<span id="cb17-19"><a></a></span>
+<span id="cb17-20"><a></a><span class="fu">legend</span>(<span class="st">"topright"</span>, </span>
+<span id="cb17-21"><a></a>       <span class="at">pch =</span> <span class="dv">1</span>, </span>
+<span id="cb17-22"><a></a>       <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"blue"</span>,</span>
+<span id="cb17-23"><a></a>               <span class="st">"#fb5607"</span>), </span>
+<span id="cb17-24"><a></a>       <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"Mayo"</span>, <span class="st">"Otros Meses"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="resultado-gráfico-base" class="slide level2">
+<h2>Resultado Gráfico Base</h2>
+
+<img data-src="clase_20_2_files/figure-revealjs/unnamed-chunk-24-1.png" width="960" class="r-stretch"></section>
+<section id="paquetes-eda" class="slide level2">
+<h2>Paquetes EDA</h2>
+<ul>
+<li class="fragment"><p>skimr</p></li>
+<li class="fragment"><p>DataExplorer</p></li>
+<li class="fragment"><p>summarytools</p></li>
+<li class="fragment"><p>dataReporter</p></li>
+<li class="fragment"><p>visdat</p></li>
+</ul>
+<p>códigos disponibles en <a href="https://github.com/UCVeconomia2024-2/scripts/blob/main/soporte_clases/clase_20/script_clase20.R">enlace</a></p>
+</section>
+<section id="resumen-eda" class="slide level2">
+<h2>Resumen EDA</h2>
+<ul>
+<li class="fragment"><p>Los gráficos exploratorios son «rápidos y sucios».</p></li>
+<li class="fragment"><p>Permiten resumir los datos (normalmente de forma gráfica) y resaltar las características generales.</p></li>
+<li class="fragment"><p>Explorar preguntas e hipótesis básicas (y quizás descartarlas)</p></li>
+<li class="fragment"><p>Sugieren estrategias de modelización para el «siguiente paso».</p></li>
+</ul>
+<p>Enlace Material de Apoyo <a href="https://ucveconomiar4ds.netlify.app/scripts/c">https://ucveconomiar4ds.netlify.app/scripts/</a><a href="https://ucveconomiar4ds.netlify.app/scripts/04_PlottingBase.pdf">04_PlottingBase.pdf</a></p>
 
 <div class="quarto-auto-generated-content">
 <p><img src="images/logo_curso.png" class="slide-logo"></p>

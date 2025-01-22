@@ -6724,8 +6724,8 @@
     "objectID": "clase_20_1.html#nota",
     "href": "clase_20_1.html#nota",
     "title": "Principios de Gráficos Analíticos",
-    "section": "",
-    "text": "Esta presentación es una traducción de “Principles of Analytic Graphics” de Roger D. Peng, quien es “Associate Professor of Biostatistics” en la “Johns Hopkins Bloomberg School of Public Health” y se encuentra contenida en el curso “Exploratory Data Analysis” de la especialización en “Data Science” impartida en la plataforma educacional Coursera.\nLos textos han sido traducidos sin consentimiento del autor ni revisión del mismo.\nLos gráficos que se muestran no son los incluidos en la presentación original."
+    "section": "Nota",
+    "text": "Nota\nEsta presentación es una traducción de “Principles of Analytic Graphics” de Roger D. Peng, quien es “Associate Professor of Biostatistics” en la “Johns Hopkins Bloomberg School of Public Health” y se encuentra contenida en el curso “Exploratory Data Analysis” de la especialización en “Data Science” impartida en la plataforma educacional Coursera.\nLos textos han sido traducidos sin consentimiento del autor ni revisión del mismo.\nLos gráficos que se muestran no son los incluidos en la presentación original."
   },
   {
     "objectID": "clase_20_1.html#objetivo",
@@ -6767,7 +6767,7 @@
     "href": "clase_20_1.html#estimación-impacto-2",
     "title": "Principios de Gráficos Analíticos",
     "section": "Estimación Impacto 2",
-    "text": "Estimación Impacto 2\n\n\n\n\n\nTomado de La Evaluación de Impacto en la Práctica, Banco Mundial enlace"
+    "text": "Estimación Impacto 2\n\nTomado de La Evaluación de Impacto en la Práctica, Banco Mundial enlace"
   },
   {
     "objectID": "clase_20_1.html#multivariable-1",
@@ -6934,8 +6934,8 @@
     "objectID": "clases/clase_20_0.html#anuncios",
     "href": "clases/clase_20_0.html#anuncios",
     "title": "Ciencia de Datos para Economistas",
-    "section": "",
-    "text": "Tramitar API key Google AI Studio\nTramitar API key RapidApi\nRetardos en tareas. Fin del plazo\nProgramación Actividades\nClase faltante lunes 20-01.\n\npresencial miércoles 29 en la mañana\nremota, fecha por definir semana 27 al 31-01"
+    "section": "Anuncios",
+    "text": "Anuncios\n\nTramitar API key Google AI Studio\nTramitar API key RapidApi\nRetardos en tareas. Fin del plazo\nProgramación Actividades\nClase faltante lunes 20-01.\n\npresencial miércoles 29 en la mañana\nremota, fecha por definir semana 27 al 31-01"
   },
   {
     "objectID": "clases/clase_20_0.html#objetivo",
@@ -6949,7 +6949,7 @@
     "href": "clases/clase_20_0.html#contenido",
     "title": "Ciencia de Datos para Economistas",
     "section": "Contenido",
-    "text": "Contenido\n\nRepaso clase IAVD\nPrincipios de Gráficos Analíticos\nGráficos Exploratorios (GE)\nLibrerías para EDA"
+    "text": "Contenido\n\nRepaso clase IAVD\nPrincipios de Gráficos Analíticos\nGráficos Exploratorios (GE)\nLibrerías para EDA\n\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "clases/clases_20_2.html#conjuntos-de-datos-a-usar-1",
@@ -7223,5 +7223,264 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "",
     "text": "Tramitar API key Google AI Studio\nTramitar API key RapidApi\nRetardos en tareas. Fin del plazo\nProgramación Actividades\nClase faltante lunes 20-01.\n\npresencial miércoles 29 en la mañana\nremota, fecha por definir semana 27 al 31-01"
+  },
+  {
+    "objectID": "clases/clase_20_2.html#gráficos-exploratorios-ge",
+    "href": "clases/clase_20_2.html#gráficos-exploratorios-ge",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Gráficos Exploratorios (GE)",
+    "text": "Gráficos Exploratorios (GE)\n\nComprender características que presentan los datos\nEncontrar patrones presentes o implícitos\nEvaluar posibles estrategias de modelización\nDepurar el análisis\nComunicar los resultados del proceso de obtención-levantamiento de los datos"
+  },
+  {
+    "objectID": "clases/clase_20_2.html#características-de-los-ge",
+    "href": "clases/clase_20_2.html#características-de-los-ge",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Características de los GE",
+    "text": "Características de los GE\n\nSe hacen rápidamente\nSe hace un gran número\nEl objetivo es la comprensión personal\nLos ejes/leyendas se limpian generalmente (más tarde)\nEl color/tamaño se utilizan principalmente como información"
+  },
+  {
+    "objectID": "clases/clase_20_2.html#características-de-los-ge--2",
+    "href": "clases/clase_20_2.html#características-de-los-ge--2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Características de los GE- 2",
+    "text": "Características de los GE- 2\n\nLos gráficos exploratorios son «rápidos y sucios».\nPermiten resumir los datos (normalmente de forma gráfica) y resaltar las características generales.\nExplorar preguntas e hipótesis básicas (y quizás descartarlas)\nSugieren estrategias de modelización para el «siguiente paso»"
+  },
+  {
+    "objectID": "clases/clase_20_2.html#nota",
+    "href": "clases/clase_20_2.html#nota",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "NOTA:",
+    "text": "NOTA:\nEl contenido de las tres anteriores láminas se basa en la presentación “Exploratory Graphs” del Prof. Roger Peng, complementada por su libro “Exploratory Data Analysis with R” disponible en el enlace."
+  },
+  {
+    "objectID": "clases/clase_20_2.html#sumarios-en-una-dimensión",
+    "href": "clases/clase_20_2.html#sumarios-en-una-dimensión",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Sumarios en una Dimensión",
+    "text": "Sumarios en una Dimensión\n\nTablas sumario: table , summary\nGráficos:\n\nBoxplot - Diagrama de Caja\nHistograms - Histogramas\nDensity Plot - Gráfico de Densidad\nBarplot - Diagrama/gráfico de Barras\nScatterPlots (bidimensional) - Diagrama de Dispersión"
+  },
+  {
+    "objectID": "clases/clase_20_2.html#conjuntos-de-datos-a-usar-1",
+    "href": "clases/clase_20_2.html#conjuntos-de-datos-a-usar-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Conjuntos de Datos a Usar 1",
+    "text": "Conjuntos de Datos a Usar 1\nGapminder\n\nhead(gapminder)\n\n# A tibble: 6 × 6\n  country     continent  year lifeExp      pop gdpPercap\n  &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;\n1 Afghanistan Asia       1952    28.8  8425333      779.\n2 Afghanistan Asia       1957    30.3  9240934      821.\n3 Afghanistan Asia       1962    32.0 10267083      853.\n4 Afghanistan Asia       1967    34.0 11537966      836.\n5 Afghanistan Asia       1972    36.1 13079460      740.\n6 Afghanistan Asia       1977    38.4 14880372      786."
+  },
+  {
+    "objectID": "clases/clase_20_2.html#conjuntos-de-datos-a-usar-2",
+    "href": "clases/clase_20_2.html#conjuntos-de-datos-a-usar-2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Conjuntos de Datos a Usar 2",
+    "text": "Conjuntos de Datos a Usar 2\nGapminder 2007\n\ngapminder_2007 &lt;- gapminder%&gt;%\n  filter(year==2007)"
+  },
+  {
+    "objectID": "clases/clase_20_2.html#conjuntos-de-datos-a-usar-3",
+    "href": "clases/clase_20_2.html#conjuntos-de-datos-a-usar-3",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Conjuntos de Datos a Usar 3",
+    "text": "Conjuntos de Datos a Usar 3\nGapminder África y Europa\n\ngapminder_afeu &lt;- gapminder%&gt;%\n  filter(continent %in% c('Africa','Europe'))%&gt;%\n  mutate(continent= as.character(continent))"
+  },
+  {
+    "objectID": "clases/clase_20_2.html#conjuntos-de-datos-a-usar-4",
+    "href": "clases/clase_20_2.html#conjuntos-de-datos-a-usar-4",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Conjuntos de Datos a Usar 4",
+    "text": "Conjuntos de Datos a Usar 4\nGapminder África y Europa 2007\n\ngapminder_2007_afeu &lt;- gapminder_2007%&gt;%\n  filter(continent %in% c('Africa','Europe'))%&gt;%\n  mutate(continent= as.character(continent))"
+  },
+  {
+    "objectID": "clases/clase_20_2.html#tablas-sumario",
+    "href": "clases/clase_20_2.html#tablas-sumario",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tablas Sumario",
+    "text": "Tablas Sumario\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  39.61   57.16   71.94   67.01   76.41   82.60 \n\n\n\n  Africa Americas     Asia   Europe  Oceania \n      52       25       33       30        2"
+  },
+  {
+    "objectID": "clases/clase_20_2.html#opciones-para-graficación---sistemas",
+    "href": "clases/clase_20_2.html#opciones-para-graficación---sistemas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Opciones para Graficación - Sistemas",
+    "text": "Opciones para Graficación - Sistemas\n\nBase: hoy\nGGplot: próxima clase"
+  },
+  {
+    "objectID": "clases/clase_20_2.html#diagrama-de-caja-y-bigotes-boxplot",
+    "href": "clases/clase_20_2.html#diagrama-de-caja-y-bigotes-boxplot",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Diagrama de Caja y Bigotes (Boxplot)",
+    "text": "Diagrama de Caja y Bigotes (Boxplot)\n\n\n\nboxplot(gapminder_2007$lifeExp,\n        col = \"#c1121f\")\n\n\n\n\n\n\n\n\n\n\nboxplot(lifeExp ~ continent, \n        data = gapminder_2007,\n        col = \"#fb8b24\",\n        xlab='Continente',\n        ylab='Expectativa de Vida')"
+  },
+  {
+    "objectID": "clases/clase_20_2.html#diagrama-de-caja---concepto",
+    "href": "clases/clase_20_2.html#diagrama-de-caja---concepto",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Diagrama de Caja - Concepto",
+    "text": "Diagrama de Caja - Concepto\n\nEs un gráfico que resume las características principales de un conjunto de datos numéricos, como la mediana, el rango intercuartil (IQR) (25%, 50% y 75%) y los valores atípicos."
+  },
+  {
+    "objectID": "clases/clase_20_2.html#diagrama-de-caja---casos-de-uso---1",
+    "href": "clases/clase_20_2.html#diagrama-de-caja---casos-de-uso---1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Diagrama de Caja - Casos de Uso - 1",
+    "text": "Diagrama de Caja - Casos de Uso - 1\n\n\nComparar distribuciones de diferentes grupos."
+  },
+  {
+    "objectID": "clases/clase_20_2.html#diagrama-de-caja---casos-de-uso---2",
+    "href": "clases/clase_20_2.html#diagrama-de-caja---casos-de-uso---2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Diagrama de Caja - Casos de Uso - 2",
+    "text": "Diagrama de Caja - Casos de Uso - 2\n\nIdentificar outliers (valores atípicos).\nAnalizar la centralización, dispersión y simetría de los datos."
+  },
+  {
+    "objectID": "clases/clase_20_2.html#diagrama-de-caja---casos-de-uso---3",
+    "href": "clases/clase_20_2.html#diagrama-de-caja---casos-de-uso---3",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Diagrama de Caja - Casos de Uso - 3",
+    "text": "Diagrama de Caja - Casos de Uso - 3\n\nDetectar diferencias significativas entre grupos."
+  },
+  {
+    "objectID": "clases/clase_20_2.html#histogramas",
+    "href": "clases/clase_20_2.html#histogramas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Histogramas",
+    "text": "Histogramas\n\n\n\nhist(main = 'Hist. ExpVida',\n     gapminder_2007$lifeExp,\n     col = \"green\",\n     xlab='Expectativa de Vida',\n     breaks = 20)\n\n\n\n\n\n\n\n\n\n\nhist(main = 'Hist PIBpercap',\n     gapminder$gdpPercap,\n     col = \"orange\",\n     xlab='PIB per Cápita',\n     breaks = 50)\n\nabline(v = median(gapminder$gdpPercap), \n       col = \"red\",\n       lwd = 2)"
+  },
+  {
+    "objectID": "clases/clase_20_2.html#histogramas--concepto",
+    "href": "clases/clase_20_2.html#histogramas--concepto",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Histogramas- Concepto",
+    "text": "Histogramas- Concepto\nMuestra la distribución de frecuencias de un conjunto de datos numéricos. Se divide el rango de datos en intervalos (bins) y se representa la frecuencia de los valores que caen dentro de cada intervalo como barras."
+  },
+  {
+    "objectID": "clases/clase_20_2.html#histogramas--casos-de-uso",
+    "href": "clases/clase_20_2.html#histogramas--casos-de-uso",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Histogramas- Casos de Uso",
+    "text": "Histogramas- Casos de Uso\n\nVisualizar la forma y simetría de una distribución.\nIdentificar picos, modas y áreas con baja frecuencia.\nComparar distribuciones entre diferentes grupos.\nDetectar valores atípicos."
+  },
+  {
+    "objectID": "clases/clase_20_2.html#múltiples-histogramas",
+    "href": "clases/clase_20_2.html#múltiples-histogramas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Múltiples Histogramas",
+    "text": "Múltiples Histogramas\n\npar(mfrow = c(2, 1), \n    mar = c(4, 4, 2, 1))\n\nhist(subset(gapminder_2007, \n            continent == \"Europe\")$lifeExp, \n     col =\"#219ebc\" )\n\nhist(subset(gapminder_2007, \n            continent == \"Africa\")$lifeExp, \n     col = \"#c1121f\")"
+  },
+  {
+    "objectID": "clases/clase_20_2.html#gráfico-de-densidad-density-plot",
+    "href": "clases/clase_20_2.html#gráfico-de-densidad-density-plot",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Gráfico de Densidad (Density Plot)",
+    "text": "Gráfico de Densidad (Density Plot)\n\n\n\ndens &lt;- density(gapminder_2007$lifeExp)\n# plot density\nplot(dens, \n     col = \"#ef233c\", \n     main = \"Gr. Densidad ExpVida Gap 2007\") \n\n\n\n\n\n\n\n\n\n\ndens1 &lt;- density(gapminder$lifeExp)\n# plot density\nplot(dens1, \n     col = \"#023e8a\", \n     main = \"Gr. Densidad ExpVida Gap\")"
+  },
+  {
+    "objectID": "clases/clase_20_2.html#gráfico-de-densidad--concepto",
+    "href": "clases/clase_20_2.html#gráfico-de-densidad--concepto",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Gráfico de Densidad- Concepto",
+    "text": "Gráfico de Densidad- Concepto\nGráfico que muestra la densidad de probabilidad de un conjunto de datos numéricos. Se utiliza una curva suave para representar la distribución, donde la altura de la curva en un punto indica la densidad de los valores cercanos a ese punto."
+  },
+  {
+    "objectID": "clases/clase_20_2.html#gráfico-de-densidad--casos-de-uso",
+    "href": "clases/clase_20_2.html#gráfico-de-densidad--casos-de-uso",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Gráfico de Densidad- Casos de uso",
+    "text": "Gráfico de Densidad- Casos de uso\n\nVisualizar la forma y simetría de una distribución de manera más continua que el histograma.\nComparar distribuciones entre diferentes grupos.\nIdentificar picos, modas y áreas con baja densidad."
+  },
+  {
+    "objectID": "clases/clase_20_2.html#diagrama-de-barras-barplot",
+    "href": "clases/clase_20_2.html#diagrama-de-barras-barplot",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Diagrama de Barras (Barplot)",
+    "text": "Diagrama de Barras (Barplot)\n\nbarplot(table(gapminder_2007$continent),\n        col = \"#ffbe0b\", \n        main = \"Cdad. de Países en Cada Continente\")"
+  },
+  {
+    "objectID": "clases/clase_20_2.html#diagrama-de-barras--concepto",
+    "href": "clases/clase_20_2.html#diagrama-de-barras--concepto",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Diagrama de Barras- Concepto",
+    "text": "Diagrama de Barras- Concepto\nEs un gráfico que utiliza barras para representar la frecuencia o magnitud de variables categóricas-discretas. La altura de cada barra corresponde a la frecuencia o magnitud de la categoría correspondiente."
+  },
+  {
+    "objectID": "clases/clase_20_2.html#diagrama-de-barras--casos-de-uso",
+    "href": "clases/clase_20_2.html#diagrama-de-barras--casos-de-uso",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Diagrama de Barras- Casos de uso",
+    "text": "Diagrama de Barras- Casos de uso\n\nComparar frecuencias o magnitudes entre diferentes categorías.\nMostrar tendencias a lo largo del tiempo.\nRepresentar datos nominales o ordinales."
+  },
+  {
+    "objectID": "clases/clase_20_2.html#diagrama-de-dispersión-scatterplot",
+    "href": "clases/clase_20_2.html#diagrama-de-dispersión-scatterplot",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Diagrama de Dispersión (ScatterPlot)",
+    "text": "Diagrama de Dispersión (ScatterPlot)\n\nwith(gapminder,\n     plot(lifeExp, gdpPercap,\n          col= \"#9d0208\"))"
+  },
+  {
+    "objectID": "clases/clase_20_2.html#diagrama-de-dispersión--concepto",
+    "href": "clases/clase_20_2.html#diagrama-de-dispersión--concepto",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Diagrama de Dispersión- Concepto",
+    "text": "Diagrama de Dispersión- Concepto\nGráfico que muestra la relación entre dos variables numéricas. Cada punto en el gráfico representa una observación, con su posición determinada por los valores de las dos variables."
+  },
+  {
+    "objectID": "clases/clase_20_2.html#diagrama-de-dispersión--casos-de-uso",
+    "href": "clases/clase_20_2.html#diagrama-de-dispersión--casos-de-uso",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Diagrama de Dispersión- Casos de uso",
+    "text": "Diagrama de Dispersión- Casos de uso\n\n\nVisualizar la correlación entre dos variables.\nIdentificar tendencias y patrones en los datos.\nDetectar outliers (valores atípicos).\nAnalizar la relación lineal o no lineal entre variables."
+  },
+  {
+    "objectID": "clases/clase_20_2.html#consideraciones-sobre-sistema-base",
+    "href": "clases/clase_20_2.html#consideraciones-sobre-sistema-base",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Consideraciones Sobre Sistema Base",
+    "text": "Consideraciones Sobre Sistema Base"
+  },
+  {
+    "objectID": "clases/clase_20_2.html#parámetros-comunes-sistema-base",
+    "href": "clases/clase_20_2.html#parámetros-comunes-sistema-base",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Parámetros Comunes Sistema Base",
+    "text": "Parámetros Comunes Sistema Base\n\npch: el símbolo de trazado (por defecto es círculo abierto)\nlty: el tipo de línea (por defecto es línea continua), puede ser discontinua, punteada, etc.\nlwd: la anchura de la línea, especificada como un múltiplo entero col: el color de trazado, especificado como número, cadena o código hexadecimal;"
+  },
+  {
+    "objectID": "clases/clase_20_2.html#parámetros-comunes-sistema-base--2",
+    "href": "clases/clase_20_2.html#parámetros-comunes-sistema-base--2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Parámetros Comunes Sistema Base -2",
+    "text": "Parámetros Comunes Sistema Base -2\n\ncol: el color de trazado, especificado como número, cadena o código hexadecimal; la función colors() le proporciona un vector de colores por nombre.\nxlab: cadena de caracteres para la etiqueta del eje x\nylab: cadena de caracteres para la etiqueta del eje y"
+  },
+  {
+    "objectID": "clases/clase_20_2.html#parámetros-globales-sistema-base",
+    "href": "clases/clase_20_2.html#parámetros-globales-sistema-base",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Parámetros Globales Sistema Base",
+    "text": "Parámetros Globales Sistema Base\nLa función par() se utiliza para especificar parámetros gráficos globales que afectan a todos los gráficos de una sesión de R. Estos parámetros pueden anularse cuando se especifican como argumentos de funciones de trazado específicas.\n\nlas: la orientación de las etiquetas de los ejes en el gráfico\nbg: color de fondo\nmar: el tamaño del margen"
+  },
+  {
+    "objectID": "clases/clase_20_2.html#ejemplo-de-construcción-de-gráfico-en-base",
+    "href": "clases/clase_20_2.html#ejemplo-de-construcción-de-gráfico-en-base",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplo de Construcción de Gráfico en Base",
+    "text": "Ejemplo de Construcción de Gráfico en Base\n\nwith(airquality, \n     plot(Wind,\n          Ozone, \n          main = \"Ozono y Viento en ciudad de New York \",\n          # type = \"n\",\n          col='orange'))\n\nwith(subset(airquality,\n            Month == 5), \n     points(Wind, \n            Ozone, \n            col = \"blue\"))\n\nwith(subset(airquality,\n            Month != 5), \n     points(Wind, \n            Ozone, \n            col = \"#fb5607\"))\n\nlegend(\"topright\", \n       pch = 1, \n       col = c(\"blue\",\n               \"#fb5607\"), \n       legend = c(\"Mayo\", \"Otros Meses\"))"
+  },
+  {
+    "objectID": "clases/clase_20_2.html#resultado-gráfico-base",
+    "href": "clases/clase_20_2.html#resultado-gráfico-base",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Resultado Gráfico Base",
+    "text": "Resultado Gráfico Base"
+  },
+  {
+    "objectID": "clases/clase_20_2.html#paquetes-eda",
+    "href": "clases/clase_20_2.html#paquetes-eda",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Paquetes EDA",
+    "text": "Paquetes EDA\n\nskimr\nDataExplorer\nsummarytools\ndataReporter\nvisdat\n\ncódigos disponibles en enlace"
+  },
+  {
+    "objectID": "clases/clase_20_2.html#resumen-eda",
+    "href": "clases/clase_20_2.html#resumen-eda",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Resumen EDA",
+    "text": "Resumen EDA\n\nLos gráficos exploratorios son «rápidos y sucios».\nPermiten resumir los datos (normalmente de forma gráfica) y resaltar las características generales.\nExplorar preguntas e hipótesis básicas (y quizás descartarlas)\nSugieren estrategias de modelización para el «siguiente paso».\n\nEnlace Material de Apoyo https://ucveconomiar4ds.netlify.app/scripts/04_PlottingBase.pdf\n\n\n\n\n🔗 ucveconomiar4ds"
   }
 ]
