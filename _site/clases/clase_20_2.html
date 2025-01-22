@@ -517,10 +517,15 @@ M.Sc. José M. Avendaño
 <section id="tablas-sumario" class="slide level2">
 <h2>Tablas Sumario</h2>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">summary</span>(gapminder_2007<span class="sc">$</span>lifeExp)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
   39.61   57.16   71.94   67.01   76.41   82.60 </code></pre>
 </div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="co">#</span></span>
+<span id="cb8-2"><a></a><span class="co">#</span></span>
+<span id="cb8-3"><a></a><span class="co">#</span></span>
+<span id="cb8-4"><a></a><span class="fu">table</span>(gapminder_2007<span class="sc">$</span>continent)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>
   Africa Americas     Asia   Europe  Oceania 
@@ -540,8 +545,8 @@ M.Sc. José M. Avendaño
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">boxplot</span>(gapminder_2007<span class="sc">$</span>lifeExp,</span>
-<span id="cb8-2"><a></a>        <span class="at">col =</span> <span class="st">"#c1121f"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">boxplot</span>(gapminder_2007<span class="sc">$</span>lifeExp,</span>
+<span id="cb10-2"><a></a>        <span class="at">col =</span> <span class="st">"#c1121f"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -552,11 +557,11 @@ M.Sc. José M. Avendaño
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">boxplot</span>(lifeExp <span class="sc">~</span> continent, </span>
-<span id="cb9-2"><a></a>        <span class="at">data =</span> gapminder_2007,</span>
-<span id="cb9-3"><a></a>        <span class="at">col =</span> <span class="st">"#fb8b24"</span>,</span>
-<span id="cb9-4"><a></a>        <span class="at">xlab=</span><span class="st">'Continente'</span>,</span>
-<span id="cb9-5"><a></a>        <span class="at">ylab=</span><span class="st">'Expectativa de Vida'</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">boxplot</span>(lifeExp <span class="sc">~</span> continent, </span>
+<span id="cb11-2"><a></a>        <span class="at">data =</span> gapminder_2007,</span>
+<span id="cb11-3"><a></a>        <span class="at">col =</span> <span class="st">"#fb8b24"</span>,</span>
+<span id="cb11-4"><a></a>        <span class="at">xlab=</span><span class="st">'Continente'</span>,</span>
+<span id="cb11-5"><a></a>        <span class="at">ylab=</span><span class="st">'Expectativa de Vida'</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -606,11 +611,11 @@ M.Sc. José M. Avendaño
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">hist</span>(<span class="at">main =</span> <span class="st">'Hist. ExpVida'</span>,</span>
-<span id="cb10-2"><a></a>     gapminder_2007<span class="sc">$</span>lifeExp,</span>
-<span id="cb10-3"><a></a>     <span class="at">col =</span> <span class="st">"green"</span>,</span>
-<span id="cb10-4"><a></a>     <span class="at">xlab=</span><span class="st">'Expectativa de Vida'</span>,</span>
-<span id="cb10-5"><a></a>     <span class="at">breaks =</span> <span class="dv">20</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">hist</span>(<span class="at">main =</span> <span class="st">'Hist. ExpVida'</span>,</span>
+<span id="cb12-2"><a></a>     gapminder_2007<span class="sc">$</span>lifeExp,</span>
+<span id="cb12-3"><a></a>     <span class="at">col =</span> <span class="st">"green"</span>,</span>
+<span id="cb12-4"><a></a>     <span class="at">xlab=</span><span class="st">'Expectativa de Vida'</span>,</span>
+<span id="cb12-5"><a></a>     <span class="at">breaks =</span> <span class="dv">20</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -621,15 +626,15 @@ M.Sc. José M. Avendaño
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">hist</span>(<span class="at">main =</span> <span class="st">'Hist PIBpercap'</span>,</span>
-<span id="cb11-2"><a></a>     gapminder<span class="sc">$</span>gdpPercap,</span>
-<span id="cb11-3"><a></a>     <span class="at">col =</span> <span class="st">"orange"</span>,</span>
-<span id="cb11-4"><a></a>     <span class="at">xlab=</span><span class="st">'PIB per Cápita'</span>,</span>
-<span id="cb11-5"><a></a>     <span class="at">breaks =</span> <span class="dv">50</span>)</span>
-<span id="cb11-6"><a></a></span>
-<span id="cb11-7"><a></a><span class="fu">abline</span>(<span class="at">v =</span> <span class="fu">median</span>(gapminder<span class="sc">$</span>gdpPercap), </span>
-<span id="cb11-8"><a></a>       <span class="at">col =</span> <span class="st">"red"</span>,</span>
-<span id="cb11-9"><a></a>       <span class="at">lwd =</span> <span class="dv">2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">hist</span>(<span class="at">main =</span> <span class="st">'Hist PIBpercap'</span>,</span>
+<span id="cb13-2"><a></a>     gapminder<span class="sc">$</span>gdpPercap,</span>
+<span id="cb13-3"><a></a>     <span class="at">col =</span> <span class="st">"orange"</span>,</span>
+<span id="cb13-4"><a></a>     <span class="at">xlab=</span><span class="st">'PIB per Cápita'</span>,</span>
+<span id="cb13-5"><a></a>     <span class="at">breaks =</span> <span class="dv">50</span>)</span>
+<span id="cb13-6"><a></a></span>
+<span id="cb13-7"><a></a><span class="fu">abline</span>(<span class="at">v =</span> <span class="fu">median</span>(gapminder<span class="sc">$</span>gdpPercap), </span>
+<span id="cb13-8"><a></a>       <span class="at">col =</span> <span class="st">"red"</span>,</span>
+<span id="cb13-9"><a></a>       <span class="at">lwd =</span> <span class="dv">2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -657,16 +662,16 @@ M.Sc. José M. Avendaño
 <section id="múltiples-histogramas" class="slide level2">
 <h2>Múltiples Histogramas</h2>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">1</span>), </span>
-<span id="cb12-2"><a></a>    <span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">1</span>))</span>
-<span id="cb12-3"><a></a></span>
-<span id="cb12-4"><a></a><span class="fu">hist</span>(<span class="fu">subset</span>(gapminder_2007, </span>
-<span id="cb12-5"><a></a>            continent <span class="sc">==</span> <span class="st">"Europe"</span>)<span class="sc">$</span>lifeExp, </span>
-<span id="cb12-6"><a></a>     <span class="at">col =</span><span class="st">"#219ebc"</span> )</span>
-<span id="cb12-7"><a></a></span>
-<span id="cb12-8"><a></a><span class="fu">hist</span>(<span class="fu">subset</span>(gapminder_2007, </span>
-<span id="cb12-9"><a></a>            continent <span class="sc">==</span> <span class="st">"Africa"</span>)<span class="sc">$</span>lifeExp, </span>
-<span id="cb12-10"><a></a>     <span class="at">col =</span> <span class="st">"#c1121f"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">par</span>(<span class="at">mfrow =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">1</span>), </span>
+<span id="cb14-2"><a></a>    <span class="at">mar =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">2</span>, <span class="dv">1</span>))</span>
+<span id="cb14-3"><a></a></span>
+<span id="cb14-4"><a></a><span class="fu">hist</span>(<span class="fu">subset</span>(gapminder_2007, </span>
+<span id="cb14-5"><a></a>            continent <span class="sc">==</span> <span class="st">"Europe"</span>)<span class="sc">$</span>lifeExp, </span>
+<span id="cb14-6"><a></a>     <span class="at">col =</span><span class="st">"#219ebc"</span> )</span>
+<span id="cb14-7"><a></a></span>
+<span id="cb14-8"><a></a><span class="fu">hist</span>(<span class="fu">subset</span>(gapminder_2007, </span>
+<span id="cb14-9"><a></a>            continent <span class="sc">==</span> <span class="st">"Africa"</span>)<span class="sc">$</span>lifeExp, </span>
+<span id="cb14-10"><a></a>     <span class="at">col =</span> <span class="st">"#c1121f"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="clase_20_2_files/figure-revealjs/unnamed-chunk-16-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
@@ -675,11 +680,11 @@ M.Sc. José M. Avendaño
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>dens <span class="ot">&lt;-</span> <span class="fu">density</span>(gapminder_2007<span class="sc">$</span>lifeExp)</span>
-<span id="cb13-2"><a></a><span class="co"># plot density</span></span>
-<span id="cb13-3"><a></a><span class="fu">plot</span>(dens, </span>
-<span id="cb13-4"><a></a>     <span class="at">col =</span> <span class="st">"#ef233c"</span>, </span>
-<span id="cb13-5"><a></a>     <span class="at">main =</span> <span class="st">"Gr. Densidad ExpVida Gap 2007"</span>) </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>dens <span class="ot">&lt;-</span> <span class="fu">density</span>(gapminder_2007<span class="sc">$</span>lifeExp)</span>
+<span id="cb15-2"><a></a><span class="co"># plot density</span></span>
+<span id="cb15-3"><a></a><span class="fu">plot</span>(dens, </span>
+<span id="cb15-4"><a></a>     <span class="at">col =</span> <span class="st">"#ef233c"</span>, </span>
+<span id="cb15-5"><a></a>     <span class="at">main =</span> <span class="st">"Gr. Densidad ExpVida Gap 2007"</span>) </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -690,11 +695,11 @@ M.Sc. José M. Avendaño
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>dens1 <span class="ot">&lt;-</span> <span class="fu">density</span>(gapminder<span class="sc">$</span>lifeExp)</span>
-<span id="cb14-2"><a></a><span class="co"># plot density</span></span>
-<span id="cb14-3"><a></a><span class="fu">plot</span>(dens1, </span>
-<span id="cb14-4"><a></a>     <span class="at">col =</span> <span class="st">"#023e8a"</span>, </span>
-<span id="cb14-5"><a></a>     <span class="at">main =</span> <span class="st">"Gr. Densidad ExpVida Gap"</span>) </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>dens1 <span class="ot">&lt;-</span> <span class="fu">density</span>(gapminder<span class="sc">$</span>lifeExp)</span>
+<span id="cb16-2"><a></a><span class="co"># plot density</span></span>
+<span id="cb16-3"><a></a><span class="fu">plot</span>(dens1, </span>
+<span id="cb16-4"><a></a>     <span class="at">col =</span> <span class="st">"#023e8a"</span>, </span>
+<span id="cb16-5"><a></a>     <span class="at">main =</span> <span class="st">"Gr. Densidad ExpVida Gap"</span>) </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure>
@@ -720,9 +725,9 @@ M.Sc. José M. Avendaño
 <section id="diagrama-de-barras-barplot" class="slide level2">
 <h2>Diagrama de Barras (Barplot)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">barplot</span>(<span class="fu">table</span>(gapminder_2007<span class="sc">$</span>continent),</span>
-<span id="cb15-2"><a></a>        <span class="at">col =</span> <span class="st">"#ffbe0b"</span>, </span>
-<span id="cb15-3"><a></a>        <span class="at">main =</span> <span class="st">"Cdad. de Países en Cada Continente"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">barplot</span>(<span class="fu">table</span>(gapminder_2007<span class="sc">$</span>continent),</span>
+<span id="cb17-2"><a></a>        <span class="at">col =</span> <span class="st">"#ffbe0b"</span>, </span>
+<span id="cb17-3"><a></a>        <span class="at">main =</span> <span class="st">"Cdad. de Países en Cada Continente"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="clase_20_2_files/figure-revealjs/unnamed-chunk-19-1.png" width="960" class="r-stretch"></section>
@@ -741,9 +746,9 @@ M.Sc. José M. Avendaño
 <section id="diagrama-de-dispersión-scatterplot" class="slide level2">
 <h2>Diagrama de Dispersión (ScatterPlot)</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">with</span>(gapminder,</span>
-<span id="cb16-2"><a></a>     <span class="fu">plot</span>(lifeExp, gdpPercap,</span>
-<span id="cb16-3"><a></a>          <span class="at">col=</span> <span class="st">"#9d0208"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">with</span>(gapminder,</span>
+<span id="cb18-2"><a></a>     <span class="fu">plot</span>(lifeExp, gdpPercap,</span>
+<span id="cb18-3"><a></a>          <span class="at">col=</span> <span class="st">"#9d0208"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="clase_20_2_files/figure-revealjs/unnamed-chunk-20-1.png" width="960" class="r-stretch"></section>
@@ -793,30 +798,30 @@ M.Sc. José M. Avendaño
 <section id="ejemplo-de-construcción-de-gráfico-en-base" class="slide level2">
 <h2>Ejemplo de Construcción de Gráfico en Base</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">with</span>(airquality, </span>
-<span id="cb17-2"><a></a>     <span class="fu">plot</span>(Wind,</span>
-<span id="cb17-3"><a></a>          Ozone, </span>
-<span id="cb17-4"><a></a>          <span class="at">main =</span> <span class="st">"Ozono y Viento en ciudad de New York "</span>,</span>
-<span id="cb17-5"><a></a>          <span class="co"># type = "n",</span></span>
-<span id="cb17-6"><a></a>          <span class="at">col=</span><span class="st">'orange'</span>))</span>
-<span id="cb17-7"><a></a></span>
-<span id="cb17-8"><a></a><span class="fu">with</span>(<span class="fu">subset</span>(airquality,</span>
-<span id="cb17-9"><a></a>            Month <span class="sc">==</span> <span class="dv">5</span>), </span>
-<span id="cb17-10"><a></a>     <span class="fu">points</span>(Wind, </span>
-<span id="cb17-11"><a></a>            Ozone, </span>
-<span id="cb17-12"><a></a>            <span class="at">col =</span> <span class="st">"blue"</span>))</span>
-<span id="cb17-13"><a></a></span>
-<span id="cb17-14"><a></a><span class="fu">with</span>(<span class="fu">subset</span>(airquality,</span>
-<span id="cb17-15"><a></a>            Month <span class="sc">!=</span> <span class="dv">5</span>), </span>
-<span id="cb17-16"><a></a>     <span class="fu">points</span>(Wind, </span>
-<span id="cb17-17"><a></a>            Ozone, </span>
-<span id="cb17-18"><a></a>            <span class="at">col =</span> <span class="st">"#fb5607"</span>))</span>
-<span id="cb17-19"><a></a></span>
-<span id="cb17-20"><a></a><span class="fu">legend</span>(<span class="st">"topright"</span>, </span>
-<span id="cb17-21"><a></a>       <span class="at">pch =</span> <span class="dv">1</span>, </span>
-<span id="cb17-22"><a></a>       <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"blue"</span>,</span>
-<span id="cb17-23"><a></a>               <span class="st">"#fb5607"</span>), </span>
-<span id="cb17-24"><a></a>       <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"Mayo"</span>, <span class="st">"Otros Meses"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">with</span>(airquality, </span>
+<span id="cb19-2"><a></a>     <span class="fu">plot</span>(Wind,</span>
+<span id="cb19-3"><a></a>          Ozone, </span>
+<span id="cb19-4"><a></a>          <span class="at">main =</span> <span class="st">"Ozono y Viento en ciudad de New York "</span>,</span>
+<span id="cb19-5"><a></a>          <span class="co"># type = "n",</span></span>
+<span id="cb19-6"><a></a>          <span class="at">col=</span><span class="st">'orange'</span>))</span>
+<span id="cb19-7"><a></a></span>
+<span id="cb19-8"><a></a><span class="fu">with</span>(<span class="fu">subset</span>(airquality,</span>
+<span id="cb19-9"><a></a>            Month <span class="sc">==</span> <span class="dv">5</span>), </span>
+<span id="cb19-10"><a></a>     <span class="fu">points</span>(Wind, </span>
+<span id="cb19-11"><a></a>            Ozone, </span>
+<span id="cb19-12"><a></a>            <span class="at">col =</span> <span class="st">"blue"</span>))</span>
+<span id="cb19-13"><a></a></span>
+<span id="cb19-14"><a></a><span class="fu">with</span>(<span class="fu">subset</span>(airquality,</span>
+<span id="cb19-15"><a></a>            Month <span class="sc">!=</span> <span class="dv">5</span>), </span>
+<span id="cb19-16"><a></a>     <span class="fu">points</span>(Wind, </span>
+<span id="cb19-17"><a></a>            Ozone, </span>
+<span id="cb19-18"><a></a>            <span class="at">col =</span> <span class="st">"#fb5607"</span>))</span>
+<span id="cb19-19"><a></a></span>
+<span id="cb19-20"><a></a><span class="fu">legend</span>(<span class="st">"topright"</span>, </span>
+<span id="cb19-21"><a></a>       <span class="at">pch =</span> <span class="dv">1</span>, </span>
+<span id="cb19-22"><a></a>       <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"blue"</span>,</span>
+<span id="cb19-23"><a></a>               <span class="st">"#fb5607"</span>), </span>
+<span id="cb19-24"><a></a>       <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"Mayo"</span>, <span class="st">"Otros Meses"</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="resultado-gráfico-base" class="slide level2">

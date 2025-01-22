@@ -7292,7 +7292,7 @@
     "href": "clases/clase_20_2.html#tablas-sumario",
     "title": "Ciencia de Datos para Economistas",
     "section": "Tablas Sumario",
-    "text": "Tablas Sumario\n\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  39.61   57.16   71.94   67.01   76.41   82.60 \n\n\n\n  Africa Americas     Asia   Europe  Oceania \n      52       25       33       30        2"
+    "text": "Tablas Sumario\n\nsummary(gapminder_2007$lifeExp)\n\n   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. \n  39.61   57.16   71.94   67.01   76.41   82.60 \n\n#\n#\n#\ntable(gapminder_2007$continent)\n\n\n  Africa Americas     Asia   Europe  Oceania \n      52       25       33       30        2"
   },
   {
     "objectID": "clases/clase_20_2.html#opciones-para-graficación---sistemas",

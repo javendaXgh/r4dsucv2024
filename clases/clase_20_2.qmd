@@ -170,9 +170,12 @@ gapminder_2007_afeu <- gapminder_2007%>%
 ## Tablas Sumario
 
 ```{r}
+#| echo: true
 
 summary(gapminder_2007$lifeExp)
-
+#
+#
+#
 table(gapminder_2007$continent)
 ```
 
