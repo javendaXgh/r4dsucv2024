@@ -6934,8 +6934,8 @@
     "objectID": "clases/clase_20_0.html#anuncios",
     "href": "clases/clase_20_0.html#anuncios",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Anuncios",
-    "text": "Anuncios\n\nTramitar API key Google AI Studio\nTramitar API key RapidApi\nRetardos en tareas. Fin del plazo\nProgramación Actividades\nClase faltante lunes 20-01.\n\npresencial miércoles 29 en la mañana\nremota, fecha por definir semana 27 al 31-01"
+    "section": "",
+    "text": "Tramitar API key Google AI Studio\nTramitar API key RapidApi\nRetardos en tareas. Fin del plazo\nProgramación Actividades\nClase faltante lunes 20-01.\n\npresencial miércoles 29 en la mañana\nremota, fecha por definir semana 27 al 31-01"
   },
   {
     "objectID": "clases/clase_20_0.html#objetivo",
@@ -6949,7 +6949,7 @@
     "href": "clases/clase_20_0.html#contenido",
     "title": "Ciencia de Datos para Economistas",
     "section": "Contenido",
-    "text": "Contenido\n\nRepaso clase IAVD\nPrincipios de Gráficos Analíticos\nGráficos Exploratorios (GE)\nLibrerías para EDA\n\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Contenido\n\nRepaso clase IAVD\nPrincipios de Gráficos Analíticos\nGráficos Exploratorios (GE)\nLibrerías para EDA"
   },
   {
     "objectID": "clases/clases_20_2.html#conjuntos-de-datos-a-usar-1",
@@ -7482,5 +7482,47 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "Resumen EDA",
     "text": "Resumen EDA\n\nLos gráficos exploratorios son «rápidos y sucios».\nPermiten resumir los datos (normalmente de forma gráfica) y resaltar las características generales.\nExplorar preguntas e hipótesis básicas (y quizás descartarlas)\nSugieren estrategias de modelización para el «siguiente paso».\n\nEnlace Material de Apoyo https://ucveconomiar4ds.netlify.app/scripts/04_PlottingBase.pdf\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_22_apikey.html",
+    "href": "clases/clase_22_apikey.html",
+    "title": "tutorial api key google AI Studio",
+    "section": "",
+    "text": "es un entorno de desarrollo integrado (IDE) basado en la nube para el aprendizaje automático (ML). Ofrece una plataforma colaborativa para construir, entrenar e implementar modelos de ML y tiene a disposición el acceso a modelos de lenguaje con un cupo de uso gratuito que nos puede ayudar a procesar textos por medio de una API. Para usarlo por medio de la API es necesario tramitar una\nIngresar a la página https://aistudio.google.com/ y seleccionar “sign in to Google AI Studio”"
+  },
+  {
+    "objectID": "clases/clase_22_apikey.html#section",
+    "href": "clases/clase_22_apikey.html#section",
+    "title": "tutorial api key google AI Studio",
+    "section": "1",
+    "text": "1"
+  },
+  {
+    "objectID": "clases/clase_22_apikey.html#section-1",
+    "href": "clases/clase_22_apikey.html#section-1",
+    "title": "tutorial api key google AI Studio",
+    "section": "2",
+    "text": "2"
+  },
+  {
+    "objectID": "clases/clase_22_apikey.html#section-2",
+    "href": "clases/clase_22_apikey.html#section-2",
+    "title": "tutorial api key google AI Studio",
+    "section": "3",
+    "text": "3"
+  },
+  {
+    "objectID": "clases/clase_22_apikey.html#section-3",
+    "href": "clases/clase_22_apikey.html#section-3",
+    "title": "tutorial api key google AI Studio",
+    "section": "4",
+    "text": "4\n\nEn este paso se genera una clave que debe copiar y almacenar en un lugar seguro y no compartir. Posteriormente indicaremos cómo se accede desde RStudio a esta API."
+  },
+  {
+    "objectID": "clases/clase_22_apikey.html#google-ai-studio",
+    "href": "clases/clase_22_apikey.html#google-ai-studio",
+    "title": "tutorial api key google AI Studio",
+    "section": "",
+    "text": "es un entorno de desarrollo integrado (IDE) basado en la nube para el aprendizaje automático (ML). Ofrece una plataforma colaborativa para construir, entrenar e implementar modelos de ML y tiene a disposición el acceso a modelos de lenguaje con un cupo de uso gratuito que nos puede ayudar a procesar textos por medio de una API. Para usarlo por medio de la API es necesario tramitar una\nIngresar a la página https://aistudio.google.com/ y seleccionar “sign in to Google AI Studio”"
   }
 ]

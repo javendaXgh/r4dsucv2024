@@ -174,7 +174,7 @@ ggplot(data= gapminder_afeu,
 
 ## Integrar Distintas Formas de Evidencia
 
-![](clases/images/coarsePMCVD.png){fig-align="center" width="600"}
+![](images/coarsePMCVD.png){fig-align="center"}
 
 ------------------------------------------------------------------------
 

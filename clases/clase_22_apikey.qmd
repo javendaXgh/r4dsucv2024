@@ -1,0 +1,29 @@
+---
+title: "tutorial api key google AI Studio"
+---
+
+## Google AI Studio:
+
+es un entorno de desarrollo integrado (IDE) basado en la nube para el aprendizaje automático (ML). Ofrece una plataforma colaborativa para construir, entrenar e implementar modelos de ML y tiene a disposición el acceso a modelos de lenguaje con un cupo de uso gratuito que nos puede ayudar a procesar textos por medio de una API. Para usarlo por medio de la API es necesario tramitar una
+
+Ingresar a la página <https://aistudio.google.com/> y seleccionar "sign in to Google AI Studio"
+
+## 1
+
+![](images/gai/00.png)
+
+## 2
+
+![](images/gai/01.png)
+
+## 3
+
+![](images/gai/02.png)
+
+## 4
+
+![](images/gai/03.png)
+
+En este paso se genera una clave que debe copiar y almacenar en un lugar seguro y no compartir. Posteriormente indicaremos cómo se accede desde RStudio a esta API.
+
+![](images/gai/04.png)
