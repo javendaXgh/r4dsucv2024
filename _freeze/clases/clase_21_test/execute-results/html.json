@@ -1,0 +1,17 @@
+{
+  "hash": "7715e8b8b2556131c88151d4b1f07e19",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Untitled\"\nformat: revealjs\n---\n\n\n\n\n\n\n## doble columna\n\n::::: columns\n::: {.column width=\"50%\"}\n\n\n\n\n\n::: {.cell}\n\n:::\n\n\n\n\n\n:::\n\n::: {.column width=\"50%\"}\n\n\n\n\n\n::: {.cell}\n\n:::\n\n\n\n\n\n:::\n:::::\n\n::: notes\n:::\n\n## doble columna animada {auto-animate=\"true\"}\n\n::::: columns\n::: {.column width=\"50%\"}\n\n\n\n\n\n::: {.cell}\n\n:::\n\n\n\n\n\n:::\n\n::: {.column width=\"50%\"}\n\n\n\n\n\n::: {.cell}\n\n:::\n\n\n\n\n\n:::\n:::::\n\n## doble columna animada {auto-animate=\"true\"}\n\n::::: columns\n::: {.column width=\"50%\"}\n\n\n\n\n\n::: {.cell}\n\n:::\n\n\n\n\n\n:::\n\n::: {.column width=\"50%\"}\n\n\n\n\n\n::: {.cell}\n\n:::\n\n\n\n\n\n:::\n:::::\n\n## Panelstabs\n\n::: panel-tabset\n## Gráfico\n\n\n\n\n\n\n::: {.cell}\n\n:::\n\n\n\n\n\n\n## Código\n\n\n\n\n\n\n::: {.cell}\n\n:::\n\n\n\n\n\n:::\n",
+    "supporting": [
+      "clase_21_test_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

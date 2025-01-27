@@ -1,0 +1,3430 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<link href="../images/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.57">
+
+  <meta name="author" content="MSc. José M. Avendaño">
+  <meta name="dcterms.date" content="2025-01-26">
+  <title>UCV EconomíaR4DS – Ciencia de Datos para Economistas</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-5BVQ49LXJG"></script>
+
+  <script type="text/javascript">
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5BVQ49LXJG', { 'anonymize_ip': true});
+  </script>
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link href="../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+  <script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+  <script src="../site_libs/plotly-binding-4.10.4/plotly.js"></script>
+  <script src="../site_libs/typedarray-0.1/typedarray.min.js"></script>
+  <script src="../site_libs/jquery-3.5.1/jquery.min.js"></script>
+  <link href="../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+  <script src="../site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+  <link href="../site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+  <script src="../site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+<meta property="og:title" content="Ciencia de Datos para Economistas – UCV EconomíaR4DS">
+<meta property="og:description" content="Clase 21- Gráficos con ggplot2">
+<meta property="og:site_name" content="UCV EconomíaR4DS">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Ciencia de Datos para Economistas</h1>
+  <p class="subtitle">Clase 21- Gráficos con <code>ggplot2</code></p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+MSc. José M. Avendaño 
+</div>
+        <p class="quarto-title-affiliation">
+            Universidad Central de Venezuela- Escuela de Economía. 2024-2025
+          </p>
+    </div>
+</div>
+
+  <p class="date">2025-01-26</p>
+</section>
+<section id="previo-a-generar-un-gráfico" class="slide level2">
+<h2>Previo a Generar un Gráfico</h2>
+<ol type="1">
+<li class="fragment">Identificar el tipo de gráfico que queremos usar</li>
+<li class="fragment">Implementar la GG</li>
+<li class="fragment">Iterar con múltiples opciones de visualización</li>
+<li class="fragment">Seleccionar la representación que codifique de mejor la información que queremos representar</li>
+<li class="fragment">Incorporar elementos al tema como colores, paletas, fuentes</li>
+</ol>
+</section>
+<section id="ggplot2" class="slide level2">
+<h2><em>ggplot2</em></h2>
+<p>Sistema para crear gráficos <strong>declarativamente</strong> basado en la “gramática de los gráficos” (Wilkinson, 2005).</p>
+<p>Usted proporciona los datos, le dice a ggplot2 cómo asignar variables a la estética, qué primitivas gráficas utilizar, y él se encarga de los detalles.</p>
+</section>
+<section id="la-gramática-de-ggplot" class="slide level2">
+<h2>La Gramática de ggplot</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div id="dsvwlpzuye" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#dsvwlpzuye table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#dsvwlpzuye thead, #dsvwlpzuye tbody, #dsvwlpzuye tfoot, #dsvwlpzuye tr, #dsvwlpzuye td, #dsvwlpzuye th {
+  border-style: none;
+}
+
+#dsvwlpzuye p {
+  margin: 0;
+  padding: 0;
+}
+
+#dsvwlpzuye .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#dsvwlpzuye .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#dsvwlpzuye .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#dsvwlpzuye .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#dsvwlpzuye .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dsvwlpzuye .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dsvwlpzuye .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#dsvwlpzuye .gt_col_heading {
+  color: #FFFFFF;
+  background-color: #2C7DA0;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#dsvwlpzuye .gt_column_spanner_outer {
+  color: #FFFFFF;
+  background-color: #2C7DA0;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#dsvwlpzuye .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#dsvwlpzuye .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#dsvwlpzuye .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#dsvwlpzuye .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#dsvwlpzuye .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#dsvwlpzuye .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#dsvwlpzuye .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#dsvwlpzuye .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#dsvwlpzuye .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#dsvwlpzuye .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dsvwlpzuye .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#dsvwlpzuye .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#dsvwlpzuye .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#dsvwlpzuye .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dsvwlpzuye .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#dsvwlpzuye .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#dsvwlpzuye .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dsvwlpzuye .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dsvwlpzuye .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#dsvwlpzuye .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dsvwlpzuye .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#dsvwlpzuye .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#dsvwlpzuye .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dsvwlpzuye .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dsvwlpzuye .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#dsvwlpzuye .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#dsvwlpzuye .gt_left {
+  text-align: left;
+}
+
+#dsvwlpzuye .gt_center {
+  text-align: center;
+}
+
+#dsvwlpzuye .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#dsvwlpzuye .gt_font_normal {
+  font-weight: normal;
+}
+
+#dsvwlpzuye .gt_font_bold {
+  font-weight: bold;
+}
+
+#dsvwlpzuye .gt_font_italic {
+  font-style: italic;
+}
+
+#dsvwlpzuye .gt_super {
+  font-size: 65%;
+}
+
+#dsvwlpzuye .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#dsvwlpzuye .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#dsvwlpzuye .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#dsvwlpzuye .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#dsvwlpzuye .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#dsvwlpzuye .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#dsvwlpzuye .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#dsvwlpzuye .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#dsvwlpzuye div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_col_headings">
+<th id="Componente" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Componente</th>
+<th id="Funcion" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Funcion</th>
+<th id="Descripción" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Descripción</th>
+<th id="C" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">C</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Componente" style="background-color: #D8F3DC">Datos</td>
+<td class="gt_row gt_left" headers="Funcion" style="background-color: #D8F3DC"><code>ggplot(data)</code></td>
+<td class="gt_row gt_left" headers="Descripción" style="background-color: #D8F3DC">los datos que se van a visualizar</td>
+<td class="gt_row gt_left" headers="C" style="background-color: #D8F3DC">✅</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Componente" style="background-color: #D8F3DC">Estética</td>
+<td class="gt_row gt_left" headers="Funcion" style="background-color: #D8F3DC"><code>aes()</code></td>
+<td class="gt_row gt_left" headers="Descripción" style="background-color: #D8F3DC">el mapeo estético que hace entre las variables y la representación visual</td>
+<td class="gt_row gt_left" headers="C" style="background-color: #D8F3DC">✅</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Componente" style="background-color: #D8F3DC">Geometrías</td>
+<td class="gt_row gt_left" headers="Funcion" style="background-color: #D8F3DC"><code>geom_*</code></td>
+<td class="gt_row gt_left" headers="Descripción" style="background-color: #D8F3DC">las formas geométricas usadas para representar los datos</td>
+<td class="gt_row gt_left" headers="C" style="background-color: #D8F3DC">✅</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Componente">Estadísticas</td>
+<td class="gt_row gt_left" headers="Funcion"><code>stat_*</code></td>
+<td class="gt_row gt_left" headers="Descripción">las transformaciones estadísticas aplicadas a los datos como binning, cuantiles, alisado</td>
+<td class="gt_row gt_left" headers="C">⛔️</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Componente">Escalas</td>
+<td class="gt_row gt_left" headers="Funcion"><code>scale_*</code></td>
+<td class="gt_row gt_left" headers="Descripción">mapeos entre los datos y las representaciones en los ejes (dimensiones). ejemplo: hombre = rojo, mujer = azul)</td>
+<td class="gt_row gt_left" headers="C">⛔️</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Componente">Sistema de Coordenadas</td>
+<td class="gt_row gt_left" headers="Funcion"><code>coord_*</code></td>
+<td class="gt_row gt_left" headers="Descripción">mapeos de los datos dentro del plano</td>
+<td class="gt_row gt_left" headers="C">⛔️</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Componente">Facetas</td>
+<td class="gt_row gt_left" headers="Funcion"><code>facet_*</code></td>
+<td class="gt_row gt_left" headers="Descripción">los arreglos de los datos dentro de una grilla rectangular de gráficos</td>
+<td class="gt_row gt_left" headers="C">✅</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Componente">Temas Visuales</td>
+<td class="gt_row gt_left" headers="Funcion"><code>theme()</code> o <code>theme_*</code></td>
+<td class="gt_row gt_left" headers="Descripción">la representación visual general del gráfico (fondo, tipo de letras, etc.)</td>
+<td class="gt_row gt_left" headers="C">✅</td>
+</tr>
+</tbody><tfoot class="gt_footnotes">
+<tr class="odd">
+<td colspan="4" class="gt_footnote">tabla inspirada en trabajo de Cédric Scherer // rstudio::conf // julio 2022</td>
+</tr>
+</tfoot>
+
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="ejemplo-básico" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Ejemplo Básico</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb1-1" class="hljs-ln-code"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="ejemplo-básico-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Ejemplo Básico</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="2,3"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb2-1" class="hljs-ln-code"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007,</span>
+<span id="cb2-2" class="hljs-ln-code"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb2-3" class="hljs-ln-code"><a></a>                     <span class="at">y =</span> gdpPercap))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="ejemplo-básico-2" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Ejemplo Básico</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb3-1" class="hljs-ln-code"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007,</span>
+<span id="cb3-2" class="hljs-ln-code"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb3-3" class="hljs-ln-code"><a></a>                     <span class="at">y =</span> gdpPercap))<span class="sc">+</span></span>
+<span id="cb3-4" class="hljs-ln-code"><a></a>  <span class="fu">geom_point</span>(<span class="at">color=</span> <span class="st">"#9d0208"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="mapeos-estadísticos" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Mapeos Estadísticos</h2>
+<p>Usar los datos como variables que permiten codificar las siguientes representaciones en la visualización de datos:</p>
+<ul>
+<li class="fragment"><p>Posición (x,y)</p></li>
+<li class="fragment"><p>Colores (color, fill)</p></li>
+<li class="fragment"><p>Formas (shape, linetype)</p></li>
+<li class="fragment"><p>Tamaño (size)</p></li>
+<li class="fragment"><p>Transparencia (alpha)</p></li>
+<li class="fragment"><p>Agrupamientos(group)</p></li>
+</ul>
+</section>
+<section id="geoms-representaciones-geométricas" class="slide level2">
+<h2>Geoms: Representaciones geométricas</h2>
+<ul>
+<li class="fragment"><p>barra: <code>geom_bar</code></p></li>
+<li class="fragment"><p>columna: <code>geom_col</code></p></li>
+<li class="fragment"><p>puntos: <code>geom_point</code></p></li>
+<li class="fragment"><p>líneas: <code>geom_line</code></p></li>
+<li class="fragment"><p>polígonos: <code>geom_polygon</code> (no se aborda en clase)</p></li>
+</ul>
+</section>
+<section>
+<section id="geoms-para-una-sola-variable" class="title-slide slide level1 center">
+<h1>Geoms para una sola Variable</h1>
+
+</section>
+<section id="geom_bar" class="slide level2">
+<h2>geom_bar</h2>
+<p>Hace que la altura de la barra sea proporcional al número de casos de cada grupo (cuenta los casos)</p>
+<ul>
+<li class="fragment"><p>Requiere la estética <code>x</code> dentro de <code>aes()</code></p></li>
+<li class="fragment"><p>Puede cambiar la apariencia de las barras con argumentos &nbsp;<code>color</code>,&nbsp;<code>fill</code>,&nbsp;<code>alpha</code></p></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007,</span>
+<span id="cb4-2"><a></a>       <span class="fu">aes</span>(<span class="at">x=</span>continent)) <span class="sc">+</span></span>
+<span id="cb4-3"><a></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-10-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_bar--relleno" class="slide level2">
+<h2>geom_bar -relleno</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007,</span>
+<span id="cb5-2"><a></a>       <span class="fu">aes</span>(<span class="at">x=</span>continent)) <span class="sc">+</span></span>
+<span id="cb5-3"><a></a>  <span class="fu">geom_bar</span>(<span class="at">fill=</span> <span class="st">"#ffbe0b"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-12-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom-bar-reordenamiento" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">geom-bar: reordenamiento</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li class="fragment"><p>data frame se pasa por `%&gt;%’</p></li>
+<li class="fragment"><p>uso de la función <code>reorder</code> , barras valores descendentes</p></li>
+<li class="fragment"><p><code>identity</code>: los datos no son alterados</p></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" data-code-line-numbers="4,5,6,7,8"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb6-1" class="hljs-ln-code"><a></a>gapminder_2007<span class="sc">%&gt;%</span></span>
+<span id="cb6-2" class="hljs-ln-code"><a></a>  <span class="fu">group_by</span>(continent)<span class="sc">%&gt;%</span></span>
+<span id="cb6-3" class="hljs-ln-code"><a></a>  <span class="fu">count</span>(<span class="at">sort =</span> <span class="cn">TRUE</span>, <span class="at">name=</span><span class="st">'Total'</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb6-4" class="hljs-ln-code"><a></a>  <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb6-5" class="hljs-ln-code"><a></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x=</span><span class="fu">reorder</span>(continent,<span class="sc">-</span>Total), </span>
+<span id="cb6-6" class="hljs-ln-code"><a></a>               <span class="at">y=</span>Total ),</span>
+<span id="cb6-7" class="hljs-ln-code"><a></a>           <span class="at">stat=</span><span class="st">'identity'</span>,</span>
+<span id="cb6-8" class="hljs-ln-code"><a></a>           <span class="at">fill=</span> <span class="st">"#ffbe0b"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<p><br><br><br></p>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="estadísticos" class="title-slide slide level1 center">
+<h1>Estadísticos</h1>
+
+</section>
+<section id="geoms-estadísticos-transformaciones-estadísticas" class="slide level2">
+<h2>Geoms Estadísticos: Transformaciones Estadísticas</h2>
+<ul>
+<li class="fragment"><p>Gráfico de distribución de frecuencia: <code>geom_histogram</code></p></li>
+<li class="fragment"><p>Gráfico de densidad: <code>geom_density</code></p></li>
+<li class="fragment"><p>Diagrama de caja: <code>geom_boxplot</code></p></li>
+<li class="fragment"><p>Otros: <code>geom_freqpoly</code>, <code>geom_dotplot</code>, <code>geom_rug</code></p></li>
+<li class="fragment"><p>Medias suavizadas: <code>geom_smooth</code></p></li>
+</ul>
+</section>
+<section id="geom_histogram" class="slide level2">
+<h2>geom_histogram</h2>
+<p><br></p>
+<ul>
+<li class="fragment"><p>Requiere en <code>aes()</code> la variable sobre la cual se representará la distribución</p></li>
+<li class="fragment"><p>Puede cambiar la apariencia de las barras con argumentos &nbsp;<code>color</code>,&nbsp;<code>fill</code>,&nbsp;<code>alpha</code></p></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007) <span class="sc">+</span></span>
+<span id="cb7-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(<span class="at">x=</span> gdpPercap))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-16-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_histogram-color-relleno" class="slide level2">
+<h2>geom_histogram: color relleno</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007,</span>
+<span id="cb8-2"><a></a>       <span class="fu">aes</span>(<span class="at">x=</span> gdpPercap)) <span class="sc">+</span></span>
+<span id="cb8-3"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">fill=</span><span class="st">'red'</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-18-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_histogram-cdad.-barras" class="slide level2">
+<h2>geom_histogram: cdad. barras</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007,</span>
+<span id="cb9-2"><a></a>       <span class="fu">aes</span>(gdpPercap)) <span class="sc">+</span></span>
+<span id="cb9-3"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">bins=</span><span class="dv">20</span>,</span>
+<span id="cb9-4"><a></a>                 <span class="at">fill=</span><span class="st">'#0a9396'</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-20-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_histogram-mapeo-estético-color-borde" class="slide level2">
+<h2>geom_histogram: mapeo estético color borde</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007,</span>
+<span id="cb10-2"><a></a>       <span class="fu">aes</span>(gdpPercap, </span>
+<span id="cb10-3"><a></a>           <span class="at">color=</span>continent)) <span class="sc">+</span></span>
+<span id="cb10-4"><a></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-22-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_histogram--mapeo-estético-color-relleno-bins" class="slide level2">
+<h2>geom_histogram- mapeo estético: color relleno, bins</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11" data-code-line-numbers="3,4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007,</span>
+<span id="cb11-2"><a></a>       <span class="fu">aes</span>(gdpPercap,</span>
+<span id="cb11-3"><a></a>           <span class="at">fill=</span>continent)) <span class="sc">+</span></span>
+<span id="cb11-4"><a></a>  <span class="fu">geom_histogram</span>(<span class="at">bins=</span><span class="dv">20</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-24-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_density" class="slide level2">
+<h2>geom_density</h2>
+<ul>
+<li class="fragment"><p>Requiere la&nbsp;<code>x</code>&nbsp;aesthetic dentro de &nbsp;<code>aes()</code></p></li>
+<li class="fragment"><p>Modifica el suavizador del núcleo en uso con el parámetro&nbsp;<code>kernel</code>&nbsp;</p></li>
+<li class="fragment"><p>Cambia el ancho de banda con el parámetro&nbsp;<code>adjust</code>&nbsp;</p></li>
+<li class="fragment"><p>Se pueden modificar la apariencia de las barras con los argumentos&nbsp;<code>color</code>,&nbsp;<code>fill</code>,&nbsp;<code>alpha</code></p></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">ggplot</span>(<span class="at">data=</span>gapminder_2007,</span>
+<span id="cb12-2"><a></a>         <span class="fu">aes</span>(<span class="at">x=</span>lifeExp))<span class="sc">+</span></span>
+<span id="cb12-3"><a></a>  <span class="fu">geom_density</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-26-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_density-color-y-relleno-local" class="slide level2">
+<h2>geom_density: color y relleno, local</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">ggplot</span>(<span class="at">data=</span>gapminder_2007,</span>
+<span id="cb13-2"><a></a>       <span class="fu">aes</span>(<span class="at">x=</span>lifeExp,</span>
+<span id="cb13-3"><a></a>           <span class="at">color=</span>continent))<span class="sc">+</span></span>
+<span id="cb13-4"><a></a>  <span class="fu">geom_density</span>(<span class="fu">aes</span>(<span class="at">fill=</span>continent))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-28-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_density-alpha-local" class="slide level2">
+<h2>geom_density: alpha, local</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14" data-code-line-numbers="4,5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">ggplot</span>(<span class="at">data=</span>gapminder_2007,</span>
+<span id="cb14-2"><a></a>       <span class="fu">aes</span>(<span class="at">x=</span>lifeExp,</span>
+<span id="cb14-3"><a></a>           <span class="at">color=</span>continent))<span class="sc">+</span></span>
+<span id="cb14-4"><a></a>  <span class="fu">geom_density</span>(<span class="fu">aes</span>(<span class="at">fill=</span>continent),</span>
+<span id="cb14-5"><a></a>               <span class="at">alpha =</span> <span class="fl">0.5</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-30-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_boxplot" class="slide level2">
+<h2>geom_boxplot</h2>
+<p><br></p>
+<ul>
+<li class="fragment"><p>Requiere la estética <code>x</code> dentro de <code>aes()</code></p></li>
+<li class="fragment"><p>Puede cambiar la apariencia de las barras con argumentos &nbsp;<code>color</code>,&nbsp;<code>fill</code>,&nbsp;<code>alpha</code></p></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007,</span>
+<span id="cb15-2"><a></a>       <span class="fu">aes</span>(<span class="at">y=</span>lifeExp)) <span class="sc">+</span></span>
+<span id="cb15-3"><a></a>  <span class="fu">geom_boxplot</span>(<span class="at">fill=</span> <span class="st">"#fb8b24"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-32-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_boxplot-por-variable-categóricarellenoborde" class="slide level2">
+<h2>geom_boxplot: por variable categórica/relleno/borde</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16" data-code-line-numbers="3,4,5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007,</span>
+<span id="cb16-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x=</span>continent, </span>
+<span id="cb16-3"><a></a>                     <span class="at">y=</span> gdpPercap)) <span class="sc">+</span></span>
+<span id="cb16-4"><a></a>  <span class="fu">geom_boxplot</span>(<span class="at">fill=</span> <span class="st">"#fb8b24"</span>,</span>
+<span id="cb16-5"><a></a>               <span class="at">color=</span><span class="st">'#00a6fb'</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-34-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_boxplot-representación-diferenciada-valores-atípicos" class="slide level2">
+<h2>geom_boxplot: representación diferenciada valores atípicos</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17" data-code-line-numbers="4,5,6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007,</span>
+<span id="cb17-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x=</span>continent, </span>
+<span id="cb17-3"><a></a>                     <span class="at">y=</span> gdpPercap)) <span class="sc">+</span></span>
+<span id="cb17-4"><a></a>  <span class="fu">geom_boxplot</span>(<span class="at">fill=</span> <span class="st">"#fb8b24"</span>,</span>
+<span id="cb17-5"><a></a>               <span class="at">outlier.colour =</span> <span class="st">'red'</span>,</span>
+<span id="cb17-6"><a></a>               <span class="at">color=</span><span class="st">'#00a6fb'</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-36-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_boxplot--composición-línea-y-puntos" class="slide level2">
+<h2>geom_boxplot- composición: línea y puntos</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18" data-code-line-numbers="4,6,7,8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007,</span>
+<span id="cb18-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x=</span>continent, </span>
+<span id="cb18-3"><a></a>                     <span class="at">y=</span> gdpPercap)) <span class="sc">+</span></span>
+<span id="cb18-4"><a></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb18-5"><a></a>  <span class="fu">geom_boxplot</span>(<span class="at">fill=</span> <span class="st">"#fb8b24"</span>)<span class="sc">+</span></span>
+<span id="cb18-6"><a></a>  <span class="fu">geom_hline</span>(<span class="at">yintercept =</span> <span class="fu">mean</span>(gapminder_2007<span class="sc">$</span>gdpPercap), </span>
+<span id="cb18-7"><a></a>             <span class="at">size =</span> <span class="dv">1</span>, </span>
+<span id="cb18-8"><a></a>             <span class="at">colour=</span><span class="st">"#c1121f"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-38-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_boxplot-composición-puntos-orden" class="slide level2">
+<h2>geom_boxplot: composición: puntos (orden)</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007,</span>
+<span id="cb19-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x=</span>continent, </span>
+<span id="cb19-3"><a></a>                     <span class="at">y=</span> gdpPercap)) <span class="sc">+</span></span>
+<span id="cb19-4"><a></a>  <span class="fu">geom_boxplot</span>(<span class="at">fill=</span> <span class="st">"#fb8b24"</span>)<span class="sc">+</span></span>
+<span id="cb19-5"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-40-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_boxplot-rotar-ejes" class="slide level2">
+<h2>geom_boxplot: rotar ejes</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007,</span>
+<span id="cb20-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x=</span>continent, </span>
+<span id="cb20-3"><a></a>                     <span class="at">y=</span> gdpPercap)) <span class="sc">+</span></span>
+<span id="cb20-4"><a></a>  <span class="fu">geom_boxplot</span>(<span class="at">fill=</span> <span class="st">"#fb8b24"</span>)<span class="sc">+</span></span>
+<span id="cb20-5"><a></a>  <span class="fu">coord_flip</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-42-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_freqpoly" class="slide level2">
+<h2>geom_freqpoly</h2>
+<p><br></p>
+<p>Se comporta igual que <code>geom_histogram</code> pero con líneas conectadas en lugar de barras &nbsp;</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">ggplot</span>(<span class="at">data=</span>gapminder_2007,</span>
+<span id="cb21-2"><a></a>       <span class="fu">aes</span>(<span class="at">x=</span>lifeExp))<span class="sc">+</span></span>
+<span id="cb21-3"><a></a>  <span class="fu">geom_freqpoly</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-44-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_dotplot" class="slide level2">
+<h2>geom_dotplot:</h2>
+<p><br></p>
+<p>Muestra los valores en intervalos como puntos individuales</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22" data-code-line-numbers="3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">ggplot</span>(<span class="at">data=</span>gapminder_2007,</span>
+<span id="cb22-2"><a></a>       <span class="fu">aes</span>(<span class="at">x=</span>lifeExp))<span class="sc">+</span></span>
+<span id="cb22-3"><a></a>  <span class="fu">geom_dotplot</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-46-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_rug" class="slide level2">
+<h2>geom_rug</h2>
+<p><br></p>
+<p>Coloca líneas a lo largo de un eje para cada observación</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">ggplot</span>(<span class="at">data=</span>gapminder_2007,</span>
+<span id="cb23-2"><a></a>       <span class="fu">aes</span>(<span class="at">x=</span>lifeExp))<span class="sc">+</span></span>
+<span id="cb23-3"><a></a>  <span class="fu">geom_histogram</span>()<span class="sc">+</span></span>
+<span id="cb23-4"><a></a>  <span class="fu">geom_rug</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-48-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_smooth" class="slide level2">
+<h2>geom_smooth</h2>
+<p><br></p>
+<ul>
+<li class="fragment"><p>Requiere la estética &nbsp;<code>x, y</code> dentro de <code>aes()</code></p></li>
+<li class="fragment"><p>Puede cambiar la apariencia de las barras con argumentos &nbsp;<code>color</code>,&nbsp;<code>fill</code>,&nbsp;<code>alpha</code></p></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24" data-code-line-numbers="2,3,4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder,</span>
+<span id="cb24-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb24-3"><a></a>                     <span class="at">y =</span> gdpPercap)) <span class="sc">+</span></span>
+<span id="cb24-4"><a></a>  <span class="fu">geom_smooth</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-50-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_smooth---compuesto-puntos" class="slide level2">
+<h2>geom_smooth - compuesto: puntos</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25" data-code-line-numbers="4,5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder,</span>
+<span id="cb25-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb25-3"><a></a>                     <span class="at">y =</span> gdpPercap)) <span class="sc">+</span></span>
+<span id="cb25-4"><a></a>  <span class="fu">geom_point</span>( <span class="at">alpha =</span> <span class="dv">1</span><span class="sc">/</span><span class="dv">5</span>)<span class="sc">+</span></span>
+<span id="cb25-5"><a></a>  <span class="fu">geom_smooth</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-52-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_smooth---local-vs.-global-encoding" class="slide level2">
+<h2>geom_smooth - local Vs. global encoding</h2>
+<p><br></p>
+<p>Global Encoding</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26" data-code-line-numbers="2,3,4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder,</span>
+<span id="cb26-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb26-3"><a></a>                     <span class="at">y =</span> gdpPercap,</span>
+<span id="cb26-4"><a></a>                     <span class="at">color=</span> continent)) <span class="sc">+</span></span>
+<span id="cb26-5"><a></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb26-6"><a></a>  <span class="fu">geom_smooth</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-54-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_smooth---local-vs.-global-encoding-1" class="slide level2">
+<h2>geom_smooth - local Vs. global encoding</h2>
+<p><br></p>
+<p>Local Encoding</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb27" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder,</span>
+<span id="cb27-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb27-3"><a></a>                     <span class="at">y =</span> gdpPercap)) <span class="sc">+</span></span>
+<span id="cb27-4"><a></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color=</span>continent))<span class="sc">+</span></span>
+<span id="cb27-5"><a></a>  <span class="fu">geom_smooth</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-56-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_smooth---local-encoding-lm-factor" class="slide level2">
+<h2>geom_smooth - local encoding, lm, factor</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28" data-code-line-numbers="6,7,8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder,</span>
+<span id="cb28-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb28-3"><a></a>                     <span class="at">y =</span> gdpPercap,</span>
+<span id="cb28-4"><a></a>                     <span class="at">color=</span> continent)) <span class="sc">+</span></span>
+<span id="cb28-5"><a></a>  <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb28-6"><a></a>  <span class="fu">geom_smooth</span>(<span class="fu">aes</span>(<span class="at">group=</span>year,</span>
+<span id="cb28-7"><a></a>                  <span class="at">color=</span><span class="fu">factor</span>(year)), <span class="co"># factor</span></span>
+<span id="cb28-8"><a></a>              <span class="at">method=</span><span class="st">'lm'</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-58-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_smooth---local-encoding-linetype-color-smooth" class="slide level2">
+<h2>geom_smooth - local encoding, linetype, color smooth</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29" data-code-line-numbers="2,3,4,5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder) <span class="sc">+</span></span>
+<span id="cb29-2"><a></a>  <span class="fu">geom_smooth</span>( <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb29-3"><a></a>                             <span class="at">y =</span> gdpPercap,</span>
+<span id="cb29-4"><a></a>                             <span class="at">linetype=</span> continent, </span>
+<span id="cb29-5"><a></a>                             <span class="at">color=</span>continent))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-60-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_smooth---local-encoding-agrupar-color-smooth" class="slide level2">
+<h2>geom_smooth - local encoding, agrupar, color smooth</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30" data-code-line-numbers="2,3,4,5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder) <span class="sc">+</span></span>
+<span id="cb30-2"><a></a>  <span class="fu">geom_smooth</span>( <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb30-3"><a></a>                             <span class="at">y =</span> gdpPercap,</span>
+<span id="cb30-4"><a></a>                             <span class="at">group =</span> continent, </span>
+<span id="cb30-5"><a></a>                             <span class="at">color=</span>continent))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-62-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_smooth---tamaño-línea" class="slide level2">
+<h2>geom_smooth - tamaño línea,</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31" data-code-line-numbers="7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder) <span class="sc">+</span></span>
+<span id="cb31-2"><a></a>  <span class="fu">geom_smooth</span>( <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb31-3"><a></a>                             <span class="at">y =</span> gdpPercap,</span>
+<span id="cb31-4"><a></a>                             <span class="at">group =</span> continent, </span>
+<span id="cb31-5"><a></a>                             <span class="at">color=</span>continent),</span>
+<span id="cb31-6"><a></a>               <span class="at">method =</span> <span class="st">"lm"</span>,</span>
+<span id="cb31-7"><a></a>               <span class="at">size =</span> <span class="dv">2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-64-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="geoms-para-más-de-una-variable" class="title-slide slide level1 center">
+<h1>Geoms para más de una Variable</h1>
+
+</section>
+<section id="geom_col" class="slide level2">
+<h2>geom_col</h2>
+<p><br></p>
+<p>La altura de la barra representan valores en los datos</p>
+<ul>
+<li class="fragment"><p>Requiere la estética &nbsp;<code>x, y</code> dentro de <code>aes()</code></p></li>
+<li class="fragment"><p>Puede cambiar la apariencia de las barras con argumentos &nbsp;<code>color</code>,&nbsp;<code>fill</code>,&nbsp;<code>alpha</code></p></li>
+</ul>
+</section>
+<section id="geom_col-ejemplo-básico" class="slide level2">
+<h2>geom_col: ejemplo básico</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li class="fragment">detalle mapeo estético en <code>x</code> y <code>y</code></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_gapminder_2007_america,</span>
+<span id="cb32-2"><a></a>       <span class="fu">aes</span>(<span class="at">x=</span> pop,</span>
+<span id="cb32-3"><a></a>           <span class="at">y=</span> country))<span class="sc">+</span></span>
+<span id="cb32-4"><a></a>  <span class="fu">geom_col</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<ul>
+<li class="fragment">Orden alfabético</li>
+</ul>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-66-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="creación-df-gapminder-conteo-por-continente" class="slide level2">
+<h2>Creación DF Gapminder Conteo por Continente</h2>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>df_continente_2007 <span class="ot">&lt;-</span> gapminder_2007<span class="sc">%&gt;%</span></span>
+<span id="cb33-2"><a></a>  <span class="fu">group_by</span>(continent)<span class="sc">%&gt;%</span></span>
+<span id="cb33-3"><a></a>  <span class="fu">count</span>(<span class="at">sort =</span> <span class="cn">TRUE</span>, <span class="at">name=</span><span class="st">'Total'</span>)</span>
+<span id="cb33-4"><a></a></span>
+<span id="cb33-5"><a></a>df_continente_2007</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 2
+# Groups:   continent [5]
+  continent Total
+  &lt;fct&gt;     &lt;int&gt;
+1 Africa       52
+2 Asia         33
+3 Europe       30
+4 Americas     25
+5 Oceania       2</code></pre>
+</div>
+</div>
+</section>
+<section id="geom_col-ejemplo-2" class="slide level2">
+<h2>geom_col: ejemplo 2</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_continente_2007,</span>
+<span id="cb35-2"><a></a>       <span class="fu">aes</span>(<span class="at">x=</span> continent,</span>
+<span id="cb35-3"><a></a>           <span class="at">y=</span> Total))<span class="sc">+</span></span>
+<span id="cb35-4"><a></a>  <span class="fu">geom_col</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-69-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_col-relleno" class="slide level2">
+<h2>geom_col: relleno</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_continente_2007,</span>
+<span id="cb36-2"><a></a>       <span class="fu">aes</span>(<span class="at">x=</span> continent,</span>
+<span id="cb36-3"><a></a>           <span class="at">y=</span> Total))<span class="sc">+</span></span>
+<span id="cb36-4"><a></a>  <span class="fu">geom_col</span>(<span class="at">fill=</span> <span class="st">"#ffbe0b"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-71-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_col-reorder" class="slide level2">
+<h2>geom_col: reorder</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb37" data-code-line-numbers="2,3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_continente_2007,</span>
+<span id="cb37-2"><a></a>       <span class="fu">aes</span>(<span class="at">x=</span><span class="fu">reorder</span>(continent,<span class="sc">-</span>Total), </span>
+<span id="cb37-3"><a></a>            <span class="at">y=</span> Total))<span class="sc">+</span></span>
+<span id="cb37-4"><a></a>  <span class="fu">geom_col</span>(<span class="at">fill=</span> <span class="st">"#ffbe0b"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-73-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_col-asignar-a-una-variable" class="slide level2">
+<h2>geom_col: asignar a una variable</h2>
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a>graf_gap_2007 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>df_continente_2007,</span>
+<span id="cb38-2"><a></a>                        <span class="fu">aes</span>(<span class="at">x=</span> continent,</span>
+<span id="cb38-3"><a></a>                            <span class="at">y=</span> Total,</span>
+<span id="cb38-4"><a></a>                            <span class="at">fill=</span>continent))<span class="sc">+</span></span>
+<span id="cb38-5"><a></a>  <span class="fu">geom_col</span>(<span class="at">fill=</span> <span class="st">"#ffbe0b"</span>)</span>
+<span id="cb38-6"><a></a></span>
+<span id="cb38-7"><a></a>graf_gap_2007</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="clase_21_files/figure-revealjs/unnamed-chunk-74-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="geom_col-temas-themes" class="slide level2">
+<h2>geom_col: temas (themes)</h2>
+<p>Los temas son aplicables a cualquier geom ya que cambian aspectos generales del área del gráfico</p>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">bw</a></li><li><a href="#tabset-1-2">minimal</a></li><li><a href="#tabset-1-3">grey</a></li><li><a href="#tabset-1-4">linedraw</a></li><li><a href="#tabset-1-5">dark</a></li><li><a href="#tabset-1-6">light</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb39" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a>graf_gap_2007<span class="sc">+</span></span>
+<span id="cb39-2"><a></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-75-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb40" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a>graf_gap_2007<span class="sc">+</span></span>
+<span id="cb40-2"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-76-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-3">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb41" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a>graf_gap_2007<span class="sc">+</span></span>
+<span id="cb41-2"><a></a>  <span class="fu">theme_grey</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-77-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-4">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb42" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a>graf_gap_2007<span class="sc">+</span></span>
+<span id="cb42-2"><a></a>  <span class="fu">theme_linedraw</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-78-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-5">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb43" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a>graf_gap_2007<span class="sc">+</span></span>
+<span id="cb43-2"><a></a>  <span class="fu">theme_dark</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-79-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-6">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb44" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a>graf_gap_2007<span class="sc">+</span></span>
+<span id="cb44-2"><a></a>  <span class="fu">theme_light</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-80-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="geom_col-personalizar-tema" class="slide level2">
+<h2>geom_col: personalizar tema</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb45" data-code-line-numbers="3,4,14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a></a>graf_gap_2007<span class="sc">+</span></span>
+<span id="cb45-2"><a></a>  <span class="fu">theme_dark</span>()<span class="sc">+</span></span>
+<span id="cb45-3"><a></a>  <span class="fu">theme</span>(<span class="at">text =</span> <span class="fu">element_text</span>(<span class="at">family =</span> <span class="st">"serif"</span>, </span>
+<span id="cb45-4"><a></a>                            <span class="at">size =</span> <span class="dv">30</span>))</span>
+<span id="cb45-5"><a></a></span>
+<span id="cb45-6"><a></a></span>
+<span id="cb45-7"><a></a></span>
+<span id="cb45-8"><a></a></span>
+<span id="cb45-9"><a></a></span>
+<span id="cb45-10"><a></a></span>
+<span id="cb45-11"><a></a></span>
+<span id="cb45-12"><a></a></span>
+<span id="cb45-13"><a></a>graf_gap_2007<span class="sc">+</span></span>
+<span id="cb45-14"><a></a>  <span class="fu">guides</span> (<span class="at">fill =</span><span class="st">'none'</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-82-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-82-2.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_col-ajuste-valores-en-eje-y-colores-relleno-etiquetas" class="slide level2">
+<h2>geom_col: ajuste valores en eje y, colores relleno, etiquetas</h2>
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb46" data-code-line-numbers="6,7,8,9,10,11,12,13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_continente_2007,</span>
+<span id="cb46-2"><a></a>                        <span class="fu">aes</span>(<span class="at">x=</span> continent,</span>
+<span id="cb46-3"><a></a>                            <span class="at">y=</span> Total,</span>
+<span id="cb46-4"><a></a>                            <span class="at">fill=</span>continent))<span class="sc">+</span></span>
+<span id="cb46-5"><a></a>  <span class="fu">geom_col</span>()<span class="sc">+</span></span>
+<span id="cb46-6"><a></a>  <span class="fu">scale_y_continuous</span> (<span class="at">name =</span> <span class="cn">NULL</span>,</span>
+<span id="cb46-7"><a></a>                     <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">60</span>, <span class="at">by =</span> <span class="dv">5</span>))<span class="sc">+</span></span>
+<span id="cb46-8"><a></a>  </span>
+<span id="cb46-9"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>,</span>
+<span id="cb46-10"><a></a>       <span class="at">title =</span> <span class="st">"Gapminder año 2007: </span><span class="sc">\n</span><span class="st">Cdad. Países por Continente"</span>)<span class="sc">+</span></span>
+<span id="cb46-11"><a></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span>  </span>
+<span id="cb46-12"><a></a>                      <span class="fu">c</span>(<span class="st">'#fb8500'</span>,<span class="st">'#ffb703'</span>,<span class="st">'#023047'</span>,</span>
+<span id="cb46-13"><a></a>                        <span class="st">'#219ebc'</span>,<span class="st">'#8ecae6'</span> ))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="clase_21_files/figure-revealjs/unnamed-chunk-83-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="geom_col-modificación-etiquetas-x--problema" class="slide level2">
+<h2>geom_col: modificación etiquetas x- problema</h2>
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_gapminder_2007_america, </span>
+<span id="cb47-2"><a></a>       <span class="fu">aes</span>(<span class="at">x=</span>country, <span class="at">y=</span> gdpPercap))<span class="sc">+</span></span>
+<span id="cb47-3"><a></a>  <span class="fu">geom_col</span>()<span class="sc">+</span></span>
+<span id="cb47-4"><a></a>  <span class="fu">scale_y_continuous</span> (<span class="at">name =</span> <span class="cn">NULL</span>,</span>
+<span id="cb47-5"><a></a>                      <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">45000</span>, <span class="at">by =</span> <span class="dv">5000</span>),</span>
+<span id="cb47-6"><a></a>                      <span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">label_dollar</span>())<span class="sc">+</span></span>
+<span id="cb47-7"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, </span>
+<span id="cb47-8"><a></a>       <span class="at">title =</span> <span class="st">"Gapminder año 2007: "</span>,</span>
+<span id="cb47-9"><a></a>       <span class="at">subtitle =</span> <span class="st">"PIB Per Cápita por País América"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="clase_21_files/figure-revealjs/unnamed-chunk-84-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="geom_col-modificación-etiquetas-x--solución" class="slide level2">
+<h2>geom_col: modificación etiquetas x- solución</h2>
+<p><br></p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb48" data-code-line-numbers="10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_gapminder_2007_america, </span>
+<span id="cb48-2"><a></a>       <span class="fu">aes</span>(<span class="at">x=</span>country, <span class="at">y=</span> gdpPercap))<span class="sc">+</span></span>
+<span id="cb48-3"><a></a>  <span class="fu">geom_col</span>()<span class="sc">+</span></span>
+<span id="cb48-4"><a></a>  <span class="fu">scale_y_continuous</span> (<span class="at">name =</span> <span class="cn">NULL</span>,</span>
+<span id="cb48-5"><a></a>                      <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">45000</span>, <span class="at">by =</span> <span class="dv">5000</span>),</span>
+<span id="cb48-6"><a></a>                      <span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">label_dollar</span>())<span class="sc">+</span></span>
+<span id="cb48-7"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, </span>
+<span id="cb48-8"><a></a>       <span class="at">title =</span> <span class="st">"Gapminder año 2007: "</span>,</span>
+<span id="cb48-9"><a></a>       <span class="at">subtitle =</span> <span class="st">"PIB Per Cápita por País América"</span>)<span class="sc">+</span></span>
+<span id="cb48-10"><a></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="clase_21_files/figure-revealjs/unnamed-chunk-85-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="geom_col-top-pib-per-cápita" class="slide level2">
+<h2>geom_col: top PIB per cápita</h2>
+<p><br></p>
+<p>¿Qué estamos representando? ¿Qué queremos transmitir?</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb49" data-code-line-numbers="3,5,7,8,9,10,11,12,14,15,16,17,18,19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a><span class="fu">library</span>(viridis)</span>
+<span id="cb49-2"><a></a><span class="fu">ggplot</span>(<span class="at">data=</span>df_gapminder_2007_america, </span>
+<span id="cb49-3"><a></a>       <span class="fu">aes</span>(<span class="at">x=</span><span class="fu">reorder</span>(country, <span class="sc">-</span>gdpPercap), </span>
+<span id="cb49-4"><a></a>           <span class="at">y=</span> gdpPercap,</span>
+<span id="cb49-5"><a></a>           <span class="at">fill=</span> country))<span class="sc">+</span></span>
+<span id="cb49-6"><a></a>  <span class="fu">geom_col</span>()<span class="sc">+</span></span>
+<span id="cb49-7"><a></a>  <span class="fu">scale_y_continuous</span> (<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">45000</span>, <span class="at">by =</span> <span class="dv">5000</span>),</span>
+<span id="cb49-8"><a></a>                      <span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">label_dollar</span>())<span class="sc">+</span></span>
+<span id="cb49-9"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>,</span>
+<span id="cb49-10"><a></a>       <span class="at">y=</span><span class="st">"PIB Per Cápita en USD"</span>,</span>
+<span id="cb49-11"><a></a>       <span class="at">title =</span> <span class="st">"TOP PIB Per Cápita por País América"</span>,</span>
+<span id="cb49-12"><a></a>       <span class="at">subtitle =</span> <span class="st">"Datos Gapminder año 2007"</span>)<span class="sc">+</span></span>
+<span id="cb49-13"><a></a>  <span class="fu">theme_light</span>()<span class="sc">+</span></span>
+<span id="cb49-14"><a></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, </span>
+<span id="cb49-15"><a></a>                                   <span class="at">hjust =</span> <span class="dv">1</span>,</span>
+<span id="cb49-16"><a></a>                                   <span class="at">family =</span> <span class="st">"serif"</span>, </span>
+<span id="cb49-17"><a></a>                                   <span class="at">size =</span> <span class="dv">8</span>),</span>
+<span id="cb49-18"><a></a>        <span class="at">legend.position =</span> <span class="st">'none'</span>)<span class="sc">+</span></span>
+<span id="cb49-19"><a></a>  <span class="fu">scale_fill_viridis</span> (<span class="at">discrete=</span><span class="cn">TRUE</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-87-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_point" class="slide level2">
+<h2>geom_point</h2>
+<ul>
+<li class="fragment"><p>Requiere los valores de&nbsp;<code>x, y</code>&nbsp;<em>aesthetics</em> dentro de&nbsp;<code>aes()</code></p></li>
+<li class="fragment"><p>Se puede modificar la apariciencia de los puntos con los argumentos&nbsp;<code>color</code>, <code>shape</code>,&nbsp;<code>alpha</code>&nbsp;,<code>size</code></p></li>
+</ul>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb50" data-code-line-numbers="2,3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007,</span>
+<span id="cb50-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb50-3"><a></a>                           <span class="at">y =</span> gdpPercap)) <span class="sc">+</span></span>
+<span id="cb50-4"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-89-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+<aside class="notes">
+<p>hacernos una pregunta. hipótesis</p>
+<p>cómo es la relación entre la expectativa de vida y el pibpercap</p>
+<p>comportamiento lineal, exponencia?</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="geom_point-color" class="slide level2">
+<h2>geom_point: color</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb51" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007,</span>
+<span id="cb51-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb51-3"><a></a>                     <span class="at">y =</span> gdpPercap)) <span class="sc">+</span></span>
+<span id="cb51-4"><a></a>  <span class="fu">geom_point</span>(<span class="at">color=</span> <span class="st">"#9d0208"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-91-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_point-mapeo-de-una-expresión" class="slide level2">
+<h2>geom_point: mapeo de una expresión</h2>
+<p><br></p>
+<p><code>lifeExp&gt;mean(gapminder_2007$lifeExp)</code></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb52" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007) <span class="sc">+</span></span>
+<span id="cb52-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb52-3"><a></a>                           <span class="at">y =</span> gdpPercap,</span>
+<span id="cb52-4"><a></a>                           <span class="at">color=</span> lifeExp<span class="sc">&gt;</span><span class="fu">mean</span>(gapminder_2007<span class="sc">$</span>lifeExp)</span>
+<span id="cb52-5"><a></a>                           )</span>
+<span id="cb52-6"><a></a>             )</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-93-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_point-mapeo-de-una-expresión-2-local" class="slide level2">
+<h2>geom_point: mapeo de una expresión 2, local</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb53" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007) <span class="sc">+</span></span>
+<span id="cb53-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb53-3"><a></a>                           <span class="at">y =</span> gdpPercap,</span>
+<span id="cb53-4"><a></a>                           <span class="at">color=</span> continent<span class="sc">==</span><span class="st">'Americas'</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-95-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_point-mapeo-local-tamaño-alpha" class="slide level2">
+<h2>geom_point: mapeo local, tamaño, alpha</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb54" data-code-line-numbers="2,3,4,5,6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007) <span class="sc">+</span></span>
+<span id="cb54-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb54-3"><a></a>                           <span class="at">y =</span> gdpPercap,</span>
+<span id="cb54-4"><a></a>                           <span class="at">color=</span> continent<span class="sc">==</span><span class="st">'Americas'</span>,</span>
+<span id="cb54-5"><a></a>                           <span class="at">size=</span>gdpPercap),</span>
+<span id="cb54-6"><a></a>             <span class="at">alpha=</span>.<span class="dv">8</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-97-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_point-mapeo-local-tamaño-y-forma-tema" class="slide level2">
+<h2>geom_point: mapeo local tamaño y forma, tema</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb55" data-code-line-numbers="4,5,9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007) <span class="sc">+</span></span>
+<span id="cb55-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb55-3"><a></a>                           <span class="at">y =</span> gdpPercap,</span>
+<span id="cb55-4"><a></a>                           <span class="at">size=</span>pop,</span>
+<span id="cb55-5"><a></a>                           <span class="at">shape=</span> continent,</span>
+<span id="cb55-6"><a></a>                           ),</span>
+<span id="cb55-7"><a></a>             <span class="at">color=</span> <span class="st">'#386641'</span>,</span>
+<span id="cb55-8"><a></a>             <span class="at">alpha=</span>.<span class="dv">8</span>)<span class="sc">+</span></span>
+<span id="cb55-9"><a></a>  <span class="fu">theme_bw</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-99-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_point-color-por-variable-ordinal" class="slide level2">
+<h2>geom_point: color por variable ordinal</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb56" data-code-line-numbers="5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb56-2"><a></a>         <span class="fu">filter</span>(continent<span class="sc">==</span><span class="st">'Europe'</span>)) <span class="sc">+</span></span>
+<span id="cb56-3"><a></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb56-4"><a></a>                           <span class="at">y =</span> gdpPercap,</span>
+<span id="cb56-5"><a></a>                           <span class="at">color=</span> year))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-101-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_point-posición-leyenda-y-tema" class="slide level2">
+<h2>geom_point: posición leyenda y tema</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb57" data-code-line-numbers="6,7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007<span class="sc">%&gt;%</span></span>
+<span id="cb57-2"><a></a>         <span class="fu">filter</span>(continent<span class="sc">==</span><span class="st">'Americas'</span>)) <span class="sc">+</span></span>
+<span id="cb57-3"><a></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb57-4"><a></a>                           <span class="at">y =</span> gdpPercap,</span>
+<span id="cb57-5"><a></a>                           <span class="at">color=</span> country))<span class="sc">+</span></span>
+<span id="cb57-6"><a></a>  <span class="fu">theme_dark</span>()<span class="sc">+</span></span>
+<span id="cb57-7"><a></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-103-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_line" class="slide level2">
+<h2>geom_line</h2>
+<ul>
+<li class="fragment"><p>Requiere los valores de&nbsp;<code>x, y</code>&nbsp;<em>aesthetics</em> dentro de&nbsp;<code>aes()</code></p></li>
+<li class="fragment"><p>Se puede modificar la apariciencia de las líneas con los argumentos&nbsp;<code>color</code>,&nbsp;<code>linetype</code>,&nbsp;<code>alpha</code>&nbsp;&nbsp;</p></li>
+<li class="fragment"><p>El&nbsp;<code>aes</code>&nbsp;<code>group</code> dibuja líneas de acuerdo a la variable de agrupamiento</p></li>
+</ul>
+</section>
+<section id="inspeccionar-datos-a-trabajar" class="slide level2">
+<h2>Inspeccionar Datos a Trabajar</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a></a><span class="co">#|echo: true</span></span>
+<span id="cb58-2"><a></a><span class="co">#|eval: true</span></span>
+<span id="cb58-3"><a></a></span>
+<span id="cb58-4"><a></a></span>
+<span id="cb58-5"><a></a>df_valores_acciones<span class="sc">%&gt;%</span></span>
+<span id="cb58-6"><a></a>  <span class="fu">sample_n</span>(<span class="dv">10</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 5
+   fecha           volume accion  tipo_valor    valor
+   &lt;date&gt;           &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;         &lt;dbl&gt;
+ 1 2007-03-20   488916400 Apple   high           3.28
+ 2 2013-10-29    15954700 Oracle  low           33.2 
+ 3 2020-04-14 34110434052 Bitcoin low         6794.  
+ 4 2016-06-27   449088000 Nvidia  low            1.11
+ 5 2023-02-22     5840100 Oracle  adjclose      84.1 
+ 6 2021-11-29 32370840356 Bitcoin open       57292.  
+ 7 2021-07-09 27436021028 Bitcoin open       32862.  
+ 8 2024-09-05     8733200 Oracle  adjclose     142.  
+ 9 2008-04-04   854417200 Apple   close          5.47
+10 2012-10-09    23311300 Oracle  adjclose      25.5 </code></pre>
+</div>
+</div>
+<p>código para obtención y procesamiento de datos disponible en <a href="https://github.com/UCVeconomia2024-2/scripts/blob/main/soporte_clases/clase_21/paquete_pdfetch.R">enlace</a></p>
+</section>
+<section id="geom_line-1-línea-con-color" class="slide level2">
+<h2>geom_line: 1 línea con color</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb60" data-code-line-numbers="6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a></a>df_valores_acciones<span class="sc">%&gt;%</span></span>
+<span id="cb60-2"><a></a>  <span class="fu">filter</span>(accion<span class="sc">==</span><span class="st">'Nvidia'</span><span class="sc">&amp;</span> </span>
+<span id="cb60-3"><a></a>           tipo_valor<span class="sc">==</span><span class="st">'close'</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb60-4"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>fecha,</span>
+<span id="cb60-5"><a></a>             <span class="at">y=</span>valor))<span class="sc">+</span></span>
+<span id="cb60-6"><a></a>  <span class="fu">geom_line</span>(<span class="at">color=</span> <span class="st">'#06d6a0'</span>)</span>
+<span id="cb60-7"><a></a><span class="co">#acción Nvidia</span></span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-106-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_line-etiquetas-eje-y-colores-personalizados" class="slide level2">
+<h2>geom_line: etiquetas eje y, colores personalizados</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb61" data-code-line-numbers="5,7,8,9,10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a></a>df_valores_acciones<span class="sc">%&gt;%</span></span>
+<span id="cb61-2"><a></a>  <span class="fu">filter</span>(accion<span class="sc">!=</span><span class="st">'Bitcoin'</span><span class="sc">&amp;</span> tipo_valor<span class="sc">==</span><span class="st">'close'</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb61-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>fecha,</span>
+<span id="cb61-4"><a></a>             <span class="at">y=</span>valor,</span>
+<span id="cb61-5"><a></a>             <span class="at">color=</span>accion))<span class="sc">+</span></span>
+<span id="cb61-6"><a></a>  <span class="fu">geom_line</span>()<span class="sc">+</span></span>
+<span id="cb61-7"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">label_dollar</span>())<span class="sc">+</span></span>
+<span id="cb61-8"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span>  </span>
+<span id="cb61-9"><a></a>                       <span class="fu">c</span>(<span class="st">'#fb8500'</span>,<span class="st">'#ffb703'</span>,</span>
+<span id="cb61-10"><a></a>                         <span class="st">'#023047'</span>,<span class="st">'#219ebc'</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-108-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_line-tipo-de-línea-por-variable-categórica-color-línea" class="slide level2">
+<h2>geom_line: tipo de línea por variable categórica, color línea</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb62" data-code-line-numbers="7,8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a></a>df_valores_acciones<span class="sc">%&gt;%</span></span>
+<span id="cb62-2"><a></a>  <span class="fu">filter</span>(accion<span class="sc">==</span><span class="st">'Apple'</span><span class="sc">&amp;</span> </span>
+<span id="cb62-3"><a></a>           tipo_valor <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">'high'</span>,<span class="st">'low'</span>) <span class="sc">&amp;</span></span>
+<span id="cb62-4"><a></a>           fecha<span class="sc">&gt;</span><span class="st">'2024/01/01'</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb62-5"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>fecha,</span>
+<span id="cb62-6"><a></a>             <span class="at">y=</span>valor,</span>
+<span id="cb62-7"><a></a>             <span class="at">linetype =</span> tipo_valor,</span>
+<span id="cb62-8"><a></a>             <span class="at">color=</span>tipo_valor))<span class="sc">+</span></span>
+<span id="cb62-9"><a></a>  <span class="fu">geom_line</span>()<span class="sc">+</span></span>
+<span id="cb62-10"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">label_dollar</span>())<span class="sc">+</span></span>
+<span id="cb62-11"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span>  <span class="fu">c</span>(<span class="st">'#fb8500'</span>,<span class="st">'#023047'</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-110-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_line-modificación-representación-fechas-tema" class="slide level2">
+<h2>geom_line: modificación representación fechas, tema</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb63" data-code-line-numbers="10,13,14,15,16,17,18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a></a><span class="fu">library</span>(scales)</span>
+<span id="cb63-2"><a></a>df_valores_acciones<span class="sc">%&gt;%</span></span>
+<span id="cb63-3"><a></a>  <span class="fu">filter</span>(accion<span class="sc">==</span><span class="st">'Apple'</span><span class="sc">&amp;</span> </span>
+<span id="cb63-4"><a></a>           tipo_valor <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">'high'</span>,<span class="st">'low'</span>) <span class="sc">&amp;</span></span>
+<span id="cb63-5"><a></a>           fecha<span class="sc">&gt;</span><span class="st">'2024/01/01'</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb63-6"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>fecha,</span>
+<span id="cb63-7"><a></a>             <span class="at">y=</span>valor,</span>
+<span id="cb63-8"><a></a>             <span class="at">linetype =</span> tipo_valor,</span>
+<span id="cb63-9"><a></a>             <span class="at">color=</span>tipo_valor))<span class="sc">+</span></span>
+<span id="cb63-10"><a></a>  <span class="fu">geom_line</span>()<span class="sc">+</span></span>
+<span id="cb63-11"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">label_dollar</span>())<span class="sc">+</span></span>
+<span id="cb63-12"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span>  <span class="fu">c</span>(<span class="st">'#fb8500'</span>,<span class="st">'#023047'</span>))<span class="sc">+</span></span>
+<span id="cb63-13"><a></a>  <span class="fu">scale_x_date</span>(<span class="at">date_labels =</span> <span class="st">"%m/%Y"</span>, <span class="at">date_breaks =</span> <span class="st">"month"</span>)<span class="sc">+</span></span>
+<span id="cb63-14"><a></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, </span>
+<span id="cb63-15"><a></a>                                   <span class="at">hjust =</span> <span class="dv">1</span>,</span>
+<span id="cb63-16"><a></a>                                   <span class="at">family =</span> <span class="st">"serif"</span>, </span>
+<span id="cb63-17"><a></a>                                   <span class="at">size =</span> <span class="dv">8</span>),</span>
+<span id="cb63-18"><a></a>        <span class="at">legend.position =</span> <span class="st">'none'</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-112-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="geom_line-fechas---locales" class="slide level2">
+<h2>geom_line: fechas - locales</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a></a><span class="fu">Sys.setlocale</span>(<span class="st">"LC_TIME"</span>, <span class="st">"es_ES.UTF-8"</span>)</span>
+<span id="cb64-2"><a></a></span>
+<span id="cb64-3"><a></a>df_valores_acciones<span class="sc">%&gt;%</span></span>
+<span id="cb64-4"><a></a>  <span class="fu">filter</span>(accion<span class="sc">==</span><span class="st">'Apple'</span><span class="sc">&amp;</span> </span>
+<span id="cb64-5"><a></a>           tipo_valor <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">'high'</span>,<span class="st">'low'</span>) <span class="sc">&amp;</span></span>
+<span id="cb64-6"><a></a>           fecha<span class="sc">&gt;</span><span class="st">'2024/01/01'</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb64-7"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>fecha,</span>
+<span id="cb64-8"><a></a>             <span class="at">y=</span>valor,</span>
+<span id="cb64-9"><a></a>             <span class="at">linetype =</span> tipo_valor,</span>
+<span id="cb64-10"><a></a>             <span class="at">color=</span>tipo_valor))<span class="sc">+</span></span>
+<span id="cb64-11"><a></a>  <span class="fu">geom_line</span>()<span class="sc">+</span></span>
+<span id="cb64-12"><a></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">label_dollar</span>())<span class="sc">+</span></span>
+<span id="cb64-13"><a></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span>  <span class="fu">c</span>(<span class="st">'#fb8500'</span>,<span class="st">'#023047'</span>))<span class="sc">+</span></span>
+<span id="cb64-14"><a></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>,</span>
+<span id="cb64-15"><a></a>                                   <span class="at">hjust =</span> <span class="dv">1</span>,</span>
+<span id="cb64-16"><a></a>                                   <span class="at">family =</span> <span class="st">"serif"</span>,</span>
+<span id="cb64-17"><a></a>                                   <span class="at">size =</span> <span class="dv">8</span>),</span>
+<span id="cb64-18"><a></a>        <span class="at">legend.position =</span> <span class="st">'none'</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-114-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="facetas" class="slide level2">
+<h2>Facetas</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb65" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder,</span>
+<span id="cb65-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb65-3"><a></a>                     <span class="at">y =</span> gdpPercap)) <span class="sc">+</span></span>
+<span id="cb65-4"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">color=</span><span class="st">'#c9184a'</span>)<span class="sc">+</span></span>
+<span id="cb65-5"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>continent, <span class="at">nrow=</span><span class="dv">1</span>)<span class="sc">+</span></span>
+<span id="cb65-6"><a></a>  <span class="fu">theme_dark</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-116-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="facetas-1" class="slide level2">
+<h2>Facetas</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb66" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder,</span>
+<span id="cb66-2"><a></a>       <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb66-3"><a></a>                     <span class="at">y =</span> gdpPercap)) <span class="sc">+</span></span>
+<span id="cb66-4"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">color=</span><span class="st">'#ca6702'</span>)<span class="sc">+</span></span>
+<span id="cb66-5"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>year)<span class="sc">+</span></span>
+<span id="cb66-6"><a></a>  <span class="fu">theme_grey</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-118-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="facetas-2" class="slide level2">
+<h2>Facetas</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb67" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007) <span class="sc">+</span></span>
+<span id="cb67-2"><a></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">y=</span>lifeExp,</span>
+<span id="cb67-3"><a></a>                   <span class="at">color=</span> continent))<span class="sc">+</span></span>
+<span id="cb67-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>continent)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-120-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="facetas-3" class="slide level2">
+<h2>Facetas</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb68" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder) <span class="sc">+</span></span>
+<span id="cb68-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(gdpPercap,</span>
+<span id="cb68-3"><a></a>                     <span class="at">color=</span>continent))<span class="sc">+</span></span>
+<span id="cb68-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>continent)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-122-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="facetas-4" class="slide level2">
+<h2>Facetas</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb69" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007) <span class="sc">+</span></span>
+<span id="cb69-2"><a></a>  <span class="fu">geom_histogram</span>(<span class="fu">aes</span>(lifeExp),</span>
+<span id="cb69-3"><a></a>                 <span class="at">bins =</span> <span class="dv">10</span>)<span class="sc">+</span></span>
+<span id="cb69-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>continent)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-124-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="facetas-5" class="slide level2">
+<h2>Facetas</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb70" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder) <span class="sc">+</span></span>
+<span id="cb70-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb70-3"><a></a>                           <span class="at">y =</span> gdpPercap, </span>
+<span id="cb70-4"><a></a>                           <span class="at">colour=</span> pop))<span class="sc">+</span></span>
+<span id="cb70-5"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> continent, <span class="at">nrow =</span> <span class="dv">1</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-126-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="facetas-6" class="slide level2">
+<h2>Facetas</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb71" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007) <span class="sc">+</span></span>
+<span id="cb71-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb71-3"><a></a>                           <span class="at">y =</span> gdpPercap, </span>
+<span id="cb71-4"><a></a>                           <span class="at">colour=</span> pop))<span class="sc">+</span></span>
+<span id="cb71-5"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> continent, <span class="at">nrow =</span> <span class="dv">2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-128-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="facetas-7" class="slide level2">
+<h2>Facetas</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb72" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_af_am) <span class="sc">+</span></span>
+<span id="cb72-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb72-3"><a></a>                           <span class="at">y =</span> gdpPercap, </span>
+<span id="cb72-4"><a></a>                           <span class="at">colour=</span> pop))<span class="sc">+</span></span>
+<span id="cb72-5"><a></a>  <span class="fu">facet_wrap</span>(country <span class="sc">~</span> continent)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-130-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="facetas-8" class="slide level2">
+<h2>Facetas</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb73" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_af_am) <span class="sc">+</span></span>
+<span id="cb73-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb73-3"><a></a>                           <span class="at">y =</span> gdpPercap, </span>
+<span id="cb73-4"><a></a>                           <span class="at">colour=</span> pop))<span class="sc">+</span></span>
+<span id="cb73-5"><a></a>  <span class="fu">facet_wrap</span>(. <span class="sc">~</span> continent)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-132-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="facetas-9" class="slide level2">
+<h2>Facetas</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb74" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_af_am) <span class="sc">+</span></span>
+<span id="cb74-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb74-3"><a></a>                           <span class="at">y =</span> gdpPercap, </span>
+<span id="cb74-4"><a></a>                           <span class="at">colour=</span> pop))<span class="sc">+</span></span>
+<span id="cb74-5"><a></a>  <span class="fu">facet_wrap</span>(. <span class="sc">~</span> country)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-134-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="facetas-10" class="slide level2">
+<h2>Facetas</h2>
+<p><br></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb75" data-code-line-numbers="4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_af_am) <span class="sc">+</span></span>
+<span id="cb75-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb75-3"><a></a>                           <span class="at">y =</span> gdpPercap, </span>
+<span id="cb75-4"><a></a>                           <span class="at">colour=</span> pop))<span class="sc">+</span></span>
+<span id="cb75-5"><a></a>  <span class="fu">facet_wrap</span>( country <span class="sc">~</span> .)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-136-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="otros-gráficos---2-variables-categóricas" class="slide level2">
+<h2>Otros Gráficos - 2 Variables Categóricas</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a></a>gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb76-2"><a></a>  <span class="fu">filter</span>(continent<span class="sc">==</span><span class="st">'Americas'</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb76-3"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>year,</span>
+<span id="cb76-4"><a></a>             <span class="at">y=</span><span class="fu">reorder</span>(country,lifeExp),</span>
+<span id="cb76-5"><a></a>             <span class="at">fill=</span>lifeExp))<span class="sc">+</span></span>
+<span id="cb76-6"><a></a>  <span class="fu">geom_tile</span>(<span class="at">color=</span><span class="st">'grey40'</span>)<span class="sc">+</span> </span>
+<span id="cb76-7"><a></a>  <span class="fu">scale_fill_gradient</span>(<span class="at">low =</span> <span class="st">"white"</span>,</span>
+<span id="cb76-8"><a></a>                      <span class="at">high =</span> <span class="st">"#147df5"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-138-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section></section>
+<section>
+<section id="estilos-modernos" class="title-slide slide level1 center">
+<h1>Estilos Modernos</h1>
+
+</section>
+<section id="preparar-los-datos" class="slide level2">
+<h2>Preparar los Datos</h2>
+<p><br></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a></a><span class="fu">library</span>(<span class="st">"tidyr"</span>)</span>
+<span id="cb77-2"><a></a></span>
+<span id="cb77-3"><a></a>mancuerna_df <span class="ot">&lt;-</span> gapminder <span class="sc">%&gt;%</span></span>
+<span id="cb77-4"><a></a>  <span class="fu">filter</span>(year <span class="sc">==</span> <span class="dv">1967</span> <span class="sc">|</span> year <span class="sc">==</span> <span class="dv">2007</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb77-5"><a></a>  <span class="fu">select</span>(country, year, lifeExp) <span class="sc">%&gt;%</span></span>
+<span id="cb77-6"><a></a>  <span class="fu">spread</span>(year, lifeExp) <span class="sc">%&gt;%</span></span>
+<span id="cb77-7"><a></a>  <span class="fu">mutate</span>(<span class="at">gap =</span> <span class="st">`</span><span class="at">2007</span><span class="st">`</span> <span class="sc">-</span> <span class="st">`</span><span class="at">1967</span><span class="st">`</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb77-8"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(gap)) <span class="sc">%&gt;%</span></span>
+<span id="cb77-9"><a></a>  <span class="fu">head</span>(<span class="dv">10</span>)</span>
+<span id="cb77-10"><a></a></span>
+<span id="cb77-11"><a></a>mancuerna_df</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 4
+   country      `1967` `2007`   gap
+   &lt;fct&gt;         &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;
+ 1 Oman           47.0   75.6  28.7
+ 2 Vietnam        47.8   74.2  26.4
+ 3 Yemen, Rep.    37.0   62.7  25.7
+ 4 Indonesia      46.0   70.6  24.7
+ 5 Libya          50.2   74.0  23.7
+ 6 Gambia         35.9   59.4  23.6
+ 7 Saudi Arabia   49.9   72.8  22.9
+ 8 Nepal          41.5   63.8  22.3
+ 9 Egypt          49.3   71.3  22.0
+10 Tunisia        52.1   73.9  21.9</code></pre>
+</div>
+</div>
+</section>
+<section id="gráfico-de-mancuerna" class="slide level2">
+<h2>Gráfico de Mancuerna</h2>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a></a><span class="fu">library</span>(ggalt)</span>
+<span id="cb79-2"><a></a><span class="fu">library</span>(bbplot)</span>
+<span id="cb79-3"><a></a></span>
+<span id="cb79-4"><a></a><span class="fu">ggplot</span>(mancuerna_df, </span>
+<span id="cb79-5"><a></a>       <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">1967</span><span class="st">`</span>, </span>
+<span id="cb79-6"><a></a>           <span class="at">xend =</span> <span class="st">`</span><span class="at">2007</span><span class="st">`</span>, </span>
+<span id="cb79-7"><a></a>           <span class="at">y =</span> <span class="fu">reorder</span>(country, gap),</span>
+<span id="cb79-8"><a></a>           <span class="at">group =</span> country)) <span class="sc">+</span> </span>
+<span id="cb79-9"><a></a>  <span class="fu">geom_dumbbell</span>(<span class="at">colour =</span> <span class="st">"#dddddd"</span>,</span>
+<span id="cb79-10"><a></a>                <span class="at">size =</span> <span class="dv">3</span>,</span>
+<span id="cb79-11"><a></a>                <span class="at">colour_x =</span> <span class="st">"#FAAB18"</span>,</span>
+<span id="cb79-12"><a></a>                <span class="at">colour_xend =</span> <span class="st">"#1380A1"</span>) <span class="sc">+</span></span>
+<span id="cb79-13"><a></a>  <span class="fu">bbc_style</span>() <span class="sc">+</span></span>
+<span id="cb79-14"><a></a>  <span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Vivimos más Tiempo"</span>,</span>
+<span id="cb79-15"><a></a>       <span class="at">subtitle=</span><span class="st">"Mayor crecimiento en la expectativa de vida, 1967-2007"</span>,</span>
+<span id="cb79-16"><a></a>       <span class="at">x=</span><span class="cn">NULL</span>,</span>
+<span id="cb79-17"><a></a>       <span class="at">y=</span><span class="cn">NULL</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="clase_21_files/figure-revealjs/unnamed-chunk-140-1.png" class="quarto-figure quarto-figure-center r-stretch" width="960"></section>
+<section id="gráficos-interactivos" class="slide level2">
+<h2>Gráficos Interactivos</h2>
+<p><br></p>
+<p>Preparar el gráfico</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a></a>gap_2007_amer_le_gp <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> gapminder_2007<span class="sc">%&gt;%</span></span>
+<span id="cb80-2"><a></a>                                <span class="fu">filter</span>(continent<span class="sc">==</span><span class="st">'Americas'</span>)) <span class="sc">+</span></span>
+<span id="cb80-3"><a></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> lifeExp, </span>
+<span id="cb80-4"><a></a>                           <span class="at">y =</span> gdpPercap, </span>
+<span id="cb80-5"><a></a>                           <span class="at">size =</span> pop,</span>
+<span id="cb80-6"><a></a>                           <span class="at">colour =</span> country))<span class="sc">+</span></span>
+<span id="cb80-7"><a></a>  <span class="fu">theme_light</span>()<span class="sc">+</span></span>
+<span id="cb80-8"><a></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)<span class="sc">+</span></span>
+<span id="cb80-9"><a></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Gapminder 2007 Américas: lifeExp ~  gdpPercap"</span>,</span>
+<span id="cb80-10"><a></a>       <span class="at">x =</span> <span class="st">"Expectativa de Vida"</span>,</span>
+<span id="cb80-11"><a></a>       <span class="at">y =</span> <span class="st">"PIB Percápita"</span>,</span>
+<span id="cb80-12"><a></a>       <span class="at">caption=</span><span class="st">'conjunto de datos: Gapminder por Hans Roslig'</span>,</span>
+<span id="cb80-13"><a></a>       <span class="at">tag=</span><span class="st">'Fig. 1'</span>) </span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="clase_21_files/figure-revealjs/unnamed-chunk-142-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="añadir-interactividad" class="slide level2">
+<h2>Añadir Interactividad</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a></a><span class="fu">library</span>(plotly)</span>
+<span id="cb81-2"><a></a>gap_2007_amer_le_gp<span class="sc">%&gt;%</span></span>
+<span id="cb81-3"><a></a>  <span class="fu">ggplotly</span>()</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-260cb8d3bfeef2a9512e" style="width:960px;height:576px;"></div>
+<script type="application/json" data-for="htmlwidget-260cb8d3bfeef2a9512e">{"x":{"data":[{"x":[75.319999999999993],"y":[12779.379639999999],"text":"lifeExp: 75.320<br />gdpPercap: 12779.380<br />pop:  40301927<br />country: Argentina","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":10.613614678054821,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(248,118,109,1)"}},"hoveron":"points","name":"Argentina","legendgroup":"Argentina","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[65.554000000000002],"y":[3822.137084],"text":"lifeExp: 65.554<br />gdpPercap:  3822.137<br />pop:   9119152<br />country: Bolivia","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(237,129,65,1)","opacity":1,"size":6.8771082460152693,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(237,129,65,1)"}},"hoveron":"points","name":"Bolivia","legendgroup":"Bolivia","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[72.390000000000001],"y":[9065.8008250000003],"text":"lifeExp: 72.390<br />gdpPercap:  9065.801<br />pop: 190010647<br />country: Brazil","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(224,139,0,1)","opacity":1,"size":18.775155924206555,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(224,139,0,1)"}},"hoveron":"points","name":"Brazil","legendgroup":"Brazil","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[80.653000000000006],"y":[36319.235009999997],"text":"lifeExp: 80.653<br />gdpPercap: 36319.235<br />pop:  33390141<br />country: Canada","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(207,148,0,1)","opacity":1,"size":9.9826900801015785,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(207,148,0,1)"}},"hoveron":"points","name":"Canada","legendgroup":"Canada","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[78.552999999999997],"y":[13171.638849999999],"text":"lifeExp: 78.553<br />gdpPercap: 13171.639<br />pop:  16284741<br />country: Chile","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(187,157,0,1)","opacity":1,"size":8.0365889150245629,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(187,157,0,1)"}},"hoveron":"points","name":"Chile","legendgroup":"Chile","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[72.888999999999996],"y":[7006.5804189999999],"text":"lifeExp: 72.889<br />gdpPercap:  7006.580<br />pop:  44227550<br />country: Colombia","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(163,165,0,1)","opacity":1,"size":10.947269177752579,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(163,165,0,1)"}},"hoveron":"points","name":"Colombia","legendgroup":"Colombia","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[78.781999999999996],"y":[9645.06142],"text":"lifeExp: 78.782<br />gdpPercap:  9645.061<br />pop:   4133884<br />country: Costa Rica","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(133,173,0,1)","opacity":1,"size":5.6932096997412867,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(133,173,0,1)"}},"hoveron":"points","name":"Costa Rica","legendgroup":"Costa Rica","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[78.272999999999996],"y":[8948.1029230000004],"text":"lifeExp: 78.273<br />gdpPercap:  8948.103<br />pop:  11416987<br />country: Cuba","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(91,179,0,1)","opacity":1,"size":7.2908798209805168,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(91,179,0,1)"}},"hoveron":"points","name":"Cuba","legendgroup":"Cuba","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[72.234999999999999],"y":[6025.3747519999997],"text":"lifeExp: 72.235<br />gdpPercap:  6025.375<br />pop:   9319622<br />country: Dominican Republic","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,184,32,1)","opacity":1,"size":6.9153814782504197,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,184,32,1)"}},"hoveron":"points","name":"Dominican Republic","legendgroup":"Dominican Republic","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[74.994],"y":[6873.262326],"text":"lifeExp: 74.994<br />gdpPercap:  6873.262<br />pop:  13755680<br />country: Ecuador","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,188,89,1)","opacity":1,"size":7.6670469809142006,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,188,89,1)"}},"hoveron":"points","name":"Ecuador","legendgroup":"Ecuador","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[71.878],"y":[5728.3535140000004],"text":"lifeExp: 71.878<br />gdpPercap:  5728.354<br />pop:   6939688<br />country: El Salvador","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,191,125,1)","opacity":1,"size":6.4255221743432624,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,191,125,1)"}},"hoveron":"points","name":"El Salvador","legendgroup":"El Salvador","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[70.259],"y":[5186.0500030000003],"text":"lifeExp: 70.259<br />gdpPercap:  5186.050<br />pop:  12572928<br />country: Guatemala","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,193,156,1)","opacity":1,"size":7.4815874551191142,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,193,156,1)"}},"hoveron":"points","name":"Guatemala","legendgroup":"Guatemala","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[60.915999999999997],"y":[1201.637154],"text":"lifeExp: 60.916<br />gdpPercap:  1201.637<br />pop:   8502814<br />country: Haiti","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,192,184,1)","opacity":1,"size":6.7563580294955159,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,192,184,1)"}},"hoveron":"points","name":"Haiti","legendgroup":"Haiti","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[70.197999999999993],"y":[3548.3308459999998],"text":"lifeExp: 70.198<br />gdpPercap:  3548.331<br />pop:   7483763<br />country: Honduras","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,189,208,1)","opacity":1,"size":6.5451695838618908,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,189,208,1)"}},"hoveron":"points","name":"Honduras","legendgroup":"Honduras","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[72.566999999999993],"y":[7320.8802619999997],"text":"lifeExp: 72.567<br />gdpPercap:  7320.880<br />pop:   2780132<br />country: Jamaica","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,184,229,1)","opacity":1,"size":5.2116997831367673,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,184,229,1)"}},"hoveron":"points","name":"Jamaica","legendgroup":"Jamaica","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[76.194999999999993],"y":[11977.57496],"text":"lifeExp: 76.195<br />gdpPercap: 11977.575<br />pop: 108700891<br />country: Mexico","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,176,246,1)","opacity":1,"size":15.097850039940255,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,176,246,1)"}},"hoveron":"points","name":"Mexico","legendgroup":"Mexico","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[72.899000000000001],"y":[2749.3209649999999],"text":"lifeExp: 72.899<br />gdpPercap:  2749.321<br />pop:   5675356<br />country: Nicaragua","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,165,255,1)","opacity":1,"size":6.1240193305920405,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,165,255,1)"}},"hoveron":"points","name":"Nicaragua","legendgroup":"Nicaragua","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[75.537000000000006],"y":[9809.1856360000002],"text":"lifeExp: 75.537<br />gdpPercap:  9809.186<br />pop:   3242173<br />country: Panama","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(121,151,255,1)","opacity":1,"size":5.3922827283358492,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(121,151,255,1)"}},"hoveron":"points","name":"Panama","legendgroup":"Panama","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[71.751999999999995],"y":[4172.8384640000004],"text":"lifeExp: 71.752<br />gdpPercap:  4172.838<br />pop:   6667147<br />country: Paraguay","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(172,136,255,1)","opacity":1,"size":6.363505916234117,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(172,136,255,1)"}},"hoveron":"points","name":"Paraguay","legendgroup":"Paraguay","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[71.421000000000006],"y":[7408.9055609999996],"text":"lifeExp: 71.421<br />gdpPercap:  7408.906<br />pop:  28674757<br />country: Peru","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(207,120,255,1)","opacity":1,"size":9.5125529225874956,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(207,120,255,1)"}},"hoveron":"points","name":"Peru","legendgroup":"Peru","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[78.745999999999995],"y":[19328.709009999999],"text":"lifeExp: 78.746<br />gdpPercap: 19328.709<br />pop:   3942491<br />country: Puerto Rico","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(231,107,243,1)","opacity":1,"size":5.6327431231085665,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(231,107,243,1)"}},"hoveron":"points","name":"Puerto Rico","legendgroup":"Puerto Rico","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[69.819000000000003],"y":[18008.509239999999],"text":"lifeExp: 69.819<br />gdpPercap: 18008.509<br />pop:   1056608<br />country: Trinidad and Tobago","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(247,99,224,1)","opacity":1,"size":3.7795275590551185,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(247,99,224,1)"}},"hoveron":"points","name":"Trinidad and Tobago","legendgroup":"Trinidad and Tobago","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[78.242000000000004],"y":[42951.65309],"text":"lifeExp: 78.242<br />gdpPercap: 42951.653<br />pop: 301139947<br />country: United States","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,97,201,1)","opacity":1,"size":22.677165354330711,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(255,97,201,1)"}},"hoveron":"points","name":"United States","legendgroup":"United States","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[76.384],"y":[10611.46299],"text":"lifeExp: 76.384<br />gdpPercap: 10611.463<br />pop:   3447496<br />country: Uruguay","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,101,174,1)","opacity":1,"size":5.4663376683169176,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(255,101,174,1)"}},"hoveron":"points","name":"Uruguay","legendgroup":"Uruguay","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[73.747],"y":[11415.805689999999],"text":"lifeExp: 73.747<br />gdpPercap: 11415.806<br />pop:  26084662<br />country: Venezuela","type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,108,144,1)","opacity":1,"size":9.2371076862319477,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(255,108,144,1)"}},"hoveron":"points","name":"Venezuela","legendgroup":"Venezuela","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":45.710806697108069,"r":7.3059360730593621,"b":42.130898021308987,"l":54.794520547945211},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"Gapminder 2007 Américas: lifeExp ~  gdpPercap","font":{"color":"rgba(0,0,0,1)","family":"","size":17.534246575342465},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[59.929149999999993,81.63985000000001],"tickmode":"array","ticktext":["60","65","70","75","80"],"tickvals":[60,65,70,75,80],"categoryorder":"array","categoryarray":["60","65","70","75","80"],"nticks":null,"ticks":"outside","tickcolor":"rgba(179,179,179,1)","ticklen":3.6529680365296811,"tickwidth":0.33208800332088001,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(222,222,222,1)","gridwidth":0.33208800332088001,"zeroline":false,"anchor":"y","title":{"text":"Expectativa de Vida","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-885.86364279999998,45039.153886799999],"tickmode":"array","ticktext":["0","10000","20000","30000","40000"],"tickvals":[-1.1368683772161603e-13,10000,20000,29999.999999999996,40000],"categoryorder":"array","categoryarray":["0","10000","20000","30000","40000"],"nticks":null,"ticks":"outside","tickcolor":"rgba(179,179,179,1)","ticklen":3.6529680365296811,"tickwidth":0.33208800332088001,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(222,222,222,1)","gridwidth":0.33208800332088001,"zeroline":false,"anchor":"x","title":{"text":"PIB Percápita","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(179,179,179,1)","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498},"title":{"text":"pop<br />country","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"100c2632af98c":{"x":{},"y":{},"size":{},"colour":{},"type":"scatter"}},"cur_data":"100c2632af98c","visdat":{"100c2632af98c":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="guardar-gráficos" class="slide level2">
+<h2>Guardar Gráficos</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a></a><span class="fu">ggsave</span>(graf_gap_2007,</span>
+<span id="cb82-2"><a></a>       <span class="at">filename=</span> <span class="st">'graf_gap_2007.png'</span>)</span>
+<span id="cb82-3"><a></a></span>
+<span id="cb82-4"><a></a><span class="fu">ggsave</span>(graf_gap_2007,</span>
+<span id="cb82-5"><a></a>       <span class="at">width=</span> <span class="dv">8</span>,</span>
+<span id="cb82-6"><a></a>       <span class="at">height =</span> <span class="dv">5</span>,</span>
+<span id="cb82-7"><a></a>       <span class="at">dpi=</span><span class="dv">2400</span>,</span>
+<span id="cb82-8"><a></a>       <span class="at">filename=</span><span class="st">'graf_gap_2007.png'</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="elección-del-mapeo-mapping" class="slide level2">
+<h2>Elección del Mapeo (Mapping)</h2>
+
+<img data-src="images/clase21/choosing_a_mapping .png" width="600" class="r-stretch"><p>Imagen de Garrett Grolemund’s 2019 JSM, tidyverse tutorial .</p>
+</section>
+<section id="láminas-repaso" class="slide level2">
+<h2>Láminas repaso</h2>
+<ul>
+<li class="fragment"><p><code>ggplot2</code> es una potente biblioteca para el diseño gráfico reproducible</p></li>
+<li class="fragment"><p>los componentes siguen una sintaxis consistente</p></li>
+<li class="fragment"><p>cada ggplot necesita al menos datos, algo de estética y una capa</p></li>
+<li class="fragment"><p>establecemos propiedades constantes fuera de aes()</p></li>
+<li class="fragment"><p>… y mapeamos las propiedades relacionadas con los datos dentro de aes()</p></li>
+<li class="fragment"><p>los ajustes y mapeos locales anulan las propiedades globales</p></li>
+<li class="fragment"><p>la agrupación permite aplicar capas a subconjuntos</p></li>
+<li class="fragment"><p>podemos almacenar un objeto ggplot y extenderlo hacia el exterior</p></li>
+<li class="fragment"><p>podemos cambiar la apariencia de todos los gráficos con theme_set() y theme_update()</p></li>
+</ul>
+<p><em>basadas en presentación de Cédric Scherer</em></p>
+</section>
+<section id="recursos" class="slide level2">
+<h2>Recursos</h2>
+<p><a href="https://ggplot2-book.org/" class="uri">https://ggplot2-book.org/</a></p>
+<p><a href="https://bbc.github.io/rcookbook/" class="uri">https://bbc.github.io/rcookbook/</a></p>
+<p><a href="https://r-charts.com/es/ggplot2/" class="uri">https://r-charts.com/es/ggplot2/</a></p>
+<p><a href="https://ggplot2.tidyverse.org/" class="uri">https://ggplot2.tidyverse.org/</a></p>
+
+<div class="quarto-auto-generated-content">
+<p><img src="images/logo_curso.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p><a href="https://ucveconomiar4ds.netlify.app">🔗 ucveconomiar4ds</a></p>
+</div>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copiado");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copiado");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("https:\/\/ucveconomiar4ds\.netlify\.app");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

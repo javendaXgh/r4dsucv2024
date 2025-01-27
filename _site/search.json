@@ -468,7 +468,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\nAsignar Nombres Objetos y Variables\n🖥️ láminas clase 03 apoyo  💻 clase 3 apoyo versión qmd \n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n🖥️ láminas clase 04  💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\nConstruir Funciones y Data Frames\n🖥️ láminas clase 06  💻 clase 6 versión qmd  🖥️ clase 6 versión códigos  💻 clase 6: práctica 1- versión qmd  💻 clase 6: práctica 1- versión site  🎥video render Quarto 💻 clase 6: práctica 2- versión qmd  💻 clase 6: práctica 2- versión site \n\n\n\n\nmié, 6 nov.\nDF subsetting; Ayudas\n🖥️ láminas clase 07 💻 clase 7: tarea \n\n\n4\nlun, 11 nov.\nInspección DF´s / Seleccionar Valores, Subsettings-cont\n🖥️ láminas clase 08 🖥️ clase 08, versión reporte 💻 clase 8 versión qmd  💻 clase 8: tarea \n\n\n\n\nmié, 13 nov.\nPaths o Rutas de trabajo\n🖥️ láminas clase 09\n\n\n5\nlun, 18 nov.\nTrabajando con Data Frames por filas\n🖥️ láminas clase 10\n\n\n\n\nmié, 20 nov.\nTrabajando con Data Frames por columnas\n🖥️ láminas clase 11 💻 clase 11 versión qmd \n\n\n6\nlun, 25 nov.\nTrabajando con Data Frames: agrupamientos y Reframes\n🖥️ láminas clase 12 💻 clase 12 script  🖥️ clase 12, versión reporte 💻 clase 12 versión qmd \n\n\n\n\nmié, 27 nov.\nTrabajando con Data Frames: Agrupamientos y Reframes/ Asignación Ensayo\n💻 clase 13 script  🖥️ clase 13, versión reporte 💻 clase 13 versión qmd \n\n\n7\nlun, 2 dic.\nTrabajando con LLM R4DS Escuela Economía UCV\n🖥️ láminas clase 14 💻 clase 14 script \n\n\n\n\nmié, 4 dic.\nTrabajando con Data Frames y Tibbles: factores, selects, remoción duplicados. RBase: Coercion\n🖥️ láminas clase 15 💻 clase 15 script  🖥️ clase 15, versión reporte 💻 clase 15 versión qmd \n\n\n\n\nvie, 6 dic.\nTrabajando con Tibbles:Formatos Long y Wide, Valores Ausentes\nmismos materiales de clase 15\n\n\n8\nlun, 9 dic.\ntrabajando con: fechas y strings\n🖥️ láminas clase 17 💻 clase 17 script \n\n\n\n\nmié, 11 dic.\nUsando R para Análisis Económico\n💻 clase 18 script  🛢️ conjunto de datos clase 18 \n\n\n10\nlun, 13 ene.\nAvances anteproyecto- Discusión\n\n\n\n\n\n\nmié, 15 ene.\nIntroducción a la Visualizacion de Datos\n🖥️ láminas clase 19\n\n\n\n\nvie, 17 ene.\nIntroducción al Scrapy\n\n\n\n\n11\nlun, 20 ene.\nVisualizacion de Datos/ Análisis Exploratorio\n🖥️ láminas clase 20-1 🖥️ láminas clase 20-2 🖥️ láminas clase 20-3 💻 clase 20 script \n\n\n\n\nmié, 22 ene.\nIntroducción a uso de API´s\n\n\n\n\n\n\nmié, 22 ene.\nVisualización de Datos: GGplot y otras opciones\n\n\n\n\n12\nlun, 27 ene.\nConexiones API´s, Scrapy (segunda parte)\n\n\n\n\n\n\nmié, 29 ene.\nReportes/Tablas DT y GT/Nombres Columnas /Presentacion Preproyecto\n\n\n\n\n13\nlun, 3 feb.\nDashboard\n\n\n\n\n\n\nmié, 5 feb.\nAplicaciones Web Interactivas: Shiny\n\n\n\n\n14\nlun, 10 feb.\nRevisión Preliminar Proyectos\n\n\n\n\n\n\nmié, 12 feb.\nConexiones a DB´s, lectura y escritura\n\n\n\n\n\n\nlun, 17 feb.\nJoins de DF´s\n\n\n\n\n\n\nmié, 19 feb.\nPresentacion Proyecto",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\nAsignar Nombres Objetos y Variables\n🖥️ láminas clase 03 apoyo  💻 clase 3 apoyo versión qmd \n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n🖥️ láminas clase 04  💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\nConstruir Funciones y Data Frames\n🖥️ láminas clase 06  💻 clase 6 versión qmd  🖥️ clase 6 versión códigos  💻 clase 6: práctica 1- versión qmd  💻 clase 6: práctica 1- versión site  🎥video render Quarto 💻 clase 6: práctica 2- versión qmd  💻 clase 6: práctica 2- versión site \n\n\n\n\nmié, 6 nov.\nDF subsetting; Ayudas\n🖥️ láminas clase 07 💻 clase 7: tarea \n\n\n4\nlun, 11 nov.\nInspección DF´s / Seleccionar Valores, Subsettings-cont\n🖥️ láminas clase 08 🖥️ clase 08, versión reporte 💻 clase 8 versión qmd  💻 clase 8: tarea \n\n\n\n\nmié, 13 nov.\nPaths o Rutas de trabajo\n🖥️ láminas clase 09\n\n\n5\nlun, 18 nov.\nTrabajando con Data Frames por filas\n🖥️ láminas clase 10\n\n\n\n\nmié, 20 nov.\nTrabajando con Data Frames por columnas\n🖥️ láminas clase 11 💻 clase 11 versión qmd \n\n\n6\nlun, 25 nov.\nTrabajando con Data Frames: agrupamientos y Reframes\n🖥️ láminas clase 12 💻 clase 12 script  🖥️ clase 12, versión reporte 💻 clase 12 versión qmd \n\n\n\n\nmié, 27 nov.\nTrabajando con Data Frames: Agrupamientos y Reframes/ Asignación Ensayo\n💻 clase 13 script  🖥️ clase 13, versión reporte 💻 clase 13 versión qmd \n\n\n7\nlun, 2 dic.\nTrabajando con LLM R4DS Escuela Economía UCV\n🖥️ láminas clase 14 💻 clase 14 script \n\n\n\n\nmié, 4 dic.\nTrabajando con Data Frames y Tibbles: factores, selects, remoción duplicados. RBase: Coercion\n🖥️ láminas clase 15 💻 clase 15 script  🖥️ clase 15, versión reporte 💻 clase 15 versión qmd \n\n\n\n\nvie, 6 dic.\nTrabajando con Tibbles:Formatos Long y Wide, Valores Ausentes\nmismos materiales de clase 15\n\n\n8\nlun, 9 dic.\ntrabajando con: fechas y strings\n🖥️ láminas clase 17 💻 clase 17 script \n\n\n\n\nmié, 11 dic.\nUsando R para Análisis Económico\n💻 clase 18 script  🛢️ conjunto de datos clase 18 \n\n\n10\nlun, 13 ene.\nAvances anteproyecto- Discusión\n\n\n\n\n\n\nmié, 15 ene.\nIntroducción a la Visualizacion de Datos\n🖥️ láminas clase 19\n\n\n\n\nvie, 17 ene.\nIntroducción al Scrapy\n\n\n\n\n11\nmié, 22 ene.\nVisualizacion de Datos/ Análisis Exploratorio\n🖥️ láminas clase 20-1 🖥️ láminas clase 20-2 🖥️ láminas clase 20-3 💻 clase 20 script \n\n\n12\nlun, 27 ene.\nVisualización de Datos: GGplot y otras opciones\n🖥️ láminas clase 21 💻 clase 21 script \n\n\n\n\nmié, 29 ene.\nIntroducción a uso de API´s\n\n\n\n\n13\nlun, 3 feb.\nReportes/Tablas DT y GT/Nombres Columnas\n\n\n\n\n\n\nmié, 5 feb.\nDashboard\n\n\n\n\n14\nlun, 10 feb.\nRevisión Preliminar Proyectos\n\n\n\n\n\n\nmié, 12 feb.\nConexiones a DB´s, lectura y escritura\n\n\n\n\n15\nlun, 17 feb.\nJoins de DF´s\n\n\n\n\n\n\nmié, 19 feb.\nPresentacion Proyecto",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -1187,8 +1187,8 @@
     "objectID": "clases/clase_05.html#científicos-de-datos",
     "href": "clases/clase_05.html#científicos-de-datos",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Científicos de Datos 👨‍🔬 👩‍🔬",
-    "text": "Científicos de Datos 👨‍🔬 👩‍🔬\n\n\n\nSesgo del Superviviente"
+    "section": "",
+    "text": "Sesgo del Superviviente"
   },
   {
     "objectID": "clases/clase_05.html#puntos-varios",
@@ -1349,7 +1349,7 @@
     "href": "clases/clase_05.html#recursos-ayuda-paquetes",
     "title": "Ciencia de Datos para Economistas",
     "section": "Recursos Ayuda Paquetes:",
-    "text": "Recursos Ayuda Paquetes:\n\nVignettes:\n\n?? nombre paquete\nCran\n\nCheat Sheets:\n\nDiscord, canal “Recursos disponibles”\nCheat Sheet RStudio\n\n\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Recursos Ayuda Paquetes:\n\nVignettes:\n\n?? nombre paquete\nCran\n\nCheat Sheets:\n\nDiscord, canal “Recursos disponibles”\nCheat Sheet RStudio"
   },
   {
     "objectID": "clases/clase_05.html#correlaciones-espureas",
@@ -2177,8 +2177,8 @@
     "objectID": "clases/clase_08.html#varios-y-puntos-pendientes",
     "href": "clases/clase_08.html#varios-y-puntos-pendientes",
     "title": "Ciencia de Datos para Economistas",
-    "section": "",
-    "text": "intervenciones en clase 13-11 sobre la visualizaciones que se hagan con ggplot2 que viene de tarea clase 5. Cambio de fecha del 11-11 al 13-11\nModificación tarea clase 5 ggplot\nTareas clase 7 (entrega 13 y 18) y clase 8 (20-11)\nClase 6 práctica 1 construccion vectores"
+    "section": "Varios y Puntos Pendientes",
+    "text": "Varios y Puntos Pendientes\n\nintervenciones en clase 13-11 sobre la visualizaciones que se hagan con ggplot2 que viene de tarea clase 5. Cambio de fecha del 11-11 al 13-11\nModificación tarea clase 5 ggplot\nTareas clase 7 (entrega 13 y 18) y clase 8 (20-11)\nClase 6 práctica 1 construccion vectores"
   },
   {
     "objectID": "clases/clase_08.html#objetivo",
@@ -2353,7 +2353,7 @@
     "href": "clases/clase_08.html#continuar-inspección",
     "title": "Ciencia de Datos para Economistas",
     "section": "Continuar Inspección…",
-    "text": "Continuar Inspección…"
+    "text": "Continuar Inspección…\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "clases/clase_08.html#tabla-de-contingencia",
@@ -2569,8 +2569,8 @@
     "objectID": "clases/clase_10.html#objetivo",
     "href": "clases/clase_10.html#objetivo",
     "title": "Ciencia de Datos para Economistas",
-    "section": "",
-    "text": "Realizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las filas u observaciones."
+    "section": "Objetivo",
+    "text": "Objetivo\nRealizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las filas u observaciones."
   },
   {
     "objectID": "clases/clase_10.html#cargar-datos-en-formato-xls",
@@ -2674,8 +2674,8 @@
     "objectID": "clases/clase_11.html#objetivo",
     "href": "clases/clase_11.html#objetivo",
     "title": "Ciencia de Datos para Economistas",
-    "section": "",
-    "text": "Realizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las columnas o atributos."
+    "section": "Objetivo",
+    "text": "Objetivo\nRealizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las columnas o atributos."
   },
   {
     "objectID": "clases/clase_11.html#operaciones-en-columnas",
@@ -2724,7 +2724,7 @@
     "href": "clases/clase_11.html#lecturas-recomendadas",
     "title": "Ciencia de Datos para Economistas",
     "section": "Lecturas Recomendadas:",
-    "text": "Lecturas Recomendadas:\n\nCapítulo 4 R4DS (temas pasados referente a variables y operaciones básicas)\nCapítulo 5 R4DS: comparaciones, operadores lógicos, arrange, select, mutate, summarise, pipe operator. En el capítulo se tratan los valores faltantes NA que luego serán abordados"
+    "text": "Lecturas Recomendadas:\n\nCapítulo 4 R4DS (temas pasados referente a variables y operaciones básicas)\nCapítulo 5 R4DS: comparaciones, operadores lógicos, arrange, select, mutate, summarise, pipe operator. En el capítulo se tratan los valores faltantes NA que luego serán abordados\n\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "clases/clase_09.html#resumencont.",
@@ -2885,7 +2885,7 @@
     "href": "clases/clase_10.html#slice_sample",
     "title": "Ciencia de Datos para Economistas",
     "section": "slice_sample()",
-    "text": "slice_sample()\nUna muestra aleatoria de valores filtrando previamente de acuerdo a un criterio\n\ncontinentes[1]\n\n[1] \"Asia\"\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[1])%&gt;%\n  slice_sample(n=10)\n\n# A tibble: 10 × 6\n   country            continent  year lifeExp       pop gdpPercap\n   &lt;chr&gt;              &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n 1 Jordan             Asia       1977    61.1   1937652     2852.\n 2 Israel             Asia       1987    75.6   4203148    17122.\n 3 West Bank and Gaza Asia       1957    45.7   1070439     1827.\n 4 India              Asia       1982    56.6 708000000      856.\n 5 Iraq               Asia       1977    60.4  11882916    14688.\n 6 Vietnam            Asia       2002    73.0  80908147     1764.\n 7 Jordan             Asia       2002    71.3   5307470     3845.\n 8 Thailand           Asia       1997    67.5  60216677     5853.\n 9 Singapore          Asia       1997    77.2   3802309    33519.\n10 Sri Lanka          Asia       1972    65.0  13016733     1213."
+    "text": "slice_sample()\nUna muestra aleatoria de valores filtrando previamente de acuerdo a un criterio\n\ncontinentes[1]\n\n[1] \"Asia\"\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[1])%&gt;%\n  slice_sample(n=10)\n\n# A tibble: 10 × 6\n   country            continent  year lifeExp        pop gdpPercap\n   &lt;chr&gt;              &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;\n 1 Cambodia           Asia       1972    40.3    7450606      422.\n 2 Hong Kong, China   Asia       1952    61.0    2125900     3054.\n 3 Philippines        Asia       1987    64.2   60017788     2190.\n 4 Indonesia          Asia       2002    68.6  211060000     2874.\n 5 Korea, Dem. Rep.   Asia       1952    50.1    8865488     1088.\n 6 India              Asia       2007    64.7 1110396331     2452.\n 7 Nepal              Asia       1997    59.4   23001113     1011.\n 8 Lebanon            Asia       1957    59.5    1647412     6090.\n 9 Malaysia           Asia       1997    71.9   20476091    10133.\n10 West Bank and Gaza Asia       1967    51.6    1142636     2650."
   },
   {
     "objectID": "clases/clase_10.html#equivalente-slice_tail-en-rbase-1",
@@ -2913,7 +2913,7 @@
     "href": "clases/clase_10.html#notas-finales",
     "title": "Ciencia de Datos para Economistas",
     "section": "Notas finales:",
-    "text": "Notas finales:\n\nRevisar documentación de funciones para comprender los argumentos y su uso\nRevisar funcionamiento de las equivalencias que se presentaron usando RBase"
+    "text": "Notas finales:\n\nRevisar documentación de funciones para comprender los argumentos y su uso\nRevisar funcionamiento de las equivalencias que se presentaron usando RBase\n\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "clases/clase_11.html",
@@ -2990,7 +2990,7 @@
     "href": "clases/clase_11.html#mutate-ifelse---ejemplo--aplicar",
     "title": "Ciencia de Datos para Economistas",
     "section": "Mutate / ifelse - ejemplo- Aplicar",
-    "text": "Mutate / ifelse - ejemplo- Aplicar\nLa columna que vamos a crear se llama “tipo_pib”\n\ndf_pib_2007 &lt;- df_pib_2007%&gt;%\n  mutate(tipo_pib =ifelse(pib&gt;=pib_promedio, # condición a evaluar\n                          \"pib_up_mean\", # caso verdadero =&gt; ocurre a\n                          \"pib_down_mean\"))  #caso falso =&gt; ocurre b\n\ndf_pib_2007%&gt;%\n  sample_n(4)\n\n# A tibble: 4 × 3\n  country             pib tipo_pib     \n  &lt;fct&gt;             &lt;dbl&gt; &lt;chr&gt;        \n1 Ireland   167141167138. pib_down_mean\n2 Guatemala  65203833292. pib_down_mean\n3 Zimbabwe    5782658337. pib_down_mean\n4 Greece    294834223727. pib_down_mean"
+    "text": "Mutate / ifelse - ejemplo- Aplicar\nLa columna que vamos a crear se llama “tipo_pib”\n\ndf_pib_2007 &lt;- df_pib_2007%&gt;%\n  mutate(tipo_pib =ifelse(pib&gt;=pib_promedio, # condición a evaluar\n                          \"pib_up_mean\", # caso verdadero =&gt; ocurre a\n                          \"pib_down_mean\"))  #caso falso =&gt; ocurre b\n\ndf_pib_2007%&gt;%\n  sample_n(4)\n\n# A tibble: 4 × 3\n  country            pib tipo_pib     \n  &lt;fct&gt;            &lt;dbl&gt; &lt;chr&gt;        \n1 Norway   228421423675. pib_down_mean\n2 Djibouti   1033689705. pib_down_mean\n3 Croatia   65688728878. pib_down_mean\n4 Mali      12544127565. pib_down_mean"
   },
   {
     "objectID": "clases/clase_11.html#mutate-doble-ifelse---problema",
@@ -3046,7 +3046,7 @@
     "href": "clases/clase_11.html#nota",
     "title": "Ciencia de Datos para Economistas",
     "section": "Nota:",
-    "text": "Nota:\nNayuha, de forma apropiada investigó cuál función se usa para obtener estos valores quantile y cómo se pueden asignar a una variable, dado que la salida que genera la función summary no es maleable para extraer datos individuales como los valores asociados a un cuantil u otro.\n\n🙌🏼"
+    "text": "Nota:\nNayuha, de forma apropiada investigó cuál función se usa para obtener estos valores quantile y cómo se pueden asignar a una variable, dado que la salida que genera la función summary no es maleable para extraer datos individuales como los valores asociados a un cuantil u otro.\n🙌🏼"
   },
   {
     "objectID": "clases/clase_11.html#histograma",
@@ -3888,7 +3888,7 @@
     "href": "clases/clase_10.html#equivalente-de-slice_tail-en-rbase-1",
     "title": "Ciencia de Datos para Economistas",
     "section": "equivalente de slice_tail() en Rbase",
-    "text": "equivalente de slice_tail() en Rbase\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[1])%&gt;%\n  .[sample(1:nrow(.),10),]\n\n# A tibble: 10 × 6\n   country            continent  year lifeExp      pop gdpPercap\n   &lt;chr&gt;              &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;\n 1 Mongolia           Asia       1997    63.6  2494803     1902.\n 2 Saudi Arabia       Asia       2002    71.6 24501530    19015.\n 3 West Bank and Gaza Asia       1982    64.4  1425876     4336.\n 4 Lebanon            Asia       1962    62.1  1886848     5715.\n 5 Korea, Dem. Rep.   Asia       1967    59.9 12617009     2144.\n 6 Mongolia           Asia       1972    53.8  1320500     1422.\n 7 Jordan             Asia       1997    69.8  4526235     3645.\n 8 Singapore          Asia       1957    63.2  1445929     2843.\n 9 Korea, Rep.        Asia       2002    77.0 47969150    19234.\n10 Vietnam            Asia       2007    74.2 85262356     2442."
+    "text": "equivalente de slice_tail() en Rbase\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[1])%&gt;%\n  .[sample(1:nrow(.),10),]\n\n# A tibble: 10 × 6\n   country          continent  year lifeExp        pop gdpPercap\n   &lt;chr&gt;            &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;\n 1 Cambodia         Asia       1972    40.3    7450606      422.\n 2 Myanmar          Asia       1987    58.3   38028578      385 \n 3 Bahrain          Asia       1982    69.1     377967    19211.\n 4 Malaysia         Asia       2002    73.0   22662365    10207.\n 5 Cambodia         Asia       2002    56.8   12926707      896.\n 6 China            Asia       2002    72.0 1280400000     3119.\n 7 Korea, Rep.      Asia       1967    57.7   30131000     2029.\n 8 Iraq             Asia       1977    60.4   11882916    14688.\n 9 Afghanistan      Asia       1982    39.9   12881816      978.\n10 Korea, Dem. Rep. Asia       1967    59.9   12617009     2144."
   },
   {
     "objectID": "clases/clase_12.html",
@@ -3958,7 +3958,7 @@
     "href": "clases/clase_11.html#explorar-países-con-medio-pib",
     "title": "Ciencia de Datos para Economistas",
     "section": "Explorar Países con medio PIB",
-    "text": "Explorar Países con medio PIB\nMuestra aleatoria\n\ndf_pib_2007%&gt;%\n  filter(tipo_pib2== 'medio_pib')%&gt;%\n  sample_n(8)\n\n# A tibble: 8 × 4\n  country              pib tipo_pib      tipo_pib2\n  &lt;fct&gt;              &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;    \n1 Panama      31803076821. pib_down_mean medio_pib\n2 Chad        17447579586. pib_down_mean medio_pib\n3 Finland    173953983346. pib_down_mean medio_pib\n4 Cuba       102160374747. pib_down_mean medio_pib\n5 Vietnam    208174556559. pib_down_mean medio_pib\n6 Madagascar  20025792285. pib_down_mean medio_pib\n7 Tunisia     72887997687. pib_down_mean medio_pib\n8 Guatemala   65203833292. pib_down_mean medio_pib"
+    "text": "Explorar Países con medio PIB\nMuestra aleatoria\n\ndf_pib_2007%&gt;%\n  filter(tipo_pib2== 'medio_pib')%&gt;%\n  sample_n(8)\n\n# A tibble: 8 × 4\n  country                      pib tipo_pib      tipo_pib2\n  &lt;fct&gt;                      &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;    \n1 Slovenia            51774742721. pib_down_mean medio_pib\n2 Panama              31803076821. pib_down_mean medio_pib\n3 Angola              59583895818. pib_down_mean medio_pib\n4 Czech Republic     233556067422. pib_down_mean medio_pib\n5 Gabon               19213678514. pib_down_mean medio_pib\n6 Dominican Republic  56154215097. pib_down_mean medio_pib\n7 Denmark            192906627081. pib_down_mean medio_pib\n8 Yemen, Rep.         50659874994. pib_down_mean medio_pib"
   },
   {
     "objectID": "practicas/clase11.html",
@@ -4189,8 +4189,8 @@
     "objectID": "clases/clase_14.html#objetivo",
     "href": "clases/clase_14.html#objetivo",
     "title": "Clase 14: Uso del LLM “R4DS Economía”",
-    "section": "",
-    "text": "Usar funciones de dplyr para poder remover duplicados, seleccionar columnas\nUso de factores para datos categóricos"
+    "section": "Objetivo:",
+    "text": "Objetivo:\n\nUsar funciones de dplyr para poder remover duplicados, seleccionar columnas\nUso de factores para datos categóricos"
   },
   {
     "objectID": "clases/clase_14.html#varios-y-puntos-pendientes",
@@ -4354,8 +4354,8 @@
     "objectID": "clases/clase_15.html#dplyr---fns-complementarias-select",
     "href": "clases/clase_15.html#dplyr---fns-complementarias-select",
     "title": "Clase 15: DPLYR, Factores, Coerce, Recycle, NA’s, tidyr",
-    "section": "",
-    "text": "contains(): Selecciona variables cuyo nombre contiene la cadena de texto\nends_with(): Selecciona variables cuyo nombre termina con la cadena de caracteres\neverything(): Selecciona todas las columnas"
+    "section": "DPLYR - fn´s complementarias select",
+    "text": "DPLYR - fn´s complementarias select\n\ncontains(): Selecciona variables cuyo nombre contiene la cadena de texto\nends_with(): Selecciona variables cuyo nombre termina con la cadena de caracteres\neverything(): Selecciona todas las columnas"
   },
   {
     "objectID": "clases/clase_15.html#dplyr---fns-complementarias-select--2",
@@ -4420,7 +4420,7 @@
     "href": "clases/clase_15.html#coerce",
     "title": "Clase 15: DPLYR, Factores, Coerce, Recycle, NA’s, tidyr",
     "section": "Coerce",
-    "text": "Coerce\nSe refiere al proceso automático de conversión de un tipo de dato a otro (class). Esto puede ocurrir cuando se realizan operaciones entre diferentes tipos de datos, y R intenta adaptar los datos para que puedan ser utilizados juntos.\n\nTipos:\n\nCoerción Implícita\n\n\nCoerción Explícita"
+    "text": "Coerce\nSe refiere al proceso automático de conversión de un tipo de dato a otro (class). Esto puede ocurrir cuando se realizan operaciones entre diferentes tipos de datos, y R intenta adaptar los datos para que puedan ser utilizados juntos.\nTipos:\nCoerción Implícita\nCoerción Explícita"
   },
   {
     "objectID": "clases/clase_15.html#recycle",
@@ -4441,14 +4441,14 @@
     "href": "clases/clase_15.html#formatos-long-y-wide",
     "title": "Clase 15: DPLYR, Factores, Coerce, Recycle, NA’s, tidyr",
     "section": "Formatos Long y Wide",
-    "text": "Formatos Long y Wide\n\nLong\nEl formato long es donde:\n\ncada columna es una variable\ncada fila es una observación\n\nEn el formato “largo”, generalmente tienes una columna para la variable observada y las otras columnas son variables de ID."
+    "text": "Formatos Long y Wide\nLong\nEl formato long es donde:\n\ncada columna es una variable\ncada fila es una observación\n\nEn el formato “largo”, generalmente tienes una columna para la variable observada y las otras columnas son variables de ID."
   },
   {
     "objectID": "clases/clase_15.html#tareas",
     "href": "clases/clase_15.html#tareas",
     "title": "Clase 15: DPLYR, Factores, Coerce, Recycle, NA’s, tidyr",
     "section": "Tareas",
-    "text": "Tareas\nRevisar viñeta https://tidyr.tidyverse.org/articles/pivot.html#longer-then-wider\nCambiar gapminder de formato mixto a longer. Fecha 8-1-25"
+    "text": "Tareas\nRevisar viñeta https://tidyr.tidyverse.org/articles/pivot.html#longer-then-wider\nCambiar gapminder de formato mixto a longer. Fecha 8-1-25\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "clases/clase_15.html#formato-wide",
@@ -4496,8 +4496,8 @@
     "objectID": "clases/clase_17.html#objetivo",
     "href": "clases/clase_17.html#objetivo",
     "title": "Ciencia de Datos para Economistas",
-    "section": "",
-    "text": "Conocer las estructuras y formas de manipular las fechas y horas, así como las distintas representaciones de este tipo de datos en R"
+    "section": "Objetivo:",
+    "text": "Objetivo:\nConocer las estructuras y formas de manipular las fechas y horas, así como las distintas representaciones de este tipo de datos en R"
   },
   {
     "objectID": "clases/clase_17.html#asignar-time-zone",
@@ -4539,7 +4539,7 @@
     "href": "clases/clase_17.html#lecturas-recomendadas",
     "title": "Ciencia de Datos para Economistas",
     "section": "Lecturas Recomendadas",
-    "text": "Lecturas Recomendadas\n\nhttp://ianmadd.github.io/pages/POSIXct_and_POSIXlt.html\nhttps://www.stat.berkeley.edu/~s133/dates.html\nhttps://clock.r-lib.org/reference/posixt-formatting.html"
+    "text": "Lecturas Recomendadas\n\nhttp://ianmadd.github.io/pages/POSIXct_and_POSIXlt.html\nhttps://www.stat.berkeley.edu/~s133/dates.html\nhttps://clock.r-lib.org/reference/posixt-formatting.html\n\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "clases/clase_17.html#ejemplos-fechas2",
@@ -5703,28 +5703,28 @@
     "href": "clases/clase_19_site.html#y-en-el-inicio",
     "title": "Ciencia de Datos para Economistas",
     "section": "y en el inicio",
-    "text": "y en el inicio\n\nMapa del Mundo Babilónico - VII AC"
+    "text": "y en el inicio\n\n\n\nMapa del Mundo Babilónico - VII AC"
   },
   {
     "objectID": "clases/clase_19_site.html#mapa-orbis-terrarum-o-t",
     "href": "clases/clase_19_site.html#mapa-orbis-terrarum-o-t",
     "title": "Ciencia de Datos para Economistas",
     "section": "Mapa Orbis Terrarum (O-T)",
-    "text": "Mapa Orbis Terrarum (O-T)\n\nhttps://en.wikipedia.org/wiki/T_and_O_map\nEs de suponer que se consideró tácitamente una proyección conveniente de la porción habitada del mundo conocida en época romana y medieval . La T es el Mediterráneo, que divide los tres continentes, Asia, Europa y África, y la O es el Océano circundante."
+    "text": "Mapa Orbis Terrarum (O-T)\n\n\n\nhttps://en.wikipedia.org/wiki/T_and_O_map\n\n\n\nEs de suponer que se consideró tácitamente una proyección conveniente de la porción habitada del mundo conocida en época romana y medieval . La T es el Mediterráneo, que divide los tres continentes, Asia, Europa y África, y la O es el Océano circundante."
   },
   {
     "objectID": "clases/clase_19_site.html#mapa-mahmud-al-kashgaris",
     "href": "clases/clase_19_site.html#mapa-mahmud-al-kashgaris",
     "title": "Ciencia de Datos para Economistas",
     "section": "Mapa Mahmud al-Kashgari’s",
-    "text": "Mapa Mahmud al-Kashgari’s\n\nAproximadamente siglo XI. Tomado de https://en.wikipedia.org/wiki/Mahmud_al-Kashgari\nSe utilizan símbolos:\nlíneas azules para los ríos,\nlíneas rojas para las cadenas montañosas\nEl mundo está rodeado por el océano."
+    "text": "Mapa Mahmud al-Kashgari’s\n\n\n\nAproximadamente siglo XI. Tomado de https://en.wikipedia.org/wiki/Mahmud_al-Kashgari\n\n\n\nSe utilizan símbolos:\nlíneas azules para los ríos,\nlíneas rojas para las cadenas montañosas\nEl mundo está rodeado por el océano."
   },
   {
     "objectID": "clases/clase_19_site.html#el-reloj-cosmográfico",
     "href": "clases/clase_19_site.html#el-reloj-cosmográfico",
     "title": "Ciencia de Datos para Economistas",
     "section": "El Reloj Cosmográfico",
-    "text": "El Reloj Cosmográfico\n\nJohn Carte, aprox. 1700 en The Book of Trees: Visualizing Branches of Knowledge de Manuel Lima"
+    "text": "El Reloj Cosmográfico\n\n\n\nJohn Carte, aprox. 1700 en The Book of Trees: Visualizing Branches of Knowledge de Manuel Lima"
   },
   {
     "objectID": "clases/clase_19_site.html#problema-representación-en-mapas",
@@ -5745,7 +5745,7 @@
     "href": "clases/clase_19_site.html#en-distintas-proyecciones-1",
     "title": "Ciencia de Datos para Economistas",
     "section": "🇻🇪 - 🇨🇴 en Distintas Proyecciones",
-    "text": "🇻🇪 - 🇨🇴 en Distintas Proyecciones\n\ncódigo disponible en https://github.com/UCVeconomia2024-2/scripts/tree/main/soporte_clases/clase_19/mapa_proyecciones.R"
+    "text": "🇻🇪 - 🇨🇴 en Distintas Proyecciones\n\n\n\ncódigo disponible en https://github.com/UCVeconomia2024-2/scripts/tree/main/soporte_clases/clase_19/mapa_proyecciones.R"
   },
   {
     "objectID": "clases/clase_19_site.html#elementos-mapas",
@@ -5759,21 +5759,21 @@
     "href": "clases/clase_19_site.html#herencia-de-los-mapas",
     "title": "Ciencia de Datos para Economistas",
     "section": "Herencia de los Mapas",
-    "text": "Herencia de los Mapas\n\nMapa realizado por John Snow en 1854. Tomado de Visual Explanations, Images and Quantities de Edward R. Tufte"
+    "text": "Herencia de los Mapas\n\n\n\nMapa realizado por John Snow en 1854. Tomado de Visual Explanations, Images and Quantities de Edward R. Tufte"
   },
   {
     "objectID": "clases/clase_19_site.html#representación-de-flujos-comerciales",
     "href": "clases/clase_19_site.html#representación-de-flujos-comerciales",
     "title": "Ciencia de Datos para Economistas",
     "section": "Representación de Flujos Comerciales",
-    "text": "Representación de Flujos Comerciales\n\n1864, Exportaciones de Vino Frances por Charles Joseph Minard, cartógrafo fránces. Tomado de Visual Explanations, Images and Quantities de Edward R. Tufte"
+    "text": "Representación de Flujos Comerciales\n\n\n\n1864, Exportaciones de Vino Frances por Charles Joseph Minard, cartógrafo fránces. Tomado de Visual Explanations, Images and Quantities de Edward R. Tufte"
   },
   {
     "objectID": "clases/clase_19_site.html#visualización-de-observaciones--galileo-galilei",
     "href": "clases/clase_19_site.html#visualización-de-observaciones--galileo-galilei",
     "title": "Ciencia de Datos para Economistas",
     "section": "Visualización de Observaciones- Galileo Galilei",
-    "text": "Visualización de Observaciones- Galileo Galilei\n\n1610, año de las observaciones de G.G. obtenido de https://www.esa.int/ESA_Multimedia/Images/2005/11/Galileo_s_observations_of_Jupiter_s_moons"
+    "text": "Visualización de Observaciones- Galileo Galilei\n\n\n\n1610, año de las observaciones de G.G. obtenido de https://www.esa.int/ESA_Multimedia/Images/2005/11/Galileo_s_observations_of_Jupiter_s_moons"
   },
   {
     "objectID": "clases/clase_19_site.html#detalle-observación-lunas-júpiter",
@@ -5787,14 +5787,14 @@
     "href": "clases/clase_19_site.html#contar-historias-espacio-y-tiempo",
     "title": "Ciencia de Datos para Economistas",
     "section": "Contar Historias: Espacio y Tiempo",
-    "text": "Contar Historias: Espacio y Tiempo\n\nAvance de Campaña del Ejercito Francés al mando de Napoleón Bonaparte por Charles Joseph Minard, 1869. Tomado de The Visual Display of Quantitative Information de Edward Tufte"
+    "text": "Contar Historias: Espacio y Tiempo\n\n\n\nAvance de Campaña del Ejercito Francés al mando de Napoleón Bonaparte por Charles Joseph Minard, 1869. Tomado de The Visual Display of Quantitative Information de Edward Tufte"
   },
   {
     "objectID": "clases/clase_19_site.html#el-eslabón",
     "href": "clases/clase_19_site.html#el-eslabón",
     "title": "Ciencia de Datos para Economistas",
     "section": "El Eslabón",
-    "text": "El Eslabón\n\nThe Comertial and Political Atlas de William Payfair, 1786"
+    "text": "El Eslabón\n\n\n\nThe Comertial and Political Atlas de William Payfair, 1786"
   },
   {
     "objectID": "clases/clase_19_site.html#encontrar-patrones",
@@ -5843,14 +5843,14 @@
     "href": "clases/clase_19_site.html#marketing",
     "title": "Ciencia de Datos para Economistas",
     "section": "🛑 Marketing",
-    "text": "🛑 Marketing\n\nPresentación del Iphone por Steve Jobs 2008. Tomado de https://www.labo.mathieurella.fr/?p=403"
+    "text": "🛑 Marketing\n\n\n\nPresentación del Iphone por Steve Jobs 2008. Tomado de https://www.labo.mathieurella.fr/?p=403"
   },
   {
     "objectID": "clases/clase_19_site.html#section-1",
     "href": "clases/clase_19_site.html#section-1",
     "title": "Ciencia de Datos para Economistas",
     "section": "",
-    "text": "https://elpais.com/tecnologia/2024-11-24/de-bannon-a-musk-la-decada-que-convirtio-la-desinformacion-en-la-nueva-normalidad.html\nLa libertad depende de ciudadanos capaces de distinguir distinguir entre lo que es verdad y lo que quieren oír. El autoritarismo llega no porque la gente diga que lo quiere, sino porque pierde la capacidad de distinguir entre hechos y deseos.\nTIMOTHY SNYDER, EL CAMINO HACIA LA FALTA DE LIBERTAD (2018)"
+    "text": "https://elpais.com/tecnologia/2024-11-24/de-bannon-a-musk-la-decada-que-convirtio-la-desinformacion-en-la-nueva-normalidad.html\n\n\n\nLa libertad depende de ciudadanos capaces de distinguir distinguir entre lo que es verdad y lo que quieren oír. El autoritarismo llega no porque la gente diga que lo quiere, sino porque pierde la capacidad de distinguir entre hechos y deseos.\nTIMOTHY SNYDER, EL CAMINO HACIA LA FALTA DE LIBERTAD (2018)"
   },
   {
     "objectID": "clases/clase_19_site.html#formalidades",
@@ -5864,7 +5864,7 @@
     "href": "clases/clase_19_site.html#canales-de-comunicación-recomendados",
     "title": "Ciencia de Datos para Economistas",
     "section": "Canales de Comunicación Recomendados",
-    "text": "Canales de Comunicación Recomendados\n\nGuía de Munzner para agrupar los canales visuales en magnitud e identidad y clasificarlos por eficacia. Imágen extraída de «Visualization Analysis and Design» de Tamara Munzner"
+    "text": "Canales de Comunicación Recomendados\n\n\n\nGuía de Munzner para agrupar los canales visuales en magnitud e identidad y clasificarlos por eficacia. Imágen extraída de «Visualization Analysis and Design» de Tamara Munzner"
   },
   {
     "objectID": "clases/clase_19_site.html#uso-de-colores",
@@ -5899,7 +5899,7 @@
     "href": "clases/clase_19_site.html#viridis",
     "title": "Ciencia de Datos para Economistas",
     "section": "Viridis",
-    "text": "Viridis\n\ncolores diseñados para mejorar la legibilidad de los gráficos para lectores con formas comunes de daltonismo y/o deficiencia de visión cromática"
+    "text": "Viridis\n\n\n\ncolores diseñados para mejorar la legibilidad de los gráficos para lectores con formas comunes de daltonismo y/o deficiencia de visión cromática"
   },
   {
     "objectID": "clases/clase_19_site.html#uso-de-escalas-de-representación",
@@ -5927,21 +5927,21 @@
     "href": "clases/clase_19_site.html#logarítmica",
     "title": "Ciencia de Datos para Economistas",
     "section": "Logarítmica",
-    "text": "Logarítmica\n\nmás información en https://pmc.ncbi.nlm.nih.gov/articles/PMC7200843/"
+    "text": "Logarítmica\n\n\n\nmás información en https://pmc.ncbi.nlm.nih.gov/articles/PMC7200843/"
   },
   {
     "objectID": "clases/clase_19_site.html#gráficos-interactivos-owd",
     "href": "clases/clase_19_site.html#gráficos-interactivos-owd",
     "title": "Ciencia de Datos para Economistas",
     "section": "Gráficos Interactivos OWD",
-    "text": "Gráficos Interactivos OWD\n\nen este tipo de gráficos se incorporan métodos alternativos para acceder a los datos. https://ourworldindata.org/poverty"
+    "text": "Gráficos Interactivos OWD\n\n\n\nen este tipo de gráficos se incorporan métodos alternativos para acceder a los datos. https://ourworldindata.org/poverty"
   },
   {
     "objectID": "clases/clase_19_site.html#gráficos-interactivos-patria",
     "href": "clases/clase_19_site.html#gráficos-interactivos-patria",
     "title": "Ciencia de Datos para Economistas",
     "section": "Gráficos Interactivos Patria",
-    "text": "Gráficos Interactivos Patria\n\nhttps://covid19.patria.org.ve/estadisticas-venezuela/"
+    "text": "Gráficos Interactivos Patria\n\n\n\nhttps://covid19.patria.org.ve/estadisticas-venezuela/"
   },
   {
     "objectID": "clases/clase_19_site.html#gráficos-recomendados-según-caso-de-uso",
@@ -5962,7 +5962,7 @@
     "href": "clases/clase_19_site.html#representación-de-áreas-dispersas-2",
     "title": "Ciencia de Datos para Economistas",
     "section": "Representación de Áreas Dispersas 2",
-    "text": "Representación de Áreas Dispersas 2\nRepresentación 3d interactiva con resultados elecciones presidenciales EEUU 2016 por County\n\nDisponible en https://carto.maps.arcgis.com/apps/webappviewer3d/index.html?id=02b618528b7b458cb5d05557ebd44"
+    "text": "Representación de Áreas Dispersas 2\nRepresentación 3d interactiva con resultados elecciones presidenciales EEUU 2016 por County\n\n\n\nDisponible en https://carto.maps.arcgis.com/apps/webappviewer3d/index.html?id=02b618528b7b458cb5d05557ebd44"
   },
   {
     "objectID": "clases/clase_19_site.html#representaciones-sin-ejes",
@@ -5990,7 +5990,7 @@
     "href": "clases/clase_19_site.html#desproporciones--comparaciones-no-apropiadas",
     "title": "Ciencia de Datos para Economistas",
     "section": "Desproporciones- Comparaciones no Apropiadas",
-    "text": "Desproporciones- Comparaciones no Apropiadas\n\nhttps://www.vtv.gob.ve/dia-1125-lucha-covid-14042023/"
+    "text": "Desproporciones- Comparaciones no Apropiadas\n\n\n\nhttps://www.vtv.gob.ve/dia-1125-lucha-covid-14042023/"
   },
   {
     "objectID": "clases/clase_19_site.html#truncado-de-ejes",
@@ -6011,28 +6011,28 @@
     "href": "clases/clase_19_site.html#representaciones-no-honestas",
     "title": "Ciencia de Datos para Economistas",
     "section": "Representaciones “No Honestas”",
-    "text": "Representaciones “No Honestas”\n\nTruncating the Y-Axis: Threat or Menace?, Michael Correll, disponible en https://arxiv.org/pdf/1907.02035"
+    "text": "Representaciones “No Honestas”\n\n\n\nTruncating the Y-Axis: Threat or Menace?, Michael Correll, disponible en https://arxiv.org/pdf/1907.02035"
   },
   {
     "objectID": "clases/clase_19_site.html#doble-eje-y",
     "href": "clases/clase_19_site.html#doble-eje-y",
     "title": "Ciencia de Datos para Economistas",
     "section": "Doble Eje Y",
-    "text": "Doble Eje Y\n\nhttps://cedice.org.ve/ogp/wp-content/uploads/2024/02/CII-2024-febrero.pdf"
+    "text": "Doble Eje Y\n\n\n\n\n\nhttps://cedice.org.ve/ogp/wp-content/uploads/2024/02/CII-2024-febrero.pdf"
   },
   {
     "objectID": "clases/clase_19_site.html#fuentes-de-datos-no-apropiadas",
     "href": "clases/clase_19_site.html#fuentes-de-datos-no-apropiadas",
     "title": "Ciencia de Datos para Economistas",
     "section": "Fuentes de Datos no Apropiadas",
-    "text": "Fuentes de Datos no Apropiadas\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://cedice.org.ve/ogp/wp-content/uploads/2024/02/CII-2024-febrero.pdf"
+    "text": "Fuentes de Datos no Apropiadas\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhttps://cedice.org.ve/ogp/wp-content/uploads/2024/02/CII-2024-febrero.pdf"
   },
   {
     "objectID": "clases/clase_19_site.html#mentir-con-los-gráficos",
     "href": "clases/clase_19_site.html#mentir-con-los-gráficos",
     "title": "Ciencia de Datos para Economistas",
     "section": "Mentir con los gráficos",
-    "text": "Mentir con los gráficos\n\nmás info en https://www.linkedin.com/pulse/when-numbers-mislead-groww-in/"
+    "text": "Mentir con los gráficos\n\n\n\nmás info en https://www.linkedin.com/pulse/when-numbers-mislead-groww-in/"
   },
   {
     "objectID": "clases/clase_19_site.html#gráficos-no-apropiados-u-óptimos",
@@ -6053,7 +6053,7 @@
     "href": "clases/clase_19_site.html#eda",
     "title": "Ciencia de Datos para Economistas",
     "section": "EDA",
-    "text": "EDA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEjemplos obtenidos de “Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics through Simulated Annealing” por Justin Matejka et all."
+    "text": "EDA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEjemplos obtenidos de “Same Stats, Different Graphs: Generating Datasets with Varied Appearance and Identical Statistics through Simulated Annealing” por Justin Matejka et all."
   },
   {
     "objectID": "clases/clase_19_site.html#ii-comunicar-resultados",
@@ -6074,7 +6074,7 @@
     "href": "clases/clase_19_site.html#presentar-resultados-grafos",
     "title": "Ciencia de Datos para Economistas",
     "section": "Presentar Resultados Grafos",
-    "text": "Presentar Resultados Grafos\n\nInvestigación de El Gato y la Caja sobre el crecimiento de los nuevos medios digitales en Argentina, disponible en https://elgatoylacaja.com/el-dia-que-prendieron-la-luz"
+    "text": "Presentar Resultados Grafos\n\n\n\nInvestigación de El Gato y la Caja sobre el crecimiento de los nuevos medios digitales en Argentina, disponible en https://elgatoylacaja.com/el-dia-que-prendieron-la-luz"
   },
   {
     "objectID": "clases/clase_19_site.html#variaciones-mensuales-de-valores",
@@ -6088,14 +6088,14 @@
     "href": "clases/clase_19_site.html#clusters---tópicos",
     "title": "Ciencia de Datos para Economistas",
     "section": "Clusters - Tópicos",
-    "text": "Clusters - Tópicos\n\nVisualización elaborada por José Avendaño disponible en https://atlas.nomic.ai/data/javenda/saber-ucv/map"
+    "text": "Clusters - Tópicos\n\n\n\nVisualización elaborada por José Avendaño disponible en https://atlas.nomic.ai/data/javenda/saber-ucv/map"
   },
   {
     "objectID": "clases/clase_19_site.html#treemaps",
     "href": "clases/clase_19_site.html#treemaps",
     "title": "Ciencia de Datos para Economistas",
     "section": "Treemaps",
-    "text": "Treemaps\n\nCovid 19 en Venezuela, cifras Patria,org.ve, procesadas por José Avendaño https://javenda.netlify.app/covid19venezuela"
+    "text": "Treemaps\n\n\n\nCovid 19 en Venezuela, cifras Patria,org.ve, procesadas por José Avendaño https://javenda.netlify.app/covid19venezuela"
   },
   {
     "objectID": "clases/clase_19_site.html#distribuciones",
@@ -6109,7 +6109,7 @@
     "href": "clases/clase_19_site.html#ejemplos-de-códigos-ggplot2",
     "title": "Ciencia de Datos para Economistas",
     "section": "Ejemplos de Códigos GGplot2",
-    "text": "Ejemplos de Códigos GGplot2\n\nhttps://r-graph-gallery.com"
+    "text": "Ejemplos de Códigos GGplot2\n\n\n\nhttps://r-graph-gallery.com"
   },
   {
     "objectID": "clases/clase_19_completa.html#section",
@@ -6557,7 +6557,7 @@
     "href": "clases/clase_19_site.html#recursos-adicionales-de-interés",
     "title": "Ciencia de Datos para Economistas",
     "section": "Recursos Adicionales de Interés",
-    "text": "Recursos Adicionales de Interés\n\nCódigos con gráficos para el sistema GGplot r-graph-gallery\nVisualización Datos Abiertos https://datos.gob.es\nBBC R cookbook https://bbc.github.io\nVisualización de Datos en R4DS R4DS\nModern Data Visualization datavis\nSitio de Edward Tufte https://www.edwardtufte.com\nTruncating the Y-Axis, Michael Correll, https://arxiv.org/pdf/1907.02035\n\n\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Recursos Adicionales de Interés\n\nCódigos con gráficos para el sistema GGplot r-graph-gallery\nVisualización Datos Abiertos https://datos.gob.es\nBBC R cookbook https://bbc.github.io\nVisualización de Datos en R4DS R4DS\nModern Data Visualization datavis\nSitio de Edward Tufte https://www.edwardtufte.com\nTruncating the Y-Axis, Michael Correll, https://arxiv.org/pdf/1907.02035"
   },
   {
     "objectID": "clases/clase_19_completa.html#recursos-adicionales-de-interés",
@@ -6934,8 +6934,8 @@
     "objectID": "clases/clase_20_0.html#anuncios",
     "href": "clases/clase_20_0.html#anuncios",
     "title": "Ciencia de Datos para Economistas",
-    "section": "",
-    "text": "Tramitar API key Google AI Studio\nTramitar API key RapidApi\nRetardos en tareas. Fin del plazo\nProgramación Actividades\nClase faltante lunes 20-01.\n\npresencial miércoles 29 en la mañana\nremota, fecha por definir semana 27 al 31-01"
+    "section": "Anuncios",
+    "text": "Anuncios\n\nTramitar API key Google AI Studio\nTramitar API key RapidApi\nRetardos en tareas. Fin del plazo\nProgramación Actividades\nClase faltante lunes 20-01.\n\npresencial miércoles 29 en la mañana\nremota, fecha por definir semana 27 al 31-01"
   },
   {
     "objectID": "clases/clase_20_0.html#objetivo",
@@ -6949,7 +6949,7 @@
     "href": "clases/clase_20_0.html#contenido",
     "title": "Ciencia de Datos para Economistas",
     "section": "Contenido",
-    "text": "Contenido\n\nRepaso clase IAVD\nPrincipios de Gráficos Analíticos\nGráficos Exploratorios (GE)\nLibrerías para EDA"
+    "text": "Contenido\n\nRepaso clase IAVD\nPrincipios de Gráficos Analíticos\nGráficos Exploratorios (GE)\nLibrerías para EDA\n\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "clases/clases_20_2.html#conjuntos-de-datos-a-usar-1",
@@ -7228,8 +7228,8 @@
     "objectID": "clases/clase_20_2.html#gráficos-exploratorios-ge",
     "href": "clases/clase_20_2.html#gráficos-exploratorios-ge",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Gráficos Exploratorios (GE)",
-    "text": "Gráficos Exploratorios (GE)\n\nComprender características que presentan los datos\nEncontrar patrones presentes o implícitos\nEvaluar posibles estrategias de modelización\nDepurar el análisis\nComunicar los resultados del proceso de obtención-levantamiento de los datos"
+    "section": "",
+    "text": "Comprender características que presentan los datos\nEncontrar patrones presentes o implícitos\nEvaluar posibles estrategias de modelización\nDepurar el análisis\nComunicar los resultados del proceso de obtención-levantamiento de los datos"
   },
   {
     "objectID": "clases/clase_20_2.html#características-de-los-ge",
@@ -7264,28 +7264,28 @@
     "href": "clases/clase_20_2.html#conjuntos-de-datos-a-usar-1",
     "title": "Ciencia de Datos para Economistas",
     "section": "Conjuntos de Datos a Usar 1",
-    "text": "Conjuntos de Datos a Usar 1\nGapminder\n\nhead(gapminder)\n\n# A tibble: 6 × 6\n  country     continent  year lifeExp      pop gdpPercap\n  &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;\n1 Afghanistan Asia       1952    28.8  8425333      779.\n2 Afghanistan Asia       1957    30.3  9240934      821.\n3 Afghanistan Asia       1962    32.0 10267083      853.\n4 Afghanistan Asia       1967    34.0 11537966      836.\n5 Afghanistan Asia       1972    36.1 13079460      740.\n6 Afghanistan Asia       1977    38.4 14880372      786."
+    "text": "Conjuntos de Datos a Usar 1\n\nGapminder\n\nhead(gapminder)\n\n# A tibble: 6 × 6\n  country     continent  year lifeExp      pop gdpPercap\n  &lt;fct&gt;       &lt;fct&gt;     &lt;int&gt;   &lt;dbl&gt;    &lt;int&gt;     &lt;dbl&gt;\n1 Afghanistan Asia       1952    28.8  8425333      779.\n2 Afghanistan Asia       1957    30.3  9240934      821.\n3 Afghanistan Asia       1962    32.0 10267083      853.\n4 Afghanistan Asia       1967    34.0 11537966      836.\n5 Afghanistan Asia       1972    36.1 13079460      740.\n6 Afghanistan Asia       1977    38.4 14880372      786."
   },
   {
     "objectID": "clases/clase_20_2.html#conjuntos-de-datos-a-usar-2",
     "href": "clases/clase_20_2.html#conjuntos-de-datos-a-usar-2",
     "title": "Ciencia de Datos para Economistas",
     "section": "Conjuntos de Datos a Usar 2",
-    "text": "Conjuntos de Datos a Usar 2\nGapminder 2007\n\ngapminder_2007 &lt;- gapminder%&gt;%\n  filter(year==2007)"
+    "text": "Conjuntos de Datos a Usar 2\n\nGapminder 2007\n\ngapminder_2007 &lt;- gapminder%&gt;%\n  filter(year==2007)"
   },
   {
     "objectID": "clases/clase_20_2.html#conjuntos-de-datos-a-usar-3",
     "href": "clases/clase_20_2.html#conjuntos-de-datos-a-usar-3",
     "title": "Ciencia de Datos para Economistas",
     "section": "Conjuntos de Datos a Usar 3",
-    "text": "Conjuntos de Datos a Usar 3\nGapminder África y Europa\n\ngapminder_afeu &lt;- gapminder%&gt;%\n  filter(continent %in% c('Africa','Europe'))%&gt;%\n  mutate(continent= as.character(continent))"
+    "text": "Conjuntos de Datos a Usar 3\n\nGapminder África y Europa\n\ngapminder_afeu &lt;- gapminder%&gt;%\n  filter(continent %in% c('Africa','Europe'))%&gt;%\n  mutate(continent= as.character(continent))"
   },
   {
     "objectID": "clases/clase_20_2.html#conjuntos-de-datos-a-usar-4",
     "href": "clases/clase_20_2.html#conjuntos-de-datos-a-usar-4",
     "title": "Ciencia de Datos para Economistas",
     "section": "Conjuntos de Datos a Usar 4",
-    "text": "Conjuntos de Datos a Usar 4\nGapminder África y Europa 2007\n\ngapminder_2007_afeu &lt;- gapminder_2007%&gt;%\n  filter(continent %in% c('Africa','Europe'))%&gt;%\n  mutate(continent= as.character(continent))"
+    "text": "Conjuntos de Datos a Usar 4\n\nGapminder África y Europa 2007\n\ngapminder_2007_afeu &lt;- gapminder_2007%&gt;%\n  filter(continent %in% c('Africa','Europe'))%&gt;%\n  mutate(continent= as.character(continent))"
   },
   {
     "objectID": "clases/clase_20_2.html#tablas-sumario",
@@ -7313,14 +7313,14 @@
     "href": "clases/clase_20_2.html#diagrama-de-caja---concepto",
     "title": "Ciencia de Datos para Economistas",
     "section": "Diagrama de Caja - Concepto",
-    "text": "Diagrama de Caja - Concepto\n\nEs un gráfico que resume las características principales de un conjunto de datos numéricos, como la mediana, el rango intercuartil (IQR) (25%, 50% y 75%) y los valores atípicos."
+    "text": "Diagrama de Caja - Concepto\n\n\n\n\n\n\n\n\n\nEs un gráfico que resume las características principales de un conjunto de datos numéricos, como la mediana, el rango intercuartil (IQR) (25%, 50% y 75%) y los valores atípicos."
   },
   {
     "objectID": "clases/clase_20_2.html#diagrama-de-caja---casos-de-uso---1",
     "href": "clases/clase_20_2.html#diagrama-de-caja---casos-de-uso---1",
     "title": "Ciencia de Datos para Economistas",
     "section": "Diagrama de Caja - Casos de Uso - 1",
-    "text": "Diagrama de Caja - Casos de Uso - 1\n\n\nComparar distribuciones de diferentes grupos."
+    "text": "Diagrama de Caja - Casos de Uso - 1\n\n\n\n\n\n\n\n\n\n\nComparar distribuciones de diferentes grupos."
   },
   {
     "objectID": "clases/clase_20_2.html#diagrama-de-caja---casos-de-uso---2",
@@ -7425,7 +7425,7 @@
     "href": "clases/clase_20_2.html#diagrama-de-dispersión--casos-de-uso",
     "title": "Ciencia de Datos para Economistas",
     "section": "Diagrama de Dispersión- Casos de uso",
-    "text": "Diagrama de Dispersión- Casos de uso\n\n\nVisualizar la correlación entre dos variables.\nIdentificar tendencias y patrones en los datos.\nDetectar outliers (valores atípicos).\nAnalizar la relación lineal o no lineal entre variables."
+    "text": "Diagrama de Dispersión- Casos de uso\n\n\n\n\n\n\n\n\n\n\nVisualizar la correlación entre dos variables.\nIdentificar tendencias y patrones en los datos.\nDetectar outliers (valores atípicos).\nAnalizar la relación lineal o no lineal entre variables."
   },
   {
     "objectID": "clases/clase_20_2.html#consideraciones-sobre-sistema-base",
@@ -7481,7 +7481,7 @@
     "href": "clases/clase_20_2.html#resumen-eda",
     "title": "Ciencia de Datos para Economistas",
     "section": "Resumen EDA",
-    "text": "Resumen EDA\n\nLos gráficos exploratorios son «rápidos y sucios».\nPermiten resumir los datos (normalmente de forma gráfica) y resaltar las características generales.\nExplorar preguntas e hipótesis básicas (y quizás descartarlas)\nSugieren estrategias de modelización para el «siguiente paso».\n\nEnlace Material de Apoyo https://ucveconomiar4ds.netlify.app/scripts/04_PlottingBase.pdf\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Resumen EDA\n\nLos gráficos exploratorios son «rápidos y sucios».\nPermiten resumir los datos (normalmente de forma gráfica) y resaltar las características generales.\nExplorar preguntas e hipótesis básicas (y quizás descartarlas)\nSugieren estrategias de modelización para el «siguiente paso».\n\nEnlace Material de Apoyo https://ucveconomiar4ds.netlify.app/scripts/04_PlottingBase.pdf"
   },
   {
     "objectID": "clases/clase_22_apikey.html",
@@ -7524,5 +7524,964 @@
     "title": "tutorial api key google AI Studio",
     "section": "",
     "text": "es un entorno de desarrollo integrado (IDE) basado en la nube para el aprendizaje automático (ML). Ofrece una plataforma colaborativa para construir, entrenar e implementar modelos de ML y tiene a disposición el acceso a modelos de lenguaje con un cupo de uso gratuito que nos puede ayudar a procesar textos por medio de una API. Para usarlo por medio de la API es necesario tramitar una\nIngresar a la página https://aistudio.google.com/ y seleccionar “sign in to Google AI Studio”"
+  },
+  {
+    "objectID": "clases/clase_21.html#demo",
+    "href": "clases/clase_21.html#demo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Demo",
+    "text": "Demo\n\n\n\nggplot(data=df_continente_2007,\n       aes(x= continent,\n           y= Total))+\n  geom_col(fill= \"#ffbe0b\")"
+  },
+  {
+    "objectID": "clases/clase_21.html#test2",
+    "href": "clases/clase_21.html#test2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "test2",
+    "text": "test2\n\nggplot(data=df_continente_2007,\n       aes(x= continent,\n           y= Total))+\n  geom_col(fill= \"#ffbe0b\")\n\n\n\n\n\n\n\n\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_21.html#la-gramática-de-ggplot",
+    "href": "clases/clase_21.html#la-gramática-de-ggplot",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "La Gramática de ggplot",
+    "text": "La Gramática de ggplot\n\n\n\n\n\n\n\n\nComponente\nFuncion\nDescripción\nC\n\n\n\n\nDatos\nggplot(data)\nlos datos que se van a visualizar\n✅\n\n\nEstética\naes()\nel mapeo estético que hace entre las variables y la representación visual\n✅\n\n\nGeometrías\ngeom_*\nlas formas geométricas usadas para representar los datos\n✅\n\n\nEstadísticas\nstat_*\nlas transformaciones estadísticas aplicadas a los datos como binning, cuantiles, alisado\n⛔️\n\n\nEscalas\nscale_*\nmapeos entre los datos y las representaciones en los ejes (dimensiones). ejemplo: hombre = rojo, mujer = azul)\n⛔️\n\n\nSistema de Coordenadas\ncoord_*\nmapeos de los datos dentro del plano\n⛔️\n\n\nFacetas\nfacet_*\nlos arreglos de los datos dentro de una grilla rectangular de gráficos\n✅\n\n\nTemas Visuales\ntheme() o theme_*\nla representación visual general del gráfico (fondo, tipo de letras, etc.)\n✅\n\n\n\ntabla inspirada en trabajo de Cédric Scherer // rstudio::conf // julio 2022"
+  },
+  {
+    "objectID": "clases/clase_21.html#otra",
+    "href": "clases/clase_21.html#otra",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Otra",
+    "text": "Otra\nDatos ggplot(data) Los datos crudos que desea visualizar. Aestética aes() Mapeos estéticos entre variables y propiedades visuales. Geometrías geom_() Las formas geométricas que representan los datos. Estadísticas stat_() Las transformaciones estadísticas aplicadas a los datos. Escala scale_() Mapeo entre los datos y las dimensiones estéticas. Sistema de coordenadas coord_() Mapeo de datos al plano del rectángulo de datos. Facetas facet_() La disposición de los datos en una cuadrícula de gráficos. Temas visuales tema() y tema_() Los valores predeterminados visuales generales de un gráfico.\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_21.html#previo-a-generar-un-gráfico",
+    "href": "clases/clase_21.html#previo-a-generar-un-gráfico",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Previo a Generar un Gráfico",
+    "text": "Previo a Generar un Gráfico\n\nIdentificar el tipo de gráfico que queremos usar\nImplementar la GG\nIterar con múltiples opciones de visualización\nSeleccionar la representación que codifique de mejor la información que queremos representar\nIncorporar elementos al tema como colores, paletas, fuentes"
+  },
+  {
+    "objectID": "clases/clase_21.html#ggplot2",
+    "href": "clases/clase_21.html#ggplot2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "ggplot2",
+    "text": "ggplot2\nSistema para crear gráficos declarativamente basado en la “gramática de los gráficos” (Wilkinson, 2005).\nUsted proporciona los datos, le dice a ggplot2 cómo asignar variables a la estética, qué primitivas gráficas utilizar, y él se encarga de los detalles."
+  },
+  {
+    "objectID": "clases/clase_21.html#ejemplo-básico",
+    "href": "clases/clase_21.html#ejemplo-básico",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplo Básico",
+    "text": "Ejemplo Básico\n\n\n\nggplot(data = gapminder_2007)"
+  },
+  {
+    "objectID": "clases/clase_21.html#section",
+    "href": "clases/clase_21.html#section",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "# Fill in the spot we created for a plot\noutput$phonePlot &lt;- renderPlot({\n  # Render a barplot\n})"
+  },
+  {
+    "objectID": "clases/clase_21.html#section-1",
+    "href": "clases/clase_21.html#section-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_21.html#section-2",
+    "href": "clases/clase_21.html#section-2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_21.html#ejemplo",
+    "href": "clases/clase_21.html#ejemplo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplo",
+    "text": "Ejemplo\n# Fill in the spot we created for a plot\noutput$phonePlot &lt;- renderPlot({\n  # Render a barplot\n})"
+  },
+  {
+    "objectID": "clases/clase_21.html#ejemplo-1",
+    "href": "clases/clase_21.html#ejemplo-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplo",
+    "text": "Ejemplo\n# Fill in the spot we created for a plot\noutput$phonePlot &lt;- renderPlot({\n  # Render a barplot\n  barplot(WorldPhones[,input$region]*1000, \n          main=input$region,\n          ylab=\"Number of Telephones\",\n          xlab=\"Year\")\n})"
+  },
+  {
+    "objectID": "clases/clase_21.html#auto-animatetrue-ejemplo",
+    "href": "clases/clase_21.html#auto-animatetrue-ejemplo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "{auto-animate=“true”} Ejemplo",
+    "text": "{auto-animate=“true”} Ejemplo\n# Fill in the spot we created for a plot\noutput$phonePlot &lt;- renderPlot({\n  # Render a barplot\n})"
+  },
+  {
+    "objectID": "clases/clase_21.html#auto-animatetrue-ejemplo-1",
+    "href": "clases/clase_21.html#auto-animatetrue-ejemplo-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "{auto-animate=true} Ejemplo",
+    "text": "{auto-animate=true} Ejemplo\n# Fill in the spot we created for a plot\noutput$phonePlot &lt;- renderPlot({\n  # Render a barplot\n  barplot(WorldPhones[,input$region]*1000, \n          main=input$region,\n          ylab=\"Number of Telephones\",\n          xlab=\"Year\")\n})\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_21.html#ejempo",
+    "href": "clases/clase_21.html#ejempo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejempo",
+    "text": "Ejempo\n# Fill in the spot we created for a plot\noutput$phonePlot &lt;- renderPlot({\n  # Render a barplot\n})"
+  },
+  {
+    "objectID": "clases/clase_21.html#ejempo-auto-animatetrue-ejemplo",
+    "href": "clases/clase_21.html#ejempo-auto-animatetrue-ejemplo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejempo {auto-animate=true} Ejemplo",
+    "text": "Ejempo {auto-animate=true} Ejemplo\n# Fill in the spot we created for a plot\noutput$phonePlot &lt;- renderPlot({\n  # Render a barplot\n  barplot(WorldPhones[,input$region]*1000, \n          main=input$region,\n          ylab=\"Number of Telephones\",\n          xlab=\"Year\")\n})\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_21.html#ejemplo-básico-1",
+    "href": "clases/clase_21.html#ejemplo-básico-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplo Básico",
+    "text": "Ejemplo Básico\n\n\n\n\nggplot(data = gapminder_2007,\n       mapping = aes(x = lifeExp, \n                     y = gdpPercap))"
+  },
+  {
+    "objectID": "clases/clase_21.html#mapeos-estadísticos",
+    "href": "clases/clase_21.html#mapeos-estadísticos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Mapeos Estadísticos",
+    "text": "Mapeos Estadísticos\nUsar los datos como variables que permiten codificar las siguientes representaciones en la visualización de datos:\n\nPosición (x,y)\nColores (color, fill)\nFormas (shape, linetype)\nTamaño (size)\nTransparencia (alpha)\nAgrupamientos(group)"
+  },
+  {
+    "objectID": "clases/clase_21.html#geoms-representaciones-geométricas",
+    "href": "clases/clase_21.html#geoms-representaciones-geométricas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Geoms: Representaciones geométricas",
+    "text": "Geoms: Representaciones geométricas\n\nbarra: geom_bar\ncolumna: geom_col\npuntos: geom_point\nlíneas: geom_line\npolígonos: geom_polygon (no se aborda en clase)"
+  },
+  {
+    "objectID": "clases/clase_21.html#geoms-para-una-sola-variable",
+    "href": "clases/clase_21.html#geoms-para-una-sola-variable",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Geoms para una sola Variable",
+    "text": "Geoms para una sola Variable"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_bar",
+    "href": "clases/clase_21.html#geom_bar",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_bar",
+    "text": "geom_bar\nHace que la altura de la barra sea proporcional al número de casos de cada grupo (cuenta los casos)\n\nRequiere la estética x dentro de aes()\nPuede cambiar la apariencia de las barras con argumentos  color, fill, alpha\n\n\n\n\nggplot(data = gapminder_2007,\n       aes(x=continent)) +\n  geom_bar()"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_col",
+    "href": "clases/clase_21.html#geom_col",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_col",
+    "text": "geom_col\n\nLa altura de la barra representan valores en los datos\n\nRequiere la estética  x, y dentro de aes()\nPuede cambiar la apariencia de las barras con argumentos  color, fill, alpha"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_point",
+    "href": "clases/clase_21.html#geom_point",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_point",
+    "text": "geom_point\n\nRequiere los valores de x, y aesthetics dentro de aes()\nSe puede modificar la apariciencia de los puntos con los argumentos color, shape, alpha ,size\n\n\n\n\nggplot(data = gapminder_2007,\n       mapping = aes(x = lifeExp, \n                           y = gdpPercap)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\n\n\n\n\nhacernos una pregunta. hipótesis\ncómo es la relación entre la expectativa de vida y el pibpercap\ncomportamiento lineal, exponencia?"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_line",
+    "href": "clases/clase_21.html#geom_line",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_line",
+    "text": "geom_line\n\nRequiere los valores de x, y aesthetics dentro de aes()\nSe puede modificar la apariciencia de las líneas con los argumentos color, linetype, alpha  \nEl aes group dibuja líneas de acuerdo a la variable de agrupamiento"
+  },
+  {
+    "objectID": "clases/clase_21.html#otros-univariables",
+    "href": "clases/clase_21.html#otros-univariables",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Otros Univariables",
+    "text": "Otros Univariables\n\ngeom_freqpoly: behaves the same as geom_histogram but with connected lines instead of bars \ngeom_dotplot: show values in bins as individual dots \ngeom_rug: place lines along an axis for each observation"
+  },
+  {
+    "objectID": "clases/clase_21.html#geoms-estadísticos-transformaciones-estadísticas",
+    "href": "clases/clase_21.html#geoms-estadísticos-transformaciones-estadísticas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Geoms Estadísticos: Transformaciones Estadísticas",
+    "text": "Geoms Estadísticos: Transformaciones Estadísticas\n\nGráfico de distribución de frecuencia: geom_histogram\nGráfico de densidad: geom_density\nDiagrama de caja: geom_boxplot\nOtros: geom_freqpoly, geom_dotplot, geom_rug\nMedias suavizadas: geom_smooth"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_density",
+    "href": "clases/clase_21.html#geom_density",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_density",
+    "text": "geom_density\n\nRequiere la x aesthetic dentro de  aes()\nModifica el suavizador del núcleo en uso con el parámetro kernel \nCambia el ancho de banda con el parámetro adjust \nSe pueden modificar la apariencia de las barras con los argumentos color, fill, alpha\n\n\n\n\nggplot(data=gapminder_2007,\n         aes(x=lifeExp))+\n  geom_density()"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_smooth",
+    "href": "clases/clase_21.html#geom_smooth",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_smooth",
+    "text": "geom_smooth\n\n\nRequiere la estética  x, y dentro de aes()\nPuede cambiar la apariencia de las barras con argumentos  color, fill, alpha\n\n\n\n\nggplot(data = gapminder,\n       mapping = aes(x = lifeExp, \n                     y = gdpPercap)) +\n  geom_smooth()"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_boxplot",
+    "href": "clases/clase_21.html#geom_boxplot",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_boxplot",
+    "text": "geom_boxplot\n\n\nRequiere la estética x dentro de aes()\nPuede cambiar la apariencia de las barras con argumentos  color, fill, alpha\n\n\n\n\nggplot(data = gapminder_2007,\n       aes(y=lifeExp)) +\n  geom_boxplot(fill= \"#fb8b24\")"
+  },
+  {
+    "objectID": "clases/clase_21.html#añadir-interactividad",
+    "href": "clases/clase_21.html#añadir-interactividad",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Añadir Interactividad",
+    "text": "Añadir Interactividad\n\nlibrary(plotly)\ngap_2007_amer_le_gp%&gt;%\n  ggplotly()"
+  },
+  {
+    "objectID": "clases/clase_21.html#elección-del-mapeo-mapping",
+    "href": "clases/clase_21.html#elección-del-mapeo-mapping",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Elección del Mapeo (Mapping)",
+    "text": "Elección del Mapeo (Mapping)\n\nImagen de Garrett Grolemund’s 2019 JSM, tidyverse tutorial ."
+  },
+  {
+    "objectID": "clases/clase_21.html#láminas-repaso-basadas-en",
+    "href": "clases/clase_21.html#láminas-repaso-basadas-en",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Láminas repaso basadas en",
+    "text": "Láminas repaso basadas en\nCédric Scherer"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_hist",
+    "href": "clases/clase_21.html#geom_hist",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_hist",
+    "text": "geom_hist\n\nRequiere en aes() la variable sobre la cual se representará la distribución"
+  },
+  {
+    "objectID": "clases/clase_21.html#facetas",
+    "href": "clases/clase_21.html#facetas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Facetas",
+    "text": "Facetas\n\n\n\n\nggplot(data = gapminder,\n       mapping = aes(x = lifeExp, \n                     y = gdpPercap)) +\n  geom_smooth(color='#c9184a')+\n  facet_wrap(~continent, nrow=1)+\n  theme_dark()"
+  },
+  {
+    "objectID": "clases/clase_21.html#composición-de-elementos",
+    "href": "clases/clase_21.html#composición-de-elementos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Composición de Elementos",
+    "text": "Composición de Elementos"
+  },
+  {
+    "objectID": "clases/clase_21.html#recursos",
+    "href": "clases/clase_21.html#recursos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Recursos",
+    "text": "Recursos\nhttps://ggplot2-book.org/\nhttps://bbc.github.io/rcookbook/\nhttps://r-charts.com/es/ggplot2/\nhttps://ggplot2.tidyverse.org/\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_21_test.html#doble-columna",
+    "href": "clases/clase_21_test.html#doble-columna",
+    "title": "Untitled",
+    "section": "doble columna",
+    "text": "doble columna"
+  },
+  {
+    "objectID": "clases/clase_21_test.html#doble-columna-animada",
+    "href": "clases/clase_21_test.html#doble-columna-animada",
+    "title": "Untitled",
+    "section": "doble columna animada",
+    "text": "doble columna animada"
+  },
+  {
+    "objectID": "clases/clase_21_test.html#una-columna",
+    "href": "clases/clase_21_test.html#una-columna",
+    "title": "Untitled",
+    "section": "Una Columna",
+    "text": "Una Columna"
+  },
+  {
+    "objectID": "clases/clase_21_test.html#doble-columna-animada-1",
+    "href": "clases/clase_21_test.html#doble-columna-animada-1",
+    "title": "Untitled",
+    "section": "doble columna animada",
+    "text": "doble columna animada"
+  },
+  {
+    "objectID": "clases/clase_21_test.html#una-columna-1",
+    "href": "clases/clase_21_test.html#una-columna-1",
+    "title": "Untitled",
+    "section": "Una Columna",
+    "text": "Una Columna"
+  },
+  {
+    "objectID": "clases/clase_21_test.html#tabsets",
+    "href": "clases/clase_21_test.html#tabsets",
+    "title": "Untitled",
+    "section": "Tabsets",
+    "text": "Tabsets"
+  },
+  {
+    "objectID": "clases/clase_21_test.html#section",
+    "href": "clases/clase_21_test.html#section",
+    "title": "Untitled",
+    "section": "",
+    "text": "🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_21_test.html#panelstabs",
+    "href": "clases/clase_21_test.html#panelstabs",
+    "title": "Untitled",
+    "section": "Panelstabs",
+    "text": "Panelstabs\n\nGráficoCódigo"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_bar--relleno",
+    "href": "clases/clase_21.html#geom_bar--relleno",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_bar -relleno",
+    "text": "geom_bar -relleno\n\n\n\n\nggplot(data = gapminder_2007,\n       aes(x=continent)) +\n  geom_bar(fill= \"#ffbe0b\")"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom-bar-reordenamiento",
+    "href": "clases/clase_21.html#geom-bar-reordenamiento",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom-bar: reordenamiento",
+    "text": "geom-bar: reordenamiento\n\n\n\n\ndata frame se pasa por `%&gt;%’\nuso de la función reorder , barras valores descendentes\nidentity: los datos no son alterados\n\n\ngapminder_2007%&gt;%\n  group_by(continent)%&gt;%\n  count(sort = TRUE, name='Total')%&gt;%\n  ggplot() +\n  geom_bar(aes(x=reorder(continent,-Total), \n               y=Total ),\n           stat='identity',\n           fill= \"#ffbe0b\")"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_col-ejemplo-básico",
+    "href": "clases/clase_21.html#geom_col-ejemplo-básico",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_col: ejemplo básico",
+    "text": "geom_col: ejemplo básico\n\n\n\n\ndetalle mapeo estético en x y y\n\n\nggplot(data=df_gapminder_2007_america,\n       aes(x= pop,\n           y= country))+\n  geom_col()\n\n\n\nOrden alfabético"
+  },
+  {
+    "objectID": "clases/clase_21.html#creación-df-gapminder-conteo-por-continente",
+    "href": "clases/clase_21.html#creación-df-gapminder-conteo-por-continente",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Creación DF Gapminder Conteo por Continente",
+    "text": "Creación DF Gapminder Conteo por Continente\n\n\ndf_continente_2007 &lt;- gapminder_2007%&gt;%\n  group_by(continent)%&gt;%\n  count(sort = TRUE, name='Total')\n\ndf_continente_2007\n\n# A tibble: 5 × 2\n# Groups:   continent [5]\n  continent Total\n  &lt;fct&gt;     &lt;int&gt;\n1 Africa       52\n2 Asia         33\n3 Europe       30\n4 Americas     25\n5 Oceania       2"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_col-ejemplo-2",
+    "href": "clases/clase_21.html#geom_col-ejemplo-2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_col: ejemplo 2",
+    "text": "geom_col: ejemplo 2\n\n\n\n\nggplot(data=df_continente_2007,\n       aes(x= continent,\n           y= Total))+\n  geom_col()"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_col-relleno",
+    "href": "clases/clase_21.html#geom_col-relleno",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_col: relleno",
+    "text": "geom_col: relleno\n\n\n\n\nggplot(data=df_continente_2007,\n       aes(x= continent,\n           y= Total))+\n  geom_col(fill= \"#ffbe0b\")"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_col-reorder",
+    "href": "clases/clase_21.html#geom_col-reorder",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_col: reorder",
+    "text": "geom_col: reorder\n\n\n\n\nggplot(data=df_continente_2007,\n       aes(x=reorder(continent,-Total), \n            y= Total))+\n  geom_col(fill= \"#ffbe0b\")"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_col-asignar-a-una-variable",
+    "href": "clases/clase_21.html#geom_col-asignar-a-una-variable",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_col: asignar a una variable",
+    "text": "geom_col: asignar a una variable\n\n\ngraf_gap_2007 &lt;- ggplot(data=df_continente_2007,\n                        aes(x= continent,\n                            y= Total,\n                            fill=continent))+\n  geom_col(fill= \"#ffbe0b\")\n\ngraf_gap_2007"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_col-temas-themes",
+    "href": "clases/clase_21.html#geom_col-temas-themes",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_col: temas (themes)",
+    "text": "geom_col: temas (themes)\nLos temas son aplicables a cualquier geom ya que cambian aspectos generales del área del gráfico\n\nbwminimalgreylinedrawdarklight\n\n\n\ngraf_gap_2007+\n  theme_bw()\n\n\n\n\n\n\n\n\n\n\n\ngraf_gap_2007+\n  theme_minimal()\n\n\n\n\n\n\n\n\n\n\n\ngraf_gap_2007+\n  theme_grey()\n\n\n\n\n\n\n\n\n\n\n\ngraf_gap_2007+\n  theme_linedraw()\n\n\n\n\n\n\n\n\n\n\n\ngraf_gap_2007+\n  theme_dark()\n\n\n\n\n\n\n\n\n\n\n\ngraf_gap_2007+\n  theme_light()"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_col-personalizar-tema",
+    "href": "clases/clase_21.html#geom_col-personalizar-tema",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_col: personalizar tema",
+    "text": "geom_col: personalizar tema\n\n\n\n\ngraf_gap_2007+\n  theme_dark()+\n  theme(text = element_text(family = \"serif\", \n                            size = 30))\n\n\n\n\n\n\n\n\ngraf_gap_2007+\n  guides (fill ='none')"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_col-ajuste-valores-en-eje-colores-relleno-etiquetas",
+    "href": "clases/clase_21.html#geom_col-ajuste-valores-en-eje-colores-relleno-etiquetas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_col: ajuste valores en eje, colores relleno, etiquetas",
+    "text": "geom_col: ajuste valores en eje, colores relleno, etiquetas\n\n\n\ngraf_gap_2007+\n  scale_y_continuous (name = NULL,\n                     breaks = seq(0, 60, by = 5))+\n  scale_fill_manual(values =  \n                      c('#fb8500','#ffb703',\n                        '#023047','#219ebc','#8ecae6' )) +\n  labs(x = NULL, title = \"Gapminder año 2007: \\nCantidad Países Representados por Continente\")"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_col-ajuste-valores-en-eje-y-colores-relleno-etiquetas",
+    "href": "clases/clase_21.html#geom_col-ajuste-valores-en-eje-y-colores-relleno-etiquetas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_col: ajuste valores en eje y, colores relleno, etiquetas",
+    "text": "geom_col: ajuste valores en eje y, colores relleno, etiquetas\n\n\nggplot(data=df_continente_2007,\n                        aes(x= continent,\n                            y= Total,\n                            fill=continent))+\n  geom_col()+\n  scale_y_continuous (name = NULL,\n                     breaks = seq(0, 60, by = 5))+\n  \n  labs(x = NULL,\n       title = \"Gapminder año 2007: \\nCdad. Países por Continente\")+\n  scale_fill_manual(values =  \n                      c('#fb8500','#ffb703','#023047',\n                        '#219ebc','#8ecae6' ))"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_col-modificación-etiquetas-x--problema",
+    "href": "clases/clase_21.html#geom_col-modificación-etiquetas-x--problema",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_col: modificación etiquetas x- problema",
+    "text": "geom_col: modificación etiquetas x- problema\n\n\nggplot(data=df_gapminder_2007_america, \n       aes(x=country, y= gdpPercap))+\n  geom_col()+\n  scale_y_continuous (name = NULL,\n                      breaks = seq(0, 45000, by = 5000),\n                      labels = scales::label_dollar())+\n  labs(x = NULL, \n       title = \"Gapminder año 2007: \",\n       subtitle = \"PIB Per Cápita por País América\")"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_col-modificación-etiquetas-x--solución",
+    "href": "clases/clase_21.html#geom_col-modificación-etiquetas-x--solución",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_col: modificación etiquetas x- solución",
+    "text": "geom_col: modificación etiquetas x- solución\n\n\nggplot(data=df_gapminder_2007_america, \n       aes(x=country, y= gdpPercap))+\n  geom_col()+\n  scale_y_continuous (name = NULL,\n                      breaks = seq(0, 45000, by = 5000),\n                      labels = scales::label_dollar())+\n  labs(x = NULL, \n       title = \"Gapminder año 2007: \",\n       subtitle = \"PIB Per Cápita por País América\")+\n  theme(axis.text.x = element_text(angle = 45, hjust = 1))"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_col-top-pib-per-cápita",
+    "href": "clases/clase_21.html#geom_col-top-pib-per-cápita",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_col: top PIB per cápita",
+    "text": "geom_col: top PIB per cápita\n\n¿Qué estamos representando? ¿Qué queremos transmitir?\n\n\n\nlibrary(viridis)\nggplot(data=df_gapminder_2007_america, \n       aes(x=reorder(country, -gdpPercap), \n           y= gdpPercap,\n           fill= country))+\n  geom_col()+\n  scale_y_continuous (breaks = seq(0, 45000, by = 5000),\n                      labels = scales::label_dollar())+\n  labs(x = NULL,\n       y=\"PIB Per Cápita en USD\",\n       title = \"TOP PIB Per Cápita por País América\",\n       subtitle = \"Datos Gapminder año 2007\")+\n  theme_light()+\n  theme(axis.text.x = element_text(angle = 45, \n                                   hjust = 1,\n                                   family = \"serif\", \n                                   size = 8),\n        legend.position = 'none')+\n  scale_fill_viridis (discrete=TRUE)"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_histogram",
+    "href": "clases/clase_21.html#geom_histogram",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_histogram",
+    "text": "geom_histogram\n\n\nRequiere en aes() la variable sobre la cual se representará la distribución\nPuede cambiar la apariencia de las barras con argumentos  color, fill, alpha\n\n\n\n\nggplot(data = gapminder_2007) +\n  geom_histogram(aes(x= gdpPercap))"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_histogram-color-relleno",
+    "href": "clases/clase_21.html#geom_histogram-color-relleno",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_histogram: color relleno",
+    "text": "geom_histogram: color relleno\n\n\n\n\nggplot(data = gapminder_2007,\n       aes(x= gdpPercap)) +\n  geom_histogram(fill='red')"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_histogram-cdad.-barras",
+    "href": "clases/clase_21.html#geom_histogram-cdad.-barras",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_histogram: cdad. barras",
+    "text": "geom_histogram: cdad. barras\n\n\n\n\nggplot(data = gapminder_2007,\n       aes(gdpPercap)) +\n  geom_histogram(bins=20,\n                 fill='#0a9396')"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_histogram-mapeo-estético-color-borde",
+    "href": "clases/clase_21.html#geom_histogram-mapeo-estético-color-borde",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_histogram: mapeo estético color borde",
+    "text": "geom_histogram: mapeo estético color borde\n\n\n\n\nggplot(data = gapminder_2007,\n       aes(gdpPercap, \n           color=continent)) +\n  geom_histogram()"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_histogram--mapeo-estético-color-relleno-bins",
+    "href": "clases/clase_21.html#geom_histogram--mapeo-estético-color-relleno-bins",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_histogram- mapeo estético: color relleno, bins",
+    "text": "geom_histogram- mapeo estético: color relleno, bins\n\n\n\n\nggplot(data = gapminder_2007,\n       aes(gdpPercap,\n           fill=continent)) +\n  geom_histogram(bins=20)"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_freqpoly",
+    "href": "clases/clase_21.html#geom_freqpoly",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_freqpoly",
+    "text": "geom_freqpoly\n\nSe comporta igual que geom_histogram pero con líneas conectadas en lugar de barras  \n\n\n\nggplot(data=gapminder_2007,\n       aes(x=lifeExp))+\n  geom_freqpoly()"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_dotplot",
+    "href": "clases/clase_21.html#geom_dotplot",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_dotplot:",
+    "text": "geom_dotplot:\n\nMuestra los valores en intervalos como puntos individuales\n\n\n\nggplot(data=gapminder_2007,\n       aes(x=lifeExp))+\n  geom_dotplot()"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_rug",
+    "href": "clases/clase_21.html#geom_rug",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_rug",
+    "text": "geom_rug\n\nColoca líneas a lo largo de un eje para cada observación\n\n\n\nggplot(data=gapminder_2007,\n       aes(x=lifeExp))+\n  geom_histogram()+\n  geom_rug()"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_boxplot-1",
+    "href": "clases/clase_21.html#geom_boxplot-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_boxplot:",
+    "text": "geom_boxplot:"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_boxplot-por-variable-categóricarellenoborde",
+    "href": "clases/clase_21.html#geom_boxplot-por-variable-categóricarellenoborde",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_boxplot: por variable categórica/relleno/borde",
+    "text": "geom_boxplot: por variable categórica/relleno/borde\n\n\n\n\nggplot(data = gapminder_2007,\n       mapping = aes(x=continent, \n                     y= gdpPercap)) +\n  geom_boxplot(fill= \"#fb8b24\",\n               color='#00a6fb')"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_boxplot-representación-diferenciada-valores-atípicos",
+    "href": "clases/clase_21.html#geom_boxplot-representación-diferenciada-valores-atípicos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_boxplot: representación diferenciada valores atípicos",
+    "text": "geom_boxplot: representación diferenciada valores atípicos\n\n\n\n\nggplot(data = gapminder_2007,\n       mapping = aes(x=continent, \n                     y= gdpPercap)) +\n  geom_boxplot(fill= \"#fb8b24\",\n               outlier.colour = 'red',\n               color='#00a6fb')"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_boxplot--composición-línea-y-puntos",
+    "href": "clases/clase_21.html#geom_boxplot--composición-línea-y-puntos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_boxplot- composición: línea y puntos",
+    "text": "geom_boxplot- composición: línea y puntos\n\n\n\nggplot(data = gapminder_2007,\n       mapping = aes(x=continent, \n                     y= gdpPercap)) +\n  geom_point()+\n  geom_boxplot(fill= \"#fb8b24\")+\n  geom_hline(yintercept = mean(gapminder_2007$gdpPercap), \n             size = 1, \n             colour=\"#c1121f\")"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_boxplot-composición-puntos-orden",
+    "href": "clases/clase_21.html#geom_boxplot-composición-puntos-orden",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_boxplot: composición: puntos (orden)",
+    "text": "geom_boxplot: composición: puntos (orden)\n\n\n\n\nggplot(data = gapminder_2007,\n       mapping = aes(x=continent, \n                     y= gdpPercap)) +\n  geom_boxplot(fill= \"#fb8b24\")+\n  geom_point()"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_boxplot-2",
+    "href": "clases/clase_21.html#geom_boxplot-2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_boxplot",
+    "text": "geom_boxplot"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_boxplot-rotar-ejes",
+    "href": "clases/clase_21.html#geom_boxplot-rotar-ejes",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_boxplot: rotar ejes",
+    "text": "geom_boxplot: rotar ejes\n\n\n\n\nggplot(data = gapminder_2007,\n       mapping = aes(x=continent, \n                     y= gdpPercap)) +\n  geom_boxplot(fill= \"#fb8b24\")+\n  coord_flip()"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_smooth---compuesto-puntos",
+    "href": "clases/clase_21.html#geom_smooth---compuesto-puntos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_smooth - compuesto: puntos",
+    "text": "geom_smooth - compuesto: puntos\n\n\n\n\nggplot(data = gapminder,\n       mapping = aes(x = lifeExp, \n                     y = gdpPercap)) +\n  geom_point( alpha = 1/5)+\n  geom_smooth()"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_smooth---local-vs.-global-encoding",
+    "href": "clases/clase_21.html#geom_smooth---local-vs.-global-encoding",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_smooth - local Vs. global encoding",
+    "text": "geom_smooth - local Vs. global encoding\n\nGlobal Encoding\n\n\n\nggplot(data = gapminder,\n       mapping = aes(x = lifeExp, \n                     y = gdpPercap,\n                     color= continent)) +\n  geom_point()+\n  geom_smooth()"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_smooth---local-vs.-global-encoding-1",
+    "href": "clases/clase_21.html#geom_smooth---local-vs.-global-encoding-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_smooth - local Vs. global encoding",
+    "text": "geom_smooth - local Vs. global encoding\n\nLocal Encoding\n\n\n\nggplot(data = gapminder,\n       mapping = aes(x = lifeExp, \n                     y = gdpPercap)) +\n  geom_point(aes(color=continent))+\n  geom_smooth()"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_smooth---local-encoding-lm-factor",
+    "href": "clases/clase_21.html#geom_smooth---local-encoding-lm-factor",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_smooth - local encoding, lm, factor",
+    "text": "geom_smooth - local encoding, lm, factor\n\n\n\n\nggplot(data = gapminder,\n       mapping = aes(x = lifeExp, \n                     y = gdpPercap,\n                     color= continent)) +\n  geom_point()+\n  geom_smooth(aes(group=year,\n                  color=factor(year)), # factor\n              method='lm')"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_smooth---local-encoding-linetype",
+    "href": "clases/clase_21.html#geom_smooth---local-encoding-linetype",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_smooth - local encoding, linetype",
+    "text": "geom_smooth - local encoding, linetype\n\n\n\n\nggplot(data = gapminder) +\n  geom_smooth( mapping = aes(x = lifeExp, \n                             y = gdpPercap,\n                             linetype= continent, \n                             color=continent))"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_smooth---local-encoding-agrupar",
+    "href": "clases/clase_21.html#geom_smooth---local-encoding-agrupar",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_smooth - local encoding, agrupar",
+    "text": "geom_smooth - local encoding, agrupar\n\n\n\n\nggplot(data = gapminder) +\n  geom_smooth( mapping = aes(x = lifeExp, \n                             y = gdpPercap,\n                             group = continent, \n                             color=continent))"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_smooth---local-encoding-tamaño-línea",
+    "href": "clases/clase_21.html#geom_smooth---local-encoding-tamaño-línea",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_smooth - local encoding, tamaño línea,",
+    "text": "geom_smooth - local encoding, tamaño línea,\n\n\n\n\nggplot(data = gapminder) +\n  geom_smooth( mapping = aes(x = lifeExp, \n                             y = gdpPercap,\n                             group = continent, \n                             color=continent),\n               method = \"lm\",\n               size = 2)"
+  },
+  {
+    "objectID": "clases/clase_21.html#guardar-gráficos",
+    "href": "clases/clase_21.html#guardar-gráficos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Guardar Gráficos",
+    "text": "Guardar Gráficos\n\nggsave(graf_gap_2007,\n       filename= 'graf_gap_2007.png')\n\nggsave(graf_gap_2007,\n       width= 8,\n       height = 5,\n       dpi=2400,\n       filename='graf_gap_2007.png')"
+  },
+  {
+    "objectID": "clases/clase_21.html#ejemplo-básico-2",
+    "href": "clases/clase_21.html#ejemplo-básico-2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplo Básico",
+    "text": "Ejemplo Básico\n\n\n\n\nggplot(data = gapminder_2007,\n       mapping = aes(x = lifeExp, \n                     y = gdpPercap))+\n  geom_point(color= \"#9d0208\")"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_smooth---local-encoding-linetype-color-smooth",
+    "href": "clases/clase_21.html#geom_smooth---local-encoding-linetype-color-smooth",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_smooth - local encoding, linetype, color smooth",
+    "text": "geom_smooth - local encoding, linetype, color smooth\n\n\n\n\nggplot(data = gapminder) +\n  geom_smooth( mapping = aes(x = lifeExp, \n                             y = gdpPercap,\n                             linetype= continent, \n                             color=continent))"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_smooth---local-encoding-agrupar-color-smooth",
+    "href": "clases/clase_21.html#geom_smooth---local-encoding-agrupar-color-smooth",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_smooth - local encoding, agrupar, color smooth",
+    "text": "geom_smooth - local encoding, agrupar, color smooth\n\n\n\n\nggplot(data = gapminder) +\n  geom_smooth( mapping = aes(x = lifeExp, \n                             y = gdpPercap,\n                             group = continent, \n                             color=continent))"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_smooth---tamaño-línea",
+    "href": "clases/clase_21.html#geom_smooth---tamaño-línea",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_smooth - tamaño línea,",
+    "text": "geom_smooth - tamaño línea,\n\n\n\n\nggplot(data = gapminder) +\n  geom_smooth( mapping = aes(x = lifeExp, \n                             y = gdpPercap,\n                             group = continent, \n                             color=continent),\n               method = \"lm\",\n               size = 2)"
+  },
+  {
+    "objectID": "clases/clase_21.html#preparar-los-datos",
+    "href": "clases/clase_21.html#preparar-los-datos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Preparar los Datos",
+    "text": "Preparar los Datos\n\n\nlibrary(\"tidyr\")\n\nmancuerna_df &lt;- gapminder %&gt;%\n  filter(year == 1967 | year == 2007) %&gt;%\n  select(country, year, lifeExp) %&gt;%\n  spread(year, lifeExp) %&gt;%\n  mutate(gap = `2007` - `1967`) %&gt;%\n  arrange(desc(gap)) %&gt;%\n  head(10)\n\nmancuerna_df\n\n# A tibble: 10 × 4\n   country      `1967` `2007`   gap\n   &lt;fct&gt;         &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;\n 1 Oman           47.0   75.6  28.7\n 2 Vietnam        47.8   74.2  26.4\n 3 Yemen, Rep.    37.0   62.7  25.7\n 4 Indonesia      46.0   70.6  24.7\n 5 Libya          50.2   74.0  23.7\n 6 Gambia         35.9   59.4  23.6\n 7 Saudi Arabia   49.9   72.8  22.9\n 8 Nepal          41.5   63.8  22.3\n 9 Egypt          49.3   71.3  22.0\n10 Tunisia        52.1   73.9  21.9"
+  },
+  {
+    "objectID": "clases/clase_21.html#gráfico-de-mancuerna",
+    "href": "clases/clase_21.html#gráfico-de-mancuerna",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Gráfico de Mancuerna",
+    "text": "Gráfico de Mancuerna\n\nlibrary(ggalt)\nlibrary(bbplot)\n\nggplot(mancuerna_df, \n       aes(x = `1967`, \n           xend = `2007`, \n           y = reorder(country, gap),\n           group = country)) + \n  geom_dumbbell(colour = \"#dddddd\",\n                size = 3,\n                colour_x = \"#FAAB18\",\n                colour_xend = \"#1380A1\") +\n  bbc_style() +\n  labs(title=\"Vivimos más Tiempo\",\n       subtitle=\"Mayor crecimiento en la expectativa de vida, 1967-2007\",\n       x=NULL,\n       y=NULL)"
+  },
+  {
+    "objectID": "clases/clase_21.html#gráficos-interactivos",
+    "href": "clases/clase_21.html#gráficos-interactivos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Gráficos Interactivos",
+    "text": "Gráficos Interactivos\n\nPreparar el gráfico\n\n\n\ngap_2007_amer_le_gp &lt;- ggplot(data = gapminder_2007%&gt;%\n                                filter(continent=='Americas')) +\n  geom_point(mapping = aes(x = lifeExp, \n                           y = gdpPercap, \n                           size = pop,\n                           colour = country))+\n  theme_light()+\n  theme(legend.position = \"bottom\")+\n  labs(title = \"Gapminder 2007 Américas: lifeExp ~  gdpPercap\",\n       x = \"Expectativa de Vida\",\n       y = \"PIB Percápita\",\n       caption='conjunto de datos: Gapminder por Hans Roslig',\n       tag='Fig. 1')"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_density-color-y-relleno-local",
+    "href": "clases/clase_21.html#geom_density-color-y-relleno-local",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_density: color y relleno, local",
+    "text": "geom_density: color y relleno, local\n\n\n\n\nggplot(data=gapminder_2007,\n       aes(x=lifeExp,\n           color=continent))+\n  geom_density(aes(fill=continent))"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_density-alpha-local",
+    "href": "clases/clase_21.html#geom_density-alpha-local",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_density: alpha, local",
+    "text": "geom_density: alpha, local\n\n\n\n\nggplot(data=gapminder_2007,\n       aes(x=lifeExp,\n           color=continent))+\n  geom_density(aes(fill=continent),\n               alpha = 0.5)"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_point-color",
+    "href": "clases/clase_21.html#geom_point-color",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_point: color",
+    "text": "geom_point: color\n\n\n\n\nggplot(data = gapminder_2007,\n       mapping = aes(x = lifeExp, \n                     y = gdpPercap)) +\n  geom_point(color= \"#9d0208\")"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_point-mapeo-de-una-expresión",
+    "href": "clases/clase_21.html#geom_point-mapeo-de-una-expresión",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_point: mapeo de una expresión",
+    "text": "geom_point: mapeo de una expresión\n\nlifeExp&gt;mean(gapminder_2007$lifeExp)\n\n\n\nggplot(data = gapminder_2007) +\n  geom_point(mapping = aes(x = lifeExp, \n                           y = gdpPercap,\n                           color= lifeExp&gt;mean(gapminder_2007$lifeExp)\n                           )\n             )"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_point-color-1",
+    "href": "clases/clase_21.html#geom_point-color-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_point: color",
+    "text": "geom_point: color"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_point-color-2",
+    "href": "clases/clase_21.html#geom_point-color-2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_point: color",
+    "text": "geom_point: color"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_point-color-3",
+    "href": "clases/clase_21.html#geom_point-color-3",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_point: color",
+    "text": "geom_point: color"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_point-color-4",
+    "href": "clases/clase_21.html#geom_point-color-4",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_point: color",
+    "text": "geom_point: color"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_point-color-5",
+    "href": "clases/clase_21.html#geom_point-color-5",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_point: color",
+    "text": "geom_point: color"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_point-color-6",
+    "href": "clases/clase_21.html#geom_point-color-6",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_point: color",
+    "text": "geom_point: color"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_point-color-7",
+    "href": "clases/clase_21.html#geom_point-color-7",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_point: color",
+    "text": "geom_point: color"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_point-color-8",
+    "href": "clases/clase_21.html#geom_point-color-8",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_point: color",
+    "text": "geom_point: color"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_point-color-9",
+    "href": "clases/clase_21.html#geom_point-color-9",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_point: color",
+    "text": "geom_point: color"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_point-color-10",
+    "href": "clases/clase_21.html#geom_point-color-10",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_point: color",
+    "text": "geom_point: color"
+  },
+  {
+    "objectID": "clases/clase_21.html#otros-gráficos---2-variables-categóricas",
+    "href": "clases/clase_21.html#otros-gráficos---2-variables-categóricas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Otros Gráficos - 2 Variables Categóricas",
+    "text": "Otros Gráficos - 2 Variables Categóricas\n\n\n\ngapminder%&gt;%\n  filter(continent=='Americas')%&gt;%\n  ggplot(aes(x=year,\n             y=reorder(country,lifeExp),\n             fill=lifeExp))+\n  geom_tile(color='grey40')+ \n  scale_fill_gradient(low = \"white\",\n                      high = \"#147df5\")"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_point-mapeo-de-una-expresión-2-local",
+    "href": "clases/clase_21.html#geom_point-mapeo-de-una-expresión-2-local",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_point: mapeo de una expresión 2, local",
+    "text": "geom_point: mapeo de una expresión 2, local\n\n\n\n\nggplot(data = gapminder_2007) +\n  geom_point(mapping = aes(x = lifeExp, \n                           y = gdpPercap,\n                           color= continent=='Americas'))"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_point-mapeo-tamaño-alpha",
+    "href": "clases/clase_21.html#geom_point-mapeo-tamaño-alpha",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_point: mapeo tamaño, alpha",
+    "text": "geom_point: mapeo tamaño, alpha\n\n\n\n\nggplot(data = gapminder_2007) +\n  geom_point(mapping = aes(x = lifeExp, \n                           y = gdpPercap,\n                           color= continent=='Americas',\n                           size=gdpPercap),\n             alpha=.8)"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_point-mapeo-local-tamaño-y-forma-tema",
+    "href": "clases/clase_21.html#geom_point-mapeo-local-tamaño-y-forma-tema",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_point: mapeo local tamaño y forma, tema",
+    "text": "geom_point: mapeo local tamaño y forma, tema\n\n\n\n\nggplot(data = gapminder_2007) +\n  geom_point(mapping = aes(x = lifeExp, \n                           y = gdpPercap,\n                           size=pop,\n                           shape= continent,\n                           ),\n             color= '#386641',\n             alpha=.8)+\n  theme_bw()"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_point-color-por-categoría",
+    "href": "clases/clase_21.html#geom_point-color-por-categoría",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_point: color por categoría",
+    "text": "geom_point: color por categoría\n\n\n\n\nggplot(data = gapminder%&gt;%\n         filter(continent=='Europe')) +\n  geom_point(mapping = aes(x = lifeExp, \n                           y = gdpPercap,\n                           color= year))"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_point-posición-leyenda-y-tema",
+    "href": "clases/clase_21.html#geom_point-posición-leyenda-y-tema",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_point: posición leyenda y tema",
+    "text": "geom_point: posición leyenda y tema\n\n\n\n\nggplot(data = gapminder_2007%&gt;%\n         filter(continent=='Americas')) +\n  geom_point(mapping = aes(x = lifeExp, \n                           y = gdpPercap,\n                           color= country))+\n  theme_dark()+\n  theme(legend.position = \"bottom\")"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_point-mapeo-local-tamaño-alpha",
+    "href": "clases/clase_21.html#geom_point-mapeo-local-tamaño-alpha",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_point: mapeo local, tamaño, alpha",
+    "text": "geom_point: mapeo local, tamaño, alpha\n\n\n\n\nggplot(data = gapminder_2007) +\n  geom_point(mapping = aes(x = lifeExp, \n                           y = gdpPercap,\n                           color= continent=='Americas',\n                           size=gdpPercap),\n             alpha=.8)"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_point-color-por-variable-ordinal",
+    "href": "clases/clase_21.html#geom_point-color-por-variable-ordinal",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_point: color por variable ordinal",
+    "text": "geom_point: color por variable ordinal\n\n\n\n\nggplot(data = gapminder%&gt;%\n         filter(continent=='Europe')) +\n  geom_point(mapping = aes(x = lifeExp, \n                           y = gdpPercap,\n                           color= year))"
+  },
+  {
+    "objectID": "clases/clase_21.html#inspeccionar-datos-a-trabajar",
+    "href": "clases/clase_21.html#inspeccionar-datos-a-trabajar",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Inspeccionar Datos a Trabajar",
+    "text": "Inspeccionar Datos a Trabajar\n\n#|echo: true\n#|eval: true\n\n\ndf_valores_acciones%&gt;%\n  sample_n(10)\n\n# A tibble: 10 × 5\n   fecha           volume accion  tipo_valor    valor\n   &lt;date&gt;           &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;         &lt;dbl&gt;\n 1 2007-03-20   488916400 Apple   high           3.28\n 2 2013-10-29    15954700 Oracle  low           33.2 \n 3 2020-04-14 34110434052 Bitcoin low         6794.  \n 4 2016-06-27   449088000 Nvidia  low            1.11\n 5 2023-02-22     5840100 Oracle  adjclose      84.1 \n 6 2021-11-29 32370840356 Bitcoin open       57292.  \n 7 2021-07-09 27436021028 Bitcoin open       32862.  \n 8 2024-09-05     8733200 Oracle  adjclose     142.  \n 9 2008-04-04   854417200 Apple   close          5.47\n10 2012-10-09    23311300 Oracle  adjclose      25.5 \n\n\ncódigo para obtención y procesamiento de datos disponible en enlace"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_line-1-línea-con-color",
+    "href": "clases/clase_21.html#geom_line-1-línea-con-color",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_line: 1 línea con color",
+    "text": "geom_line: 1 línea con color\n\n\n\n\ndf_valores_acciones%&gt;%\n  filter(accion=='Nvidia'& \n           tipo_valor=='close')%&gt;%\n  ggplot(aes(x=fecha,\n             y=valor))+\n  geom_line(color= '#06d6a0')\n#acción Nvidia"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_line-etiquetas-eje-y-colores-personalizados",
+    "href": "clases/clase_21.html#geom_line-etiquetas-eje-y-colores-personalizados",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_line: etiquetas eje y, colores personalizados",
+    "text": "geom_line: etiquetas eje y, colores personalizados\n\n\n\n\ndf_valores_acciones%&gt;%\n  filter(accion!='Bitcoin'& tipo_valor=='close')%&gt;%\n  ggplot(aes(x=fecha,\n             y=valor,\n             color=accion))+\n  geom_line()+\n  scale_y_continuous(labels = scales::label_dollar())+\n  scale_color_manual(values =  \n                       c('#fb8500','#ffb703',\n                         '#023047','#219ebc'))"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_line-1",
+    "href": "clases/clase_21.html#geom_line-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_line:",
+    "text": "geom_line:\n\n\n\n\nSys.setlocale(\"LC_TIME\", \"es_ES.UTF-8\")\ndf_valores_acciones%&gt;%\n  filter(accion=='Apple'& \n           tipo_valor %in% c('high','low') &\n           fecha&gt;'2024/01/01')%&gt;%\n  ggplot(aes(x=fecha,\n             y=valor,\n             linetype = tipo_valor,\n             color=tipo_valor))+\n  geom_line()+\n  scale_y_continuous(labels = scales::label_dollar())+\n  scale_color_manual(values =  c('#fb8500','#023047'))+\n  theme(axis.text.x = element_text(angle = 45,\n                                   hjust = 1,\n                                   family = \"serif\",\n                                   size = 8),\n        legend.position = 'none')\n\n\n\n\n[1] \"es_ES.UTF-8\""
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_line-2",
+    "href": "clases/clase_21.html#geom_line-2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_line:",
+    "text": "geom_line:"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_line-3",
+    "href": "clases/clase_21.html#geom_line-3",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_line:",
+    "text": "geom_line:"
+  },
+  {
+    "objectID": "clases/clase_21.html#facetas-1",
+    "href": "clases/clase_21.html#facetas-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Facetas",
+    "text": "Facetas\n\n\n\n\nggplot(data = gapminder,\n       mapping = aes(x = lifeExp, \n                     y = gdpPercap)) +\n  geom_smooth(color='#ca6702')+\n  facet_wrap(~year)+\n  theme_grey()"
+  },
+  {
+    "objectID": "clases/clase_21.html#facetas-2",
+    "href": "clases/clase_21.html#facetas-2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Facetas",
+    "text": "Facetas\n\n\n\n\nggplot(data = gapminder_2007) +\n  geom_boxplot(aes(y=lifeExp,\n                   color= continent))+\n  facet_wrap(~continent)"
+  },
+  {
+    "objectID": "clases/clase_21.html#facetas-3",
+    "href": "clases/clase_21.html#facetas-3",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Facetas",
+    "text": "Facetas\n\n\n\n\nggplot(data = gapminder) +\n  geom_histogram(aes(gdpPercap,\n                     color=continent))+\n  facet_wrap(~continent)"
+  },
+  {
+    "objectID": "clases/clase_21.html#facetas-4",
+    "href": "clases/clase_21.html#facetas-4",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Facetas",
+    "text": "Facetas\n\n\n\n\nggplot(data = gapminder_2007) +\n  geom_histogram(aes(lifeExp),\n                 bins = 10)+\n  facet_wrap(~continent)"
+  },
+  {
+    "objectID": "clases/clase_21.html#facetas-5",
+    "href": "clases/clase_21.html#facetas-5",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Facetas",
+    "text": "Facetas\n\n\n\n\nggplot(data = gapminder) +\n  geom_point(mapping = aes(x = lifeExp, \n                           y = gdpPercap, \n                           colour= pop))+\n  facet_wrap(~ continent, nrow = 1)"
+  },
+  {
+    "objectID": "clases/clase_21.html#facetas-6",
+    "href": "clases/clase_21.html#facetas-6",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Facetas",
+    "text": "Facetas\n\n\n\n\nggplot(data = gapminder_2007) +\n  geom_point(mapping = aes(x = lifeExp, \n                           y = gdpPercap, \n                           colour= pop))+\n  facet_wrap(~ continent, nrow = 2)"
+  },
+  {
+    "objectID": "clases/clase_21.html#facetas-7",
+    "href": "clases/clase_21.html#facetas-7",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Facetas",
+    "text": "Facetas\n\n\n\n\nggplot(data = gapminder_af_am) +\n  geom_point(mapping = aes(x = lifeExp, \n                           y = gdpPercap, \n                           colour= pop))+\n  facet_wrap(country ~ continent)"
+  },
+  {
+    "objectID": "clases/clase_21.html#facetas-8",
+    "href": "clases/clase_21.html#facetas-8",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Facetas",
+    "text": "Facetas\n\n\n\n\nggplot(data = gapminder_af_am) +\n  geom_point(mapping = aes(x = lifeExp, \n                           y = gdpPercap, \n                           colour= pop))+\n  facet_wrap(. ~ continent)"
+  },
+  {
+    "objectID": "clases/clase_21.html#facetas-9",
+    "href": "clases/clase_21.html#facetas-9",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Facetas",
+    "text": "Facetas\n\n\n\n\nggplot(data = gapminder_af_am) +\n  geom_point(mapping = aes(x = lifeExp, \n                           y = gdpPercap, \n                           colour= pop))+\n  facet_wrap(. ~ country)"
+  },
+  {
+    "objectID": "clases/clase_21.html#facetas-10",
+    "href": "clases/clase_21.html#facetas-10",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Facetas",
+    "text": "Facetas\n\n\n\n\nggplot(data = gapminder_af_am) +\n  geom_point(mapping = aes(x = lifeExp, \n                           y = gdpPercap, \n                           colour= pop))+\n  facet_wrap( country ~ .)"
+  },
+  {
+    "objectID": "clases/clase_21.html#facetas-11",
+    "href": "clases/clase_21.html#facetas-11",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Facetas",
+    "text": "Facetas"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_line-tipo-de-línea-por-variable-categórica",
+    "href": "clases/clase_21.html#geom_line-tipo-de-línea-por-variable-categórica",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_line: tipo de línea por variable categórica",
+    "text": "geom_line: tipo de línea por variable categórica\n\n\n\n\ndf_valores_acciones%&gt;%\n  filter(accion=='Apple'& \n           tipo_valor %in% c('high','low') &\n           fecha&gt;'2024/01/01')%&gt;%\n  ggplot(aes(x=fecha,\n             y=valor,\n             linetype = tipo_valor,\n             color=tipo_valor))+\n  geom_line()+\n  scale_y_continuous(labels = scales::label_dollar())+\n  scale_color_manual(values =  c('#fb8500','#023047'))"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_line-modificación-representación-fechas-valor-tema",
+    "href": "clases/clase_21.html#geom_line-modificación-representación-fechas-valor-tema",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_line: modificación representación fechas, valor $, tema",
+    "text": "geom_line: modificación representación fechas, valor $, tema\n\n\n\n\nlibrary(scales)\ndf_valores_acciones%&gt;%\n  filter(accion=='Apple'& \n           tipo_valor %in% c('high','low') &\n           fecha&gt;'2024/01/01')%&gt;%\n  ggplot(aes(x=fecha,\n             y=valor,\n             linetype = tipo_valor,\n             color=tipo_valor))+\n  geom_line()+\n  scale_y_continuous(labels = scales::label_dollar())+\n  scale_color_manual(values =  c('#fb8500','#023047'))+\n  scale_x_date(date_labels = \"%m/%Y\", date_breaks = \"month\")+\n  theme(axis.text.x = element_text(angle = 45, \n                                   hjust = 1,\n                                   family = \"serif\", \n                                   size = 8),\n        legend.position = 'none')"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_line-tipo-de-línea-por-variable-categórica-etiqueta-color-línea",
+    "href": "clases/clase_21.html#geom_line-tipo-de-línea-por-variable-categórica-etiqueta-color-línea",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_line: tipo de línea por variable categórica, etiqueta $, color línea",
+    "text": "geom_line: tipo de línea por variable categórica, etiqueta $, color línea\n\n\n\n\ndf_valores_acciones%&gt;%\n  filter(accion=='Apple'& \n           tipo_valor %in% c('high','low') &\n           fecha&gt;'2024/01/01')%&gt;%\n  ggplot(aes(x=fecha,\n             y=valor,\n             linetype = tipo_valor,\n             color=tipo_valor))+\n  geom_line()+\n  scale_y_continuous(labels = scales::label_dollar())+\n  scale_color_manual(values =  c('#fb8500','#023047'))"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_line-modificación-representación-fechas-tema",
+    "href": "clases/clase_21.html#geom_line-modificación-representación-fechas-tema",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_line: modificación representación fechas, tema",
+    "text": "geom_line: modificación representación fechas, tema\n\n\n\n\nlibrary(scales)\ndf_valores_acciones%&gt;%\n  filter(accion=='Apple'& \n           tipo_valor %in% c('high','low') &\n           fecha&gt;'2024/01/01')%&gt;%\n  ggplot(aes(x=fecha,\n             y=valor,\n             linetype = tipo_valor,\n             color=tipo_valor))+\n  geom_line()+\n  scale_y_continuous(labels = scales::label_dollar())+\n  scale_color_manual(values =  c('#fb8500','#023047'))+\n  scale_x_date(date_labels = \"%m/%Y\", date_breaks = \"month\")+\n  theme(axis.text.x = element_text(angle = 45, \n                                   hjust = 1,\n                                   family = \"serif\", \n                                   size = 8),\n        legend.position = 'none')"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_line-tipo-de-línea-por-variable-categórica-color-línea",
+    "href": "clases/clase_21.html#geom_line-tipo-de-línea-por-variable-categórica-color-línea",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_line: tipo de línea por variable categórica, color línea",
+    "text": "geom_line: tipo de línea por variable categórica, color línea\n\n\n\n\ndf_valores_acciones%&gt;%\n  filter(accion=='Apple'& \n           tipo_valor %in% c('high','low') &\n           fecha&gt;'2024/01/01')%&gt;%\n  ggplot(aes(x=fecha,\n             y=valor,\n             linetype = tipo_valor,\n             color=tipo_valor))+\n  geom_line()+\n  scale_y_continuous(labels = scales::label_dollar())+\n  scale_color_manual(values =  c('#fb8500','#023047'))"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_line-fechas---locales",
+    "href": "clases/clase_21.html#geom_line-fechas---locales",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_line: fechas - locales",
+    "text": "geom_line: fechas - locales\n\n\n\n\nSys.setlocale(\"LC_TIME\", \"es_ES.UTF-8\")\n\ndf_valores_acciones%&gt;%\n  filter(accion=='Apple'& \n           tipo_valor %in% c('high','low') &\n           fecha&gt;'2024/01/01')%&gt;%\n  ggplot(aes(x=fecha,\n             y=valor,\n             linetype = tipo_valor,\n             color=tipo_valor))+\n  geom_line()+\n  scale_y_continuous(labels = scales::label_dollar())+\n  scale_color_manual(values =  c('#fb8500','#023047'))+\n  theme(axis.text.x = element_text(angle = 45,\n                                   hjust = 1,\n                                   family = \"serif\",\n                                   size = 8),\n        legend.position = 'none')"
+  },
+  {
+    "objectID": "clases/clase_21.html#láminas-repaso",
+    "href": "clases/clase_21.html#láminas-repaso",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Láminas repaso",
+    "text": "Láminas repaso\n\nggplot2 es una potente biblioteca para el diseño gráfico reproducible\nlos componentes siguen una sintaxis consistente\ncada ggplot necesita al menos datos, algo de estética y una capa\nestablecemos propiedades constantes fuera de aes()\n… y mapeamos las propiedades relacionadas con los datos dentro de aes()\nlos ajustes y mapeos locales anulan las propiedades globales\nla agrupación permite aplicar capas a subconjuntos\npodemos almacenar un objeto ggplot y extenderlo hacia el exterior\npodemos cambiar la apariencia de todos los gráficos con theme_set() y theme_update()\n\nbasadas en presentación de Cédric Scherer"
+  },
+  {
+    "objectID": "clases/clase_21.html",
+    "href": "clases/clase_21.html",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "Identificar el tipo de gráfico que queremos usar\nImplementar la GG\nIterar con múltiples opciones de visualización\nSeleccionar la representación que codifique de mejor la información que queremos representar\nIncorporar elementos al tema como colores, paletas, fuentes"
+  },
+  {
+    "objectID": "clases/clase_20_2.html",
+    "href": "clases/clase_20_2.html",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "Comprender características que presentan los datos\nEncontrar patrones presentes o implícitos\nEvaluar posibles estrategias de modelización\nDepurar el análisis\nComunicar los resultados del proceso de obtención-levantamiento de los datos"
   }
 ]

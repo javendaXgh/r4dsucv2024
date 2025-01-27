@@ -1,0 +1,94 @@
+---
+title: "Untitled"
+format: revealjs
+---
+
+## doble columna
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "4"
+
+
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| eval: true
+
+
+```
+:::
+:::::
+
+::: notes
+:::
+
+## doble columna animada {auto-animate="true"}
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "4"
+
+
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| eval: true
+
+
+```
+:::
+:::::
+
+## doble columna animada {auto-animate="true"}
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "4"
+
+
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| eval: true
+
+```
+:::
+:::::
+
+## Panelstabs
+
+::: panel-tabset
+## Gráfico
+
+```{r}
+#| echo: false
+#| eval: true
+```
+
+## Código
+
+```{r}
+#| echo: true
+#| eval: false
+#| code-line-numbers: "4"
+```
+:::
