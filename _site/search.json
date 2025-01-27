@@ -8307,7 +8307,7 @@
     "href": "clases/clase_21.html#inspeccionar-datos-a-trabajar",
     "title": "Ciencia de Datos para Economistas",
     "section": "Inspeccionar Datos a Trabajar",
-    "text": "Inspeccionar Datos a Trabajar\n\n#|echo: true\n#|eval: true\n\n\ndf_valores_acciones%&gt;%\n  sample_n(10)\n\n# A tibble: 10 × 5\n   fecha           volume accion  tipo_valor    valor\n   &lt;date&gt;           &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;         &lt;dbl&gt;\n 1 2007-03-20   488916400 Apple   high           3.28\n 2 2013-10-29    15954700 Oracle  low           33.2 \n 3 2020-04-14 34110434052 Bitcoin low         6794.  \n 4 2016-06-27   449088000 Nvidia  low            1.11\n 5 2023-02-22     5840100 Oracle  adjclose      84.1 \n 6 2021-11-29 32370840356 Bitcoin open       57292.  \n 7 2021-07-09 27436021028 Bitcoin open       32862.  \n 8 2024-09-05     8733200 Oracle  adjclose     142.  \n 9 2008-04-04   854417200 Apple   close          5.47\n10 2012-10-09    23311300 Oracle  adjclose      25.5 \n\n\ncódigo para obtención y procesamiento de datos disponible en enlace"
+    "text": "Inspeccionar Datos a Trabajar\n\n#|echo: true\n#|eval: true\n\n\ndf_valores_acciones%&gt;%\n  sample_n(10)\n\n# A tibble: 10 × 5\n   fecha           volume accion  tipo_valor     valor\n   &lt;date&gt;           &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;\n 1 2019-10-04   138478800 Apple   low           56.0  \n 2 2007-08-10  1141014000 Nvidia  close          0.733\n 3 2022-04-16 16833150693 Bitcoin high       40634.   \n 4 2015-08-28   212657600 Apple   open          28.0  \n 5 2009-09-25    35144400 Oracle  low           20.8  \n 6 2014-05-16   283960000 Nvidia  high           0.452\n 7 2014-06-19    27255800 Oracle  open          42.9  \n 8 2022-04-19     5412400 Oracle  high          79.8  \n 9 2016-05-05     8962700 Oracle  open          39.4  \n10 2014-02-04   280692000 Nvidia  open           0.387\n\n\ncódigo para obtención y procesamiento de datos disponible en enlace"
   },
   {
     "objectID": "clases/clase_21.html#geom_line-1-línea-con-color",
@@ -8483,5 +8483,12 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "",
     "text": "Comprender características que presentan los datos\nEncontrar patrones presentes o implícitos\nEvaluar posibles estrategias de modelización\nDepurar el análisis\nComunicar los resultados del proceso de obtención-levantamiento de los datos"
+  },
+  {
+    "objectID": "clases/clase_21.html#objetivo",
+    "href": "clases/clase_21.html#objetivo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Objetivo",
+    "text": "Objetivo\nConocer el sistema de graficación en R llamado ggplot2 , con énfasis en los mapeos estéticos, y los principales geoms que se pueden usar para realizar la visualización de datos."
   }
 ]
