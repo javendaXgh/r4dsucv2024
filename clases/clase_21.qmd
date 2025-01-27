@@ -1702,6 +1702,39 @@ ggplot(data = gapminder_2007,
 :::
 :::::
 
+## geom_point: ajuste color vs. mapeo
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: true
+#| eval: true
+#| code-line-numbers: "4,5"
+ggplot(data = gapminder_2007,
+       mapping = aes(x = lifeExp, 
+                     y = gdpPercap)) +
+  geom_point(
+    color= "#9d0208")
+
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: true
+#| eval: true
+#| code-line-numbers: "4"
+
+ggplot(data = gapminder_2007,
+       mapping = aes(x = lifeExp, 
+                     y = gdpPercap,
+                     color=continent)) +
+  geom_point()
+
+```
+:::
+:::::
+
 ## geom_point: mapeo de una expresión 
 
 <br>
@@ -2186,17 +2219,23 @@ df_valores_acciones%>%
 
 <br>
 
+Generación de un tipo de gráfico con una o dos variables continuas que va iterando sobre una o más variable categórica.
+
+-   Requiere los valores una o más variables en *aesthetics* dentro de `aes()` con el símbolo `~` por cada variable sobre la que se iterará.
+
+-   En *aesthetics* dentro de `aes()` , se puede indicar `nrow` o `ncol` para definir el número de filas y columnas que se generarán.
+
 ::::: columns
 ::: {.column width="50%"}
 ```{r}
 #| echo: true
 #| eval: false
-#| code-line-numbers: "4"
+#| code-line-numbers: "5"
 ggplot(data = gapminder,
        mapping = aes(x = lifeExp, 
                      y = gdpPercap)) +
   geom_smooth(color='#c9184a')+
-  facet_wrap(~continent, nrow=1)+
+  facet_wrap(~continent, nrow=2)+
   theme_dark()
 
 ```
@@ -2217,42 +2256,7 @@ ggplot(data = gapminder,
 :::
 :::::
 
-## Facetas
-
-<br>
-
-::::: columns
-::: {.column width="50%"}
-```{r}
-#| echo: true
-#| eval: false
-#| code-line-numbers: "4"
-ggplot(data = gapminder,
-       mapping = aes(x = lifeExp, 
-                     y = gdpPercap)) +
-  geom_smooth(color='#ca6702')+
-  facet_wrap(~year)+
-  theme_grey()
-
-```
-:::
-
-::: {.column width="50%"}
-```{r}
-#| echo: false
-#| eval: true
-ggplot(data = gapminder,
-       mapping = aes(x = lifeExp, 
-                     y = gdpPercap)) +
-  geom_smooth(color='#ca6702')+
-  facet_wrap(~year)+
-  theme_grey()
-
-```
-:::
-:::::
-
-## Facetas
+## Facetas boxplot por una variable categórica
 
 <br>
 
@@ -2283,7 +2287,7 @@ ggplot(data = gapminder_2007) +
 :::
 :::::
 
-## Facetas
+## Facetas histograma por una variable categórica
 
 <br>
 
@@ -2314,7 +2318,7 @@ ggplot(data = gapminder) +
 :::
 :::::
 
-## Facetas
+## Facetas: 2 variables, tema, smooth
 
 <br>
 
@@ -2323,11 +2327,13 @@ ggplot(data = gapminder) +
 ```{r}
 #| echo: true
 #| eval: false
-#| code-line-numbers: "4"
-ggplot(data = gapminder_2007) +
-  geom_histogram(aes(lifeExp),
-                 bins = 10)+
-  facet_wrap(~continent)
+#| code-line-numbers: "2,3,4,6"
+ggplot(data = gapminder,
+       mapping = aes(x = lifeExp, 
+                     y = gdpPercap)) +
+  geom_smooth(color='#ca6702')+
+  facet_wrap(~year)+
+  theme_grey()
 
 ```
 :::
@@ -2336,16 +2342,18 @@ ggplot(data = gapminder_2007) +
 ```{r}
 #| echo: false
 #| eval: true
-ggplot(data = gapminder_2007) +
-  geom_histogram(aes(lifeExp),
-                 bins = 10)+
-  facet_wrap(~continent)
+ggplot(data = gapminder,
+       mapping = aes(x = lifeExp, 
+                     y = gdpPercap)) +
+  geom_smooth(color='#ca6702')+
+  facet_wrap(~year)+
+  theme_grey()
 
 ```
 :::
 :::::
 
-## Facetas
+## Facetas con dos columnas
 
 <br>
 
@@ -2354,41 +2362,8 @@ ggplot(data = gapminder_2007) +
 ```{r}
 #| echo: true
 #| eval: false
-#| code-line-numbers: "4"
+#| code-line-numbers: "5"
 ggplot(data = gapminder) +
-  geom_point(mapping = aes(x = lifeExp, 
-                           y = gdpPercap, 
-                           colour= pop))+
-  facet_wrap(~ continent, nrow = 1)
-
-```
-:::
-
-::: {.column width="50%"}
-```{r}
-#| echo: false
-#| eval: true
-ggplot(data = gapminder) +
-  geom_point(mapping = aes(x = lifeExp, 
-                           y = gdpPercap, 
-                           colour= pop))+
-  facet_wrap(~ continent, nrow = 1)
-
-```
-:::
-:::::
-
-## Facetas
-
-<br>
-
-::::: columns
-::: {.column width="50%"}
-```{r}
-#| echo: true
-#| eval: false
-#| code-line-numbers: "4"
-ggplot(data = gapminder_2007) +
   geom_point(mapping = aes(x = lifeExp, 
                            y = gdpPercap, 
                            colour= pop))+
@@ -2401,7 +2376,7 @@ ggplot(data = gapminder_2007) +
 ```{r}
 #| echo: false
 #| eval: true
-ggplot(data = gapminder_2007) +
+ggplot(data = gapminder) +
   geom_point(mapping = aes(x = lifeExp, 
                            y = gdpPercap, 
                            colour= pop))+
@@ -2411,7 +2386,7 @@ ggplot(data = gapminder_2007) +
 :::
 :::::
 
-## Facetas
+## Facetas con dos variables categóricas
 
 <br>
 
@@ -2420,7 +2395,7 @@ ggplot(data = gapminder_2007) +
 ```{r}
 #| echo: true
 #| eval: false
-#| code-line-numbers: "4"
+#| code-line-numbers: "5"
 
 ggplot(data = gapminder_af_am) +
   geom_point(mapping = aes(x = lifeExp, 
@@ -2444,7 +2419,7 @@ ggplot(data = gapminder_af_am) +
 :::
 :::::
 
-## Facetas
+## Facetas por variable categórica y color escala contínua
 
 <br>
 
@@ -2453,40 +2428,7 @@ ggplot(data = gapminder_af_am) +
 ```{r}
 #| echo: true
 #| eval: false
-#| code-line-numbers: "4"
-ggplot(data = gapminder_af_am) +
-  geom_point(mapping = aes(x = lifeExp, 
-                           y = gdpPercap, 
-                           colour= pop))+
-  facet_wrap(. ~ continent)
-
-```
-:::
-
-::: {.column width="50%"}
-```{r}
-#| echo: false
-#| eval: true
-
-ggplot(data = gapminder_af_am) +
-  geom_point(mapping = aes(x = lifeExp, 
-                           y = gdpPercap, 
-                           colour= pop))+
-  facet_wrap(. ~ continent)
-```
-:::
-:::::
-
-## Facetas
-
-<br>
-
-::::: columns
-::: {.column width="50%"}
-```{r}
-#| echo: true
-#| eval: false
-#| code-line-numbers: "4"
+#| code-line-numbers: "4,5"
 ggplot(data = gapminder_af_am) +
   geom_point(mapping = aes(x = lifeExp, 
                            y = gdpPercap, 
@@ -2506,39 +2448,6 @@ ggplot(data = gapminder_af_am) +
                            colour= pop))+
   facet_wrap(. ~ country)
 
-```
-:::
-:::::
-
-## Facetas
-
-<br>
-
-::::: columns
-::: {.column width="50%"}
-```{r}
-#| echo: true
-#| eval: false
-#| code-line-numbers: "4"
-
-ggplot(data = gapminder_af_am) +
-  geom_point(mapping = aes(x = lifeExp, 
-                           y = gdpPercap, 
-                           colour= pop))+
-  facet_wrap( country ~ .)
-```
-:::
-
-::: {.column width="50%"}
-```{r}
-#| echo: false
-#| eval: true
-
-ggplot(data = gapminder_af_am) +
-  geom_point(mapping = aes(x = lifeExp, 
-                           y = gdpPercap, 
-                           colour= pop))+
-  facet_wrap( country ~ .)
 ```
 :::
 :::::
@@ -2709,9 +2618,15 @@ ggsave(graf_gap_2007,
 
 ## Elección del Mapeo (Mapping)
 
-![](images/clase21/choosing_a_mapping%20.png){width="600"}
+![](images/clase21/choosing_a_mapping%20.png){fig-align="center" width="600"}
 
 Imagen de Garrett Grolemund's 2019 JSM, tidyverse tutorial .
+
+## Elección Tipo Gráfico
+
+![](images/clase21/cual_ggplot.png){fig-align="center" width="500"}
+
+tomado de la presentación "a `ggplot2` Crash Course" de Samantha Tyner.
 
 ## Láminas repaso 
 

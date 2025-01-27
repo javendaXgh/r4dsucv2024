@@ -7761,7 +7761,7 @@
     "href": "clases/clase_21.html#facetas",
     "title": "Ciencia de Datos para Economistas",
     "section": "Facetas",
-    "text": "Facetas\n\n\n\n\nggplot(data = gapminder,\n       mapping = aes(x = lifeExp, \n                     y = gdpPercap)) +\n  geom_smooth(color='#c9184a')+\n  facet_wrap(~continent, nrow=1)+\n  theme_dark()"
+    "text": "Facetas\n\nGeneración de un tipo de gráfico con una o dos variables continuas que va iterando sobre una o más variable categórica.\n\nRequiere los valores una o más variables en aesthetics dentro de aes() con el símbolo ~ por cada variable sobre la que se iterará.\nEn aesthetics dentro de aes() , se puede indicar nrow o ncol para definir el número de filas y columnas que se generarán.\n\n\n\n\nggplot(data = gapminder,\n       mapping = aes(x = lifeExp, \n                     y = gdpPercap)) +\n  geom_smooth(color='#c9184a')+\n  facet_wrap(~continent, nrow=2)+\n  theme_dark()"
   },
   {
     "objectID": "clases/clase_21.html#composición-de-elementos",
@@ -8307,7 +8307,7 @@
     "href": "clases/clase_21.html#inspeccionar-datos-a-trabajar",
     "title": "Ciencia de Datos para Economistas",
     "section": "Inspeccionar Datos a Trabajar",
-    "text": "Inspeccionar Datos a Trabajar\n\n#|echo: true\n#|eval: true\n\n\ndf_valores_acciones%&gt;%\n  sample_n(10)\n\n# A tibble: 10 × 5\n   fecha           volume accion  tipo_valor     valor\n   &lt;date&gt;           &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;\n 1 2019-10-04   138478800 Apple   low           56.0  \n 2 2007-08-10  1141014000 Nvidia  close          0.733\n 3 2022-04-16 16833150693 Bitcoin high       40634.   \n 4 2015-08-28   212657600 Apple   open          28.0  \n 5 2009-09-25    35144400 Oracle  low           20.8  \n 6 2014-05-16   283960000 Nvidia  high           0.452\n 7 2014-06-19    27255800 Oracle  open          42.9  \n 8 2022-04-19     5412400 Oracle  high          79.8  \n 9 2016-05-05     8962700 Oracle  open          39.4  \n10 2014-02-04   280692000 Nvidia  open           0.387\n\n\ncódigo para obtención y procesamiento de datos disponible en enlace"
+    "text": "Inspeccionar Datos a Trabajar\n\n#|echo: true\n#|eval: true\n\n\ndf_valores_acciones%&gt;%\n  sample_n(10)\n\n# A tibble: 10 × 5\n   fecha           volume accion  tipo_valor     valor\n   &lt;date&gt;           &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;\n 1 2022-06-05 17264085441 Bitcoin high       30118.   \n 2 2020-06-26   205256800 Apple   open          91.1  \n 3 2014-01-06    15329400 Oracle  high          37.8  \n 4 2009-12-31   700340000 Nvidia  adjclose       0.428\n 5 2016-02-11    18889700 Oracle  close         34.8  \n 6 2008-05-22   693108000 Nvidia  open           0.586\n 7 2018-05-23     9204400 Oracle  adjclose      42.2  \n 8 2014-12-09   239448000 Nvidia  low            0.509\n 9 2015-12-01    42692000 Google  high          38.4  \n10 2018-04-24   134768000 Apple   low           40.3  \n\n\ncódigo para obtención y procesamiento de datos disponible en enlace"
   },
   {
     "objectID": "clases/clase_21.html#geom_line-1-línea-con-color",
@@ -8490,5 +8490,68 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "Objetivo",
     "text": "Objetivo\nConocer el sistema de graficación en R llamado ggplot2 , con énfasis en los mapeos estéticos, y los principales geoms que se pueden usar para realizar la visualización de datos."
+  },
+  {
+    "objectID": "clases/clase_21.html#facetas-boxplot-por-una-variable-categórica",
+    "href": "clases/clase_21.html#facetas-boxplot-por-una-variable-categórica",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Facetas boxplot por una variable categórica",
+    "text": "Facetas boxplot por una variable categórica\n\n\n\n\nggplot(data = gapminder_2007) +\n  geom_boxplot(aes(y=lifeExp,\n                   color= continent))+\n  facet_wrap(~continent)"
+  },
+  {
+    "objectID": "clases/clase_21.html#facetas-histograma-por-una-variable-categórica",
+    "href": "clases/clase_21.html#facetas-histograma-por-una-variable-categórica",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Facetas histograma por una variable categórica",
+    "text": "Facetas histograma por una variable categórica\n\n\n\n\nggplot(data = gapminder) +\n  geom_histogram(aes(gdpPercap,\n                     color=continent))+\n  facet_wrap(~continent)"
+  },
+  {
+    "objectID": "clases/clase_21.html#facetas-2-variables-tema-smooth",
+    "href": "clases/clase_21.html#facetas-2-variables-tema-smooth",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Facetas: 2 variables, tema, smooth",
+    "text": "Facetas: 2 variables, tema, smooth\n\n\n\n\nggplot(data = gapminder,\n       mapping = aes(x = lifeExp, \n                     y = gdpPercap)) +\n  geom_smooth(color='#ca6702')+\n  facet_wrap(~year)+\n  theme_grey()"
+  },
+  {
+    "objectID": "clases/clase_21.html#facetas-con-dos-columnas",
+    "href": "clases/clase_21.html#facetas-con-dos-columnas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Facetas con dos columnas",
+    "text": "Facetas con dos columnas\n\n\n\n\nggplot(data = gapminder) +\n  geom_point(mapping = aes(x = lifeExp, \n                           y = gdpPercap, \n                           colour= pop))+\n  facet_wrap(~ continent, nrow = 2)"
+  },
+  {
+    "objectID": "clases/clase_21.html#facetas-con-dos-variables-categóricas",
+    "href": "clases/clase_21.html#facetas-con-dos-variables-categóricas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Facetas con dos variables categóricas",
+    "text": "Facetas con dos variables categóricas\n\n\n\n\nggplot(data = gapminder_af_am) +\n  geom_point(mapping = aes(x = lifeExp, \n                           y = gdpPercap, \n                           colour= pop))+\n  facet_wrap(country ~ continent)"
+  },
+  {
+    "objectID": "clases/clase_21.html#facetas-por-variable-categórica-y-color-escala-contínua",
+    "href": "clases/clase_21.html#facetas-por-variable-categórica-y-color-escala-contínua",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Facetas por variable categórica y color escala contínua",
+    "text": "Facetas por variable categórica y color escala contínua\n\n\n\n\nggplot(data = gapminder_af_am) +\n  geom_point(mapping = aes(x = lifeExp, \n                           y = gdpPercap, \n                           colour= pop))+\n  facet_wrap(. ~ country)"
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_point-ajuste-color-vs-mapeo",
+    "href": "clases/clase_21.html#geom_point-ajuste-color-vs-mapeo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_point: ajuste color vs mapeo",
+    "text": "geom_point: ajuste color vs mapeo\n\n\n\nggplot(data = gapminder_2007,\n       mapping = aes(x = lifeExp, \n                     y = gdpPercap)) +\n  geom_point(color= \"#9d0208\")\n\n\n\n\n\n\n\n#\n\n\n\nggplot(data = gapminder_2007,\n       mapping = aes(x = lifeExp, \n                     y = gdpPercap,\n                     color=continent)) +\n  geom_point()"
+  },
+  {
+    "objectID": "clases/clase_21.html#elección-tipo-gráfico",
+    "href": "clases/clase_21.html#elección-tipo-gráfico",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Elección Tipo Gráfico",
+    "text": "Elección Tipo Gráfico\n\ntomado de la presentación “a ggplot2 Crash Course” de Samantha Tyner."
+  },
+  {
+    "objectID": "clases/clase_21.html#geom_point-ajuste-color-vs.-mapeo",
+    "href": "clases/clase_21.html#geom_point-ajuste-color-vs.-mapeo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "geom_point: ajuste color vs. mapeo",
+    "text": "geom_point: ajuste color vs. mapeo\n\n\n\nggplot(data = gapminder_2007,\n       mapping = aes(x = lifeExp, \n                     y = gdpPercap)) +\n  geom_point(\n    color= \"#9d0208\")\n\n\n\n\n\n\n\n\n\n\nggplot(data = gapminder_2007,\n       mapping = aes(x = lifeExp, \n                     y = gdpPercap,\n                     color=continent)) +\n  geom_point()"
   }
 ]
