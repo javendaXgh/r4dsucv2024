@@ -1,7 +1,7 @@
 ---
 title: "Ciencia de Datos para Economistas"
 subtitle: "Clase 21- Gráficos con `ggplot2`"
-date: "26, january 2025"
+date: "27, january 2025"
 author: "MSc. José M. Avendaño"
 # output:
 #   html_document:
@@ -1671,7 +1671,7 @@ cómo es la relación entre la expectativa de vida y el pibpercap
 comportamiento lineal, exponencia?
 :::
 
-## geom_point: color 
+## geom_point: color
 
 <br>
 
@@ -1735,7 +1735,7 @@ ggplot(data = gapminder_2007,
 :::
 :::::
 
-## geom_point: mapeo de una expresión 
+## geom_point: mapeo de una expresión
 
 <br>
 
@@ -1962,7 +1962,7 @@ ggplot(data = gapminder_2007%>%
 
 -   El `aes` `group` dibuja líneas de acuerdo a la variable de agrupamiento
 
-## Inspeccionar Datos a Trabajar 
+## Inspeccionar Datos a Trabajar
 
 ```{r}
 #|echo: true
@@ -2628,7 +2628,7 @@ Imagen de Garrett Grolemund's 2019 JSM, tidyverse tutorial .
 
 tomado de la presentación "a `ggplot2` Crash Course" de Samantha Tyner.
 
-## Láminas repaso 
+## Láminas repaso
 
 -   `ggplot2` es una potente biblioteca para el diseño gráfico reproducible
 
@@ -2638,7 +2638,7 @@ tomado de la presentación "a `ggplot2` Crash Course" de Samantha Tyner.
 
 -   establecemos propiedades constantes fuera de aes()
 
--    ... y mapeamos las propiedades relacionadas con los datos dentro de aes()
+-   ... y mapeamos las propiedades relacionadas con los datos dentro de aes()
 
 -   los ajustes y mapeos locales anulan las propiedades globales
 
