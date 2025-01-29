@@ -72,13 +72,18 @@ Es un estilo adoptado para diseñar servicios web, el cual se sustenta en el pro
 
     -   Es más seguro para enviar datos sensibles.
 
-## Ejemplos:
+## Ejemplos de API:
 
--   Obtener direcciones o datos de coordenadas de API de google maps
-
--   **GitHub API**: estadísticas de uso
-
--   Spotify API: obtener metadata sobre los contenidos de la plataforma
+1.  **Spotify**:
+    -   **Descripción**: Proporciona acceso a bibliotecas de música, listas de reproducción, artistas y más.
+2.  **OpenWeatherMap**:
+    -   **Descripción**: Ofrece datos meteorológicos en tiempo real, pronósticos y estadísticas históricas.
+3.  **Google Maps**:
+    -   **Descripción**: Proporciona información geográfica, rutas, lugares de interés y más.
+4.  **GitHub**:
+    -   **Descripción**: Permite acceder a repositorios, issues, pull requests y otros datos relacionados con el código fuente.
+5.  **Yelp**:
+    -   **Descripción**: Ofrece información sobre negocios locales, reseñas, calificaciones y más.
 
 ## JSON
 

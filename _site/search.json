@@ -8923,7 +8923,7 @@
     "href": "clases/clase_22.html#caso-3-inspección-respuesta",
     "title": "Ciencia de Datos para Economistas",
     "section": "Caso 3: inspección respuesta",
-    "text": "Caso 3: inspección respuesta\n\nreq_emplea|&gt; \n  resp_content_type()\n\n[1] \"text/html\"\n\ndatos_html &lt;- req_emplea$body|&gt;\n  rawToChar()\n\nsubstr(datos_html,201000,201600)\n\n[1] \"mdGQvP/ZjFFOKHVPxYtiXtmkJTCUtWtP0jVearqnWmP4cxzwifBZiQOTYn9YcIkI4Q0lIiFrpecq4W2wA5Z5xUtjvVN7t/tW52CuUDdkxqZ9KsIERqvwWIrayrCRnDbfW12rhqknIjgjsKM1cJTUczPCMPtfsRL8uoCsz7qfKkpXj+sQZMLKe5luBNTKga1dNdky+t2QTPyezRox/PY2WLowKa+QZwdpye2iZ3cTOmmUjZSPF+E66i035PAuYpodeGQ9t1Sgu1VKbMiAAQSopjQtFfjqXwCxgu4sf77kCn/dvMzlw7KTxvEXdWSlVMokharPFvaWIim1T7DnBX4EaqxDOvp9v7RYTn1AEuKY07ZcrKOHAlK0pBeTx20zjUUTTfwLvN7mDCh+VkCG78+fL1i4C/igiApTG24c3c7Z2D9M+zJSAkCldhzGNraysmpc3FQn6ahDHpAuax/PeqBPE8r4+biwkmVboHcvkTYv19poF2WhqHXrp/S49qSixlOa28hPFTQFxvB3he5Liq6M6vQ+Q7DLMKhunowLQMNQc38ZmfZ22r/uyHpQdQlu8jvsbbdq9GZF14nJbgESzeFWDkwTT\"\n\nrvest::read_html(datos_html)\n\n{html_document}\n&lt;html lang=\"es\"&gt;\n[1] &lt;head&gt;\\n&lt;!-- Meta --&gt;&lt;title&gt;Empléate | Venezuela, Colombia, México, Perú, España, E ...\n[2] &lt;body&gt;\\r\\n&lt;header&gt;&lt;!--=== Header y nav ===--&gt;&lt;link rel=\"stylesheet\" href=\"/css/nav- ..."
+    "text": "Caso 3: inspección respuesta\n\nreq_emplea|&gt; \n  resp_content_type()\n\n[1] \"text/html\"\n\ndatos_html &lt;- req_emplea$body|&gt;\n  rawToChar()\n\nsubstr(datos_html,201000,201600)\n\n[1] \"d+t+f2P9bwtRbfYvCvUkfJTAi/RmFVpUcGzZN/Tomnmf7HCfnQNn7t8+tZ0p9Azh5SF9wLVzO/xJOFFbDc7xnLTzEHES4C5tnVsKCkkpzPGqehOr/izfpvuB8H7rzazD8E8JvDOhlzSPeNgxK4HgCF6Z2XpSqnxbd3ivotJ9fskcOtcn7cJvYU8Tnx1Rx6qMQCzXxTal5I6YfB+w4jxhXGxfPmcPeLMZz/DB4jhx+2lTCSRSqjfoylmSKTvuvkuPuTP8flvQdMeb6WtKIUFYm++zJeM4mIUFjiASPorPhLmydifgO2PeH5pZcq1zJ1IcBr1+hvbgXOB5442HAg/0FDOAS4A6HaDyLh4HujJI7fiWshiv/zn+6pUW39zGU2oPh5EDq6wCuernXa8liivD8z1g0P8fmdm8Fra6TwHMytO4AnfZvsrktaPO0Gp1ydIsA3LAt7f53bDr439kxd2bJHEed0Cj3jlrB6lC2f+2bBJvOLVVhKTXXeLWr2en9dNpPYmFxGngLsLdWWUxC5fkshrZ8Tbwwi1rqQvcRN4aSj7K0dBKd9ovZuoHoeO22dWYfnfZdMfyF4xhSS4dIJNkDvjaN\"\n\nrvest::read_html(datos_html)\n\n{html_document}\n&lt;html lang=\"es\"&gt;\n[1] &lt;head&gt;\\n&lt;!-- Meta --&gt;&lt;title&gt;Empléate | Venezuela, Colombia, México, Perú, España, E ...\n[2] &lt;body&gt;\\r\\n&lt;header&gt;&lt;!--=== Header y nav ===--&gt;&lt;link rel=\"stylesheet\" href=\"/css/nav- ..."
   },
   {
     "objectID": "clases/clase_22.html#caso-4-consulta-llm-1-api-google-ai-studio",
@@ -9148,5 +9148,12 @@
     "title": "ggplot apoyo",
     "section": "",
     "text": "PlottingBase\nGGplot\nlatice (no abordado en curso)"
+  },
+  {
+    "objectID": "clases/clase_22.html#ejemplos-de-api",
+    "href": "clases/clase_22.html#ejemplos-de-api",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplos de API:",
+    "text": "Ejemplos de API:\n\nSpotify:\n\nDescripción: Proporciona acceso a bibliotecas de música, listas de reproducción, artistas y más.\n\nOpenWeatherMap:\n\nDescripción: Ofrece datos meteorológicos en tiempo real, pronósticos y estadísticas históricas.\n\nGoogle Maps:\n\nDescripción: Proporciona información geográfica, rutas, lugares de interés y más.\n\nGitHub:\n\nDescripción: Permite acceder a repositorios, issues, pull requests y otros datos relacionados con el código fuente.\n\nYelp:\n\nDescripción: Ofrece información sobre negocios locales, reseñas, calificaciones y más."
   }
 ]
