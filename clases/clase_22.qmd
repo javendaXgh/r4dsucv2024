@@ -88,7 +88,7 @@ Es un estilo adoptado para diseñar servicios web, el cual se sustenta en el pro
 
 ::::: columns
 ::: {.column width="50%"}
-```{}
+```         
   "empleados": [
     {
       "nombre": "Juan",
@@ -108,7 +108,6 @@ Es un estilo adoptado para diseñar servicios web, el cual se sustenta en el pro
     }
   ]
 }
-
 ```
 :::
 
@@ -144,7 +143,7 @@ fromJSON('{
 
 ::::: columns
 ::: {.column width="50%"}
-```{}
+```         
   "libro": {
     "titulo": "1984",
     "autor": "George Orwell",
@@ -156,7 +155,6 @@ fromJSON('{
     }
   }
 }
-
 ```
 :::
 
@@ -215,7 +213,7 @@ req_patria
 
 ## Caso 1: definición método
 
-### GET 
+### GET
 
 ```{r}
 #| echo: true
@@ -649,6 +647,8 @@ dato_texto_prompt <- paste(prompt,
 ```{r}
 #| echo: true
 #| eval: true
+
+
 url_ollama <- 'http://localhost:11434' # modificar url por dirección ip host
 
 endpoint <- paste0(url_ollama, '/api/generate')
@@ -689,6 +689,7 @@ fromJSON(llm_resultado$response)|>
 ```{r}
 #| eval: false
 #| echo: true
+
 
 datos_cepal <- request("https://api-cepalstat.cepal.org/cepalstat/api/v1/thematic-tree?lang=es&format=json")|>
   req_headers("Accept" = "application/json")|>

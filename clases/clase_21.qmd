@@ -1225,7 +1225,7 @@ La altura de la barra representan valores en los datos
 
 ::::: columns
 ::: {.column width="50%"}
--   detalle mapeo estético en `x` y `y`
+-   detalle mapeo estético en `x` e `y`
 
 ```{r}
 #| echo: true
@@ -2506,7 +2506,7 @@ library("tidyr")
 mancuerna_df <- gapminder %>%
   filter(year == 1967 | year == 2007) %>%
   select(country, year, lifeExp) %>%
-  spread(year, lifeExp) %>%
+  pivot_wider(names_from= year, values_from=lifeExp) %>%
   mutate(gap = `2007` - `1967`) %>%
   arrange(desc(gap)) %>%
   head(10)

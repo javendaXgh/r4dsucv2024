@@ -2,9 +2,6 @@
 title: "ggplot apoyo"
 ---
 
-```         
-```
-
 ## Sistemas Graficación
 
 -   PlottingBase
