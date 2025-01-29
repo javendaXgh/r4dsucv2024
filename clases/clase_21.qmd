@@ -2048,8 +2048,8 @@ ggplot(data = gapminder_2007%>%
 ## Inspeccionar Datos a Trabajar
 
 ```{r}
-#|echo: true
-#|eval: true
+#| echo: true
+#| eval: true
 
 
 df_valores_acciones%>%
@@ -2276,6 +2276,8 @@ df_valores_acciones%>%
 ```{r}
 #| echo: false
 #| eval: true
+
+Sys.setlocale("LC_TIME", "es_ES.UTF-8")
 
 df_valores_acciones%>%
   filter(accion=='Apple'& 
