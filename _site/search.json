@@ -9041,8 +9041,8 @@
     "objectID": "clases/clase_21_apoyo.html#sistemas-graficación",
     "href": "clases/clase_21_apoyo.html#sistemas-graficación",
     "title": "ggplot apoyo",
-    "section": "Sistemas Graficación",
-    "text": "Sistemas Graficación\n\nPlottingBase\nGGplot\nlatice (no abordado en curso)"
+    "section": "",
+    "text": "PlottingBase\nGGplot\nlatice (no abordado en curso)"
   },
   {
     "objectID": "clases/clase_21_apoyo.html#principios-ggplot",
@@ -9105,7 +9105,7 @@
     "href": "clases/clase_21_apoyo.html#posición",
     "title": "ggplot apoyo",
     "section": "Posición:",
-    "text": "Posición:\ncómo lidear con la superposición de valores\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Posición:\ncómo lidear con la superposición de valores"
   },
   {
     "objectID": "clases/clase_22_apoyo.html#guide",
