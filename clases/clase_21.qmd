@@ -21,13 +21,17 @@ format:
 #| echo: false
 #| warning: false
 
-library(ggplot2)
-library(dplyr)
+# library(ggplot2)
+# library(dplyr)
+library(tidyverse)
 library(ggalt)
 library(gapminder)
 library(gt)
 library(bbplot)
 library(viridis)
+library(pdfetch)
+library(xts)
+
 
 gap_2007 <- gapminder%>%
   filter(year==2007)%>%
@@ -59,7 +63,7 @@ df_gapminder_2007_america <- gapminder_2007%>%
 gapminder_af_am <- gapminder%>%
   filter(continent %in% c('Americas','Europe'))
 
-df_valores_acciones <- readRDS('data_in/valores_acciones.rds')
+# df_valores_acciones <- readRDS('data_in/valores_acciones.rds')
 
 df_funcion_ggplot <- data.frame(Componente=  c('Datos','Estética', 'Geometrías','Estadísticas',
                                     'Escalas','Sistema de Coordenadas','Facetas','Temas Visuales'),
@@ -75,6 +79,85 @@ df_funcion_ggplot <- data.frame(Componente=  c('Datos','Estética', 'Geometrías
                                                'la representación visual general del gráfico (fondo, tipo de letras, etc.)'),
                                 C= c('✅' ,'✅' ,'✅' ,'⛔️' ,'⛔️', '⛔️','✅' ,'✅')
                                   )
+######################################################################
+# Obtener valores acciones con pdfetch_YAHOO                          
+######################################################################
+valor_apple <- pdfetch_YAHOO(c("AAPL"))
+
+valor_apple <- valor_apple%>%
+  as_data_frame()%>%
+  mutate(accion= 'Apple',
+         codigo= 'AAPL')%>%
+  bind_cols( fecha= index(valor_apple))
+
+names(valor_apple) <- c('open','high','low',
+                        'close','adjclose', 'volume',
+                        'accion','codigo','fecha')
+
+# descarga valores en formato zoo
+valor_bitcoin <- pdfetch_YAHOO('BTC-USD')
+# procesamiento de datos descargados
+valor_bitcoin <- valor_bitcoin%>%
+  as_data_frame()%>%
+  mutate(accion= 'Bitcoin',
+         codigo= 'BTC-USD')%>%
+  bind_cols( fecha= index(valor_bitcoin))
+
+names(valor_bitcoin) <- c('open','high','low',
+                          'close','adjclose', 'volume',
+                          'accion','codigo','fecha')
+
+# descarga valores en formato zoo
+valor_nvidia <- pdfetch_YAHOO('NVDA')
+# procesamiento de datos descargados
+valor_nvidia <- valor_nvidia%>%
+  as_data_frame()%>%
+  mutate(accion= 'Nvidia',
+         codigo= 'NVDA')%>%
+  bind_cols( fecha= index(valor_nvidia))
+
+names(valor_nvidia) <- c('open','high','low',
+                         'close','adjclose', 'volume',
+                         'accion','codigo','fecha')
+
+# descarga valores en formato zoo
+valor_google <- pdfetch_YAHOO('GOOG')
+# procesamiento de datos descargados
+valor_google <- valor_google%>%
+  as_data_frame()%>%
+  mutate(accion= 'Google',
+         codigo= 'GOOG')%>%
+  bind_cols( fecha= index(valor_google))
+
+names(valor_google) <- c('open','high','low',
+                         'close','adjclose', 'volume',
+                         'accion','codigo','fecha')
+
+# descarga valores en formato zoo
+valor_oracle <- pdfetch_YAHOO('ORCL')
+# procesamiento de datos descargados
+valor_oracle <- valor_oracle%>%
+  as_data_frame()%>%
+  mutate(accion= 'Oracle',
+         codigo= 'ORCL')%>%
+  bind_cols( fecha= index(valor_oracle))
+
+names(valor_oracle) <- c('open','high','low',
+                         'close','adjclose', 'volume',
+                         'accion','codigo','fecha')
+
+
+# unificar en una data frame valores de las acciones descargados
+df_valores_acciones <- bind_rows(valor_apple,
+                              valor_bitcoin,
+                              valor_nvidia,
+                              valor_google,
+                              valor_oracle)%>%
+  select(9,1:7)%>%
+  pivot_longer(cols = c('open','high','low',
+                        'close','adjclose'),
+               names_to = "tipo_valor",
+               values_to = "valor")
 ```
 
 ## Objetivo
