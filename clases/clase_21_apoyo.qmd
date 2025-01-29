@@ -1,0 +1,96 @@
+---
+title: "ggplot apoyo"
+---
+
+```         
+```
+
+## Sistemas Graficación
+
+-   PlottingBase
+
+-   GGplot
+
+-   latice (no abordado en curso)
+
+## Principios GGplot
+
+-   gramática de los gráficos
+
+-   agregar capas con +
+
+## Pasos ggplot2
+
+1.  **ggplot()**: crea un sistema de coordenadas para añadir capas
+
+2.  Argumento **`data`**: el conjunto de datos a graficar
+
+3.  Argumento `mapping`: se empareja con **`aes`**: define cómo se mapean a cada eje (`x` y `y`) las variables del conjunto de datos
+
+4.  Funciones geom_point, geom_bar, ...
+
+5.  Modificar escales, leyendas, estilos, temas, etc.
+
+## Mapeos Estéticos
+
+Un parámetro estético es una propiedad visual de los objetos de un gráfico. Las estéticas incluye cosas como el tamaño, la forma o el color de tus puntos. Puedes mostrar un punto de diferentes maneras si cambias los valores de sus propiedades estéticas. Como ya usamos la palabra “valor” para describir los datos, usemos la palabra “nivel” para describir las propiedades estéticas.
+
+El mapeo entre las propiedades estéticas de tu gráfico y las variables de tu conjunto de datos (*dataset*) te permite comunicar información sobre tus datos.
+
+La función `aes()` reúne cada una de las asignaciones estéticas utilizadas por una capa y las pasa al argumento de mapeo de la capa. La sintaxis resalta una visión útil sobre `x` e `y`: las ubicaciones de `x` e `y` de un punto son en sí mismas también estéticas, es decir propiedades visuales que se puede asignar a las variables para mostrar información sobre los datos.
+
+Una vez que asignas (o “mapeas”) una estética, **ggplot2** se ocupa del resto. El paquete selecciona una escala razonable para usar con la estética elegida y construye una leyenda que explica la relación entre niveles y valores. Para la estética `x` e `y`, **`ggplot2`** no crea una leyenda, pero sí una línea que delimita el eje con sus marcas de graduación y una etiqueta. La línea del eje actúa como una leyenda; explica el mapeo entre ubicaciones y valores.
+
+Para mapear (o asignar) una estética a una variable, debes asociar el nombre de la estética al de la variable dentro de `aes()`. **ggplot2** asignará automáticamente un nivel único de la estética (en este ejemplo, un color) a cada valor único de la variable. Este proceso es conocido como **escalamiento** (*scaling*). **ggplot2** acompañará el gráfico con una leyenda que explica qué niveles corresponden a qué valores.
+
+## Mapeos Geométricos
+
+**geoms:** es el objeto geométrico usado para representar datos de forma gráfica. La gente a menudo llama a los gráficos por el tipo de geom que utiliza. Por ejemplo, los diagramas de barras usan geoms de barra (*bar*), los diagramas de líneas usan geoms de línea (*line*), los diagramas de caja usan geoms de diagrama de caja (*boxplot*), y así sucesivamente
+
+**ggplot2** proporciona más de 40 geoms y los paquetes de extensión proporcionan aún más (consulta <https://exts.ggplot2.tidyverse.org/gallery/>para obtener una muestra). La mejor forma de obtener un panorama completo sobre las posibilidades que brinda **ggplot2** es consultando la hoja de referencia (o *cheatsheet*), que puedes encontrar en <https://rstudio.com/resources/cheatsheets/> (en la parte baja de la página encontrarás la versión en español). Para obtener más información sobre un tipo dado de geoms, usa la ayuda: `?geom_smooth`.
+
+-   Los gráficos de barras, los histogramas y los polígonos de frecuencia almacenan los datos y luego grafican los conteos por contenedores (*bins*), es decir, el número de puntos que caen en cada contenedor.
+
+-   Los gráficos de líneas suavizadas (*smoothers*) ajustan un modelo a los datos y luego grafican las predicciones del modelo.
+
+-   Los diagramas de caja (*boxplots*) calculan un resumen robusto de la distribución y luego muestran una caja con formato especial.
+
+El algoritmo utilizado para calcular nuevos valores para un gráfico se llama *stat*, abreviatura en inglés de transformación estadística (***stat**istical transformation*). La siguiente figura describe cómo funciona este proceso con `geom_bar()`.
+
+Adjetivos:
+
+-   color fondo
+
+-   grillas
+
+-   tamaño de la fuente, tamaño
+
+La función tema puede modificar todo lo que no sea relativo a los datos
+
+foto con capture de temas
+
+## Guide
+
+proposición
+
+Not needed here, because color and x-axis are the same.
+
+ `guides()` function controls all legends by connecting to the aes.
+
+## Facetas- posterior
+
+conjunción
+
+faceta por la variable país
+
+## Escalas
+
+controla como los datos se les modifican sus propiedades de representación (estructura de oración)
+
+## Sistema de Coordenadas:
+
+como los datos son posicionados en una visualización 2D
+
+## Posición:
+
+cómo lidear con la superposición de valores

@@ -468,7 +468,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\nAsignar Nombres Objetos y Variables\n🖥️ láminas clase 03 apoyo  💻 clase 3 apoyo versión qmd \n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n🖥️ láminas clase 04  💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\nConstruir Funciones y Data Frames\n🖥️ láminas clase 06  💻 clase 6 versión qmd  🖥️ clase 6 versión códigos  💻 clase 6: práctica 1- versión qmd  💻 clase 6: práctica 1- versión site  🎥video render Quarto 💻 clase 6: práctica 2- versión qmd  💻 clase 6: práctica 2- versión site \n\n\n\n\nmié, 6 nov.\nDF subsetting; Ayudas\n🖥️ láminas clase 07 💻 clase 7: tarea \n\n\n4\nlun, 11 nov.\nInspección DF´s / Seleccionar Valores, Subsettings-cont\n🖥️ láminas clase 08 🖥️ clase 08, versión reporte 💻 clase 8 versión qmd  💻 clase 8: tarea \n\n\n\n\nmié, 13 nov.\nPaths o Rutas de trabajo\n🖥️ láminas clase 09\n\n\n5\nlun, 18 nov.\nTrabajando con Data Frames por filas\n🖥️ láminas clase 10\n\n\n\n\nmié, 20 nov.\nTrabajando con Data Frames por columnas\n🖥️ láminas clase 11 💻 clase 11 versión qmd \n\n\n6\nlun, 25 nov.\nTrabajando con Data Frames: agrupamientos y Reframes\n🖥️ láminas clase 12 💻 clase 12 script  🖥️ clase 12, versión reporte 💻 clase 12 versión qmd \n\n\n\n\nmié, 27 nov.\nTrabajando con Data Frames: Agrupamientos y Reframes/ Asignación Ensayo\n💻 clase 13 script  🖥️ clase 13, versión reporte 💻 clase 13 versión qmd \n\n\n7\nlun, 2 dic.\nTrabajando con LLM R4DS Escuela Economía UCV\n🖥️ láminas clase 14 💻 clase 14 script \n\n\n\n\nmié, 4 dic.\nTrabajando con Data Frames y Tibbles: factores, selects, remoción duplicados. RBase: Coercion\n🖥️ láminas clase 15 💻 clase 15 script  🖥️ clase 15, versión reporte 💻 clase 15 versión qmd \n\n\n\n\nvie, 6 dic.\nTrabajando con Tibbles:Formatos Long y Wide, Valores Ausentes\nmismos materiales de clase 15\n\n\n8\nlun, 9 dic.\ntrabajando con: fechas y strings\n🖥️ láminas clase 17 💻 clase 17 script \n\n\n\n\nmié, 11 dic.\nUsando R para Análisis Económico\n💻 clase 18 script  🛢️ conjunto de datos clase 18 \n\n\n10\nlun, 13 ene.\nAvances anteproyecto- Discusión\n\n\n\n\n\n\nmié, 15 ene.\nIntroducción a la Visualizacion de Datos\n🖥️ láminas clase 19\n\n\n\n\nvie, 17 ene.\nIntroducción al Scrapy\n\n\n\n\n11\nmié, 22 ene.\nVisualizacion de Datos/ Análisis Exploratorio\n🖥️ láminas clase 20-1 🖥️ láminas clase 20-2 🖥️ láminas clase 20-3 💻 clase 20 script \n\n\n12\nlun, 27 ene.\nVisualización de Datos: GGplot y otras opciones\n🖥️ láminas clase 21 💻 clase 21 script \n\n\n\n\nmié, 29 ene.\nIntroducción a uso de API´s\n\n\n\n\n13\nlun, 3 feb.\nReportes/Tablas DT y GT/Nombres Columnas\n\n\n\n\n\n\nmié, 5 feb.\nDashboard\n\n\n\n\n14\nlun, 10 feb.\nRevisión Preliminar Proyectos\n\n\n\n\n\n\nmié, 12 feb.\nConexiones a DB´s, lectura y escritura\n\n\n\n\n15\nlun, 17 feb.\nJoins de DF´s\n\n\n\n\n\n\nmié, 19 feb.\nPresentacion Proyecto",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\nAsignar Nombres Objetos y Variables\n🖥️ láminas clase 03 apoyo  💻 clase 3 apoyo versión qmd \n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n🖥️ láminas clase 04  💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\nConstruir Funciones y Data Frames\n🖥️ láminas clase 06  💻 clase 6 versión qmd  🖥️ clase 6 versión códigos  💻 clase 6: práctica 1- versión qmd  💻 clase 6: práctica 1- versión site  🎥video render Quarto 💻 clase 6: práctica 2- versión qmd  💻 clase 6: práctica 2- versión site \n\n\n\n\nmié, 6 nov.\nDF subsetting; Ayudas\n🖥️ láminas clase 07 💻 clase 7: tarea \n\n\n4\nlun, 11 nov.\nInspección DF´s / Seleccionar Valores, Subsettings-cont\n🖥️ láminas clase 08 🖥️ clase 08, versión reporte 💻 clase 8 versión qmd  💻 clase 8: tarea \n\n\n\n\nmié, 13 nov.\nPaths o Rutas de trabajo\n🖥️ láminas clase 09\n\n\n5\nlun, 18 nov.\nTrabajando con Data Frames por filas\n🖥️ láminas clase 10\n\n\n\n\nmié, 20 nov.\nTrabajando con Data Frames por columnas\n🖥️ láminas clase 11 💻 clase 11 versión qmd \n\n\n6\nlun, 25 nov.\nTrabajando con Data Frames: agrupamientos y Reframes\n🖥️ láminas clase 12 💻 clase 12 script  🖥️ clase 12, versión reporte 💻 clase 12 versión qmd \n\n\n\n\nmié, 27 nov.\nTrabajando con Data Frames: Agrupamientos y Reframes/ Asignación Ensayo\n💻 clase 13 script  🖥️ clase 13, versión reporte 💻 clase 13 versión qmd \n\n\n7\nlun, 2 dic.\nTrabajando con LLM R4DS Escuela Economía UCV\n🖥️ láminas clase 14 💻 clase 14 script \n\n\n\n\nmié, 4 dic.\nTrabajando con Data Frames y Tibbles: factores, selects, remoción duplicados. RBase: Coercion\n🖥️ láminas clase 15 💻 clase 15 script  🖥️ clase 15, versión reporte 💻 clase 15 versión qmd \n\n\n\n\nvie, 6 dic.\nTrabajando con Tibbles:Formatos Long y Wide, Valores Ausentes\nmismos materiales de clase 15\n\n\n8\nlun, 9 dic.\ntrabajando con: fechas y strings\n🖥️ láminas clase 17 💻 clase 17 script \n\n\n\n\nmié, 11 dic.\nUsando R para Análisis Económico\n💻 clase 18 script  🛢️ conjunto de datos clase 18 \n\n\n10\nlun, 13 ene.\nAvances anteproyecto- Discusión\n\n\n\n\n\n\nmié, 15 ene.\nIntroducción a la Visualizacion de Datos\n🖥️ láminas clase 19\n\n\n\n\nvie, 17 ene.\nIntroducción al Scrapy\n\n\n\n\n11\nmié, 22 ene.\nVisualizacion de Datos/ Análisis Exploratorio\n🖥️ láminas clase 20-1 🖥️ láminas clase 20-2 🖥️ láminas clase 20-3 💻 clase 20 script \n\n\n12\nlun, 27 ene.\nVisualización de Datos: GGplot y otras opciones\n🖥️ láminas clase 21 💻 clase 21 script \n\n\n\n\nmié, 29 ene.\nIntroducción a uso de API´s\n🖥️ láminas clase 22 💻 clase 22 script \n\n\n13\nlun, 3 feb.\nReportes/Tablas DT y GT/Nombres Columnas\n\n\n\n\n\n\nmié, 5 feb.\nDashboard\n\n\n\n\n14\nlun, 10 feb.\nRevisión Preliminar Proyectos\n\n\n\n\n\n\nmié, 12 feb.\nConexiones a DB´s, lectura y escritura\n\n\n\n\n15\nlun, 17 feb.\nJoins de DF´s\n\n\n\n\n\n\nmié, 19 feb.\nPresentacion Proyecto",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -2569,8 +2569,8 @@
     "objectID": "clases/clase_10.html#objetivo",
     "href": "clases/clase_10.html#objetivo",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Objetivo",
-    "text": "Objetivo\nRealizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las filas u observaciones."
+    "section": "",
+    "text": "Realizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las filas u observaciones."
   },
   {
     "objectID": "clases/clase_10.html#cargar-datos-en-formato-xls",
@@ -2674,8 +2674,8 @@
     "objectID": "clases/clase_11.html#objetivo",
     "href": "clases/clase_11.html#objetivo",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Objetivo",
-    "text": "Objetivo\nRealizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las columnas o atributos."
+    "section": "",
+    "text": "Realizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las columnas o atributos."
   },
   {
     "objectID": "clases/clase_11.html#operaciones-en-columnas",
@@ -2724,7 +2724,7 @@
     "href": "clases/clase_11.html#lecturas-recomendadas",
     "title": "Ciencia de Datos para Economistas",
     "section": "Lecturas Recomendadas:",
-    "text": "Lecturas Recomendadas:\n\nCapítulo 4 R4DS (temas pasados referente a variables y operaciones básicas)\nCapítulo 5 R4DS: comparaciones, operadores lógicos, arrange, select, mutate, summarise, pipe operator. En el capítulo se tratan los valores faltantes NA que luego serán abordados\n\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Lecturas Recomendadas:\n\nCapítulo 4 R4DS (temas pasados referente a variables y operaciones básicas)\nCapítulo 5 R4DS: comparaciones, operadores lógicos, arrange, select, mutate, summarise, pipe operator. En el capítulo se tratan los valores faltantes NA que luego serán abordados"
   },
   {
     "objectID": "clases/clase_09.html#resumencont.",
@@ -2913,7 +2913,7 @@
     "href": "clases/clase_10.html#notas-finales",
     "title": "Ciencia de Datos para Economistas",
     "section": "Notas finales:",
-    "text": "Notas finales:\n\nRevisar documentación de funciones para comprender los argumentos y su uso\nRevisar funcionamiento de las equivalencias que se presentaron usando RBase\n\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Notas finales:\n\nRevisar documentación de funciones para comprender los argumentos y su uso\nRevisar funcionamiento de las equivalencias que se presentaron usando RBase"
   },
   {
     "objectID": "clases/clase_11.html",
@@ -3046,7 +3046,7 @@
     "href": "clases/clase_11.html#nota",
     "title": "Ciencia de Datos para Economistas",
     "section": "Nota:",
-    "text": "Nota:\nNayuha, de forma apropiada investigó cuál función se usa para obtener estos valores quantile y cómo se pueden asignar a una variable, dado que la salida que genera la función summary no es maleable para extraer datos individuales como los valores asociados a un cuantil u otro.\n🙌🏼"
+    "text": "Nota:\nNayuha, de forma apropiada investigó cuál función se usa para obtener estos valores quantile y cómo se pueden asignar a una variable, dado que la salida que genera la función summary no es maleable para extraer datos individuales como los valores asociados a un cuantil u otro.\n\n🙌🏼"
   },
   {
     "objectID": "clases/clase_11.html#histograma",
@@ -4496,8 +4496,8 @@
     "objectID": "clases/clase_17.html#objetivo",
     "href": "clases/clase_17.html#objetivo",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Objetivo:",
-    "text": "Objetivo:\nConocer las estructuras y formas de manipular las fechas y horas, así como las distintas representaciones de este tipo de datos en R"
+    "section": "",
+    "text": "Conocer las estructuras y formas de manipular las fechas y horas, así como las distintas representaciones de este tipo de datos en R"
   },
   {
     "objectID": "clases/clase_17.html#asignar-time-zone",
@@ -4539,7 +4539,7 @@
     "href": "clases/clase_17.html#lecturas-recomendadas",
     "title": "Ciencia de Datos para Economistas",
     "section": "Lecturas Recomendadas",
-    "text": "Lecturas Recomendadas\n\nhttp://ianmadd.github.io/pages/POSIXct_and_POSIXlt.html\nhttps://www.stat.berkeley.edu/~s133/dates.html\nhttps://clock.r-lib.org/reference/posixt-formatting.html\n\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Lecturas Recomendadas\n\nhttp://ianmadd.github.io/pages/POSIXct_and_POSIXlt.html\nhttps://www.stat.berkeley.edu/~s133/dates.html\nhttps://clock.r-lib.org/reference/posixt-formatting.html"
   },
   {
     "objectID": "clases/clase_17.html#ejemplos-fechas2",
@@ -6641,7 +6641,7 @@
     "href": "clases/clase_20_1.html#referencias",
     "title": "Principios de Gráficos Analíticos",
     "section": "Referencias",
-    "text": "Referencias\nEdward Tufte (2006). Beautiful Evidence, Graphics Press LLC. www.edwardtufte.com\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Referencias\nEdward Tufte (2006). Beautiful Evidence, Graphics Press LLC. www.edwardtufte.com"
   },
   {
     "objectID": "clase_20_1.html#principios-de-gráficos-analíticos--1",
@@ -6871,8 +6871,8 @@
     "objectID": "clases/clase_20_1.html#nota",
     "href": "clases/clase_20_1.html#nota",
     "title": "Principios de Gráficos Analíticos",
-    "section": "Nota",
-    "text": "Nota\nEsta presentación es una traducción de “Principles of Analytic Graphics” de Roger D. Peng, quien es “Associate Professor of Biostatistics” en la “Johns Hopkins Bloomberg School of Public Health” y se encuentra contenida en el curso “Exploratory Data Analysis” de la especialización en “Data Science” impartida en la plataforma educacional Coursera.\nLos textos han sido traducidos sin consentimiento del autor ni revisión del mismo.\nLos gráficos que se muestran no son los incluidos en la presentación original."
+    "section": "",
+    "text": "Esta presentación es una traducción de “Principles of Analytic Graphics” de Roger D. Peng, quien es “Associate Professor of Biostatistics” en la “Johns Hopkins Bloomberg School of Public Health” y se encuentra contenida en el curso “Exploratory Data Analysis” de la especialización en “Data Science” impartida en la plataforma educacional Coursera.\nLos textos han sido traducidos sin consentimiento del autor ni revisión del mismo.\nLos gráficos que se muestran no son los incluidos en la presentación original."
   },
   {
     "objectID": "clases/clase_20_1.html#mostrar-comparaciones--1",
@@ -6914,7 +6914,7 @@
     "href": "clases/clase_20_1.html#estimación-impacto-2",
     "title": "Principios de Gráficos Analíticos",
     "section": "Estimación Impacto 2",
-    "text": "Estimación Impacto 2\n\nTomado de La Evaluación de Impacto en la Práctica, Banco Mundial enlace"
+    "text": "Estimación Impacto 2\n\n\n\n\n\nTomado de La Evaluación de Impacto en la Práctica, Banco Mundial enlace"
   },
   {
     "objectID": "clases/clase_20_1.html#multivariable-1",
@@ -6934,8 +6934,8 @@
     "objectID": "clases/clase_20_0.html#anuncios",
     "href": "clases/clase_20_0.html#anuncios",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Anuncios",
-    "text": "Anuncios\n\nTramitar API key Google AI Studio\nTramitar API key RapidApi\nRetardos en tareas. Fin del plazo\nProgramación Actividades\nClase faltante lunes 20-01.\n\npresencial miércoles 29 en la mañana\nremota, fecha por definir semana 27 al 31-01"
+    "section": "",
+    "text": "Tramitar API key Google AI Studio\nTramitar API key RapidApi\nRetardos en tareas. Fin del plazo\nProgramación Actividades\nClase faltante lunes 20-01.\n\npresencial miércoles 29 en la mañana\nremota, fecha por definir semana 27 al 31-01"
   },
   {
     "objectID": "clases/clase_20_0.html#objetivo",
@@ -6949,7 +6949,7 @@
     "href": "clases/clase_20_0.html#contenido",
     "title": "Ciencia de Datos para Economistas",
     "section": "Contenido",
-    "text": "Contenido\n\nRepaso clase IAVD\nPrincipios de Gráficos Analíticos\nGráficos Exploratorios (GE)\nLibrerías para EDA\n\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Contenido\n\nRepaso clase IAVD\nPrincipios de Gráficos Analíticos\nGráficos Exploratorios (GE)\nLibrerías para EDA"
   },
   {
     "objectID": "clases/clases_20_2.html#conjuntos-de-datos-a-usar-1",
@@ -7684,7 +7684,7 @@
     "href": "clases/clase_21.html#geom_point",
     "title": "Ciencia de Datos para Economistas",
     "section": "geom_point",
-    "text": "geom_point\n\nRequiere los valores de x, y aesthetics dentro de aes()\nSe puede modificar la apariciencia de los puntos con los argumentos color, shape, alpha ,size\n\n\n\n\nggplot(data = gapminder_2007,\n       mapping = aes(x = lifeExp, \n                           y = gdpPercap)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\n\n\n\n\nhacernos una pregunta. hipótesis\ncómo es la relación entre la expectativa de vida y el pibpercap\ncomportamiento lineal, exponencia?"
+    "text": "geom_point\n\nRequiere los valores de x, y aesthetics dentro de aes()\nSe puede modificar la apariciencia de los puntos con los argumentos color, shape, alpha ,size\n\n\n\n\nggplot(data = gapminder_2007,\n       mapping = aes(x = lifeExp, \n                           y = gdpPercap)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhacernos una pregunta. hipótesis\ncómo es la relación entre la expectativa de vida y el pibpercap\ncomportamiento lineal, exponencia?"
   },
   {
     "objectID": "clases/clase_21.html#geom_line",
@@ -7740,7 +7740,7 @@
     "href": "clases/clase_21.html#elección-del-mapeo-mapping",
     "title": "Ciencia de Datos para Economistas",
     "section": "Elección del Mapeo (Mapping)",
-    "text": "Elección del Mapeo (Mapping)\n\nImagen de Garrett Grolemund’s 2019 JSM, tidyverse tutorial ."
+    "text": "Elección del Mapeo (Mapping)\n\n\n\n\n\nImagen de Garrett Grolemund’s 2019 JSM, tidyverse tutorial ."
   },
   {
     "objectID": "clases/clase_21.html#láminas-repaso-basadas-en",
@@ -7775,7 +7775,7 @@
     "href": "clases/clase_21.html#recursos",
     "title": "Ciencia de Datos para Economistas",
     "section": "Recursos",
-    "text": "Recursos\nhttps://ggplot2-book.org/\nhttps://bbc.github.io/rcookbook/\nhttps://r-charts.com/es/ggplot2/\nhttps://ggplot2.tidyverse.org/\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Recursos\nhttps://ggplot2-book.org/\nhttps://bbc.github.io/rcookbook/\nhttps://r-charts.com/es/ggplot2/\nhttps://ggplot2.tidyverse.org/"
   },
   {
     "objectID": "clases/clase_21_test.html#doble-columna",
@@ -7852,7 +7852,7 @@
     "href": "clases/clase_21.html#geom_col-ejemplo-básico",
     "title": "Ciencia de Datos para Economistas",
     "section": "geom_col: ejemplo básico",
-    "text": "geom_col: ejemplo básico\n\n\n\n\ndetalle mapeo estético en x y y\n\n\nggplot(data=df_gapminder_2007_america,\n       aes(x= pop,\n           y= country))+\n  geom_col()\n\n\n\nOrden alfabético"
+    "text": "geom_col: ejemplo básico\n\n\n\n\ndetalle mapeo estético en x e y\n\n\nggplot(data=df_gapminder_2007_america,\n       aes(x= pop,\n           y= country))+\n  geom_col()\n\n\n\nOrden alfabético"
   },
   {
     "objectID": "clases/clase_21.html#creación-df-gapminder-conteo-por-continente",
@@ -8307,7 +8307,7 @@
     "href": "clases/clase_21.html#inspeccionar-datos-a-trabajar",
     "title": "Ciencia de Datos para Economistas",
     "section": "Inspeccionar Datos a Trabajar",
-    "text": "Inspeccionar Datos a Trabajar\n\n#|echo: true\n#|eval: true\n\n\ndf_valores_acciones%&gt;%\n  sample_n(10)\n\n# A tibble: 10 × 5\n   fecha           volume accion  tipo_valor     valor\n   &lt;date&gt;           &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;\n 1 2019-04-02   440920000 Nvidia  low            4.54 \n 2 2019-08-08 19481591730 Bitcoin high       11979.   \n 3 2013-11-06   223375600 Apple   close         18.6  \n 4 2022-07-18 39974475562 Bitcoin adjclose   22486.   \n 5 2017-03-14    15598000 Google  high          42.4  \n 6 2025-01-17    22109100 Google  adjclose     198.   \n 7 2017-10-02    25668000 Google  close         47.7  \n 8 2009-09-10   607952000 Nvidia  low            0.396\n 9 2009-10-09   109934523 Google  open          12.9  \n10 2015-11-11    27328000 Google  close         36.8  \n\n\ncódigo para obtención y procesamiento de datos disponible en enlace"
+    "text": "Inspeccionar Datos a Trabajar\n\n#|echo: true\n#|eval: true\n\n\ndf_valores_acciones%&gt;%\n  sample_n(10)\n\n# A tibble: 10 × 5\n   fecha          volume accion tipo_valor   valor\n   &lt;date&gt;          &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;        &lt;dbl&gt;\n 1 2022-05-03   88966500 Apple  open       158.   \n 2 2023-07-03    4284700 Oracle adjclose   115.   \n 3 2022-01-19   20796000 Google adjclose   135.   \n 4 2021-04-06   27060000 Google open       111.   \n 5 2014-02-28  321692000 Nvidia low          0.453\n 6 2014-07-31   13689500 Oracle low         40.3  \n 7 2010-07-13 1190924000 Apple  adjclose     7.59 \n 8 2022-11-01    7753000 Oracle adjclose    74.9  \n 9 2012-01-24  547638000 Apple  close       15.0  \n10 2020-10-09   28706000 Google adjclose    75.5  \n\n\ncódigo para obtención y procesamiento de datos disponible en enlace"
   },
   {
     "objectID": "clases/clase_21.html#geom_line-1-línea-con-color",
@@ -8475,7 +8475,7 @@
     "href": "clases/clase_21.html",
     "title": "Ciencia de Datos para Economistas",
     "section": "",
-    "text": "Identificar el tipo de gráfico que queremos usar\nImplementar la GG\nIterar con múltiples opciones de visualización\nSeleccionar la representación que codifique de mejor la información que queremos representar\nIncorporar elementos al tema como colores, paletas, fuentes"
+    "text": "Conocer el sistema de graficación en R llamado ggplot2 , con énfasis en los mapeos estéticos, y los principales geoms que se pueden usar para realizar la visualización de datos."
   },
   {
     "objectID": "clases/clase_20_2.html",
@@ -8488,8 +8488,8 @@
     "objectID": "clases/clase_21.html#objetivo",
     "href": "clases/clase_21.html#objetivo",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Objetivo",
-    "text": "Objetivo\nConocer el sistema de graficación en R llamado ggplot2 , con énfasis en los mapeos estéticos, y los principales geoms que se pueden usar para realizar la visualización de datos."
+    "section": "",
+    "text": "Conocer el sistema de graficación en R llamado ggplot2 , con énfasis en los mapeos estéticos, y los principales geoms que se pueden usar para realizar la visualización de datos."
   },
   {
     "objectID": "clases/clase_21.html#facetas-boxplot-por-una-variable-categórica",
@@ -8545,7 +8545,7 @@
     "href": "clases/clase_21.html#elección-tipo-gráfico",
     "title": "Ciencia de Datos para Economistas",
     "section": "Elección Tipo Gráfico",
-    "text": "Elección Tipo Gráfico\n\ntomado de la presentación “a ggplot2 Crash Course” de Samantha Tyner."
+    "text": "Elección Tipo Gráfico\n\n\n\n\n\ntomado de la presentación “a ggplot2 Crash Course” de Samantha Tyner."
   },
   {
     "objectID": "clases/clase_21.html#geom_point-ajuste-color-vs.-mapeo",
@@ -8560,5 +8560,586 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "Mapeos de Variables",
     "text": "Mapeos de Variables\nUsar los datos como variables que permiten codificar las siguientes representaciones en la visualización de datos:\n\nPosición (x,y)\nColores (color, fill)\nFormas (shape, linetype)\nTamaño (size)\nTransparencia (alpha)\nAgrupamientos(group)"
+  },
+  {
+    "objectID": "clases/clase_22_apoyo.html#sistemas-graficación",
+    "href": "clases/clase_22_apoyo.html#sistemas-graficación",
+    "title": "ggplot apoyo",
+    "section": "Sistemas Graficación",
+    "text": "Sistemas Graficación\n\nPlottingBase\nGGplot\nlatice (no abordado en curso)"
+  },
+  {
+    "objectID": "clases/clase_22_apoyo.html#principios-ggplot",
+    "href": "clases/clase_22_apoyo.html#principios-ggplot",
+    "title": "ggplot apoyo",
+    "section": "Principios GGplot",
+    "text": "Principios GGplot\n\ngramática de los gráficos\nagregar capas con +"
+  },
+  {
+    "objectID": "clases/clase_22_apoyo.html#pasos-ggplot2",
+    "href": "clases/clase_22_apoyo.html#pasos-ggplot2",
+    "title": "ggplot apoyo",
+    "section": "Pasos ggplot2",
+    "text": "Pasos ggplot2\n\nggplot(): crea un sistema de coordenadas para añadir capas\nArgumento data: el conjunto de datos a graficar\nArgumento mapping: se empareja con aes: define cómo se mapean a cada eje (x y y) las variables del conjunto de datos\nFunciones geom_point, geom_bar, …\nModificar escales, leyendas, estilos, temas, etc."
+  },
+  {
+    "objectID": "clases/clase_22_apoyo.html#mapeos-estéticos",
+    "href": "clases/clase_22_apoyo.html#mapeos-estéticos",
+    "title": "ggplot apoyo",
+    "section": "Mapeos Estéticos",
+    "text": "Mapeos Estéticos\nUn parámetro estético es una propiedad visual de los objetos de un gráfico. Las estéticas incluye cosas como el tamaño, la forma o el color de tus puntos. Puedes mostrar un punto de diferentes maneras si cambias los valores de sus propiedades estéticas. Como ya usamos la palabra “valor” para describir los datos, usemos la palabra “nivel” para describir las propiedades estéticas.\nEl mapeo entre las propiedades estéticas de tu gráfico y las variables de tu conjunto de datos (dataset) te permite comunicar información sobre tus datos.\nLa función aes() reúne cada una de las asignaciones estéticas utilizadas por una capa y las pasa al argumento de mapeo de la capa. La sintaxis resalta una visión útil sobre x e y: las ubicaciones de x e y de un punto son en sí mismas también estéticas, es decir propiedades visuales que se puede asignar a las variables para mostrar información sobre los datos.\nUna vez que asignas (o “mapeas”) una estética, ggplot2 se ocupa del resto. El paquete selecciona una escala razonable para usar con la estética elegida y construye una leyenda que explica la relación entre niveles y valores. Para la estética x e y, ggplot2 no crea una leyenda, pero sí una línea que delimita el eje con sus marcas de graduación y una etiqueta. La línea del eje actúa como una leyenda; explica el mapeo entre ubicaciones y valores.\nPara mapear (o asignar) una estética a una variable, debes asociar el nombre de la estética al de la variable dentro de aes(). ggplot2 asignará automáticamente un nivel único de la estética (en este ejemplo, un color) a cada valor único de la variable. Este proceso es conocido como escalamiento (scaling). ggplot2 acompañará el gráfico con una leyenda que explica qué niveles corresponden a qué valores."
+  },
+  {
+    "objectID": "clases/clase_22_apoyo.html#mapeos-geométricos",
+    "href": "clases/clase_22_apoyo.html#mapeos-geométricos",
+    "title": "ggplot apoyo",
+    "section": "Mapeos Geométricos",
+    "text": "Mapeos Geométricos\ngeoms: es el objeto geométrico usado para representar datos de forma gráfica. La gente a menudo llama a los gráficos por el tipo de geom que utiliza. Por ejemplo, los diagramas de barras usan geoms de barra (bar), los diagramas de líneas usan geoms de línea (line), los diagramas de caja usan geoms de diagrama de caja (boxplot), y así sucesivamente\nggplot2 proporciona más de 40 geoms y los paquetes de extensión proporcionan aún más (consulta https://exts.ggplot2.tidyverse.org/gallery/para obtener una muestra). La mejor forma de obtener un panorama completo sobre las posibilidades que brinda ggplot2 es consultando la hoja de referencia (o cheatsheet), que puedes encontrar en https://rstudio.com/resources/cheatsheets/ (en la parte baja de la página encontrarás la versión en español). Para obtener más información sobre un tipo dado de geoms, usa la ayuda: ?geom_smooth.\n\nLos gráficos de barras, los histogramas y los polígonos de frecuencia almacenan los datos y luego grafican los conteos por contenedores (bins), es decir, el número de puntos que caen en cada contenedor.\nLos gráficos de líneas suavizadas (smoothers) ajustan un modelo a los datos y luego grafican las predicciones del modelo.\nLos diagramas de caja (boxplots) calculan un resumen robusto de la distribución y luego muestran una caja con formato especial.\n\nEl algoritmo utilizado para calcular nuevos valores para un gráfico se llama stat, abreviatura en inglés de transformación estadística (statistical transformation). La siguiente figura describe cómo funciona este proceso con geom_bar().\nAdjetivos:\n\ncolor fondo\ngrillas\ntamaño de la fuente, tamaño\n\nLa función tema puede modificar todo lo que no sea relativo a los datos\nfoto con capture de temas"
+  },
+  {
+    "objectID": "clases/clase_22.html#ciclo",
+    "href": "clases/clase_22.html#ciclo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ciclo",
+    "text": "Ciclo"
+  },
+  {
+    "objectID": "clases/clase_22.html#definición-apis",
+    "href": "clases/clase_22.html#definición-apis",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Definición API´s",
+    "text": "Definición API´s\nLas APIs (Application Programming Interfaces) son conjuntos de reglas y protocolos que permiten a diferentes aplicaciones comunicarse entre sí. En términos simples, una API es un intermediario que permite que dos programas se comuniquen sin necesidad de entender cómo están construidos internamente = vamos a ponernos de acuerdo\nAPI REST (Representational State Transfer)\nEs un estilo adoptado para diseñar servicios web, el cual se sustenta en el protocolo HTTP. Su objetivo principal es proporcionar una interfaz sencilla y eficiente para la comunicación entre diferentes sistemas o aplicaciones, permitiendo que puedan intercambiar datos de manera estándar."
+  },
+  {
+    "objectID": "clases/clase_22.html#ejemplo-de-una-respuesta",
+    "href": "clases/clase_22.html#ejemplo-de-una-respuesta",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplo de una Respuesta",
+    "text": "Ejemplo de una Respuesta"
+  },
+  {
+    "objectID": "clases/clase_22.html#json--datos-anidados",
+    "href": "clases/clase_22.html#json--datos-anidados",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "JSON- Datos Anidados",
+    "text": "JSON- Datos Anidados"
+  },
+  {
+    "objectID": "clases/clase_22.html#inspección-json",
+    "href": "clases/clase_22.html#inspección-json",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Inspección JSON",
+    "text": "Inspección JSON\nUsar función View"
+  },
+  {
+    "objectID": "clases/clase_22.html#json-estructura-tabular",
+    "href": "clases/clase_22.html#json-estructura-tabular",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "JSON Estructura Tabular",
+    "text": "JSON Estructura Tabular"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-1-patria-covid",
+    "href": "clases/clase_22.html#caso-1-patria-covid",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 1: Patria COVID",
+    "text": "Caso 1: Patria COVID\nhttps://covid19.patria.org.ve/estadisticas-venezuela/\nhttps://covid19.patria.org.ve/api-covid-19-venezuela/"
+  },
+  {
+    "objectID": "clases/clase_22.html#extraer-info-json",
+    "href": "clases/clase_22.html#extraer-info-json",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Extraer Info JSON",
+    "text": "Extraer Info JSON"
+  },
+  {
+    "objectID": "clases/clase_22.html#json-no-estructura-tabular",
+    "href": "clases/clase_22.html#json-no-estructura-tabular",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "JSON No Estructura Tabular",
+    "text": "JSON No Estructura Tabular"
+  },
+  {
+    "objectID": "clases/clase_22.html#httr2",
+    "href": "clases/clase_22.html#httr2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "httr2",
+    "text": "httr2\nhttr allows GET, POST, PUT, DELETE requests if you are authorized﻿﻿\nYou can authenticate with a user name or a password Most modern APls use something like auth httr works well with Facebook, Google, Twitter, Githb, etc."
+  },
+  {
+    "objectID": "clases/clase_22.html#preparar-consulta",
+    "href": "clases/clase_22.html#preparar-consulta",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Preparar Consulta",
+    "text": "Preparar Consulta\n\nlibrary(httr2)\n\nreq &lt;- request(\"https://r-project.org\")\nreq"
+  },
+  {
+    "objectID": "clases/clase_22.html#headers",
+    "href": "clases/clase_22.html#headers",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Headers",
+    "text": "Headers\nevaluar opciones\n\nreq |&gt; \n  req_headers(\"Accept\" = \"application/json\")"
+  },
+  {
+    "objectID": "clases/clase_22.html#body",
+    "href": "clases/clase_22.html#body",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Body",
+    "text": "Body\n\nreq |&gt; \n  req_body_json(list(x = 1, y = 2))"
+  },
+  {
+    "objectID": "clases/clase_22.html#cdad-request",
+    "href": "clases/clase_22.html#cdad-request",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Cdad Request",
+    "text": "Cdad Request\n\n# Automatically retry if the request fails\nreq |&gt; \n  req_retry(max_tries = 5)"
+  },
+  {
+    "objectID": "clases/clase_22.html#método",
+    "href": "clases/clase_22.html#método",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Método",
+    "text": "Método\n\nreq |&gt; \n  req_method(\"PATCH\")"
+  },
+  {
+    "objectID": "clases/clase_22.html#revisar-estructura-petición",
+    "href": "clases/clase_22.html#revisar-estructura-petición",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Revisar Estructura Petición",
+    "text": "Revisar Estructura Petición\n\nreq |&gt; \n  req_dry_run()\n\nGET / HTTP/1.1\nHost: r-project.org\nUser-Agent: httr2/1.0.7 r-curl/6.1.0 libcurl/8.7.1\nAccept: */*\nAccept-Encoding: gzip"
+  },
+  {
+    "objectID": "clases/clase_22.html#emitir-consulta",
+    "href": "clases/clase_22.html#emitir-consulta",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Emitir Consulta",
+    "text": "Emitir Consulta\n\nresp &lt;- req_perform(req)"
+  },
+  {
+    "objectID": "clases/clase_22.html#section",
+    "href": "clases/clase_22.html#section",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "Estructura consulta"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-sitio-laboral",
+    "href": "clases/clase_22.html#caso-sitio-laboral",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso Sitio Laboral",
+    "text": "Caso Sitio Laboral"
+  },
+  {
+    "objectID": "clases/clase_22.html#consulta-llm-extracción-estructurada",
+    "href": "clases/clase_22.html#consulta-llm-extracción-estructurada",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Consulta LLM extracción estructurada",
+    "text": "Consulta LLM extracción estructurada"
+  },
+  {
+    "objectID": "clases/clase_22.html#consulta-llm-extracción-info-imágen",
+    "href": "clases/clase_22.html#consulta-llm-extracción-info-imágen",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Consulta LLM extracción info imágen",
+    "text": "Consulta LLM extracción info imágen"
+  },
+  {
+    "objectID": "clases/clase_22.html#objetivo",
+    "href": "clases/clase_22.html#objetivo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Objetivo",
+    "text": "Objetivo\nRealizar consultas a distintas API’s y procesar los datos obtenidos."
+  },
+  {
+    "objectID": "clases/clase_22.html#ejemplo-paso-a-paso",
+    "href": "clases/clase_22.html#ejemplo-paso-a-paso",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplo Paso a Paso",
+    "text": "Ejemplo Paso a Paso"
+  },
+  {
+    "objectID": "clases/clase_22.html#mostrar-resultados",
+    "href": "clases/clase_22.html#mostrar-resultados",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Mostrar Resultados",
+    "text": "Mostrar Resultados\ngráfico en Plotly\nhttps://plotly.com/r/"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-1-patria-datos-covid-venezuela",
+    "href": "clases/clase_22.html#caso-1-patria-datos-covid-venezuela",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 1: Patria Datos Covid Venezuela",
+    "text": "Caso 1: Patria Datos Covid Venezuela\nCifras COVID Venezuela disponibles en https://covid19.patria.org.ve/estadisticas-venezuela/\nUrl api: https://covid19.patria.org.ve/api-covid-19-venezuela/"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-1-request",
+    "href": "clases/clase_22.html#caso-1-request",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 1: request",
+    "text": "Caso 1: request\n\nlibrary(httr2)\nlibrary(jsonlite)\nlibrary(dplyr)\nreq_patria &lt;- request(\"https://covid19.patria.org.ve/api/v1/timeline\")\n\nreq_patria"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-1-definición-método",
+    "href": "clases/clase_22.html#caso-1-definición-método",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 1: definición método",
+    "text": "Caso 1: definición método\nGET\n\nreq_patria |&gt; \n  req_method(\"GET\")\n\nrevisión consulta\n\nreq_patria |&gt; \n  req_dry_run()\n\nGET /api/v1/timeline HTTP/1.1\nHost: covid19.patria.org.ve\nUser-Agent: httr2/1.0.7 r-curl/6.1.0 libcurl/8.7.1\nAccept: */*\nAccept-Encoding: gzip"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-1-realizar-request",
+    "href": "clases/clase_22.html#caso-1-realizar-request",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 1: realizar request",
+    "text": "Caso 1: realizar request\n\nrespuesta_patria &lt;- req_perform(req_patria)\n\n# posterior a consulta\nrespuesta_patria |&gt; \n  resp_status_desc()\n\n[1] \"OK\"\n\nrespuesta_patria |&gt; \n  resp_content_type()\n\n[1] \"application/json\"\n\n#str(respuesta_patria) más info"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-1-procesar-datos-del-request",
+    "href": "clases/clase_22.html#caso-1-procesar-datos-del-request",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 1: procesar datos del request",
+    "text": "Caso 1: procesar datos del request\n\ndatos_patria &lt;- respuesta_patria$body%&gt;%\n  rawToChar()%&gt;%\n  fromJSON()\n\nclass(datos_patria)  \n\n[1] \"data.frame\"\n\nstr(datos_patria)\n\n'data.frame':   1146 obs. of  6 variables:\n $ Date     : chr  \"2020-03-13\" \"2020-03-14\" \"2020-03-15\" \"2020-03-16\" ...\n $ DateTS   : int  1584072000 1584158400 1584244800 1584331200 1584417600 1584504000 1584590400 1584676800 1584763200 1584849600 ...\n $ Confirmed:'data.frame':  1146 obs. of  2 variables:\n  ..$ Count: int  2 10 17 33 36 41 43 70 73 77 ...\n  ..$ New  : int  2 8 7 16 3 5 2 27 3 4 ...\n $ Recovered:'data.frame':  1146 obs. of  2 variables:\n  ..$ Count: int  0 0 0 0 0 0 0 0 15 15 ...\n  ..$ New  : int  0 0 0 0 0 0 0 0 15 0 ...\n $ Deaths   :'data.frame':  1146 obs. of  2 variables:\n  ..$ Count: int  0 0 0 0 0 0 0 0 0 0 ...\n  ..$ New  : int  0 0 0 0 0 0 0 0 0 0 ...\n $ Active   :'data.frame':  1146 obs. of  1 variable:\n  ..$ Count: int  2 10 17 33 36 41 43 70 58 62 ..."
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-1-limpieza-de-datos",
+    "href": "clases/clase_22.html#caso-1-limpieza-de-datos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 1: limpieza de datos",
+    "text": "Caso 1: limpieza de datos\ndesanidado y convertir fechas\n\ndf_datos_patria &lt;- datos_patria%&gt;%\n  mutate(fecha=as.Date(Date))%&gt;%\n  mutate(Activos=as.integer(Active$Count))%&gt;%\n  mutate(conf_acu=as.integer(Confirmed$Count))%&gt;%\n  mutate(conf_nvos=as.integer(Confirmed$New))%&gt;%\n  mutate(recu_acu=as.integer(Recovered$Count))%&gt;%\n  mutate(recu_nvos=as.integer(Recovered$New))%&gt;%\n  mutate(falle_acu=as.integer(Deaths$Count))%&gt;%\n  mutate(falle_nvos=as.integer(Deaths$New))%&gt;%\n  select(-c(Confirmed, Recovered, Deaths, Active, Date, DateTS))"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-1-representación-gráfica",
+    "href": "clases/clase_22.html#caso-1-representación-gráfica",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 1: representación gráfica",
+    "text": "Caso 1: representación gráfica\nuso de librería plotly\n\nlibrary(plotly)\nplot_ly(df_datos_patria,\n                        x = ~fecha, \n                        y = ~Activos,\n                        type = 'bar',\n                        name = 'COVID: Casos Activos Venezuela')\n\n\n\n\n\nmás info de plotly en el enlace"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-3-dolar-monitor",
+    "href": "clases/clase_22.html#caso-3-dolar-monitor",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 3 Dolar Monitor",
+    "text": "Caso 3 Dolar Monitor\nExtraer datos de API de monitor dólar"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-3-realizar-request",
+    "href": "clases/clase_22.html#caso-3-realizar-request",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 3: realizar request",
+    "text": "Caso 3: realizar request\nEsta petición necesita llevar headers\n\nreq_MonDol &lt;- request('https://api.monitordolarvenezuela.com/historico')|&gt;\n  req_method(\"GET\")|&gt; \n  req_headers(Origin= \"https://monitordolarvenezuela.com\",\n              Referer= \"https://monitordolarvenezuela.com/\") |&gt;\n  req_perform()\n\nreq_MonDol"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-3-analizar-respuesta",
+    "href": "clases/clase_22.html#caso-3-analizar-respuesta",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 3: analizar respuesta",
+    "text": "Caso 3: analizar respuesta\n\ntipo de contenido:\n\nreq_MonDol|&gt; \n  resp_content_type()\n\n[1] \"application/json\"\n\n\nExtraer datos de respuesta y extraer del json\n\ndatos_MonDol &lt;- req_MonDol$body|&gt;\n  rawToChar()|&gt;\n  fromJSON()\n\nConsultar clase y nombres de la respuesta\n\nclass(datos_MonDol)\n\n[1] \"list\"\n\nnames(datos_MonDol)\n\n[1] \"status\" \"total\"  \"result\"\n\n# str(datos_MonDol) para más info"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-3-extraer-df-con-datos",
+    "href": "clases/clase_22.html#caso-3-extraer-df-con-datos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 3: extraer df con datos",
+    "text": "Caso 3: extraer df con datos\nEs necesario hacer limpieza en las fechas, en los valores de caracteres a numéricos, redondear\n\ndf_MonDol &lt;- datos_MonDol$result|&gt;\n  as_tibble()|&gt;\n  mutate(fecha= as.Date(fecha,format='%d/%m/%Y')) |&gt;\n  arrange(fecha) %&gt;%\n  mutate(across(all_of(c('MdvMin','MdvMax',\n                         'BcvMin','BcvMax')), \n                as.numeric),\n         across(all_of(c('MdvMin','MdvMax',\n                         'BcvMin','BcvMax')), ~round(.x, 2)))\n\nhead(df_MonDol)\n\n# A tibble: 6 × 6\n  fecha      hora  MdvMin MdvMax BcvMin BcvMax\n  &lt;date&gt;     &lt;chr&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 2024-12-31 00:00   65.2   65.9   52.0   52.0\n2 2025-01-01 00:00   65.2   66.2   52.0   52.0\n3 2025-01-02 00:00   64.8   66.1   52.0   52.6\n4 2025-01-03 00:00   64.8   66.7   52.6   53.0\n5 2025-01-04 00:00   66.0   66.6   53.0   53.0\n6 2025-01-05 00:00   65.7   66.5   53.0   53.0"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-3-representación-gráfica",
+    "href": "clases/clase_22.html#caso-3-representación-gráfica",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 3: representación gráfica",
+    "text": "Caso 3: representación gráfica\n\n\n\nlibrary(apexcharter)\napex(data = df_MonDol, \n     mapping = aes(x = fecha, \n                   ymin = MdvMin,\n                   ymax= MdvMax),\n     type = \"rangeArea\",\n     serie_name = '$ Monitor',\n     synchronize = \"df_MonDol\")|&gt;\n  ax_colors(c( \"#ff595e\"))\n\napex(data = df_MonDol, \n     mapping = aes(x = fecha, \n                   ymin = BcvMin,\n                   ymax= MdvMax),\n     type = \"rangeArea\",\n     serie_name = '$ BCV',\n     synchronize = \"df_MonDol\") |&gt;\n  ax_colors( '#1982c4')"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-consulta-api-cepal",
+    "href": "clases/clase_22.html#caso-consulta-api-cepal",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso Consulta API Cepal",
+    "text": "Caso Consulta API Cepal\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_22.html#cómo-funcionan",
+    "href": "clases/clase_22.html#cómo-funcionan",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "¿Cómo Funcionan?",
+    "text": "¿Cómo Funcionan?\n\nIdentificar la API : Encuentra una API que proporcione los datos que necesitas.\nObtener credenciales (si es necesario) : Algunas APIs requieren claves de acceso o tokens para autenticar tus solicitudes.\nRealizar una solicitud HTTP : Utiliza métodos como GET, POST, etc., para enviar solicitudes a la API.\nProcesar la respuesta : La API devolverá los datos en un formato como JSON o XML, que se deben procesar."
+  },
+  {
+    "objectID": "clases/clase_22.html#métodos",
+    "href": "clases/clase_22.html#métodos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Métodos",
+    "text": "Métodos\n\nGET :\n\nSe utiliza para solicitar datos del servidor.\nLos parámetros se envían en la URL.\nEs idempotente (realizar múltiples solicitudes tiene el mismo efecto que una sola).\nNo es seguro para enviar datos sensibles.\n\nPOST :\n\nSe utiliza para enviar datos al servidor, como crear o actualizar recursos.\nLos parámetros se envían en el cuerpo de la solicitud.\nNo es idempotente (cada solicitud puede tener un efecto diferente).\nEs más seguro para enviar datos sensibles."
+  },
+  {
+    "objectID": "clases/clase_22.html#ejemplos",
+    "href": "clases/clase_22.html#ejemplos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplos:",
+    "text": "Ejemplos:\n\nObtener direcciones o datos de coordenadas de API de google maps\nGitHub API: estadísticas de uso\nSpotify API: obtener metadata sobre los contenidos de la plataforma"
+  },
+  {
+    "objectID": "clases/clase_22.html#json",
+    "href": "clases/clase_22.html#json",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "JSON",
+    "text": "JSON\nJSON (JavaScript Object Notation) es un formato ligero de intercambio de datos que es fácil para humanos leer y escribir, y fácil para las computadoras de generar y analizar. Los datos generalmente están en estructuras anidadas"
+  },
+  {
+    "objectID": "clases/clase_22.html#json-1-datos-tabulares",
+    "href": "clases/clase_22.html#json-1-datos-tabulares",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "JSON 1: datos tabulares",
+    "text": "JSON 1: datos tabulares\n\n\n  \"empleados\": [\n    {\n      \"nombre\": \"Juan\",\n      \"edad\": 30,\n      \"departamento\": {\n        \"nombre\": \"Ventas\",\n        \"ubicacion\": \"Edificio A\"\n      }\n    },\n    {\n      \"nombre\": \"Ana\",\n      \"edad\": 25,\n      \"departamento\": {\n        \"nombre\": \"Marketing\",\n        \"ubicacion\": \"Edificio B\"\n      }\n    }\n  ]\n}\n\n\n\nlibrary(jsonlite)\nfromJSON('{\n  \"empleados\": [\n    {\n      \"nombre\": \"Juan\",\n      \"edad\": 30,\n      \"departamento\": {\n        \"nombre\": \"Ventas\",\n        \"ubicacion\": \"Edificio A\"\n      }\n    },\n    {\n      \"nombre\": \"Ana\",\n      \"edad\": 25,\n      \"departamento\": {\n        \"nombre\": \"Marketing\",\n        \"ubicacion\": \"Edificio B\"\n      }\n    }\n  ]\n}')\n\n$empleados\n  nombre edad departamento.nombre departamento.ubicacion\n1   Juan   30              Ventas             Edificio A\n2    Ana   25           Marketing             Edificio B"
+  },
+  {
+    "objectID": "clases/clase_22.html#json-2-datos-no-tabulares",
+    "href": "clases/clase_22.html#json-2-datos-no-tabulares",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "JSON 2: datos no tabulares",
+    "text": "JSON 2: datos no tabulares\n\n\n  \"libro\": {\n    \"titulo\": \"1984\",\n    \"autor\": \"George Orwell\",\n    \"publicado\": 1949,\n    \"generos\": [\"Dystopian\", \"Political Fiction\"],\n    \"reseña\": {\n      \"puntuacion\": 4.5,\n      \"comentario\": \"Una visión profunda de un futuro distópico.\"\n    }\n  }\n}\n\n\n\nfromJSON('{\n  \"libro\": {\n    \"titulo\": \"1984\",\n    \"autor\": \"George Orwell\",\n    \"publicado\": 1949,\n    \"generos\": [\"Dystopian\", \"Political Fiction\"],\n    \"reseña\": {\n      \"puntuacion\": 4.5,\n      \"comentario\": \"Una visión profunda de un futuro distópico.\"\n    }\n  }\n}')\n\n$libro\n$libro$titulo\n[1] \"1984\"\n\n$libro$autor\n[1] \"George Orwell\"\n\n$libro$publicado\n[1] 1949\n\n$libro$generos\n[1] \"Dystopian\"         \"Political Fiction\"\n\n$libro$reseña\n$libro$reseña$puntuacion\n[1] 4.5\n\n$libro$reseña$comentario\n[1] \"Una visión profunda de un futuro distópico.\""
+  },
+  {
+    "objectID": "clases/clase_22.html#paquete-httr2",
+    "href": "clases/clase_22.html#paquete-httr2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Paquete HTTR2",
+    "text": "Paquete HTTR2\nEs un cliente HTTP completo que proporciona una API moderna y canalizable para trabajar con APIs web. Se basa en {curl} para proporcionar características como objetos de solicitud explícitos, herramientas integradas de limitación de velocidad y reintento, soporte completo de OAuth y manejo seguro de secretos y credenciales.\nHTTR2 permite los métodos de solicitudes GET, POST, PUT, DELETE ﻿﻿\nSi la descarga arroja un error de timeout es necesario ejecutar en consola options(timeout=numeroensegundos)"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-2-buscador-empleo",
+    "href": "clases/clase_22.html#caso-2-buscador-empleo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 2: Buscador Empleo",
+    "text": "Caso 2: Buscador Empleo"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-2-realizar-consulta",
+    "href": "clases/clase_22.html#caso-2-realizar-consulta",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 2: Realizar Consulta",
+    "text": "Caso 2: Realizar Consulta\nSe añaden headers que pide la API para entregar resultados\n\nurl_emplea &lt;- 'https://www.empleate.com/venezuela/ofertas/empleos_encontrados/1/trabaios-en-venezuela-busqueda-por-economista'\n\nreq_emplea &lt;- request(url_emplea)|&gt;\n  req_method(\"GET\")|&gt; \n  req_headers( Accept= \"*/*\",\n               `Accept-Language`= \"es,es-ES;q=0.9,en-US;q=0.8,en;q=0.7,gl;q=0.6\",\n               `User-Agent`= \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36\")|&gt;\n  req_perform()\n\nreq_emplea"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-3-inspección-respuesta",
+    "href": "clases/clase_22.html#caso-3-inspección-respuesta",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 3: inspección respuesta",
+    "text": "Caso 3: inspección respuesta\n\nreq_emplea|&gt; \n  resp_content_type()\n\n[1] \"text/html\"\n\ndatos_html &lt;- req_emplea$body|&gt;\n  rawToChar()\n\nsubstr(datos_html,201000,201600)\n\n[1] \"seguros\\\"&gt;                \\r\\n\\t\\t\\t\\t\\t\\t\\t        \\t&lt;img class=\\\"d-block mx-auto img-fluid\\\" src=\\\"/img/empresas/economia_banca_finanzas_y_seguros.jpg\\\" width=\\\"80\\\" height=\\\"80\\\"&gt;\\r\\n\\t\\t\\t\\t\\t\\t\\t        \\t&lt;p class=\\\"title widget-ofertas-areas\\\"&gt;&lt;a href=\\\"/venezuela/ofertas/area/1/trabajos-en-venezuela-en-el-area-de-economia_banca_finanzas_y_seguros\\\" &gt;Economía, Banca, Finanzas y Seguros&lt;/a&gt;&lt;/p&gt;\\r\\n\\t\\t\\t\\t\\t\\t\\t        &lt;/a&gt;\\r\\n\\t\\t\\t\\t\\t\\t\\t      &lt;/div&gt;\\r\\n\\t\\t\\t\\t\\t\\t\\t    \\t\\t\\t\\t\\t\\t\\t      &lt;div id=\\\"grilla\\\" class=\\\"grilla text-center slide col-md-1\\\"&gt;\\r\\n\\r\\n\\t\\t\\t\\t\\t\\t\\t      \\t\\t\\t\\t\\t\\t\\t\\t        &lt;a href=\\\"/venezuela/ofertas/area/1/trabajos-en-venezuela-en-el-area-de-e\"\n\nrvest::read_html(datos_html)\n\n{html_document}\n&lt;html lang=\"es\"&gt;\n[1] &lt;head&gt;\\n&lt;!-- Meta --&gt;&lt;title&gt;Empléate | Venezuela, Colombia, México, Perú, España, E ...\n[2] &lt;body&gt;\\r\\n&lt;header&gt;&lt;!--=== Header y nav ===--&gt;&lt;link rel=\"stylesheet\" href=\"/css/nav- ..."
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-4-consulta-llm-1-api-google-ai-studio",
+    "href": "clases/clase_22.html#caso-4-consulta-llm-1-api-google-ai-studio",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 4: Consulta LLM 1, API Google AI Studio",
+    "text": "Caso 4: Consulta LLM 1, API Google AI Studio"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-4-obtener-datos",
+    "href": "clases/clase_22.html#caso-4-obtener-datos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 4: obtener datos",
+    "text": "Caso 4: obtener datos\n\n\n\n\n\n\n\n\n\nlibrary(rvest)\ndato_texto_ucab &lt;- read_html('https://economia.ucab.edu.ve/perspectivas-economicas-de-2025-discutieron-especialistas-en-la-ucab/')|&gt;\n  html_nodes('p')|&gt;\n  html_text()|&gt;\n  paste(collapse = '. ')%&gt;%\n  str_squish()\n\n# inspección texto descargado\nsubstr(dato_texto_ucab, 100, 1400)  \n\n[1] \"diantes Economía | 0 Comentarios. . En un congreso organizado por la Escuela de Economía, los panelistas señalaron que la brecha entre el tipo de cambio oficial y el paralelo suele preceder procesos de devaluación, como ya lo está experimentando el bolívar. Dijeron que el próximo año seguirá marcado por los esfuerzos que se hagan para incrementar la producción petrolera, mientras que el mercado bursátil intentará convertirse en un actor protagónico en el ámbito del financiamiento. Las condiciones estructurales de la economía venezolana hacia el cierre de 2024 invitan a pensar que en 2025 el país experimentará una mayor inflación que la vista este año, según proyectaron expertos durante el foro ‘»Perspectivas Económicas: Retos y Oportunidades para la Economía Venezolana», realizado en el marco del XXVIII Congreso de Actualidad Económica de la Escuela de Economía de la UCAB.. En las últimas semanas, el bolívar ha venido sufriendo una caída importante de su valor frente al dólar, rompiendo con la relativa estabilidad monetaria que caracterizó la mayor parte del año. El tipo de cambio oficial, determinado por el Banco Central de Venezuela (BCV) se desplazó 15,86% en apenas un mes, al pasar de Bs 38,88 a Bs 45,05. A esto se suma la brecha que se mantiene con el tipo de cambio paralelo,\""
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-4-definir-prompt-consulta",
+    "href": "clases/clase_22.html#caso-4-definir-prompt-consulta",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 4: definir prompt consulta",
+    "text": "Caso 4: definir prompt consulta\nEres un experto en análisis de noticias económicas. Vas a extraer en formato json las ideas principales expuestas en el texto {idea_principal_nombre: descripcion} del texto delimitado por triple asterisco. Texto: *** ……. ***. Recuerda solo extraer el valor y no añadir información adicional.\n\n# definir el prompt\nprompt &lt;- 'Eres un experto en análisis de noticias económicas. Vas a extraer en formato json las ideas principales expuestas en el texto {idea_principal_nombre: descripcion} del texto delimitado por triple asterisco. Texto: ***'\n\npost_texto &lt;- '***.  Recuerda solo extraer el valor y no añadir información adicional. '\n\ndato_texto_prompt_gooaistudio &lt;- paste(prompt,\n                                       dato_texto_ucab,\n                                       post_texto)"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-4-api-google-ai-studio",
+    "href": "clases/clase_22.html#caso-4-api-google-ai-studio",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 4: API Google AI Studio",
+    "text": "Caso 4: API Google AI Studio\nConectarse desde R a esta API que pide KEY y body en el request"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-4-crear-request",
+    "href": "clases/clase_22.html#caso-4-crear-request",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 4: crear request",
+    "text": "Caso 4: crear request\nCambiar API key\n\ngooai_studio_url &lt;- 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent'\n                \napi_key &lt;- ''\n\nllm_resultado_google &lt;- request(gooai_studio_url) %&gt;%\n  req_headers(\"Content-Type\" = \"application/json\") %&gt;%\n  req_body_json(\n    list(\n      contents = list(\n        list(\n          parts = list(\n            list(text = dato_texto_prompt_gooaistudio)\n          )\n        )\n      )\n    )\n  ) %&gt;% \n  req_url_query(key = api_key) %&gt;% \n  req_method(\"POST\")|&gt;\n  req_perform()"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-4-procesar-datos-request",
+    "href": "clases/clase_22.html#caso-4-procesar-datos-request",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 4: procesar datos request",
+    "text": "Caso 4: procesar datos request\n\nlibrary(stringr)\n\ndatos_goo_respuesta &lt;- llm_resultado_google$body |&gt;\n  rawToChar() |&gt;\n  fromJSON()%&gt;%\n  .$candidates %&gt;%\n  .$content%&gt;%\n  .$parts%&gt;%\n  .[[1]]%&gt;%\n  str_squish(.)%&gt;%\n  str_remove_all(.,'```json | ```')%&gt;%\n  fromJSON()"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-4-analizar-resultados",
+    "href": "clases/clase_22.html#caso-4-analizar-resultados",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 4: Analizar resultados",
+    "text": "Caso 4: Analizar resultados\n\n#|eval: true\n#|echo: false\n\n\ndatos_goo_respuesta\n\n                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        parts\n1 ```json\\n{\\n  \"Inflación y tipo de cambio\": \"La brecha entre el tipo de cambio oficial y el paralelo en Venezuela anticipa procesos de devaluación y aumento de la inflación. Se proyecta una inflación del 50% para 2024 y del 70% para 2025, aunque se descarta una hiperinflación inminente. La política de anclaje del tipo de cambio oficial, mediante la inyección de dólares, muestra fisuras y su efectividad depende del déficit fiscal.\",\\n  \"Producción petrolera\": \"Para 2025 se espera un incremento en la producción petrolera, superando posiblemente el millón de barriles diarios gracias a las inversiones de Chevron. Sin embargo, la dependencia del petróleo y las sanciones limitan el crecimiento económico.\",\\n  \"Mercado bursátil\": \"El mercado bursátil venezolano busca un rol protagónico en el financiamiento, con la Bolsa de Valores de Caracas duplicando sus cifras en 2024.  Se requiere promover la educación financiera y la imagen de Venezuela como destino de inversión para atraer capital extranjero.\",\\n  \"Resiliencia económica\": \"La economía venezolana se presenta como un posible espacio de consenso y diálogo en un contexto político polarizado. Se destaca la necesidad de abandonar el modelo rentista y extractivista para lograr un desarrollo sostenible.\"\\n}\\n```\\n\n   role\n1 model"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-5-consulta-llm-2-ollama-local-network",
+    "href": "clases/clase_22.html#caso-5-consulta-llm-2-ollama-local-network",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 5: Consulta LLM 2, Ollama local network",
+    "text": "Caso 5: Consulta LLM 2, Ollama local network"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-5-obtener-datos",
+    "href": "clases/clase_22.html#caso-5-obtener-datos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 5: obtener datos",
+    "text": "Caso 5: obtener datos\n\n\n\n\n\n\n\n\n\nlibrary(rvest)\nlibrary(stringr)\ndato_texto &lt;- read_html('https://www.swissinfo.ch/spa/el-precio-del-dólar-en-venezuela-supera-los-57-bolívares-y-la-moneda-local-sigue-en-caída/88794237')|&gt;\n  html_nodes('p')|&gt;\n  html_text()|&gt;\n  paste(collapse = '. ')%&gt;%\n  str_squish()\nsubstr(dato_texto, 200, 400)  \n\n[1] \" de tres meses frente a la estadounidense, usada ampliamente en el país caribeño para cotizar bienes y algunos servicios.. Según informó el Banco Central de Venezuela (BCV), el dólar alcanzó hoy los 57\""
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-5-crear-request",
+    "href": "clases/clase_22.html#caso-5-crear-request",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 5: crear request",
+    "text": "Caso 5: crear request\n\nCambiar url por el de la IP donde está la API en la red local\nSe pasan distintos argumentos en el body del request: modelo, prompt, temperatura del llm, etc\n\n\nurl_ollama &lt;- 'http://localhost:11434' # modificar url por dirección ip host\n\nendpoint &lt;- paste0(url_ollama, '/api/generate')\n\nllm_resultado &lt;- request(endpoint)|&gt;\n  req_method(\"POST\")|&gt; \n  req_body_json(list(  model='llama3.2:1b',\n                       prompt = dato_texto_prompt,\n                       raw=FALSE,\n                       format = \"json\",\n                       options=list(\n                         temperature= 0.1),\n                       stream = FALSE,\n                       keep_alive='3m'))|&gt;\n  req_perform()|&gt;\n  resp_body_json()"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-5-procesar-request",
+    "href": "clases/clase_22.html#caso-5-procesar-request",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 5: procesar request",
+    "text": "Caso 5: procesar request\nLos datos hay que extraerlos del JSON\n\nfromJSON(llm_resultado$response)|&gt;\n  as_tibble()\n\n# A tibble: 1 × 1\n  dolar_venezolano\n             &lt;dbl&gt;\n1             57.3"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-6-consulta-api-cepal",
+    "href": "clases/clase_22.html#caso-6-consulta-api-cepal",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 6: Consulta API Cepal",
+    "text": "Caso 6: Consulta API Cepal\n\nhttps://statistics.cepal.org/portal/cepalstat/open-data.html?lang=es"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-5-crear-prompt",
+    "href": "clases/clase_22.html#caso-5-crear-prompt",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 5: crear prompt",
+    "text": "Caso 5: crear prompt\n\n\nPrompt: vas a extraer en formato json el valor del dolar del texto delimitado por triple asterisco. Texto: *** …. ***. Recuerda solo extraer el valor y no añadir información adicional.\n\n\nprompt &lt;- 'vas a extraer en formato json el valor del dolar del texto delimitado por triple asterisco. Texto: ***'\n  \npost_texto &lt;- '***.  Recuerda solo extraer el valor y no añadir información adicional. '\n\ndato_texto_prompt &lt;- paste(prompt,\n                           dato_texto,\n                           post_texto)"
+  },
+  {
+    "objectID": "clases/clase_22.html#obtener-clasificador-temático",
+    "href": "clases/clase_22.html#obtener-clasificador-temático",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Obtener Clasificador Temático",
+    "text": "Obtener Clasificador Temático\n\ndatos_cepal &lt;- request(\"https://api-cepalstat.cepal.org/cepalstat/api/v1/thematic-tree?lang=es&format=json\")|&gt;\n  req_headers(\"Accept\" = \"application/json\")|&gt;\n  req_perform()|&gt;\n  resp_body_json()\n\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_22.html#caso-1-view-de-datos",
+    "href": "clases/clase_22.html#caso-1-view-de-datos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Caso 1: View de datos",
+    "text": "Caso 1: View de datos"
+  },
+  {
+    "objectID": "clases/clase_20_1.html",
+    "href": "clases/clase_20_1.html",
+    "title": "Principios de Gráficos Analíticos",
+    "section": "",
+    "text": "Esta presentación es una traducción de “Principles of Analytic Graphics” de Roger D. Peng, quien es “Associate Professor of Biostatistics” en la “Johns Hopkins Bloomberg School of Public Health” y se encuentra contenida en el curso “Exploratory Data Analysis” de la especialización en “Data Science” impartida en la plataforma educacional Coursera.\nLos textos han sido traducidos sin consentimiento del autor ni revisión del mismo.\nLos gráficos que se muestran no son los incluidos en la presentación original."
+  },
+  {
+    "objectID": "clases/clase_21_apoyo.html#sistemas-graficación",
+    "href": "clases/clase_21_apoyo.html#sistemas-graficación",
+    "title": "ggplot apoyo",
+    "section": "Sistemas Graficación",
+    "text": "Sistemas Graficación\n\nPlottingBase\nGGplot\nlatice (no abordado en curso)"
+  },
+  {
+    "objectID": "clases/clase_21_apoyo.html#principios-ggplot",
+    "href": "clases/clase_21_apoyo.html#principios-ggplot",
+    "title": "ggplot apoyo",
+    "section": "Principios GGplot",
+    "text": "Principios GGplot\n\ngramática de los gráficos\nagregar capas con +"
+  },
+  {
+    "objectID": "clases/clase_21_apoyo.html#pasos-ggplot2",
+    "href": "clases/clase_21_apoyo.html#pasos-ggplot2",
+    "title": "ggplot apoyo",
+    "section": "Pasos ggplot2",
+    "text": "Pasos ggplot2\n\nggplot(): crea un sistema de coordenadas para añadir capas\nArgumento data: el conjunto de datos a graficar\nArgumento mapping: se empareja con aes: define cómo se mapean a cada eje (x y y) las variables del conjunto de datos\nFunciones geom_point, geom_bar, …\nModificar escales, leyendas, estilos, temas, etc."
+  },
+  {
+    "objectID": "clases/clase_21_apoyo.html#mapeos-estéticos",
+    "href": "clases/clase_21_apoyo.html#mapeos-estéticos",
+    "title": "ggplot apoyo",
+    "section": "Mapeos Estéticos",
+    "text": "Mapeos Estéticos\nUn parámetro estético es una propiedad visual de los objetos de un gráfico. Las estéticas incluye cosas como el tamaño, la forma o el color de tus puntos. Puedes mostrar un punto de diferentes maneras si cambias los valores de sus propiedades estéticas. Como ya usamos la palabra “valor” para describir los datos, usemos la palabra “nivel” para describir las propiedades estéticas.\nEl mapeo entre las propiedades estéticas de tu gráfico y las variables de tu conjunto de datos (dataset) te permite comunicar información sobre tus datos.\nLa función aes() reúne cada una de las asignaciones estéticas utilizadas por una capa y las pasa al argumento de mapeo de la capa. La sintaxis resalta una visión útil sobre x e y: las ubicaciones de x e y de un punto son en sí mismas también estéticas, es decir propiedades visuales que se puede asignar a las variables para mostrar información sobre los datos.\nUna vez que asignas (o “mapeas”) una estética, ggplot2 se ocupa del resto. El paquete selecciona una escala razonable para usar con la estética elegida y construye una leyenda que explica la relación entre niveles y valores. Para la estética x e y, ggplot2 no crea una leyenda, pero sí una línea que delimita el eje con sus marcas de graduación y una etiqueta. La línea del eje actúa como una leyenda; explica el mapeo entre ubicaciones y valores.\nPara mapear (o asignar) una estética a una variable, debes asociar el nombre de la estética al de la variable dentro de aes(). ggplot2 asignará automáticamente un nivel único de la estética (en este ejemplo, un color) a cada valor único de la variable. Este proceso es conocido como escalamiento (scaling). ggplot2 acompañará el gráfico con una leyenda que explica qué niveles corresponden a qué valores."
+  },
+  {
+    "objectID": "clases/clase_21_apoyo.html#mapeos-geométricos",
+    "href": "clases/clase_21_apoyo.html#mapeos-geométricos",
+    "title": "ggplot apoyo",
+    "section": "Mapeos Geométricos",
+    "text": "Mapeos Geométricos\ngeoms: es el objeto geométrico usado para representar datos de forma gráfica. La gente a menudo llama a los gráficos por el tipo de geom que utiliza. Por ejemplo, los diagramas de barras usan geoms de barra (bar), los diagramas de líneas usan geoms de línea (line), los diagramas de caja usan geoms de diagrama de caja (boxplot), y así sucesivamente\nggplot2 proporciona más de 40 geoms y los paquetes de extensión proporcionan aún más (consulta https://exts.ggplot2.tidyverse.org/gallery/para obtener una muestra). La mejor forma de obtener un panorama completo sobre las posibilidades que brinda ggplot2 es consultando la hoja de referencia (o cheatsheet), que puedes encontrar en https://rstudio.com/resources/cheatsheets/ (en la parte baja de la página encontrarás la versión en español). Para obtener más información sobre un tipo dado de geoms, usa la ayuda: ?geom_smooth.\n\nLos gráficos de barras, los histogramas y los polígonos de frecuencia almacenan los datos y luego grafican los conteos por contenedores (bins), es decir, el número de puntos que caen en cada contenedor.\nLos gráficos de líneas suavizadas (smoothers) ajustan un modelo a los datos y luego grafican las predicciones del modelo.\nLos diagramas de caja (boxplots) calculan un resumen robusto de la distribución y luego muestran una caja con formato especial.\n\nEl algoritmo utilizado para calcular nuevos valores para un gráfico se llama stat, abreviatura en inglés de transformación estadística (statistical transformation). La siguiente figura describe cómo funciona este proceso con geom_bar().\nAdjetivos:\n\ncolor fondo\ngrillas\ntamaño de la fuente, tamaño\n\nLa función tema puede modificar todo lo que no sea relativo a los datos\nfoto con capture de temas"
+  },
+  {
+    "objectID": "clases/clase_21_apoyo.html#guide",
+    "href": "clases/clase_21_apoyo.html#guide",
+    "title": "ggplot apoyo",
+    "section": "Guide",
+    "text": "Guide\nproposición\nNot needed here, because color and x-axis are the same.\n guides() function controls all legends by connecting to the aes."
+  },
+  {
+    "objectID": "clases/clase_21_apoyo.html#facetas--posterior",
+    "href": "clases/clase_21_apoyo.html#facetas--posterior",
+    "title": "ggplot apoyo",
+    "section": "Facetas- posterior",
+    "text": "Facetas- posterior\nconjunción\nfaceta por la variable país"
+  },
+  {
+    "objectID": "clases/clase_21_apoyo.html#escalas",
+    "href": "clases/clase_21_apoyo.html#escalas",
+    "title": "ggplot apoyo",
+    "section": "Escalas",
+    "text": "Escalas\ncontrola como los datos se les modifican sus propiedades de representación (estructura de oración)"
+  },
+  {
+    "objectID": "clases/clase_21_apoyo.html#sistema-de-coordenadas",
+    "href": "clases/clase_21_apoyo.html#sistema-de-coordenadas",
+    "title": "ggplot apoyo",
+    "section": "Sistema de Coordenadas:",
+    "text": "Sistema de Coordenadas:\ncomo los datos son posicionados en una visualización 2D"
+  },
+  {
+    "objectID": "clases/clase_21_apoyo.html#posición",
+    "href": "clases/clase_21_apoyo.html#posición",
+    "title": "ggplot apoyo",
+    "section": "Posición:",
+    "text": "Posición:\ncómo lidear con la superposición de valores"
+  },
+  {
+    "objectID": "clases/clase_22_apoyo.html#guide",
+    "href": "clases/clase_22_apoyo.html#guide",
+    "title": "ggplot apoyo",
+    "section": "Guide",
+    "text": "Guide\nproposición\nNot needed here, because color and x-axis are the same.\n guides() function controls all legends by connecting to the aes."
+  },
+  {
+    "objectID": "clases/clase_22_apoyo.html#facetas--posterior",
+    "href": "clases/clase_22_apoyo.html#facetas--posterior",
+    "title": "ggplot apoyo",
+    "section": "Facetas- posterior",
+    "text": "Facetas- posterior\nconjunción\nfaceta por la variable país"
+  },
+  {
+    "objectID": "clases/clase_22_apoyo.html#escalas",
+    "href": "clases/clase_22_apoyo.html#escalas",
+    "title": "ggplot apoyo",
+    "section": "Escalas",
+    "text": "Escalas\ncontrola como los datos se les modifican sus propiedades de representación (estructura de oración)"
+  },
+  {
+    "objectID": "clases/clase_22_apoyo.html#sistema-de-coordenadas",
+    "href": "clases/clase_22_apoyo.html#sistema-de-coordenadas",
+    "title": "ggplot apoyo",
+    "section": "Sistema de Coordenadas:",
+    "text": "Sistema de Coordenadas:\ncomo los datos son posicionados en una visualización 2D"
+  },
+  {
+    "objectID": "clases/clase_22_apoyo.html#posición",
+    "href": "clases/clase_22_apoyo.html#posición",
+    "title": "ggplot apoyo",
+    "section": "Posición:",
+    "text": "Posición:\ncómo lidear con la superposición de valores"
   }
 ]
