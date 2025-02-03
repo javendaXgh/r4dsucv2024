@@ -1,0 +1,26 @@
+---
+title: "Quarto Documento demo"
+author: "Curso UCV R para Ciencia de Datos"
+lang: es
+date: Sys.Date()
+format: 
+  html:
+    fig-width: 8
+    fig-height: 4
+    code-fold: true
+---
+
+## Calidad del Aire
+
+@fig-airquality explora más a fondo el impacto de la temperatura en el nivel de ozono.
+
+```{r}
+#| label: fig-airquality
+#| fig-cap: "Temperatura y nivel de ozono"
+#| warning: false
+
+library(ggplot2)
+ggplot(airquality, aes(Temp, Ozone)) + 
+  geom_point() + 
+  geom_smooth(method = "loess")
+```

@@ -468,7 +468,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\nAsignar Nombres Objetos y Variables\n🖥️ láminas clase 03 apoyo  💻 clase 3 apoyo versión qmd \n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n🖥️ láminas clase 04  💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\nConstruir Funciones y Data Frames\n🖥️ láminas clase 06  💻 clase 6 versión qmd  🖥️ clase 6 versión códigos  💻 clase 6: práctica 1- versión qmd  💻 clase 6: práctica 1- versión site  🎥video render Quarto 💻 clase 6: práctica 2- versión qmd  💻 clase 6: práctica 2- versión site \n\n\n\n\nmié, 6 nov.\nDF subsetting; Ayudas\n🖥️ láminas clase 07 💻 clase 7: tarea \n\n\n4\nlun, 11 nov.\nInspección DF´s / Seleccionar Valores, Subsettings-cont\n🖥️ láminas clase 08 🖥️ clase 08, versión reporte 💻 clase 8 versión qmd  💻 clase 8: tarea \n\n\n\n\nmié, 13 nov.\nPaths o Rutas de trabajo\n🖥️ láminas clase 09\n\n\n5\nlun, 18 nov.\nTrabajando con Data Frames por filas\n🖥️ láminas clase 10\n\n\n\n\nmié, 20 nov.\nTrabajando con Data Frames por columnas\n🖥️ láminas clase 11 💻 clase 11 versión qmd \n\n\n6\nlun, 25 nov.\nTrabajando con Data Frames: agrupamientos y Reframes\n🖥️ láminas clase 12 💻 clase 12 script  🖥️ clase 12, versión reporte 💻 clase 12 versión qmd \n\n\n\n\nmié, 27 nov.\nTrabajando con Data Frames: Agrupamientos y Reframes/ Asignación Ensayo\n💻 clase 13 script  🖥️ clase 13, versión reporte 💻 clase 13 versión qmd \n\n\n7\nlun, 2 dic.\nTrabajando con LLM R4DS Escuela Economía UCV\n🖥️ láminas clase 14 💻 clase 14 script \n\n\n\n\nmié, 4 dic.\nTrabajando con Data Frames y Tibbles: factores, selects, remoción duplicados. RBase: Coercion\n🖥️ láminas clase 15 💻 clase 15 script  🖥️ clase 15, versión reporte 💻 clase 15 versión qmd \n\n\n\n\nvie, 6 dic.\nTrabajando con Tibbles:Formatos Long y Wide, Valores Ausentes\nmismos materiales de clase 15\n\n\n8\nlun, 9 dic.\ntrabajando con: fechas y strings\n🖥️ láminas clase 17 💻 clase 17 script \n\n\n\n\nmié, 11 dic.\nUsando R para Análisis Económico\n💻 clase 18 script  🛢️ conjunto de datos clase 18 \n\n\n10\nlun, 13 ene.\nAvances anteproyecto- Discusión\n\n\n\n\n\n\nmié, 15 ene.\nIntroducción a la Visualizacion de Datos\n🖥️ láminas clase 19\n\n\n\n\nvie, 17 ene.\nIntroducción al Scrapy\n\n\n\n\n11\nmié, 22 ene.\nVisualizacion de Datos/ Análisis Exploratorio\n🖥️ láminas clase 20-1 🖥️ láminas clase 20-2 🖥️ láminas clase 20-3 💻 clase 20 script \n\n\n12\nlun, 27 ene.\nVisualización de Datos: GGplot y otras opciones\n🖥️ láminas clase 21 🖥️ láminas clase 21 complemento 💻 clase 21 script ggplot2  💻 clase 21 script valores acciones \n\n\n\n\nmié, 29 ene.\nIntroducción a uso de API´s\n🖥️ láminas clase 22 💻 clase 22 script \n\n\n13\nlun, 3 feb.\nReportes/Tablas DT y GT/Nombres Columnas\n\n\n\n\n\n\nmié, 5 feb.\nDashboard\n\n\n\n\n14\nlun, 10 feb.\nRevisión Preliminar Proyectos\n\n\n\n\n\n\nmié, 12 feb.\nConexiones a DB´s, lectura y escritura\n\n\n\n\n15\nlun, 17 feb.\nJoins de DF´s\n\n\n\n\n\n\nmié, 19 feb.\nPresentacion Proyecto",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\nAsignar Nombres Objetos y Variables\n🖥️ láminas clase 03 apoyo  💻 clase 3 apoyo versión qmd \n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n🖥️ láminas clase 04  💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\nConstruir Funciones y Data Frames\n🖥️ láminas clase 06  💻 clase 6 versión qmd  🖥️ clase 6 versión códigos  💻 clase 6: práctica 1- versión qmd  💻 clase 6: práctica 1- versión site  🎥video render Quarto 💻 clase 6: práctica 2- versión qmd  💻 clase 6: práctica 2- versión site \n\n\n\n\nmié, 6 nov.\nDF subsetting; Ayudas\n🖥️ láminas clase 07 💻 clase 7: tarea \n\n\n4\nlun, 11 nov.\nInspección DF´s / Seleccionar Valores, Subsettings-cont\n🖥️ láminas clase 08 🖥️ clase 08, versión reporte 💻 clase 8 versión qmd  💻 clase 8: tarea \n\n\n\n\nmié, 13 nov.\nPaths o Rutas de trabajo\n🖥️ láminas clase 09\n\n\n5\nlun, 18 nov.\nTrabajando con Data Frames por filas\n🖥️ láminas clase 10\n\n\n\n\nmié, 20 nov.\nTrabajando con Data Frames por columnas\n🖥️ láminas clase 11 💻 clase 11 versión qmd \n\n\n6\nlun, 25 nov.\nTrabajando con Data Frames: agrupamientos y Reframes\n🖥️ láminas clase 12 💻 clase 12 script  🖥️ clase 12, versión reporte 💻 clase 12 versión qmd \n\n\n\n\nmié, 27 nov.\nTrabajando con Data Frames: Agrupamientos y Reframes/ Asignación Ensayo\n💻 clase 13 script  🖥️ clase 13, versión reporte 💻 clase 13 versión qmd \n\n\n7\nlun, 2 dic.\nTrabajando con LLM R4DS Escuela Economía UCV\n🖥️ láminas clase 14 💻 clase 14 script \n\n\n\n\nmié, 4 dic.\nTrabajando con Data Frames y Tibbles: factores, selects, remoción duplicados. RBase: Coercion\n🖥️ láminas clase 15 💻 clase 15 script  🖥️ clase 15, versión reporte 💻 clase 15 versión qmd \n\n\n\n\nvie, 6 dic.\nTrabajando con Tibbles:Formatos Long y Wide, Valores Ausentes\nmismos materiales de clase 15\n\n\n8\nlun, 9 dic.\ntrabajando con: fechas y strings\n🖥️ láminas clase 17 💻 clase 17 script \n\n\n\n\nmié, 11 dic.\nUsando R para Análisis Económico\n💻 clase 18 script  🛢️ conjunto de datos clase 18 \n\n\n10\nlun, 13 ene.\nAvances anteproyecto- Discusión\n\n\n\n\n\n\nmié, 15 ene.\nIntroducción a la Visualizacion de Datos\n🖥️ láminas clase 19\n\n\n\n\nvie, 17 ene.\nIntroducción al Scrapy\n\n\n\n\n11\nmié, 22 ene.\nVisualizacion de Datos/ Análisis Exploratorio\n🖥️ láminas clase 20-1 🖥️ láminas clase 20-2 🖥️ láminas clase 20-3 💻 clase 20 script \n\n\n12\nlun, 27 ene.\nVisualización de Datos: GGplot y otras opciones\n🖥️ láminas clase 21 🖥️ láminas clase 21 complemento 💻 clase 21 script ggplot2  💻 clase 21 script valores acciones \n\n\n\n\nmié, 29 ene.\nIntroducción a uso de API´s\n🖥️ láminas clase 22 💻 clase 22 script \n\n\n13\nlun, 3 feb.\nReportes/Tablas DT y GT/Nombres Columnas\n🖥️ láminas clase 23\n\n\n\n\nmié, 5 feb.\nDashboard\n\n\n\n\n14\nlun, 10 feb.\nRevisión Preliminar Proyectos\n\n\n\n\n\n\nmié, 12 feb.\nConexiones a DB´s, lectura y escritura\n\n\n\n\n15\nlun, 17 feb.\nJoins de DF´s\n\n\n\n\n\n\nmié, 19 feb.\nPresentacion Proyecto",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -4354,8 +4354,8 @@
     "objectID": "clases/clase_15.html#dplyr---fns-complementarias-select",
     "href": "clases/clase_15.html#dplyr---fns-complementarias-select",
     "title": "Clase 15: DPLYR, Factores, Coerce, Recycle, NA’s, tidyr",
-    "section": "DPLYR - fn´s complementarias select",
-    "text": "DPLYR - fn´s complementarias select\n\ncontains(): Selecciona variables cuyo nombre contiene la cadena de texto\nends_with(): Selecciona variables cuyo nombre termina con la cadena de caracteres\neverything(): Selecciona todas las columnas"
+    "section": "",
+    "text": "contains(): Selecciona variables cuyo nombre contiene la cadena de texto\nends_with(): Selecciona variables cuyo nombre termina con la cadena de caracteres\neverything(): Selecciona todas las columnas"
   },
   {
     "objectID": "clases/clase_15.html#dplyr---fns-complementarias-select--2",
@@ -4420,7 +4420,7 @@
     "href": "clases/clase_15.html#coerce",
     "title": "Clase 15: DPLYR, Factores, Coerce, Recycle, NA’s, tidyr",
     "section": "Coerce",
-    "text": "Coerce\nSe refiere al proceso automático de conversión de un tipo de dato a otro (class). Esto puede ocurrir cuando se realizan operaciones entre diferentes tipos de datos, y R intenta adaptar los datos para que puedan ser utilizados juntos.\nTipos:\nCoerción Implícita\nCoerción Explícita"
+    "text": "Coerce\nSe refiere al proceso automático de conversión de un tipo de dato a otro (class). Esto puede ocurrir cuando se realizan operaciones entre diferentes tipos de datos, y R intenta adaptar los datos para que puedan ser utilizados juntos.\n\nTipos:\n\nCoerción Implícita\n\n\nCoerción Explícita"
   },
   {
     "objectID": "clases/clase_15.html#recycle",
@@ -4441,14 +4441,14 @@
     "href": "clases/clase_15.html#formatos-long-y-wide",
     "title": "Clase 15: DPLYR, Factores, Coerce, Recycle, NA’s, tidyr",
     "section": "Formatos Long y Wide",
-    "text": "Formatos Long y Wide\nLong\nEl formato long es donde:\n\ncada columna es una variable\ncada fila es una observación\n\nEn el formato “largo”, generalmente tienes una columna para la variable observada y las otras columnas son variables de ID."
+    "text": "Formatos Long y Wide\n\nLong\nEl formato long es donde:\n\ncada columna es una variable\ncada fila es una observación\n\nEn el formato “largo”, generalmente tienes una columna para la variable observada y las otras columnas son variables de ID."
   },
   {
     "objectID": "clases/clase_15.html#tareas",
     "href": "clases/clase_15.html#tareas",
     "title": "Clase 15: DPLYR, Factores, Coerce, Recycle, NA’s, tidyr",
     "section": "Tareas",
-    "text": "Tareas\nRevisar viñeta https://tidyr.tidyverse.org/articles/pivot.html#longer-then-wider\nCambiar gapminder de formato mixto a longer. Fecha 8-1-25\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Tareas\nRevisar viñeta https://tidyr.tidyverse.org/articles/pivot.html#longer-then-wider\nCambiar gapminder de formato mixto a longer. Fecha 8-1-25"
   },
   {
     "objectID": "clases/clase_15.html#formato-wide",
@@ -8608,7 +8608,7 @@
     "href": "clases/clase_22.html#definición-apis",
     "title": "Ciencia de Datos para Economistas",
     "section": "Definición API´s",
-    "text": "Definición API´s\nLas APIs (Application Programming Interfaces) son conjuntos de reglas y protocolos que permiten a diferentes aplicaciones comunicarse entre sí. En términos simples, una API es un intermediario que permite que dos programas se comuniquen sin necesidad de entender cómo están construidos internamente = vamos a ponernos de acuerdo\nAPI REST (Representational State Transfer)\nEs un estilo adoptado para diseñar servicios web, el cual se sustenta en el protocolo HTTP. Su objetivo principal es proporcionar una interfaz sencilla y eficiente para la comunicación entre diferentes sistemas o aplicaciones, permitiendo que puedan intercambiar datos de manera estándar."
+    "text": "Definición API´s\nLas APIs (Application Programming Interfaces) son conjuntos de reglas y protocolos que permiten a diferentes aplicaciones comunicarse entre sí. En términos simples, una API es un intermediario que permite que dos programas se comuniquen sin necesidad de entender cómo están construidos internamente = vamos a ponernos de acuerdo\n\nAPI REST (Representational State Transfer)\nEs un estilo adoptado para diseñar servicios web, el cual se sustenta en el protocolo HTTP. Su objetivo principal es proporcionar una interfaz sencilla y eficiente para la comunicación entre diferentes sistemas o aplicaciones, permitiendo que puedan intercambiar datos de manera estándar."
   },
   {
     "objectID": "clases/clase_22.html#ejemplo-de-una-respuesta",
@@ -8747,8 +8747,8 @@
     "objectID": "clases/clase_22.html#objetivo",
     "href": "clases/clase_22.html#objetivo",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Objetivo",
-    "text": "Objetivo\nRealizar consultas a distintas API’s y procesar los datos obtenidos."
+    "section": "",
+    "text": "Realizar consultas a distintas API’s y procesar los datos obtenidos."
   },
   {
     "objectID": "clases/clase_22.html#ejemplo-paso-a-paso",
@@ -8783,7 +8783,7 @@
     "href": "clases/clase_22.html#caso-1-definición-método",
     "title": "Ciencia de Datos para Economistas",
     "section": "Caso 1: definición método",
-    "text": "Caso 1: definición método\nGET\n\nreq_patria |&gt; \n  req_method(\"GET\")\n\nrevisión consulta\n\nreq_patria |&gt; \n  req_dry_run()\n\nGET /api/v1/timeline HTTP/1.1\nHost: covid19.patria.org.ve\nUser-Agent: httr2/1.0.7 r-curl/6.1.0 libcurl/8.7.1\nAccept: */*\nAccept-Encoding: gzip"
+    "text": "Caso 1: definición método\n\nGET\n\nreq_patria |&gt; \n  req_method(\"GET\")\n\n\n\nrevisión consulta\n\nreq_patria |&gt; \n  req_dry_run()\n\nGET /api/v1/timeline HTTP/1.1\nHost: covid19.patria.org.ve\nUser-Agent: httr2/1.0.7 r-curl/6.1.0 libcurl/8.7.1\nAccept: */*\nAccept-Encoding: gzip"
   },
   {
     "objectID": "clases/clase_22.html#caso-1-realizar-request",
@@ -9021,7 +9021,7 @@
     "href": "clases/clase_22.html#obtener-clasificador-temático",
     "title": "Ciencia de Datos para Economistas",
     "section": "Obtener Clasificador Temático",
-    "text": "Obtener Clasificador Temático\n\ndatos_cepal &lt;- request(\"https://api-cepalstat.cepal.org/cepalstat/api/v1/thematic-tree?lang=es&format=json\")|&gt;\n  req_headers(\"Accept\" = \"application/json\")|&gt;\n  req_perform()|&gt;\n  resp_body_json()\n\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Obtener Clasificador Temático\n\ndatos_cepal &lt;- request(\"https://api-cepalstat.cepal.org/cepalstat/api/v1/thematic-tree?lang=es&format=json\")|&gt;\n  req_headers(\"Accept\" = \"application/json\")|&gt;\n  req_perform()|&gt;\n  resp_body_json()"
   },
   {
     "objectID": "clases/clase_22.html#caso-1-view-de-datos",
@@ -9155,5 +9155,285 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "Ejemplos de API:",
     "text": "Ejemplos de API:\n\nSpotify:\n\nDescripción: Proporciona acceso a bibliotecas de música, listas de reproducción, artistas y más.\n\nOpenWeatherMap:\n\nDescripción: Ofrece datos meteorológicos en tiempo real, pronósticos y estadísticas históricas.\n\nGoogle Maps:\n\nDescripción: Proporciona información geográfica, rutas, lugares de interés y más.\n\nGitHub:\n\nDescripción: Permite acceder a repositorios, issues, pull requests y otros datos relacionados con el código fuente.\n\nYelp:\n\nDescripción: Ofrece información sobre negocios locales, reseñas, calificaciones y más."
+  },
+  {
+    "objectID": "clases/clase_23.html#objetivo",
+    "href": "clases/clase_23.html#objetivo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Objetivo",
+    "text": "Objetivo\nGenerar reportes mediante el sistema de publicación Quarto. Adicionalmente, conocer diversas opciones para insertar tablas en los reportes.\nMás info en https://quarto.org/docs/output-formats/html-basics.html"
+  },
+  {
+    "objectID": "clases/clase_23.html#ciclo",
+    "href": "clases/clase_23.html#ciclo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ciclo",
+    "text": "Ciclo"
+  },
+  {
+    "objectID": "clases/clase_23.html#configuración-yml",
+    "href": "clases/clase_23.html#configuración-yml",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Configuración YML",
+    "text": "Configuración YML\n---\ntitle: \"Quarto Documento demo\"\nauthor: \"Curso UCV R para Ciencia de Datos\"\nlang: es\ndate: Sys.Date()\nformat:\n  html:\n    toc: true\n    css: styles.css\n    fig-width: 8\n    fig-height: 4\n    code-fold: true\n---\nPrestar atención a los espacios e indentado"
+  },
+  {
+    "objectID": "clases/clase_23.html#editor-visualsource",
+    "href": "clases/clase_23.html#editor-visualsource",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Editor Visual/Source",
+    "text": "Editor Visual/Source"
+  },
+  {
+    "objectID": "clases/clase_23.html#preparación-datos",
+    "href": "clases/clase_23.html#preparación-datos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Preparación Datos",
+    "text": "Preparación Datos\n???"
+  },
+  {
+    "objectID": "clases/clase_23.html#generación-gráfico",
+    "href": "clases/clase_23.html#generación-gráfico",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Generación Gráfico",
+    "text": "Generación Gráfico\n???"
+  },
+  {
+    "objectID": "clases/clase_23.html#tipos-render",
+    "href": "clases/clase_23.html#tipos-render",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tipos Render",
+    "text": "Tipos Render\n\n\nPDF\n---\ntitle: \"Documento Test PDF\"\nformat:\n  pdf:\n    toc: true\n    number-sections: true\n    colorlinks: true\n---\nNOTA : no todos los componentes del documento pueden ser compatibles con el formato PDF, por ejemplo, los gráficos interactivos\n\nHTML\n---\ntitle: \"Documento Test HTML\"\nformat:\n  html:\n    toc: true\n---"
+  },
+  {
+    "objectID": "clases/clase_23.html#dependencias--ambiente-global-vs.-local",
+    "href": "clases/clase_23.html#dependencias--ambiente-global-vs.-local",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Dependencias- Ambiente Global Vs. Local",
+    "text": "Dependencias- Ambiente Global Vs. Local"
+  },
+  {
+    "objectID": "clases/clase_23.html#configuración-chunks",
+    "href": "clases/clase_23.html#configuración-chunks",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Configuración Chunks",
+    "text": "Configuración Chunks\nSe pueden configurar estos parametros para modificar el render del documento:\n#| echo: true #se muestra el código\n#| eval: false #no se ejecuta el código\n#| warning: false # no se muestran las warnings\nPrestar atención a los espacios e indentado"
+  },
+  {
+    "objectID": "clases/clase_23.html#integrar-valores",
+    "href": "clases/clase_23.html#integrar-valores",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Integrar Valores",
+    "text": "Integrar Valores\n\nlibrary(gapminder)\nlibrary(dplyr)\n# remover notación científica\noptions(scipen=999) \n\n# Establecer separador de miles como punto y separador de decimales como coma\noptions(digits.separate = c(decimal.mark = \",\", big.mark = \".\"))\n\ngap_colven &lt;- gapminder%&gt;%\n  filter(country %in% c('Colombia','Venezuela'))\n\n\nmin_periodo &lt;- min(gap_colven$year)\nmax_periodo &lt;- max(gap_colven$year)\nmax_gdpPercap &lt;- round(max(gap_colven$gdpPercap),2)\nmin_gdpPercap &lt;- round(min(gap_colven$gdpPercap),2)\n\nTexto Muestra con Variables\nEn período analizado va de 1952 a 2007, mientras que el máximo PIB per cápita es 13143.95 , siendo el mínimo 2144.12, para los países Colombia, Venezuela\nEn período analizado va de `1952` a ´r max_periodo´, mientras que el máximo PIB per cápita es 13143.95  , siendo el mínimo ´r min_gdpPercap´, para los países ´r unique(gap_colven$country)´.\nModificar ´ por `"
+  },
+  {
+    "objectID": "clases/clase_23.html#tablas-gt",
+    "href": "clases/clase_23.html#tablas-gt",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tablas GT",
+    "text": "Tablas GT\n\n\n\n\n\n\n\n\n\n\nEstadísticas Venezuela\n\n\nAños: 1952 al 2007\n\n\nyear\nlifeExp\npop\ngdpPercap\n\n\n\n\n1952\n55.09\n5.439.568\n$7,689.80\n\n\n1957\n57.91\n6.702.668\n$9,802.47\n\n\n1962\n60.77\n8.143.375\n$8,422.97\n\n\n1967\n63.48\n9.709.552\n$9,541.47\n\n\n1972\n65.71\n11.515.649\n$10,505.26\n\n\n1977\n67.46\n13.503.563\n$13,143.95\n\n\n1982\n68.56\n15.620.766\n$11,152.41\n\n\n1987\n70.19\n17.910.182\n$9,883.58\n\n\n1992\n71.15\n20.265.563\n$10,733.93\n\n\n1997\n72.15\n22.374.398\n$10,165.50\n\n\n2002\n72.77\n24.287.670\n$8,605.05\n\n\n2007\n73.75\n26.084.662\n$11,415.81\n\n\n\n\n\n\n\n\n\nlibrary(gt)\nlibrary(gapminder)\nlibrary(tidyverse)\n\ngap_ven &lt;- gapminder%&gt;%\n  filter(country %in% c('Venezuela'))\n  \ngap_ven |&gt;\n  select(-country,-continent)|&gt;\n  gt()|&gt;\n  tab_header(\n    title = \"Estadísticas Venezuela\",\n    subtitle = paste('Años: ', min_periodo,'al',max_periodo )\n  ) |&gt;\n  fmt_currency(columns = gdpPercap) |&gt;\n  fmt_number(columns = lifeExp, decimals = 2, suffixing = TRUE) |&gt;\n  fmt_number(columns = pop,\n             sep_mark = \".\" ,\n             dec_mark = \",\",\n             decimals = 0)\n\n\nmás info en https://gt.rstudio.com"
+  },
+  {
+    "objectID": "clases/clase_23.html#tablas-dt",
+    "href": "clases/clase_23.html#tablas-dt",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tablas DT",
+    "text": "Tablas DT\n\n\n\n\n\n\n\n\n\n\nlibrary(DT)\ngap_america &lt;- gapminder%&gt;%\n  filter(continent=='Americas')\n\ndatatable(gap_america)\n\n\nmás info en https://rstudio.github.io/DT/"
+  },
+  {
+    "objectID": "clases/clase_23.html#tablas-reactable",
+    "href": "clases/clase_23.html#tablas-reactable",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tablas reactable",
+    "text": "Tablas reactable\n\n\n\n\n\n\n\n\n\n\ngap_colven_react &lt;- gap_colven|&gt;\n  select(-continent,-pop)|&gt;\n  mutate(gdpPercap= round(gdpPercap,2))\n\nreactable(gap_colven_react)\n\n\nmás info en https://glin.github.io/reactable/"
+  },
+  {
+    "objectID": "clases/clase_23.html#temas",
+    "href": "clases/clase_23.html#temas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Temas",
+    "text": "Temas"
+  },
+  {
+    "objectID": "clases/clase_23.html#otras-opciones",
+    "href": "clases/clase_23.html#otras-opciones",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Otras Opciones",
+    "text": "Otras Opciones"
+  },
+  {
+    "objectID": "clases/clase_23.html#configuraciones-yml-interés",
+    "href": "clases/clase_23.html#configuraciones-yml-interés",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Configuraciones YML interés",
+    "text": "Configuraciones YML interés"
+  },
+  {
+    "objectID": "clases/clase_23.html#configuraciones-yml--self-contained",
+    "href": "clases/clase_23.html#configuraciones-yml--self-contained",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Configuraciones YML- self contained",
+    "text": "Configuraciones YML- self contained\nEl documento se puede compartir y no es necesario agregar las carpetas que lo acompañan\nSin embed-resources: true\n\n\n\n\n\nConfiguración necesaria:\nformat:\n  html:\n    embed-resources: true"
+  },
+  {
+    "objectID": "clases/clase_23.html#wrappers",
+    "href": "clases/clase_23.html#wrappers",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Wrappers",
+    "text": "Wrappers\nson funciones o clases que envuelven o encapsulan la funcionalidad existente de otras bibliotecas, APIs o módulos. Su principal objetivo es simplificar el uso de estas funcionalidades complejas, proporcionando una interfaz más amigable y fácil de usar."
+  },
+  {
+    "objectID": "clases/clase_23.html#cheat-sheets",
+    "href": "clases/clase_23.html#cheat-sheets",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Cheat Sheets",
+    "text": "Cheat Sheets"
+  },
+  {
+    "objectID": "clases/clase_23.html#section",
+    "href": "clases/clase_23.html#section",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_23.html#configuraciones-yml---toc",
+    "href": "clases/clase_23.html#configuraciones-yml---toc",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Configuraciones YML - TOC",
+    "text": "Configuraciones YML - TOC\nPara mostrar la tabla de contenido y la profundidad\nformat:\n  html:\n    toc: true\n    toc-location: left\n    number-sections: true\n    number-depth: 3\nEjemplo"
+  },
+  {
+    "objectID": "clases/clase_23.html#configuraciones-yml---temas",
+    "href": "clases/clase_23.html#configuraciones-yml---temas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Configuraciones YML - Temas",
+    "text": "Configuraciones YML - Temas\nCambiar el estilo general del documento\nformat:\n  html:\n    theme: united\nVer temas disponibles en https://quarto.org/docs/output-formats/html-themes.html\nEjemplo"
+  },
+  {
+    "objectID": "clases/clase_23.html#ejemplo-quarto",
+    "href": "clases/clase_23.html#ejemplo-quarto",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplo Quarto",
+    "text": "Ejemplo Quarto"
+  },
+  {
+    "objectID": "clases/clase_23.html#básicos-markdown",
+    "href": "clases/clase_23.html#básicos-markdown",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Básicos Markdown",
+    "text": "Básicos Markdown\n\n\n*itálica*, \n**negrilla**, \n***negrilla itálica***\nsuperscript^2^ / \nsubscript~2~\n`código`\n\n# Header 1\n## Header 2\n### Header 3\n#### Header 4\n##### Header 5\n###### Header 6"
+  },
+  {
+    "objectID": "clases/clase_23.html#section-1",
+    "href": "clases/clase_23.html#section-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_23.html#editor-visual--detalle",
+    "href": "clases/clase_23.html#editor-visual--detalle",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Editor Visual- detalle",
+    "text": "Editor Visual- detalle"
+  },
+  {
+    "objectID": "clases/clase_23.html#tabset",
+    "href": "clases/clase_23.html#tabset",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tabset",
+    "text": "Tabset\n\n\n::: {.panel-tabset}\n## R\n\n``` {.r}\nfizz_buzz &lt;- function(fbnums = 1:50) {\n  output &lt;- dplyr::case_when(\n    fbnums %% 15 == 0 ~ \"FizzBuzz\",\n    fbnums %% 3 == 0 ~ \"Fizz\",\n    fbnums %% 5 == 0 ~ \"Buzz\",\n    TRUE ~ as.character(fbnums)\n  )\n  print(output)\n}\n```\n\n## Python\n\n``` {.python}\ndef fizz_buzz(num):\n  if num % 15 == 0:\n    print(\"FizzBuzz\")\n  elif num % 5 == 0:\n    print(\"Buzz\")\n  elif num % 3 == 0:\n    print(\"Fizz\")\n  else:\n    print(num)\n```\n\n:::\n\n\nRPython\n\n\nfizz_buzz &lt;- function(fbnums = 1:50) {\n  output &lt;- dplyr::case_when(\n    fbnums %% 15 == 0 ~ \"FizzBuzz\",\n    fbnums %% 3 == 0 ~ \"Fizz\",\n    fbnums %% 5 == 0 ~ \"Buzz\",\n    TRUE ~ as.character(fbnums)\n  )\n  print(output)\n}\n\n\ndef fizz_buzz(num):\n  if num % 15 == 0:\n    print(\"FizzBuzz\")\n  elif num % 5 == 0:\n    print(\"Buzz\")\n  elif num % 3 == 0:\n    print(\"Fizz\")\n  else:\n    print(num)"
+  },
+  {
+    "objectID": "clases/clase_23.html#tabsets",
+    "href": "clases/clase_23.html#tabsets",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tabsets",
+    "text": "Tabsets\n\n\n::: {.panel-tabset}\n## R\n\n``` {.r}\nfizz_buzz &lt;- function(fbnums = 1:50) {\n  output &lt;- dplyr::case_when(\n    fbnums %% 15 == 0 ~ \"FizzBuzz\",\n    fbnums %% 3 == 0 ~ \"Fizz\",\n    fbnums %% 5 == 0 ~ \"Buzz\",\n    TRUE ~ as.character(fbnums)\n  )\n  print(output)\n}\n```\n\n## Python\n\n``` {.python}\ndef fizz_buzz(num):\n  if num % 15 == 0:\n    print(\"FizzBuzz\")\n  elif num % 5 == 0:\n    print(\"Buzz\")\n  elif num % 3 == 0:\n    print(\"Fizz\")\n  else:\n    print(num)\n```\n\n:::\n\n\nRPython\n\n\nfizz_buzz &lt;- function(fbnums = 1:50) {\n  output &lt;- dplyr::case_when(\n    fbnums %% 15 == 0 ~ \"FizzBuzz\",\n    fbnums %% 3 == 0 ~ \"Fizz\",\n    fbnums %% 5 == 0 ~ \"Buzz\",\n    TRUE ~ as.character(fbnums)\n  )\n  print(output)\n}\n\n\ndef fizz_buzz(num):\n  if num % 15 == 0:\n    print(\"FizzBuzz\")\n  elif num % 5 == 0:\n    print(\"Buzz\")\n  elif num % 3 == 0:\n    print(\"Fizz\")\n  else:\n    print(num)"
+  },
+  {
+    "objectID": "clases/clase_23.html#configuración-documento-chunks",
+    "href": "clases/clase_23.html#configuración-documento-chunks",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Configuración Documento Chunks",
+    "text": "Configuración Documento Chunks\ntitle: \"Ciencia de Datos para Economistas\"\nsubtitle: \"Este es un subtítulo\"\ndate: \"January 22, 2025\"\nauthor: \"Acá va el nombre\"\nexecute:\n  echo: true\n  eval: false"
+  },
+  {
+    "objectID": "clases/clase_23.html#tablas-dt--bonus",
+    "href": "clases/clase_23.html#tablas-dt--bonus",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tablas DT- Bonus",
+    "text": "Tablas DT- Bonus\n\n\n\n\n\n\n\n\n\n\nlibrary(DT)\ngap_america &lt;- gapminder%&gt;%\n  filter(continent=='Americas')%&gt;%\n  select(-continent)\n\ndatatable( gap_america,\n           rownames= FALSE,\n           extensions = 'Buttons',\n           options = list(dom = 'Bfrtip',\n                          buttons = list( list(\n                            extend = 'collection',\n                            buttons = c('csv', 'excel', 'pdf'),\n                            text = 'Descargar')),\n                          lengthChange = FALSE,\n                          # dom = 'p',\n                          language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json'),\n                          pageLength = 5,\n                          # autoWidth = TRUE,\n                          initComplete = JS(\n                            \"function(settings, json) {\",\n                            \"$(this.api().table().header()).css({'background-color': '#224eb2','color': '#fff'});\",\n                            # \"  table.cells().nodes().to$().css('border-right', '1px solid black');\",\n                            \"}\"),\n                          Filter=0),\n           escape=FALSE)%&gt;%\n  formatStyle(columns = colnames(.), fontSize = '50%')"
+  },
+  {
+    "objectID": "clases/clase_23.html#ejercicio-en-clase",
+    "href": "clases/clase_23.html#ejercicio-en-clase",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejercicio en Clase",
+    "text": "Ejercicio en Clase\nRealizar reporte con un gráfico, una tabla y valores calculados como variables"
+  },
+  {
+    "objectID": "clases/clase_23.html#cheat-sheets-recursos",
+    "href": "clases/clase_23.html#cheat-sheets-recursos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Cheat Sheets + recursos",
+    "text": "Cheat Sheets + recursos\nhttps://rstudio.github.io/cheatsheets/quarto.pdf\nhttps://glin.github.io/reactable/articles/cookbook/cookbook.html\nhttps://rstudio.github.io/DT/options.html\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_23.html#tablas-reactable---bonus",
+    "href": "clases/clase_23.html#tablas-reactable---bonus",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tablas reactable - bonus",
+    "text": "Tablas reactable - bonus\n\n\n\n\n\n\n\n\n\n\norange_pal &lt;- function(x) rgb(colorRamp(c(\"#caf0f8\", \n                                          \"#03045e\"))(x), \n                              maxColorValue = 255)\n\nreactable(\n  gap_colven_react,\n  columns = list(\n    gdpPercap = colDef(style = function(value) {\n      normalized &lt;- (value - min(gap_colven$gdpPercap)) / (max(gap_colven$gdpPercap) - min(gap_colven$gdpPercap))\n      color &lt;- orange_pal(normalized)\n      list(background = color)\n    })\n  )\n)"
+  },
+  {
+    "objectID": "clases/clase_23.html#características-principales-de-los-wrappers",
+    "href": "clases/clase_23.html#características-principales-de-los-wrappers",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Características Principales de los Wrappers:",
+    "text": "Características Principales de los Wrappers:\n\nAbstracción : Ocultan la complejidad subyacente, permitiendo a los usuarios interactuar con las funciones básicas sin preocuparse por detalles internos.\nConsistencia : Aseguran que el uso de diferentes APIs o bibliotecas sea uniforme y coherente.\nCompatibilidad : Pueden adaptar interfaces incompatibles para que trabajen juntas.\n\nEjemplos en R:\n\nWrappers para APIs : Por ejemplo, httr es una biblioteca popular en R que proporciona funciones sencillas para realizar solicitudes HTTP a diferentes APIs."
+  },
+  {
+    "objectID": "clases/clase_23.html#prueba-embebido",
+    "href": "clases/clase_23.html#prueba-embebido",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "PRueba embebido",
+    "text": "PRueba embebido"
+  },
+  {
+    "objectID": "clases/clase_23.html#calidad-del-aire",
+    "href": "clases/clase_23.html#calidad-del-aire",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Calidad del Aire",
+    "text": "Calidad del Aire\nFigura 1 explora más a fondo el impacto de la temperatura en el nivel de ozono.\n\n\nFigura 1: Temperatura y nivel de ozono"
+  },
+  {
+    "objectID": "clases/clase_23.html#configuración-documento-chunks-global",
+    "href": "clases/clase_23.html#configuración-documento-chunks-global",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Configuración Documento Chunks-Global",
+    "text": "Configuración Documento Chunks-Global\ntitle: \"Ciencia de Datos para Economistas\"\nsubtitle: \"Este es un subtítulo\"\ndate: \"January 22, 2025\"\nauthor: \"Acá va el nombre\"\nexecute:\n  echo: true\n  eval: false"
+  },
+  {
+    "objectID": "clases/images/clase23/quarto_demo.html",
+    "href": "clases/images/clase23/quarto_demo.html",
+    "title": "Quarto Documento demo",
+    "section": "",
+    "text": "Figura 1 explora más a fondo el impacto de la temperatura en el nivel de ozono.\n\n\nCódigo\nlibrary(ggplot2)\nggplot(airquality, aes(Temp, Ozone)) + \n  geom_point() + \n  geom_smooth(method = \"loess\")\n\n\n\n\n\n\n\n\nFigura 1: Temperatura y nivel de ozono"
+  },
+  {
+    "objectID": "clases/images/clase23/quarto_demo.html#calidad-del-aire",
+    "href": "clases/images/clase23/quarto_demo.html#calidad-del-aire",
+    "title": "Quarto Documento demo",
+    "section": "",
+    "text": "Figura 1 explora más a fondo el impacto de la temperatura en el nivel de ozono.\n\n\nCódigo\nlibrary(ggplot2)\nggplot(airquality, aes(Temp, Ozone)) + \n  geom_point() + \n  geom_smooth(method = \"loess\")\n\n\n\n\n\n\n\n\nFigura 1: Temperatura y nivel de ozono"
+  },
+  {
+    "objectID": "clases/clase_22.html",
+    "href": "clases/clase_22.html",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "Realizar consultas a distintas API’s y procesar los datos obtenidos."
   }
 ]

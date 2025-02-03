@@ -1,0 +1,1877 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<link href="../images/favicon.png" rel="icon" type="image/png">
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.57">
+
+  <meta name="author" content="MSc. José M. Avendaño">
+  <meta name="dcterms.date" content="2025-02-03">
+  <title>UCV EconomíaR4DS – Ciencia de Datos para Economistas</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-5BVQ49LXJG"></script>
+
+  <script type="text/javascript">
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5BVQ49LXJG', { 'anonymize_ip': true});
+  </script>
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link href="../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+  <script src="../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+  <link href="../site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+  <script src="../site_libs/datatables-binding-0.33/datatables.js"></script>
+  <script src="../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+  <link href="../site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
+  <link href="../site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet">
+  <script src="../site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+  <link href="../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+  <script src="../site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+  <script src="../site_libs/jszip-1.13.6/jszip.min.js"></script>
+  <script src="../site_libs/pdfmake-1.13.6/pdfmake.js"></script>
+  <script src="../site_libs/pdfmake-1.13.6/vfs_fonts.js"></script>
+  <link href="../site_libs/dt-ext-buttons-1.13.6/css/buttons.dataTables.min.css" rel="stylesheet">
+  <script src="../site_libs/dt-ext-buttons-1.13.6/js/dataTables.buttons.min.js"></script>
+  <script src="../site_libs/dt-ext-buttons-1.13.6/js/buttons.html5.min.js"></script>
+  <script src="../site_libs/dt-ext-buttons-1.13.6/js/buttons.colVis.min.js"></script>
+  <script src="../site_libs/dt-ext-buttons-1.13.6/js/buttons.print.min.js"></script>
+  <script src="../site_libs/core-js-2.5.3/shim.min.js"></script>
+  <script src="../site_libs/react-18.2.0/react.min.js"></script>
+  <script src="../site_libs/react-18.2.0/react-dom.min.js"></script>
+  <script src="../site_libs/reactwidget-2.0.0/react-tools.js"></script>
+  <link href="../site_libs/reactable-0.4.4/reactable.css" rel="stylesheet">
+  <script src="../site_libs/reactable-binding-0.4.4/reactable.js"></script>
+<meta property="og:title" content="Ciencia de Datos para Economistas – UCV EconomíaR4DS">
+<meta property="og:description" content="Clase 23- Reportes &amp; Tablas">
+<meta property="og:site_name" content="UCV EconomíaR4DS">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Ciencia de Datos para Economistas</h1>
+  <p class="subtitle">Clase 23- Reportes &amp; Tablas</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+MSc. José M. Avendaño 
+</div>
+        <p class="quarto-title-affiliation">
+            Universidad Central de Venezuela- Escuela de Economía. 2024-2025
+          </p>
+    </div>
+</div>
+
+  <p class="date">2025-02-03</p>
+</section>
+<section id="objetivo" class="slide level2">
+<h2>Objetivo</h2>
+<p>Generar reportes mediante el sistema de publicación Quarto. Adicionalmente, conocer diversas opciones para insertar tablas en los reportes.</p>
+<p>Más info en <a href="https://quarto.org/docs/output-formats/html-basics.html" class="uri">https://quarto.org/docs/output-formats/html-basics.html</a></p>
+</section>
+<section id="ciclo" class="slide level2">
+<h2>Ciclo</h2>
+
+<img data-src="images/cd_ciclo_6.png" class="r-stretch"></section>
+<section id="ejemplo-quarto" class="slide level2">
+<h2>Ejemplo Quarto</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/clase23/est_gral1.png" width="400"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/clase23/est_gral2.png" width="400"></p>
+</div></div>
+</section>
+<section id="configuración-yml" class="slide level2">
+<h2>Configuración YML</h2>
+<pre><code>---
+title: "Quarto Documento demo"
+author: "Curso UCV R para Ciencia de Datos"
+lang: es
+date: Sys.Date()
+format:
+  html:
+    toc: true
+    css: styles.css
+    fig-width: 8
+    fig-height: 4
+    code-fold: true
+---</code></pre>
+<p>Prestar atención a los espacios e indentado</p>
+</section>
+<section id="básicos-markdown" class="slide level2">
+<h2>Básicos Markdown</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<pre><code>*itálica*, 
+**negrilla**, 
+***negrilla itálica***
+superscript^2^ / 
+subscript~2~
+`código`</code></pre>
+</div><div class="column" style="width:50%;">
+<pre><code># Header 1
+## Header 2
+### Header 3
+#### Header 4
+##### Header 5
+###### Header 6</code></pre>
+</div></div>
+</section>
+<section id="editor-visualsource" class="slide level2">
+<h2>Editor Visual/Source</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/clase23/editor_source.png" width="400"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/clase23/editor_visual.png" width="400"></p>
+</div></div>
+</section>
+<section id="editor-visual--detalle" class="slide level2">
+<h2>Editor Visual- detalle</h2>
+
+<img data-src="images/clase23/edit_visual_detalle.png" class="quarto-figure quarto-figure-center r-stretch" width="500"></section>
+<section id="tabsets" class="slide level2">
+<h2>Tabsets</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<pre><code>::: {.panel-tabset}
+## R
+
+``` {.r}
+fizz_buzz &lt;- function(fbnums = 1:50) {
+  output &lt;- dplyr::case_when(
+    fbnums %% 15 == 0 ~ "FizzBuzz",
+    fbnums %% 3 == 0 ~ "Fizz",
+    fbnums %% 5 == 0 ~ "Buzz",
+    TRUE ~ as.character(fbnums)
+  )
+  print(output)
+}
+```
+
+## Python
+
+``` {.python}
+def fizz_buzz(num):
+  if num % 15 == 0:
+    print("FizzBuzz")
+  elif num % 5 == 0:
+    print("Buzz")
+  elif num % 3 == 0:
+    print("Fizz")
+  else:
+    print(num)
+```
+
+:::</code></pre>
+</div><div class="column" style="width:50%;">
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">R</a></li><li><a href="#tabset-1-2">Python</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>fizz_buzz <span class="ot">&lt;-</span> <span class="cf">function</span>(<span class="at">fbnums =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">50</span>) {</span>
+<span id="cb5-2"><a></a>  output <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">case_when</span>(</span>
+<span id="cb5-3"><a></a>    fbnums <span class="sc">%%</span> <span class="dv">15</span> <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"FizzBuzz"</span>,</span>
+<span id="cb5-4"><a></a>    fbnums <span class="sc">%%</span> <span class="dv">3</span> <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"Fizz"</span>,</span>
+<span id="cb5-5"><a></a>    fbnums <span class="sc">%%</span> <span class="dv">5</span> <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"Buzz"</span>,</span>
+<span id="cb5-6"><a></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="fu">as.character</span>(fbnums)</span>
+<span id="cb5-7"><a></a>  )</span>
+<span id="cb5-8"><a></a>  <span class="fu">print</span>(output)</span>
+<span id="cb5-9"><a></a>}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-1-2">
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="kw">def</span> fizz_buzz(num):</span>
+<span id="cb6-2"><a></a>  <span class="cf">if</span> num <span class="op">%</span> <span class="dv">15</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb6-3"><a></a>    <span class="bu">print</span>(<span class="st">"FizzBuzz"</span>)</span>
+<span id="cb6-4"><a></a>  <span class="cf">elif</span> num <span class="op">%</span> <span class="dv">5</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb6-5"><a></a>    <span class="bu">print</span>(<span class="st">"Buzz"</span>)</span>
+<span id="cb6-6"><a></a>  <span class="cf">elif</span> num <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb6-7"><a></a>    <span class="bu">print</span>(<span class="st">"Fizz"</span>)</span>
+<span id="cb6-8"><a></a>  <span class="cf">else</span>:</span>
+<span id="cb6-9"><a></a>    <span class="bu">print</span>(num)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="tipos-render" class="slide level2">
+<h2>Tipos Render</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="pdf">PDF</h3>
+<pre><code>---
+title: "Documento Test PDF"
+format:
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+---</code></pre>
+<p><strong>NOTA</strong> : no todos los componentes del documento pueden ser compatibles con el formato PDF, por ejemplo, los gráficos interactivos</p>
+</div><div class="column" style="width:50%;">
+<h3 id="html">HTML</h3>
+<pre><code>---
+title: "Documento Test HTML"
+format:
+  html:
+    toc: true
+---</code></pre>
+</div></div>
+</section>
+<section id="dependencias--ambiente-global-vs.-local" class="slide level2">
+<h2>Dependencias- Ambiente Global Vs. Local</h2>
+</section>
+<section id="configuración-chunks" class="slide level2">
+<h2>Configuración Chunks</h2>
+<p>Se pueden configurar estos parametros para modificar el render del documento:</p>
+<pre><code>#| echo: true #se muestra el código
+#| eval: false #no se ejecuta el código
+#| warning: false # no se muestran las warnings</code></pre>
+<p>Prestar atención a los espacios e indentado</p>
+</section>
+<section id="configuración-documento-chunks-global" class="slide level2">
+<h2>Configuración Documento Chunks-Global</h2>
+<pre><code>title: "Ciencia de Datos para Economistas"
+subtitle: "Este es un subtítulo"
+date: "January 22, 2025"
+author: "Acá va el nombre"
+execute:
+  echo: true
+  eval: false</code></pre>
+</section>
+<section id="preparación-datos" class="slide level2">
+<h2>Preparación Datos</h2>
+<p>???</p>
+</section>
+<section id="generación-gráfico" class="slide level2">
+<h2>Generación Gráfico</h2>
+<p>???</p>
+</section>
+<section id="integrar-valores" class="slide level2">
+<h2>Integrar Valores</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">library</span>(gapminder)</span>
+<span id="cb11-2"><a></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb11-3"><a></a><span class="co"># remover notación científica</span></span>
+<span id="cb11-4"><a></a><span class="fu">options</span>(<span class="at">scipen=</span><span class="dv">999</span>) </span>
+<span id="cb11-5"><a></a></span>
+<span id="cb11-6"><a></a><span class="co"># Establecer separador de miles como punto y separador de decimales como coma</span></span>
+<span id="cb11-7"><a></a><span class="fu">options</span>(<span class="at">digits.separate =</span> <span class="fu">c</span>(<span class="at">decimal.mark =</span> <span class="st">","</span>, <span class="at">big.mark =</span> <span class="st">"."</span>))</span>
+<span id="cb11-8"><a></a></span>
+<span id="cb11-9"><a></a>gap_colven <span class="ot">&lt;-</span> gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb11-10"><a></a>  <span class="fu">filter</span>(country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">'Colombia'</span>,<span class="st">'Venezuela'</span>))</span>
+<span id="cb11-11"><a></a></span>
+<span id="cb11-12"><a></a></span>
+<span id="cb11-13"><a></a>min_periodo <span class="ot">&lt;-</span> <span class="fu">min</span>(gap_colven<span class="sc">$</span>year)</span>
+<span id="cb11-14"><a></a>max_periodo <span class="ot">&lt;-</span> <span class="fu">max</span>(gap_colven<span class="sc">$</span>year)</span>
+<span id="cb11-15"><a></a>max_gdpPercap <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">max</span>(gap_colven<span class="sc">$</span>gdpPercap),<span class="dv">2</span>)</span>
+<span id="cb11-16"><a></a>min_gdpPercap <span class="ot">&lt;-</span> <span class="fu">round</span>(<span class="fu">min</span>(gap_colven<span class="sc">$</span>gdpPercap),<span class="dv">2</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<h3 id="texto-muestra-con-variables">Texto Muestra con Variables</h3>
+<p>En período analizado va de 1952 a 2007, mientras que el máximo PIB per cápita es 13143.95 , siendo el mínimo 2144.12, para los países Colombia, Venezuela</p>
+<pre><code>En período analizado va de `1952` a ´r max_periodo´, mientras que el máximo PIB per cápita es 13143.95  , siendo el mínimo ´r min_gdpPercap´, para los países ´r unique(gap_colven$country)´.
+Modificar ´ por `</code></pre>
+</section>
+<section id="tablas-gt" class="slide level2">
+<h2>Tablas GT</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div id="jrxkyydgar" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#jrxkyydgar table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#jrxkyydgar thead, #jrxkyydgar tbody, #jrxkyydgar tfoot, #jrxkyydgar tr, #jrxkyydgar td, #jrxkyydgar th {
+  border-style: none;
+}
+
+#jrxkyydgar p {
+  margin: 0;
+  padding: 0;
+}
+
+#jrxkyydgar .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#jrxkyydgar .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#jrxkyydgar .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#jrxkyydgar .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#jrxkyydgar .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jrxkyydgar .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jrxkyydgar .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#jrxkyydgar .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#jrxkyydgar .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#jrxkyydgar .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#jrxkyydgar .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#jrxkyydgar .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#jrxkyydgar .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#jrxkyydgar .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#jrxkyydgar .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#jrxkyydgar .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#jrxkyydgar .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#jrxkyydgar .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#jrxkyydgar .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jrxkyydgar .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#jrxkyydgar .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#jrxkyydgar .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#jrxkyydgar .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jrxkyydgar .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#jrxkyydgar .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#jrxkyydgar .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jrxkyydgar .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jrxkyydgar .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#jrxkyydgar .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jrxkyydgar .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#jrxkyydgar .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#jrxkyydgar .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jrxkyydgar .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jrxkyydgar .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#jrxkyydgar .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#jrxkyydgar .gt_left {
+  text-align: left;
+}
+
+#jrxkyydgar .gt_center {
+  text-align: center;
+}
+
+#jrxkyydgar .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#jrxkyydgar .gt_font_normal {
+  font-weight: normal;
+}
+
+#jrxkyydgar .gt_font_bold {
+  font-weight: bold;
+}
+
+#jrxkyydgar .gt_font_italic {
+  font-style: italic;
+}
+
+#jrxkyydgar .gt_super {
+  font-size: 65%;
+}
+
+#jrxkyydgar .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#jrxkyydgar .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#jrxkyydgar .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#jrxkyydgar .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#jrxkyydgar .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#jrxkyydgar .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#jrxkyydgar .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#jrxkyydgar .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#jrxkyydgar div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead>
+<tr class="header gt_heading">
+<th colspan="4" class="gt_heading gt_title gt_font_normal">Estadísticas Venezuela</th>
+</tr>
+<tr class="odd gt_heading">
+<th colspan="4" class="gt_heading gt_subtitle gt_font_normal gt_bottom_border">Años: 1952 al 2007</th>
+</tr>
+<tr class="header gt_col_headings">
+<th id="year" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">year</th>
+<th id="lifeExp" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">lifeExp</th>
+<th id="pop" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">pop</th>
+<th id="gdpPercap" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">gdpPercap</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_right" headers="year">1952</td>
+<td class="gt_row gt_right" headers="lifeExp">55.09</td>
+<td class="gt_row gt_right" headers="pop">5.439.568</td>
+<td class="gt_row gt_right" headers="gdpPercap">$7,689.80</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="year">1957</td>
+<td class="gt_row gt_right" headers="lifeExp">57.91</td>
+<td class="gt_row gt_right" headers="pop">6.702.668</td>
+<td class="gt_row gt_right" headers="gdpPercap">$9,802.47</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="year">1962</td>
+<td class="gt_row gt_right" headers="lifeExp">60.77</td>
+<td class="gt_row gt_right" headers="pop">8.143.375</td>
+<td class="gt_row gt_right" headers="gdpPercap">$8,422.97</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="year">1967</td>
+<td class="gt_row gt_right" headers="lifeExp">63.48</td>
+<td class="gt_row gt_right" headers="pop">9.709.552</td>
+<td class="gt_row gt_right" headers="gdpPercap">$9,541.47</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="year">1972</td>
+<td class="gt_row gt_right" headers="lifeExp">65.71</td>
+<td class="gt_row gt_right" headers="pop">11.515.649</td>
+<td class="gt_row gt_right" headers="gdpPercap">$10,505.26</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="year">1977</td>
+<td class="gt_row gt_right" headers="lifeExp">67.46</td>
+<td class="gt_row gt_right" headers="pop">13.503.563</td>
+<td class="gt_row gt_right" headers="gdpPercap">$13,143.95</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="year">1982</td>
+<td class="gt_row gt_right" headers="lifeExp">68.56</td>
+<td class="gt_row gt_right" headers="pop">15.620.766</td>
+<td class="gt_row gt_right" headers="gdpPercap">$11,152.41</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="year">1987</td>
+<td class="gt_row gt_right" headers="lifeExp">70.19</td>
+<td class="gt_row gt_right" headers="pop">17.910.182</td>
+<td class="gt_row gt_right" headers="gdpPercap">$9,883.58</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="year">1992</td>
+<td class="gt_row gt_right" headers="lifeExp">71.15</td>
+<td class="gt_row gt_right" headers="pop">20.265.563</td>
+<td class="gt_row gt_right" headers="gdpPercap">$10,733.93</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="year">1997</td>
+<td class="gt_row gt_right" headers="lifeExp">72.15</td>
+<td class="gt_row gt_right" headers="pop">22.374.398</td>
+<td class="gt_row gt_right" headers="gdpPercap">$10,165.50</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_right" headers="year">2002</td>
+<td class="gt_row gt_right" headers="lifeExp">72.77</td>
+<td class="gt_row gt_right" headers="pop">24.287.670</td>
+<td class="gt_row gt_right" headers="gdpPercap">$8,605.05</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_right" headers="year">2007</td>
+<td class="gt_row gt_right" headers="lifeExp">73.75</td>
+<td class="gt_row gt_right" headers="pop">26.084.662</td>
+<td class="gt_row gt_right" headers="gdpPercap">$11,415.81</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">library</span>(gt)</span>
+<span id="cb13-2"><a></a><span class="fu">library</span>(gapminder)</span>
+<span id="cb13-3"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb13-4"><a></a></span>
+<span id="cb13-5"><a></a>gap_ven <span class="ot">&lt;-</span> gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb13-6"><a></a>  <span class="fu">filter</span>(country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">'Venezuela'</span>))</span>
+<span id="cb13-7"><a></a>  </span>
+<span id="cb13-8"><a></a>gap_ven <span class="sc">|&gt;</span></span>
+<span id="cb13-9"><a></a>  <span class="fu">select</span>(<span class="sc">-</span>country,<span class="sc">-</span>continent)<span class="sc">|&gt;</span></span>
+<span id="cb13-10"><a></a>  <span class="fu">gt</span>()<span class="sc">|&gt;</span></span>
+<span id="cb13-11"><a></a>  <span class="fu">tab_header</span>(</span>
+<span id="cb13-12"><a></a>    <span class="at">title =</span> <span class="st">"Estadísticas Venezuela"</span>,</span>
+<span id="cb13-13"><a></a>    <span class="at">subtitle =</span> <span class="fu">paste</span>(<span class="st">'Años: '</span>, min_periodo,<span class="st">'al'</span>,max_periodo )</span>
+<span id="cb13-14"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb13-15"><a></a>  <span class="fu">fmt_currency</span>(<span class="at">columns =</span> gdpPercap) <span class="sc">|&gt;</span></span>
+<span id="cb13-16"><a></a>  <span class="fu">fmt_number</span>(<span class="at">columns =</span> lifeExp, <span class="at">decimals =</span> <span class="dv">2</span>, <span class="at">suffixing =</span> <span class="cn">TRUE</span>) <span class="sc">|&gt;</span></span>
+<span id="cb13-17"><a></a>  <span class="fu">fmt_number</span>(<span class="at">columns =</span> pop,</span>
+<span id="cb13-18"><a></a>             <span class="at">sep_mark =</span> <span class="st">"."</span> ,</span>
+<span id="cb13-19"><a></a>             <span class="at">dec_mark =</span> <span class="st">","</span>,</span>
+<span id="cb13-20"><a></a>             <span class="at">decimals =</span> <span class="dv">0</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div></div>
+<p>más info en <a href="https://gt.rstudio.com" class="uri">https://gt.rstudio.com</a></p>
+</section>
+<section id="tablas-dt" class="slide level2">
+<h2>Tablas DT</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="datatables html-widget html-fill-item" id="htmlwidget-2d4d8877d8a30467308b" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-2d4d8877d8a30467308b">{"x":{"filter":"none","vertical":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69","70","71","72","73","74","75","76","77","78","79","80","81","82","83","84","85","86","87","88","89","90","91","92","93","94","95","96","97","98","99","100","101","102","103","104","105","106","107","108","109","110","111","112","113","114","115","116","117","118","119","120","121","122","123","124","125","126","127","128","129","130","131","132","133","134","135","136","137","138","139","140","141","142","143","144","145","146","147","148","149","150","151","152","153","154","155","156","157","158","159","160","161","162","163","164","165","166","167","168","169","170","171","172","173","174","175","176","177","178","179","180","181","182","183","184","185","186","187","188","189","190","191","192","193","194","195","196","197","198","199","200","201","202","203","204","205","206","207","208","209","210","211","212","213","214","215","216","217","218","219","220","221","222","223","224","225","226","227","228","229","230","231","232","233","234","235","236","237","238","239","240","241","242","243","244","245","246","247","248","249","250","251","252","253","254","255","256","257","258","259","260","261","262","263","264","265","266","267","268","269","270","271","272","273","274","275","276","277","278","279","280","281","282","283","284","285","286","287","288","289","290","291","292","293","294","295","296","297","298","299","300"],["Argentina","Argentina","Argentina","Argentina","Argentina","Argentina","Argentina","Argentina","Argentina","Argentina","Argentina","Argentina","Bolivia","Bolivia","Bolivia","Bolivia","Bolivia","Bolivia","Bolivia","Bolivia","Bolivia","Bolivia","Bolivia","Bolivia","Brazil","Brazil","Brazil","Brazil","Brazil","Brazil","Brazil","Brazil","Brazil","Brazil","Brazil","Brazil","Canada","Canada","Canada","Canada","Canada","Canada","Canada","Canada","Canada","Canada","Canada","Canada","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Dominican Republic","Dominican Republic","Dominican Republic","Dominican Republic","Dominican Republic","Dominican Republic","Dominican Republic","Dominican Republic","Dominican Republic","Dominican Republic","Dominican Republic","Dominican Republic","Ecuador","Ecuador","Ecuador","Ecuador","Ecuador","Ecuador","Ecuador","Ecuador","Ecuador","Ecuador","Ecuador","Ecuador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Haiti","Haiti","Haiti","Haiti","Haiti","Haiti","Haiti","Haiti","Haiti","Haiti","Haiti","Haiti","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Mexico","Mexico","Mexico","Mexico","Mexico","Mexico","Mexico","Mexico","Mexico","Mexico","Mexico","Mexico","Nicaragua","Nicaragua","Nicaragua","Nicaragua","Nicaragua","Nicaragua","Nicaragua","Nicaragua","Nicaragua","Nicaragua","Nicaragua","Nicaragua","Panama","Panama","Panama","Panama","Panama","Panama","Panama","Panama","Panama","Panama","Panama","Panama","Paraguay","Paraguay","Paraguay","Paraguay","Paraguay","Paraguay","Paraguay","Paraguay","Paraguay","Paraguay","Paraguay","Paraguay","Peru","Peru","Peru","Peru","Peru","Peru","Peru","Peru","Peru","Peru","Peru","Peru","Puerto Rico","Puerto Rico","Puerto Rico","Puerto Rico","Puerto Rico","Puerto Rico","Puerto Rico","Puerto Rico","Puerto Rico","Puerto Rico","Puerto Rico","Puerto Rico","Trinidad and Tobago","Trinidad and Tobago","Trinidad and Tobago","Trinidad and Tobago","Trinidad and Tobago","Trinidad and Tobago","Trinidad and Tobago","Trinidad and Tobago","Trinidad and Tobago","Trinidad and Tobago","Trinidad and Tobago","Trinidad and Tobago","United States","United States","United States","United States","United States","United States","United States","United States","United States","United States","United States","United States","Uruguay","Uruguay","Uruguay","Uruguay","Uruguay","Uruguay","Uruguay","Uruguay","Uruguay","Uruguay","Uruguay","Uruguay","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela"],["Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas"],[1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007],[62.485,64.399,65.142,65.634,67.065,68.48099999999999,69.94199999999999,70.774,71.86799999999999,73.27500000000001,74.34,75.31999999999999,40.414,41.89,43.428,45.032,46.714,50.023,53.859,57.251,59.957,62.05,63.883,65.554,50.917,53.285,55.665,57.632,59.504,61.489,63.336,65.205,67.057,69.38800000000001,71.006,72.39,68.75,69.95999999999999,71.3,72.13,72.88,74.20999999999999,75.76000000000001,76.86,77.95,78.61,79.77,80.65300000000001,54.745,56.074,57.924,60.523,63.441,67.05200000000001,70.565,72.492,74.126,75.816,77.86,78.553,50.643,55.118,57.863,59.963,61.623,63.837,66.65300000000001,67.768,68.42100000000001,70.313,71.682,72.889,57.206,60.026,62.842,65.42400000000001,67.849,70.75,73.45,74.752,75.71299999999999,77.26000000000001,78.123,78.782,59.421,62.325,65.246,68.29000000000001,70.723,72.649,73.717,74.17400000000001,74.414,76.151,77.158,78.273,45.928,49.828,53.459,56.751,59.631,61.788,63.727,66.04600000000001,68.45699999999999,69.95699999999999,70.84699999999999,72.235,48.357,51.356,54.64,56.678,58.796,61.31,64.342,67.23099999999999,69.613,72.312,74.173,74.994,45.262,48.57,52.307,55.855,58.207,56.696,56.604,63.154,66.798,69.535,70.73399999999999,71.878,42.023,44.142,46.954,50.016,53.738,56.029,58.137,60.782,63.373,66.322,68.97799999999999,70.259,37.579,40.696,43.59,46.243,48.042,49.923,51.461,53.636,55.089,56.671,58.137,60.916,41.912,44.665,48.041,50.924,53.884,57.402,60.909,64.492,66.399,67.65900000000001,68.565,70.19799999999999,58.53,62.61,65.61,67.51000000000001,69,70.11,71.20999999999999,71.77,71.76600000000001,72.262,72.047,72.56699999999999,50.789,55.19,58.299,60.11,62.361,65.032,67.405,69.498,71.455,73.67,74.902,76.19499999999999,42.314,45.432,48.632,51.884,55.151,57.47,59.298,62.008,65.843,68.426,70.836,72.899,55.191,59.201,61.817,64.071,66.21599999999999,68.681,70.47199999999999,71.523,72.462,73.738,74.712,75.53700000000001,62.649,63.196,64.361,64.95099999999999,65.815,66.35299999999999,66.874,67.378,68.22499999999999,69.40000000000001,70.755,71.752,43.902,46.263,49.096,51.445,55.448,58.447,61.406,64.134,66.458,68.386,69.90600000000001,71.42100000000001,64.28,68.54000000000001,69.62,71.09999999999999,72.16,73.44,73.75,74.63,73.911,74.917,77.77800000000001,78.746,59.1,61.8,64.90000000000001,65.40000000000001,65.90000000000001,68.3,68.83199999999999,69.58199999999999,69.86199999999999,69.465,68.976,69.819,68.44,69.48999999999999,70.20999999999999,70.76000000000001,71.34,73.38,74.65000000000001,75.02,76.09,76.81,77.31,78.242,66.071,67.044,68.253,68.468,68.673,69.48099999999999,70.80500000000001,71.91800000000001,72.752,74.223,75.307,76.384,55.088,57.907,60.77,63.479,65.712,67.456,68.557,70.19,71.15000000000001,72.146,72.76600000000001,73.747],[17876956,19610538,21283783,22934225,24779799,26983828,29341374,31620918,33958947,36203463,38331121,40301927,2883315,3211738,3593918,4040665,4565872,5079716,5642224,6156369,6893451,7693188,8445134,9119152,56602560,65551171,76039390,88049823,100840058,114313951,128962939,142938076,155975974,168546719,179914212,190010647,14785584,17010154,18985849,20819767,22284500,23796400,25201900,26549700,28523502,30305843,31902268,33390141,6377619,7048426,7961258,8858908,9717524,10599793,11487112,12463354,13572994,14599929,15497046,16284741,12350771,14485993,17009885,19764027,22542890,25094412,27764644,30964245,34202721,37657830,41008227,44227550,926317,1112300,1345187,1588717,1834796,2108457,2424367,2799811,3173216,3518107,3834934,4133884,6007797,6640752,7254373,8139332,8831348,9537988,9789224,10239839,10723260,10983007,11226999,11416987,2491346,2923186,3453434,4049146,4671329,5302800,5968349,6655297,7351181,7992357,8650322,9319622,3548753,4058385,4681707,5432424,6298651,7278866,8365850,9545158,10748394,11911819,12921234,13755680,2042865,2355805,2747687,3232927,3790903,4282586,4474873,4842194,5274649,5783439,6353681,6939688,3146381,3640876,4208858,4690773,5149581,5703430,6395630,7326406,8486949,9803875,11178650,12572928,3201488,3507701,3880130,4318137,4698301,4908554,5198399,5756203,6326682,6913545,7607651,8502814,1517453,1770390,2090162,2500689,2965146,3055235,3669448,4372203,5077347,5867957,6677328,7483763,1426095,1535090,1665128,1861096,1997616,2156814,2298309,2326606,2378618,2531311,2664659,2780132,30144317,35015548,41121485,47995559,55984294,63759976,71640904,80122492,88111030,95895146,102479927,108700891,1165790,1358828,1590597,1865490,2182908,2554598,2979423,3344353,4017939,4609572,5146848,5675356,940080,1063506,1215725,1405486,1616384,1839782,2036305,2253639,2484997,2734531,2990875,3242173,1555876,1770902,2009813,2287985,2614104,2984494,3366439,3886512,4483945,5154123,5884491,6667147,8025700,9146100,10516500,12132200,13954700,15990099,18125129,20195924,22430449,24748122,26769436,28674757,2227000,2260000,2448046,2648961,2847132,3080828,3279001,3444468,3585176,3759430,3859606,3942491,662850,764900,887498,960155,975199,1039009,1116479,1191336,1183669,1138101,1101832,1056608,157553000,171984000,186538000,198712000,209896000,220239000,232187835,242803533,256894189,272911760,287675526,301139947,2252965,2424959,2598466,2748579,2829526,2873520,2953997,3045153,3149262,3262838,3363085,3447496,5439568,6702668,8143375,9709552,11515649,13503563,15620766,17910182,20265563,22374398,24287670,26084662],[5911.315053,6856.856212,7133.166023,8052.953021,9443.038526,10079.02674,8997.897412,9139.671388999999,9308.41871,10967.28195,8797.640716,12779.37964,2677.326347,2127.686326,2180.972546,2586.886053,2980.331339,3548.097832,3156.510452,2753.69149,2961.699694,3326.143191,3413.26269,3822.137084,2108.944355,2487.365989,3336.585802,3429.864357,4985.711467,6660.118654,7030.835878,7807.095818,6950.283021,7957.980824,8131.212843,9065.800825,11367.16112,12489.95006,13462.48555,16076.58803,18970.57086,22090.88306,22898.79214,26626.51503,26342.88426,28954.92589,33328.96507,36319.23501,3939.978789,4315.622723,4519.094331,5106.654313,5494.024437,4756.763836,5095.665738,5547.063754,7596.125964,10118.05318,10778.78385,13171.63885,2144.115096,2323.805581,2492.351109,2678.729839,3264.660041,3815.80787,4397.575659,4903.2191,5444.648617,6117.361746,5755.259962,7006.580419,2627.009471,2990.010802,3460.937025,4161.727834,5118.146939,5926.876967,5262.734751,5629.915318,6160.416317,6677.045314,7723.447195,9645.06142,5586.53878,6092.174359,5180.75591,5690.268015,5305.445256,6380.494966,7316.918107,7532.924763,5592.843963,5431.990415,6340.646683,8948.102923,1397.717137,1544.402995,1662.137359,1653.723003,2189.874499,2681.9889,2861.092386,2899.842175,3044.214214,3614.101285,4563.808154,6025.374752,3522.110717,3780.546651,4086.114078,4579.074215,5280.99471,6679.62326,7213.791267,6481.776993,7103.702595,7429.455877,5773.044512,6873.262326,3048.3029,3421.523218,3776.803627,4358.595393,4520.246008,5138.922374,4098.344175,4140.442097,4444.2317,5154.825496,5351.568666,5728.353514,2428.237769,2617.155967,2750.364446,3242.531147,4031.408271,4879.992748,4820.49479,4246.485974,4439.45084,4684.313807,4858.347495,5186.050003,1840.366939,1726.887882,1796.589032,1452.057666,1654.456946,1874.298931,2011.159549,1823.015995,1456.309517,1341.726931,1270.364932,1201.637154,2194.926204,2220.487682,2291.156835,2538.269358,2529.842345,3203.208066,3121.760794,3023.096699,3081.694603,3160.454906,3099.72866,3548.330846,2898.530881,4756.525781,5246.107524,6124.703451,7433.889293,6650.195573,6068.05135,6351.237495,7404.923685,7121.924704,6994.774861,7320.880262,3478.125529,4131.546641,4581.609385,5754.733883,6809.40669,7674.929108,9611.147541,8688.156003,9472.384295,9767.29753,10742.44053,11977.57496,3112.363948,3457.415947,3634.364406,4643.393534,4688.593267,5486.371089,3470.338156,2955.984375,2170.151724,2253.023004,2474.548819,2749.320965,2480.380334,2961.800905,3536.540301,4421.009084,5364.249663,5351.912144,7009.601598,7034.779161,6618.74305,7113.692252,7356.031934,9809.185636,1952.308701,2046.154706,2148.027146,2299.376311,2523.337977,3248.373311,4258.503604,3998.875695,4196.411078,4247.400261,3783.674243,4172.838464,3758.523437,4245.256698,4957.037982,5788.09333,5937.827283,6281.290855,6434.501797,6360.943444,4446.380924,5838.347657,5909.020073,7408.905561,3081.959785,3907.156189,5108.34463,6929.277714,9123.041741999999,9770.524921,10330.98915,12281.34191,14641.58711,16999.4333,18855.60618,19328.70901,3023.271928,4100.3934,4997.523971,5621.368472,6619.551419,7899.554209,9119.528607,7388.597823,7370.990932,8792.573125999999,11460.60023,18008.50924,13990.48208,14847.12712,16173.14586,19530.36557,21806.03594,24072.63213,25009.55914,29884.35041,32003.93224,35767.43303,39097.09955,42951.65309,5716.766744,6150.772969,5603.357717,5444.61962,5703.408898,6504.339663,6920.223051,7452.398969,8137.004775,9230.240707999999,7727.002004,10611.46299,7689.799761,9802.466526,8422.974165,9541.474188,10505.25966,13143.95095,11152.41011,9883.584648,10733.92631,10165.49518,8605.047831,11415.80569]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>country<\/th>\n      <th>continent<\/th>\n      <th>year<\/th>\n      <th>lifeExp<\/th>\n      <th>pop<\/th>\n      <th>gdpPercap<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"columnDefs":[{"className":"dt-right","targets":[3,4,5,6]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"country","targets":1},{"name":"continent","targets":2},{"name":"year","targets":3},{"name":"lifeExp","targets":4},{"name":"pop","targets":5},{"name":"gdpPercap","targets":6}],"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">library</span>(DT)</span>
+<span id="cb14-2"><a></a>gap_america <span class="ot">&lt;-</span> gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb14-3"><a></a>  <span class="fu">filter</span>(continent<span class="sc">==</span><span class="st">'Americas'</span>)</span>
+<span id="cb14-4"><a></a></span>
+<span id="cb14-5"><a></a><span class="fu">datatable</span>(gap_america)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div></div>
+<p>más info en <a href="https://rstudio.github.io/DT/" class="uri">https://rstudio.github.io/DT/</a></p>
+</section>
+<section id="tablas-dt--bonus" class="slide level2">
+<h2>Tablas DT- Bonus</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="datatables html-widget html-fill-item" id="htmlwidget-518253f4301b93e03d81" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-518253f4301b93e03d81">{"x":{"filter":"none","vertical":false,"extensions":["Buttons"],"data":[["Argentina","Argentina","Argentina","Argentina","Argentina","Argentina","Argentina","Argentina","Argentina","Argentina","Argentina","Argentina","Bolivia","Bolivia","Bolivia","Bolivia","Bolivia","Bolivia","Bolivia","Bolivia","Bolivia","Bolivia","Bolivia","Bolivia","Brazil","Brazil","Brazil","Brazil","Brazil","Brazil","Brazil","Brazil","Brazil","Brazil","Brazil","Brazil","Canada","Canada","Canada","Canada","Canada","Canada","Canada","Canada","Canada","Canada","Canada","Canada","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Chile","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Costa Rica","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Cuba","Dominican Republic","Dominican Republic","Dominican Republic","Dominican Republic","Dominican Republic","Dominican Republic","Dominican Republic","Dominican Republic","Dominican Republic","Dominican Republic","Dominican Republic","Dominican Republic","Ecuador","Ecuador","Ecuador","Ecuador","Ecuador","Ecuador","Ecuador","Ecuador","Ecuador","Ecuador","Ecuador","Ecuador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","El Salvador","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Guatemala","Haiti","Haiti","Haiti","Haiti","Haiti","Haiti","Haiti","Haiti","Haiti","Haiti","Haiti","Haiti","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Honduras","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Jamaica","Mexico","Mexico","Mexico","Mexico","Mexico","Mexico","Mexico","Mexico","Mexico","Mexico","Mexico","Mexico","Nicaragua","Nicaragua","Nicaragua","Nicaragua","Nicaragua","Nicaragua","Nicaragua","Nicaragua","Nicaragua","Nicaragua","Nicaragua","Nicaragua","Panama","Panama","Panama","Panama","Panama","Panama","Panama","Panama","Panama","Panama","Panama","Panama","Paraguay","Paraguay","Paraguay","Paraguay","Paraguay","Paraguay","Paraguay","Paraguay","Paraguay","Paraguay","Paraguay","Paraguay","Peru","Peru","Peru","Peru","Peru","Peru","Peru","Peru","Peru","Peru","Peru","Peru","Puerto Rico","Puerto Rico","Puerto Rico","Puerto Rico","Puerto Rico","Puerto Rico","Puerto Rico","Puerto Rico","Puerto Rico","Puerto Rico","Puerto Rico","Puerto Rico","Trinidad and Tobago","Trinidad and Tobago","Trinidad and Tobago","Trinidad and Tobago","Trinidad and Tobago","Trinidad and Tobago","Trinidad and Tobago","Trinidad and Tobago","Trinidad and Tobago","Trinidad and Tobago","Trinidad and Tobago","Trinidad and Tobago","United States","United States","United States","United States","United States","United States","United States","United States","United States","United States","United States","United States","Uruguay","Uruguay","Uruguay","Uruguay","Uruguay","Uruguay","Uruguay","Uruguay","Uruguay","Uruguay","Uruguay","Uruguay","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela"],["Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas","Americas"],[1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007],[62.485,64.399,65.142,65.634,67.065,68.48099999999999,69.94199999999999,70.774,71.86799999999999,73.27500000000001,74.34,75.31999999999999,40.414,41.89,43.428,45.032,46.714,50.023,53.859,57.251,59.957,62.05,63.883,65.554,50.917,53.285,55.665,57.632,59.504,61.489,63.336,65.205,67.057,69.38800000000001,71.006,72.39,68.75,69.95999999999999,71.3,72.13,72.88,74.20999999999999,75.76000000000001,76.86,77.95,78.61,79.77,80.65300000000001,54.745,56.074,57.924,60.523,63.441,67.05200000000001,70.565,72.492,74.126,75.816,77.86,78.553,50.643,55.118,57.863,59.963,61.623,63.837,66.65300000000001,67.768,68.42100000000001,70.313,71.682,72.889,57.206,60.026,62.842,65.42400000000001,67.849,70.75,73.45,74.752,75.71299999999999,77.26000000000001,78.123,78.782,59.421,62.325,65.246,68.29000000000001,70.723,72.649,73.717,74.17400000000001,74.414,76.151,77.158,78.273,45.928,49.828,53.459,56.751,59.631,61.788,63.727,66.04600000000001,68.45699999999999,69.95699999999999,70.84699999999999,72.235,48.357,51.356,54.64,56.678,58.796,61.31,64.342,67.23099999999999,69.613,72.312,74.173,74.994,45.262,48.57,52.307,55.855,58.207,56.696,56.604,63.154,66.798,69.535,70.73399999999999,71.878,42.023,44.142,46.954,50.016,53.738,56.029,58.137,60.782,63.373,66.322,68.97799999999999,70.259,37.579,40.696,43.59,46.243,48.042,49.923,51.461,53.636,55.089,56.671,58.137,60.916,41.912,44.665,48.041,50.924,53.884,57.402,60.909,64.492,66.399,67.65900000000001,68.565,70.19799999999999,58.53,62.61,65.61,67.51000000000001,69,70.11,71.20999999999999,71.77,71.76600000000001,72.262,72.047,72.56699999999999,50.789,55.19,58.299,60.11,62.361,65.032,67.405,69.498,71.455,73.67,74.902,76.19499999999999,42.314,45.432,48.632,51.884,55.151,57.47,59.298,62.008,65.843,68.426,70.836,72.899,55.191,59.201,61.817,64.071,66.21599999999999,68.681,70.47199999999999,71.523,72.462,73.738,74.712,75.53700000000001,62.649,63.196,64.361,64.95099999999999,65.815,66.35299999999999,66.874,67.378,68.22499999999999,69.40000000000001,70.755,71.752,43.902,46.263,49.096,51.445,55.448,58.447,61.406,64.134,66.458,68.386,69.90600000000001,71.42100000000001,64.28,68.54000000000001,69.62,71.09999999999999,72.16,73.44,73.75,74.63,73.911,74.917,77.77800000000001,78.746,59.1,61.8,64.90000000000001,65.40000000000001,65.90000000000001,68.3,68.83199999999999,69.58199999999999,69.86199999999999,69.465,68.976,69.819,68.44,69.48999999999999,70.20999999999999,70.76000000000001,71.34,73.38,74.65000000000001,75.02,76.09,76.81,77.31,78.242,66.071,67.044,68.253,68.468,68.673,69.48099999999999,70.80500000000001,71.91800000000001,72.752,74.223,75.307,76.384,55.088,57.907,60.77,63.479,65.712,67.456,68.557,70.19,71.15000000000001,72.146,72.76600000000001,73.747],[17876956,19610538,21283783,22934225,24779799,26983828,29341374,31620918,33958947,36203463,38331121,40301927,2883315,3211738,3593918,4040665,4565872,5079716,5642224,6156369,6893451,7693188,8445134,9119152,56602560,65551171,76039390,88049823,100840058,114313951,128962939,142938076,155975974,168546719,179914212,190010647,14785584,17010154,18985849,20819767,22284500,23796400,25201900,26549700,28523502,30305843,31902268,33390141,6377619,7048426,7961258,8858908,9717524,10599793,11487112,12463354,13572994,14599929,15497046,16284741,12350771,14485993,17009885,19764027,22542890,25094412,27764644,30964245,34202721,37657830,41008227,44227550,926317,1112300,1345187,1588717,1834796,2108457,2424367,2799811,3173216,3518107,3834934,4133884,6007797,6640752,7254373,8139332,8831348,9537988,9789224,10239839,10723260,10983007,11226999,11416987,2491346,2923186,3453434,4049146,4671329,5302800,5968349,6655297,7351181,7992357,8650322,9319622,3548753,4058385,4681707,5432424,6298651,7278866,8365850,9545158,10748394,11911819,12921234,13755680,2042865,2355805,2747687,3232927,3790903,4282586,4474873,4842194,5274649,5783439,6353681,6939688,3146381,3640876,4208858,4690773,5149581,5703430,6395630,7326406,8486949,9803875,11178650,12572928,3201488,3507701,3880130,4318137,4698301,4908554,5198399,5756203,6326682,6913545,7607651,8502814,1517453,1770390,2090162,2500689,2965146,3055235,3669448,4372203,5077347,5867957,6677328,7483763,1426095,1535090,1665128,1861096,1997616,2156814,2298309,2326606,2378618,2531311,2664659,2780132,30144317,35015548,41121485,47995559,55984294,63759976,71640904,80122492,88111030,95895146,102479927,108700891,1165790,1358828,1590597,1865490,2182908,2554598,2979423,3344353,4017939,4609572,5146848,5675356,940080,1063506,1215725,1405486,1616384,1839782,2036305,2253639,2484997,2734531,2990875,3242173,1555876,1770902,2009813,2287985,2614104,2984494,3366439,3886512,4483945,5154123,5884491,6667147,8025700,9146100,10516500,12132200,13954700,15990099,18125129,20195924,22430449,24748122,26769436,28674757,2227000,2260000,2448046,2648961,2847132,3080828,3279001,3444468,3585176,3759430,3859606,3942491,662850,764900,887498,960155,975199,1039009,1116479,1191336,1183669,1138101,1101832,1056608,157553000,171984000,186538000,198712000,209896000,220239000,232187835,242803533,256894189,272911760,287675526,301139947,2252965,2424959,2598466,2748579,2829526,2873520,2953997,3045153,3149262,3262838,3363085,3447496,5439568,6702668,8143375,9709552,11515649,13503563,15620766,17910182,20265563,22374398,24287670,26084662],[5911.315053,6856.856212,7133.166023,8052.953021,9443.038526,10079.02674,8997.897412,9139.671388999999,9308.41871,10967.28195,8797.640716,12779.37964,2677.326347,2127.686326,2180.972546,2586.886053,2980.331339,3548.097832,3156.510452,2753.69149,2961.699694,3326.143191,3413.26269,3822.137084,2108.944355,2487.365989,3336.585802,3429.864357,4985.711467,6660.118654,7030.835878,7807.095818,6950.283021,7957.980824,8131.212843,9065.800825,11367.16112,12489.95006,13462.48555,16076.58803,18970.57086,22090.88306,22898.79214,26626.51503,26342.88426,28954.92589,33328.96507,36319.23501,3939.978789,4315.622723,4519.094331,5106.654313,5494.024437,4756.763836,5095.665738,5547.063754,7596.125964,10118.05318,10778.78385,13171.63885,2144.115096,2323.805581,2492.351109,2678.729839,3264.660041,3815.80787,4397.575659,4903.2191,5444.648617,6117.361746,5755.259962,7006.580419,2627.009471,2990.010802,3460.937025,4161.727834,5118.146939,5926.876967,5262.734751,5629.915318,6160.416317,6677.045314,7723.447195,9645.06142,5586.53878,6092.174359,5180.75591,5690.268015,5305.445256,6380.494966,7316.918107,7532.924763,5592.843963,5431.990415,6340.646683,8948.102923,1397.717137,1544.402995,1662.137359,1653.723003,2189.874499,2681.9889,2861.092386,2899.842175,3044.214214,3614.101285,4563.808154,6025.374752,3522.110717,3780.546651,4086.114078,4579.074215,5280.99471,6679.62326,7213.791267,6481.776993,7103.702595,7429.455877,5773.044512,6873.262326,3048.3029,3421.523218,3776.803627,4358.595393,4520.246008,5138.922374,4098.344175,4140.442097,4444.2317,5154.825496,5351.568666,5728.353514,2428.237769,2617.155967,2750.364446,3242.531147,4031.408271,4879.992748,4820.49479,4246.485974,4439.45084,4684.313807,4858.347495,5186.050003,1840.366939,1726.887882,1796.589032,1452.057666,1654.456946,1874.298931,2011.159549,1823.015995,1456.309517,1341.726931,1270.364932,1201.637154,2194.926204,2220.487682,2291.156835,2538.269358,2529.842345,3203.208066,3121.760794,3023.096699,3081.694603,3160.454906,3099.72866,3548.330846,2898.530881,4756.525781,5246.107524,6124.703451,7433.889293,6650.195573,6068.05135,6351.237495,7404.923685,7121.924704,6994.774861,7320.880262,3478.125529,4131.546641,4581.609385,5754.733883,6809.40669,7674.929108,9611.147541,8688.156003,9472.384295,9767.29753,10742.44053,11977.57496,3112.363948,3457.415947,3634.364406,4643.393534,4688.593267,5486.371089,3470.338156,2955.984375,2170.151724,2253.023004,2474.548819,2749.320965,2480.380334,2961.800905,3536.540301,4421.009084,5364.249663,5351.912144,7009.601598,7034.779161,6618.74305,7113.692252,7356.031934,9809.185636,1952.308701,2046.154706,2148.027146,2299.376311,2523.337977,3248.373311,4258.503604,3998.875695,4196.411078,4247.400261,3783.674243,4172.838464,3758.523437,4245.256698,4957.037982,5788.09333,5937.827283,6281.290855,6434.501797,6360.943444,4446.380924,5838.347657,5909.020073,7408.905561,3081.959785,3907.156189,5108.34463,6929.277714,9123.041741999999,9770.524921,10330.98915,12281.34191,14641.58711,16999.4333,18855.60618,19328.70901,3023.271928,4100.3934,4997.523971,5621.368472,6619.551419,7899.554209,9119.528607,7388.597823,7370.990932,8792.573125999999,11460.60023,18008.50924,13990.48208,14847.12712,16173.14586,19530.36557,21806.03594,24072.63213,25009.55914,29884.35041,32003.93224,35767.43303,39097.09955,42951.65309,5716.766744,6150.772969,5603.357717,5444.61962,5703.408898,6504.339663,6920.223051,7452.398969,8137.004775,9230.240707999999,7727.002004,10611.46299,7689.799761,9802.466526,8422.974165,9541.474188,10505.25966,13143.95095,11152.41011,9883.584648,10733.92631,10165.49518,8605.047831,11415.80569]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>country<\/th>\n      <th>continent<\/th>\n      <th>year<\/th>\n      <th>lifeExp<\/th>\n      <th>pop<\/th>\n      <th>gdpPercap<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"Bfrtip","buttons":[{"extend":"collection","buttons":["csv","excel","pdf"],"text":"Descargar"}],"lengthChange":false,"language":{"url":"//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json"},"pageLength":5,"initComplete":"function(settings, json) {\n$(this.api().table().header()).css({'background-color': '#224eb2','color': '#fff'});\n}","drawCallback":"function(settings) {\n  var table = $('#DataTables_Table_0').DataTable();\n  table.cells().nodes().to$().css('border-right', '1px solid black');\n}","Filter":0,"columnDefs":[{"className":"dt-right","targets":[2,3,4,5]},{"name":"country","targets":0},{"name":"continent","targets":1},{"name":"year","targets":2},{"name":"lifeExp","targets":3},{"name":"pop","targets":4},{"name":"gdpPercap","targets":5}],"order":[],"autoWidth":false,"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\n}"}},"evals":["options.initComplete","options.drawCallback","options.rowCallback"],"jsHooks":[]}</script>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">library</span>(DT)</span>
+<span id="cb15-2"><a></a>gap_america <span class="ot">&lt;-</span> gapminder<span class="sc">%&gt;%</span></span>
+<span id="cb15-3"><a></a>  <span class="fu">filter</span>(continent<span class="sc">==</span><span class="st">'Americas'</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb15-4"><a></a>  <span class="fu">select</span>(<span class="sc">-</span>continent)</span>
+<span id="cb15-5"><a></a></span>
+<span id="cb15-6"><a></a><span class="fu">datatable</span>( gap_america,</span>
+<span id="cb15-7"><a></a>           <span class="at">rownames=</span> <span class="cn">FALSE</span>,</span>
+<span id="cb15-8"><a></a>           <span class="at">extensions =</span> <span class="st">'Buttons'</span>,</span>
+<span id="cb15-9"><a></a>           <span class="at">options =</span> <span class="fu">list</span>(<span class="at">dom =</span> <span class="st">'Bfrtip'</span>,</span>
+<span id="cb15-10"><a></a>                          <span class="at">buttons =</span> <span class="fu">list</span>( <span class="fu">list</span>(</span>
+<span id="cb15-11"><a></a>                            <span class="at">extend =</span> <span class="st">'collection'</span>,</span>
+<span id="cb15-12"><a></a>                            <span class="at">buttons =</span> <span class="fu">c</span>(<span class="st">'csv'</span>, <span class="st">'excel'</span>, <span class="st">'pdf'</span>),</span>
+<span id="cb15-13"><a></a>                            <span class="at">text =</span> <span class="st">'Descargar'</span>)),</span>
+<span id="cb15-14"><a></a>                          <span class="at">lengthChange =</span> <span class="cn">FALSE</span>,</span>
+<span id="cb15-15"><a></a>                          <span class="co"># dom = 'p',</span></span>
+<span id="cb15-16"><a></a>                          <span class="at">language =</span> <span class="fu">list</span>(<span class="at">url =</span> <span class="st">'//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json'</span>),</span>
+<span id="cb15-17"><a></a>                          <span class="at">pageLength =</span> <span class="dv">5</span>,</span>
+<span id="cb15-18"><a></a>                          <span class="co"># autoWidth = TRUE,</span></span>
+<span id="cb15-19"><a></a>                          <span class="at">initComplete =</span> <span class="fu">JS</span>(</span>
+<span id="cb15-20"><a></a>                            <span class="st">"function(settings, json) {"</span>,</span>
+<span id="cb15-21"><a></a>                            <span class="st">"$(this.api().table().header()).css({'background-color': '#224eb2','color': '#fff'});"</span>,</span>
+<span id="cb15-22"><a></a>                            <span class="co"># "  table.cells().nodes().to$().css('border-right', '1px solid black');",</span></span>
+<span id="cb15-23"><a></a>                            <span class="st">"}"</span>),</span>
+<span id="cb15-24"><a></a>                          <span class="at">Filter=</span><span class="dv">0</span>),</span>
+<span id="cb15-25"><a></a>           <span class="at">escape=</span><span class="cn">FALSE</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb15-26"><a></a>  <span class="fu">formatStyle</span>(<span class="at">columns =</span> <span class="fu">colnames</span>(.), <span class="at">fontSize =</span> <span class="st">'50%'</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div></div>
+</section>
+<section id="tablas-reactable" class="slide level2">
+<h2>Tablas reactable</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="reactable html-widget html-fill-item" id="htmlwidget-24352acd890aa886b0a7" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-24352acd890aa886b0a7">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"country":["Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela"],"year":[1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007],"lifeExp":[50.643,55.118,57.863,59.963,61.623,63.837,66.653,67.768,68.421,70.313,71.682,72.889,55.088,57.907,60.77,63.479,65.712,67.456,68.557,70.19,71.15,72.146,72.766,73.747],"gdpPercap":[2144.12,2323.81,2492.35,2678.73,3264.66,3815.81,4397.58,4903.22,5444.65,6117.36,5755.26,7006.58,7689.8,9802.47,8422.97,9541.47,10505.26,13143.95,11152.41,9883.58,10733.93,10165.5,8605.05,11415.81]},"columns":[{"id":"country","name":"country","type":"factor"},{"id":"year","name":"year","type":"numeric"},{"id":"lifeExp","name":"lifeExp","type":"numeric"},{"id":"gdpPercap","name":"gdpPercap","type":"numeric"}],"dataKey":"368447da9d388636cd39222945c5b92f"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>gap_colven_react <span class="ot">&lt;-</span> gap_colven<span class="sc">|&gt;</span></span>
+<span id="cb16-2"><a></a>  <span class="fu">select</span>(<span class="sc">-</span>continent,<span class="sc">-</span>pop)<span class="sc">|&gt;</span></span>
+<span id="cb16-3"><a></a>  <span class="fu">mutate</span>(<span class="at">gdpPercap=</span> <span class="fu">round</span>(gdpPercap,<span class="dv">2</span>))</span>
+<span id="cb16-4"><a></a></span>
+<span id="cb16-5"><a></a><span class="fu">reactable</span>(gap_colven_react)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div></div>
+<p>más info en <a href="https://glin.github.io/reactable/" class="uri">https://glin.github.io/reactable/</a></p>
+</section>
+<section id="tablas-reactable---bonus" class="slide level2">
+<h2>Tablas reactable - bonus</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div class="reactable html-widget html-fill-item" id="htmlwidget-6f08bf90e5ce142a99f8" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-6f08bf90e5ce142a99f8">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"country":["Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Colombia","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela","Venezuela"],"year":[1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007,1952,1957,1962,1967,1972,1977,1982,1987,1992,1997,2002,2007],"lifeExp":[50.643,55.118,57.863,59.963,61.623,63.837,66.653,67.768,68.421,70.313,71.682,72.889,55.088,57.907,60.77,63.479,65.712,67.456,68.557,70.19,71.15,72.146,72.766,73.747],"gdpPercap":[2144.12,2323.81,2492.35,2678.73,3264.66,3815.81,4397.58,4903.22,5444.65,6117.36,5755.26,7006.58,7689.8,9802.47,8422.97,9541.47,10505.26,13143.95,11152.41,9883.58,10733.93,10165.5,8605.05,11415.81]},"columns":[{"id":"country","name":"country","type":"factor"},{"id":"year","name":"year","type":"numeric"},{"id":"lifeExp","name":"lifeExp","type":"numeric"},{"id":"gdpPercap","name":"gdpPercap","type":"numeric","style":[{"background":"#C9EFF7"},{"background":"#C6ECF5"},{"background":"#C3E8F3"},{"background":"#C0E4F0"},{"background":"#B5D7E8"},{"background":"#ABCCE0"},{"background":"#A1BFD8"},{"background":"#98B4D1"},{"background":"#8EA9C9"},{"background":"#829AC0"},{"background":"#88A2C5"},{"background":"#7287B3"},{"background":"#6579AA"},{"background":"#3F4B8C"},{"background":"#5869A0"},{"background":"#445190"},{"background":"#323C82"},{"background":"#03045E"},{"background":"#272E79"},{"background":"#3D498B"},{"background":"#2E377F"},{"background":"#384387"},{"background":"#55659D"},{"background":"#222976"}]}],"dataKey":"81753d674947efb0286bcd69caed8f86"},"children":[]},"class":"reactR_markup"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>orange_pal <span class="ot">&lt;-</span> <span class="cf">function</span>(x) <span class="fu">rgb</span>(<span class="fu">colorRamp</span>(<span class="fu">c</span>(<span class="st">"#caf0f8"</span>, </span>
+<span id="cb17-2"><a></a>                                          <span class="st">"#03045e"</span>))(x), </span>
+<span id="cb17-3"><a></a>                              <span class="at">maxColorValue =</span> <span class="dv">255</span>)</span>
+<span id="cb17-4"><a></a></span>
+<span id="cb17-5"><a></a><span class="fu">reactable</span>(</span>
+<span id="cb17-6"><a></a>  gap_colven_react,</span>
+<span id="cb17-7"><a></a>  <span class="at">columns =</span> <span class="fu">list</span>(</span>
+<span id="cb17-8"><a></a>    <span class="at">gdpPercap =</span> <span class="fu">colDef</span>(<span class="at">style =</span> <span class="cf">function</span>(value) {</span>
+<span id="cb17-9"><a></a>      normalized <span class="ot">&lt;-</span> (value <span class="sc">-</span> <span class="fu">min</span>(gap_colven<span class="sc">$</span>gdpPercap)) <span class="sc">/</span> (<span class="fu">max</span>(gap_colven<span class="sc">$</span>gdpPercap) <span class="sc">-</span> <span class="fu">min</span>(gap_colven<span class="sc">$</span>gdpPercap))</span>
+<span id="cb17-10"><a></a>      color <span class="ot">&lt;-</span> <span class="fu">orange_pal</span>(normalized)</span>
+<span id="cb17-11"><a></a>      <span class="fu">list</span>(<span class="at">background =</span> color)</span>
+<span id="cb17-12"><a></a>    })</span>
+<span id="cb17-13"><a></a>  )</span>
+<span id="cb17-14"><a></a>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div></div>
+</section>
+<section id="ejercicio-en-clase" class="slide level2">
+<h2>Ejercicio en Clase</h2>
+<p>Realizar reporte con un gráfico, una tabla y valores calculados como variables</p>
+</section>
+<section id="otras-opciones" class="slide level2">
+<h2>Otras Opciones</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clase23/otras1.png" class="quarto-figure quarto-figure-center" width="300"></p>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/clase23/otras2.png" class="quarto-figure quarto-figure-center" width="300"></p>
+</figure>
+</div>
+</div></div>
+</section>
+<section>
+<section id="configuraciones-yml-interés" class="title-slide slide level1 center">
+<h1>Configuraciones YML interés</h1>
+
+</section>
+<section id="configuraciones-yml--self-contained" class="slide level2">
+<h2>Configuraciones YML- <code>self contained</code></h2>
+<p>El documento se puede compartir y no es necesario agregar las carpetas que lo acompañan</p>
+<p>Sin <code>embed-resources: true</code></p>
+<div class="quarto-figure quarto-figure-left">
+<figure>
+<p><img data-src="images/clase23/self_contained.png" class="quarto-figure quarto-figure-left" width="120" height="50"></p>
+</figure>
+</div>
+<p>Configuración necesaria:</p>
+<pre><code>format:
+  html:
+    embed-resources: true</code></pre>
+</section>
+<section id="configuraciones-yml---toc" class="slide level2">
+<h2>Configuraciones YML - <code>TOC</code></h2>
+<p>Para mostrar la tabla de contenido y la profundidad</p>
+<pre><code>format:
+  html:
+    toc: true
+    toc-location: left
+    number-sections: true
+    number-depth: 3</code></pre>
+<h4 id="ejemplo">Ejemplo</h4>
+
+<img data-src="images/clase23/toc.png" width="400" class="r-stretch"></section>
+<section id="configuraciones-yml---temas" class="slide level2">
+<h2>Configuraciones YML - Temas</h2>
+<p>Cambiar el estilo general del documento</p>
+<pre><code>format:
+  html:
+    theme: united</code></pre>
+<p>Ver temas disponibles en <a href="https://quarto.org/docs/output-formats/html-themes.html" class="uri">https://quarto.org/docs/output-formats/html-themes.html</a></p>
+<h4 id="ejemplo-1">Ejemplo</h4>
+
+<img data-src="images/clase23/tema.png" width="250" class="r-stretch"></section>
+<section id="wrappers" class="slide level2">
+<h2>Wrappers</h2>
+<p>son funciones o clases que envuelven o encapsulan la funcionalidad existente de otras bibliotecas, APIs o módulos. Su principal objetivo es simplificar el uso de estas funcionalidades complejas, proporcionando una interfaz más amigable y fácil de usar.</p>
+</section>
+<section id="características-principales-de-los-wrappers" class="slide level2">
+<h2><strong>Características Principales de los Wrappers:</strong></h2>
+<ol type="1">
+<li class="fragment"><p><strong>Abstracción</strong> : Ocultan la complejidad subyacente, permitiendo a los usuarios interactuar con las funciones básicas sin preocuparse por detalles internos.</p></li>
+<li class="fragment"><p><strong>Consistencia</strong> : Aseguran que el uso de diferentes APIs o bibliotecas sea uniforme y coherente.</p></li>
+<li class="fragment"><p><strong>Compatibilidad</strong> : Pueden adaptar interfaces incompatibles para que trabajen juntas.</p></li>
+</ol>
+<h3 id="ejemplos-en-r"><strong>Ejemplos en R:</strong></h3>
+<ul>
+<li class="fragment"><strong>Wrappers para APIs</strong> : Por ejemplo, <strong><code>httr</code></strong> es una biblioteca popular en R que proporciona funciones sencillas para realizar solicitudes HTTP a diferentes APIs.</li>
+</ul>
+</section>
+<section id="cheat-sheets-recursos" class="slide level2">
+<h2>Cheat Sheets + recursos</h2>
+<p><a href="https://rstudio.github.io/cheatsheets/quarto.pdf" class="uri">https://rstudio.github.io/cheatsheets/quarto.pdf</a></p>
+<p><a href="https://glin.github.io/reactable/articles/cookbook/cookbook.html" class="uri">https://glin.github.io/reactable/articles/cookbook/cookbook.html</a></p>
+<p><a href="https://rstudio.github.io/DT/options.html" class="uri">https://rstudio.github.io/DT/options.html</a></p>
+
+<div class="quarto-auto-generated-content">
+<p><img src="images/logo_curso.png" class="slide-logo"></p>
+<div class="footer footer-default">
+<p><a href="https://ucveconomiar4ds.netlify.app">🔗 ucveconomiar4ds</a></p>
+</div>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copiado");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copiado");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("https:\/\/ucveconomiar4ds\.netlify\.app");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

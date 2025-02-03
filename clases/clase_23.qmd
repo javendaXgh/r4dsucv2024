@@ -1,0 +1,619 @@
+---
+title: "Ciencia de Datos para Economistas"
+subtitle: "Clase 23- Reportes & Tablas"
+date: "3, february 2025"
+author: "MSc. José M. Avendaño"
+format:
+  revealjs:
+    incremental: true  
+---
+
+## Objetivo
+
+Generar reportes mediante el sistema de publicación Quarto. Adicionalmente, conocer diversas opciones para insertar tablas en los reportes.
+
+Más info en <https://quarto.org/docs/output-formats/html-basics.html>
+
+## Ciclo
+
+![](images/cd_ciclo_6.png)
+
+## Ejemplo Quarto
+
+::::: columns
+::: {.column width="50%"}
+![](images/clase23/est_gral1.png){width="400"}
+:::
+
+::: {.column width="50%"}
+![](images/clase23/est_gral2.png){width="400"}
+:::
+:::::
+
+## Configuración YML
+
+```         
+---
+title: "Quarto Documento demo"
+author: "Curso UCV R para Ciencia de Datos"
+lang: es
+date: Sys.Date()
+format:
+  html:
+    toc: true
+    css: styles.css
+    fig-width: 8
+    fig-height: 4
+    code-fold: true
+---
+```
+
+Prestar atención a los espacios e indentado
+
+## Básicos Markdown
+
+::::: columns
+::: {.column width="50%"}
+```         
+*itálica*, 
+**negrilla**, 
+***negrilla itálica***
+superscript^2^ / 
+subscript~2~
+`código`
+```
+:::
+
+::: {.column width="50%"}
+```         
+# Header 1
+## Header 2
+### Header 3
+#### Header 4
+##### Header 5
+###### Header 6
+```
+:::
+:::::
+
+## Editor Visual/Source
+
+::::: columns
+::: {.column width="50%"}
+![](images/clase23/editor_source.png){width="400"}
+:::
+
+::: {.column width="50%"}
+![](images/clase23/editor_visual.png){width="400"}
+:::
+:::::
+
+## Editor Visual- detalle
+
+![](images/clase23/edit_visual_detalle.png){fig-align="center" width="500"}
+
+## Tabsets
+
+:::::: columns
+::: {.column width="50%"}
+````         
+::: {.panel-tabset}
+## R
+
+``` {.r}
+fizz_buzz <- function(fbnums = 1:50) {
+  output <- dplyr::case_when(
+    fbnums %% 15 == 0 ~ "FizzBuzz",
+    fbnums %% 3 == 0 ~ "Fizz",
+    fbnums %% 5 == 0 ~ "Buzz",
+    TRUE ~ as.character(fbnums)
+  )
+  print(output)
+}
+```
+
+## Python
+
+``` {.python}
+def fizz_buzz(num):
+  if num % 15 == 0:
+    print("FizzBuzz")
+  elif num % 5 == 0:
+    print("Buzz")
+  elif num % 3 == 0:
+    print("Fizz")
+  else:
+    print(num)
+```
+
+:::
+````
+:::
+
+:::: {.column width="50%"}
+::: panel-tabset
+## R
+
+``` r
+fizz_buzz <- function(fbnums = 1:50) {
+  output <- dplyr::case_when(
+    fbnums %% 15 == 0 ~ "FizzBuzz",
+    fbnums %% 3 == 0 ~ "Fizz",
+    fbnums %% 5 == 0 ~ "Buzz",
+    TRUE ~ as.character(fbnums)
+  )
+  print(output)
+}
+```
+
+## Python
+
+``` python
+def fizz_buzz(num):
+  if num % 15 == 0:
+    print("FizzBuzz")
+  elif num % 5 == 0:
+    print("Buzz")
+  elif num % 3 == 0:
+    print("Fizz")
+  else:
+    print(num)
+```
+:::
+::::
+::::::
+
+## Tipos Render
+
+::::: columns
+::: {.column width="50%"}
+### PDF
+
+```         
+---
+title: "Documento Test PDF"
+format:
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+---
+```
+
+**NOTA** : no todos los componentes del documento pueden ser compatibles con el formato PDF, por ejemplo, los gráficos interactivos
+:::
+
+::: {.column width="50%"}
+### HTML
+
+```         
+---
+title: "Documento Test HTML"
+format:
+  html:
+    toc: true
+---
+```
+:::
+:::::
+
+## Dependencias- Ambiente Global Vs. Local
+
+## Configuración Chunks
+
+Se pueden configurar estos parametros para modificar el render del documento:
+
+```         
+#| echo: true #se muestra el código
+#| eval: false #no se ejecuta el código
+#| warning: false # no se muestran las warnings
+```
+
+Prestar atención a los espacios e indentado
+
+## Configuración Documento Chunks-Global
+
+```         
+title: "Ciencia de Datos para Economistas"
+subtitle: "Este es un subtítulo"
+date: "January 22, 2025"
+author: "Acá va el nombre"
+execute:
+  echo: true
+  eval: false
+```
+
+## Preparación Datos
+
+???
+
+## Generación Gráfico
+
+???
+
+## Integrar Valores
+
+```{r}
+#| echo: true
+#| eval: true
+library(gapminder)
+library(dplyr)
+# remover notación científica
+options(scipen=999) 
+
+# Establecer separador de miles como punto y separador de decimales como coma
+options(digits.separate = c(decimal.mark = ",", big.mark = "."))
+
+gap_colven <- gapminder%>%
+  filter(country %in% c('Colombia','Venezuela'))
+
+
+min_periodo <- min(gap_colven$year)
+max_periodo <- max(gap_colven$year)
+max_gdpPercap <- round(max(gap_colven$gdpPercap),2)
+min_gdpPercap <- round(min(gap_colven$gdpPercap),2)
+```
+
+### Texto Muestra con Variables
+
+En período analizado va de `r min_periodo` a `r max_periodo`, mientras que el máximo PIB per cápita es `r max_gdpPercap` , siendo el mínimo `r min_gdpPercap`, para los países `r unique(gap_colven$country)`
+
+```         
+En período analizado va de ``r min_periodo`` a ´r max_periodo´, mientras que el máximo PIB per cápita es `r max_gdpPercap`  , siendo el mínimo ´r min_gdpPercap´, para los países ´r unique(gap_colven$country)´.
+Modificar ´ por `
+```
+
+## Tablas GT
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| eval: true
+#| warning: false
+
+library(gt)
+library(gapminder)
+library(tidyverse)
+
+gap_ven <- gapminder%>%
+  filter(country %in% c('Venezuela'))
+
+min_periodo <- min(gap_ven$year)
+max_periodo <- max(gap_ven$year)
+
+gap_ven |>
+  select(-country,-continent)|>
+  gt()|>
+  tab_header(
+    title = "Estadísticas Venezuela",
+    subtitle = paste('Años: ', min_periodo,'al',max_periodo )
+  ) |>
+  fmt_currency(columns = gdpPercap) |>
+  fmt_number(columns = lifeExp, decimals = 2, suffixing = TRUE) |>
+  fmt_number(columns = pop,
+             sep_mark = "." ,
+             dec_mark = ",",
+             decimals = 0)
+
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: true
+#| eval: false
+
+
+library(gt)
+library(gapminder)
+library(tidyverse)
+
+gap_ven <- gapminder%>%
+  filter(country %in% c('Venezuela'))
+  
+gap_ven |>
+  select(-country,-continent)|>
+  gt()|>
+  tab_header(
+    title = "Estadísticas Venezuela",
+    subtitle = paste('Años: ', min_periodo,'al',max_periodo )
+  ) |>
+  fmt_currency(columns = gdpPercap) |>
+  fmt_number(columns = lifeExp, decimals = 2, suffixing = TRUE) |>
+  fmt_number(columns = pop,
+             sep_mark = "." ,
+             dec_mark = ",",
+             decimals = 0)
+```
+:::
+:::::
+
+más info en <https://gt.rstudio.com>
+
+## Tablas DT
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| eval: true
+#| warning: false
+library(DT)
+gap_america <- gapminder%>%
+  filter(continent=='Americas')
+
+datatable(gap_america)
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: true
+#| eval: false
+
+library(DT)
+gap_america <- gapminder%>%
+  filter(continent=='Americas')
+
+datatable(gap_america)
+```
+:::
+:::::
+
+más info en <https://rstudio.github.io/DT/>
+
+## Tablas DT- Bonus
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| eval: true
+#| warning: false
+library(DT)
+gap_america <- gapminder%>%
+  filter(continent=='Americas')
+
+datatable( gap_america,
+           rownames= FALSE,
+           extensions = 'Buttons',
+           options = list(dom = 'Bfrtip',
+                          buttons = list( list(
+                            extend = 'collection',
+                            buttons = c('csv', 'excel', 'pdf'),
+                            text = 'Descargar')),
+                          lengthChange = FALSE,
+                          dom = 'p',
+                          language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json'),
+                          pageLength = 5,
+                          # autoWidth = TRUE,
+                          initComplete = JS(
+                            "function(settings, json) {",
+                            "$(this.api().table().header()).css({'background-color': '#224eb2','color': '#fff'});",
+                            "}"),
+                          drawCallback = JS(
+                            "function(settings) {",
+                            "  var table = $('#DataTables_Table_0').DataTable();",
+                            "  table.cells().nodes().to$().css('border-right', '1px solid black');",
+                            "}"
+                          ),
+                          initComplete = JS(
+                            "function(settings, json) {",
+                            "  var table = $('#DataTables_Table_0').DataTable();",
+                            "  table.cells().nodes().to$().css('border-right', '1px solid black');",
+                            "}"
+                          ),
+                          Filter=0),
+           escape=FALSE)%>%
+  formatStyle(columns = colnames(.), fontSize = '50%')
+
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: true
+#| eval: false
+library(DT)
+gap_america <- gapminder%>%
+  filter(continent=='Americas')%>%
+  select(-continent)
+
+datatable( gap_america,
+           rownames= FALSE,
+           extensions = 'Buttons',
+           options = list(dom = 'Bfrtip',
+                          buttons = list( list(
+                            extend = 'collection',
+                            buttons = c('csv', 'excel', 'pdf'),
+                            text = 'Descargar')),
+                          lengthChange = FALSE,
+                          # dom = 'p',
+                          language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json'),
+                          pageLength = 5,
+                          # autoWidth = TRUE,
+                          initComplete = JS(
+                            "function(settings, json) {",
+                            "$(this.api().table().header()).css({'background-color': '#224eb2','color': '#fff'});",
+                            # "  table.cells().nodes().to$().css('border-right', '1px solid black');",
+                            "}"),
+                          Filter=0),
+           escape=FALSE)%>%
+  formatStyle(columns = colnames(.), fontSize = '50%')
+
+```
+:::
+:::::
+
+## Tablas reactable
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| eval: true
+
+library(reactable)
+gap_colven_react <- gap_colven|>
+  select(-continent,-pop)|>
+  mutate(gdpPercap= round(gdpPercap,2))
+
+reactable(gap_colven_react)
+
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: true
+#| eval: false
+
+gap_colven_react <- gap_colven|>
+  select(-continent,-pop)|>
+  mutate(gdpPercap= round(gdpPercap,2))
+
+reactable(gap_colven_react)
+
+```
+:::
+:::::
+
+más info en <https://glin.github.io/reactable/>
+
+## Tablas reactable - bonus
+
+::::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| eval: true
+orange_pal <- function(x) rgb(colorRamp(c("#caf0f8", 
+                                          "#03045e"))(x), 
+                              maxColorValue = 255)
+
+reactable(
+  gap_colven_react,
+  columns = list(
+    gdpPercap = colDef(style = function(value) {
+      normalized <- (value - min(gap_colven$gdpPercap)) / (max(gap_colven$gdpPercap) - min(gap_colven$gdpPercap))
+      color <- orange_pal(normalized)
+      list(background = color)
+    })
+  )
+)
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: true
+#| eval: false
+orange_pal <- function(x) rgb(colorRamp(c("#caf0f8", 
+                                          "#03045e"))(x), 
+                              maxColorValue = 255)
+
+reactable(
+  gap_colven_react,
+  columns = list(
+    gdpPercap = colDef(style = function(value) {
+      normalized <- (value - min(gap_colven$gdpPercap)) / (max(gap_colven$gdpPercap) - min(gap_colven$gdpPercap))
+      color <- orange_pal(normalized)
+      list(background = color)
+    })
+  )
+)
+```
+:::
+:::::
+
+## Ejercicio en Clase
+
+Realizar reporte con un gráfico, una tabla y valores calculados como variables
+
+## Otras Opciones
+
+::::: columns
+::: {.column width="50%"}
+![](images/clase23/otras1.png){fig-align="center" width="300"}
+:::
+
+::: {.column width="50%"}
+![](images/clase23/otras2.png){fig-align="center" width="300"}
+:::
+:::::
+
+# Configuraciones YML interés
+
+## Configuraciones YML- `self contained`
+
+El documento se puede compartir y no es necesario agregar las carpetas que lo acompañan
+
+Sin `embed-resources: true`
+
+![](images/clase23/self_contained.png){fig-align="left" width="120" height="50"}
+
+Configuración necesaria:
+
+```         
+format:
+  html:
+    embed-resources: true
+```
+
+## Configuraciones YML - `TOC`
+
+Para mostrar la tabla de contenido y la profundidad
+
+```         
+format:
+  html:
+    toc: true
+    toc-location: left
+    number-sections: true
+    number-depth: 3
+```
+
+#### Ejemplo
+
+![](images/clase23/toc.png){width="400"}
+
+## Configuraciones YML - Temas
+
+Cambiar el estilo general del documento
+
+```         
+format:
+  html:
+    theme: united
+```
+
+Ver temas disponibles en <https://quarto.org/docs/output-formats/html-themes.html>
+
+#### Ejemplo
+
+![](images/clase23/tema.png){width="250"}
+
+## Wrappers
+
+son funciones o clases que envuelven o encapsulan la funcionalidad existente de otras bibliotecas, APIs o módulos. Su principal objetivo es simplificar el uso de estas funcionalidades complejas, proporcionando una interfaz más amigable y fácil de usar.
+
+## **Características Principales de los Wrappers:**
+
+1.  **Abstracción** : Ocultan la complejidad subyacente, permitiendo a los usuarios interactuar con las funciones básicas sin preocuparse por detalles internos.
+
+2.  **Consistencia** : Aseguran que el uso de diferentes APIs o bibliotecas sea uniforme y coherente.
+
+3.  **Compatibilidad** : Pueden adaptar interfaces incompatibles para que trabajen juntas.
+
+### **Ejemplos en R:**
+
+-   **Wrappers para APIs** : Por ejemplo, **`httr`** es una biblioteca popular en R que proporciona funciones sencillas para realizar solicitudes HTTP a diferentes APIs.
+
+## Cheat Sheets + recursos
+
+<https://rstudio.github.io/cheatsheets/quarto.pdf>
+
+<https://glin.github.io/reactable/articles/cookbook/cookbook.html>
+
+<https://rstudio.github.io/DT/options.html>

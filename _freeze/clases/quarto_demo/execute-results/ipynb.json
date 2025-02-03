@@ -1,0 +1,17 @@
+{
+  "hash": "a136e1afcbf8e69308f6070ccfe7465b",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Quarto Documento demo\"\nauthor: \"Curso UCV R para Ciencia de Datos\"\nlang: es\ndate: Sys.Date()\nformat: \n  html:\n    fig-width: 8\n    fig-height: 4\n    code-fold: true\n---\n\n\n\n## Calidad del Aire\n\n@fig-airquality explora más a fondo el impacto de la temperatura en el nivel de ozono.\n\n\n\n::: {#cell-fig-airquality .cell}\n\n```{.r .cell-code}\n#| label: fig-airquality\n#| fig-cap: \"Temperatura y nivel de ozono\"\n#| warning: false\n\nlibrary(ggplot2)\nggplot(airquality, aes(Temp, Ozone)) + \n  geom_point() + \n  geom_smooth(method = \"loess\")\n```\n\n::: {.cell-output-display}\n![Temperatura y nivel de ozono](quarto_demo_files/figure-ipynb/fig-airquality-1.png){#fig-airquality}\n:::\n:::\n",
+    "supporting": [
+      "quarto_demo_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": null,
+    "postProcess": false
+  }
+}
