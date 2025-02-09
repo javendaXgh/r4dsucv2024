@@ -468,7 +468,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\nAsignar Nombres Objetos y Variables\n🖥️ láminas clase 03 apoyo  💻 clase 3 apoyo versión qmd \n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n🖥️ láminas clase 04  💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\nConstruir Funciones y Data Frames\n🖥️ láminas clase 06  💻 clase 6 versión qmd  🖥️ clase 6 versión códigos  💻 clase 6: práctica 1- versión qmd  💻 clase 6: práctica 1- versión site  🎥video render Quarto 💻 clase 6: práctica 2- versión qmd  💻 clase 6: práctica 2- versión site \n\n\n\n\nmié, 6 nov.\nDF subsetting; Ayudas\n🖥️ láminas clase 07 💻 clase 7: tarea \n\n\n4\nlun, 11 nov.\nInspección DF´s / Seleccionar Valores, Subsettings-cont\n🖥️ láminas clase 08 🖥️ clase 08, versión reporte 💻 clase 8 versión qmd  💻 clase 8: tarea \n\n\n\n\nmié, 13 nov.\nPaths o Rutas de trabajo\n🖥️ láminas clase 09\n\n\n5\nlun, 18 nov.\nTrabajando con Data Frames por filas\n🖥️ láminas clase 10\n\n\n\n\nmié, 20 nov.\nTrabajando con Data Frames por columnas\n🖥️ láminas clase 11 💻 clase 11 versión qmd \n\n\n6\nlun, 25 nov.\nTrabajando con Data Frames: agrupamientos y Reframes\n🖥️ láminas clase 12 💻 clase 12 script  🖥️ clase 12, versión reporte 💻 clase 12 versión qmd \n\n\n\n\nmié, 27 nov.\nTrabajando con Data Frames: Agrupamientos y Reframes/ Asignación Ensayo\n💻 clase 13 script  🖥️ clase 13, versión reporte 💻 clase 13 versión qmd \n\n\n7\nlun, 2 dic.\nTrabajando con LLM R4DS Escuela Economía UCV\n🖥️ láminas clase 14 💻 clase 14 script \n\n\n\n\nmié, 4 dic.\nTrabajando con Data Frames y Tibbles: factores, selects, remoción duplicados. RBase: Coercion\n🖥️ láminas clase 15 💻 clase 15 script  🖥️ clase 15, versión reporte 💻 clase 15 versión qmd \n\n\n\n\nvie, 6 dic.\nTrabajando con Tibbles:Formatos Long y Wide, Valores Ausentes\nmismos materiales de clase 15\n\n\n8\nlun, 9 dic.\ntrabajando con: fechas y strings\n🖥️ láminas clase 17 💻 clase 17 script \n\n\n\n\nmié, 11 dic.\nUsando R para Análisis Económico\n💻 clase 18 script  🛢️ conjunto de datos clase 18 \n\n\n10\nlun, 13 ene.\nAvances anteproyecto- Discusión\n\n\n\n\n\n\nmié, 15 ene.\nIntroducción a la Visualizacion de Datos\n🖥️ láminas clase 19\n\n\n\n\nvie, 17 ene.\nIntroducción al Scrapy\n\n\n\n\n11\nmié, 22 ene.\nVisualizacion de Datos/ Análisis Exploratorio\n🖥️ láminas clase 20-1 🖥️ láminas clase 20-2 🖥️ láminas clase 20-3 💻 clase 20 script \n\n\n12\nlun, 27 ene.\nVisualización de Datos: GGplot y otras opciones\n🖥️ láminas clase 21 🖥️ láminas clase 21 complemento 💻 clase 21 script ggplot2  💻 clase 21 script valores acciones \n\n\n\n\nmié, 29 ene.\nIntroducción a uso de API´s\n🖥️ láminas clase 22 💻 clase 22 script \n\n\n13\nlun, 3 feb.\nReportes/Tablas DT y GT/Nombres Columnas\n🖥️ láminas clase 23 💻 clase 23 script text latex  💻 clase 23 script quarto demo  💻 clase 23 script variables environment \n\n\n\n\nmié, 5 feb.\nDashboard\n💻 clase 24 script quarto demo \n\n\n14\nlun, 10 feb.\nRevisión Preliminar Proyectos\n\n\n\n\n\n\nmié, 12 feb.\nConexiones a DB´s, lectura y escritura\n\n\n\n\n15\nlun, 17 feb.\nJoins de DF´s\n\n\n\n\n\n\nmié, 19 feb.\nPresentacion Proyecto",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\nAsignar Nombres Objetos y Variables\n🖥️ láminas clase 03 apoyo  💻 clase 3 apoyo versión qmd \n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n🖥️ láminas clase 04  💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\nConstruir Funciones y Data Frames\n🖥️ láminas clase 06  💻 clase 6 versión qmd  🖥️ clase 6 versión códigos  💻 clase 6: práctica 1- versión qmd  💻 clase 6: práctica 1- versión site  🎥video render Quarto 💻 clase 6: práctica 2- versión qmd  💻 clase 6: práctica 2- versión site \n\n\n\n\nmié, 6 nov.\nDF subsetting; Ayudas\n🖥️ láminas clase 07 💻 clase 7: tarea \n\n\n4\nlun, 11 nov.\nInspección DF´s / Seleccionar Valores, Subsettings-cont\n🖥️ láminas clase 08 🖥️ clase 08, versión reporte 💻 clase 8 versión qmd  💻 clase 8: tarea \n\n\n\n\nmié, 13 nov.\nPaths o Rutas de trabajo\n🖥️ láminas clase 09\n\n\n5\nlun, 18 nov.\nTrabajando con Data Frames por filas\n🖥️ láminas clase 10\n\n\n\n\nmié, 20 nov.\nTrabajando con Data Frames por columnas\n🖥️ láminas clase 11 💻 clase 11 versión qmd \n\n\n6\nlun, 25 nov.\nTrabajando con Data Frames: agrupamientos y Reframes\n🖥️ láminas clase 12 💻 clase 12 script  🖥️ clase 12, versión reporte 💻 clase 12 versión qmd \n\n\n\n\nmié, 27 nov.\nTrabajando con Data Frames: Agrupamientos y Reframes/ Asignación Ensayo\n💻 clase 13 script  🖥️ clase 13, versión reporte 💻 clase 13 versión qmd \n\n\n7\nlun, 2 dic.\nTrabajando con LLM R4DS Escuela Economía UCV\n🖥️ láminas clase 14 💻 clase 14 script \n\n\n\n\nmié, 4 dic.\nTrabajando con Data Frames y Tibbles: factores, selects, remoción duplicados. RBase: Coercion\n🖥️ láminas clase 15 💻 clase 15 script  🖥️ clase 15, versión reporte 💻 clase 15 versión qmd \n\n\n\n\nvie, 6 dic.\nTrabajando con Tibbles:Formatos Long y Wide, Valores Ausentes\nmismos materiales de clase 15\n\n\n8\nlun, 9 dic.\ntrabajando con: fechas y strings\n🖥️ láminas clase 17 💻 clase 17 script \n\n\n\n\nmié, 11 dic.\nUsando R para Análisis Económico\n💻 clase 18 script  🛢️ conjunto de datos clase 18 \n\n\n10\nlun, 13 ene.\nAvances anteproyecto- Discusión\n\n\n\n\n\n\nmié, 15 ene.\nIntroducción a la Visualizacion de Datos\n🖥️ láminas clase 19\n\n\n\n\nvie, 17 ene.\nIntroducción al Scrapy\n\n\n\n\n11\nmié, 22 ene.\nVisualizacion de Datos/ Análisis Exploratorio\n🖥️ láminas clase 20-1 🖥️ láminas clase 20-2 🖥️ láminas clase 20-3 💻 clase 20 script \n\n\n12\nlun, 27 ene.\nVisualización de Datos: GGplot y otras opciones\n🖥️ láminas clase 21 🖥️ láminas clase 21 complemento 💻 clase 21 script ggplot2  💻 clase 21 script valores acciones \n\n\n\n\nmié, 29 ene.\nIntroducción a uso de API´s\n🖥️ láminas clase 22 💻 clase 22 script \n\n\n13\nlun, 3 feb.\nReportes/Tablas DT y GT/Nombres Columnas\n🖥️ láminas clase 23 💻 clase 23 script text latex  💻 clase 23 script quarto demo  💻 clase 23 script variables environment \n\n\n\n\nmié, 5 feb.\nDashboard\n💻 clase 24 script quarto demo \n\n\n14\nlun, 10 feb.\nJoins de DF´s\n🖥️ láminas clase 25\n\n\n\n\nmié, 12 feb.\nConexiones a DB´s, lectura y escritura\n\n\n\n\n15\nlun, 17 feb.\n\n\n\n\n\n\n\n\nmié, 19 feb.\nPresentacion Proyecto",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -9160,8 +9160,8 @@
     "objectID": "clases/clase_23.html#objetivo",
     "href": "clases/clase_23.html#objetivo",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Objetivo",
-    "text": "Objetivo\nGenerar reportes mediante el sistema de publicación Quarto. Adicionalmente, conocer diversas opciones para insertar tablas en los reportes.\nMás info en https://quarto.org/docs/output-formats/html-basics.html"
+    "section": "",
+    "text": "Generar reportes mediante el sistema de publicación Quarto. Adicionalmente, conocer diversas opciones para insertar tablas en los reportes.\nMás info en https://quarto.org/docs/output-formats/html-basics.html"
   },
   {
     "objectID": "clases/clase_23.html#ciclo",
@@ -9203,7 +9203,7 @@
     "href": "clases/clase_23.html#tipos-render",
     "title": "Ciencia de Datos para Economistas",
     "section": "Tipos Render",
-    "text": "Tipos Render\n\n\nPDF\n---\ntitle: \"Documento Test PDF\"\nformat:\n  pdf:\n    toc: true\n    number-sections: true\n    colorlinks: true\n---\nNOTA : no todos los componentes del documento pueden ser compatibles con el formato PDF, por ejemplo, los gráficos interactivos\n\nHTML\n---\ntitle: \"Documento Test HTML\"\nformat:\n  html:\n    toc: true\n---"
+    "text": "Tipos Render\n\n\n\nPDF\n---\ntitle: \"Documento Test PDF\"\nformat:\n  pdf:\n    toc: true\n    number-sections: true\n    colorlinks: true\n---\nNOTA : no todos los componentes del documento pueden ser compatibles con el formato PDF, por ejemplo, los gráficos interactivos\n\n\n\nHTML\n---\ntitle: \"Documento Test HTML\"\nformat:\n  html:\n    toc: true\n---"
   },
   {
     "objectID": "clases/clase_23.html#dependencias--ambiente-global-vs.-local",
@@ -9224,28 +9224,28 @@
     "href": "clases/clase_23.html#integrar-valores",
     "title": "Ciencia de Datos para Economistas",
     "section": "Integrar Valores",
-    "text": "Integrar Valores\n\nlibrary(gapminder)\nlibrary(dplyr)\n# remover notación científica\noptions(scipen=999) \n\n# Establecer separador de miles como punto y separador de decimales como coma\noptions(digits.separate = c(decimal.mark = \",\", big.mark = \".\"))\n\ngap_colven &lt;- gapminder%&gt;%\n  filter(country %in% c('Colombia','Venezuela'))\n\n\nmin_periodo &lt;- min(gap_colven$year)\nmax_periodo &lt;- max(gap_colven$year)\nmax_gdpPercap &lt;- round(max(gap_colven$gdpPercap),2)\nmin_gdpPercap &lt;- round(min(gap_colven$gdpPercap),2)\n\nTexto Muestra con Variables\nEn período analizado va de 1952 a 2007, mientras que el máximo PIB per cápita es 13143.95 , siendo el mínimo 2144.12, para los países Colombia, Venezuela\nEn período analizado va de `1952` a ´r max_periodo´, mientras que el máximo PIB per cápita es 13143.95  , siendo el mínimo ´r min_gdpPercap´, para los países ´r unique(gap_colven$country)´.\nModificar ´ por `"
+    "text": "Integrar Valores\n\nlibrary(gapminder)\nlibrary(dplyr)\n# remover notación científica\noptions(scipen=999) \n\n# Establecer separador de miles como punto y separador de decimales como coma\noptions(digits.separate = c(decimal.mark = \",\", big.mark = \".\"))\n\ngap_colven &lt;- gapminder%&gt;%\n  filter(country %in% c('Colombia','Venezuela'))\n\n\nmin_periodo &lt;- min(gap_colven$year)\nmax_periodo &lt;- max(gap_colven$year)\nmax_gdpPercap &lt;- round(max(gap_colven$gdpPercap),2)\nmin_gdpPercap &lt;- round(min(gap_colven$gdpPercap),2)\n\n\nTexto Muestra con Variables\nEn período analizado va de 1952 a 2007, mientras que el máximo PIB per cápita es 13143.95 , siendo el mínimo 2144.12, para los países Colombia, Venezuela\nEn período analizado va de ´r min_periodo´ a ´r max_periodo´, mientras que el máximo PIB per cápita es ´r max_gdpPercap´  , siendo el mínimo ´r min_gdpPercap´, para los países ´r unique(gap_colven$country)´.\n\nNota: Modificar \"´\" por \"`\""
   },
   {
     "objectID": "clases/clase_23.html#tablas-gt",
     "href": "clases/clase_23.html#tablas-gt",
     "title": "Ciencia de Datos para Economistas",
     "section": "Tablas GT",
-    "text": "Tablas GT\n\n\n\n\n\n\n\n\n\n\nEstadísticas Venezuela\n\n\nAños: 1952 al 2007\n\n\nyear\nlifeExp\npop\ngdpPercap\n\n\n\n\n1952\n55.09\n5.439.568\n$7,689.80\n\n\n1957\n57.91\n6.702.668\n$9,802.47\n\n\n1962\n60.77\n8.143.375\n$8,422.97\n\n\n1967\n63.48\n9.709.552\n$9,541.47\n\n\n1972\n65.71\n11.515.649\n$10,505.26\n\n\n1977\n67.46\n13.503.563\n$13,143.95\n\n\n1982\n68.56\n15.620.766\n$11,152.41\n\n\n1987\n70.19\n17.910.182\n$9,883.58\n\n\n1992\n71.15\n20.265.563\n$10,733.93\n\n\n1997\n72.15\n22.374.398\n$10,165.50\n\n\n2002\n72.77\n24.287.670\n$8,605.05\n\n\n2007\n73.75\n26.084.662\n$11,415.81\n\n\n\n\n\n\n\n\n\nlibrary(gt)\nlibrary(gapminder)\nlibrary(tidyverse)\n\ngap_ven &lt;- gapminder%&gt;%\n  filter(country %in% c('Venezuela'))\n  \ngap_ven |&gt;\n  select(-country,-continent)|&gt;\n  gt()|&gt;\n  tab_header(\n    title = \"Estadísticas Venezuela\",\n    subtitle = paste('Años: ', min_periodo,'al',max_periodo )\n  ) |&gt;\n  fmt_currency(columns = gdpPercap) |&gt;\n  fmt_number(columns = lifeExp, decimals = 2, suffixing = TRUE) |&gt;\n  fmt_number(columns = pop,\n             sep_mark = \".\" ,\n             dec_mark = \",\",\n             decimals = 0)\n\n\nmás info en https://gt.rstudio.com"
+    "text": "Tablas GT\n\n\n\n\n\n\n\n\n\n\nEstadísticas Venezuela\n\n\nAños: 1952 al 2007\n\n\nyear\nlifeExp\npop\ngdpPercap\n\n\n\n\n1952\n55.09\n5.439.568\n$7,689.80\n\n\n1957\n57.91\n6.702.668\n$9,802.47\n\n\n1962\n60.77\n8.143.375\n$8,422.97\n\n\n1967\n63.48\n9.709.552\n$9,541.47\n\n\n1972\n65.71\n11.515.649\n$10,505.26\n\n\n1977\n67.46\n13.503.563\n$13,143.95\n\n\n1982\n68.56\n15.620.766\n$11,152.41\n\n\n1987\n70.19\n17.910.182\n$9,883.58\n\n\n1992\n71.15\n20.265.563\n$10,733.93\n\n\n1997\n72.15\n22.374.398\n$10,165.50\n\n\n2002\n72.77\n24.287.670\n$8,605.05\n\n\n2007\n73.75\n26.084.662\n$11,415.81\n\n\n\n\n\n\n\n\n\nlibrary(gt)\nlibrary(gapminder)\nlibrary(tidyverse)\n\ngap_ven &lt;- gapminder%&gt;%\n  filter(country %in% c('Venezuela'))\n  \ngap_ven |&gt;\n  select(-country,-continent)|&gt;\n  gt()|&gt;\n  tab_header(\n    title = \"Estadísticas Venezuela\",\n    subtitle = paste('Años: ', min_periodo,'al',max_periodo )\n  ) |&gt;\n  fmt_currency(columns = gdpPercap) |&gt;\n  fmt_number(columns = lifeExp, decimals = 2, suffixing = TRUE) |&gt;\n  fmt_number(columns = pop,\n             sep_mark = \".\" ,\n             dec_mark = \",\",\n             decimals = 0)\n\n\n\nmás info en https://gt.rstudio.com"
   },
   {
     "objectID": "clases/clase_23.html#tablas-dt",
     "href": "clases/clase_23.html#tablas-dt",
     "title": "Ciencia de Datos para Economistas",
     "section": "Tablas DT",
-    "text": "Tablas DT\n\n\n\n\n\n\n\n\n\n\nlibrary(DT)\ngap_america &lt;- gapminder%&gt;%\n  filter(continent=='Americas')\n\ndatatable(gap_america)\n\n\nmás info en https://rstudio.github.io/DT/"
+    "text": "Tablas DT\n\n\n\n\n\n\n\n\n\n\nlibrary(DT)\ngap_america &lt;- gapminder%&gt;%\n  filter(continent=='Americas')\n\ndatatable(gap_america)\n\n\n\nmás info en https://rstudio.github.io/DT/"
   },
   {
     "objectID": "clases/clase_23.html#tablas-reactable",
     "href": "clases/clase_23.html#tablas-reactable",
     "title": "Ciencia de Datos para Economistas",
     "section": "Tablas reactable",
-    "text": "Tablas reactable\n\n\n\n\n\n\n\n\n\n\ngap_colven_react &lt;- gap_colven|&gt;\n  select(-continent,-pop)|&gt;\n  mutate(gdpPercap= round(gdpPercap,2))\n\nreactable(gap_colven_react)\n\n\nmás info en https://glin.github.io/reactable/"
+    "text": "Tablas reactable\n\n\n\n\n\n\n\n\n\n\ngap_colven_react &lt;- gap_colven|&gt;\n  select(-continent,-pop)|&gt;\n  mutate(gdpPercap= round(gdpPercap,2))\n\nreactable(gap_colven_react)\n\n\n\nmás info en https://glin.github.io/reactable/"
   },
   {
     "objectID": "clases/clase_23.html#temas",
@@ -9301,14 +9301,14 @@
     "href": "clases/clase_23.html#configuraciones-yml---toc",
     "title": "Ciencia de Datos para Economistas",
     "section": "Configuraciones YML - TOC",
-    "text": "Configuraciones YML - TOC\nPara mostrar la tabla de contenido y la profundidad\nformat:\n  html:\n    toc: true\n    toc-location: left\n    number-sections: true\n    number-depth: 3\nEjemplo"
+    "text": "Configuraciones YML - TOC\nPara mostrar la tabla de contenido y la profundidad\nformat:\n  html:\n    toc: true\n    toc-location: left\n    number-sections: true\n    number-depth: 3\n\nEjemplo"
   },
   {
     "objectID": "clases/clase_23.html#configuraciones-yml---temas",
     "href": "clases/clase_23.html#configuraciones-yml---temas",
     "title": "Ciencia de Datos para Economistas",
     "section": "Configuraciones YML - Temas",
-    "text": "Configuraciones YML - Temas\nCambiar el estilo general del documento\nformat:\n  html:\n    theme: united\nVer temas disponibles en https://quarto.org/docs/output-formats/html-themes.html\nEjemplo"
+    "text": "Configuraciones YML - Temas\nCambiar el estilo general del documento\nformat:\n  html:\n    theme: united\nVer temas disponibles en https://quarto.org/docs/output-formats/html-themes.html\n\nEjemplo"
   },
   {
     "objectID": "clases/clase_23.html#ejemplo-quarto",
@@ -9378,7 +9378,7 @@
     "href": "clases/clase_23.html#cheat-sheets-recursos",
     "title": "Ciencia de Datos para Economistas",
     "section": "Cheat Sheets + recursos",
-    "text": "Cheat Sheets + recursos\nhttps://rstudio.github.io/cheatsheets/quarto.pdf\nhttps://glin.github.io/reactable/articles/cookbook/cookbook.html\nhttps://rstudio.github.io/DT/options.html\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Cheat Sheets + recursos\nhttps://rstudio.github.io/cheatsheets/quarto.pdf\nhttps://glin.github.io/reactable/articles/cookbook/cookbook.html\nhttps://rstudio.github.io/DT/options.html"
   },
   {
     "objectID": "clases/clase_23.html#tablas-reactable---bonus",
@@ -9392,7 +9392,7 @@
     "href": "clases/clase_23.html#características-principales-de-los-wrappers",
     "title": "Ciencia de Datos para Economistas",
     "section": "Características Principales de los Wrappers:",
-    "text": "Características Principales de los Wrappers:\n\nAbstracción : Ocultan la complejidad subyacente, permitiendo a los usuarios interactuar con las funciones básicas sin preocuparse por detalles internos.\nConsistencia : Aseguran que el uso de diferentes APIs o bibliotecas sea uniforme y coherente.\nCompatibilidad : Pueden adaptar interfaces incompatibles para que trabajen juntas.\n\nEjemplos en R:\n\nWrappers para APIs : Por ejemplo, httr es una biblioteca popular en R que proporciona funciones sencillas para realizar solicitudes HTTP a diferentes APIs."
+    "text": "Características Principales de los Wrappers:\n\nAbstracción : Ocultan la complejidad subyacente, permitiendo a los usuarios interactuar con las funciones básicas sin preocuparse por detalles internos.\nConsistencia : Aseguran que el uso de diferentes APIs o bibliotecas sea uniforme y coherente.\nCompatibilidad : Pueden adaptar interfaces incompatibles para que trabajen juntas.\n\n\nEjemplos en R:\n\nWrappers para APIs : Por ejemplo, httr es una biblioteca popular en R que proporciona funciones sencillas para realizar solicitudes HTTP a diferentes APIs."
   },
   {
     "objectID": "clases/clase_23.html#prueba-embebido",
@@ -9435,5 +9435,103 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "",
     "text": "Realizar consultas a distintas API’s y procesar los datos obtenidos."
+  },
+  {
+    "objectID": "clases/clase_25.html#introducción-a-los-joins",
+    "href": "clases/clase_25.html#introducción-a-los-joins",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Introducción a los Joins",
+    "text": "Introducción a los Joins\nLos joins son operaciones fundamentales en el manejo de datos que permiten combinar dos o más data frames basados en una o más columnas comunes. En R, puedes utilizar la función dplyr::join() para realizar diferentes tipos de joins."
+  },
+  {
+    "objectID": "clases/clase_25.html#tipos-de-joins",
+    "href": "clases/clase_25.html#tipos-de-joins",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tipos de Joins",
+    "text": "Tipos de Joins\n\nInner Join: Devuelve solo las filas que tienen coincidencias en ambos data frames.\nLeft Join: Devuelve todas las filas del primer data frame y las filas coincidentes del segundo data frame. Si no hay coincidencia, se rellenan con NA."
+  },
+  {
+    "objectID": "clases/clase_25.html#tipos-de-joins--cont.",
+    "href": "clases/clase_25.html#tipos-de-joins--cont.",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tipos de Joins- cont.",
+    "text": "Tipos de Joins- cont.\n\nRight Join: Devuelve todas las filas del segundo data frame y las filas coincidentes del primer data frame. Si no hay coincidencia, se rellenan con NA.\nFull Join: Devuelve todas las filas de ambos data frames. Si no hay coincidencia, se rellenan con NA."
+  },
+  {
+    "objectID": "clases/clase_25.html#explicación-visual",
+    "href": "clases/clase_25.html#explicación-visual",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Explicación Visual",
+    "text": "Explicación Visual"
+  },
+  {
+    "objectID": "clases/clase_25.html#ejemplos-prácticos",
+    "href": "clases/clase_25.html#ejemplos-prácticos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplos Prácticos",
+    "text": "Ejemplos Prácticos\nPaso 1: Crear Data Frames\n\n# Cargar la librería dplyr \nlibrary(dplyr)\n\n# Data frame de países con su población\n\ndf_paises &lt;- data.frame ( pais = c(\"España\", \"Francia\", \n                                   \"Alemania\", \"Italia\"), \n                          poblacion = c(47.3, 65.2, 83.1, 60.4) )\n\ndf_paises\n\n      pais poblacion\n1   España      47.3\n2  Francia      65.2\n3 Alemania      83.1\n4   Italia      60.4\n\n# Mostrar los data frames\n\nCrear Data Frames 2\n\n# Data frame de países con su PIB per cápita\n\ndf_economia &lt;- data.frame( pais = c(\"España\", \"Alemania\",\n                                    \"Italia\", \"Portugal\"),\n                           pib_per_capita = c(29500, 37800, 31600, 24000) )\n\ndf_economia\n\n      pais pib_per_capita\n1   España          29500\n2 Alemania          37800\n3   Italia          31600\n4 Portugal          24000"
+  },
+  {
+    "objectID": "clases/clase_25.html#inner-join",
+    "href": "clases/clase_25.html#inner-join",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Inner Join",
+    "text": "Inner Join\n\n# Realizar un inner join\ninner_join(df_paises, \n           df_economia,\n           by = \"pais\")\n\n      pais poblacion pib_per_capita\n1   España      47.3          29500\n2 Alemania      83.1          37800\n3   Italia      60.4          31600\n\n\nExplicación : Este join devuelve solo las filas que tienen coincidencias en ambos data frames. En este caso, los países “España”, “Alemania” e “Italia”."
+  },
+  {
+    "objectID": "clases/clase_25.html#left-join",
+    "href": "clases/clase_25.html#left-join",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Left Join",
+    "text": "Left Join\n\n# Realizar un left join\nleft_join(df_paises, \n          df_economia,\n          by = \"pais\")\n\n      pais poblacion pib_per_capita\n1   España      47.3          29500\n2  Francia      65.2             NA\n3 Alemania      83.1          37800\n4   Italia      60.4          31600\n\n\nExplicación: Este join devuelve todas las filas del primer data frame (df_paises) y las filas coincidentes del segundo data frame (df_economia). Si no hay coincidencia, se rellenan con NA. En este caso, el país “Francia” no tiene una correspondencia en el segundo data frame."
+  },
+  {
+    "objectID": "clases/clase_25.html#right-join",
+    "href": "clases/clase_25.html#right-join",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Right Join",
+    "text": "Right Join\n\n# Realizar un right join\nright_join(df_paises, \n           df_economia, \n           by = \"pais\")\n\n      pais poblacion pib_per_capita\n1   España      47.3          29500\n2 Alemania      83.1          37800\n3   Italia      60.4          31600\n4 Portugal        NA          24000\n\n\nExplicación : Este join devuelve todas las filas del segundo data frame (df_economia) y las filas coincidentes del primer data frame (df_paises). Si no hay coincidencia, se rellenan con NA. En este caso, el país “Portugal” no tiene una correspondencia en el primer data frame."
+  },
+  {
+    "objectID": "clases/clase_25.html#nombre-clave-no-coincidente",
+    "href": "clases/clase_25.html#nombre-clave-no-coincidente",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Nombre Clave No coincidente",
+    "text": "Nombre Clave No coincidente\nCambiar df_economia\n\ndf_economia2 &lt;- data.frame( Pais = c(\"España\", \"Alemania\",\n                                    \"Italia\", \"Portugal\"),\n                           pib_per_capita = c(29500, 37800, 31600, 24000) )"
+  },
+  {
+    "objectID": "clases/clase_25.html#aplicar-by",
+    "href": "clases/clase_25.html#aplicar-by",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Aplicar by",
+    "text": "Aplicar by\n\nleft_join(df_paises,\n          df_economia2,\n          by = c('pais'= 'Pais'))\n\n      pais poblacion pib_per_capita\n1   España      47.3          29500\n2  Francia      65.2             NA\n3 Alemania      83.1          37800\n4   Italia      60.4          31600\n\n\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_25.html#ejemplos-prácticos--crear-dfs",
+    "href": "clases/clase_25.html#ejemplos-prácticos--crear-dfs",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplos Prácticos -Crear DF’s",
+    "text": "Ejemplos Prácticos -Crear DF’s\n\n# Cargar la librería dplyr \nlibrary(dplyr)\n\n# Data frame de países con su población\n\ndf_paises &lt;- data.frame ( pais = c(\"España\", \"Francia\", \n                                   \"Alemania\", \"Italia\"), \n                          poblacion = c(47.3, 65.2, 83.1, 60.4) )\n\ndf_paises\n\n      pais poblacion\n1   España      47.3\n2  Francia      65.2\n3 Alemania      83.1\n4   Italia      60.4\n\n# Mostrar los data frames\n\nCrear Data Frames 2\n\n# Data frame de países con su PIB per cápita\n\ndf_economia &lt;- data.frame( pais = c(\"España\", \"Alemania\",\n                                    \"Italia\", \"Portugal\"),\n                           pib_per_capita = c(29500, 37800, 31600, 24000) )\n\ndf_economia\n\n      pais pib_per_capita\n1   España          29500\n2 Alemania          37800\n3   Italia          31600\n4 Portugal          24000"
+  },
+  {
+    "objectID": "clases/clase_25.html#ejemplos-prácticos--crear-df-1",
+    "href": "clases/clase_25.html#ejemplos-prácticos--crear-df-1",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplos Prácticos -Crear DF 1",
+    "text": "Ejemplos Prácticos -Crear DF 1\n\n# Cargar la librería dplyr \nlibrary(dplyr)\n\n# Data frame de países con su población\n\ndf_paises &lt;- data.frame ( pais = c(\"España\", \"Francia\", \n                                   \"Alemania\", \"Italia\"), \n                          poblacion = c(47.3, 65.2, 83.1, 60.4) )\n\ndf_paises\n\n      pais poblacion\n1   España      47.3\n2  Francia      65.2\n3 Alemania      83.1\n4   Italia      60.4\n\n# Mostrar los data frames"
+  },
+  {
+    "objectID": "clases/clase_25.html#crear-df-2",
+    "href": "clases/clase_25.html#crear-df-2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Crear DF 2",
+    "text": "Crear DF 2\n\n# Data frame de países con su PIB per cápita\n\ndf_economia &lt;- data.frame( pais = c(\"España\", \"Alemania\",\n                                    \"Italia\", \"Portugal\"),\n                           pib_per_capita = c(29500, 37800, 31600, 24000) )\n\ndf_economia\n\n      pais pib_per_capita\n1   España          29500\n2 Alemania          37800\n3   Italia          31600\n4 Portugal          24000"
+  },
+  {
+    "objectID": "clases/clase_23.html",
+    "href": "clases/clase_23.html",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "Generar reportes mediante el sistema de publicación Quarto. Adicionalmente, conocer diversas opciones para insertar tablas en los reportes.\nMás info en https://quarto.org/docs/output-formats/html-basics.html"
   }
 ]

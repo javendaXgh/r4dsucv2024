@@ -19,7 +19,7 @@ $presentation-title-slide-text-align: "left";
 $link-color: #3A5883;
 $code-color: #3A5883;
 $code-block-font-size: 0.6em;
-$presentation-font-size-root: 30px;
+$presentation-font-size-root: 40px;
 $presentation-h2-font-size: 1.2em;
 
 /*-- scss:rules --*/
@@ -87,7 +87,7 @@ details>summary {
 }
 
 .reveal pre code {
-  width: 500px;
+  width: 1000px;
 }
 
 .reveal .hand {
@@ -101,10 +101,10 @@ details>summary {
 }
 
 .reveal pre {
-  font-size: 14px !important;
+  font-size: 30px !important;
 }
 
 .reveal code {
-  font-size:  14px !important;
+  font-size:  30px !important;
 }
 

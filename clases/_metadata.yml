@@ -11,6 +11,7 @@ format:
     chalkboard: true
     # highlight-style: a11y-dark
 editor: visual
+lang: es
 execute:
   freeze: auto
   echo: true
