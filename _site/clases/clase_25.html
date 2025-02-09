@@ -537,21 +537,38 @@ MSc. José M. Avendaño
 </div>
 <p><strong>Explicación</strong> : Este join devuelve todas las filas del segundo data frame (df_economia) y las filas coincidentes del primer data frame (df_paises). Si no hay coincidencia, se rellenan con NA. En este caso, el país “Portugal” no tiene una correspondencia en el primer data frame.</p>
 </section>
+<section id="full-join" class="slide level2">
+<h2>Full Join</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">full_join</span>(df_paises, </span>
+<span id="cb12-2"><a></a>          df_economia, </span>
+<span id="cb12-3"><a></a>          <span class="at">by =</span> <span class="fu">c</span>(<span class="st">'pais'</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      pais poblacion pib_per_capita
+1   España      47.3          29500
+2  Francia      65.2             NA
+3 Alemania      83.1          37800
+4   Italia      60.4          31600
+5 Portugal        NA          24000</code></pre>
+</div>
+</div>
+<p><strong>Explicación</strong> : Este join devuelve todas las filas de ambos data frames. Si no hay coincidencia, se rellenan con <strong><code>NA</code></strong>. En este caso, los países “Francia” y “Portugal” no tienen una correspondencia en el otro data frame.</p>
+</section>
 <section id="nombre-clave-no-coincidente" class="slide level2">
 <h2>Nombre Clave No coincidente</h2>
 <h3 id="cambiar-df_economia">Cambiar df_economia</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>df_economia2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>( <span class="at">Pais =</span> <span class="fu">c</span>(<span class="st">"España"</span>, <span class="st">"Alemania"</span>,</span>
-<span id="cb12-2"><a></a>                                    <span class="st">"Italia"</span>, <span class="st">"Portugal"</span>),</span>
-<span id="cb12-3"><a></a>                           <span class="at">pib_per_capita =</span> <span class="fu">c</span>(<span class="dv">29500</span>, <span class="dv">37800</span>, <span class="dv">31600</span>, <span class="dv">24000</span>) )</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>df_economia2 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>( <span class="at">Pais =</span> <span class="fu">c</span>(<span class="st">"España"</span>, <span class="st">"Alemania"</span>,</span>
+<span id="cb14-2"><a></a>                                    <span class="st">"Italia"</span>, <span class="st">"Portugal"</span>),</span>
+<span id="cb14-3"><a></a>                           <span class="at">pib_per_capita =</span> <span class="fu">c</span>(<span class="dv">29500</span>, <span class="dv">37800</span>, <span class="dv">31600</span>, <span class="dv">24000</span>) )</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="aplicar-by" class="slide level2">
 <h2>Aplicar <code>by</code></h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">left_join</span>(df_paises,</span>
-<span id="cb13-2"><a></a>          df_economia2,</span>
-<span id="cb13-3"><a></a>          <span class="at">by =</span> <span class="fu">c</span>(<span class="st">'pais'</span><span class="ot">=</span> <span class="st">'Pais'</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">left_join</span>(df_paises,</span>
+<span id="cb15-2"><a></a>          df_economia2,</span>
+<span id="cb15-3"><a></a>          <span class="at">by =</span> <span class="fu">c</span>(<span class="st">'pais'</span><span class="ot">=</span> <span class="st">'Pais'</span>))</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>      pais poblacion pib_per_capita
 1   España      47.3          29500

@@ -9533,5 +9533,12 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "",
     "text": "Generar reportes mediante el sistema de publicación Quarto. Adicionalmente, conocer diversas opciones para insertar tablas en los reportes.\nMás info en https://quarto.org/docs/output-formats/html-basics.html"
+  },
+  {
+    "objectID": "clases/clase_25.html#full-join",
+    "href": "clases/clase_25.html#full-join",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Full Join",
+    "text": "Full Join\n\nfull_join(df_paises, \n          df_economia, \n          by = c('pais'))\n\n      pais poblacion pib_per_capita\n1   España      47.3          29500\n2  Francia      65.2             NA\n3 Alemania      83.1          37800\n4   Italia      60.4          31600\n5 Portugal        NA          24000\n\n\nExplicación : Este join devuelve todas las filas de ambos data frames. Si no hay coincidencia, se rellenan con NA. En este caso, los países “Francia” y “Portugal” no tienen una correspondencia en el otro data frame."
   }
 ]

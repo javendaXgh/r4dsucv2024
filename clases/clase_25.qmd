@@ -88,6 +88,16 @@ right_join(df_paises,
 
 **Explicación** : Este join devuelve todas las filas del segundo data frame (df_economia) y las filas coincidentes del primer data frame (df_paises). Si no hay coincidencia, se rellenan con NA. En este caso, el país "Portugal" no tiene una correspondencia en el primer data frame.
 
+## Full Join
+
+```{r}
+full_join(df_paises, 
+          df_economia, 
+          by = c('pais'))
+```
+
+**Explicación** : Este join devuelve todas las filas de ambos data frames. Si no hay coincidencia, se rellenan con **`NA`**. En este caso, los países "Francia" y "Portugal" no tienen una correspondencia en el otro data frame.
+
 ## Nombre Clave No coincidente
 
 ### Cambiar df_economia
