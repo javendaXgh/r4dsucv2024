@@ -8,6 +8,14 @@ format:
     incremental: true  
 ---
 
+## Objetivo
+
+Conocer distintos métodos para juntar data frames por elementos coincidentes en al menos un atributo.
+
+## Ciclo
+
+![](images/cd_ciclo_2.png){fig-align="center"}
+
 ## Introducción a los Joins
 
 Los **joins** son operaciones fundamentales en el manejo de datos que permiten combinar dos o más data frames basados en una o más columnas comunes. En R, puedes utilizar la función `dplyr::join()` para realizar diferentes tipos de joins.
