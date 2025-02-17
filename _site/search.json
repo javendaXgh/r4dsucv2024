@@ -468,7 +468,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\nAsignar Nombres Objetos y Variables\n🖥️ láminas clase 03 apoyo  💻 clase 3 apoyo versión qmd \n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n🖥️ láminas clase 04  💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\nConstruir Funciones y Data Frames\n🖥️ láminas clase 06  💻 clase 6 versión qmd  🖥️ clase 6 versión códigos  💻 clase 6: práctica 1- versión qmd  💻 clase 6: práctica 1- versión site  🎥video render Quarto 💻 clase 6: práctica 2- versión qmd  💻 clase 6: práctica 2- versión site \n\n\n\n\nmié, 6 nov.\nDF subsetting; Ayudas\n🖥️ láminas clase 07 💻 clase 7: tarea \n\n\n4\nlun, 11 nov.\nInspección DF´s / Seleccionar Valores, Subsettings-cont\n🖥️ láminas clase 08 🖥️ clase 08, versión reporte 💻 clase 8 versión qmd  💻 clase 8: tarea \n\n\n\n\nmié, 13 nov.\nPaths o Rutas de trabajo\n🖥️ láminas clase 09\n\n\n5\nlun, 18 nov.\nTrabajando con Data Frames por filas\n🖥️ láminas clase 10\n\n\n\n\nmié, 20 nov.\nTrabajando con Data Frames por columnas\n🖥️ láminas clase 11 💻 clase 11 versión qmd \n\n\n6\nlun, 25 nov.\nTrabajando con Data Frames: agrupamientos y Reframes\n🖥️ láminas clase 12 💻 clase 12 script  🖥️ clase 12, versión reporte 💻 clase 12 versión qmd \n\n\n\n\nmié, 27 nov.\nTrabajando con Data Frames: Agrupamientos y Reframes/ Asignación Ensayo\n💻 clase 13 script  🖥️ clase 13, versión reporte 💻 clase 13 versión qmd \n\n\n7\nlun, 2 dic.\nTrabajando con LLM R4DS Escuela Economía UCV\n🖥️ láminas clase 14 💻 clase 14 script \n\n\n\n\nmié, 4 dic.\nTrabajando con Data Frames y Tibbles: factores, selects, remoción duplicados. RBase: Coercion\n🖥️ láminas clase 15 💻 clase 15 script  🖥️ clase 15, versión reporte 💻 clase 15 versión qmd \n\n\n\n\nvie, 6 dic.\nTrabajando con Tibbles:Formatos Long y Wide, Valores Ausentes\nmismos materiales de clase 15\n\n\n8\nlun, 9 dic.\ntrabajando con: fechas y strings\n🖥️ láminas clase 17 💻 clase 17 script \n\n\n\n\nmié, 11 dic.\nUsando R para Análisis Económico\n💻 clase 18 script  🛢️ conjunto de datos clase 18 \n\n\n10\nlun, 13 ene.\nAvances anteproyecto- Discusión\n\n\n\n\n\n\nmié, 15 ene.\nIntroducción a la Visualizacion de Datos\n🖥️ láminas clase 19\n\n\n\n\nvie, 17 ene.\nIntroducción al Scrapy\n\n\n\n\n11\nmié, 22 ene.\nVisualizacion de Datos/ Análisis Exploratorio\n🖥️ láminas clase 20-1 🖥️ láminas clase 20-2 🖥️ láminas clase 20-3 💻 clase 20 script \n\n\n12\nlun, 27 ene.\nVisualización de Datos: GGplot y otras opciones\n🖥️ láminas clase 21 🖥️ láminas clase 21 complemento 💻 clase 21 script ggplot2  💻 clase 21 script valores acciones \n\n\n\n\nmié, 29 ene.\nIntroducción a uso de API´s\n🖥️ láminas clase 22 💻 clase 22 script \n\n\n13\nlun, 3 feb.\nReportes/Tablas DT y GT/Nombres Columnas\n🖥️ láminas clase 23 💻 clase 23 script text latex  💻 clase 23 script quarto demo  💻 clase 23 script variables environment \n\n\n\n\nmié, 5 feb.\nDashboard\n💻 clase 24 script quarto demo \n\n\n14\nlun, 10 feb.\nJoins de DF´s\n🖥️ láminas clase 25\n\n\n\n\nmié, 12 feb.\nConexiones a DB´s, lectura y escritura\n\n\n\n\n15\nlun, 17 feb.\n\n\n🖥️ láminas clase 25\n\n\n\n\nmié, 19 feb.\nPresentacion Proyecto",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\nAsignar Nombres Objetos y Variables\n🖥️ láminas clase 03 apoyo  💻 clase 3 apoyo versión qmd \n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n🖥️ láminas clase 04  💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\nConstruir Funciones y Data Frames\n🖥️ láminas clase 06  💻 clase 6 versión qmd  🖥️ clase 6 versión códigos  💻 clase 6: práctica 1- versión qmd  💻 clase 6: práctica 1- versión site  🎥video render Quarto 💻 clase 6: práctica 2- versión qmd  💻 clase 6: práctica 2- versión site \n\n\n\n\nmié, 6 nov.\nDF subsetting; Ayudas\n🖥️ láminas clase 07 💻 clase 7: tarea \n\n\n4\nlun, 11 nov.\nInspección DF´s / Seleccionar Valores, Subsettings-cont\n🖥️ láminas clase 08 🖥️ clase 08, versión reporte 💻 clase 8 versión qmd  💻 clase 8: tarea \n\n\n\n\nmié, 13 nov.\nPaths o Rutas de trabajo\n🖥️ láminas clase 09\n\n\n5\nlun, 18 nov.\nTrabajando con Data Frames por filas\n🖥️ láminas clase 10\n\n\n\n\nmié, 20 nov.\nTrabajando con Data Frames por columnas\n🖥️ láminas clase 11 💻 clase 11 versión qmd \n\n\n6\nlun, 25 nov.\nTrabajando con Data Frames: agrupamientos y Reframes\n🖥️ láminas clase 12 💻 clase 12 script  🖥️ clase 12, versión reporte 💻 clase 12 versión qmd \n\n\n\n\nmié, 27 nov.\nTrabajando con Data Frames: Agrupamientos y Reframes/ Asignación Ensayo\n💻 clase 13 script  🖥️ clase 13, versión reporte 💻 clase 13 versión qmd \n\n\n7\nlun, 2 dic.\nTrabajando con LLM R4DS Escuela Economía UCV\n🖥️ láminas clase 14 💻 clase 14 script \n\n\n\n\nmié, 4 dic.\nTrabajando con Data Frames y Tibbles: factores, selects, remoción duplicados. RBase: Coercion\n🖥️ láminas clase 15 💻 clase 15 script  🖥️ clase 15, versión reporte 💻 clase 15 versión qmd \n\n\n\n\nvie, 6 dic.\nTrabajando con Tibbles:Formatos Long y Wide, Valores Ausentes\nmismos materiales de clase 15\n\n\n8\nlun, 9 dic.\ntrabajando con: fechas y strings\n🖥️ láminas clase 17 💻 clase 17 script \n\n\n\n\nmié, 11 dic.\nUsando R para Análisis Económico\n💻 clase 18 script  🛢️ conjunto de datos clase 18 \n\n\n10\nlun, 13 ene.\nAvances anteproyecto- Discusión\n\n\n\n\n\n\nmié, 15 ene.\nIntroducción a la Visualizacion de Datos\n🖥️ láminas clase 19\n\n\n\n\nvie, 17 ene.\nIntroducción al Scrapy\n\n\n\n\n11\nmié, 22 ene.\nVisualizacion de Datos/ Análisis Exploratorio\n🖥️ láminas clase 20-1 🖥️ láminas clase 20-2 🖥️ láminas clase 20-3 💻 clase 20 script \n\n\n12\nlun, 27 ene.\nVisualización de Datos: GGplot y otras opciones\n🖥️ láminas clase 21 🖥️ láminas clase 21 complemento 💻 clase 21 script ggplot2  💻 clase 21 script valores acciones \n\n\n\n\nmié, 29 ene.\nIntroducción a uso de API´s\n🖥️ láminas clase 22 💻 clase 22 script \n\n\n13\nlun, 3 feb.\nReportes/Tablas DT y GT/Nombres Columnas\n🖥️ láminas clase 23 💻 clase 23 script text latex  💻 clase 23 script quarto demo  💻 clase 23 script variables environment \n\n\n\n\nmié, 5 feb.\nDashboard\n💻 clase 24 script quarto demo \n\n\n14\nlun, 10 feb.\nJoins de DF´s\n🖥️ láminas clase 25\n\n\n\n\nmié, 12 feb.\nConsultas Proyecto Final\n\n\n\n\n15\nlun, 17 feb.\nConexiones a DB´s, lectura y escritura\n🖥️ láminas clase 26\n\n\n\n\nmié, 19 feb.\nPresentacion Proyecto",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -9566,22 +9566,22 @@
     "objectID": "clases/clase_26.html#objetivo",
     "href": "clases/clase_26.html#objetivo",
     "title": "Ciencia de Datos para Economistas",
-    "section": "Objetivo",
-    "text": "Objetivo\n\nConocer cómo realizar operaciones fila a fila al mismo tiempo.\nRealizar conexiones de lectura y escritura a bases de datos."
+    "section": "",
+    "text": "Conocer cómo realizar operaciones fila a fila al mismo tiempo.\nRealizar conexiones de lectura y escritura a bases de datos."
   },
   {
     "objectID": "clases/clase_26.html#ciclo-1",
     "href": "clases/clase_26.html#ciclo-1",
     "title": "Ciencia de Datos para Economistas",
     "section": "Ciclo 1",
-    "text": "Ciclo 1\nrowwise"
+    "text": "Ciclo 1\n\nrowwise"
   },
   {
     "objectID": "clases/clase_26.html#ciclo-2",
     "href": "clases/clase_26.html#ciclo-2",
     "title": "Ciencia de Datos para Economistas",
     "section": "Ciclo 2",
-    "text": "Ciclo 2\nDB´s"
+    "text": "Ciclo 2\n\nDB´s"
   },
   {
     "objectID": "clases/clase_26.html#rowwise---ejemplo-1",
@@ -9616,7 +9616,7 @@
     "href": "clases/clase_26.html#cuando-no-usar-rowwise",
     "title": "Ciencia de Datos para Economistas",
     "section": "Cuando no usar rowwise()",
-    "text": "Cuando no usar rowwise()\n\nOperaciones vectorizadas: Si la operación se puede realizar de manera más eficiente usando funciones vectorizadas de dplyr o base R, ya que estas son generalmente más rápidas y sencillas.\n\n\n\n\n\n🔗 ucveconomiar4ds"
+    "text": "Cuando no usar rowwise()\n\nOperaciones vectorizadas: Si la operación se puede realizar de manera más eficiente usando funciones vectorizadas de dplyr o base R, ya que estas son generalmente más rápidas y sencillas."
   },
   {
     "objectID": "clases/clase_26.html#rowwise---ejemplo-2--cont.-1",
@@ -9631,5 +9631,12 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "Cuando usar rowwise()",
     "text": "Cuando usar rowwise()\n\nOperaciones complejas por fila: realizar cálculos o transformaciones específicas para cada fila, como aplicar una función personalizada o acceder a múltiples columnas dentro de la misma fila.\nFunciones que dependen de múltiples columnas: Si la operación requiere información de varias columnas en la misma fila."
+  },
+  {
+    "objectID": "clases/clase_26.html",
+    "href": "clases/clase_26.html",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "Conocer cómo realizar operaciones fila a fila al mismo tiempo.\nRealizar conexiones de lectura y escritura a bases de datos."
   }
 ]
