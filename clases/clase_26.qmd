@@ -1,0 +1,105 @@
+---
+title: "Ciencia de Datos para Economistas"
+subtitle: "Clase 26- rowwise"
+date: "17, february 2025"
+author: "MSc. José M. Avendaño"
+format:
+  revealjs:
+    incremental: true  
+---
+
+## Objetivo
+
+-   Conocer cómo realizar operaciones fila a fila al mismo tiempo.
+
+-   Realizar conexiones de lectura y escritura a bases de datos.
+
+## Ciclo 1
+
+### rowwise
+
+![](images/cd_ciclo_2.png)
+
+## Ciclo 2
+
+### DB´s
+
+![](images/cd_ciclo_1.png)
+
+## **Cuando usar `rowwise()`**
+
+-   **Operaciones complejas por fila:** realizar cálculos o transformaciones específicas para cada fila, como aplicar una función personalizada o acceder a múltiples columnas dentro de la misma fila.
+
+-   **Funciones que dependen de múltiples columnas:** Si la operación requiere información de varias columnas en la misma fila.
+
+## rowwise - ejemplo 1
+
+Ejemplo 1: Calcular el promedio de una columna basado en otro valor de la misma fila
+
+```{r}
+library(dplyr)
+
+df_1 <- data.frame(
+  x = c(1, 2, 3),
+  y = c(4, 5, 6))
+
+
+df_1 %>% 
+  mutate(promedio_xy = mean(c(x, y)))
+
+```
+
+## rowwise - ejemplo 1 -cont.
+
+```{r}
+
+df_1 %>% 
+  rowwise() %>% 
+  mutate(promedio_xy = mean(c(x, y)))
+```
+
+## rowwise - ejemplo 2
+
+Ejemplo 2: calcular ratio por fila
+
+```{r}
+# Crear un tibble
+datos <- tribble(
+  ~id, ~valor1, ~valor2,
+  "A", 10, 5,
+  "B", 40, 3,
+  "C", 9, 7
+)
+
+datos
+
+```
+
+## rowwise - ejemplo 2- cont.
+
+```{r}
+# Crear una función 
+mi_funcion <- function(x, y) {
+  sum(x, y)*mean(c(x,y))
+}
+mi_funcion(5,3)
+```
+
+## rowwise - ejemplo 2- cont.
+
+```{r}
+# Sin rowwise aplicar la función personalizada
+datos %>%
+  mutate(resultado = mi_funcion(valor1, valor2))
+```
+
+```{r}
+# Usar rowwise para aplicar la función
+datos %>%
+  rowwise() %>%
+  mutate(resultado = mi_funcion(valor1, valor2))
+```
+
+## **Cuando no usar `rowwise()`**
+
+-   **Operaciones vectorizadas:** Si la operación se puede realizar de manera más eficiente usando funciones vectorizadas de dplyr o base R, ya que estas son generalmente más rápidas y sencillas.
