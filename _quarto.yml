@@ -82,13 +82,19 @@ website:
           - href: proyectos/merlab/merlab.qmd
           - href: proyectos/merbur/merbur.qmd
             text: "Análisis de Acciones BVC"
+          - href: proyectos/atm/atm.qmd
+            text: "Análisis Funcionamiento ATM"
+          - href: proyectos/opep/opep.qmd
+            text: "Tendencias OPEP"
+            
+          
 
 
   page-footer:
     right: "Este sitio fue elaborado con [Quarto](https://quarto.org/) inspirado en el site [sta199 de Mine Çetinkaya-Rundel](https://mine-cr.com/teaching/sta199/)"
     background: "#5d6d74"
     left: |
-      [![](images/escuelaeconomiawbg.png){fig-alt="Escuela de Economía" width=75px}](http://www.ucv.ve/economia)
+      [![](images/ee.png){fig-alt="Escuela de Economía" width=75px}](http://www.ucv.ve/economia)
 lang: es    
 format:
   html:

@@ -9805,7 +9805,7 @@
     "href": "proyectos/merbur/merbur.html#optimización-y-limpieza-del-dataframe",
     "title": "Análisis de las Acciones del Índice Financiero de la Bolsa de Valores de Caracas: 2023-2025",
     "section": "Optimización y Limpieza del DataFrame",
-    "text": "Optimización y Limpieza del DataFrame\n\nSe combinan los datos obtenidos en un solo data.frame y se renombran columnas para mayor claridad.\n\n\nSe convierte la columna de fecha de texto a tipo Date.\n\n\nIdentificación de acción: Se añade una columna ACCION para identificar el símbolo correspondiente.\n\n\nLimpieza de datos numéricos: Se sustituyen comas por puntos para permitir la conversión correcta a tipo numérico.\n\n\nCódigo\ndatos_totales &lt;- map_df(names(datos_finales), function(simbolo) {\n  # Extraer el componente relevante\n  df &lt;- datos_finales[[simbolo]]$cur_hist_mov_emisora\n  if (is.null(df)) {\n    return(data.frame(ACCION = simbolo))\n  }\n  \n  df &lt;- as.data.frame(df)\n  \n  # Renombrar columnas según el formato requerido\n  colnames(df) &lt;- c(\"FECHA\", \"PRECIO_APERT\", \"PRECIO_CIE\", \"VAR_ABS\", \"VAR_REL\", \n                    \"PRECIO_MAX\", \"PRECIO_MIN\", \"N_OPERACIONES\", \n                    \"TITULOS_NEGOCIADOS\", \"MONTO_EFECTIVO\")[1:ncol(df)]\n  \n  # Convertir la columna FECHA al formato Date (formato original: 'dd-mm-yy')\n  df$FECHA &lt;- as_date(df$FECHA, format = '%d-%m-%y')\n  \n  # Agregar la columna ACCION\n  df$ACCION &lt;- simbolo\n  \n  return(df)\n}) %&gt;%\n  # Limpiar columnas numéricas: reemplazar puntos y comas para que sean interpretadas como números\n  mutate(across(\n    c(PRECIO_APERT, PRECIO_CIE, VAR_ABS, VAR_REL, \n      PRECIO_MAX, PRECIO_MIN, N_OPERACIONES, \n      TITULOS_NEGOCIADOS, MONTO_EFECTIVO),\n    ~ as.numeric(gsub(\",\", \".\", gsub(\"\\\\.\", \"\", .)))\n  ))\n\n# Verificar la estructura final del DataFrame\nstr(datos_totales)\n\n\n'data.frame':   6594 obs. of  11 variables:\n $ FECHA             : Date, format: \"2025-02-18\" \"2025-02-17\" ...\n $ PRECIO_APERT      : num  4.21 4.14 4.1 3.85 3.85 3.8 3.9 3.9 4.35 4 ...\n $ PRECIO_CIE        : num  4.2 4.21 4.14 4.1 3.85 3.85 3.8 3.9 3.9 4.35 ...\n $ VAR_ABS           : num  -0.01 0.07 0.04 0.25 0 0.05 -0.1 0 -0.45 0.35 ...\n $ VAR_REL           : num  -0.24 1.66 0.97 6.1 0 ...\n $ PRECIO_MAX        : num  4.23 4.23 4.3 4.14 4 3.88 3.89 4 4.34 4.35 ...\n $ PRECIO_MIN        : num  4.1 4.14 4.1 3.85 3.85 3.8 3.79 3.8 3.9 4.05 ...\n $ N_OPERACIONES     : num  54 61 47 52 38 60 54 59 39 66 ...\n $ TITULOS_NEGOCIADOS: num  20581 9797 21894 48745 365637 ...\n $ MONTO_EFECTIVO    : num  86222 41302 91524 196334 1407897 ...\n $ ACCION            : chr  \"BPV\" \"BPV\" \"BPV\" \"BPV\" ...\n\n\n\n\n3. Filtrado de Datos por Rango de Fechas\n\n\nSe filtran los datos para conservar únicamente el período comprendido entre enero de 2023 y febrero de 2025.\n\n\nCódigo\n# Definir el rango de fechas\ninicio &lt;- as.Date(\"2023-01-01\")\nfin    &lt;- as.Date(\"2025-02-16\")  # Incluye febrero 2025\n\n# Filtrar el DataFrame para el rango deseado\ndatos_filtrados &lt;- datos_totales %&gt;% \n  filter(FECHA &gt;= inicio & FECHA &lt;= fin)\n\n# Visualizar las primeras filas del conjunto filtrado\nhead(datos_filtrados)\n\n\n       FECHA PRECIO_APERT PRECIO_CIE VAR_ABS VAR_REL PRECIO_MAX PRECIO_MIN\n1 2025-02-14         4.10       4.14    0.04    0.97       4.30       4.10\n2 2025-02-13         3.85       4.10    0.25    6.10       4.14       3.85\n3 2025-02-12         3.85       3.85    0.00    0.00       4.00       3.85\n4 2025-02-11         3.80       3.85    0.05    1.30       3.88       3.80\n5 2025-02-10         3.90       3.80   -0.10   -2.63       3.89       3.79\n6 2025-02-07         3.90       3.90    0.00    0.00       4.00       3.80\n  N_OPERACIONES TITULOS_NEGOCIADOS MONTO_EFECTIVO ACCION\n1            47              21894       91524.25    BPV\n2            52              48745      196334.30    BPV\n3            38             365637     1407897.18    BPV\n4            60              54700      208731.09    BPV\n5            54              18586       70787.24    BPV\n6            59              36261      141295.01    BPV\n\n\n\n\nVisualización de tabla Interactiva del DataFrame\n\n\nCódigo\ndatatable(datos_filtrados,\n          rownames = FALSE,\n          #\n          options = list(\n            dom = 'frtip',  # 'f' = filtro, 'r' = procesamiento, 't' = tabla, 'i' = info, 'p' = paginación\n            lengthChange = FALSE,\n            language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json'),\n            pageLength = 5,\n            initComplete = JS(\n              \"function(settings, json) {\",\n              \"$(this.api().table().header()).css({'background-color': '#224eb2','color': '#fff'});\",\n              \"}\"\n            ),\n            Filter = 0\n          ),\n          escape = FALSE\n) %&gt;% \n  formatStyle(columns = colnames(.), fontSize = '50%')\n\n\n\n\n\n\n\n\n4. Visualización de Gráficos\n\n\nSe realizan dos tipos de visualizaciones para explorar la evolución de las acciones:\n\n\n4.1. Gráficas Independientes por Acción\n\n\nTenemos un gráfico interactivo con Plotly que muestra la evolución del precio de cierre de varias acciones de la Bolsa de Valores de Caracas (BVC), permitiendo seleccionar qué acción visualizar a través de un menú interactivo.\n\n\nCódigo\n# Cargar librerías necesarias\nlibrary(plotly)\nlibrary(dplyr)\nlibrary(scales)\n\n# Lista única de acciones\nacciones &lt;- unique(datos_filtrados$ACCION)\n\n# Crear una lista para almacenar la información de cada traza\ntrazas &lt;- list()\nfor (accion in acciones) {\n  datos_accion &lt;- datos_filtrados %&gt;% filter(ACCION == accion)\n  \n  # Definir el texto a mostrar en el hover (tooltip)\n  hover_text &lt;- paste(\"Fecha:\", datos_accion$FECHA,\n                      \"&lt;br&gt;Precio Cierre:\", dollar(datos_accion$PRECIO_CIE, prefix = \"bs\"),\n                      \"&lt;br&gt;N_OPERACIONES:\", datos_accion$N_OPERACIONES,\n                      \"&lt;br&gt;TITULOS_NEGOCIADOS:\", datos_accion$TITULOS_NEGOCIADOS,\n                      \"&lt;br&gt;MONTO_EFECTIVO:\", datos_accion$MONTO_EFECTIVO)\n  \n  trazas[[accion]] &lt;- list(\n    x = datos_accion$FECHA,\n    y = datos_accion$PRECIO_CIE,\n    type = 'scatter',\n    mode = 'lines',\n    name = accion,\n    line = list(width = 1.5),\n    text = hover_text,\n    hoverinfo = \"text\"  # Se indica que se usará el texto personalizado en el hover\n  )\n}\n\n# Definir la visibilidad inicial: solo se muestra la primera acción\nvisibilidad_inicial &lt;- sapply(acciones, function(x) x == acciones[1])\n\n# Crear los botones del menú superior\nbotones &lt;- lapply(seq_along(acciones), function(i) {\n  # Vector de visibilidad: solo la traza i es visible\n  vis &lt;- rep(FALSE, length(acciones))\n  vis[i] &lt;- TRUE\n  list(\n    method = \"update\",\n    args = list(\n      list(visible = vis),  # Actualiza la visibilidad de las trazas\n      list(title = paste(\"Evolución del Precio de Cierre de\", acciones[i]))\n    ),\n    label = acciones[i]\n  )\n})\n\n# Construir el gráfico\nfig &lt;- plot_ly()\nfor (i in seq_along(acciones)) {\n  accion &lt;- acciones[i]\n  fig &lt;- fig %&gt;% add_trace(\n    x = trazas[[accion]]$x,\n    y = trazas[[accion]]$y,\n    type = trazas[[accion]]$type,\n    mode = trazas[[accion]]$mode,\n    name = trazas[[accion]]$name,\n    line = trazas[[accion]]$line,\n    text = trazas[[accion]]$text,\n    hoverinfo = trazas[[accion]]$hoverinfo,\n    visible = visibilidad_inicial[i]\n  )\n}\n\n# Configurar el layout del gráfico (incluye menú de actualización y rangos)\nfig &lt;- fig %&gt;% layout(\n  title = paste(\"Evolución del Precio de Cierre de\", acciones[1]),\n  updatemenus = list(\n    list(\n      type = \"buttons\",\n      direction = \"right\",\n      x = 0.5,  # Ajusta la posición horizontal según convenga\n      y = 1.15, # Ajusta la posición vertical (por encima del gráfico)\n      showactive = TRUE,\n      buttons = botones\n    )\n  ),\n  xaxis = list(\n    title = \"Fecha\",\n    rangeselector = list(\n      buttons = list(\n        list(count = 7, label = \"1 Semana\", step = \"day\", stepmode = \"backward\"),\n        list(count = 1, label = \"1 Mes\", step = \"month\", stepmode = \"backward\"),\n        list(count = 6, label = \"6 Meses\", step = \"month\", stepmode = \"backward\"),\n        list(count = 1, label = \"1 Año\", step = \"year\", stepmode = \"backward\"),\n        list(step = \"all\", label = \"Todo\")\n      )\n    ),\n    rangeslider = list(visible = TRUE)\n  ),\n  yaxis = list(title = \"Precio de Cierre (Bs)\")\n)\n\n# Mostrar el gráfico\nfig\n\n\n\n\n\n\n\n\nEn este gráfico se muestra la evolución del precio de cierre de varias acciones del Índice Financiero de BVC, este muestra todas las acciones en el mismo gráfico sin un menú de selección, lo que permite visualizar simultáneamente la evolución de cada una.\n\n\nCódigo\n# Cargar librerías necesarias\nlibrary(plotly)\nlibrary(dplyr)\nlibrary(scales)\n\n# Supongamos que 'datos_filtrados' es tu data frame con las columnas mencionadas.\n\n# Crear el gráfico compartido\nfig &lt;- plot_ly()\n\nfor (accion in unique(datos_filtrados$ACCION)) {\n  datos_accion &lt;- datos_filtrados %&gt;% filter(ACCION == accion)\n  \n  # Crear el texto para el tooltip\n  hover_text &lt;- paste(\"Fecha:\", datos_accion$FECHA,\n                      \"&lt;br&gt;Precio Cierre:\", dollar(datos_accion$PRECIO_CIE, prefix = \"Bs\"),\n                      \"&lt;br&gt;N_OPERACIONES:\", datos_accion$N_OPERACIONES,\n                      \"&lt;br&gt;TITULOS_NEGOCIADOS:\", datos_accion$TITULOS_NEGOCIADOS,\n                      \"&lt;br&gt;MONTO_EFECTIVO:\", datos_accion$MONTO_EFECTIVO)\n  \n  fig &lt;- fig %&gt;% add_trace(\n    x = datos_accion$FECHA,\n    y = datos_accion$PRECIO_CIE,\n    type = 'scatter',\n    mode = 'lines',\n    name = accion,\n    line = list(width = 2),\n    text = hover_text,\n    hoverinfo = \"text\"\n  )\n}\n\n# Configurar el layout del gráfico\nfig &lt;- fig %&gt;% layout(\n  title = \"Evolución del Precio de Cierre - Acciones del Índice Financiero de Caracas\",\n  xaxis = list(\n    title = \"Fecha\",\n    rangeselector = list(\n      buttons = list(\n        list(count = 7, label = \"1 Semana\", step = \"day\", stepmode = \"backward\"),\n        list(count = 1, label = \"1 Mes\", step = \"month\", stepmode = \"backward\"),\n        list(count = 6, label = \"6 Meses\", step = \"month\", stepmode = \"backward\"),\n        list(count = 1, label = \"1 Año\", step = \"year\", stepmode = \"backward\"),\n        list(step = \"all\", label = \"Todo\")\n      )\n    ),\n    rangeslider = list(visible = TRUE)\n  ),\n  yaxis = list(title = \"Precio de Cierre (Bs)\"),\n  legend = list(\n    orientation = 'h',  # Leyenda horizontal\n    x = 0.5,\n    xanchor = 'center',\n    y = 1.15\n  )\n)\n\n# Mostrar el gráfico\nfig\n\n\n\n\n\n\n\n\n5. Análisis del Volumen Negociado\n\n\nSe analiza el volumen de negociación (títulos negociados) por año y acción, determinando cuál es la acción con mayor volumen negociado cada año y se genera un gráfico comparativo.\n\n\nCálculo del Volumen Anual\n\n\nCódigo\nlibrary(dplyr)\nlibrary(lubridate)\n\n# Agregar la columna 'Año' a partir de 'FECHA'\ndatos_filtrados &lt;- datos_filtrados %&gt;%\n  mutate(Año = year(FECHA))\n\n# Resumen anual: total negociado por cada acción en cada año\nvolumen_anual &lt;- datos_filtrados %&gt;%\n  group_by(ACCION, Año) %&gt;%\n  summarise(total_vol = sum(TITULOS_NEGOCIADOS, na.rm = TRUE)) %&gt;%\n  ungroup()\n\n\n\n\nIdentificación de la Acción con Mayor Volumen por Año\n\n\nCódigo\naccion_favorita_anual &lt;- volumen_anual %&gt;%\n  group_by(Año) %&gt;%\n  filter(total_vol == max(total_vol)) %&gt;%  # Selecciona la acción con el mayor volumen en cada año\n  arrange(Año) %&gt;%\n  ungroup()\n\n# Mostrar la acción favorita por año\nprint(accion_favorita_anual)\n\n\n# A tibble: 3 × 3\n  ACCION   Año total_vol\n  &lt;chr&gt;  &lt;dbl&gt;     &lt;dbl&gt;\n1 BNC     2023 480023500\n2 BNC     2024 184172700\n3 BNC     2025  11084665\n\n\n\n\nGráfico Comparativo del Volumen Negociado\n\n\nCódigo\nlibrary(plotly)\n\nfig_bar &lt;- plot_ly(volumen_anual, \n                   x = ~Año, \n                   y = ~total_vol, \n                   color = ~ACCION, \n                   type = 'bar') %&gt;%\n  layout(title = \"Comparativa del Volumen Negociado por Año y Acción\",\n         xaxis = list(title = \"Año\"),\n         yaxis = list(title = \"Total de Títulos Negociados\"),\n         barmode = 'group',\n         legend = list(title = list(text = \"&lt;b&gt;Acción&lt;/b&gt;\")))\nfig_bar",
+    "text": "Optimización y Limpieza del DataFrame\n\nSe combinan los datos obtenidos en un solo data.frame y se renombran columnas para mayor claridad.\n\n\nSe convierte la columna de fecha de texto a tipo Date.\n\n\nIdentificación de acción: Se añade una columna ACCION para identificar el símbolo correspondiente.\n\n\nLimpieza de datos numéricos: Se sustituyen comas por puntos para permitir la conversión correcta a tipo numérico.\n\n\nCódigo\ndatos_totales &lt;- map_df(names(datos_finales), function(simbolo) {\n  # Extraer el componente relevante\n  df &lt;- datos_finales[[simbolo]]$cur_hist_mov_emisora\n  if (is.null(df)) {\n    return(data.frame(ACCION = simbolo))\n  }\n  \n  df &lt;- as.data.frame(df)\n  \n  # Renombrar columnas según el formato requerido\n  colnames(df) &lt;- c(\"FECHA\", \"PRECIO_APERT\", \"PRECIO_CIE\", \"VAR_ABS\", \"VAR_REL\", \n                    \"PRECIO_MAX\", \"PRECIO_MIN\", \"N_OPERACIONES\", \n                    \"TITULOS_NEGOCIADOS\", \"MONTO_EFECTIVO\")[1:ncol(df)]\n  \n  # Convertir la columna FECHA al formato Date (formato original: 'dd-mm-yy')\n  df$FECHA &lt;- as_date(df$FECHA, format = '%d-%m-%y')\n  \n  # Agregar la columna ACCION\n  df$ACCION &lt;- simbolo\n  \n  return(df)\n}) %&gt;%\n  # Limpiar columnas numéricas: reemplazar puntos y comas para que sean interpretadas como números\n  mutate(across(\n    c(PRECIO_APERT, PRECIO_CIE, VAR_ABS, VAR_REL, \n      PRECIO_MAX, PRECIO_MIN, N_OPERACIONES, \n      TITULOS_NEGOCIADOS, MONTO_EFECTIVO),\n    ~ as.numeric(gsub(\",\", \".\", gsub(\"\\\\.\", \"\", .)))\n  ))\n\n# Verificar la estructura final del DataFrame\nstr(datos_totales)\n\n\n'data.frame':   6600 obs. of  11 variables:\n $ FECHA             : Date, format: \"2025-02-19\" \"2025-02-18\" ...\n $ PRECIO_APERT      : num  4.2 4.21 4.14 4.1 3.85 3.85 3.8 3.9 3.9 4.35 ...\n $ PRECIO_CIE        : num  4.22 4.2 4.21 4.14 4.1 3.85 3.85 3.8 3.9 3.9 ...\n $ VAR_ABS           : num  0.02 -0.01 0.07 0.04 0.25 0 0.05 -0.1 0 -0.45 ...\n $ VAR_REL           : num  0.47 -0.24 1.66 0.97 6.1 ...\n $ PRECIO_MAX        : num  4.22 4.23 4.23 4.3 4.14 4 3.88 3.89 4 4.34 ...\n $ PRECIO_MIN        : num  4.2 4.1 4.14 4.1 3.85 3.85 3.8 3.79 3.8 3.9 ...\n $ N_OPERACIONES     : num  41 54 61 47 52 38 60 54 59 39 ...\n $ TITULOS_NEGOCIADOS: num  77817 20581 9797 21894 48745 ...\n $ MONTO_EFECTIVO    : num  326981 86222 41302 91524 196334 ...\n $ ACCION            : chr  \"BPV\" \"BPV\" \"BPV\" \"BPV\" ...\n\n\n\n\n3. Filtrado de Datos por Rango de Fechas\n\n\nSe filtran los datos para conservar únicamente el período comprendido entre enero de 2023 y febrero de 2025.\n\n\nCódigo\n# Definir el rango de fechas\ninicio &lt;- as.Date(\"2023-01-01\")\nfin    &lt;- as.Date(\"2025-02-16\")  # Incluye febrero 2025\n\n# Filtrar el DataFrame para el rango deseado\ndatos_filtrados &lt;- datos_totales %&gt;% \n  filter(FECHA &gt;= inicio & FECHA &lt;= fin)\n\n# Visualizar las primeras filas del conjunto filtrado\nhead(datos_filtrados)\n\n\n       FECHA PRECIO_APERT PRECIO_CIE VAR_ABS VAR_REL PRECIO_MAX PRECIO_MIN\n1 2025-02-14         4.10       4.14    0.04    0.97       4.30       4.10\n2 2025-02-13         3.85       4.10    0.25    6.10       4.14       3.85\n3 2025-02-12         3.85       3.85    0.00    0.00       4.00       3.85\n4 2025-02-11         3.80       3.85    0.05    1.30       3.88       3.80\n5 2025-02-10         3.90       3.80   -0.10   -2.63       3.89       3.79\n6 2025-02-07         3.90       3.90    0.00    0.00       4.00       3.80\n  N_OPERACIONES TITULOS_NEGOCIADOS MONTO_EFECTIVO ACCION\n1            47              21894       91524.25    BPV\n2            52              48745      196334.30    BPV\n3            38             365637     1407897.18    BPV\n4            60              54700      208731.09    BPV\n5            54              18586       70787.24    BPV\n6            59              36261      141295.01    BPV\n\n\n\n\nVisualización de tabla Interactiva del DataFrame\n\n\nCódigo\ndatatable(datos_filtrados,\n          rownames = FALSE,\n          #\n          options = list(\n            dom = 'frtip',  # 'f' = filtro, 'r' = procesamiento, 't' = tabla, 'i' = info, 'p' = paginación\n            lengthChange = FALSE,\n            language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json'),\n            pageLength = 5,\n            initComplete = JS(\n              \"function(settings, json) {\",\n              \"$(this.api().table().header()).css({'background-color': '#224eb2','color': '#fff'});\",\n              \"}\"\n            ),\n            Filter = 0\n          ),\n          escape = FALSE\n) %&gt;% \n  formatStyle(columns = colnames(.), fontSize = '50%')\n\n\n\n\n\n\n\n\n4. Visualización de Gráficos\n\n\nSe realizan dos tipos de visualizaciones para explorar la evolución de las acciones:\n\n\n4.1. Gráficas Independientes por Acción\n\n\nTenemos un gráfico interactivo con Plotly que muestra la evolución del precio de cierre de varias acciones de la Bolsa de Valores de Caracas (BVC), permitiendo seleccionar qué acción visualizar a través de un menú interactivo.\n\n\nCódigo\n# Cargar librerías necesarias\nlibrary(plotly)\nlibrary(dplyr)\nlibrary(scales)\n\n# Lista única de acciones\nacciones &lt;- unique(datos_filtrados$ACCION)\n\n# Crear una lista para almacenar la información de cada traza\ntrazas &lt;- list()\nfor (accion in acciones) {\n  datos_accion &lt;- datos_filtrados %&gt;% filter(ACCION == accion)\n  \n  # Definir el texto a mostrar en el hover (tooltip)\n  hover_text &lt;- paste(\"Fecha:\", datos_accion$FECHA,\n                      \"&lt;br&gt;Precio Cierre:\", dollar(datos_accion$PRECIO_CIE, prefix = \"bs\"),\n                      \"&lt;br&gt;N_OPERACIONES:\", datos_accion$N_OPERACIONES,\n                      \"&lt;br&gt;TITULOS_NEGOCIADOS:\", datos_accion$TITULOS_NEGOCIADOS,\n                      \"&lt;br&gt;MONTO_EFECTIVO:\", datos_accion$MONTO_EFECTIVO)\n  \n  trazas[[accion]] &lt;- list(\n    x = datos_accion$FECHA,\n    y = datos_accion$PRECIO_CIE,\n    type = 'scatter',\n    mode = 'lines',\n    name = accion,\n    line = list(width = 1.5),\n    text = hover_text,\n    hoverinfo = \"text\"  # Se indica que se usará el texto personalizado en el hover\n  )\n}\n\n# Definir la visibilidad inicial: solo se muestra la primera acción\nvisibilidad_inicial &lt;- sapply(acciones, function(x) x == acciones[1])\n\n# Crear los botones del menú superior\nbotones &lt;- lapply(seq_along(acciones), function(i) {\n  # Vector de visibilidad: solo la traza i es visible\n  vis &lt;- rep(FALSE, length(acciones))\n  vis[i] &lt;- TRUE\n  list(\n    method = \"update\",\n    args = list(\n      list(visible = vis),  # Actualiza la visibilidad de las trazas\n      list(title = paste(\"Evolución del Precio de Cierre de\", acciones[i]))\n    ),\n    label = acciones[i]\n  )\n})\n\n# Construir el gráfico\nfig &lt;- plot_ly()\nfor (i in seq_along(acciones)) {\n  accion &lt;- acciones[i]\n  fig &lt;- fig %&gt;% add_trace(\n    x = trazas[[accion]]$x,\n    y = trazas[[accion]]$y,\n    type = trazas[[accion]]$type,\n    mode = trazas[[accion]]$mode,\n    name = trazas[[accion]]$name,\n    line = trazas[[accion]]$line,\n    text = trazas[[accion]]$text,\n    hoverinfo = trazas[[accion]]$hoverinfo,\n    visible = visibilidad_inicial[i]\n  )\n}\n\n# Configurar el layout del gráfico (incluye menú de actualización y rangos)\nfig &lt;- fig %&gt;% layout(\n  title = paste(\"Evolución del Precio de Cierre de\", acciones[1]),\n  updatemenus = list(\n    list(\n      type = \"buttons\",\n      direction = \"right\",\n      x = 0.5,  # Ajusta la posición horizontal según convenga\n      y = 1.15, # Ajusta la posición vertical (por encima del gráfico)\n      showactive = TRUE,\n      buttons = botones\n    )\n  ),\n  xaxis = list(\n    title = \"Fecha\",\n    rangeselector = list(\n      buttons = list(\n        list(count = 7, label = \"1 Semana\", step = \"day\", stepmode = \"backward\"),\n        list(count = 1, label = \"1 Mes\", step = \"month\", stepmode = \"backward\"),\n        list(count = 6, label = \"6 Meses\", step = \"month\", stepmode = \"backward\"),\n        list(count = 1, label = \"1 Año\", step = \"year\", stepmode = \"backward\"),\n        list(step = \"all\", label = \"Todo\")\n      )\n    ),\n    rangeslider = list(visible = TRUE)\n  ),\n  yaxis = list(title = \"Precio de Cierre (Bs)\")\n)\n\n# Mostrar el gráfico\nfig\n\n\n\n\n\n\n\n\nEn este gráfico se muestra la evolución del precio de cierre de varias acciones del Índice Financiero de BVC, este muestra todas las acciones en el mismo gráfico sin un menú de selección, lo que permite visualizar simultáneamente la evolución de cada una.\n\n\nCódigo\n# Cargar librerías necesarias\nlibrary(plotly)\nlibrary(dplyr)\nlibrary(scales)\n\n# Supongamos que 'datos_filtrados' es tu data frame con las columnas mencionadas.\n\n# Crear el gráfico compartido\nfig &lt;- plot_ly()\n\nfor (accion in unique(datos_filtrados$ACCION)) {\n  datos_accion &lt;- datos_filtrados %&gt;% filter(ACCION == accion)\n  \n  # Crear el texto para el tooltip\n  hover_text &lt;- paste(\"Fecha:\", datos_accion$FECHA,\n                      \"&lt;br&gt;Precio Cierre:\", dollar(datos_accion$PRECIO_CIE, prefix = \"Bs\"),\n                      \"&lt;br&gt;N_OPERACIONES:\", datos_accion$N_OPERACIONES,\n                      \"&lt;br&gt;TITULOS_NEGOCIADOS:\", datos_accion$TITULOS_NEGOCIADOS,\n                      \"&lt;br&gt;MONTO_EFECTIVO:\", datos_accion$MONTO_EFECTIVO)\n  \n  fig &lt;- fig %&gt;% add_trace(\n    x = datos_accion$FECHA,\n    y = datos_accion$PRECIO_CIE,\n    type = 'scatter',\n    mode = 'lines',\n    name = accion,\n    line = list(width = 2),\n    text = hover_text,\n    hoverinfo = \"text\"\n  )\n}\n\n# Configurar el layout del gráfico\nfig &lt;- fig %&gt;% layout(\n  title = \"Evolución del Precio de Cierre - Acciones del Índice Financiero de Caracas\",\n  xaxis = list(\n    title = \"Fecha\",\n    rangeselector = list(\n      buttons = list(\n        list(count = 7, label = \"1 Semana\", step = \"day\", stepmode = \"backward\"),\n        list(count = 1, label = \"1 Mes\", step = \"month\", stepmode = \"backward\"),\n        list(count = 6, label = \"6 Meses\", step = \"month\", stepmode = \"backward\"),\n        list(count = 1, label = \"1 Año\", step = \"year\", stepmode = \"backward\"),\n        list(step = \"all\", label = \"Todo\")\n      )\n    ),\n    rangeslider = list(visible = TRUE)\n  ),\n  yaxis = list(title = \"Precio de Cierre (Bs)\"),\n  legend = list(\n    orientation = 'h',  # Leyenda horizontal\n    x = 0.5,\n    xanchor = 'center',\n    y = 1.15\n  )\n)\n\n# Mostrar el gráfico\nfig\n\n\n\n\n\n\n\n\n5. Análisis del Volumen Negociado\n\n\nSe analiza el volumen de negociación (títulos negociados) por año y acción, determinando cuál es la acción con mayor volumen negociado cada año y se genera un gráfico comparativo.\n\n\nCálculo del Volumen Anual\n\n\nCódigo\nlibrary(dplyr)\nlibrary(lubridate)\n\n# Agregar la columna 'Año' a partir de 'FECHA'\ndatos_filtrados &lt;- datos_filtrados %&gt;%\n  mutate(Año = year(FECHA))\n\n# Resumen anual: total negociado por cada acción en cada año\nvolumen_anual &lt;- datos_filtrados %&gt;%\n  group_by(ACCION, Año) %&gt;%\n  summarise(total_vol = sum(TITULOS_NEGOCIADOS, na.rm = TRUE)) %&gt;%\n  ungroup()\n\n\n\n\nIdentificación de la Acción con Mayor Volumen por Año\n\n\nCódigo\naccion_favorita_anual &lt;- volumen_anual %&gt;%\n  group_by(Año) %&gt;%\n  filter(total_vol == max(total_vol)) %&gt;%  # Selecciona la acción con el mayor volumen en cada año\n  arrange(Año) %&gt;%\n  ungroup()\n\n# Mostrar la acción favorita por año\nprint(accion_favorita_anual)\n\n\n# A tibble: 3 × 3\n  ACCION   Año total_vol\n  &lt;chr&gt;  &lt;dbl&gt;     &lt;dbl&gt;\n1 BNC     2023 480023500\n2 BNC     2024 184172700\n3 BNC     2025  11084665\n\n\n\n\nGráfico Comparativo del Volumen Negociado\n\n\nCódigo\nlibrary(plotly)\n\nfig_bar &lt;- plot_ly(volumen_anual, \n                   x = ~Año, \n                   y = ~total_vol, \n                   color = ~ACCION, \n                   type = 'bar') %&gt;%\n  layout(title = \"Comparativa del Volumen Negociado por Año y Acción\",\n         xaxis = list(title = \"Año\"),\n         yaxis = list(title = \"Total de Títulos Negociados\"),\n         barmode = 'group',\n         legend = list(title = list(text = \"&lt;b&gt;Acción&lt;/b&gt;\")))\nfig_bar",
     "crumbs": [
       "Proyectos",
       "Análisis de Acciones BVC"
@@ -9875,6 +9875,694 @@
     "crumbs": [
       "Proyectos",
       "Análisis del mercado laboral para economistas en Venezuela"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html",
+    "href": "proyectos/atm/atm.html",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "",
+    "text": "Código\nlibrary(rsconnect)\nlibrary(DT)\nlibrary(plotly)\nlibrary(osmdata)\nlibrary(tidyverse)\nlibrary(sf)\nlibrary(leaflet)\nlibrary(dplyr)\nlibrary(tibble)\nlibrary(stringr)\nlibrary(leaflet.extras)",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#introducción",
+    "href": "proyectos/atm/atm.html#introducción",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Introducción",
+    "text": "Introducción\nEn el contexto económico actual, el acceso a servicios financieros eficientes es crucial. Los cajeros automáticos (ATMs) son un componente clave de esta infraestructura, facilitando el acceso a efectivo y servicios bancarios. Este trabajo se centra en la distribución de ATMs en Caracas, un tema relevante para la economía local, pues la disponibilidad de ATMs puede influir en transacciones económicas, inclusión financiera, eficiencia del sistema de pagos y desarrollo local. Exploraremos la distribución de ATMs en Caracas, identificando patrones y discutiendo sus implicaciones económicas.",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#planteamiento-del-problema",
+    "href": "proyectos/atm/atm.html#planteamiento-del-problema",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Planteamiento del problema",
+    "text": "Planteamiento del problema\nAnalisis del impacto que existe en el funcionamiento y operatividad de los ATMS, así como las tarifas que cobran las instituciones financieras por sus distintos servicios (depósitos y retiros) en la región de Caracas.\nFuentes de datos a consutar: Página del Banco Central de Venezuela. Páginas de las distintas intituciones financieras del país. Página del SUDEBAN.\nA pesar de la importancia de los ATMs en la economía, su distribución y acceso no siempre son óptimos. En muchas ciudades, incluyendo Caracas, pueden existir áreas con una alta concentración de ATMs y otras con una escasez relativa. Esta situación plantea una serie de interrogantes y problemas que requieren un análisis profundo, como, por ejemplo: • ¿Existe una distribución equitativa de ATMs en Caracas o hay áreas donde la población tiene dificultad para acceder al servicio?",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#metodología",
+    "href": "proyectos/atm/atm.html#metodología",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Metodología",
+    "text": "Metodología\nPara llevar a cabo este análisis, se han seguido los siguientes pasos:\nCarga de librerías: Se cargaron las librerías necesarias para el análisis, las cuales incluyen rsconnect, DT, plotly, osmdata, tidyverse, sf, leaflet, dplyr, tibble, stringr y leaflet.extras. Estas librerías proporcionan las herramientas para la manipulación de datos, visualización y análisis espacial.",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#definición-de-funciones",
+    "href": "proyectos/atm/atm.html#definición-de-funciones",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Definición de funciones:",
+    "text": "Definición de funciones:\nSe definieron dos funciones principales:\ntipos(): Esta función extrae los tipos de amenidades de un conjunto de datos, específicamente la columna ‘amenity’. Maneja casos donde los datos pueden ser nulos o la columna ‘amenity’ no está presente.\nFunción para extraer tipos de amenidades\n\n\nCódigo\ntipos &lt;- function(data, numero) { \n  columnas &lt;- c('amenity') \n  if (!is.null(data)) { \n    if ('amenity' %in% names(data)) { \n      data1 &lt;- data %&gt;% drop_na(name) %&gt;% \n        select(columnas) %&gt;% as.data.frame() %&gt;% .[, 1] \n    } else { \n        data1 &lt;- rep('s/c', numero) \n    } \n  } else { \n    data1 &lt;- NULL \n  }\n\nvec_tipos &lt;- c(data1) %&gt;% replace_na('s/c')\nclases &lt;- unique(vec_tipos)[!is.na(unique(vec_tipos))]\nlist(vec_tipos = vec_tipos, clases = clases)\n}",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#función-para-extraer-coordenadas-y-texto",
+    "href": "proyectos/atm/atm.html#función-para-extraer-coordenadas-y-texto",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Función para extraer coordenadas y texto",
+    "text": "Función para extraer coordenadas y texto\ncoords_SfToDf(): Esta función extrae coordenadas y texto (nombre y dirección) de datos espaciales en formato sf. Procesa puntos, multipolígonos y polígonos, y filtra los resultados para incluir solo ATMs en Caracas.\n\n\nCódigo\ncoords_SfToDf &lt;- function(data) {\n  if (!is.null(data$osm_points)) {\n    data1 &lt;- data$osm_points %&gt;%\n      drop_na(name)\n  } else {\n    data1 &lt;- NULL\n  }\n  \n  if (!is.null(data$osm_multipolygons)) {\n    data2 &lt;- data$osm_multipolygons %&gt;%\n      drop_na(name)\n  } else {\n    data2 &lt;- NULL\n  }\n  \n  if (!is.null(data$osm_polygons)) {\n    data3 &lt;- data$osm_polygons %&gt;%\n      drop_na(name)\n  } else {\n    data3 &lt;- NULL\n  }\n  \n  # Crear vectores de nombre y dirección\n  nombre &lt;- c(\n    paste(data3$name,\n          ifelse(!is.na(data3$addr.housename), data3$addr.housename, ''), \n          ifelse(!is.na(data3$`addr:street`), data3$`addr:street`, ''),',',\n          data3$`addr:city`),\n    paste(data1$name,\n          ifelse(!is.na(data1$addr.housename), data1$addr.housename, ''), \n          ifelse(!is.na(data3$`addr:street`), data3$`addr:street`,''),',',\n          data3$`addr:city`)\n  )\n  \n  \n  # Extraer coordenadas\n  if (!is.null(data1)) {\n    # Filtrar solo las filas donde `addr:city` es \"Caracas\" esto se hace para poder solo ver los atm de Caracas \n    data1_filtered &lt;- data1 %&gt;% filter(`addr:city` == \"Caracas\")\n    \n    # Si hay datos filtrados, extraer las coordenadas\n    if (nrow(data1_filtered) &gt; 0) {\n      df_point1 &lt;- do.call(rbind, st_geometry(data1_filtered$geometry)) %&gt;%\n        as_tibble() %&gt;%\n        setNames(c(\"long\", \"lat\"))\n    } else {\n      df_point1 &lt;- NULL  # No hay datos que cumplan la condición\n    }\n  } else {\n    df_point1 &lt;- NULL\n  }\n  # View(data2)\n  if (!is.null(data2)) {\n    df_point2 &lt;- do.call(rbind, st_centroid(data2$geometry)) %&gt;%\n      as_tibble() %&gt;%\n      setNames(c(\"long\", \"lat\"))\n  } else {\n    df_point2 &lt;- NULL\n  }\n  \n  \n  if (!is.null(data3)) {\n    df_point3 &lt;- do.call(rbind, st_centroid(data3$geometry)) %&gt;%\n      as_tibble() %&gt;%\n      setNames(c(\"long\", \"lat\"))\n  } else {\n    df_point3 &lt;- NULL\n  }\n  \n  # Combinar resultados\n  df_puntos &lt;- rbind(df_point3, df_point1) %&gt;%\n    cbind(nombre = nombre[1:nrow(.)])\n  \n}",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#creación-de-dataframes",
+    "href": "proyectos/atm/atm.html#creación-de-dataframes",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Creación de dataframes:",
+    "text": "Creación de dataframes:\nSe crearon dataframes a partir de los datos de osmdata, utilizando las funciones definidas previamente (coords_SfToDf()). Se realizaron correcciones y limpieza de datos, como la eliminación de nombres de bancos repetidos y la corrección de direcciones.\nSe crea la df con los puntos y texto popup de mapa\n\n\nCódigo\ndf_puntos &lt;- coords_SfToDf(atm_ccs1)",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#url-de-un-ícono-personalizado",
+    "href": "proyectos/atm/atm.html#url-de-un-ícono-personalizado",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "URL de un ícono personalizado",
+    "text": "URL de un ícono personalizado\n\n\nCódigo\nicon_url &lt;- \"/Users/josemiguelavendanoinfante/R/UCV_ECONOMIA_R4DS/r4dsucv2024/proyectos/atm/retiro-de-efectivo.png\"\n\n\ncustom_icon &lt;- makeIcon(iconUrl = icon_url, iconWidth = 30,\n                        iconHeight = 30, \n                        iconAnchorX = 25, iconAnchorY = 40)",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#definir-la-zona-de-interés",
+    "href": "proyectos/atm/atm.html#definir-la-zona-de-interés",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Definir la zona de interés",
+    "text": "Definir la zona de interés\n\n\nCódigo\nbbox_poly &lt;- getbb(\"Venezuela, Caracas\", format_out = \"sf_polygon\")\nif (!inherits(bbox_poly, \"sf\")) bbox_poly &lt;- st_as_sf(bbox_poly)",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#crear-el-mapa-con-los-atms-y-mostrar-el-popup-al-pasar-el-cursor",
+    "href": "proyectos/atm/atm.html#crear-el-mapa-con-los-atms-y-mostrar-el-popup-al-pasar-el-cursor",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Crear el mapa con los ATMs y mostrar el popup al pasar el cursor",
+    "text": "Crear el mapa con los ATMs y mostrar el popup al pasar el cursor\n\n\nCódigo\nleaflet(bbox_poly) %&gt;%\n  addTiles() %&gt;%\n  addPolygons(data = bbox_poly, fillColor = \"#AF7595\", \n              fillOpacity = 0.3, color = \"#8C2155\", \n              weight = 2) %&gt;%\n  addMarkers(df_puntos$long, df_puntos$lat,\n             popup = df_puntos$nombre,  # Popup al hacer clic\n             label = df_puntos$nombre,  # Info al pasar el cursor\n             labelOptions = labelOptions(noHide = FALSE, direction = \"auto\"),\n             icon = custom_icon)",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#visualizacion-de-datos",
+    "href": "proyectos/atm/atm.html#visualizacion-de-datos",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Visualizacion de datos",
+    "text": "Visualizacion de datos\nTabla interactiva: Se creó una tabla interactiva utilizando la librería DT. Esta tabla muestra información detallada sobre los ATMs, incluyendo el nombre del banco y la dirección. La interactividad de la tabla permite al usuario realizar búsquedas, ordenar los datos por columnas y navegar a través de la información.",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#función-para-extraer-coordenadas-y-texto-con-dirección",
+    "href": "proyectos/atm/atm.html#función-para-extraer-coordenadas-y-texto-con-dirección",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Función para extraer coordenadas y texto con dirección",
+    "text": "Función para extraer coordenadas y texto con dirección\n\n\nCódigo\ncoords_SfToDf_2 &lt;- function(data) {\n  if (!is.null(data$osm_points)) {\n    data1 &lt;- data$osm_points %&gt;%\n      drop_na(name)\n  } else {\n    data1 &lt;- NULL\n  }\n  \n  if (!is.null(data$osm_multipolygons)) {\n    data2 &lt;- data$osm_multipolygons %&gt;%\n      drop_na(name)\n  } else {\n    data2 &lt;- NULL\n  }\n  \n  if (!is.null(data$osm_polygons)) {\n    data3 &lt;- data$osm_polygons %&gt;%\n      drop_na(name)\n  } else {\n    data3 &lt;- NULL\n  }\n  \n  # Extraer el nombre del banco y dirección\n  nombre &lt;- c(\n    paste(data3$name),\n    paste(data1$name)\n  )\n  \n  direccion &lt;- c(\n    paste(data3$`addr:street`, \",\", data3$`addr:city`),\n    paste(data1$`addr:street`, \",\", data1$`addr:city`)\n  )\n  \n  # Extraer coordenadas solo de puntos en Caracas\n  if (!is.null(data1)) {\n    data1_filtered &lt;- data1 %&gt;% filter(`addr:city` == \"Caracas\")\n    if (nrow(data1_filtered) &gt; 0) {\n      df_point1 &lt;- do.call(rbind, st_geometry(data1_filtered$geometry)) %&gt;%\n        as_tibble() %&gt;%\n        setNames(c(\"long\", \"lat\"))\n    } else {\n      df_point1 &lt;- NULL\n    }\n  } else {\n    df_point1 &lt;- NULL\n  }\n  \n  if (!is.null(data2)) {\n    df_point2 &lt;- do.call(rbind, st_centroid(data2$geometry)) %&gt;%\n      as_tibble() %&gt;%\n      setNames(c(\"long\", \"lat\"))\n  } else {\n    df_point2 &lt;- NULL\n  }\n  \n  if (!is.null(data3)) {\n    df_point3 &lt;- do.call(rbind, st_centroid(data3$geometry)) %&gt;%\n      as_tibble() %&gt;%\n      setNames(c(\"long\", \"lat\"))\n  } else {\n    df_point3 &lt;- NULL\n  }\n  \n  # Crear el dataframe final con nombre, dirección y coordenadas\n  df_puntos &lt;- rbind(df_point3, df_point1) %&gt;%\n    cbind(nombre = nombre[1:nrow(.)], direccion = direccion[1:nrow(.)])\n  \n  return(df_puntos)\n}",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#crear-el-dataframe-con-los-datos-correctos",
+    "href": "proyectos/atm/atm.html#crear-el-dataframe-con-los-datos-correctos",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Crear el dataframe con los datos correctos",
+    "text": "Crear el dataframe con los datos correctos\n\n\nCódigo\ndf_puntos &lt;- coords_SfToDf_2(atm_ccs2)",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#corregir-las-direcciones",
+    "href": "proyectos/atm/atm.html#corregir-las-direcciones",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Corregir las direcciones",
+    "text": "Corregir las direcciones\n\n\nCódigo\ndf_puntos &lt;- df_puntos %&gt;%\n  mutate(direccion = str_replace(direccion, \", Caracas\", \".\"))",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#seleccionar-solo-nombre-del-banco-y-dirección-para-la-tabla-interactiva",
+    "href": "proyectos/atm/atm.html#seleccionar-solo-nombre-del-banco-y-dirección-para-la-tabla-interactiva",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Seleccionar solo nombre del banco y dirección para la tabla interactiva",
+    "text": "Seleccionar solo nombre del banco y dirección para la tabla interactiva\n\n\nCódigo\ndf_puntos2 &lt;- df_puntos %&gt;%\n  select(Banco = nombre, Dirección = direccion)",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#lista-de-reemplazos",
+    "href": "proyectos/atm/atm.html#lista-de-reemplazos",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Lista de reemplazos",
+    "text": "Lista de reemplazos\nSe realiza todos los reemplazos necesarios en los nombres de los bancos.\n\n\nCódigo\nreemplazos &lt;- c(\n  \"Rovincial\" = \"BBVA Provincial\",\n  \"rovincial\" = \"BBVA Provincial\",\n  \"Banlus\" = \"Banplus\",\n  \"BBVA cial\" = \"BBVA Provincial\",\n  \"BBVA rovincial\" = \"BBVA Provincial\",\n  \"Edficio Centro Emesarial Caracas\" = \"Edificio Centro Empresarial Caracas\",\n  \"cial\" = \"BBVA Provincial\",\n  \"anco de Venezuela\" = \"Banco de Venezuela\",\n  \"Venezuela\" = \"Banco de Venezuela\",\n  \"anco Agrícola de Venezuela\" = \"Banco Agrícola de Venezuela\",\n  \"anco e Venezuela\" = \"Banco de Venezuela\",\n  \"anco el Sur\" = \"Banco el Sur\",\n  \"anco el Tesoro\" = \"Banco el Tesoro\",\n  \"anco igital los Trabajadores\" = \"Banco Digital de los Trabajadores\",\n  \"anco igital de los Trabajadores\" = \"Banco Digital de los Trabajadores\",\n  \"anco Municial e Crédito Popular\" = \"Banco Municial de Crédito Popular\",\n  \"anco Nacional e Crédito\" = \"Banco Nacional de Crédito\",\n  \"anco Venezolano e Crédito\" = \"Banco Venezolano de Crédito\",\n  \"See del anco Venezolano de Credito\" = \"Banco Venezolano de Crédito\",\n  \"100% anco\" = \"100% Banco\",\n  \"ancamiga\" = \"Bancamiga\",\n  \"ancaribe\" = \"Bancaribe\",\n  \"anco Activo\" = \"Banco Activo\",\n  \"anco Agrícola Venezuela\" = \"Banco Agrícola Venezuela\",\n  \"anco Caroní\" = \"Banco Caroní\",\n  \"anco igital los Trajaores\" = \"Banco Digital los Trabajadores\",\n  \"anco Exterior\" = \"Banco Exterior\",\n  \"anco Fono Común\" = \"Banco Fondo Común\",\n  \"anco Mercantil\" = \"Banco Mercantil\",\n  \"anco Nacional e Créito\" = \"Banco Nacional de Crédito\",\n  \"anco Sofitasa\" = \"Banco Sofitasa\",\n  \"anesco\" = \"Banesco\",\n  \"ancrecer\" = \"Bancrecer\",\n  \"BVA rovincial\" = \"BBVA Provincial\",\n  \"icentenario\" = \"Banco Bicentenario\",\n  \"Ciuad anesco\" = \"Ciudad Banesco\",\n  \"Mi anco\" = \"Mi Banco\",\n  \"See l anco Venezolano de Creito\" = \"Banco Nacional de Crédito\",\n  \"Tesoro\" = \"Banco del Tesoro\",\n  \"Provincial\" = \"BBVA Provincial\", \n  \"BBVA Provinial\" = \"BBVA Provincial\", \n  \"Provincial\" = \"BBVA Provincial\"\n)",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#aplicar-los-reemplazos-en-la-columna-banco-del-dataframe",
+    "href": "proyectos/atm/atm.html#aplicar-los-reemplazos-en-la-columna-banco-del-dataframe",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Aplicar los reemplazos en la columna “Banco” del dataframe",
+    "text": "Aplicar los reemplazos en la columna “Banco” del dataframe\nCreamos una nueva df para agregar los valores modificados\n\n\nCódigo\ndf_puntos &lt;- df_puntos %&gt;%\n  mutate(Banco = str_replace_all('Banco', reemplazos))",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#crear-la-tabla-interactiva-con-colores-personalizados",
+    "href": "proyectos/atm/atm.html#crear-la-tabla-interactiva-con-colores-personalizados",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Crear la tabla interactiva con colores personalizados",
+    "text": "Crear la tabla interactiva con colores personalizados\n\n\nCódigo\ntabla_interactiva &lt;- datatable(df_puntos2, \n                               options = list(\n                                 pageLength = 10,\n                                 autoWidth = TRUE,\n                                 searchHighlight = TRUE,\n                                 dom = 'Bfrtip',\n                                 buttons = c('copy', 'csv', 'excel', 'pdf', 'print')\n                               ),\n                               filter = \"top\",\n                               rownames = FALSE) %&gt;%\n  formatStyle(\n    columns = colnames(df_puntos2),  # Aplicar a todas las columnas\n    backgroundColor = '#FAF6F6',  # Fondo azul claro\n    color = '#1A1B41',  # Texto azul oscuro\n    fontWeight = 'bold'  # Texto en negrita\n  )",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#mostrar-la-tabla-tabla_interactiva",
+    "href": "proyectos/atm/atm.html#mostrar-la-tabla-tabla_interactiva",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Mostrar la tabla tabla_interactiva",
+    "text": "Mostrar la tabla tabla_interactiva\n\n\nCódigo\ntabla_interactiva",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#creación-del-mapa-de-calor",
+    "href": "proyectos/atm/atm.html#creación-del-mapa-de-calor",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Creación del mapa de calor",
+    "text": "Creación del mapa de calor\nMapa de calor: Se generó un mapa de calor utilizando la librería leaflet y la función addHeatmap(). Este mapa muestra la densidad de ATMs en diferentes áreas de Caracas, permitiendo identificar zonas con mayor concentración de ATMs.\nEn esta sección vamos a evaluar la cercania de los ATMs generando un mapa de calor.\n\n\nCódigo\ncaracas_poly &lt;- opq(\"Caracas, Venezuela\") %&gt;% \n  add_osm_feature(key = \"boundary\", value = \"administrative\") %&gt;% \n  osmdata_sf()",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#extraer-el-polígono-de-los-datos-osm",
+    "href": "proyectos/atm/atm.html#extraer-el-polígono-de-los-datos-osm",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Extraer el polígono de los datos OSM",
+    "text": "Extraer el polígono de los datos OSM\n\n\nCódigo\ncaracas_polygon &lt;- caracas_poly$osm_multipolygons %&gt;% \n  filter(admin_level == \"8\") %&gt;%  # Filtrar el nivel administrativo adecuado\n  st_geometry() %&gt;% \n  st_union() %&gt;% \n  st_as_sf()",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#convertir-a-formato-compatible-con-leaflet",
+    "href": "proyectos/atm/atm.html#convertir-a-formato-compatible-con-leaflet",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Convertir a formato compatible con leaflet",
+    "text": "Convertir a formato compatible con leaflet\n\n\nCódigo\ncaracas_polygon &lt;- st_transform(caracas_polygon, crs = 4326)",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#prepara-los-datos-para-el-mapa-de-calor",
+    "href": "proyectos/atm/atm.html#prepara-los-datos-para-el-mapa-de-calor",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Prepara los datos para el mapa de calor",
+    "text": "Prepara los datos para el mapa de calor\n\n\nCódigo\ndf_calor &lt;- df_puntos %&gt;%\n  select(long, lat) %&gt;%\n  mutate(peso = 1) # Asigna un peso a cada punto",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#crear-el-mapa-de-calor-con-la-delimitación-de-caracas",
+    "href": "proyectos/atm/atm.html#crear-el-mapa-de-calor-con-la-delimitación-de-caracas",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Crear el mapa de calor con la delimitación de Caracas",
+    "text": "Crear el mapa de calor con la delimitación de Caracas\n\n\nCódigo\nmapa_calor &lt;- leaflet(df_calor) %&gt;%\n  addTiles() %&gt;%\n  addPolygons(data = caracas_polygon, color = \"#3A0CA3\", weight = 4, fill = FALSE, opacity = 1) %&gt;%\n  addHeatmap(lng = ~long, lat = ~lat, intensity = ~peso, radius = 20, blur = 10) %&gt;%\n  setView(lng = mean(st_coordinates(st_centroid(caracas_polygon))[,1]),\n          lat = mean(st_coordinates(st_centroid(caracas_polygon))[,2]),\n          zoom = 12) # Centrar el mapa en Caracas",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#mostrar-el-mapa-de-calor",
+    "href": "proyectos/atm/atm.html#mostrar-el-mapa-de-calor",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Mostrar el mapa de calor",
+    "text": "Mostrar el mapa de calor\n\n\nCódigo\nmapa_calor",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#anexo-grafico-y-tabla",
+    "href": "proyectos/atm/atm.html#anexo-grafico-y-tabla",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "ANEXO GRAFICO Y TABLA",
+    "text": "ANEXO GRAFICO Y TABLA\nGráfico de barras interactivo: Se creó un gráfico de barras interactivo con la librería plotly. Este gráfico muestra la cantidad de ATMs por banco, permitiendo al usuario identificar los bancos con mayor presencia en la ciudad. La interactividad del gráfico permite al usuario pasar el cursor sobre las barras para obtener información detallada sobre cada banco.",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#crear-un-nuevo-data-frame-copiando-el-data-frame-existente",
+    "href": "proyectos/atm/atm.html#crear-un-nuevo-data-frame-copiando-el-data-frame-existente",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Crear un nuevo data frame copiando el data frame existente",
+    "text": "Crear un nuevo data frame copiando el data frame existente\n\n\nCódigo\nnuevo_df &lt;- atm_ccs1\nnuevo_df &lt;- as.data.frame(nuevo_df$osm_points)",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#convertir-en-una-dataframe-la-data-extraida-de-la-api",
+    "href": "proyectos/atm/atm.html#convertir-en-una-dataframe-la-data-extraida-de-la-api",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Convertir en una dataframe la data extraida de la API",
+    "text": "Convertir en una dataframe la data extraida de la API\nEsta línea de código utiliza la función is.na() para identificar los valores NA en la columna “name” de nuevo_df. El operador invierte el resultado de is.na(), de manera que se seleccionan las filas que no tienen NA en la columna “name”.\n\n\nCódigo\nnuevo_df &lt;- nuevo_df[!is.na(nuevo_df$name), ]",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#contar-ocurrencias-de-cada-nombre-que-esta-en-la-columna-que-me-interesa-en-este-caso-la-columna-que-trae-los-nombres-de-los-bancos-y-me-suma-una-a-una-las-filas-de-los-n-ombres-que-son-iguales.",
+    "href": "proyectos/atm/atm.html#contar-ocurrencias-de-cada-nombre-que-esta-en-la-columna-que-me-interesa-en-este-caso-la-columna-que-trae-los-nombres-de-los-bancos-y-me-suma-una-a-una-las-filas-de-los-n-ombres-que-son-iguales.",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Contar ocurrencias de cada nombre que esta en la columna que me interesa en este caso la columna que trae los nombres de los bancos y me suma una a una las filas de los n ombres que son iguales.",
+    "text": "Contar ocurrencias de cada nombre que esta en la columna que me interesa en este caso la columna que trae los nombres de los bancos y me suma una a una las filas de los n ombres que son iguales.\n\n\nCódigo\nnuevo_df %&gt;% count(name, sort = TRUE)\n\n\n                                 name   n\n1                             Banesco 107\n2                  Banco de Venezuela 103\n3                           Mercantil  74\n4                     BBVA Provincial  72\n5           Banco Nacional de Crédito  67\n6                   Banco Fondo Común  44\n7                              Tesoro  42\n8   Banco Digital de los Trabajadores  31\n9                      Banco Exterior  29\n10        Banco Venezolano de Crédito  28\n11                          Bancaribe  27\n12                          Bancrecer  20\n13                         100% Banco  17\n14                        Banco Plaza  16\n15                            Banplus  16\n16                          Bancamiga  11\n17                       Banco Activo  11\n18                       Banco Caroní  10\n19                    Banco Mercantil   7\n20                          Venezuela   7\n21                      Banco Del Sur   5\n22                         Provincial   5\n23                     Banco Sofitasa   4\n24                       Bicentenario   4\n25                           Exterior   4\n26        Banco Agrícola de Venezuela   3\n27                            BANFANB   2\n28                   Banco Del Tesoro   2\n29                           Mi Banco   2\n30                             Activo   1\n31                    Avenida El Lago   1\n32                                BFC   1\n33 Banco Municipal de Crédito Popular   1\n34                     Banco del Alba   1\n35                           Banmujer   1\n36                            Del Sur   1",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#muestro-el-contador-de-las-filas",
+    "href": "proyectos/atm/atm.html#muestro-el-contador-de-las-filas",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "muestro el contador de las filas",
+    "text": "muestro el contador de las filas",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#lista-de-nombres-de-los-bancos-que-deseas-eliminar-porque-ya-estan-repetidos",
+    "href": "proyectos/atm/atm.html#lista-de-nombres-de-los-bancos-que-deseas-eliminar-porque-ya-estan-repetidos",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Lista de nombres de los bancos que deseas eliminar porque ya estan repetidos",
+    "text": "Lista de nombres de los bancos que deseas eliminar porque ya estan repetidos\n\n\nCódigo\nnombres_a_eliminar &lt;- c( \"Banco Mercantil\",\"Banco Del Tesoro\",\"BFC\",\"Activo\",\"Venezuela\",\"Venezuela\",\"Provincial\",\"Exterior\", \"Avenida El Lago\",\"Bicentenario\")",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#filtrar-las-filas-donde-la-columna-name-no-contenga-los-nombres-que-deseas-eliminar",
+    "href": "proyectos/atm/atm.html#filtrar-las-filas-donde-la-columna-name-no-contenga-los-nombres-que-deseas-eliminar",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Filtrar las filas donde la columna ‘name’ NO contenga los nombres que deseas eliminar",
+    "text": "Filtrar las filas donde la columna ‘name’ NO contenga los nombres que deseas eliminar\n\n\nCódigo\nnuevo_df_filtrado &lt;- nuevo_df %&gt;% filter(!name %in% nombres_a_eliminar)",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#contar-ocurrencias-de-cada-nombre-en-las-filas-de-mayor-a-menor",
+    "href": "proyectos/atm/atm.html#contar-ocurrencias-de-cada-nombre-en-las-filas-de-mayor-a-menor",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Contar ocurrencias de cada nombre en las filas de mayor a menor",
+    "text": "Contar ocurrencias de cada nombre en las filas de mayor a menor\n\n\nCódigo\nconteos &lt;- nuevo_df_filtrado %&gt;% count(name, sort = TRUE)",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#crear-una-tabla-interactiva",
+    "href": "proyectos/atm/atm.html#crear-una-tabla-interactiva",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Crear una tabla interactiva",
+    "text": "Crear una tabla interactiva\n\n\nCódigo\ndatatable(conteos, options = list(pageLength = 10, autoWidth = TRUE))",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#crear-el-gráfico-interactivo.",
+    "href": "proyectos/atm/atm.html#crear-el-gráfico-interactivo.",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Crear el gráfico interactivo.",
+    "text": "Crear el gráfico interactivo.\n\n\nCódigo\nfig &lt;- plot_ly(conteos, x = ~name, y = ~n, type = 'bar', name = 'banco')\nfig &lt;- fig %&gt;% layout(title = 'ATM POR BANCOS',\n                      xaxis = list(title = 'BANCOS'),\n                      yaxis = list(title = 'ATMS'))",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#mostrar-el-gráfico.",
+    "href": "proyectos/atm/atm.html#mostrar-el-gráfico.",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Mostrar el gráfico.",
+    "text": "Mostrar el gráfico.\n\n\nCódigo\nfig",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/atm/atm.html#conclusión",
+    "href": "proyectos/atm/atm.html#conclusión",
+    "title": "Analisis del funcionamiento de los ATM en Caracas",
+    "section": "Conclusión",
+    "text": "Conclusión\nGracias a la visualización de los datos en los mapas, hemos podido identificar la distribución de los cajeros automáticos (ATMs) en Caracas. El mapa de calor resalta la concentración de estos en ciertas zonas, como en Altamira, la Avenida Libertador (especialmente cerca del C.C. El Sambil) y la Avenida Francisco de Miranda, donde los cajeros están más agrupados. Por otro lado, en áreas como La Trinidad, El Hatillo, Prados del Este y El Cafetal, se observa que los cajeros están más dispersos.\nTambién con nuestro mapa interactivo podemos observar los cajeros y sus direcciones al igual que con nuestra tabla interactiva que podemos filtrar por nombre de banco o dirección.\nCon la información recolectada, pudimos plasmar la cantidad de cajeros existentes por bancos, sin embargo no tenemos la certeza de si la mayoría de los ATMs están o no operativos.",
+    "crumbs": [
+      "Proyectos",
+      "Análisis Funcionamiento ATM"
+    ]
+  },
+  {
+    "objectID": "proyectos/opep/opep.html",
+    "href": "proyectos/opep/opep.html",
+    "title": "Reporte",
+    "section": "",
+    "text": "library(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ forcats   1.0.0     ✔ readr     2.1.5\n✔ ggplot2   3.5.1     ✔ stringr   1.5.1\n✔ lubridate 1.9.4     ✔ tibble    3.2.1\n✔ purrr     1.0.2     ✔ tidyr     1.3.1\n\n\n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(readxl)\nlibrary(tidyr)\ntabla_produccion&lt;-read_excel(path=\"Crude_oil_production_in_OPEC_and_Price_Average_Annual_DoC (2).xlsx\", range = \"A3:BM18\")\n\ntabla_canasta &lt;- read_excel(path=\"cesta_opep.xlsx\", range= \"A3:AP15\")\n\n#formato largo canasta\n\n# Transformar la tabla y renombrar columnas en español\ntabla_canasta_long &lt;- tabla_canasta %&gt;%\n  rename(paises = Contries) %&gt;%  \n  pivot_longer(\n    cols = -paises,              \n    names_to = \"Ano\",            \n    values_to = \"Tipo_Petroleo\" )\n    \n  \n\n###eliminamos las columnas innecesarias####\ntabla_produccion_corregida&lt;-tabla_produccion%&gt;%\n  select(-(2:21), -(63:65))\n\n####transformamos de wide a longer donde damos###\n###un nuevo nombre a las columnas y organizamos por year###\ntabla_produccion_largo&lt;-tabla_produccion_corregida%&gt;%\n  pivot_longer(\n    cols =-Contries,\n    names_to = \"ano\",\n    values_to = \"produccion_pais\"\n  )%&gt;%\n  rename(paises=Contries)%&gt;%\n  arrange(ano)\n\n\n### en este caso vamos a filtrar unas filas, transformarlas a wide###\n### donde tomaremos los tittulos de la columna \"paises\" y los valores###\n### de la columna \"produccion\", luego con ! eliminaremos esas filas y vamos###\n### a unir con nuestras nuevas columnas con left_join y lo haremos por orden de year###\n\nfilas_a_transformar1 &lt;- tabla_produccion_corregida %&gt;%\n  filter(Contries %in% c(\"OPEC\",\"Price OPEP\",\"Price Average Annual\"))\n\n\nfilas_transformada_long &lt;- filas_a_transformar1 %&gt;%\n  pivot_longer(\n    cols = -Contries, \n    names_to = \"year\",\n    values_to = \"value\")\n\nfilas_long&lt;-filas_transformada_long%&gt;%\n  pivot_wider(\n    names_from = Contries,\n    values_from = value\n  )\n\n\n\n\n# Transformar las filas usando pivot_wider\n# Transformar la tabla a formato largo y crear la columna produccion_pais\n\n\nproduccion_final &lt;- tabla_produccion_largo %&gt;%\n  filter(!paises %in% c(\"OPEC\", \"Price OPEP\", \"Price Average Annual\")) %&gt;%  \n  left_join(filas_long, by = c(\"ano\" = \"year\")) %&gt;%\n  rename(produccion_opep = OPEC)\n\n# Renombrar las columnas\n# Convertir las columnas a formato numérico\n# Convertir las columnas a formato numérico\n#Convertir las columnas a formato numérico\n\nproduccion_final &lt;- produccion_final %&gt;%\n  mutate(\n    ano = as.numeric(ano),\n    `Price Average Annual` = round(as.numeric(`Price Average Annual`), 1)\n  ) \n\n\n\nlibrary(tidyverse)\nlibrary(ggplot2)\n\n\n\n\n#Convertir la columna \"ano\" a tipo numérico\ntabla_canasta_long &lt;- tabla_canasta_long %&gt;%\n  mutate(Ano = as.numeric(Ano)) \n\n\n# Unir los dataframes \"produccion_final\" y \"tabla_canasta_long\" usando left_join\nproduccion_final_unida &lt;- produccion_final %&gt;%\n  left_join(tabla_canasta_long, by = c(\"paises\" = \"paises\", \"ano\" = \"Ano\"))\n\n ####se creo una columna de porcentaje en la tabla df produccion_final_unida\nproduccion_final_unida &lt;- produccion_final_unida %&gt;%\n  mutate(porcentaje_produccion = (produccion_pais / produccion_opep) * 100,2)\n\nproduccion_final_unida &lt;- produccion_final_unida %&gt;%\n  mutate(porcentaje_produccion = round((produccion_pais / produccion_opep) * 100, 2))\n \n\nproduccion_final_unida &lt;- produccion_final_unida %&gt;%\n  select(-`2`)\n\n\n# resumen estadistico \nproduccion_final_unida %&gt;%\n  select(produccion_opep, `Price OPEP`, `Price Average Annual`)\n\n# A tibble: 492 × 3\n   produccion_opep `Price OPEP` `Price Average Annual`\n             &lt;dbl&gt;        &lt;dbl&gt;                  &lt;dbl&gt;\n 1          24685.         35.5                   36.8\n 2          24685.         35.5                   36.8\n 3          24685.         35.5                   36.8\n 4          24685.         35.5                   36.8\n 5          24685.         35.5                   36.8\n 6          24685.         35.5                   36.8\n 7          24685.         35.5                   36.8\n 8          24685.         35.5                   36.8\n 9          24685.         35.5                   36.8\n10          24685.         35.5                   36.8\n# ℹ 482 more rows\n\n# Producción promedio por país ###reframe no sumarise ya lo dijo en diciembre 86\nproduccion_final_unida %&gt;%\n  group_by(paises) %&gt;%\n  reframe(\n    produccion_promedio_paises = mean(produccion_pais)\n  ) %&gt;%\n  arrange(desc(produccion_promedio_paises))\n\n# A tibble: 12 × 2\n   paises               produccion_promedio_paises\n   &lt;chr&gt;                                     &lt;dbl&gt;\n 1 Saudi Arabia                              7989.\n 2 IR Iran                                   3180.\n 3 Venezuela                                 2330.\n 4 Iraq                                      2228.\n 5 United Arab Emirates                      2151.\n 6 Kuwait                                    1958.\n 7 Nigeria                                   1788.\n 8 Libya                                     1213.\n 9 Algeria                                    941.\n10 Gabon                                      239.\n11 Congo                                      208.\n12 Equatorial Guinea                          114.\n\n#Precios promedios por año\nprecios_anuales &lt;- produccion_final_unida %&gt;%\n  group_by(ano) %&gt;%\n  reframe(\n    precio_opep = mean(`Price OPEP`, na.rm = TRUE),\n    precio_global = mean(`Price Average Annual`, na.rm = TRUE)\n  ) %&gt;%\n  ungroup() # Desagrupar después de la operación\nA continuación desglosaremos el informe de la construcción del codigo en 2 partes.",
+    "crumbs": [
+      "Proyectos",
+      "Tendencias OPEP"
+    ]
+  },
+  {
+    "objectID": "proyectos/opep/opep.html#primera-parte-data-frame.-importar-ordenar-transformar.",
+    "href": "proyectos/opep/opep.html#primera-parte-data-frame.-importar-ordenar-transformar.",
+    "title": "Reporte",
+    "section": "Primera parte: Data Frame. (Importar, Ordenar, Transformar).",
+    "text": "Primera parte: Data Frame. (Importar, Ordenar, Transformar).",
+    "crumbs": [
+      "Proyectos",
+      "Tendencias OPEP"
+    ]
+  },
+  {
+    "objectID": "proyectos/opep/opep.html#segunda-parte-mapa-grafícos-y-tablas.",
+    "href": "proyectos/opep/opep.html#segunda-parte-mapa-grafícos-y-tablas.",
+    "title": "Reporte",
+    "section": "Segunda parte: (Mapa, Grafícos y Tablas).",
+    "text": "Segunda parte: (Mapa, Grafícos y Tablas).\nEn el primer paso con el comando ‘library()’ corrimos los paquetes ‘tidyverse’, ‘dplyr’, ‘readxl, ’tidyr’.\n\ndplyr: Con este codigo activamos las funciones para organizar las filas por columnas, selecionar las columnas, ordenar datos, agraparlos y crear nuevas variables.\ntidyverse: Es con conjunto de paquetes de R que integran otros como ‘ggplot2’ (para graficas datos) , ‘readr’ (para visualizar datos), ‘tidyr’ (para organizar datos).",
+    "crumbs": [
+      "Proyectos",
+      "Tendencias OPEP"
+    ]
+  },
+  {
+    "objectID": "proyectos/opep/opep.html#carga-de-datos.-importación",
+    "href": "proyectos/opep/opep.html#carga-de-datos.-importación",
+    "title": "Reporte",
+    "section": "Carga de Datos. (Importación)",
+    "text": "Carga de Datos. (Importación)\n\nlibrary(dplyr)\nlibrary(tidyverse)\nlibrary(readxl)\nlibrary(tidyr)\n\n# Importar datos de producción petrolera #\ntabla_produccion&lt;-read_excel(path=\"Crude_oil_production_in_OPEC_and_Price_Average_Annual_DoC (2).xlsx\", range = \"A3:BM18\")\n\n# Importar datos de tipos de petroleo por país #\ntabla_canasta &lt;- read_excel(path=\"cesta_opep.xlsx\", range= \"A3:AP15\")\n\nEn esta primera parte importamos los datos desde el excell descargado de la pagina de la OPEP, donde teniamos la producción por pais de la OPEP y producción total de todos los países miembros. esta parte del codigo aplicamos ‘readxl’ para importar Excel, ‘range’ para definir celdas específicas.",
+    "crumbs": [
+      "Proyectos",
+      "Tendencias OPEP"
+    ]
+  },
+  {
+    "objectID": "proyectos/opep/opep.html#transformación-inicial-de-datos.-ordenar",
+    "href": "proyectos/opep/opep.html#transformación-inicial-de-datos.-ordenar",
+    "title": "Reporte",
+    "section": "Transformación inicial de Datos. (Ordenar)",
+    "text": "Transformación inicial de Datos. (Ordenar)\n\n# formato largo canasta #\n\n# Transformar la tabla y renombrar columnas en español\ntabla_canasta_long &lt;- tabla_canasta %&gt;%\n  rename(paises = Contries) %&gt;%  \n  pivot_longer(\n    cols = -paises,              \n    names_to = \"Ano\",            \n    values_to = \"Tipo_Petroleo\" )\n\nConvertir datos de formato ancho (‘wide’) a largo (‘long’) usado ’tidyr: :pivot_longer() para poder trabajar y representar los datos en los graficos de manera correcta.",
+    "crumbs": [
+      "Proyectos",
+      "Tendencias OPEP"
+    ]
+  },
+  {
+    "objectID": "proyectos/opep/opep.html#limpieza-y-reestructuración-de-datos-de-producción.-transformar",
+    "href": "proyectos/opep/opep.html#limpieza-y-reestructuración-de-datos-de-producción.-transformar",
+    "title": "Reporte",
+    "section": "Limpieza y Reestructuración de Datos de Producción. (Transformar)",
+    "text": "Limpieza y Reestructuración de Datos de Producción. (Transformar)\n\n# Eliminamos las columnas innecesarias #\ntabla_produccion_corregida&lt;-tabla_produccion%&gt;%\n  select(-(2:21), -(63:65))\n\n#Transformamos de wide a longer donde damos#\n#Un nuevo nombre a las columnas y organizamos por year#\ntabla_produccion_largo&lt;-tabla_produccion_corregida%&gt;%\n  pivot_longer(\n    cols =-Contries,\n    names_to = \"ano\",\n    values_to = \"produccion_pais\"\n  )%&gt;%\n  rename(paises=Contries)%&gt;%\n  arrange(ano)\n\nYa con el formato en largo (‘long’) le dimos un nuevo nombre a las columnas y organizamos por años y dimos uso de ‘pivol_longer()’ para crear una columna ‘ano’ y ‘produccion_país’.",
+    "crumbs": [
+      "Proyectos",
+      "Tendencias OPEP"
+    ]
+  },
+  {
+    "objectID": "proyectos/opep/opep.html#procesamiento-de-filas-específicas.-transformar",
+    "href": "proyectos/opep/opep.html#procesamiento-de-filas-específicas.-transformar",
+    "title": "Reporte",
+    "section": "Procesamiento de Filas Específicas. (Transformar)",
+    "text": "Procesamiento de Filas Específicas. (Transformar)\n\n### En este caso vamos a filtrar unas filas, transformarlas a wide###\n### donde tomaremos los titulos de la columna \"paises\" y los valores###\n### de la columna \"produccion\", luego con ! eliminaremos esas filas y vamos###\n### a unir con nuestras nuevas columnas con left_join y lo haremos por orden de year###\n\nfilas_a_transformar1 &lt;- tabla_produccion_corregida %&gt;%\n  filter(Contries %in% c(\"OPEC\",\"Price OPEP\",\"Price Average Annual\"))\n\n\nfilas_transformada_long &lt;- filas_a_transformar1 %&gt;%\n  pivot_longer(\n    cols = -Contries, \n    names_to = \"year\",\n    values_to = \"value\")\n\nfilas_long&lt;-filas_transformada_long%&gt;%\n  pivot_wider(\n    names_from = Contries,\n    values_from = value\n  )\n\nHicimos el procesamiento de filas específicas, filas de precios y producción OPEP y nuevamente transformamos a largo y luego ancho teniendo como resultado. Dataframe filas_longcon columnas ‘year’, ‘OPEC’, ‘Price OPEP’, ‘Price Average Annual’.",
+    "crumbs": [
+      "Proyectos",
+      "Tendencias OPEP"
+    ]
+  },
+  {
+    "objectID": "proyectos/opep/opep.html#unión-de-las-datasets.-transformar",
+    "href": "proyectos/opep/opep.html#unión-de-las-datasets.-transformar",
+    "title": "Reporte",
+    "section": "Unión de las Datasets. (Transformar)",
+    "text": "Unión de las Datasets. (Transformar)\n\n# Transformar las filas usando pivot_wider\n# Transformar la tabla a formato largo y crear la columna produccion_pais\n\n\nproduccion_final &lt;- tabla_produccion_largo %&gt;%\n  filter(!paises %in% c(\"OPEC\", \"Price OPEP\", \"Price Average Annual\")) %&gt;%  \n  left_join(filas_long, by = c(\"ano\" = \"year\")) %&gt;%\n  rename(produccion_opep = OPEC)\n\n# Renombrar las columnas\n# Convertir las columnas a formato numérico\n# Convertir las columnas a formato numérico\n#Convertir las columnas a formato numérico\n\nproduccion_final &lt;- produccion_final %&gt;%\n  mutate(\n    ano = as.numeric(ano),\n    `Price Average Annual` = round(as.numeric(`Price Average Annual`), 1)\n  ) \n\nTransformamos la tabla a formato largo y creamos la columna produccion_pais, la integramos usando left_join y aseguramos el formato numerico de las columnas con ’mutate().",
+    "crumbs": [
+      "Proyectos",
+      "Tendencias OPEP"
+    ]
+  },
+  {
+    "objectID": "proyectos/opep/opep.html#calculo-de-porcentaje.-transformar",
+    "href": "proyectos/opep/opep.html#calculo-de-porcentaje.-transformar",
+    "title": "Reporte",
+    "section": "Calculo de porcentaje. (Transformar)",
+    "text": "Calculo de porcentaje. (Transformar)\n\n#Convertir la columna \"ano\" a tipo numérico\ntabla_canasta_long &lt;- tabla_canasta_long %&gt;%\n  mutate(Ano = as.numeric(Ano)) \n\n\n# Unir los dataframes \"produccion_final\" y \"tabla_canasta_long\" usando left_join\nproduccion_final_unida &lt;- produccion_final %&gt;%\n  left_join(tabla_canasta_long, by = c(\"paises\" = \"paises\", \"ano\" = \"Ano\"))\n\n ####se creo una columna de porcentaje en la tabla df produccion_final_unida\nproduccion_final_unida &lt;- produccion_final_unida %&gt;%\n  mutate(porcentaje_produccion = (produccion_pais / produccion_opep) * 100,2)\n\nproduccion_final_unida &lt;- produccion_final_unida %&gt;%\n  mutate(porcentaje_produccion = round((produccion_pais / produccion_opep) * 100, 2))\n \n\nproduccion_final_unida &lt;- produccion_final_unida %&gt;%\n  select(-`2`)\n\nTerminamos de convertir la columna ‘ano’ a tipo numerico, unimos la data frame “producción_final” y “tabla_canasta_long” con left_join y por consiguiente creamos una columna de porcentaje en la tabla dataframe ‘produccion_final_unida. Aplicamos la formula de porcentaje en nuestro caso fue ’porcentaje_producción = (produccion_país / produccion_opep) y aplicamos ’round’ para redondear a 2 decimales.",
+    "crumbs": [
+      "Proyectos",
+      "Tendencias OPEP"
+    ]
+  },
+  {
+    "objectID": "proyectos/opep/opep.html#análisis-estadístico.-transformar",
+    "href": "proyectos/opep/opep.html#análisis-estadístico.-transformar",
+    "title": "Reporte",
+    "section": "Análisis Estadístico. (Transformar)",
+    "text": "Análisis Estadístico. (Transformar)\n\n# resumen estadistico \nproduccion_final_unida %&gt;%\n  select(produccion_opep, `Price OPEP`, `Price Average Annual`)\n\n# A tibble: 492 × 3\n   produccion_opep `Price OPEP` `Price Average Annual`\n             &lt;dbl&gt;        &lt;dbl&gt;                  &lt;dbl&gt;\n 1          24685.         35.5                   36.8\n 2          24685.         35.5                   36.8\n 3          24685.         35.5                   36.8\n 4          24685.         35.5                   36.8\n 5          24685.         35.5                   36.8\n 6          24685.         35.5                   36.8\n 7          24685.         35.5                   36.8\n 8          24685.         35.5                   36.8\n 9          24685.         35.5                   36.8\n10          24685.         35.5                   36.8\n# ℹ 482 more rows\n\n# Producción promedio por país ###reframe no sumarise ya lo dijo en diciembre 86\nproduccion_final_unida %&gt;%\n  group_by(paises) %&gt;%\n  reframe(\n    produccion_promedio_paises = mean(produccion_pais)\n  ) %&gt;%\n  arrange(desc(produccion_promedio_paises))\n\n# A tibble: 12 × 2\n   paises               produccion_promedio_paises\n   &lt;chr&gt;                                     &lt;dbl&gt;\n 1 Saudi Arabia                              7989.\n 2 IR Iran                                   3180.\n 3 Venezuela                                 2330.\n 4 Iraq                                      2228.\n 5 United Arab Emirates                      2151.\n 6 Kuwait                                    1958.\n 7 Nigeria                                   1788.\n 8 Libya                                     1213.\n 9 Algeria                                    941.\n10 Gabon                                      239.\n11 Congo                                      208.\n12 Equatorial Guinea                          114.\n\n#Precios promedios por año\nprecios_anuales &lt;- produccion_final_unida %&gt;%\n  group_by(ano) %&gt;%\n  reframe(\n    precio_opep = mean(`Price OPEP`, na.rm = TRUE),\n    precio_global = mean(`Price Average Annual`, na.rm = TRUE)\n  ) %&gt;%\n  ungroup() # Desagrupar después de la operación\n\nAplicamos la funcion mean y group_by para sacar el promedio de producción agrupado por país y año.",
+    "crumbs": [
+      "Proyectos",
+      "Tendencias OPEP"
+    ]
+  },
+  {
+    "objectID": "proyectos/opep/opep.html#parte-2-mapa-gráficos-y-tabla.-visualización.",
+    "href": "proyectos/opep/opep.html#parte-2-mapa-gráficos-y-tabla.-visualización.",
+    "title": "Reporte",
+    "section": "Parte 2: Mapa, Gráficos y Tabla. (Visualización).",
+    "text": "Parte 2: Mapa, Gráficos y Tabla. (Visualización).\nEn esta parte de visualización de los datos usamos como paquete principal ‘ggplot’ para el desarrollo de los gráficos, permitiendo crear visualizaciones complejas y personalizadas para reflejar los datos de nuestra dataframe.\n\n##Tendencia de precios\n\nggplot(produccion_final_unida, aes(x = ano)) +\n  # Puntos para Precio OPEP\n  geom_point(aes(y = `Price OPEP`, color = \"Precio OPEP\")) +\n  # Puntos para Precio Global\n  geom_point(aes(y = `Price Average Annual`, color = \"Precio Global\")) +\n  # Línea de tendencia para Precio OPEP\n  geom_smooth(aes(y = `Price OPEP`, color = \"Precio OPEP\"), method = \"loess\", se = FALSE) +\n  # Línea de tendencia para Precio Global\n  geom_smooth(aes(y = `Price Average Annual`, color = \"Precio Global\"), method = \"loess\", se = FALSE) +\n  # Etiquetas y título del gráfico\n  labs(\n    title = \"Tendencias de precios petroleros (1980-2020)\",\n    x = \"Año\",\n    y = \"Precio (USD)\",\n    color = \"Tipo de precio\"\n  ) +\n  # Tema minimalista\n  theme_minimal() +\n  # Colores personalizados para las series de datos\n  scale_color_manual(values = c(\"Precio OPEP\" = \"red\", \"Precio Global\" = \"blue\")) +\n  # Posición de la leyenda\n  theme(legend.position = \"bottom\") \n\n`geom_smooth()` using formula = 'y ~ x'\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n#Producción por país (series temporales)\n# Crear el gráfico\nggplot(produccion_final, aes(x = ano, y = produccion_pais, color = paises)) +\n  geom_line(linewidth = 1) +\n  labs(\n    title = \"Producción petrolera por país (1980-2020)\",\n    x = \"Año\",\n    y = \"Producción (1,000 b/d)\",\n    color = \"País\"\n  ) +\n  theme_minimal() +\n  theme(legend.position = \"bottom\")\n\n\n\n\n\n\n\n# Comparación de Producción Anual por País\nproduccion_final %&gt;%\n # filter(year == 2020) %&gt;%\n  ggplot(aes(x = reorder(paises, produccion_pais), y = produccion_pais, fill = paises)) +\n  geom_bar(stat = \"identity\") +\n  coord_flip() +\n  labs(\n    title = \"Comparación de producción petrolera por país en 2020\",\n    x = \"País\",\n    y = \"Producción (1,000 b/d)\"\n  ) +\n  theme_minimal() +\n  theme(legend.position = \"none\") +\n  facet_wrap(~ano)\n\n\n\n\n\n\n\n# Promedio de Producción por Década \n\nproduccion_final %&gt;%\n  mutate(decade = floor(ano / 10) * 10) %&gt;%\n  group_by(decade, paises) %&gt;%\n  reframe(mean_produccion_pais = mean(produccion_pais, na.rm = TRUE)) %&gt;%\n  ggplot(aes(x = factor(decade), y = mean_produccion_pais, fill = paises)) +\n  geom_bar(stat = \"identity\", position = \"dodge\") +\n  labs(\n    title = \"Promedio de producción petrolera por década (1980-2020)\",\n    x = \"Década\",\n    y = \"Producción Promedio (1,000 b/d)\",\n    fill = \"País\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\nlibrary(leaflet)\n\n# Crear un dataframe con los países y sus coordenadas\npaises_location &lt;- data.frame(\n  countries = c(\"Algeria\", \"Congo\", \"Equatorial Guinea\", \"Gabon\", \"IR Iran\", \"Iraq\", \n                \"Kuwait\", \"Libya\", \"Nigeria\", \"Saudi Arabia\", \"United Arab Emirates\", \"Venezuela\"),\n  lat = c(28.0339, -0.2280, 1.6508, -0.8037, 32.4279, 33.2232, 29.3759, 26.3351, 9.0820, 23.8859, 23.4241, 6.4238),\n  lng = c(1.6596, 15.8277, 10.2679, 11.6094, 53.6880, 43.6793, 47.9774, 17.2283, 8.6753, 45.0792, 53.8478, -66.5897),\n  produccion_pais=produccion_final$produccion_pais\n)\n\nmapa_interactivo &lt;- leaflet(paises_location) %&gt;%\n  addTiles() %&gt;%  # Agregar capa base de OpenStreetMap\n  addCircleMarkers(\n    lng = ~lng, lat = ~lat,  # Coordenadas de los países\n    popup = ~countries,           # Mostrar el nombre del país al hacer clic\n    label = ~countries,\n    color = \"yellow\",                   # Color del borde del círculo                # Color de relleno del círculo\n    fillOpacity = 0.8  # Mostrar el nombre del país al pasar el cursor\n  )\n\n# Mostrar el mapa\nmapa_interactivo\n\n\n\n\n#############\nlibrary(DT)\n\n# Primera tabla: Producción Anual por País\ntabla1 &lt;- datatable(\n  produccion_final_unida %&gt;% select(paises, ano, produccion_pais, porcentaje_produccion, Tipo_Petroleo, produccion_opep),\n  options = list(\n    pageLength = 10,\n    dom = 'Bfrtip', # Agrega botones y filtros\n    buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),\n    autoWidth = TRUE,\n    scrollX = TRUE,\n    scrollY = \"400px\"\n  ),\n  filter = 'top',\n  caption = 'Producción Anual por País'\n)\n\n# Mostrar la tabla\ntabla1\n\n\n\n\n######################\n# Segunda tabla: Precio Anual OPEP (Eliminando duplicados por año)\n\ntabla2.21 &lt;- datatable(\n  produccion_final %&gt;%\n    select(ano, `Price OPEP`, `Price Average Annual`) %&gt;%\n    distinct(ano, `Price OPEP`, `Price Average Annual`), # Esto se asegura que por año solo haya un registro único\n  extensions = c('Buttons'),\n  options = list(\n    buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),\n    pageLength = 10\n  ),\n  caption = 'Precio Anual OPEP'\n)\n\n# Mostrar la tabla\ntabla2.21\n\n\n\n\n###############\n#Graficos lineales###\n\nlibrary(ggplot2)\nlibrary(patchwork)\n\n# Gráfico 1: Producción OPEP\ngrafico_produccion &lt;- ggplot(produccion_final_unida, aes(x = ano, y = produccion_opep)) +\n  geom_line(color = \"blue\", linewidth = 1) +\n  labs(title = \"Producción Anual de la OPEP\", x = \"Año\", y = \"Producción (Millones de barriles diarios)\") +\n  theme_minimal()\n\n# Gráfico 2: Precio Internacional\ngrafico_precio &lt;- ggplot(produccion_final_unida, aes(x = ano, y = `Price Average Annual`)) +\n  geom_line(color = \"red\", size = 1) +\n  labs(title = \"Precio Internacional del Petróleo (Promedio Anual)\", x = \"Año\", y = \"Precio (USD por barril)\") +\n  theme_minimal()\n\nWarning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.\nℹ Please use `linewidth` instead.\n\n# Enlazar ambos gráficos (Stacked)\ngrafico_final &lt;- grafico_produccion / grafico_precio\n\n# Mostrar gráficos\ngrafico_final",
+    "crumbs": [
+      "Proyectos",
+      "Tendencias OPEP"
+    ]
+  },
+  {
+    "objectID": "proyectos/opep/opep.html#gráfico-de-tendencias-de-precios.",
+    "href": "proyectos/opep/opep.html#gráfico-de-tendencias-de-precios.",
+    "title": "Reporte",
+    "section": "Gráfico de tendencias de precios.",
+    "text": "Gráfico de tendencias de precios.\n\n##Tendencia de precios\n\nggplot(produccion_final_unida, aes(x = ano)) +\n  # Puntos para Precio OPEP\n  geom_point(aes(y = `Price OPEP`, color = \"Precio OPEP\")) +\n  # Puntos para Precio Global\n  geom_point(aes(y = `Price Average Annual`, color = \"Precio Global\")) +\n  # Línea de tendencia para Precio OPEP\n  geom_smooth(aes(y = `Price OPEP`, color = \"Precio OPEP\"), method = \"loess\", se = FALSE) +\n  # Línea de tendencia para Precio Global\n  geom_smooth(aes(y = `Price Average Annual`, color = \"Precio Global\"), method = \"loess\", se = FALSE) +\n  # Etiquetas y título del gráfico\n  labs(\n    title = \"Tendencias de precios petroleros (1980-2020)\",\n    x = \"Año\",\n    y = \"Precio (USD)\",\n    color = \"Tipo de precio\"\n  ) +\n  # Tema minimalista\n  theme_minimal() +\n  # Colores personalizados para las series de datos\n  scale_color_manual(values = c(\"Precio OPEP\" = \"red\", \"Precio Global\" = \"blue\")) +\n  # Posición de la leyenda\n  theme(legend.position = \"bottom\") \n\n`geom_smooth()` using formula = 'y ~ x'\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\nEl objetivo es visualizar y comparar los precios de la OPEP y el promedio global.\nAplicamos ‘geom_point’ para mostrar los precios anuales como los puntos, ’geom_smooth” para añadir líneas de tendencia suaviazadas,\n(‘method = ’loes’’), ’scale_color_manual para asignarle colores especifícos a cada serie.",
+    "crumbs": [
+      "Proyectos",
+      "Tendencias OPEP"
+    ]
+  },
+  {
+    "objectID": "proyectos/opep/opep.html#gráfico-de-series-temporales-por-país.",
+    "href": "proyectos/opep/opep.html#gráfico-de-series-temporales-por-país.",
+    "title": "Reporte",
+    "section": "Gráfico de series temporales por país.",
+    "text": "Gráfico de series temporales por país.\n\n#Producción por país (series temporales)\n# Crear el gráfico\nggplot(produccion_final, aes(x = ano, y = produccion_pais, color = paises)) +\n  geom_line(linewidth = 1) +\n  labs(\n    title = \"Producción petrolera por país (1980-2020)\",\n    x = \"Año\",\n    y = \"Producción (1,000 b/d)\",\n    color = \"País\"\n  ) +\n  theme_minimal() +\n  theme(legend.position = \"bottom\")\n\n\n\n\n\n\n\n\nObjetivo: Visualizar la producción petrolera de cada país a lo largo del tiempo.\nAplicamos las funciones de ‘color = paises’ para asignar colores distintos a cada unos de los países automaticamente.\n‘theme(legend.position = ’bottom’)’ para colocarle la leyenda debajo del gráfico para mejor legibilidad.",
+    "crumbs": [
+      "Proyectos",
+      "Tendencias OPEP"
+    ]
+  },
+  {
+    "objectID": "proyectos/opep/opep.html#gráfico-de-comparación-de-producción-por-país-2020",
+    "href": "proyectos/opep/opep.html#gráfico-de-comparación-de-producción-por-país-2020",
+    "title": "Reporte",
+    "section": "Gráfico de comparación de producción por País (2020)",
+    "text": "Gráfico de comparación de producción por País (2020)\n\n# Comparación de Producción Anual por País\nproduccion_final %&gt;%\n # filter(year == 2020) %&gt;%\n  ggplot(aes(x = reorder(paises, produccion_pais), y = produccion_pais, fill = paises)) +\n  geom_bar(stat = \"identity\") +\n  coord_flip() +\n  labs(\n    title = \"Comparación de producción petrolera por país en 2020\",\n    x = \"País\",\n    y = \"Producción (1,000 b/d)\"\n  ) +\n  theme_minimal() +\n  theme(legend.position = \"none\") +\n  facet_wrap(~ano)\n\n\n\n\n\n\n\n\nObjetivo: Comparar la producción entre países en un año específico usando barras horizonlates.\nAplicamos ‘reorder (paises, produccion_pais)’ para ordenar los países por producción ascendente.\n‘coord_flip’ para convertir las barras en horizontales.\n’face_wrap(~ano) para crear subgráficos por año.",
+    "crumbs": [
+      "Proyectos",
+      "Tendencias OPEP"
+    ]
+  },
+  {
+    "objectID": "proyectos/opep/opep.html#gráfico-de-promedio-de-producción-por-décadas.",
+    "href": "proyectos/opep/opep.html#gráfico-de-promedio-de-producción-por-décadas.",
+    "title": "Reporte",
+    "section": "Gráfico de promedio de producción por décadas.",
+    "text": "Gráfico de promedio de producción por décadas.\n\n# Promedio de Producción por Década \n\nproduccion_final %&gt;%\n  mutate(decade = floor(ano / 10) * 10) %&gt;%\n  group_by(decade, paises) %&gt;%\n  reframe(mean_produccion_pais = mean(produccion_pais, na.rm = TRUE)) %&gt;%\n  ggplot(aes(x = factor(decade), y = mean_produccion_pais, fill = paises)) +\n  geom_bar(stat = \"identity\", position = \"dodge\") +\n  labs(\n    title = \"Promedio de producción petrolera por década (1980-2020)\",\n    x = \"Década\",\n    y = \"Producción Promedio (1,000 b/d)\",\n    fill = \"País\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n\n\n\nObjetivo: Visualizar la producción por décadas usando barras.\nAplicamos ‘x = factor(decade)’ para tratar la década como una categoría.\n‘position = “dodge”’ Colocamos las barras laado a lado para compararlas.\n‘fill = paises’. para asignar los colores.\n‘star = “identity”’ para usar los valores directos de ‘y’",
+    "crumbs": [
+      "Proyectos",
+      "Tendencias OPEP"
+    ]
+  },
+  {
+    "objectID": "proyectos/opep/opep.html#mapa-interactivo.",
+    "href": "proyectos/opep/opep.html#mapa-interactivo.",
+    "title": "Reporte",
+    "section": "Mapa Interactivo.",
+    "text": "Mapa Interactivo.\n\nlibrary(leaflet)\n\n# Crear un dataframe con los países y sus coordenadas\npaises_location &lt;- data.frame(\n  countries = c(\"Algeria\", \"Congo\", \"Equatorial Guinea\", \"Gabon\", \"IR Iran\", \"Iraq\", \n                \"Kuwait\", \"Libya\", \"Nigeria\", \"Saudi Arabia\", \"United Arab Emirates\", \"Venezuela\"),\n  lat = c(28.0339, -0.2280, 1.6508, -0.8037, 32.4279, 33.2232, 29.3759, 26.3351, 9.0820, 23.8859, 23.4241, 6.4238),\n  lng = c(1.6596, 15.8277, 10.2679, 11.6094, 53.6880, 43.6793, 47.9774, 17.2283, 8.6753, 45.0792, 53.8478, -66.5897),\n  produccion_pais=produccion_final$produccion_pais\n)\n\nmapa_interactivo &lt;- leaflet(paises_location) %&gt;%\n  addTiles() %&gt;%  # Agregar capa base de OpenStreetMap\n  addCircleMarkers(\n    lng = ~lng, lat = ~lat,  # Coordenadas de los países\n    popup = ~countries,           # Mostrar el nombre del país al hacer clic\n    label = ~countries,\n    color = \"yellow\",                   # Color del borde del círculo                # Color de relleno del círculo\n    fillOpacity = 0.8  # Mostrar el nombre del país al pasar el cursor\n  )\n\n# Mostrar el mapa\nmapa_interactivo\n\n\n\n\n\nObjetivo: Resaltar los países miembros de la OPEP en el mapamundi.\nAplicamos el uso del paquete ‘leaflet’ para crear el mapa interactivo y permitir visualizar datos espaciales, y los marcadoles.\n‘addTiles’ para añadir un mapa base.\n‘addCirccleMarkers’ con este añadimos marcadoles circulares en coordenadas especificas.\n‘popup’ y ‘label’ para mostrar la información (nombre de los países) al interactuar con los marcadoles.",
+    "crumbs": [
+      "Proyectos",
+      "Tendencias OPEP"
+    ]
+  },
+  {
+    "objectID": "proyectos/opep/opep.html#tabla-interactiva-1.",
+    "href": "proyectos/opep/opep.html#tabla-interactiva-1.",
+    "title": "Reporte",
+    "section": "Tabla Interactiva 1.",
+    "text": "Tabla Interactiva 1.\n\nlibrary(DT)\n\n# Primera tabla: Producción Anual por País\ntabla1 &lt;- datatable(\n  produccion_final_unida %&gt;% select(paises, ano, produccion_pais, porcentaje_produccion, Tipo_Petroleo, produccion_opep),\n  options = list(\n    pageLength = 10,\n    dom = 'Bfrtip', # Agrega botones y filtros\n    buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),\n    autoWidth = TRUE,\n    scrollX = TRUE,\n    scrollY = \"400px\"\n  ),\n  filter = 'top',\n  caption = 'Producción Anual por País'\n)\n\n# Mostrar la tabla\ntabla1\n\n\n\n\n\nObjetivo: Expresar los datos de producción anual por país, porcentaje de producción por país, producción por opep y tipo de petroleo.\nUsamos el paquete DT para crear tables HTML interactivas con funciones de búsqueda, ordenamiento y exportación.\n‘datatable’ para convertir la dataframe en una tabla interactiva.\n‘scrollX’ y scrollY’ para desplazarnos horizontal y verticalmente en la tabla.",
+    "crumbs": [
+      "Proyectos",
+      "Tendencias OPEP"
+    ]
+  },
+  {
+    "objectID": "proyectos/opep/opep.html#tabla-2.21",
+    "href": "proyectos/opep/opep.html#tabla-2.21",
+    "title": "Reporte",
+    "section": "Tabla 2.21",
+    "text": "Tabla 2.21\n\n# Segunda tabla: Precio Anual OPEP (Eliminando duplicados por año)\n\ntabla2.21 &lt;- datatable(\n  produccion_final %&gt;%\n    select(ano, `Price OPEP`, `Price Average Annual`) %&gt;%\n    distinct(ano, `Price OPEP`, `Price Average Annual`), # Esto se asegura que por año solo haya un registro único\n  extensions = c('Buttons'),\n  options = list(\n    buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),\n    pageLength = 10\n  ),\n  caption = 'Precio Anual OPEP'\n)\n\n# Mostrar la tabla\ntabla2.21\n\n\n\n\n\nObjetivo: Expresar los datos recopilados de los precios promedios anuales de la opep e internacionales.\n‘datatable’ para convertir la dataframe en una tabla interactiva.\n‘distinct’ para eliminar los duplicados de los precios y así poder mostrar un solo año.",
+    "crumbs": [
+      "Proyectos",
+      "Tendencias OPEP"
+    ]
+  },
+  {
+    "objectID": "proyectos/opep/opep.html#gráficos-lineales-combinados.",
+    "href": "proyectos/opep/opep.html#gráficos-lineales-combinados.",
+    "title": "Reporte",
+    "section": "Gráficos Lineales Combinados.",
+    "text": "Gráficos Lineales Combinados.\n\n#Graficos lineales###\n\nlibrary(ggplot2)\nlibrary(patchwork)\n\n# Gráfico 1: Producción OPEP\ngrafico_produccion &lt;- ggplot(produccion_final_unida, aes(x = ano, y = produccion_opep)) +\n  geom_line(color = \"blue\", linewidth = 1) +\n  labs(title = \"Producción Anual de la OPEP\", x = \"Año\", y = \"Producción (Millones de barriles diarios)\") +\n  theme_minimal()\n\n# Gráfico 2: Precio Internacional\ngrafico_precio &lt;- ggplot(produccion_final_unida, aes(x = ano, y = `Price Average Annual`)) +\n  geom_line(color = \"red\", size = 1) +\n  labs(title = \"Precio Internacional del Petróleo (Promedio Anual)\", x = \"Año\", y = \"Precio (USD por barril)\") +\n  theme_minimal()\n\n# Enlazar ambos gráficos (Stacked)\ngrafico_final &lt;- grafico_produccion / grafico_precio\n\n# Mostrar gráficos\ngrafico_final\n\n\n\n\n\n\n\n\nObjetivo: Relacionar produccion de la OPEP y los precios internacionales.\nPara hacer Packet usamos. ‘patchwork’ para enlazar los graficos.\nLe colocamos los colores a las gráficas con ‘geom_line’.",
+    "crumbs": [
+      "Proyectos",
+      "Tendencias OPEP"
+    ]
+  },
+  {
+    "objectID": "proyectos/opep/prueba dashboard.html",
+    "href": "proyectos/opep/prueba dashboard.html",
+    "title": "estudio de datos de la opep",
+    "section": "",
+    "text": "tabla_produccion&lt;-read_excel(path=\"Crude_oil_production_in_OPEC_and_Price_Average_Annual_DoC (2).xlsx\", range = \"A3:BM18\")\n\ntabla_canasta &lt;- read_excel(path=\"cesta_opep.xlsx\", range= \"A3:AP15\")\n\n#formato largo canasta\n\n# Transformar la tabla y renombrar columnas en español\ntabla_canasta_long &lt;- tabla_canasta %&gt;%\n  rename(paises = Contries) %&gt;%  \n  pivot_longer(\n    cols = -paises,              \n    names_to = \"Ano\",            \n    values_to = \"Tipo_Petroleo\" )\n    \n  \n   \n\n###eliminamos las columnas innecesarias####\ntabla_produccion_corregida&lt;-tabla_produccion%&gt;%\n  select(-(2:21), -(63:65))\n\n####transformamos de wide a longer donde damos###\n###un nuevo nombre a las columnas y organizamos por year###\ntabla_produccion_largo&lt;-tabla_produccion_corregida%&gt;%\n  pivot_longer(\n    cols =-Contries,\n    names_to = \"ano\",\n    values_to = \"produccion_pais\"\n  )%&gt;%\n  rename(paises=Contries)%&gt;%\n  arrange(ano)\n\nView(tabla_produccion_largo)\n\n### en este caso vamos a filtrar unas filas, transformarlas a wide###\n### donde tomaremos los tittulos de la columna \"paises\" y los valores###\n### de la columna \"produccion\", luego con ! eliminaremos esas filas y vamos###\n### a unir con nuestras nuevas columnas con left_join y lo haremos por orden de year###\n\nfilas_a_transformar1 &lt;- tabla_produccion_corregida %&gt;%\n  filter(Contries %in% c(\"OPEC\",\"Price OPEP\",\"Price Average Annual\"))\n\n \nfilas_tranformada_long &lt;- filas_a_transformar1 %&gt;%\n  pivot_longer(\n    cols = -Contries,\n    names_to = \"year\",\n    values_to = \"value\"\n  )\n\nfilas_long&lt;-filas_tranformada_long%&gt;%\n  pivot_wider(\n    names_from = Contries,\n    values_from = value\n  )\n\n\n\n\n\n\n\n# Transformar las filas usando pivot_wider\n# Transformar la tabla a formato largo y crear la columna produccion_pais\n\n\nproduccion_final &lt;- tabla_produccion_largo %&gt;%\n  filter(!paises %in% c(\"OPEC\", \"Price OPEP\", \"Price Average Annual\")) %&gt;%  \n  left_join(filas_long, by = c(\"ano\" = \"year\")) %&gt;%\n  rename(produccion_opep = OPEC)\n\n# Renombrar las columnas\n# Convertir las columnas a formato numérico\n# Convertir las columnas a formato numérico\n#Convertir las columnas a formato numérico\n\nproduccion_final &lt;- produccion_final %&gt;%\n  mutate(\n    ano = as.numeric(ano),\n    `Price Average Annual` = round(as.numeric(`Price Average Annual`), 1)\n  ) \n\n\n\nlibrary(tidyverse)\nlibrary(ggplot2)\n\n\n\n\n#Convertir la columna \"ano\" a tipo numérico\ntabla_canasta_long &lt;- tabla_canasta_long %&gt;%\n  mutate(Ano = as.numeric(Ano)) \n\n\n# Unir los dataframes \"produccion_final\" y \"tabla_canasta_long\" usando left_join\nproduccion_final_unida &lt;- produccion_final %&gt;%\n  left_join(tabla_canasta_long, by = c(\"paises\" = \"paises\", \"ano\" = \"Ano\"))\n\n ####se creo una columna de porcentaje en la tabla df produccion_final_unida\nproduccion_final_unida &lt;- produccion_final_unida %&gt;%\n  mutate(porcentaje_produccion = (produccion_pais / produccion_opep) * 100,2)\n\nproduccion_final_unida &lt;- produccion_final_unida %&gt;%\n  mutate(porcentaje_produccion = round((produccion_pais / produccion_opep) * 100, 2))\n \n\nproduccion_final_unida &lt;- produccion_final_unida %&gt;%\n  select(-`2`)"
+  },
+  {
+    "objectID": "proyectos/opep/prueba dashboard.html#row",
+    "href": "proyectos/opep/prueba dashboard.html#row",
+    "title": "estudio de datos de la opep",
+    "section": "Row",
+    "text": "Row\n\nMapa Interactivo\n\npaises_location &lt;- data.frame(\n  countries = c(\"Algeria\", \"Congo\", \"Equatorial Guinea\", \"Gabon\", \"IR Iran\", \"Iraq\", \n                \"Kuwait\", \"Libya\", \"Nigeria\", \"Saudi Arabia\", \"United Arab Emirates\", \"Venezuela\"),\n  lat = c(28.0339, -0.2280, 1.6508, -0.8037, 32.4279, 33.2232, 29.3759, 26.3351, 9.0820, 23.8859, 23.4241, 6.4238),\n  lng = c(1.6596, 15.8277, 10.2679, 11.6094, 53.6880, 43.6793, 47.9774, 17.2283, 8.6753, 45.0792, 53.8478, -66.5897),\n  produccion_pais=produccion_final$produccion_pais\n)\n\nmapa_interactivo &lt;- leaflet(paises_location) %&gt;%\n  addTiles() %&gt;%\n  addCircleMarkers(\n    lng = ~lng, lat = ~lat,\n    popup = ~countries,\n    label = ~countries,\n    color = \"yellow\",\n    fillOpacity = 0.8\n  )\n\nmapa_interactivo"
+  },
+  {
+    "objectID": "proyectos/opep/prueba dashboard.html#column",
+    "href": "proyectos/opep/prueba dashboard.html#column",
+    "title": "estudio de datos de la opep",
+    "section": "Column",
+    "text": "Column\n\nTendencia de Precios\n\nggplot(produccion_final_unida, aes(x = ano)) +\n  geom_point(aes(y = `Price OPEP`, color = \"Precio OPEP\")) +\n  geom_point(aes(y = `Price Average Annual`, color = \"Precio Global\")) +\n  geom_smooth(aes(y = `Price OPEP`, color = \"Precio OPEP\"), method = \"loess\", se = FALSE) +\n  geom_smooth(aes(y = `Price Average Annual`, color = \"Precio Global\"), method = \"loess\", se = FALSE) +\n  labs(\n    title = \"Tendencias de precios petroleros (1980-2020)\",\n    x = \"Año\",\n    y = \"Precio (USD)\",\n    color = \"Tipo de precio\"\n  ) +\n  theme_minimal() +\n  scale_color_manual(values = c(\"Precio OPEP\" = \"red\", \"Precio Global\" = \"blue\")) +\n  theme(legend.position = \"bottom\")\n\n`geom_smooth()` using formula = 'y ~ x'\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n\n\nProducción por País\n\nggplot(produccion_final, aes(x = ano, y = produccion_pais, color = paises)) +\n  geom_line(linewidth = 1) +\n  labs(\n    title = \"Producción petrolera por país (1980-2020)\",\n    x = \"Año\",\n    y = \"Producción (1,000 b/d)\",\n    color = \"País\"\n  ) +\n  theme_minimal() +\n  theme(legend.position = \"bottom\")\n\n\n\n\n\n\n\n\n\n\nComparación de Producción Anual por País\n\nproduccion_final %&gt;%\n  ggplot(aes(x = reorder(paises, produccion_pais), y = produccion_pais, fill = paises)) +\n  geom_bar(stat = \"identity\") +\n  coord_flip() +\n  labs(\n    title = \"Comparación de producción petrolera por país en 2020\",\n    x = \"País\",\n    y = \"Producción (1,000 b/d)\"\n  ) +\n  theme_minimal() +\n  theme(legend.position = \"none\") +\n  facet_wrap(~ano)"
+  },
+  {
+    "objectID": "proyectos/opep/prueba dashboard.html#row-1",
+    "href": "proyectos/opep/prueba dashboard.html#row-1",
+    "title": "estudio de datos de la opep",
+    "section": "Row",
+    "text": "Row\n\nTablas de Datos\n\n# Primera tabla: Producción Anual por País\ntabla1 &lt;- datatable(\n  produccion_final_unida %&gt;% select(ano, produccion_opep, `Price OPEP`, `Price Average Annual`),\n  options = list(\n    pageLength = 10,\n    dom = 'Bfrtip',\n    buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),\n    autoWidth = TRUE,\n    scrollX = TRUE,\n    scrollY = \"400px\"\n  ),\n  filter = 'top',\n  caption = 'Producción Anual y Precios'\n)\ntabla1\n\n\n\n\n\n\n\nPrecio Anual OPEP\n\ntabla2 &lt;- datatable(\n  produccion_final_unida %&gt;%\n    select(ano, `Price OPEP`, `Price Average Annual`) %&gt;%\n    distinct(ano, `Price OPEP`, `Price Average Annual`),\n  extensions = c('Buttons'),\n  options = list(\n    buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),\n    pageLength = 10,\n    autoWidth = TRUE,\n    scrollX = TRUE,\n    scrollY = \"400px\"\n  ),\n  filter = 'top',\n  caption = 'Precio Anual OPEP'\n)\ntabla2\n\n\n\n\n\n\n\nGráficos Lineales\n\n# Gráfico 1: Producción OPEP\ngrafico_produccion &lt;- ggplot(produccion_final_unida, aes(x = ano, y = produccion_opep)) +\n  geom_line(color = \"blue\", linewidth = 1) +\n  labs(title = \"Producción Anual de la OPEP\", x = \"Año\", y = \"Producción (Millones de barriles diarios)\") +\n  theme_minimal()\n\n# Gráfico 2: Precio Internacional\ngrafico_precio &lt;- ggplot(produccion_final_unida, aes(x = ano, y = `Price Average Annual`)) +\n  geom_line(color = \"red\", linewidth = 1) +\n  labs(title = \"Precio Internacional del Petróleo (Promedio Anual)\", x = \"Año\", y = \"Precio (USD por barril)\") +\n  theme_minimal()\n\n# Enlazar ambos gráficos\ngrafico_final &lt;- grafico_produccion / grafico_precio\n\ngrafico_final"
+  },
+  {
+    "objectID": "proyectos/opep/dashboard.html",
+    "href": "proyectos/opep/dashboard.html",
+    "title": "estudio de datos de la opep",
+    "section": "",
+    "text": "tabla_produccion&lt;-read_excel(path=\"Crude_oil_production_in_OPEC_and_Price_Average_Annual_DoC (2).xlsx\", range = \"A3:BM18\")\n\ntabla_canasta &lt;- read_excel(path=\"cesta_opep.xlsx\", range= \"A3:AP15\")\n\n#formato largo canasta\n\n# Transformar la tabla y renombrar columnas en español\ntabla_canasta_long &lt;- tabla_canasta %&gt;%\n  rename(paises = Contries) %&gt;%  \n  pivot_longer(\n    cols = -paises,              \n    names_to = \"Ano\",            \n    values_to = \"Tipo_Petroleo\" )\n    \n  \n   \n\n###eliminamos las columnas innecesarias####\ntabla_produccion_corregida&lt;-tabla_produccion%&gt;%\n  select(-(2:21), -(63:65))\n\n####transformamos de wide a longer donde damos###\n###un nuevo nombre a las columnas y organizamos por year###\ntabla_produccion_largo&lt;-tabla_produccion_corregida%&gt;%\n  pivot_longer(\n    cols =-Contries,\n    names_to = \"ano\",\n    values_to = \"produccion_pais\"\n  )%&gt;%\n  rename(paises=Contries)%&gt;%\n  arrange(ano)\n\nView(tabla_produccion_largo)\n\n### en este caso vamos a filtrar unas filas, transformarlas a wide###\n### donde tomaremos los tittulos de la columna \"paises\" y los valores###\n### de la columna \"produccion\", luego con ! eliminaremos esas filas y vamos###\n### a unir con nuestras nuevas columnas con left_join y lo haremos por orden de year###\n\nfilas_a_transformar1 &lt;- tabla_produccion_corregida %&gt;%\n  filter(Contries %in% c(\"OPEC\",\"Price OPEP\",\"Price Average Annual\"))\n\n \nfilas_tranformada_long &lt;- filas_a_transformar1 %&gt;%\n  pivot_longer(\n    cols = -Contries,\n    names_to = \"year\",\n    values_to = \"value\"\n  )\n\nfilas_long&lt;-filas_tranformada_long%&gt;%\n  pivot_wider(\n    names_from = Contries,\n    values_from = value\n  )\n\n\n\n\n\n\n\n# Transformar las filas usando pivot_wider\n# Transformar la tabla a formato largo y crear la columna produccion_pais\n\n\nproduccion_final &lt;- tabla_produccion_largo %&gt;%\n  filter(!paises %in% c(\"OPEC\", \"Price OPEP\", \"Price Average Annual\")) %&gt;%  \n  left_join(filas_long, by = c(\"ano\" = \"year\")) %&gt;%\n  rename(produccion_opep = OPEC)\n\n# Renombrar las columnas\n# Convertir las columnas a formato numérico\n# Convertir las columnas a formato numérico\n#Convertir las columnas a formato numérico\n\nproduccion_final &lt;- produccion_final %&gt;%\n  mutate(\n    ano = as.numeric(ano),\n    `Price Average Annual` = round(as.numeric(`Price Average Annual`), 1)\n  ) \n\n\n\nlibrary(tidyverse)\nlibrary(ggplot2)\n\n\n\n\n#Convertir la columna \"ano\" a tipo numérico\ntabla_canasta_long &lt;- tabla_canasta_long %&gt;%\n  mutate(Ano = as.numeric(Ano)) \n\n\n# Unir los dataframes \"produccion_final\" y \"tabla_canasta_long\" usando left_join\nproduccion_final_unida &lt;- produccion_final %&gt;%\n  left_join(tabla_canasta_long, by = c(\"paises\" = \"paises\", \"ano\" = \"Ano\"))\n\n ####se creo una columna de porcentaje en la tabla df produccion_final_unida\nproduccion_final_unida &lt;- produccion_final_unida %&gt;%\n  mutate(porcentaje_produccion = (produccion_pais / produccion_opep) * 100,2)\n\nproduccion_final_unida &lt;- produccion_final_unida %&gt;%\n  mutate(porcentaje_produccion = round((produccion_pais / produccion_opep) * 100, 2))\n \n\nproduccion_final_unida &lt;- produccion_final_unida %&gt;%\n  select(-`2`)",
+    "crumbs": [
+      "Proyectos",
+      "Dashboard Tendencias OPEP"
+    ]
+  },
+  {
+    "objectID": "proyectos/opep/dashboard.html#row",
+    "href": "proyectos/opep/dashboard.html#row",
+    "title": "estudio de datos de la opep",
+    "section": "Row",
+    "text": "Row\n\nMapa Interactivo\n\npaises_location &lt;- data.frame(\n  countries = c(\"Algeria\", \"Congo\", \"Equatorial Guinea\", \"Gabon\", \"IR Iran\", \"Iraq\", \n                \"Kuwait\", \"Libya\", \"Nigeria\", \"Saudi Arabia\", \"United Arab Emirates\", \"Venezuela\"),\n  lat = c(28.0339, -0.2280, 1.6508, -0.8037, 32.4279, 33.2232, 29.3759, 26.3351, 9.0820, 23.8859, 23.4241, 6.4238),\n  lng = c(1.6596, 15.8277, 10.2679, 11.6094, 53.6880, 43.6793, 47.9774, 17.2283, 8.6753, 45.0792, 53.8478, -66.5897),\n  produccion_pais=produccion_final$produccion_pais\n)\n\nmapa_interactivo &lt;- leaflet(paises_location) %&gt;%\n  addTiles() %&gt;%\n  addCircleMarkers(\n    lng = ~lng, lat = ~lat,\n    popup = ~countries,\n    label = ~countries,\n    color = \"yellow\",\n    fillOpacity = 0.8\n  )\n\nmapa_interactivo",
+    "crumbs": [
+      "Proyectos",
+      "Dashboard Tendencias OPEP"
+    ]
+  },
+  {
+    "objectID": "proyectos/opep/dashboard.html#column",
+    "href": "proyectos/opep/dashboard.html#column",
+    "title": "estudio de datos de la opep",
+    "section": "Column",
+    "text": "Column\n\nTendencia de Precios\n\nggplot(produccion_final_unida, aes(x = ano)) +\n  geom_point(aes(y = `Price OPEP`, color = \"Precio OPEP\")) +\n  geom_point(aes(y = `Price Average Annual`, color = \"Precio Global\")) +\n  geom_smooth(aes(y = `Price OPEP`, color = \"Precio OPEP\"), method = \"loess\", se = FALSE) +\n  geom_smooth(aes(y = `Price Average Annual`, color = \"Precio Global\"), method = \"loess\", se = FALSE) +\n  labs(\n    title = \"Tendencias de precios petroleros (1980-2020)\",\n    x = \"Año\",\n    y = \"Precio (USD)\",\n    color = \"Tipo de precio\"\n  ) +\n  theme_minimal() +\n  scale_color_manual(values = c(\"Precio OPEP\" = \"red\", \"Precio Global\" = \"blue\")) +\n  theme(legend.position = \"bottom\")\n\n`geom_smooth()` using formula = 'y ~ x'\n`geom_smooth()` using formula = 'y ~ x'\n\n\n\n\n\n\n\n\n\n\n\nProducción por País\n\nggplot(produccion_final, aes(x = ano, y = produccion_pais, color = paises)) +\n  geom_line(linewidth = 1) +\n  labs(\n    title = \"Producción petrolera por país (1980-2020)\",\n    x = \"Año\",\n    y = \"Producción (1,000 b/d)\",\n    color = \"País\"\n  ) +\n  theme_minimal() +\n  theme(legend.position = \"bottom\")\n\n\n\n\n\n\n\n\n\n\nComparación de Producción Anual por País\n\nproduccion_final %&gt;%\n  ggplot(aes(x = reorder(paises, produccion_pais), y = produccion_pais, fill = paises)) +\n  geom_bar(stat = \"identity\") +\n  coord_flip() +\n  labs(\n    title = \"Comparación de producción petrolera por país en 2020\",\n    x = \"País\",\n    y = \"Producción (1,000 b/d)\"\n  ) +\n  theme_minimal() +\n  theme(legend.position = \"none\") +\n  facet_wrap(~ano)",
+    "crumbs": [
+      "Proyectos",
+      "Dashboard Tendencias OPEP"
+    ]
+  },
+  {
+    "objectID": "proyectos/opep/dashboard.html#row-1",
+    "href": "proyectos/opep/dashboard.html#row-1",
+    "title": "estudio de datos de la opep",
+    "section": "Row",
+    "text": "Row\n\nTablas de Datos\n\n# Primera tabla: Producción Anual por País\ntabla1 &lt;- datatable(\n  produccion_final_unida %&gt;% select(ano, produccion_opep, `Price OPEP`, `Price Average Annual`),\n  options = list(\n    pageLength = 10,\n    dom = 'Bfrtip',\n    buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),\n    autoWidth = TRUE,\n    scrollX = TRUE,\n    scrollY = \"400px\"\n  ),\n  filter = 'top',\n  caption = 'Producción Anual y Precios'\n)\ntabla1\n\n\n\n\n\n\n\nPrecio Anual OPEP\n\ntabla2 &lt;- datatable(\n  produccion_final_unida %&gt;%\n    select(ano, `Price OPEP`, `Price Average Annual`) %&gt;%\n    distinct(ano, `Price OPEP`, `Price Average Annual`),\n  extensions = c('Buttons'),\n  options = list(\n    buttons = c('copy', 'csv', 'excel', 'pdf', 'print'),\n    pageLength = 10,\n    autoWidth = TRUE,\n    scrollX = TRUE,\n    scrollY = \"400px\"\n  ),\n  filter = 'top',\n  caption = 'Precio Anual OPEP'\n)\ntabla2\n\n\n\n\n\n\n\nGráficos Lineales\n\n# Gráfico 1: Producción OPEP\ngrafico_produccion &lt;- ggplot(produccion_final_unida, aes(x = ano, y = produccion_opep)) +\n  geom_line(color = \"blue\", linewidth = 1) +\n  labs(title = \"Producción Anual de la OPEP\", x = \"Año\", y = \"Producción (Millones de barriles diarios)\") +\n  theme_minimal()\n\n# Gráfico 2: Precio Internacional\ngrafico_precio &lt;- ggplot(produccion_final_unida, aes(x = ano, y = `Price Average Annual`)) +\n  geom_line(color = \"red\", linewidth = 1) +\n  labs(title = \"Precio Internacional del Petróleo (Promedio Anual)\", x = \"Año\", y = \"Precio (USD por barril)\") +\n  theme_minimal()\n\n# Enlazar ambos gráficos\ngrafico_final &lt;- grafico_produccion / grafico_precio\n\ngrafico_final",
+    "crumbs": [
+      "Proyectos",
+      "Dashboard Tendencias OPEP"
     ]
   }
 ]

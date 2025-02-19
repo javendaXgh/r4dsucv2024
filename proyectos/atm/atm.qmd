@@ -1,0 +1,545 @@
+---
+title: "Analisis del funcionamiento de los ATM en Caracas"
+author: "Dalexna, Nayuha, Gustavo"
+format:
+  html:
+    code-fold: true
+    execute:
+      warning: false
+      message: false
+---
+
+```{r message=FALSE, warning=FALSE}
+library(rsconnect)
+library(DT)
+library(plotly)
+library(osmdata)
+library(tidyverse)
+library(sf)
+library(leaflet)
+library(dplyr)
+library(tibble)
+library(stringr)
+library(leaflet.extras)
+
+```
+
+## Introducción
+
+En el contexto económico actual, el acceso a servicios financieros eficientes es crucial. Los cajeros automáticos (ATMs) son un componente clave de esta infraestructura, facilitando el acceso a efectivo y servicios bancarios. Este trabajo se centra en la distribución de ATMs en Caracas, un tema relevante para la economía local, pues la disponibilidad de ATMs puede influir en transacciones económicas, inclusión financiera, eficiencia del sistema de pagos y desarrollo local. Exploraremos la distribución de ATMs en Caracas, identificando patrones y discutiendo sus implicaciones económicas.
+
+## Planteamiento del problema
+
+Analisis del impacto que existe en el funcionamiento y operatividad de los ATMS, así como las tarifas que cobran las instituciones financieras por sus distintos servicios (depósitos y retiros) en la región de Caracas.
+
+Fuentes de datos a consutar: Página del Banco Central de Venezuela. Páginas de las distintas intituciones financieras del país. Página del SUDEBAN.
+
+A pesar de la importancia de los ATMs en la economía, su distribución y acceso no siempre son óptimos. En muchas ciudades, incluyendo Caracas, pueden existir áreas con una alta concentración de ATMs y otras con una escasez relativa. Esta situación plantea una serie de interrogantes y problemas que requieren un análisis profundo, como, por ejemplo: • ¿Existe una distribución equitativa de ATMs en Caracas o hay áreas donde la población tiene dificultad para acceder al servicio?
+
+## Metodología
+
+Para llevar a cabo este análisis, se han seguido los siguientes pasos:
+
+Carga de librerías: Se cargaron las librerías necesarias para el análisis, las cuales incluyen rsconnect, DT, plotly, osmdata, tidyverse, sf, leaflet, dplyr, tibble, stringr y leaflet.extras. Estas librerías proporcionan las herramientas para la manipulación de datos, visualización y análisis espacial.
+
+## Definición de funciones:
+
+Se definieron dos funciones principales:
+
+tipos(): Esta función extrae los tipos de amenidades de un conjunto de datos, específicamente la columna 'amenity'. Maneja casos donde los datos pueden ser nulos o la columna 'amenity' no está presente.
+
+Función para extraer tipos de amenidades
+
+```{r}
+tipos <- function(data, numero) { 
+  columnas <- c('amenity') 
+  if (!is.null(data)) { 
+    if ('amenity' %in% names(data)) { 
+      data1 <- data %>% drop_na(name) %>% 
+        select(columnas) %>% as.data.frame() %>% .[, 1] 
+    } else { 
+        data1 <- rep('s/c', numero) 
+    } 
+  } else { 
+    data1 <- NULL 
+  }
+
+vec_tipos <- c(data1) %>% replace_na('s/c')
+clases <- unique(vec_tipos)[!is.na(unique(vec_tipos))]
+list(vec_tipos = vec_tipos, clases = clases)
+}
+```
+
+## Función para extraer coordenadas y texto
+
+coords_SfToDf(): Esta función extrae coordenadas y texto (nombre y dirección) de datos espaciales en formato sf. Procesa puntos, multipolígonos y polígonos, y filtra los resultados para incluir solo ATMs en Caracas.
+
+```{r}
+coords_SfToDf <- function(data) {
+  if (!is.null(data$osm_points)) {
+    data1 <- data$osm_points %>%
+      drop_na(name)
+  } else {
+    data1 <- NULL
+  }
+  
+  if (!is.null(data$osm_multipolygons)) {
+    data2 <- data$osm_multipolygons %>%
+      drop_na(name)
+  } else {
+    data2 <- NULL
+  }
+  
+  if (!is.null(data$osm_polygons)) {
+    data3 <- data$osm_polygons %>%
+      drop_na(name)
+  } else {
+    data3 <- NULL
+  }
+  
+  # Crear vectores de nombre y dirección
+  nombre <- c(
+    paste(data3$name,
+          ifelse(!is.na(data3$addr.housename), data3$addr.housename, ''), 
+          ifelse(!is.na(data3$`addr:street`), data3$`addr:street`, ''),',',
+          data3$`addr:city`),
+    paste(data1$name,
+          ifelse(!is.na(data1$addr.housename), data1$addr.housename, ''), 
+          ifelse(!is.na(data3$`addr:street`), data3$`addr:street`,''),',',
+          data3$`addr:city`)
+  )
+  
+  
+  # Extraer coordenadas
+  if (!is.null(data1)) {
+    # Filtrar solo las filas donde `addr:city` es "Caracas" esto se hace para poder solo ver los atm de Caracas 
+    data1_filtered <- data1 %>% filter(`addr:city` == "Caracas")
+    
+    # Si hay datos filtrados, extraer las coordenadas
+    if (nrow(data1_filtered) > 0) {
+      df_point1 <- do.call(rbind, st_geometry(data1_filtered$geometry)) %>%
+        as_tibble() %>%
+        setNames(c("long", "lat"))
+    } else {
+      df_point1 <- NULL  # No hay datos que cumplan la condición
+    }
+  } else {
+    df_point1 <- NULL
+  }
+  # View(data2)
+  if (!is.null(data2)) {
+    df_point2 <- do.call(rbind, st_centroid(data2$geometry)) %>%
+      as_tibble() %>%
+      setNames(c("long", "lat"))
+  } else {
+    df_point2 <- NULL
+  }
+  
+  
+  if (!is.null(data3)) {
+    df_point3 <- do.call(rbind, st_centroid(data3$geometry)) %>%
+      as_tibble() %>%
+      setNames(c("long", "lat"))
+  } else {
+    df_point3 <- NULL
+  }
+  
+  # Combinar resultados
+  df_puntos <- rbind(df_point3, df_point1) %>%
+    cbind(nombre = nombre[1:nrow(.)])
+  
+}
+  
+```
+
+```{r echo=FALSE}
+## Consulta API OpenStreetMap
+atm_ccs1 <- opq(getbb("Caracas")) %>%
+  add_osm_feature("atm") %>%
+  osmdata_sf()
+
+```
+
+## Creación de dataframes:
+
+Se crearon dataframes a partir de los datos de osmdata, utilizando las funciones definidas previamente (coords_SfToDf()). Se realizaron correcciones y limpieza de datos, como la eliminación de nombres de bancos repetidos y la corrección de direcciones.
+
+Se crea la df con los puntos y texto popup de mapa
+
+```{r}
+df_puntos <- coords_SfToDf(atm_ccs1)
+
+```
+
+## URL de un ícono personalizado
+
+```{r}
+icon_url <- "/Users/josemiguelavendanoinfante/R/UCV_ECONOMIA_R4DS/r4dsucv2024/proyectos/atm/retiro-de-efectivo.png"
+
+
+custom_icon <- makeIcon(iconUrl = icon_url, iconWidth = 30,
+                        iconHeight = 30, 
+                        iconAnchorX = 25, iconAnchorY = 40)
+```
+
+## Definir la zona de interés
+
+```{r}
+bbox_poly <- getbb("Venezuela, Caracas", format_out = "sf_polygon")
+if (!inherits(bbox_poly, "sf")) bbox_poly <- st_as_sf(bbox_poly)
+
+```
+
+## Crear el mapa con los ATMs y mostrar el popup al pasar el cursor
+
+```{r}
+leaflet(bbox_poly) %>%
+  addTiles() %>%
+  addPolygons(data = bbox_poly, fillColor = "#AF7595", 
+              fillOpacity = 0.3, color = "#8C2155", 
+              weight = 2) %>%
+  addMarkers(df_puntos$long, df_puntos$lat,
+             popup = df_puntos$nombre,  # Popup al hacer clic
+             label = df_puntos$nombre,  # Info al pasar el cursor
+             labelOptions = labelOptions(noHide = FALSE, direction = "auto"),
+             icon = custom_icon)
+
+```
+
+## Visualizacion de datos
+
+Tabla interactiva: Se creó una tabla interactiva utilizando la librería DT. Esta tabla muestra información detallada sobre los ATMs, incluyendo el nombre del banco y la dirección. La interactividad de la tabla permite al usuario realizar búsquedas, ordenar los datos por columnas y navegar a través de la información.
+
+## Función para extraer coordenadas y texto con dirección
+
+```{r}
+coords_SfToDf_2 <- function(data) {
+  if (!is.null(data$osm_points)) {
+    data1 <- data$osm_points %>%
+      drop_na(name)
+  } else {
+    data1 <- NULL
+  }
+  
+  if (!is.null(data$osm_multipolygons)) {
+    data2 <- data$osm_multipolygons %>%
+      drop_na(name)
+  } else {
+    data2 <- NULL
+  }
+  
+  if (!is.null(data$osm_polygons)) {
+    data3 <- data$osm_polygons %>%
+      drop_na(name)
+  } else {
+    data3 <- NULL
+  }
+  
+  # Extraer el nombre del banco y dirección
+  nombre <- c(
+    paste(data3$name),
+    paste(data1$name)
+  )
+  
+  direccion <- c(
+    paste(data3$`addr:street`, ",", data3$`addr:city`),
+    paste(data1$`addr:street`, ",", data1$`addr:city`)
+  )
+  
+  # Extraer coordenadas solo de puntos en Caracas
+  if (!is.null(data1)) {
+    data1_filtered <- data1 %>% filter(`addr:city` == "Caracas")
+    if (nrow(data1_filtered) > 0) {
+      df_point1 <- do.call(rbind, st_geometry(data1_filtered$geometry)) %>%
+        as_tibble() %>%
+        setNames(c("long", "lat"))
+    } else {
+      df_point1 <- NULL
+    }
+  } else {
+    df_point1 <- NULL
+  }
+  
+  if (!is.null(data2)) {
+    df_point2 <- do.call(rbind, st_centroid(data2$geometry)) %>%
+      as_tibble() %>%
+      setNames(c("long", "lat"))
+  } else {
+    df_point2 <- NULL
+  }
+  
+  if (!is.null(data3)) {
+    df_point3 <- do.call(rbind, st_centroid(data3$geometry)) %>%
+      as_tibble() %>%
+      setNames(c("long", "lat"))
+  } else {
+    df_point3 <- NULL
+  }
+  
+  # Crear el dataframe final con nombre, dirección y coordenadas
+  df_puntos <- rbind(df_point3, df_point1) %>%
+    cbind(nombre = nombre[1:nrow(.)], direccion = direccion[1:nrow(.)])
+  
+  return(df_puntos)
+}
+  
+```
+
+```{r echo=FALSE}
+## Consultar la API OpenStreetMap
+atm_ccs2 <- opq(getbb("Caracas")) %>%
+  add_osm_feature("atm") %>%
+  osmdata_sf()
+
+```
+
+## Crear el dataframe con los datos correctos
+
+```{r}
+df_puntos <- coords_SfToDf_2(atm_ccs2)
+
+```
+
+## Corregir las direcciones
+
+```{r}
+df_puntos <- df_puntos %>%
+  mutate(direccion = str_replace(direccion, ", Caracas", "."))
+
+```
+
+## Seleccionar solo nombre del banco y dirección para la tabla interactiva
+
+```{r}
+df_puntos2 <- df_puntos %>%
+  select(Banco = nombre, Dirección = direccion)
+
+
+```
+
+## Lista de reemplazos
+
+Se realiza todos los reemplazos necesarios en los nombres de los bancos.
+
+```{r}
+reemplazos <- c(
+  "Rovincial" = "BBVA Provincial",
+  "rovincial" = "BBVA Provincial",
+  "Banlus" = "Banplus",
+  "BBVA cial" = "BBVA Provincial",
+  "BBVA rovincial" = "BBVA Provincial",
+  "Edficio Centro Emesarial Caracas" = "Edificio Centro Empresarial Caracas",
+  "cial" = "BBVA Provincial",
+  "anco de Venezuela" = "Banco de Venezuela",
+  "Venezuela" = "Banco de Venezuela",
+  "anco Agrícola de Venezuela" = "Banco Agrícola de Venezuela",
+  "anco e Venezuela" = "Banco de Venezuela",
+  "anco el Sur" = "Banco el Sur",
+  "anco el Tesoro" = "Banco el Tesoro",
+  "anco igital los Trabajadores" = "Banco Digital de los Trabajadores",
+  "anco igital de los Trabajadores" = "Banco Digital de los Trabajadores",
+  "anco Municial e Crédito Popular" = "Banco Municial de Crédito Popular",
+  "anco Nacional e Crédito" = "Banco Nacional de Crédito",
+  "anco Venezolano e Crédito" = "Banco Venezolano de Crédito",
+  "See del anco Venezolano de Credito" = "Banco Venezolano de Crédito",
+  "100% anco" = "100% Banco",
+  "ancamiga" = "Bancamiga",
+  "ancaribe" = "Bancaribe",
+  "anco Activo" = "Banco Activo",
+  "anco Agrícola Venezuela" = "Banco Agrícola Venezuela",
+  "anco Caroní" = "Banco Caroní",
+  "anco igital los Trajaores" = "Banco Digital los Trabajadores",
+  "anco Exterior" = "Banco Exterior",
+  "anco Fono Común" = "Banco Fondo Común",
+  "anco Mercantil" = "Banco Mercantil",
+  "anco Nacional e Créito" = "Banco Nacional de Crédito",
+  "anco Sofitasa" = "Banco Sofitasa",
+  "anesco" = "Banesco",
+  "ancrecer" = "Bancrecer",
+  "BVA rovincial" = "BBVA Provincial",
+  "icentenario" = "Banco Bicentenario",
+  "Ciuad anesco" = "Ciudad Banesco",
+  "Mi anco" = "Mi Banco",
+  "See l anco Venezolano de Creito" = "Banco Nacional de Crédito",
+  "Tesoro" = "Banco del Tesoro",
+  "Provincial" = "BBVA Provincial", 
+  "BBVA Provinial" = "BBVA Provincial", 
+  "Provincial" = "BBVA Provincial"
+)
+
+```
+
+## Aplicar los reemplazos en la columna "Banco" del dataframe
+
+Creamos una nueva df para agregar los valores modificados
+
+```{r}
+df_puntos <- df_puntos %>%
+  mutate(Banco = str_replace_all('Banco', reemplazos))
+
+```
+
+## Crear la tabla interactiva con colores personalizados
+
+```{r}
+tabla_interactiva <- datatable(df_puntos2, 
+                               options = list(
+                                 pageLength = 10,
+                                 autoWidth = TRUE,
+                                 searchHighlight = TRUE,
+                                 dom = 'Bfrtip',
+                                 buttons = c('copy', 'csv', 'excel', 'pdf', 'print')
+                               ),
+                               filter = "top",
+                               rownames = FALSE) %>%
+  formatStyle(
+    columns = colnames(df_puntos2),  # Aplicar a todas las columnas
+    backgroundColor = '#FAF6F6',  # Fondo azul claro
+    color = '#1A1B41',  # Texto azul oscuro
+    fontWeight = 'bold'  # Texto en negrita
+  )
+
+```
+
+## Mostrar la tabla tabla_interactiva
+
+```{r}
+tabla_interactiva
+```
+
+## Creación del mapa de calor
+
+Mapa de calor: Se generó un mapa de calor utilizando la librería leaflet y la función addHeatmap(). Este mapa muestra la densidad de ATMs en diferentes áreas de Caracas, permitiendo identificar zonas con mayor concentración de ATMs.
+
+En esta sección vamos a evaluar la cercania de los ATMs generando un mapa de calor.
+
+```{r}
+caracas_poly <- opq("Caracas, Venezuela") %>% 
+  add_osm_feature(key = "boundary", value = "administrative") %>% 
+  osmdata_sf()
+```
+
+## Extraer el polígono de los datos OSM
+
+```{r}
+caracas_polygon <- caracas_poly$osm_multipolygons %>% 
+  filter(admin_level == "8") %>%  # Filtrar el nivel administrativo adecuado
+  st_geometry() %>% 
+  st_union() %>% 
+  st_as_sf()
+```
+
+## Convertir a formato compatible con leaflet
+
+```{r}
+caracas_polygon <- st_transform(caracas_polygon, crs = 4326)
+```
+
+## Prepara los datos para el mapa de calor
+
+```{r}
+df_calor <- df_puntos %>%
+  select(long, lat) %>%
+  mutate(peso = 1) # Asigna un peso a cada punto
+```
+
+## Crear el mapa de calor con la delimitación de Caracas
+
+```{r}
+mapa_calor <- leaflet(df_calor) %>%
+  addTiles() %>%
+  addPolygons(data = caracas_polygon, color = "#3A0CA3", weight = 4, fill = FALSE, opacity = 1) %>%
+  addHeatmap(lng = ~long, lat = ~lat, intensity = ~peso, radius = 20, blur = 10) %>%
+  setView(lng = mean(st_coordinates(st_centroid(caracas_polygon))[,1]),
+          lat = mean(st_coordinates(st_centroid(caracas_polygon))[,2]),
+          zoom = 12) # Centrar el mapa en Caracas
+```
+
+## Mostrar el mapa de calor
+
+```{r}
+mapa_calor
+```
+
+## ANEXO GRAFICO Y TABLA
+
+Gráfico de barras interactivo: Se creó un gráfico de barras interactivo con la librería plotly. Este gráfico muestra la cantidad de ATMs por banco, permitiendo al usuario identificar los bancos con mayor presencia en la ciudad. La interactividad del gráfico permite al usuario pasar el cursor sobre las barras para obtener información detallada sobre cada banco.
+
+```{r echo=FALSE}
+# Consulta API OpenStreetMap
+atm_ccs1 <- opq(getbb("Caracas")) %>%
+  add_osm_feature("atm") %>%
+  osmdata_sf()
+```
+
+## Crear un nuevo data frame copiando el data frame existente
+
+```{r}
+nuevo_df <- atm_ccs1
+nuevo_df <- as.data.frame(nuevo_df$osm_points)
+
+```
+
+## Convertir en una dataframe la data extraida de la API
+
+Esta línea de código utiliza la función is.na() para identificar los valores NA en la columna "name" de nuevo_df. El operador invierte el resultado de is.na(), de manera que se seleccionan las filas que no tienen NA en la columna "name".
+
+```{r}
+nuevo_df <- nuevo_df[!is.na(nuevo_df$name), ]
+```
+
+## Contar ocurrencias de cada nombre que esta en la columna que me interesa en este caso la columna que trae los nombres de los bancos y me suma una a una las filas de los n ombres que son iguales.
+
+```{r}
+nuevo_df %>% count(name, sort = TRUE)
+```
+
+## muestro el contador de las filas
+
+## Lista de nombres de los bancos que deseas eliminar porque ya estan repetidos
+
+```{r}
+nombres_a_eliminar <- c( "Banco Mercantil","Banco Del Tesoro","BFC","Activo","Venezuela","Venezuela","Provincial","Exterior", "Avenida El Lago","Bicentenario")
+```
+
+## Filtrar las filas donde la columna 'name' NO contenga los nombres que deseas eliminar
+
+```{r}
+nuevo_df_filtrado <- nuevo_df %>% filter(!name %in% nombres_a_eliminar)
+```
+
+## Contar ocurrencias de cada nombre en las filas de mayor a menor
+
+```{r}
+conteos <- nuevo_df_filtrado %>% count(name, sort = TRUE)
+```
+
+## Crear una tabla interactiva
+
+```{r}
+datatable(conteos, options = list(pageLength = 10, autoWidth = TRUE))
+```
+
+## Crear el gráfico interactivo.
+
+```{r}
+fig <- plot_ly(conteos, x = ~name, y = ~n, type = 'bar', name = 'banco')
+fig <- fig %>% layout(title = 'ATM POR BANCOS',
+                      xaxis = list(title = 'BANCOS'),
+                      yaxis = list(title = 'ATMS'))
+
+```
+
+## Mostrar el gráfico.
+
+```{r}
+fig
+```
+
+## Conclusión
+
+Gracias a la visualización de los datos en los mapas, hemos podido identificar la distribución de los cajeros automáticos (ATMs) en Caracas. El mapa de calor resalta la concentración de estos en ciertas zonas, como en Altamira, la Avenida Libertador (especialmente cerca del C.C. El Sambil) y la Avenida Francisco de Miranda, donde los cajeros están más agrupados. Por otro lado, en áreas como La Trinidad, El Hatillo, Prados del Este y El Cafetal, se observa que los cajeros están más dispersos.
+
+También con nuestro mapa interactivo podemos observar los cajeros y sus direcciones al igual que con nuestra tabla interactiva que podemos filtrar por nombre de banco o dirección.
+
+Con la información recolectada, pudimos plasmar la cantidad de cajeros existentes por bancos, sin embargo no tenemos la certeza de si la mayoría de los ATMs están o no operativos.
