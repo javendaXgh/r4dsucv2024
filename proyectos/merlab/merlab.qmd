@@ -238,7 +238,7 @@ saveRDS(df_datos_trabajo, "df_datos_empleate_2025_01.rds")
 
 ## Recolección de datos
 
-[![](informe_presentacion_files/assets/Captura de pantalla 2025-02-18 232221.png){fig-align="center"}](https://rpubs.com/isludeasfer/1273757)
+[![](informe_presentacion_files/assets/Captura%20de%20pantalla%202025-02-18%20232221.png){fig-align="center"}](https://rpubs.com/isludeasfer/1273757)
 
 ------------------------------------------------------------------------
 
@@ -316,7 +316,7 @@ for (i in 1:nrow(df_completo)) {
 
 ------------------------------------------------------------------------
 
-[![](informe_presentacion_files/assets/Captura de pantalla 2025-02-18 230201.png){fig-align="center"}](https://atlas.nomic.ai/data/anthonygprado/business-skills-and-knowledge-1/map)
+[![](informe_presentacion_files/assets/Captura%20de%20pantalla%202025-02-18%20230201.png){fig-align="center"}](https://atlas.nomic.ai/data/anthonygprado/business-skills-and-knowledge-1/map)
 
 -   Con las categorías procesadas en este mapa, se inició la **segunda parte** de la limpieza.
 
