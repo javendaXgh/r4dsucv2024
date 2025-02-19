@@ -1,0 +1,1268 @@
+<!DOCTYPE html>
+<html lang="es"><head>
+<link href="../../images/favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.5.57">
+
+  <meta name="author" content="Anthony Prado, Daniel Conde, Isaias de Ascensao, Cesar Rodríguez">
+  <title>UCV EconomíaR4DS – Análisis del mercado laboral para economistas en Venezuela</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css">
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-5BVQ49LXJG"></script>
+
+  <script type="text/javascript">
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5BVQ49LXJG', { 'anonymize_ip': true});
+  </script>
+  <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  <link href="../../site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
+  <script src="../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+  <script src="../../site_libs/plotly-binding-4.10.4/plotly.js"></script>
+  <script src="../../site_libs/typedarray-0.1/typedarray.min.js"></script>
+  <script src="../../site_libs/jquery-3.5.1/jquery.min.js"></script>
+  <link href="../../site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet">
+  <script src="../../site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+  <link href="../../site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet">
+  <script src="../../site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+<meta property="og:title" content="Análisis del mercado laboral para economistas en Venezuela – UCV EconomíaR4DS">
+<meta property="og:description" content="Universidad Central de Venezuela">
+<meta property="og:site_name" content="UCV EconomíaR4DS">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Análisis del mercado laboral para economistas en Venezuela</h1>
+  <p class="subtitle">Universidad Central de Venezuela</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Anthony Prado, Daniel Conde, Isaias de Ascensao, Cesar Rodríguez 
+</div>
+</div>
+</div>
+
+</section>
+<section>
+<section id="planteamiento-del-problema" class="title-slide slide level1 center">
+<h1>Planteamiento del problema</h1>
+
+</section>
+<section id="motivos-de-la-investigación" class="slide level2">
+<h2>Motivos de la investigación</h2>
+<ul>
+<li class="fragment">Confusión entre los estudiantes de la Escuela de Economía de la UCV acerca del mercado laboral venezolano.</li>
+<li class="fragment">Por lo que se realizo una encuesta para contrastar si estas dudas e inquietudes eran generales</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li class="fragment">Resultados de la encuesta realizada a estudiantes de semestres intermedios de la carrera, donde se obtuvieron:
+<ul>
+<li class="fragment">“El 42%” tiene dudas con respecto a los campos laborales en los que se podrán desempeñar como economistas.</li>
+<li class="fragment">“El 57%” no cree que esté aprendiendo las habilidades necesarias para desempeñarse como economistas en el mercado actual.</li>
+</ul></li>
+</ul>
+</section>
+<section id="incógnitas-a-resolver-con-la-investigación" class="slide level2">
+<h2>Incógnitas a resolver con la investigación</h2>
+<p>Para llevar a cabo esta investigación se buscó responder las siguientes preguntas:</p>
+<ol type="1">
+<li class="fragment"><p>¿Qué habilidades son más demandadas en el mercado laboral para los economistas en Venezuela?</p></li>
+<li class="fragment"><p>¿En qué tipos de ofertas laborales se demandan más economistas?</p></li>
+<li class="fragment"><p>¿Exigen experiencia previa las vacantes actuales?</p></li>
+</ol>
+</section>
+<section class="slide level2">
+
+<ol start="4" type="1">
+<li class="fragment"><p>¿Cuál es el nivel de educación que exigen?</p></li>
+<li class="fragment"><p>¿Existe la posibilidad de problemas al reclutar&nbsp;economistas?</p></li>
+</ol>
+</section></section>
+<section>
+<section id="desarrollo-de-la-investigación" class="title-slide slide level1 center">
+<h1>Desarrollo de la investigación</h1>
+
+</section>
+<section id="recolección-de-datos" class="slide level2">
+<h2>Recolección de datos</h2>
+<ul>
+<li class="fragment"><p>Para recolectar los datos se eligieron <strong>5 páginas web</strong> de ofertas laborales en Venezuela.</p></li>
+<li class="fragment"><p>A través de <em>web scrapping</em> se obtuvieron <strong>más de 170 ofertas laborales</strong>, descargadas luego de tres semanas continuas de descargas diarias.</p></li>
+<li class="fragment"><p>Todas estas ofertas laborales fueron organizadas en un único <code>data.frame</code>.</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>cant_paginas <span class="ot">&lt;-</span> <span class="dv">3</span></span>
+<span id="cb1-2"><a></a>listado_de_urls <span class="ot">&lt;-</span> <span class="fu">character</span>()</span>
+<span id="cb1-3"><a></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span>cant_paginas) {<span class="co">#</span></span>
+<span id="cb1-4"><a></a>  url_emplea <span class="ot">&lt;-</span> <span class="fu">paste0</span>(<span class="st">'https://www.empleate.com/venezuela/ofertas/empleos_encontrados/'</span>, i, <span class="st">'/trabaios-en-venezuela-busqueda-por-economista'</span>)</span>
+<span id="cb1-5"><a></a>  </span>
+<span id="cb1-6"><a></a>  req_emplea <span class="ot">&lt;-</span> <span class="fu">request</span>(url_emplea)<span class="sc">|&gt;</span></span>
+<span id="cb1-7"><a></a>    <span class="fu">req_method</span>(<span class="st">"GET"</span>)<span class="sc">|&gt;</span> </span>
+<span id="cb1-8"><a></a>    <span class="fu">req_headers</span>( <span class="at">Accept=</span> <span class="st">"*/*"</span>,</span>
+<span id="cb1-9"><a></a>                 <span class="st">`</span><span class="at">Accept-Language</span><span class="st">`</span><span class="ot">=</span> <span class="st">"es,es-ES;q=0.9,en-US;q=0.8,en;q=0.7,gl;q=0.6"</span>,</span>
+<span id="cb1-10"><a></a>                 <span class="st">`</span><span class="at">User-Agent</span><span class="st">`</span><span class="ot">=</span> <span class="st">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"</span>)<span class="sc">|&gt;</span></span>
+<span id="cb1-11"><a></a>    <span class="fu">req_perform</span>()</span>
+<span id="cb1-12"><a></a>  </span>
+<span id="cb1-13"><a></a>  req_emplea<span class="sc">|&gt;</span> </span>
+<span id="cb1-14"><a></a>    <span class="fu">resp_content_type</span>()</span>
+<span id="cb1-15"><a></a>  </span>
+<span id="cb1-16"><a></a>  datos_html <span class="ot">&lt;-</span> req_emplea<span class="sc">$</span>body<span class="sc">|&gt;</span></span>
+<span id="cb1-17"><a></a>    <span class="fu">rawToChar</span>()</span>
+<span id="cb1-18"><a></a>  </span>
+<span id="cb1-19"><a></a>  <span class="fu">substr</span>(datos_html,<span class="dv">201000</span>,<span class="dv">202000</span>)</span>
+<span id="cb1-20"><a></a>  </span>
+<span id="cb1-21"><a></a>  datos_url <span class="ot">&lt;-</span> rvest<span class="sc">::</span><span class="fu">read_html</span>(datos_html)</span>
+<span id="cb1-22"><a></a>  </span>
+<span id="cb1-23"><a></a>  urls_obtenidos <span class="ot">&lt;-</span><span class="fu">paste0</span>(<span class="st">'https://www.empleate.com'</span>, </span>
+<span id="cb1-24"><a></a>                          datos_url<span class="sc">%&gt;%</span></span>
+<span id="cb1-25"><a></a>                            <span class="fu">html_nodes</span>(<span class="st">'.none-decoration'</span>)<span class="sc">%&gt;%</span></span>
+<span id="cb1-26"><a></a>                            <span class="fu">html_attr</span>(<span class="st">'href'</span>)</span>
+<span id="cb1-27"><a></a>  ) </span>
+<span id="cb1-28"><a></a>  </span>
+<span id="cb1-29"><a></a>  listado_de_urls <span class="ot">&lt;-</span> <span class="fu">c</span>(listado_de_urls, urls_obtenidos)</span>
+<span id="cb1-30"><a></a>  </span>
+<span id="cb1-31"><a></a>  <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">'cantidad elementos descargados:'</span>, </span>
+<span id="cb1-32"><a></a>              <span class="fu">length</span>(listado_de_urls)))</span>
+<span id="cb1-33"><a></a>  </span>
+<span id="cb1-34"><a></a>  <span class="co"># </span></span>
+<span id="cb1-35"><a></a>  <span class="fu">Sys.sleep</span>(.<span class="dv">2</span>)</span>
+<span id="cb1-36"><a></a>  </span>
+<span id="cb1-37"><a></a>}</span>
+<span id="cb1-38"><a></a></span>
+<span id="cb1-39"><a></a>puestos_de_trabajo_obtenidos <span class="ot">&lt;-</span> <span class="fu">length</span>(listado_de_urls)</span>
+<span id="cb1-40"><a></a></span>
+<span id="cb1-41"><a></a><span class="do">###############################################################################</span></span>
+<span id="cb1-42"><a></a></span>
+<span id="cb1-43"><a></a></span>
+<span id="cb1-44"><a></a><span class="cf">if</span> (<span class="fu">file.exists</span>(<span class="st">"02_datos_sin_limpiar/df_datos_empleate_2025_01.rds"</span>)) {</span>
+<span id="cb1-45"><a></a>  df_datos_trabajo <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="st">"02_datos_sin_limpiar/df_datos_empleate_2025_01.rds"</span>)</span>
+<span id="cb1-46"><a></a>} <span class="cf">else</span> {</span>
+<span id="cb1-47"><a></a>  df_datos_trabajo <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb1-48"><a></a>    <span class="at">puesto_de_trabajo =</span> <span class="fu">character</span>(),</span>
+<span id="cb1-49"><a></a>    <span class="at">empresa =</span> <span class="fu">character</span>(),</span>
+<span id="cb1-50"><a></a>    ubicación <span class="ot">=</span> <span class="fu">character</span>(),</span>
+<span id="cb1-51"><a></a>    descripcción <span class="ot">=</span> <span class="fu">character</span>(),</span>
+<span id="cb1-52"><a></a>    <span class="at">web =</span> <span class="fu">character</span>(),</span>
+<span id="cb1-53"><a></a>    <span class="at">url_visitado =</span> <span class="fu">character</span>(),</span>
+<span id="cb1-54"><a></a>    <span class="at">fecha =</span> <span class="fu">as.Date</span>(<span class="fu">character</span>())</span>
+<span id="cb1-55"><a></a>  )</span>
+<span id="cb1-56"><a></a>}</span>
+<span id="cb1-57"><a></a></span>
+<span id="cb1-58"><a></a></span>
+<span id="cb1-59"><a></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(listado_de_urls)) {</span>
+<span id="cb1-60"><a></a>  </span>
+<span id="cb1-61"><a></a>  <span class="co"># Mostrar progreso</span></span>
+<span id="cb1-62"><a></a>  <span class="fu">cat</span>(<span class="st">"Scraping: puesto"</span>, i, <span class="st">"de"</span>, <span class="fu">length</span>(listado_de_urls), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb1-63"><a></a>  </span>
+<span id="cb1-64"><a></a>  <span class="co"># Extraer la URL de la iteración actual</span></span>
+<span id="cb1-65"><a></a>  url_emplea_1 <span class="ot">&lt;-</span> listado_de_urls[i]</span>
+<span id="cb1-66"><a></a>  </span>
+<span id="cb1-67"><a></a>  req_emplea <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>({</span>
+<span id="cb1-68"><a></a>    <span class="fu">request</span>(url_emplea_1) <span class="sc">|&gt;</span></span>
+<span id="cb1-69"><a></a>      <span class="fu">req_method</span>(<span class="st">"GET"</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb1-70"><a></a>      <span class="fu">req_headers</span>(</span>
+<span id="cb1-71"><a></a>        <span class="at">Accept =</span> <span class="st">"*/*"</span>,</span>
+<span id="cb1-72"><a></a>        <span class="st">`</span><span class="at">Accept-Language</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"es,es-ES;q=0.9,en-US;q=0.8,en;q=0.7,gl;q=0.6"</span>,</span>
+<span id="cb1-73"><a></a>        <span class="st">`</span><span class="at">User-Agent</span><span class="st">`</span> <span class="ot">=</span> <span class="st">"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36"</span></span>
+<span id="cb1-74"><a></a>      ) <span class="sc">|&gt;</span></span>
+<span id="cb1-75"><a></a>      <span class="fu">req_perform</span>()</span>
+<span id="cb1-76"><a></a>  }, <span class="at">error =</span> <span class="cf">function</span>(e) {</span>
+<span id="cb1-77"><a></a>    <span class="fu">cat</span>(<span class="st">"Error al acceder a la URL:"</span>, url_emplea_1, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb1-78"><a></a>    <span class="fu">return</span>(<span class="cn">NULL</span>)</span>
+<span id="cb1-79"><a></a>  })</span>
+<span id="cb1-80"><a></a>  </span>
+<span id="cb1-81"><a></a>  <span class="cf">if</span> (<span class="fu">is.null</span>(req_emplea)) <span class="cf">next</span>  </span>
+<span id="cb1-82"><a></a>  </span>
+<span id="cb1-83"><a></a>  datos_html <span class="ot">&lt;-</span> <span class="fu">rawToChar</span>(req_emplea<span class="sc">$</span>body)</span>
+<span id="cb1-84"><a></a></span>
+<span id="cb1-85"><a></a>  extraccion_de_informacion <span class="ot">&lt;-</span> <span class="fu">tryCatch</span>({</span>
+<span id="cb1-86"><a></a>    rvest<span class="sc">::</span><span class="fu">read_html</span>(datos_html)</span>
+<span id="cb1-87"><a></a>  }, <span class="at">error =</span> <span class="cf">function</span>(e) {</span>
+<span id="cb1-88"><a></a>    <span class="fu">cat</span>(<span class="st">"Error al procesar HTML de:"</span>, url_emplea_1, <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb1-89"><a></a>    <span class="fu">return</span>(<span class="cn">NULL</span>)</span>
+<span id="cb1-90"><a></a>  })</span>
+<span id="cb1-91"><a></a>  </span>
+<span id="cb1-92"><a></a>  <span class="cf">if</span> (<span class="fu">is.null</span>(extraccion_de_informacion)) <span class="cf">next</span>  </span>
+<span id="cb1-93"><a></a>  </span>
+<span id="cb1-94"><a></a>  <span class="co"># Extraer la información</span></span>
+<span id="cb1-95"><a></a>  titulo_de_oferta <span class="ot">&lt;-</span> extraccion_de_informacion <span class="sc">%&gt;%</span></span>
+<span id="cb1-96"><a></a>    <span class="fu">html_nodes</span>(<span class="st">'.fw-600'</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-97"><a></a>    <span class="fu">html_text</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb1-98"><a></a>    <span class="fu">str_squish</span>()</span>
+<span id="cb1-99"><a></a>  </span>
+<span id="cb1-100"><a></a>  nombre_de_empresa <span class="ot">&lt;-</span> extraccion_de_informacion <span class="sc">%&gt;%</span></span>
+<span id="cb1-101"><a></a>    <span class="fu">html_nodes</span>(<span class="st">'.col-lg-9 a'</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-102"><a></a>    <span class="fu">html_text</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb1-103"><a></a>    <span class="fu">str_squish</span>()</span>
+<span id="cb1-104"><a></a>  </span>
+<span id="cb1-105"><a></a>  ubicacion_de_trabajo <span class="ot">&lt;-</span> extraccion_de_informacion <span class="sc">%&gt;%</span></span>
+<span id="cb1-106"><a></a>    <span class="fu">html_nodes</span>(<span class="st">'.yellow'</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-107"><a></a>    <span class="fu">html_text</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb1-108"><a></a>    <span class="fu">str_squish</span>()</span>
+<span id="cb1-109"><a></a>  </span>
+<span id="cb1-110"><a></a>  descripccion_de_trabajo <span class="ot">&lt;-</span> extraccion_de_informacion <span class="sc">%&gt;%</span></span>
+<span id="cb1-111"><a></a>    <span class="fu">html_nodes</span>(<span class="st">'.headline .separator , .text-muted.text-justify'</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-112"><a></a>    <span class="fu">html_text</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb1-113"><a></a>    <span class="fu">paste</span>(., <span class="at">collapse =</span> <span class="st">'./// '</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-114"><a></a>    <span class="fu">str_squish</span>()</span>
+<span id="cb1-115"><a></a>  </span>
+<span id="cb1-116"><a></a>  </span>
+<span id="cb1-117"><a></a>  <span class="cf">if</span> (<span class="fu">length</span>(titulo_de_oferta) <span class="sc">==</span> <span class="dv">0</span>) titulo_de_oferta <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb1-118"><a></a>  <span class="cf">if</span> (<span class="fu">length</span>(nombre_de_empresa) <span class="sc">==</span> <span class="dv">0</span>) nombre_de_empresa <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb1-119"><a></a>  <span class="cf">if</span> (<span class="fu">length</span>(ubicacion_de_trabajo) <span class="sc">==</span> <span class="dv">0</span>) ubicacion_de_trabajo <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb1-120"><a></a>  <span class="cf">if</span> (<span class="fu">length</span>(descripccion_de_trabajo) <span class="sc">==</span> <span class="dv">0</span>) descripccion_de_trabajo <span class="ot">&lt;-</span> <span class="cn">NA</span></span>
+<span id="cb1-121"><a></a>  </span>
+<span id="cb1-122"><a></a>  </span>
+<span id="cb1-123"><a></a>  df_puestos_obtenidos <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb1-124"><a></a>    <span class="at">puesto_de_trabajo =</span> titulo_de_oferta,</span>
+<span id="cb1-125"><a></a>    <span class="at">empresa =</span> nombre_de_empresa,</span>
+<span id="cb1-126"><a></a>    ubicación <span class="ot">=</span> ubicacion_de_trabajo,</span>
+<span id="cb1-127"><a></a>    descripcción <span class="ot">=</span> descripccion_de_trabajo,</span>
+<span id="cb1-128"><a></a>    <span class="at">web =</span> <span class="st">"empleate"</span>,</span>
+<span id="cb1-129"><a></a>    <span class="at">url_visitado =</span> url_emplea_1,</span>
+<span id="cb1-130"><a></a>    <span class="at">fecha =</span> <span class="fu">Sys.Date</span>()</span>
+<span id="cb1-131"><a></a>  )</span>
+<span id="cb1-132"><a></a>  </span>
+<span id="cb1-133"><a></a> </span>
+<span id="cb1-134"><a></a>  df_datos_trabajo <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(df_datos_trabajo, df_puestos_obtenidos) <span class="sc">%&gt;%</span></span>
+<span id="cb1-135"><a></a>    <span class="fu">distinct</span>(<span class="at">.keep_all =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb1-136"><a></a>  </span>
+<span id="cb1-137"><a></a>  </span>
+<span id="cb1-138"><a></a>  <span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Total de filas en df_datos_trabajo:"</span>, <span class="fu">nrow</span>(df_datos_trabajo)))</span>
+<span id="cb1-139"><a></a>  </span>
+<span id="cb1-140"><a></a>  </span>
+<span id="cb1-141"><a></a>  <span class="fu">saveRDS</span>(df_datos_trabajo, <span class="st">"df_datos_empleate_backup.rds"</span>)</span>
+<span id="cb1-142"><a></a>  </span>
+<span id="cb1-143"><a></a>  </span>
+<span id="cb1-144"><a></a>  <span class="fu">Sys.sleep</span>(<span class="fl">0.3</span>)</span>
+<span id="cb1-145"><a></a>}</span>
+<span id="cb1-146"><a></a></span>
+<span id="cb1-147"><a></a><span class="co"># Guardar los datos finales</span></span>
+<span id="cb1-148"><a></a><span class="fu">saveRDS</span>(df_datos_trabajo, <span class="st">"df_datos_empleate_2025_01.rds"</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="recolección-de-datos-1" class="slide level2">
+<h2>Recolección de datos</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://rpubs.com/isludeasfer/1273757"><img data-src="informe_presentacion_files/assets/Captura de pantalla 2025-02-18 232221.png" class="quarto-figure quarto-figure-center"></a></p>
+</figure>
+</div>
+</section>
+<section id="limpieza-de-los-datos" class="slide level2">
+<h2>Limpieza de los datos</h2>
+<h3 id="primera-parte">Primera parte</h3>
+<ul>
+<li class="fragment">Al ser texto la variable <strong>descripción de la oferta laboral</strong> (la cual se desea limpiar y clasificar), se usó la API de Google Studio IA mediante el siguiente código:</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>prompt <span class="ot">&lt;-</span> <span class="st">"Eres un experto en análisis de ofertas de trabajo. Extrae en formato JSON los requisitos..."</span></span>
+<span id="cb2-2"><a></a>post_texto <span class="ot">&lt;-</span> <span class="st">"...(plantilla JSON)..."</span></span>
+<span id="cb2-3"><a></a></span>
+<span id="cb2-4"><a></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(df_completo)) {</span>
+<span id="cb2-5"><a></a>  </span>
+<span id="cb2-6"><a></a>  <span class="fu">cat</span>(<span class="st">"Procesando oferta"</span>, i, <span class="st">"de"</span>, <span class="fu">nrow</span>(df_completo), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb2-7"><a></a>  </span>
+<span id="cb2-8"><a></a>  <span class="fu">tryCatch</span>({</span>
+<span id="cb2-9"><a></a>    datos_texto_oferta_de_trabajo <span class="ot">&lt;-</span> df_completo<span class="sc">$</span>descripción[i]</span>
+<span id="cb2-10"><a></a>    </span>
+<span id="cb2-11"><a></a>    dato_texto_prompt_gooaistudio <span class="ot">&lt;-</span> <span class="fu">paste</span>(prompt,</span>
+<span id="cb2-12"><a></a>                                           datos_texto_oferta_de_trabajo,</span>
+<span id="cb2-13"><a></a>                                           post_texto)</span>
+<span id="cb2-14"><a></a>    </span>
+<span id="cb2-15"><a></a>    <span class="co"># Configuración de la API</span></span>
+<span id="cb2-16"><a></a>    respuesta_api <span class="ot">&lt;-</span> <span class="fu">POST</span>(</span>
+<span id="cb2-17"><a></a>      <span class="at">url =</span> gooai_studio_url,</span>
+<span id="cb2-18"><a></a>      <span class="fu">add_headers</span>(<span class="st">"Content-Type"</span> <span class="ot">=</span> <span class="st">"application/json"</span>),</span>
+<span id="cb2-19"><a></a>      <span class="at">body =</span> <span class="fu">toJSON</span>(<span class="fu">list</span>(</span>
+<span id="cb2-20"><a></a>        <span class="at">contents =</span> <span class="fu">list</span>(</span>
+<span id="cb2-21"><a></a>          <span class="fu">list</span>(<span class="at">parts =</span> <span class="fu">list</span>(<span class="fu">list</span>(<span class="at">text =</span> dato_texto_prompt_gooaistudio)))</span>
+<span id="cb2-22"><a></a>        )</span>
+<span id="cb2-23"><a></a>      ), <span class="at">auto_unbox =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb2-24"><a></a>      <span class="at">query =</span> <span class="fu">list</span>(<span class="at">key =</span> api_key),</span>
+<span id="cb2-25"><a></a>      <span class="at">encode =</span> <span class="st">"json"</span></span>
+<span id="cb2-26"><a></a>    )</span>
+<span id="cb2-27"><a></a>    </span>
+<span id="cb2-28"><a></a>    <span class="co"># Procesamiento de la respuesta</span></span>
+<span id="cb2-29"><a></a>    datos_goo_respuesta <span class="ot">&lt;-</span> <span class="fu">content</span>(respuesta_api, <span class="at">as =</span> <span class="st">"text"</span>, <span class="at">encoding =</span> <span class="st">"UTF-8"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-30"><a></a>      <span class="fu">fromJSON</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb2-31"><a></a>      .<span class="sc">$</span>candidates <span class="sc">%&gt;%</span></span>
+<span id="cb2-32"><a></a>      .<span class="sc">$</span>content <span class="sc">%&gt;%</span></span>
+<span id="cb2-33"><a></a>      .<span class="sc">$</span>parts <span class="sc">%&gt;%</span></span>
+<span id="cb2-34"><a></a>      .[[<span class="dv">1</span>]] <span class="sc">%&gt;%</span></span>
+<span id="cb2-35"><a></a>      <span class="fu">str_squish</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb2-36"><a></a>      <span class="fu">str_remove_all</span>(<span class="st">'json|'</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb2-37"><a></a>      <span class="fu">fromJSON</span>()</span>
+<span id="cb2-38"><a></a>    </span>
+<span id="cb2-39"><a></a>    requisitos <span class="ot">&lt;-</span> datos_goo_respuesta<span class="sc">$</span>requisitos_del_puesto_de_trabajo</span>
+<span id="cb2-40"><a></a>    </span>
+<span id="cb2-41"><a></a>    <span class="co"># Guardar datos en df_completo</span></span>
+<span id="cb2-42"><a></a>    df_completo<span class="sc">$</span>nivel_educativo[i]       <span class="ot">&lt;-</span> requisitos<span class="sc">$</span>nivel_educativo</span>
+<span id="cb2-43"><a></a>    df_completo<span class="sc">$</span>edad[i]                 <span class="ot">&lt;-</span> requisitos<span class="sc">$</span>edad</span>
+<span id="cb2-44"><a></a>    df_completo<span class="sc">$</span>experiencia[i]          <span class="ot">&lt;-</span> requisitos<span class="sc">$</span>experiencia</span>
+<span id="cb2-45"><a></a>    df_completo<span class="sc">$</span>habilidades[i]          <span class="ot">&lt;-</span> <span class="fu">list</span>(requisitos<span class="sc">$</span>habilidades)</span>
+<span id="cb2-46"><a></a>    df_completo<span class="sc">$</span>conocimientos_tecnicos[i] <span class="ot">&lt;-</span> <span class="fu">list</span>(requisitos<span class="sc">$</span>conocimientos_tecnicos)</span>
+<span id="cb2-47"><a></a>    </span>
+<span id="cb2-48"><a></a>    <span class="fu">Sys.sleep</span>(<span class="dv">3</span>)</span>
+<span id="cb2-49"><a></a>    </span>
+<span id="cb2-50"><a></a>  }, <span class="at">error =</span> <span class="cf">function</span>(e) {</span>
+<span id="cb2-51"><a></a>    <span class="fu">cat</span>(<span class="st">"Error en la oferta"</span>, i, <span class="st">": "</span>, <span class="fu">conditionMessage</span>(e), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span>
+<span id="cb2-52"><a></a>  })</span>
+<span id="cb2-53"><a></a>}</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section class="slide level2">
+
+<ul>
+<li class="fragment"><p>Con estos datos se obtuvo: De las <strong>habilidades</strong> y <strong>conocimientos técnicos</strong> solicitados, más de 2000 entradas distintas las cuales se almacenaron en un dataframe aparte.</p></li>
+<li class="fragment"><p>Estas fueron procesadas en https://atlas.nomic.ai para obtener un mapa de <em>embeddings</em> (<a href="https://atlas.nomic.ai/data/anthonygprado/business-skills-and-knowledge-1/map">Mapa de la investigación</a>).</p></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><a href="https://atlas.nomic.ai/data/anthonygprado/business-skills-and-knowledge-1/map"><img data-src="informe_presentacion_files/assets/Captura de pantalla 2025-02-18 230201.png" class="quarto-figure quarto-figure-center"></a></p>
+</figure>
+</div>
+<ul>
+<li class="fragment">Con las categorías procesadas en este mapa, se inició la <strong>segunda parte</strong> de la limpieza.</li>
+</ul>
+</section>
+<section class="slide level2">
+
+<h3 id="segunda-parte">Segunda Parte</h3>
+<ul>
+<li class="fragment"><p>Luego de analizar profundamente las categorías obtenidas del mapa anterior se eligieron las siguientes para las habilidades:</p>
+<ul>
+<li class="fragment"><p>Finanzas</p></li>
+<li class="fragment"><p>Planificación estratégica</p></li>
+<li class="fragment"><p>Softwares especializados</p></li>
+<li class="fragment"><p>Negociación</p></li>
+<li class="fragment"><p>Contabilidad y tributación</p></li>
+</ul></li>
+</ul>
+</section>
+<section class="slide level2">
+
+<ul>
+<li class="fragment"><p>Con estas categorias se hace un segundo llamado a la API Google Studio IA para obtener las categorías según la taxonomía definida.</p></li>
+<li class="fragment"><p>De esta respuesta se <strong>filtran</strong> las categorías y se convierten variables <em>character</em> a <strong>booleanas</strong> (TRUE/FALSE) donde aplique.</p></li>
+<li class="fragment"><p>Por último, se reordenan los datos finales para el análisis.</p></li>
+<li class="fragment"><p>Este mismo proceso se aplicó para niveles de educación mínimos, experiencia mínima y tipos de ofertas laborales</p></li>
+</ul>
+</section></section>
+<section>
+<section id="resultados-de-la-investigación" class="title-slide slide level1 center">
+<h1>Resultados de la investigación</h1>
+
+</section>
+<section id="habilidades-demandadas" class="slide level2">
+<h2>Habilidades demandadas</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-7dc023d6591b3d5e7f13" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-7dc023d6591b3d5e7f13">{"x":{"data":[{"orientation":"v","width":47,"base":2.5499999999999998,"x":[23.5],"y":[0.90000000000000036],"text":"Cantidad: 47<br />reorder(Categoría, -Cantidad): Contabilidad_y_Tributación<br />Categoría: Contabilidad_y_Tributación","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(228,26,28,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Contabilidad_y_Tributación","legendgroup":"Contabilidad_y_Tributación","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":44,"base":4.5499999999999998,"x":[22],"y":[0.90000000000000036],"text":"Cantidad: 44<br />reorder(Categoría, -Cantidad): Finanzas<br />Categoría: Finanzas","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(55,126,184,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Finanzas","legendgroup":"Finanzas","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":53,"base":1.55,"x":[26.5],"y":[0.90000000000000013],"text":"Cantidad: 53<br />reorder(Categoría, -Cantidad): Negociación<br />Categoría: Negociación","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(77,175,74,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Negociación","legendgroup":"Negociación","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":65,"base":0.55000000000000004,"x":[32.5],"y":[0.89999999999999991],"text":"Cantidad: 65<br />reorder(Categoría, -Cantidad): Planificación_estratégica<br />Categoría: Planificación_estratégica","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(152,78,163,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Planificación_estratégica","legendgroup":"Planificación_estratégica","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":46,"base":3.5499999999999998,"x":[23],"y":[0.90000000000000036],"text":"Cantidad: 46<br />reorder(Categoría, -Cantidad): Software_especializados<br />Categoría: Software_especializados","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,127,0,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Software_especializados","legendgroup":"Software_especializados","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":48.146118721461193,"r":7.3059360730593621,"b":44.56621004566211,"l":177.53424657534251},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"Conteo de habilidades establecidas por Categoría","font":{"color":"rgba(0,0,0,1)","family":"","size":17.534246575342465},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-3.25,68.25],"tickmode":"array","ticktext":["0","20","40","60"],"tickvals":[0,20,40,60],"categoryorder":"array","categoryarray":["0","20","40","60"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Cantidad","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,5.5999999999999996],"tickmode":"array","ticktext":["Planificación_estratégica","Negociación","Contabilidad_y_Tributación","Software_especializados","Finanzas"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["Planificación_estratégica","Negociación","Contabilidad_y_Tributación","Software_especializados","Finanzas"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Categoría","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498},"title":{"text":"Categoría","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"a2ca7089c831":{"x":{},"y":{},"fill":{},"type":"bar"}},"cur_data":"a2ca7089c831","visdat":{"a2ca7089c831":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="conjuntos-de-habilidades-más-demandadas" class="slide level2">
+<h2>Conjuntos de habilidades más demandadas</h2>
+
+<img data-src="merlab_files/figure-revealjs/unnamed-chunk-5-1.png" width="960" class="r-stretch"></section>
+<section id="tipo-de-ofertas-laborales-más-demandados" class="slide level2">
+<h2>Tipo de ofertas laborales más demandados</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-266368fa04cdd1a95d76" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-266368fa04cdd1a95d76">{"x":{"data":[{"orientation":"v","width":38,"base":0.55000000000000004,"x":[19],"y":[0.89999999999999991],"text":"Cantidad: 38<br />reorder(Categoría, -Cantidad): Administrador<br />Categoría: Administrador","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(228,26,28,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Administrador","legendgroup":"Administrador","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":14,"base":3.5499999999999998,"x":[7],"y":[0.90000000000000036],"text":"Cantidad: 14<br />reorder(Categoría, -Cantidad): Contabilidad_y_Tributación<br />Categoría: Contabilidad_y_Tributación","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(55,126,184,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Contabilidad_y_Tributación","legendgroup":"Contabilidad_y_Tributación","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":28,"base":2.5499999999999998,"x":[14],"y":[0.90000000000000036],"text":"Cantidad: 28<br />reorder(Categoría, -Cantidad): Finanzas<br />Categoría: Finanzas","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(77,175,74,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Finanzas","legendgroup":"Finanzas","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":36,"base":1.55,"x":[18],"y":[0.90000000000000013],"text":"Cantidad: 36<br />reorder(Categoría, -Cantidad): Gerencia<br />Categoría: Gerencia","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(152,78,163,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Gerencia","legendgroup":"Gerencia","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":14,"base":4.5499999999999998,"x":[7],"y":[0.90000000000000036],"text":"Cantidad: 14<br />reorder(Categoría, -Cantidad): Investigación<br />Categoría: Investigación","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,127,0,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Investigación","legendgroup":"Investigación","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":48.146118721461193,"r":7.3059360730593621,"b":44.56621004566211,"l":177.53424657534251},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"Conteo de tipos de ofertas laborales establecidas por categoría","font":{"color":"rgba(0,0,0,1)","family":"","size":17.534246575342465},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-1.9000000000000001,39.899999999999999],"tickmode":"array","ticktext":["0","10","20","30"],"tickvals":[0,10,20,30],"categoryorder":"array","categoryarray":["0","10","20","30"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Cantidad","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,5.5999999999999996],"tickmode":"array","ticktext":["Administrador","Gerencia","Finanzas","Contabilidad_y_Tributación","Investigación"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["Administrador","Gerencia","Finanzas","Contabilidad_y_Tributación","Investigación"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Categoría","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498},"title":{"text":"Categoría","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"a2ca758c6fb2":{"x":{},"y":{},"fill":{},"type":"bar"}},"cur_data":"a2ca758c6fb2","visdat":{"a2ca758c6fb2":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="niveles-de-experiencia-más-demandados" class="slide level2">
+<h2>Niveles de experiencia más demandados</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-1e80dce433820b8dddee" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-1e80dce433820b8dddee">{"x":{"data":[{"orientation":"v","width":80,"base":0.55000000000000004,"x":[40],"y":[0.89999999999999991],"text":"Cantidad: 80<br />reorder(Categoría, -Cantidad): Experiencia_1_año<br />Categoría: Experiencia_1_año","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(228,26,28,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Experiencia_1_año","legendgroup":"Experiencia_1_año","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":8,"base":3.5499999999999998,"x":[4],"y":[0.90000000000000036],"text":"Cantidad:  8<br />reorder(Categoría, -Cantidad): Experiencia_10_años<br />Categoría: Experiencia_10_años","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(55,126,184,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Experiencia_10_años","legendgroup":"Experiencia_10_años","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":27,"base":2.5499999999999998,"x":[13.5],"y":[0.90000000000000036],"text":"Cantidad: 27<br />reorder(Categoría, -Cantidad): Experiencia_5_años<br />Categoría: Experiencia_5_años","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(77,175,74,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Experiencia_5_años","legendgroup":"Experiencia_5_años","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":70,"base":1.55,"x":[35],"y":[0.90000000000000013],"text":"Cantidad: 70<br />reorder(Categoría, -Cantidad): No_especifica_experiencia<br />Categoría: No_especifica_experiencia","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(152,78,163,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"No_especifica_experiencia","legendgroup":"No_especifica_experiencia","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":48.146118721461193,"r":7.3059360730593621,"b":44.56621004566211,"l":171.689497716895},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"Conteo de niveles de experiencia establecidas por categoría","font":{"color":"rgba(0,0,0,1)","family":"","size":17.534246575342465},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-4,84],"tickmode":"array","ticktext":["0","20","40","60","80"],"tickvals":[0,20,40,60,80],"categoryorder":"array","categoryarray":["0","20","40","60","80"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Cantidad","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,4.5999999999999996],"tickmode":"array","ticktext":["Experiencia_1_año","No_especifica_experiencia","Experiencia_5_años","Experiencia_10_años"],"tickvals":[1,2,3,4],"categoryorder":"array","categoryarray":["Experiencia_1_año","No_especifica_experiencia","Experiencia_5_años","Experiencia_10_años"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Categoría","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498},"title":{"text":"Categoría","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"a2ca7cdb3a03":{"x":{},"y":{},"fill":{},"type":"bar"}},"cur_data":"a2ca7cdb3a03","visdat":{"a2ca7cdb3a03":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section>
+<section id="nivel-de-educación-más-demandado" class="slide level2">
+<h2>Nivel de educación más demandado</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div class="plotly html-widget html-fill-item" id="htmlwidget-a17068a2900c153f6aaf" style="width:960px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-a17068a2900c153f6aaf">{"x":{"data":[{"orientation":"v","width":7,"base":3.5499999999999998,"x":[3.5],"y":[0.90000000000000036],"text":"Cantidad:   7<br />reorder(Categoría, -Cantidad): Estudiante_de_pregrado<br />Categoría: Estudiante_de_pregrado","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(228,26,28,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Estudiante_de_pregrado","legendgroup":"Estudiante_de_pregrado","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":11,"base":2.5499999999999998,"x":[5.5],"y":[0.90000000000000036],"text":"Cantidad:  11<br />reorder(Categoría, -Cantidad): Maestria_o_Doctorado<br />Categoría: Maestria_o_Doctorado","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(55,126,184,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Maestria_o_Doctorado","legendgroup":"Maestria_o_Doctorado","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":24,"base":1.55,"x":[12],"y":[0.90000000000000013],"text":"Cantidad:  24<br />reorder(Categoría, -Cantidad): No_especifíca<br />Categoría: No_especifíca","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(77,175,74,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"No_especifíca","legendgroup":"No_especifíca","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":5,"base":4.5499999999999998,"x":[2.5],"y":[0.90000000000000036],"text":"Cantidad:   5<br />reorder(Categoría, -Cantidad): Postgrado<br />Categoría: Postgrado","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(152,78,163,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Postgrado","legendgroup":"Postgrado","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"orientation":"v","width":139,"base":0.55000000000000004,"x":[69.5],"y":[0.89999999999999991],"text":"Cantidad: 139<br />reorder(Categoría, -Cantidad): Pregrado<br />Categoría: Pregrado","type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(255,127,0,1)","line":{"width":1.8897637795275593,"color":"transparent"}},"name":"Pregrado","legendgroup":"Pregrado","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":48.146118721461193,"r":7.3059360730593621,"b":44.56621004566211,"l":154.15525114155253},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"title":{"text":"Conteo de niveles de educación establecidos por categoría","font":{"color":"rgba(0,0,0,1)","family":"","size":17.534246575342465},"x":0,"xref":"paper"},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-6.9500000000000002,145.94999999999999],"tickmode":"array","ticktext":["0","50","100"],"tickvals":[0,50,100],"categoryorder":"array","categoryarray":["0","50","100"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Cantidad","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,5.5999999999999996],"tickmode":"array","ticktext":["Pregrado","No_especifíca","Maestria_o_Doctorado","Estudiante_de_pregrado","Postgrado"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["Pregrado","No_especifíca","Maestria_o_Doctorado","Estudiante_de_pregrado","Postgrado"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Categoría","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":true,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498},"title":{"text":"Categoría","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"a2ca46e39044":{"x":{},"y":{},"fill":{},"type":"bar"}},"cur_data":"a2ca46e39044","visdat":{"a2ca46e39044":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</section></section>
+<section>
+<section id="conclusiones" class="title-slide slide level1 center">
+<h1>Conclusiones</h1>
+
+</section>
+<section id="conclusiones-1" class="slide level2">
+<h2>Conclusiones</h2>
+<ol type="1">
+<li class="fragment"><p>Las habilidades mas demandadas son: <strong>Planificación estratégica y Habilidadesde negociación</strong></p></li>
+<li class="fragment"><p>Los puestos de trabajo en donde más economistas se solicitan son: <strong>Administrador y Gerencia</strong></p></li>
+<li class="fragment"><p>El mínimo solicitado de experiencia es: <strong>1 año</strong></p></li>
+</ol>
+</section>
+<section id="incognitas-nuevas" class="slide level2">
+<h2>Incognitas nuevas</h2>
+<ol type="1">
+<li class="fragment"><p>¿Por qué hay tantas ofertas laborales para economistas similares a ofertas laborales para Administradores y/o Contadores?</p></li>
+<li class="fragment"><p>¿Cuál intervalo de edad es el más demandado por los oferentes de empleo de economistas?</p></li>
+</ol>
+</section>
+<section id="ventajas-de-la-metodología-utilizada" class="slide level2">
+<h2>Ventajas de la metodología utilizada</h2>
+<p>Tomando como referencia el artículo científico de Migueláñez, S. O., Puyal, M. B., Riaza, B. G., Conde, M. J. R., &amp; Elorza, I. (2011). “<strong><em>Velocidad y comprensión lectora: Planificación de la carga académica en la Universidad”</em></strong> donde se llega a la conclusión de que los estudiantes universitarios tienen una velocidad de lectura de 200 palabras por minuto aproximadamente</p>
+</section>
+<section class="slide level2">
+
+<p>Bajo este supuesto y sabiendo que solamente las descripciones de todos los puestos de trabajo tienen en total 150.190 palabras el tiempo promedio de solo la lectura de estos sería de 12 horas.</p>
+<p>En contraste del tiempo completo que llevo la creación del codigo de la recolección y limpieza de los datos fue de 15 horas en total dejando el proceso automatizado.</p>
+</section>
+<section id="referencias-bibliográficas" class="slide level2">
+<h2>Referencias Bibliográficas</h2>
+<p>Migueláñez, S. O., Puyal, M. B., Riaza, B. G., Conde, M. J. R., &amp; Elorza, I. (2011). Velocidad y comprensión lectora: Planificación de la carga académica en la Universidad.&nbsp;Bordón: Revista de pedagogía,&nbsp;63(3), 107-119.</p>
+
+<div class="quarto-auto-generated-content">
+<p><img src="assets/logo.png" class="slide-logo"></p>
+<div class="footer footer-default">
+
+</div>
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const onCopySuccess = function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copiado");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copiado");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
+      });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp("https:\/\/ucveconomiar4ds\.netlify\.app");
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
+      function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+        const config = {
+          allowHTML: true,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start',
+        };
+        if (contentFn) {
+          config.content = contentFn;
+        }
+        if (onTriggerFn) {
+          config.onTrigger = onTriggerFn;
+        }
+        if (onUntriggerFn) {
+          config.onUntrigger = onUntriggerFn;
+        }
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
+        });
+      }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

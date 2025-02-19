@@ -78,13 +78,14 @@ website:
           - href: project/proyecto-1.qmd
             text: "Proyectos mitad de curso"
           - href: project/proyecto-2.qmd
-            text: "Proyecto Final de Curso"
+            text: "PFC: Mercado Laboral Economistas"
+          - href: proyectos/merlab/merlab.qmd
 
   page-footer:
     right: "Este sitio fue elaborado con [Quarto](https://quarto.org/) inspirado en el site [sta199 de Mine Çetinkaya-Rundel](https://mine-cr.com/teaching/sta199/)"
     background: "#5d6d74"
     left: |
-      [![](images/escuelaeconomiawbg.png){fig-alt="Escuela de Economía" width=75px}](http://www.ucv.ve/economia)
+      [![](/images/escuelaeconomiawbg.png){fig-alt="Escuela de Economía" width=75px}](http://www.ucv.ve/economia)
 lang: es    
 format:
   html:

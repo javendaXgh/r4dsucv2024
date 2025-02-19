@@ -9623,7 +9623,7 @@
     "href": "clases/clase_26.html#rowwise---ejemplo-2--cont.-1",
     "title": "Ciencia de Datos para Economistas",
     "section": "rowwise - ejemplo 2- cont.",
-    "text": "rowwise - ejemplo 2- cont.\n\n# Sin rowwise aplicar la función personalizada\ndatos %&gt;%\n  mutate(resultado = mi_funcion(valor1, valor2))\n\n# A tibble: 3 × 4\n  id    valor1 valor2 resultado\n  &lt;chr&gt;  &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;\n1 A         10      5      913.\n2 B         40      3      913.\n3 C          9      7      913.\n\n\n\n# Usar rowwise para aplicar la función\ndatos %&gt;%\n  rowwise() %&gt;%\n  mutate(resultado = mi_funcion(valor1, valor2))\n\n# A tibble: 3 × 4\n# Rowwise: \n  id    valor1 valor2 resultado\n  &lt;chr&gt;  &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;\n1 A         10      5      112.\n2 B         40      3      924.\n3 C          9      7      128"
+    "text": "rowwise - ejemplo 2- cont.\n\n# Sin rowwise aplicar la función personalizada\ndatos %&gt;%\n  mutate(resultado = mi_funcion(valor1, valor2))\n\n# A tibble: 3 × 4\n  id    valor1 valor2 resultado\n  &lt;chr&gt;  &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;\n1 A         10      5      913.\n2 B         40      3      913.\n3 C          9      7      913."
   },
   {
     "objectID": "clases/clase_26.html#cuando-usar-rowwise",
@@ -9638,5 +9638,166 @@
     "title": "Ciencia de Datos para Economistas",
     "section": "",
     "text": "Conocer cómo realizar operaciones fila a fila al mismo tiempo.\nRealizar conexiones de lectura y escritura a bases de datos."
+  },
+  {
+    "objectID": "clases/clase_26.html#rowwise---ejemplo-2--cont.-2",
+    "href": "clases/clase_26.html#rowwise---ejemplo-2--cont.-2",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "rowwise - ejemplo 2- cont.",
+    "text": "rowwise - ejemplo 2- cont.\n\n# Usar rowwise para aplicar la función\ndatos %&gt;%\n  rowwise() %&gt;%\n  mutate(resultado = mi_funcion(valor1, valor2))\n\n# A tibble: 3 × 4\n# Rowwise: \n  id    valor1 valor2 resultado\n  &lt;chr&gt;  &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;\n1 A         10      5      112.\n2 B         40      3      924.\n3 C          9      7      128"
+  },
+  {
+    "objectID": "proyectos/merlab/merlab.html#motivos-de-la-investigación",
+    "href": "proyectos/merlab/merlab.html#motivos-de-la-investigación",
+    "title": "Análisis del mercado laboral para economistas en Venezuela",
+    "section": "Motivos de la investigación",
+    "text": "Motivos de la investigación\n\nConfusión entre los estudiantes de la Escuela de Economía de la UCV acerca del mercado laboral venezolano.\nPor lo que se realizo una encuesta para contrastar si estas dudas e inquietudes eran generales",
+    "crumbs": [
+      "Proyectos",
+      "Análisis del mercado laboral para economistas en Venezuela"
+    ]
+  },
+  {
+    "objectID": "proyectos/merlab/merlab.html#incógnitas-a-resolver-con-la-investigación",
+    "href": "proyectos/merlab/merlab.html#incógnitas-a-resolver-con-la-investigación",
+    "title": "Análisis del mercado laboral para economistas en Venezuela",
+    "section": "Incógnitas a resolver con la investigación",
+    "text": "Incógnitas a resolver con la investigación\nPara llevar a cabo esta investigación se buscó responder las siguientes preguntas:\n\n¿Qué habilidades son más demandadas en el mercado laboral para los economistas en Venezuela?\n¿En qué tipos de ofertas laborales se demandan más economistas?\n¿Exigen experiencia previa las vacantes actuales?",
+    "crumbs": [
+      "Proyectos",
+      "Análisis del mercado laboral para economistas en Venezuela"
+    ]
+  },
+  {
+    "objectID": "proyectos/merlab/merlab.html#recolección-de-datos",
+    "href": "proyectos/merlab/merlab.html#recolección-de-datos",
+    "title": "Análisis del mercado laboral para economistas en Venezuela",
+    "section": "Recolección de datos",
+    "text": "Recolección de datos\n\nPara recolectar los datos se eligieron 5 páginas web de ofertas laborales en Venezuela.\nA través de web scrapping se obtuvieron más de 170 ofertas laborales, descargadas luego de tres semanas continuas de descargas diarias.\nTodas estas ofertas laborales fueron organizadas en un único data.frame.",
+    "crumbs": [
+      "Proyectos",
+      "Análisis del mercado laboral para economistas en Venezuela"
+    ]
+  },
+  {
+    "objectID": "proyectos/merlab/merlab.html#recolección-de-datos-1",
+    "href": "proyectos/merlab/merlab.html#recolección-de-datos-1",
+    "title": "Análisis del mercado laboral para economistas en Venezuela",
+    "section": "Recolección de datos",
+    "text": "Recolección de datos",
+    "crumbs": [
+      "Proyectos",
+      "Análisis del mercado laboral para economistas en Venezuela"
+    ]
+  },
+  {
+    "objectID": "proyectos/merlab/merlab.html#limpieza-de-los-datos",
+    "href": "proyectos/merlab/merlab.html#limpieza-de-los-datos",
+    "title": "Análisis del mercado laboral para economistas en Venezuela",
+    "section": "Limpieza de los datos",
+    "text": "Limpieza de los datos\nPrimera parte\n\nAl ser texto la variable descripción de la oferta laboral (la cual se desea limpiar y clasificar), se usó la API de Google Studio IA mediante el siguiente código:",
+    "crumbs": [
+      "Proyectos",
+      "Análisis del mercado laboral para economistas en Venezuela"
+    ]
+  },
+  {
+    "objectID": "proyectos/merlab/merlab.html#habilidades-demandadas",
+    "href": "proyectos/merlab/merlab.html#habilidades-demandadas",
+    "title": "Análisis del mercado laboral para economistas en Venezuela",
+    "section": "Habilidades demandadas",
+    "text": "Habilidades demandadas",
+    "crumbs": [
+      "Proyectos",
+      "Análisis del mercado laboral para economistas en Venezuela"
+    ]
+  },
+  {
+    "objectID": "proyectos/merlab/merlab.html#conjuntos-de-habilidades-más-demandadas",
+    "href": "proyectos/merlab/merlab.html#conjuntos-de-habilidades-más-demandadas",
+    "title": "Análisis del mercado laboral para economistas en Venezuela",
+    "section": "Conjuntos de habilidades más demandadas",
+    "text": "Conjuntos de habilidades más demandadas",
+    "crumbs": [
+      "Proyectos",
+      "Análisis del mercado laboral para economistas en Venezuela"
+    ]
+  },
+  {
+    "objectID": "proyectos/merlab/merlab.html#tipo-de-ofertas-laborales-más-demandados",
+    "href": "proyectos/merlab/merlab.html#tipo-de-ofertas-laborales-más-demandados",
+    "title": "Análisis del mercado laboral para economistas en Venezuela",
+    "section": "Tipo de ofertas laborales más demandados",
+    "text": "Tipo de ofertas laborales más demandados",
+    "crumbs": [
+      "Proyectos",
+      "Análisis del mercado laboral para economistas en Venezuela"
+    ]
+  },
+  {
+    "objectID": "proyectos/merlab/merlab.html#niveles-de-experiencia-más-demandados",
+    "href": "proyectos/merlab/merlab.html#niveles-de-experiencia-más-demandados",
+    "title": "Análisis del mercado laboral para economistas en Venezuela",
+    "section": "Niveles de experiencia más demandados",
+    "text": "Niveles de experiencia más demandados",
+    "crumbs": [
+      "Proyectos",
+      "Análisis del mercado laboral para economistas en Venezuela"
+    ]
+  },
+  {
+    "objectID": "proyectos/merlab/merlab.html#nivel-de-educación-más-demandado",
+    "href": "proyectos/merlab/merlab.html#nivel-de-educación-más-demandado",
+    "title": "Análisis del mercado laboral para economistas en Venezuela",
+    "section": "Nivel de educación más demandado",
+    "text": "Nivel de educación más demandado",
+    "crumbs": [
+      "Proyectos",
+      "Análisis del mercado laboral para economistas en Venezuela"
+    ]
+  },
+  {
+    "objectID": "proyectos/merlab/merlab.html#conclusiones-1",
+    "href": "proyectos/merlab/merlab.html#conclusiones-1",
+    "title": "Análisis del mercado laboral para economistas en Venezuela",
+    "section": "Conclusiones",
+    "text": "Conclusiones\n\nLas habilidades mas demandadas son: Planificación estratégica y Habilidadesde negociación\nLos puestos de trabajo en donde más economistas se solicitan son: Administrador y Gerencia\nEl mínimo solicitado de experiencia es: 1 año",
+    "crumbs": [
+      "Proyectos",
+      "Análisis del mercado laboral para economistas en Venezuela"
+    ]
+  },
+  {
+    "objectID": "proyectos/merlab/merlab.html#incognitas-nuevas",
+    "href": "proyectos/merlab/merlab.html#incognitas-nuevas",
+    "title": "Análisis del mercado laboral para economistas en Venezuela",
+    "section": "Incognitas nuevas",
+    "text": "Incognitas nuevas\n\n¿Por qué hay tantas ofertas laborales para economistas similares a ofertas laborales para Administradores y/o Contadores?\n¿Cuál intervalo de edad es el más demandado por los oferentes de empleo de economistas?",
+    "crumbs": [
+      "Proyectos",
+      "Análisis del mercado laboral para economistas en Venezuela"
+    ]
+  },
+  {
+    "objectID": "proyectos/merlab/merlab.html#ventajas-de-la-metodología-utilizada",
+    "href": "proyectos/merlab/merlab.html#ventajas-de-la-metodología-utilizada",
+    "title": "Análisis del mercado laboral para economistas en Venezuela",
+    "section": "Ventajas de la metodología utilizada",
+    "text": "Ventajas de la metodología utilizada\nTomando como referencia el artículo científico de Migueláñez, S. O., Puyal, M. B., Riaza, B. G., Conde, M. J. R., & Elorza, I. (2011). “Velocidad y comprensión lectora: Planificación de la carga académica en la Universidad” donde se llega a la conclusión de que los estudiantes universitarios tienen una velocidad de lectura de 200 palabras por minuto aproximadamente",
+    "crumbs": [
+      "Proyectos",
+      "Análisis del mercado laboral para economistas en Venezuela"
+    ]
+  },
+  {
+    "objectID": "proyectos/merlab/merlab.html#referencias-bibliográficas",
+    "href": "proyectos/merlab/merlab.html#referencias-bibliográficas",
+    "title": "Análisis del mercado laboral para economistas en Venezuela",
+    "section": "Referencias Bibliográficas",
+    "text": "Referencias Bibliográficas\nMigueláñez, S. O., Puyal, M. B., Riaza, B. G., Conde, M. J. R., & Elorza, I. (2011). Velocidad y comprensión lectora: Planificación de la carga académica en la Universidad. Bordón: Revista de pedagogía, 63(3), 107-119.",
+    "crumbs": [
+      "Proyectos",
+      "Análisis del mercado laboral para economistas en Venezuela"
+    ]
   }
 ]
