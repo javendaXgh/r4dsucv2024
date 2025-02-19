@@ -1,0 +1,456 @@
+---
+title: "Análisis de las Acciones del Índice Financiero de la Bolsa de Valores de Caracas: 2023-2025"
+author: "Javier Melendez"
+lang: es
+date: "`r Sys.Date()`"
+format:
+  html:
+    embed-resources: true
+    toc: true
+    css: styles.css
+    fig-width: 8
+    fig-height: 4
+    code-fold: true
+---
+
+## Introducción
+
+### Este proyecto analizará el comportamiento de las acciones del índice financiero de la Bolsa de Valores de Caracas (BVC) entre enero de 2023 y febrero de 2025. El objetivo es proporcionar una herramienta analítica que permita importar, ordenar, transformar, visualizar y comunicar de forma efectiva la información obtenida directamente de la API de la BVC
+
+## Objetivo General
+
+### Realizar un análisis de los datos utilizando técnicas de importación, ordenamiento, transformación, visualización y comunicación, con el fin de identificar patrones y tendencias en el comportamiento de las acciones del índice financiero de la BVC.
+
+## Objetivos Específicos
+
+### 1 Recolectar y preparar los datos: Extraer los datos crudos de la API de la Bolsa de Valores de Caracas y consolidarlos en un único DataFrame.
+
+### 2 Aplicar técnicas de limpieza y transformación: Garantizar la integridad y consistencia de la información mediante la conversión de formatos y la corrección de inconsistencias.
+
+### 3 Visualizar y comunicar los hallazgos: Desarrollar visualizaciones interactivas y tablas que permitan analizar, entre otros aspectos, el volumen de acciones negociadas y comunicar de forma efectiva los resultados.
+
+## Metodología
+
+### Obtención de Datos: Los datos se extraen mediante solicitudes POST a la API de la BVC, la cual provee acceso a la información histórica de las acciones.
+
+### Proceso: Para cada símbolo (por ejemplo, "BPV", "BNC", "BVCC", "ABC.A", "MVZ.A" y "MVZ.B"), se realiza una solicitud que obtiene datos crudos. Se implementan controles de error y se respeta una pausa entre solicitudes para evitar sobrecargar el servidor.
+
+### Proceso de Análisis de Datos se organiza en las siguientes fases:
+
+### Importar: Recolección de datos crudos desde la API.
+
+### Ordenar: Organización y combinación de la información en un DataFrame único.
+
+### Transformar: Limpieza de datos, conversión de formatos (como fechas y números)
+
+### Visualizar: Creación de gráficos interactivos y tablas para examinar, por ejemplo, la evolución del precio de cierre y el análisis del volumen de acciones negociadas.
+
+### Comunicar: Presentación de los resultados mediante visualizaciones claras e interactivas que faciliten la interpretación de los hallazgos.
+
+```{r, message=FALSE}
+library(httr)       # Para realizar solicitudes HTTP
+library(jsonlite)   # Para procesar datos en formato JSON
+library(lubridate)  # Para el manejo de fechas
+library(dplyr)      # Para la manipulación de datos
+library(purrr)      # Para aplicar funciones a listas y data frames
+library(DT)         # Para visualización interactiva de tablas
+```
+
+### Iniciamos nuestro análisis utilizando httr y jsonlite para extraer y convertir datos crudos de la API de la BVC.
+
+```{r, message=FALSE}
+obtener_datos_desnudos <- function(simbolo) {
+  tryCatch({
+    # Configurar solicitud HTT para obtener datos desde la API de la BVC
+    headers <- add_headers(
+      "User-Agent" = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+      "Referer" = "https://www.bolsadecaracas.com/historicos/"
+    )
+    
+    # Realizar solicitud POST
+    response <- POST(
+      "https://www.bolsadecaracas.com/wp-admin/admin-ajax.php", 
+      headers,
+      body = list(action = "getHistoricoSimbolo", simbolo = simbolo),
+      encode = "form",
+      timeout(15)
+    )
+    
+    # Verificar que la solicitud fue exitosa
+    if (status_code(response) != 200) {
+      message("Error en la respuesta para ", simbolo, ": ", status_code(response))
+      return(NULL)
+    }
+    
+    # Procesar JSON y devolver el contenido completo
+    contenido <- content(response, "text", encoding = "UTF-8")
+    datos_json <- fromJSON(contenido)
+    return(datos_json)
+    
+  }, error = function(e) {
+    message("Error procesando ", simbolo, ": ", e$message)
+    return(NULL)
+  })
+}
+```
+
+### Extracción de Datos para Cada Símbolo("BPV", "BNC", "BVCC", "ABC.A", "MVZ.A", "MVZ.B")
+
+### Se define la lista de símbolos y se recorre uno a uno para extraer sus datos. Se introduce una pausa entre solicitudes para no sobrecargar el servidor.
+
+```{r, message=FALSE}
+# Lista de símbolos
+simbolos <- c("BPV", "BNC", "BVCC", "ABC.A", "MVZ.A", "MVZ.B")
+
+# Ejecución principal: recoger todos los datos sin limpieza
+datos_finales <- list()
+
+for (simbolo in simbolos) {
+  message("Procesando: ", simbolo)
+  datos <- obtener_datos_desnudos(simbolo)
+  
+  if (!is.null(datos)) {
+    datos_finales[[simbolo]] <- datos
+    Sys.sleep(1.5)  # Pausa para evitar saturar el servidor
+  }
+}
+```
+
+## Optimización y Limpieza del DataFrame
+
+### Se combinan los datos obtenidos en un solo data.frame y se renombran columnas para mayor claridad.
+
+### Se convierte la columna de fecha de texto a tipo Date.
+
+### Identificación de acción: Se añade una columna ACCION para identificar el símbolo correspondiente.
+
+### Limpieza de datos numéricos: Se sustituyen comas por puntos para permitir la conversión correcta a tipo numérico.
+
+```{r, message=FALSE}
+datos_totales <- map_df(names(datos_finales), function(simbolo) {
+  # Extraer el componente relevante
+  df <- datos_finales[[simbolo]]$cur_hist_mov_emisora
+  if (is.null(df)) {
+    return(data.frame(ACCION = simbolo))
+  }
+  
+  df <- as.data.frame(df)
+  
+  # Renombrar columnas según el formato requerido
+  colnames(df) <- c("FECHA", "PRECIO_APERT", "PRECIO_CIE", "VAR_ABS", "VAR_REL", 
+                    "PRECIO_MAX", "PRECIO_MIN", "N_OPERACIONES", 
+                    "TITULOS_NEGOCIADOS", "MONTO_EFECTIVO")[1:ncol(df)]
+  
+  # Convertir la columna FECHA al formato Date (formato original: 'dd-mm-yy')
+  df$FECHA <- as_date(df$FECHA, format = '%d-%m-%y')
+  
+  # Agregar la columna ACCION
+  df$ACCION <- simbolo
+  
+  return(df)
+}) %>%
+  # Limpiar columnas numéricas: reemplazar puntos y comas para que sean interpretadas como números
+  mutate(across(
+    c(PRECIO_APERT, PRECIO_CIE, VAR_ABS, VAR_REL, 
+      PRECIO_MAX, PRECIO_MIN, N_OPERACIONES, 
+      TITULOS_NEGOCIADOS, MONTO_EFECTIVO),
+    ~ as.numeric(gsub(",", ".", gsub("\\.", "", .)))
+  ))
+
+# Verificar la estructura final del DataFrame
+str(datos_totales)
+```
+
+### 3. Filtrado de Datos por Rango de Fechas
+
+### Se filtran los datos para conservar únicamente el período comprendido entre enero de 2023 y febrero de 2025.
+
+```{r, message=FALSE}
+# Definir el rango de fechas
+inicio <- as.Date("2023-01-01")
+fin    <- as.Date("2025-02-16")  # Incluye febrero 2025
+
+# Filtrar el DataFrame para el rango deseado
+datos_filtrados <- datos_totales %>% 
+  filter(FECHA >= inicio & FECHA <= fin)
+
+# Visualizar las primeras filas del conjunto filtrado
+head(datos_filtrados)
+```
+
+### Visualización de tabla Interactiva del DataFrame
+
+```{r, message=FALSE}
+datatable(datos_filtrados,
+          rownames = FALSE,
+          #
+          options = list(
+            dom = 'frtip',  # 'f' = filtro, 'r' = procesamiento, 't' = tabla, 'i' = info, 'p' = paginación
+            lengthChange = FALSE,
+            language = list(url = '//cdn.datatables.net/plug-ins/1.10.11/i18n/Spanish.json'),
+            pageLength = 5,
+            initComplete = JS(
+              "function(settings, json) {",
+              "$(this.api().table().header()).css({'background-color': '#224eb2','color': '#fff'});",
+              "}"
+            ),
+            Filter = 0
+          ),
+          escape = FALSE
+) %>% 
+  formatStyle(columns = colnames(.), fontSize = '50%')
+```
+
+### 4. Visualización de Gráficos
+
+### Se realizan dos tipos de visualizaciones para explorar la evolución de las acciones:
+
+### 4.1. Gráficas Independientes por Acción
+
+### Tenemos un gráfico interactivo con Plotly que muestra la evolución del precio de cierre de varias acciones de la Bolsa de Valores de Caracas (BVC), permitiendo seleccionar qué acción visualizar a través de un menú interactivo.
+
+```{r, message=FALSE}
+# Cargar librerías necesarias
+library(plotly)
+library(dplyr)
+library(scales)
+
+# Lista única de acciones
+acciones <- unique(datos_filtrados$ACCION)
+
+# Crear una lista para almacenar la información de cada traza
+trazas <- list()
+for (accion in acciones) {
+  datos_accion <- datos_filtrados %>% filter(ACCION == accion)
+  
+  # Definir el texto a mostrar en el hover (tooltip)
+  hover_text <- paste("Fecha:", datos_accion$FECHA,
+                      "<br>Precio Cierre:", dollar(datos_accion$PRECIO_CIE, prefix = "bs"),
+                      "<br>N_OPERACIONES:", datos_accion$N_OPERACIONES,
+                      "<br>TITULOS_NEGOCIADOS:", datos_accion$TITULOS_NEGOCIADOS,
+                      "<br>MONTO_EFECTIVO:", datos_accion$MONTO_EFECTIVO)
+  
+  trazas[[accion]] <- list(
+    x = datos_accion$FECHA,
+    y = datos_accion$PRECIO_CIE,
+    type = 'scatter',
+    mode = 'lines',
+    name = accion,
+    line = list(width = 1.5),
+    text = hover_text,
+    hoverinfo = "text"  # Se indica que se usará el texto personalizado en el hover
+  )
+}
+
+# Definir la visibilidad inicial: solo se muestra la primera acción
+visibilidad_inicial <- sapply(acciones, function(x) x == acciones[1])
+
+# Crear los botones del menú superior
+botones <- lapply(seq_along(acciones), function(i) {
+  # Vector de visibilidad: solo la traza i es visible
+  vis <- rep(FALSE, length(acciones))
+  vis[i] <- TRUE
+  list(
+    method = "update",
+    args = list(
+      list(visible = vis),  # Actualiza la visibilidad de las trazas
+      list(title = paste("Evolución del Precio de Cierre de", acciones[i]))
+    ),
+    label = acciones[i]
+  )
+})
+
+# Construir el gráfico
+fig <- plot_ly()
+for (i in seq_along(acciones)) {
+  accion <- acciones[i]
+  fig <- fig %>% add_trace(
+    x = trazas[[accion]]$x,
+    y = trazas[[accion]]$y,
+    type = trazas[[accion]]$type,
+    mode = trazas[[accion]]$mode,
+    name = trazas[[accion]]$name,
+    line = trazas[[accion]]$line,
+    text = trazas[[accion]]$text,
+    hoverinfo = trazas[[accion]]$hoverinfo,
+    visible = visibilidad_inicial[i]
+  )
+}
+
+# Configurar el layout del gráfico (incluye menú de actualización y rangos)
+fig <- fig %>% layout(
+  title = paste("Evolución del Precio de Cierre de", acciones[1]),
+  updatemenus = list(
+    list(
+      type = "buttons",
+      direction = "right",
+      x = 0.5,  # Ajusta la posición horizontal según convenga
+      y = 1.15, # Ajusta la posición vertical (por encima del gráfico)
+      showactive = TRUE,
+      buttons = botones
+    )
+  ),
+  xaxis = list(
+    title = "Fecha",
+    rangeselector = list(
+      buttons = list(
+        list(count = 7, label = "1 Semana", step = "day", stepmode = "backward"),
+        list(count = 1, label = "1 Mes", step = "month", stepmode = "backward"),
+        list(count = 6, label = "6 Meses", step = "month", stepmode = "backward"),
+        list(count = 1, label = "1 Año", step = "year", stepmode = "backward"),
+        list(step = "all", label = "Todo")
+      )
+    ),
+    rangeslider = list(visible = TRUE)
+  ),
+  yaxis = list(title = "Precio de Cierre (Bs)")
+)
+
+# Mostrar el gráfico
+fig
+
+```
+
+### En este gráfico se muestra la evolución del precio de cierre de varias acciones del Índice Financiero de BVC, este muestra todas las acciones en el mismo gráfico sin un menú de selección, lo que permite visualizar simultáneamente la evolución de cada una.
+
+```{r, message=FALSE}
+# Cargar librerías necesarias
+library(plotly)
+library(dplyr)
+library(scales)
+
+# Supongamos que 'datos_filtrados' es tu data frame con las columnas mencionadas.
+
+# Crear el gráfico compartido
+fig <- plot_ly()
+
+for (accion in unique(datos_filtrados$ACCION)) {
+  datos_accion <- datos_filtrados %>% filter(ACCION == accion)
+  
+  # Crear el texto para el tooltip
+  hover_text <- paste("Fecha:", datos_accion$FECHA,
+                      "<br>Precio Cierre:", dollar(datos_accion$PRECIO_CIE, prefix = "Bs"),
+                      "<br>N_OPERACIONES:", datos_accion$N_OPERACIONES,
+                      "<br>TITULOS_NEGOCIADOS:", datos_accion$TITULOS_NEGOCIADOS,
+                      "<br>MONTO_EFECTIVO:", datos_accion$MONTO_EFECTIVO)
+  
+  fig <- fig %>% add_trace(
+    x = datos_accion$FECHA,
+    y = datos_accion$PRECIO_CIE,
+    type = 'scatter',
+    mode = 'lines',
+    name = accion,
+    line = list(width = 2),
+    text = hover_text,
+    hoverinfo = "text"
+  )
+}
+
+# Configurar el layout del gráfico
+fig <- fig %>% layout(
+  title = "Evolución del Precio de Cierre - Acciones del Índice Financiero de Caracas",
+  xaxis = list(
+    title = "Fecha",
+    rangeselector = list(
+      buttons = list(
+        list(count = 7, label = "1 Semana", step = "day", stepmode = "backward"),
+        list(count = 1, label = "1 Mes", step = "month", stepmode = "backward"),
+        list(count = 6, label = "6 Meses", step = "month", stepmode = "backward"),
+        list(count = 1, label = "1 Año", step = "year", stepmode = "backward"),
+        list(step = "all", label = "Todo")
+      )
+    ),
+    rangeslider = list(visible = TRUE)
+  ),
+  yaxis = list(title = "Precio de Cierre (Bs)"),
+  legend = list(
+    orientation = 'h',  # Leyenda horizontal
+    x = 0.5,
+    xanchor = 'center',
+    y = 1.15
+  )
+)
+
+# Mostrar el gráfico
+fig
+
+
+```
+
+### 5. Análisis del Volumen Negociado
+
+### Se analiza el volumen de negociación (títulos negociados) por año y acción, determinando cuál es la acción con mayor volumen negociado cada año y se genera un gráfico comparativo.
+
+### Cálculo del Volumen Anual
+
+```{r, message=FALSE}
+library(dplyr)
+library(lubridate)
+
+# Agregar la columna 'Año' a partir de 'FECHA'
+datos_filtrados <- datos_filtrados %>%
+  mutate(Año = year(FECHA))
+
+# Resumen anual: total negociado por cada acción en cada año
+volumen_anual <- datos_filtrados %>%
+  group_by(ACCION, Año) %>%
+  summarise(total_vol = sum(TITULOS_NEGOCIADOS, na.rm = TRUE)) %>%
+  ungroup()
+```
+
+### Identificación de la Acción con Mayor Volumen por Año
+
+```{r, message=FALSE}
+accion_favorita_anual <- volumen_anual %>%
+  group_by(Año) %>%
+  filter(total_vol == max(total_vol)) %>%  # Selecciona la acción con el mayor volumen en cada año
+  arrange(Año) %>%
+  ungroup()
+
+# Mostrar la acción favorita por año
+print(accion_favorita_anual)
+
+```
+
+### Gráfico Comparativo del Volumen Negociado
+
+```{r, message=FALSE}
+library(plotly)
+
+fig_bar <- plot_ly(volumen_anual, 
+                   x = ~Año, 
+                   y = ~total_vol, 
+                   color = ~ACCION, 
+                   type = 'bar') %>%
+  layout(title = "Comparativa del Volumen Negociado por Año y Acción",
+         xaxis = list(title = "Año"),
+         yaxis = list(title = "Total de Títulos Negociados"),
+         barmode = 'group',
+         legend = list(title = list(text = "<b>Acción</b>")))
+fig_bar
+
+```
+
+## Conclusiones del Proyecto
+
+### 1. Importación y Organización Exitosa de Datos: Se logró extraer datos históricos de la API de la BVC para 6 símbolos clave (BPV, BNC, BVCC, ABC.A, MVZ.A, MVZ.B) mediante solicitudes POST y pausas controladas.
+
+### Los datos se consolidaron en un único DataFrame estructurado, con columnas renombradas y tipificación adecuada (fechas como Date, valores numéricos limpios).
+
+### 2. Calidad y Consistencia de los Datos: La transformación incluyó corrección de formatos (ej. comas como separadores decimales) y filtrado por el rango 2023-2025, asegurando integridad para análisis posteriores.
+
+### Se identificaron acciones con mayor volumen anual (ej. BNC o BPV destacaron en ciertos años), revelando líderes en liquidez.
+
+### 3. Patrones y Tendencias Claras:Los gráficos interactivos mostraron volatilidad en precios de cierre, con movimientos significativos en períodos específicos
+
+### El volumen negociado varió notablemente entre acciones, sugiriendo diferencias en atractivo para inversionistas.
+
+## Recomendaciones
+
+### Monitoreo Continuo: Actualizar el análisis con nuevos datos para validar tendencias y ajustar modelos predictivos.
+
+### Incorporando Factores Externos:
+
+### Decisiones corporativas: Dividendos, emisiones de nuevas acciones, fusiones o cambios en la estructura de la empresa pueden afectar los precios.
+
+### Factores macroeconómicos: Inflación, tasas de interés, políticas cambiarias y crisis económicas pueden influir en el mercado bursátil.

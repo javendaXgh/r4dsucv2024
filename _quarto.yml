@@ -80,6 +80,9 @@ website:
           - href: project/proyecto-2.qmd
             text: "Proyecto Final de Curso"
           - href: proyectos/merlab/merlab.qmd
+          - href: proyectos/merbur/merbur.qmd
+            text: "Análisis de Acciones BVC"
+
 
   page-footer:
     right: "Este sitio fue elaborado con [Quarto](https://quarto.org/) inspirado en el site [sta199 de Mine Çetinkaya-Rundel](https://mine-cr.com/teaching/sta199/)"
