@@ -1,0 +1,113 @@
+---
+title: "Ciencia de Datos para Economistas"
+subtitle: "Clase 27- Trabajando con Bases de Datos"
+date: "7, marzo 2025"
+lang: 'es'
+author: "MSc. José M. Avendaño"
+format:
+  revealjs:
+    incremental: true  
+---
+
+## Objetivo
+
+Conocer fundamentos básicos de bases de dato y cómo trabajar desde el lenguaje R con ellas.
+
+## Ciclo
+
+![](images/cd_ciclo_1.png){fig-align="center"}
+
+## Qué son las Base de Datos
+
+Son sistemas organizados que almacenan, recuperan y administran grandes cantidades de información. Permiten almacenar datos de manera estructurada y eficiente, facilitando su acceso y manipulación.
+
+## Datos Estructurados vs Datos N.E.
+
+-   **Datos Estructurados**: Están organizados en una tabla con filas y columnas, como hojas de cálculo o registros de una base de datos.
+
+-   **Datos No Estructurados**: No tienen un formato predefinido, como textos, imágenes, videos, etc.
+
+## Ejemplos de Tablas
+
+| ID  | NOMBRE | EDAD |
+|-----|--------|------|
+| 1   | Ana    | 25   |
+| 2   | Juan   | 30   |
+| 3   | María  | 28   |
+
+## 2 Ejemplo de una tabla de ventas que incluye ventas a un mismo cliente
+
+| CI_Cliente | CLIENTE_Nombre | PRODUCTO | CANTIDAD | PRECIO |
+|------------|----------------|----------|----------|--------|
+| 23.462     | José           | Lápiz    | 2        | 5      |
+| 11.525     | María          | Cuaderno | 1        | 10     |
+| 23.462     | José           | Libro    | 1        | 20     |
+
+## ¿Qué es la normalización en base de datos?
+
+La normalización es un proceso que se utiliza para organizar los datos de una base de datos de manera eficiente, eliminando redundancias y asegurando integridad.
+
+## Ejemplo de tablas que estén relacionadas: 
+
+### Tabla "datos_cliente"
+
+| CLIENTE_ID | NOMBRE | CI_cliente |
+|------------|--------|------------|
+| 1          | María  | 11.525     |
+| 2          | José   | 23.462     |
+
+## **Tabla Ventas**
+
+| ID_VENTA | CLIENTE_ID | PRODUCTO | CANTIDAD | PRECIO |
+|----------|------------|----------|----------|--------|
+| 1        | 1          | Lápiz    | 2        | 5      |
+| 2        | 2          | Cuaderno | 1        | 10     |
+| 3        | 1          | Libro    | 1        | 20     |
+
+## Manejadores de bases de datos
+
+Los manejadores de bases de datos (DBMS) son programas que permiten crear, gestionar y manipular bases de datos. Proporcionan una interfaz para interactuar con la base de datos.
+
+## Ejemplos de manejadores de base de datos
+
+-   MySQL
+
+-   PostgreSQL
+
+-   SQLite
+
+-   Oracle
+
+-   Microsoft SQL Server
+
+## ¿Qué es la programación declarativa?
+
+La programación declarativa se centra en describir lo que se quiere lograr, no en cómo hacerlo. En contraste con la programación imperativa, que especifica paso a paso las acciones a realizar.
+
+## ¿Qué hace un manejador de db con una instrucción como por ejemplo el ordenamiento?
+
+Cuando se ejecuta una consulta de ordenamiento (como **`ORDER BY`** en SQL), el manejador de base de datos recupera los datos y los organiza según el criterio especificado, sin tener que indicar paso a paso cómo hacerlo.
+
+## Cómo Maneja un DBMS un Ordenamiento
+
+1.  **Ordenamiento por Intercambio (Bubble Sort)**
+
+2.  **Ordenamiento por Selección (Selection Sort)**
+
+3.  **Ordenamiento por Inserción (Insertion Sort)**
+
+4.  **Ordenamiento por Mezcla (Merge Sort)**
+
+5.  **Ordenamiento por Rápido (Quick Sort)**
+
+6.  **Ordenamiento por Heapsort**
+
+    ....
+
+## ¿Qué es la indexación y su ventaja?
+
+Es una técnica que mejora el rendimiento de las consultas en bases de datos al crear estructuras de acceso rápido a los datos. Permite buscar información más rápidamente, similar a un índice en un libro.
+
+## ¿Qué es desnormalizar una base de dato?
+
+Desnormalizar una base de datos implica combinar tablas para reducir la redundancia y mejorar el rendimiento de las consultas. Aunque puede simplificar ciertas operaciones, también puede llevar a problemas de integridad de los datos.
