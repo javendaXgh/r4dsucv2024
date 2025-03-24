@@ -47,7 +47,7 @@ Son sistemas organizados que almacenan, recuperan y administran grandes cantidad
 
 La normalización es un proceso que se utiliza para organizar los datos de una base de datos de manera eficiente, eliminando redundancias y asegurando integridad.
 
-## Ejemplo de tablas que estén relacionadas: 
+## Ejemplo de tablas que estén relacionadas:
 
 ### Tabla "datos_cliente"
 

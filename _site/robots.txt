@@ -1,1 +1,1 @@
-Sitemap: https://ucveconomiar4ds.netlify.app/sitemap.xml
+Sitemap: https://ucveconomia-r4ds-2024-2.netlify.app/sitemap.xml

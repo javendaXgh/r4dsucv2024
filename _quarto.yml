@@ -7,7 +7,7 @@ website:
   page-navigation: false
   title: "UCV EconomíaR4DS"
   description: "Ciencia de Datos Basada en Programación en R para Economistas"
-  site-url: https://ucveconomiar4ds.netlify.app
+  site-url: https://ucveconomia-r4ds-2024-2.netlify.app/
   repo-url: https://github.com/orgs/UCVeconomia2024-2/
   favicon: images/favicon.png
   google-analytics: "G-5BVQ49LXJG"
@@ -24,7 +24,7 @@ website:
         text: "Correo"
         href: "mailto:ucveconomiar4ds@gmail.com"
       - icon: discord
-        href:  https://discord.gg/fxXcEHH2
+        href: https://discord.gg/fxXcEHH2
         text: "Discord"
       - icon: github
         href: https://github.com/orgs/UCVeconomia2024-2/dashboard

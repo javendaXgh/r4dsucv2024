@@ -635,12 +635,12 @@ MSc. José M. Avendaño
 <span id="cb22-7"><a></a>  <span class="fu">sample_n</span>(<span class="dv">4</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
-  country            pib tipo_pib     
-  &lt;fct&gt;            &lt;dbl&gt; &lt;chr&gt;        
-1 Norway   228421423675. pib_down_mean
-2 Djibouti   1033689705. pib_down_mean
-3 Croatia   65688728878. pib_down_mean
-4 Mali      12544127565. pib_down_mean</code></pre>
+  country                     pib tipo_pib     
+  &lt;fct&gt;                     &lt;dbl&gt; &lt;chr&gt;        
+1 Somalia             8445270168. pib_down_mean
+2 Nicaragua          15603375235. pib_down_mean
+3 West Bank and Gaza 12156859904. pib_down_mean
+4 Rwanda              7647471286. pib_down_mean</code></pre>
 </div>
 </div>
 </section>
@@ -796,16 +796,16 @@ pib_down_mean   pib_up_mean
 <span id="cb38-3"><a></a>  <span class="fu">sample_n</span>(<span class="dv">8</span>)</span></code><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 8 × 4
-  country                      pib tipo_pib      tipo_pib2
-  &lt;fct&gt;                      &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;    
-1 Slovenia            51774742721. pib_down_mean medio_pib
-2 Panama              31803076821. pib_down_mean medio_pib
-3 Angola              59583895818. pib_down_mean medio_pib
-4 Czech Republic     233556067422. pib_down_mean medio_pib
-5 Gabon               19213678514. pib_down_mean medio_pib
-6 Dominican Republic  56154215097. pib_down_mean medio_pib
-7 Denmark            192906627081. pib_down_mean medio_pib
-8 Yemen, Rep.         50659874994. pib_down_mean medio_pib</code></pre>
+  country                       pib tipo_pib      tipo_pib2
+  &lt;fct&gt;                       &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;    
+1 Botswana             20603633702. pib_down_mean medio_pib
+2 Gabon                19213678514. pib_down_mean medio_pib
+3 Uruguay              36582976212. pib_down_mean medio_pib
+4 Sri Lanka            80903553057. pib_down_mean medio_pib
+5 Libya                72790086208. pib_down_mean medio_pib
+6 Trinidad and Tobago  19027934931. pib_down_mean medio_pib
+7 Peru                212448566598. pib_down_mean medio_pib
+8 Finland             173953983346. pib_down_mean medio_pib</code></pre>
 </div>
 </div>
 </section>
@@ -1181,7 +1181,7 @@ pib_down_mean   pib_up_mean
       }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
-          var filterRegex = new RegExp("https:\/\/ucveconomiar4ds\.netlify\.app");
+          var filterRegex = new RegExp("https:\/\/ucveconomia-r4ds-2024-2\.netlify\.app\/");
         var isInternal = (href) => {
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }

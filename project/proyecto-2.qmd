@@ -26,7 +26,7 @@ La calificación será con un tope de 30 puntos, desagregados de esta manera:
 
 -   **Investigación:** Realiza un análisis de datos exhaustivo, utilizando las técnicas aprendidas en clase.
 
--   **Obteneción y limpiar los datos:** Recolectar los datos necesarios y realizar las tareas de limpieza y transformación requeridas.
+-   **Obtención y limpiar los datos:** Recolectar los datos necesarios y realizar las tareas de limpieza y transformación requeridas.
 
 -   **Realizar el análisis exploratorio de datos:** Explorar los datos para identificar patrones, tendencias y relaciones entre las variables.
 

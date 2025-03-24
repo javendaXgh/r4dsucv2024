@@ -468,7 +468,7 @@
     "href": "index.html",
     "title": "Actividades",
     "section": "",
-    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\nAsignar Nombres Objetos y Variables\n🖥️ láminas clase 03 apoyo  💻 clase 3 apoyo versión qmd \n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n🖥️ láminas clase 04  💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\nConstruir Funciones y Data Frames\n🖥️ láminas clase 06  💻 clase 6 versión qmd  🖥️ clase 6 versión códigos  💻 clase 6: práctica 1- versión qmd  💻 clase 6: práctica 1- versión site  🎥video render Quarto 💻 clase 6: práctica 2- versión qmd  💻 clase 6: práctica 2- versión site \n\n\n\n\nmié, 6 nov.\nDF subsetting; Ayudas\n🖥️ láminas clase 07 💻 clase 7: tarea \n\n\n4\nlun, 11 nov.\nInspección DF´s / Seleccionar Valores, Subsettings-cont\n🖥️ láminas clase 08 🖥️ clase 08, versión reporte 💻 clase 8 versión qmd  💻 clase 8: tarea \n\n\n\n\nmié, 13 nov.\nPaths o Rutas de trabajo\n🖥️ láminas clase 09\n\n\n5\nlun, 18 nov.\nTrabajando con Data Frames por filas\n🖥️ láminas clase 10\n\n\n\n\nmié, 20 nov.\nTrabajando con Data Frames por columnas\n🖥️ láminas clase 11 💻 clase 11 versión qmd \n\n\n6\nlun, 25 nov.\nTrabajando con Data Frames: agrupamientos y Reframes\n🖥️ láminas clase 12 💻 clase 12 script  🖥️ clase 12, versión reporte 💻 clase 12 versión qmd \n\n\n\n\nmié, 27 nov.\nTrabajando con Data Frames: Agrupamientos y Reframes/ Asignación Ensayo\n💻 clase 13 script  🖥️ clase 13, versión reporte 💻 clase 13 versión qmd \n\n\n7\nlun, 2 dic.\nTrabajando con LLM R4DS Escuela Economía UCV\n🖥️ láminas clase 14 💻 clase 14 script \n\n\n\n\nmié, 4 dic.\nTrabajando con Data Frames y Tibbles: factores, selects, remoción duplicados. RBase: Coercion\n🖥️ láminas clase 15 💻 clase 15 script  🖥️ clase 15, versión reporte 💻 clase 15 versión qmd \n\n\n\n\nvie, 6 dic.\nTrabajando con Tibbles:Formatos Long y Wide, Valores Ausentes\nmismos materiales de clase 15\n\n\n8\nlun, 9 dic.\ntrabajando con: fechas y strings\n🖥️ láminas clase 17 💻 clase 17 script \n\n\n\n\nmié, 11 dic.\nUsando R para Análisis Económico\n💻 clase 18 script  🛢️ conjunto de datos clase 18 \n\n\n10\nlun, 13 ene.\nAvances anteproyecto- Discusión\n\n\n\n\n\n\nmié, 15 ene.\nIntroducción a la Visualizacion de Datos\n🖥️ láminas clase 19\n\n\n\n\nvie, 17 ene.\nIntroducción al Scrapy\n\n\n\n\n11\nmié, 22 ene.\nVisualizacion de Datos/ Análisis Exploratorio\n🖥️ láminas clase 20-1 🖥️ láminas clase 20-2 🖥️ láminas clase 20-3 💻 clase 20 script \n\n\n12\nlun, 27 ene.\nVisualización de Datos: GGplot y otras opciones\n🖥️ láminas clase 21 🖥️ láminas clase 21 complemento 💻 clase 21 script ggplot2  💻 clase 21 script valores acciones \n\n\n\n\nmié, 29 ene.\nIntroducción a uso de API´s\n🖥️ láminas clase 22 💻 clase 22 script \n\n\n13\nlun, 3 feb.\nReportes/Tablas DT y GT/Nombres Columnas\n🖥️ láminas clase 23 💻 clase 23 script text latex  💻 clase 23 script quarto demo  💻 clase 23 script variables environment \n\n\n\n\nmié, 5 feb.\nDashboard\n💻 clase 24 script quarto demo \n\n\n14\nlun, 10 feb.\nJoins de DF´s\n🖥️ láminas clase 25\n\n\n\n\nmié, 12 feb.\nConsultas Proyecto Final\n\n\n\n\n15\nlun, 17 feb.\nConexiones a DB´s, lectura y escritura\n🖥️ láminas clase 26\n\n\n\n\nmié, 19 feb.\nPresentacion Proyecto",
+    "text": "SEMANA\nFECHA\nTEMA\nMATERIALES\n\n\n\n\n1\nmié, 16 oct.\nPresentación Curso\n🖥️ láminas clase 01\n\n\n2\nlun, 21 oct.\nConociendo R y RStudio\n🖥️ láminas clase 02 🎥video crear proyecto\n\n\n\n\nmié, 23 oct.\nAsignar Nombres Objetos y Variables\n🖥️ láminas clase 03 apoyo  💻 clase 3 apoyo versión qmd \n\n\n3\nlun, 28 oct.\nR Base: funciones precargadas / Cónsola\n🖥️ láminas clase 04  💻 clase 4: tarea  💻 clase 4: script  💻 clase 4: 2 da parte  💻 clase 4: ejemplo reporte interactivo\n\n\n\n\nmié, 30 oct.\nEstructuras de Datos / Vectores\n🖥️ láminas clase 05 🖥️ láminas clase 05: Parte Variables 💻clase 05 versión qmd: Parte Variables 💻 clase 5: tarea  💻 clase 5: conceptos complementarios versión qmd\n\n\n3\nlun, 4 nov.\nConstruir Funciones y Data Frames\n🖥️ láminas clase 06  💻 clase 6 versión qmd  🖥️ clase 6 versión códigos  💻 clase 6: práctica 1- versión qmd  💻 clase 6: práctica 1- versión site  🎥video render Quarto 💻 clase 6: práctica 2- versión qmd  💻 clase 6: práctica 2- versión site \n\n\n\n\nmié, 6 nov.\nDF subsetting; Ayudas\n🖥️ láminas clase 07 💻 clase 7: tarea \n\n\n4\nlun, 11 nov.\nInspección DF´s / Seleccionar Valores, Subsettings-cont\n🖥️ láminas clase 08 🖥️ clase 08, versión reporte 💻 clase 8 versión qmd  💻 clase 8: tarea \n\n\n\n\nmié, 13 nov.\nPaths o Rutas de trabajo\n🖥️ láminas clase 09\n\n\n5\nlun, 18 nov.\nTrabajando con Data Frames por filas\n🖥️ láminas clase 10\n\n\n\n\nmié, 20 nov.\nTrabajando con Data Frames por columnas\n🖥️ láminas clase 11 💻 clase 11 versión qmd \n\n\n6\nlun, 25 nov.\nTrabajando con Data Frames: agrupamientos y Reframes\n🖥️ láminas clase 12 💻 clase 12 script  🖥️ clase 12, versión reporte 💻 clase 12 versión qmd \n\n\n\n\nmié, 27 nov.\nTrabajando con Data Frames: Agrupamientos y Reframes/ Asignación Ensayo\n💻 clase 13 script  🖥️ clase 13, versión reporte 💻 clase 13 versión qmd \n\n\n7\nlun, 2 dic.\nTrabajando con LLM R4DS Escuela Economía UCV\n🖥️ láminas clase 14 💻 clase 14 script \n\n\n\n\nmié, 4 dic.\nTrabajando con Data Frames y Tibbles: factores, selects, remoción duplicados. RBase: Coercion\n🖥️ láminas clase 15 💻 clase 15 script  🖥️ clase 15, versión reporte 💻 clase 15 versión qmd \n\n\n\n\nvie, 6 dic.\nTrabajando con Tibbles:Formatos Long y Wide, Valores Ausentes\nmismos materiales de clase 15\n\n\n8\nlun, 9 dic.\ntrabajando con: fechas y strings\n🖥️ láminas clase 17 💻 clase 17 script \n\n\n\n\nmié, 11 dic.\nUsando R para Análisis Económico\n💻 clase 18 script  🛢️ conjunto de datos clase 18 \n\n\n10\nlun, 13 ene.\nAvances anteproyecto- Discusión\n\n\n\n\n\n\nmié, 15 ene.\nIntroducción a la Visualizacion de Datos\n🖥️ láminas clase 19\n\n\n\n\nvie, 17 ene.\nIntroducción al Scrapy\n\n\n\n\n11\nmié, 22 ene.\nVisualizacion de Datos/ Análisis Exploratorio\n🖥️ láminas clase 20-1 🖥️ láminas clase 20-2 🖥️ láminas clase 20-3 💻 clase 20 script \n\n\n12\nlun, 27 ene.\nVisualización de Datos: GGplot y otras opciones\n🖥️ láminas clase 21 🖥️ láminas clase 21 complemento 💻 clase 21 script ggplot2  💻 clase 21 script valores acciones \n\n\n\n\nmié, 29 ene.\nIntroducción a uso de API´s\n🖥️ láminas clase 22 💻 clase 22 script \n\n\n13\nlun, 3 feb.\nReportes/Tablas DT y GT/Nombres Columnas\n🖥️ láminas clase 23 💻 clase 23 script text latex  💻 clase 23 script quarto demo  💻 clase 23 script variables environment \n\n\n\n\nmié, 5 feb.\nDashboard\n💻 clase 24 script quarto demo \n\n\n14\nlun, 10 feb.\nJoins de DF´s\n🖥️ láminas clase 25\n\n\n\n\nmié, 12 feb.\nConsultas Proyecto Final\n\n\n\n\n15\nlun, 17 feb.\nConexiones a DB´s, lectura y escritura\n🖥️ láminas clase 26\n\n\n\n\nmié, 19 feb.\nPresentacion Proyecto\n\n\n\n\n\n\nvie, 7 mar.\nTrabajando con Bases de Datos\n🖥️ láminas clase 27",
     "crumbs": [
       "Sobre el Curso",
       "Actividades"
@@ -916,8 +916,8 @@
     "objectID": "clases/clase_03.html#r-base",
     "href": "clases/clase_03.html#r-base",
     "title": "Ciencia de Datos para Economistas",
-    "section": "",
-    "text": "Con R base nos referimos a los comandos básicos que vienen incorporados en el R, sin necesidad de cargar librerías."
+    "section": "R Base",
+    "text": "R Base\nCon R base nos referimos a los comandos básicos que vienen incorporados en el R, sin necesidad de cargar librerías."
   },
   {
     "objectID": "clases/clase_03.html#uso-de-la-console",
@@ -1440,7 +1440,7 @@
     "href": "clases/clase_05_complemento_variables.html#reglas-para-la-creación-de-variables",
     "title": "Ciencia de Datos para Economistas",
     "section": "Reglas para la creación de variables",
-    "text": "Reglas para la creación de variables\n\nEstilo y convención\nMinúsculas: Las variables deben escribirse en minúsculas como una recomendación de estilo. Aunque no es una limitación del lenguaje, es una buena práctica:\n\nprimera_variable &lt;- 'iniciamos un script'"
+    "text": "Reglas para la creación de variables\nEstilo y convención\nMinúsculas: Las variables deben escribirse en minúsculas como una recomendación de estilo. Aunque no es una limitación del lenguaje, es una buena práctica:\n\nprimera_variable &lt;- 'iniciamos un script'"
   },
   {
     "objectID": "clases/clase_05_complemento_variables.html#reglas-cont.",
@@ -1482,7 +1482,7 @@
     "href": "clases/clase_05_complemento_variables.html#ejemplo-de-caracteres-especiales-no-permitidos",
     "title": "Ciencia de Datos para Economistas",
     "section": "Ejemplo de Caracteres Especiales no Permitidos",
-    "text": "Ejemplo de Caracteres Especiales no Permitidos\nEl siguiente ejemplo es incorrecto debido al uso de un carácter especial en el nombre de la variable:\n\nvariable.inasig@nabl_e &lt;- 'INCORRECTO'"
+    "text": "Ejemplo de Caracteres Especiales no Permitidos\nEl siguiente ejemplo es incorrecto debido al uso de un carácter especial en el nombre de la variable:\n\nvariable.inasig@nabl_e &lt;- 'INCORRECTO'\n\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "clases/clase_05_complemento_variables.html",
@@ -1818,14 +1818,14 @@
     "href": "clases/clase_06_v2.html#función",
     "title": "Ciencia de Datos para Economistas",
     "section": "Función 🎲",
-    "text": "Función 🎲\n¿Qué debe hacer la función? ¿Qué debe representar?\n\n# ejecutar código y gradualmente descomentar líneas\nposibles_salidas_dado &lt;- c(1:6)\n# sample(posibles_salidas_dado, 1)\n# sample(posibles_salidas_dado, 2)\n# sample(posibles_salidas_dado, 3)\n# sample(posibles_salidas_dado, 7) # genera error\n# sample(posibles_salidas_dado, 7, replace=TRUE)\n\n¡Juguemos!\n\n# primera versión función\n\nlanzamiento &lt;- function(cdad_dados){\n  sample(1:6,cdad_dados, replace=TRUE)\n}\n\n# arrojar dado según función que crearmos\nlanzamiento (cdad_dados=3)\n\n[1] 4 6 6\n\nlanzamiento (cdad_dados=6)\n\n[1] 2 4 4 3 2 5"
+    "text": "Función 🎲\n¿Qué debe hacer la función? ¿Qué debe representar?\n\n# ejecutar código y gradualmente descomentar líneas\nposibles_salidas_dado &lt;- c(1:6)\n# sample(posibles_salidas_dado, 1)\n# sample(posibles_salidas_dado, 2)\n# sample(posibles_salidas_dado, 3)\n# sample(posibles_salidas_dado, 7) # genera error\n# sample(posibles_salidas_dado, 7, replace=TRUE)\n\n¡Juguemos!\n\n# primera versión función\n\nlanzamiento &lt;- function(cdad_dados){\n  sample(1:6,cdad_dados, replace=TRUE)\n}\n\n# arrojar dado según función que crearmos\nlanzamiento (cdad_dados=3)\n\n[1] 5 3 2\n\nlanzamiento (cdad_dados=6)\n\n[1] 1 5 6 6 2 3"
   },
   {
     "objectID": "clases/clase_06_v2.html#función-.",
     "href": "clases/clase_06_v2.html#función-.",
     "title": "Ciencia de Datos para Economistas",
     "section": "Función 🎲🎲….🎲",
-    "text": "Función 🎲🎲….🎲\n- ¿Entrada? =&gt; Argumentos\n\n# función con dos argumentos\nlanzamiento &lt;- function (cdad_dados,\n                         nombre_jugador){\n  resultado &lt;- sample (1:6,cdad_dados, replace = TRUE )\n  \n  paste(nombre_jugador, 'obtuvo el siguiente resultado',\n        resultado)\n}\n\n#La siguiente llamada a la función generará error ya que no contiente\n# dentro el valor del segundo argumento que es el nombre del jugador\n\n# lanzamiento(cdad_dados= 4)\n\nlanzamiento(nombre_jugador= 'Braian',\n            cdad_dados= 2)\n\n[1] \"Braian obtuvo el siguiente resultado 2\" \"Braian obtuvo el siguiente resultado 3\"\n\n# la siguiente ejecución generará un problema al no nombrar los\n# argumentos y en orden posicional, pasar \"Braian\" como el primer\n# argumento, que en la función que declaramos como \"lanzamiento\"\n# corresponde a \"cdad_dados\", que debe ser de tipo numérico. \n\n# Lo mismo pasaría con el segundo argumento que estamos pasando que en este caso es 5,\n# pero no lo estamos referenciando con el nombre del argumento en la \n# función, que corresponde en la segunda posición al de nombre_jugador\n\n#lanzamiento( 'Braian',\n#             5)\n\nlanzamiento(2,'Jose')\n\n[1] \"Jose obtuvo el siguiente resultado 5\" \"Jose obtuvo el siguiente resultado 6\"\n\n\nPara entender mejor la construcción de las funciones les recomiendo la lectura de esta sección del libro Hands On Promgramming With R https://rstudio-education.github.io/hopr/basics.html#sample-with-replacement que va muy similar a lo que revisamos en clase en cuanto al ejemplo del 🎲.\nPara revisar documentación de la función paste ejecutar ?paste en la consola."
+    "text": "Función 🎲🎲….🎲\n- ¿Entrada? =&gt; Argumentos\n\n# función con dos argumentos\nlanzamiento &lt;- function (cdad_dados,\n                         nombre_jugador){\n  resultado &lt;- sample (1:6,cdad_dados, replace = TRUE )\n  \n  paste(nombre_jugador, 'obtuvo el siguiente resultado',\n        resultado)\n}\n\n#La siguiente llamada a la función generará error ya que no contiente\n# dentro el valor del segundo argumento que es el nombre del jugador\n\n# lanzamiento(cdad_dados= 4)\n\nlanzamiento(nombre_jugador= 'Braian',\n            cdad_dados= 2)\n\n[1] \"Braian obtuvo el siguiente resultado 1\" \"Braian obtuvo el siguiente resultado 6\"\n\n# la siguiente ejecución generará un problema al no nombrar los\n# argumentos y en orden posicional, pasar \"Braian\" como el primer\n# argumento, que en la función que declaramos como \"lanzamiento\"\n# corresponde a \"cdad_dados\", que debe ser de tipo numérico. \n\n# Lo mismo pasaría con el segundo argumento que estamos pasando que en este caso es 5,\n# pero no lo estamos referenciando con el nombre del argumento en la \n# función, que corresponde en la segunda posición al de nombre_jugador\n\n#lanzamiento( 'Braian',\n#             5)\n\nlanzamiento(2,'Jose')\n\n[1] \"Jose obtuvo el siguiente resultado 5\" \"Jose obtuvo el siguiente resultado 2\"\n\n\nPara entender mejor la construcción de las funciones les recomiendo la lectura de esta sección del libro Hands On Promgramming With R https://rstudio-education.github.io/hopr/basics.html#sample-with-replacement que va muy similar a lo que revisamos en clase en cuanto al ejemplo del 🎲.\nPara revisar documentación de la función paste ejecutar ?paste en la consola."
   },
   {
     "objectID": "clases/clase_06_v2.html#principios-nombres-funciones",
@@ -2569,8 +2569,8 @@
     "objectID": "clases/clase_10.html#objetivo",
     "href": "clases/clase_10.html#objetivo",
     "title": "Ciencia de Datos para Economistas",
-    "section": "",
-    "text": "Realizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las filas u observaciones."
+    "section": "Objetivo",
+    "text": "Objetivo\nRealizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las filas u observaciones."
   },
   {
     "objectID": "clases/clase_10.html#cargar-datos-en-formato-xls",
@@ -2674,8 +2674,8 @@
     "objectID": "clases/clase_11.html#objetivo",
     "href": "clases/clase_11.html#objetivo",
     "title": "Ciencia de Datos para Economistas",
-    "section": "",
-    "text": "Realizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las columnas o atributos."
+    "section": "Objetivo",
+    "text": "Objetivo\nRealizar manipulaciones a los datos contenidos en una DF según diversos criterios, en particular en operaciones que afectan a las columnas o atributos."
   },
   {
     "objectID": "clases/clase_11.html#operaciones-en-columnas",
@@ -2724,7 +2724,7 @@
     "href": "clases/clase_11.html#lecturas-recomendadas",
     "title": "Ciencia de Datos para Economistas",
     "section": "Lecturas Recomendadas:",
-    "text": "Lecturas Recomendadas:\n\nCapítulo 4 R4DS (temas pasados referente a variables y operaciones básicas)\nCapítulo 5 R4DS: comparaciones, operadores lógicos, arrange, select, mutate, summarise, pipe operator. En el capítulo se tratan los valores faltantes NA que luego serán abordados"
+    "text": "Lecturas Recomendadas:\n\nCapítulo 4 R4DS (temas pasados referente a variables y operaciones básicas)\nCapítulo 5 R4DS: comparaciones, operadores lógicos, arrange, select, mutate, summarise, pipe operator. En el capítulo se tratan los valores faltantes NA que luego serán abordados\n\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "clases/clase_09.html#resumencont.",
@@ -2885,7 +2885,7 @@
     "href": "clases/clase_10.html#slice_sample",
     "title": "Ciencia de Datos para Economistas",
     "section": "slice_sample()",
-    "text": "slice_sample()\nUna muestra aleatoria de valores filtrando previamente de acuerdo a un criterio\n\ncontinentes[1]\n\n[1] \"Asia\"\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[1])%&gt;%\n  slice_sample(n=10)\n\n# A tibble: 10 × 6\n   country            continent  year lifeExp        pop gdpPercap\n   &lt;chr&gt;              &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;\n 1 Cambodia           Asia       1972    40.3    7450606      422.\n 2 Hong Kong, China   Asia       1952    61.0    2125900     3054.\n 3 Philippines        Asia       1987    64.2   60017788     2190.\n 4 Indonesia          Asia       2002    68.6  211060000     2874.\n 5 Korea, Dem. Rep.   Asia       1952    50.1    8865488     1088.\n 6 India              Asia       2007    64.7 1110396331     2452.\n 7 Nepal              Asia       1997    59.4   23001113     1011.\n 8 Lebanon            Asia       1957    59.5    1647412     6090.\n 9 Malaysia           Asia       1997    71.9   20476091    10133.\n10 West Bank and Gaza Asia       1967    51.6    1142636     2650."
+    "text": "slice_sample()\nUna muestra aleatoria de valores filtrando previamente de acuerdo a un criterio\n\ncontinentes[1]\n\n[1] \"Asia\"\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[1])%&gt;%\n  slice_sample(n=10)\n\n# A tibble: 10 × 6\n   country            continent  year lifeExp       pop gdpPercap\n   &lt;chr&gt;              &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n 1 Nepal              Asia       1967    41.5  11261690      676.\n 2 Iran               Asia       1952    44.9  17272000     3035.\n 3 China              Asia       1967    58.4 754550000      613.\n 4 Saudi Arabia       Asia       1982    63.0  11254672    33693.\n 5 West Bank and Gaza Asia       1972    56.5   1089572     3133.\n 6 Kuwait             Asia       1977    69.3   1140357    59265.\n 7 Korea, Rep.        Asia       1962    55.3  26420307     1536.\n 8 Myanmar            Asia       1952    36.3  20092996      331 \n 9 Syria              Asia       1952    45.9   3661549     1643.\n10 Sri Lanka          Asia       1992    70.4  17587060     2154."
   },
   {
     "objectID": "clases/clase_10.html#equivalente-slice_tail-en-rbase-1",
@@ -2913,7 +2913,7 @@
     "href": "clases/clase_10.html#notas-finales",
     "title": "Ciencia de Datos para Economistas",
     "section": "Notas finales:",
-    "text": "Notas finales:\n\nRevisar documentación de funciones para comprender los argumentos y su uso\nRevisar funcionamiento de las equivalencias que se presentaron usando RBase"
+    "text": "Notas finales:\n\nRevisar documentación de funciones para comprender los argumentos y su uso\nRevisar funcionamiento de las equivalencias que se presentaron usando RBase\n\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "clases/clase_11.html",
@@ -2990,7 +2990,7 @@
     "href": "clases/clase_11.html#mutate-ifelse---ejemplo--aplicar",
     "title": "Ciencia de Datos para Economistas",
     "section": "Mutate / ifelse - ejemplo- Aplicar",
-    "text": "Mutate / ifelse - ejemplo- Aplicar\nLa columna que vamos a crear se llama “tipo_pib”\n\ndf_pib_2007 &lt;- df_pib_2007%&gt;%\n  mutate(tipo_pib =ifelse(pib&gt;=pib_promedio, # condición a evaluar\n                          \"pib_up_mean\", # caso verdadero =&gt; ocurre a\n                          \"pib_down_mean\"))  #caso falso =&gt; ocurre b\n\ndf_pib_2007%&gt;%\n  sample_n(4)\n\n# A tibble: 4 × 3\n  country            pib tipo_pib     \n  &lt;fct&gt;            &lt;dbl&gt; &lt;chr&gt;        \n1 Norway   228421423675. pib_down_mean\n2 Djibouti   1033689705. pib_down_mean\n3 Croatia   65688728878. pib_down_mean\n4 Mali      12544127565. pib_down_mean"
+    "text": "Mutate / ifelse - ejemplo- Aplicar\nLa columna que vamos a crear se llama “tipo_pib”\n\ndf_pib_2007 &lt;- df_pib_2007%&gt;%\n  mutate(tipo_pib =ifelse(pib&gt;=pib_promedio, # condición a evaluar\n                          \"pib_up_mean\", # caso verdadero =&gt; ocurre a\n                          \"pib_down_mean\"))  #caso falso =&gt; ocurre b\n\ndf_pib_2007%&gt;%\n  sample_n(4)\n\n# A tibble: 4 × 3\n  country                     pib tipo_pib     \n  &lt;fct&gt;                     &lt;dbl&gt; &lt;chr&gt;        \n1 Somalia             8445270168. pib_down_mean\n2 Nicaragua          15603375235. pib_down_mean\n3 West Bank and Gaza 12156859904. pib_down_mean\n4 Rwanda              7647471286. pib_down_mean"
   },
   {
     "objectID": "clases/clase_11.html#mutate-doble-ifelse---problema",
@@ -3046,7 +3046,7 @@
     "href": "clases/clase_11.html#nota",
     "title": "Ciencia de Datos para Economistas",
     "section": "Nota:",
-    "text": "Nota:\nNayuha, de forma apropiada investigó cuál función se usa para obtener estos valores quantile y cómo se pueden asignar a una variable, dado que la salida que genera la función summary no es maleable para extraer datos individuales como los valores asociados a un cuantil u otro.\n\n🙌🏼"
+    "text": "Nota:\nNayuha, de forma apropiada investigó cuál función se usa para obtener estos valores quantile y cómo se pueden asignar a una variable, dado que la salida que genera la función summary no es maleable para extraer datos individuales como los valores asociados a un cuantil u otro.\n🙌🏼"
   },
   {
     "objectID": "clases/clase_11.html#histograma",
@@ -3888,7 +3888,7 @@
     "href": "clases/clase_10.html#equivalente-de-slice_tail-en-rbase-1",
     "title": "Ciencia de Datos para Economistas",
     "section": "equivalente de slice_tail() en Rbase",
-    "text": "equivalente de slice_tail() en Rbase\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[1])%&gt;%\n  .[sample(1:nrow(.),10),]\n\n# A tibble: 10 × 6\n   country          continent  year lifeExp        pop gdpPercap\n   &lt;chr&gt;            &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;\n 1 Cambodia         Asia       1972    40.3    7450606      422.\n 2 Myanmar          Asia       1987    58.3   38028578      385 \n 3 Bahrain          Asia       1982    69.1     377967    19211.\n 4 Malaysia         Asia       2002    73.0   22662365    10207.\n 5 Cambodia         Asia       2002    56.8   12926707      896.\n 6 China            Asia       2002    72.0 1280400000     3119.\n 7 Korea, Rep.      Asia       1967    57.7   30131000     2029.\n 8 Iraq             Asia       1977    60.4   11882916    14688.\n 9 Afghanistan      Asia       1982    39.9   12881816      978.\n10 Korea, Dem. Rep. Asia       1967    59.9   12617009     2144."
+    "text": "equivalente de slice_tail() en Rbase\n\ndf_gapminder%&gt;%\n  filter(continent==continentes[1])%&gt;%\n  .[sample(1:nrow(.),10),]\n\n# A tibble: 10 × 6\n   country          continent  year lifeExp       pop gdpPercap\n   &lt;chr&gt;            &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n 1 Saudi Arabia     Asia       2002    71.6  24501530    19015.\n 2 China            Asia       1967    58.4 754550000      613.\n 3 Syria            Asia       1952    45.9   3661549     1643.\n 4 Hong Kong, China Asia       1992    77.6   5829696    24758.\n 5 Syria            Asia       1977    61.2   7932503     3195.\n 6 Israel           Asia       1967    70.8   2693585     8394.\n 7 Korea, Rep.      Asia       1952    47.5  20947571     1031.\n 8 Philippines      Asia       1982    62.1  53456774     2603.\n 9 Nepal            Asia       1987    52.5  17917180      776.\n10 Thailand         Asia       1972    60.4  39276153     1524."
   },
   {
     "objectID": "clases/clase_12.html",
@@ -3958,7 +3958,7 @@
     "href": "clases/clase_11.html#explorar-países-con-medio-pib",
     "title": "Ciencia de Datos para Economistas",
     "section": "Explorar Países con medio PIB",
-    "text": "Explorar Países con medio PIB\nMuestra aleatoria\n\ndf_pib_2007%&gt;%\n  filter(tipo_pib2== 'medio_pib')%&gt;%\n  sample_n(8)\n\n# A tibble: 8 × 4\n  country                      pib tipo_pib      tipo_pib2\n  &lt;fct&gt;                      &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;    \n1 Slovenia            51774742721. pib_down_mean medio_pib\n2 Panama              31803076821. pib_down_mean medio_pib\n3 Angola              59583895818. pib_down_mean medio_pib\n4 Czech Republic     233556067422. pib_down_mean medio_pib\n5 Gabon               19213678514. pib_down_mean medio_pib\n6 Dominican Republic  56154215097. pib_down_mean medio_pib\n7 Denmark            192906627081. pib_down_mean medio_pib\n8 Yemen, Rep.         50659874994. pib_down_mean medio_pib"
+    "text": "Explorar Países con medio PIB\nMuestra aleatoria\n\ndf_pib_2007%&gt;%\n  filter(tipo_pib2== 'medio_pib')%&gt;%\n  sample_n(8)\n\n# A tibble: 8 × 4\n  country                       pib tipo_pib      tipo_pib2\n  &lt;fct&gt;                       &lt;dbl&gt; &lt;chr&gt;         &lt;chr&gt;    \n1 Botswana             20603633702. pib_down_mean medio_pib\n2 Gabon                19213678514. pib_down_mean medio_pib\n3 Uruguay              36582976212. pib_down_mean medio_pib\n4 Sri Lanka            80903553057. pib_down_mean medio_pib\n5 Libya                72790086208. pib_down_mean medio_pib\n6 Trinidad and Tobago  19027934931. pib_down_mean medio_pib\n7 Peru                212448566598. pib_down_mean medio_pib\n8 Finland             173953983346. pib_down_mean medio_pib"
   },
   {
     "objectID": "practicas/clase11.html",
@@ -7684,7 +7684,7 @@
     "href": "clases/clase_21.html#geom_point",
     "title": "Ciencia de Datos para Economistas",
     "section": "geom_point",
-    "text": "geom_point\n\nRequiere los valores de x, y aesthetics dentro de aes()\nSe puede modificar la apariciencia de los puntos con los argumentos color, shape, alpha ,size\n\n\n\n\nggplot(data = gapminder_2007,\n       mapping = aes(x = lifeExp, \n                           y = gdpPercap)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nhacernos una pregunta. hipótesis\ncómo es la relación entre la expectativa de vida y el pibpercap\ncomportamiento lineal, exponencia?"
+    "text": "geom_point\n\nRequiere los valores de x, y aesthetics dentro de aes()\nSe puede modificar la apariciencia de los puntos con los argumentos color, shape, alpha ,size\n\n\n\n\nggplot(data = gapminder_2007,\n       mapping = aes(x = lifeExp, \n                           y = gdpPercap)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\n\n\n\n\nhacernos una pregunta. hipótesis\ncómo es la relación entre la expectativa de vida y el pibpercap\ncomportamiento lineal, exponencia?"
   },
   {
     "objectID": "clases/clase_21.html#geom_line",
@@ -7740,7 +7740,7 @@
     "href": "clases/clase_21.html#elección-del-mapeo-mapping",
     "title": "Ciencia de Datos para Economistas",
     "section": "Elección del Mapeo (Mapping)",
-    "text": "Elección del Mapeo (Mapping)\n\n\n\n\n\nImagen de Garrett Grolemund’s 2019 JSM, tidyverse tutorial ."
+    "text": "Elección del Mapeo (Mapping)\n\nImagen de Garrett Grolemund’s 2019 JSM, tidyverse tutorial ."
   },
   {
     "objectID": "clases/clase_21.html#láminas-repaso-basadas-en",
@@ -7775,7 +7775,7 @@
     "href": "clases/clase_21.html#recursos",
     "title": "Ciencia de Datos para Economistas",
     "section": "Recursos",
-    "text": "Recursos\nhttps://ggplot2-book.org/\nhttps://bbc.github.io/rcookbook/\nhttps://r-charts.com/es/ggplot2/\nhttps://ggplot2.tidyverse.org/"
+    "text": "Recursos\nhttps://ggplot2-book.org/\nhttps://bbc.github.io/rcookbook/\nhttps://r-charts.com/es/ggplot2/\nhttps://ggplot2.tidyverse.org/\n\n\n\n\n🔗 ucveconomiar4ds"
   },
   {
     "objectID": "clases/clase_21_test.html#doble-columna",
@@ -8307,7 +8307,7 @@
     "href": "clases/clase_21.html#inspeccionar-datos-a-trabajar",
     "title": "Ciencia de Datos para Economistas",
     "section": "Inspeccionar Datos a Trabajar",
-    "text": "Inspeccionar Datos a Trabajar\n\ndf_valores_acciones%&gt;%\n  sample_n(10)\n\n# A tibble: 10 × 5\n   fecha           volume accion  tipo_valor    valor\n   &lt;date&gt;           &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;         &lt;dbl&gt;\n 1 2010-05-10    38947200 Oracle  open          24.0 \n 2 2023-04-03   398716000 Nvidia  high          28   \n 3 2009-01-12   617716400 Apple   open           3.23\n 4 2010-04-01    26562700 Oracle  adjclose      20.8 \n 5 2012-08-16    68965534 Google  low           16.6 \n 6 2016-11-22   129906000 Bitcoin close        751.  \n 7 2024-02-16    49701400 Apple   close        182.  \n 8 2023-04-14   395660000 Nvidia  high          26.9 \n 9 2021-12-06 37707308001 Bitcoin high       50930.  \n10 2023-07-10 14828209155 Bitcoin high       31026.  \n\n\ncódigo para obtención y procesamiento de datos disponible en enlace"
+    "text": "Inspeccionar Datos a Trabajar\n\ndf_valores_acciones%&gt;%\n  sample_n(10)\n\n# A tibble: 10 × 5\n   fecha           volume accion  tipo_valor     valor\n   &lt;date&gt;           &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;\n 1 2015-02-09    25355423 Google  high          26.5  \n 2 2023-05-18    10005700 Oracle  low           99.7  \n 3 2016-07-26    11031900 Oracle  low           40.8  \n 4 2019-07-03 30796494294 Bitcoin close      11961.   \n 5 2009-07-16   952076000 Nvidia  close          0.293\n 6 2013-10-11   213704000 Nvidia  adjclose       0.358\n 7 2023-11-10   421245000 Nvidia  adjclose      48.3  \n 8 2016-11-21    26612000 Google  close         38.5  \n 9 2013-12-11    68728650 Google  adjclose      26.7  \n10 2007-04-25   509640000 Nvidia  adjclose       0.506\n\n\ncódigo para obtención y procesamiento de datos disponible en enlace"
   },
   {
     "objectID": "clases/clase_21.html#geom_line-1-línea-con-color",
@@ -8488,8 +8488,8 @@
     "objectID": "clases/clase_21.html#objetivo",
     "href": "clases/clase_21.html#objetivo",
     "title": "Ciencia de Datos para Economistas",
-    "section": "",
-    "text": "Conocer el sistema de graficación en R llamado ggplot2 , con énfasis en los mapeos estéticos, y los principales geoms que se pueden usar para realizar la visualización de datos."
+    "section": "Objetivo",
+    "text": "Objetivo\nConocer el sistema de graficación en R llamado ggplot2 , con énfasis en los mapeos estéticos, y los principales geoms que se pueden usar para realizar la visualización de datos."
   },
   {
     "objectID": "clases/clase_21.html#facetas-boxplot-por-una-variable-categórica",
@@ -8545,7 +8545,7 @@
     "href": "clases/clase_21.html#elección-tipo-gráfico",
     "title": "Ciencia de Datos para Economistas",
     "section": "Elección Tipo Gráfico",
-    "text": "Elección Tipo Gráfico\n\n\n\n\n\ntomado de la presentación “a ggplot2 Crash Course” de Samantha Tyner."
+    "text": "Elección Tipo Gráfico\n\ntomado de la presentación “a ggplot2 Crash Course” de Samantha Tyner."
   },
   {
     "objectID": "clases/clase_21.html#geom_point-ajuste-color-vs.-mapeo",
@@ -10564,5 +10564,124 @@
       "Proyectos",
       "Dashboard Tendencias OPEP"
     ]
+  },
+  {
+    "objectID": "clases/clase_27.html#objetivo",
+    "href": "clases/clase_27.html#objetivo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Objetivo",
+    "text": "Objetivo\nConocer fundamentos básicos de bases de dato y cómo trabajar desde el lenguaje R con ellas."
+  },
+  {
+    "objectID": "clases/clase_27.html#ciclo",
+    "href": "clases/clase_27.html#ciclo",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ciclo",
+    "text": "Ciclo"
+  },
+  {
+    "objectID": "clases/clase_27.html#qué-son-las-base-de-datos",
+    "href": "clases/clase_27.html#qué-son-las-base-de-datos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Qué son las Base de Datos",
+    "text": "Qué son las Base de Datos\nSon sistemas organizados que almacenan, recuperan y administran grandes cantidades de información. Permiten almacenar datos de manera estructurada y eficiente, facilitando su acceso y manipulación."
+  },
+  {
+    "objectID": "clases/clase_27.html#datos-estructurados-vs-datos-n.e.",
+    "href": "clases/clase_27.html#datos-estructurados-vs-datos-n.e.",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Datos Estructurados vs Datos N.E.",
+    "text": "Datos Estructurados vs Datos N.E.\n\nDatos Estructurados: Están organizados en una tabla con filas y columnas, como hojas de cálculo o registros de una base de datos.\nDatos No Estructurados: No tienen un formato predefinido, como textos, imágenes, videos, etc."
+  },
+  {
+    "objectID": "clases/clase_27.html#ejemplos-de-tablas",
+    "href": "clases/clase_27.html#ejemplos-de-tablas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplos de Tablas",
+    "text": "Ejemplos de Tablas\n\n\n\nID\nNOMBRE\nEDAD\n\n\n\n\n1\nAna\n25\n\n\n2\nJuan\n30\n\n\n3\nMaría\n28"
+  },
+  {
+    "objectID": "clases/clase_27.html#ejemplo-de-una-tabla-de-ventas-que-incluye-ventas-a-un-mismo-cliente",
+    "href": "clases/clase_27.html#ejemplo-de-una-tabla-de-ventas-que-incluye-ventas-a-un-mismo-cliente",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "2 Ejemplo de una tabla de ventas que incluye ventas a un mismo cliente",
+    "text": "2 Ejemplo de una tabla de ventas que incluye ventas a un mismo cliente\n\n\n\nCI_Cliente\nCLIENTE_Nombre\nPRODUCTO\nCANTIDAD\nPRECIO\n\n\n\n\n23.462\nJosé\nLápiz\n2\n5\n\n\n11.525\nMaría\nCuaderno\n1\n10\n\n\n23.462\nJosé\nLibro\n1\n20"
+  },
+  {
+    "objectID": "clases/clase_27.html#qué-es-la-normalización-en-base-de-datos",
+    "href": "clases/clase_27.html#qué-es-la-normalización-en-base-de-datos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "¿Qué es la normalización en base de datos?",
+    "text": "¿Qué es la normalización en base de datos?\nLa normalización es un proceso que se utiliza para organizar los datos de una base de datos de manera eficiente, eliminando redundancias y asegurando integridad."
+  },
+  {
+    "objectID": "clases/clase_27.html#ejemplo-de-tablas-que-estén-relacionadas",
+    "href": "clases/clase_27.html#ejemplo-de-tablas-que-estén-relacionadas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplo de tablas que estén relacionadas:",
+    "text": "Ejemplo de tablas que estén relacionadas:\nTabla “datos_cliente”\n\n\n\nCLIENTE_ID\nNOMBRE\nCI_cliente\n\n\n\n\n1\nMaría\n11.525\n\n\n2\nJosé\n23.462"
+  },
+  {
+    "objectID": "clases/clase_27.html#tabla-ventas",
+    "href": "clases/clase_27.html#tabla-ventas",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Tabla Ventas",
+    "text": "Tabla Ventas\n\n\n\nID_VENTA\nCLIENTE_ID\nPRODUCTO\nCANTIDAD\nPRECIO\n\n\n\n\n1\n1\nLápiz\n2\n5\n\n\n2\n2\nCuaderno\n1\n10\n\n\n3\n1\nLibro\n1\n20"
+  },
+  {
+    "objectID": "clases/clase_27.html#manejadores-de-bases-de-datos",
+    "href": "clases/clase_27.html#manejadores-de-bases-de-datos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Manejadores de bases de datos",
+    "text": "Manejadores de bases de datos\nLos manejadores de bases de datos (DBMS) son programas que permiten crear, gestionar y manipular bases de datos. Proporcionan una interfaz para interactuar con la base de datos."
+  },
+  {
+    "objectID": "clases/clase_27.html#ejemplos-de-manejadores-de-base-de-datos",
+    "href": "clases/clase_27.html#ejemplos-de-manejadores-de-base-de-datos",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Ejemplos de manejadores de base de datos",
+    "text": "Ejemplos de manejadores de base de datos\n\nMySQL\nPostgreSQL\nSQLite\nOracle\nMicrosoft SQL Server"
+  },
+  {
+    "objectID": "clases/clase_27.html#qué-es-la-programación-declarativa",
+    "href": "clases/clase_27.html#qué-es-la-programación-declarativa",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "¿Qué es la programación declarativa?",
+    "text": "¿Qué es la programación declarativa?\nLa programación declarativa se centra en describir lo que se quiere lograr, no en cómo hacerlo. En contraste con la programación imperativa, que especifica paso a paso las acciones a realizar."
+  },
+  {
+    "objectID": "clases/clase_27.html#qué-hace-un-manejador-de-db-con-una-instrucción-como-por-ejemplo-el-ordenamiento",
+    "href": "clases/clase_27.html#qué-hace-un-manejador-de-db-con-una-instrucción-como-por-ejemplo-el-ordenamiento",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "¿Qué hace un manejador de db con una instrucción como por ejemplo el ordenamiento?",
+    "text": "¿Qué hace un manejador de db con una instrucción como por ejemplo el ordenamiento?\nCuando se ejecuta una consulta de ordenamiento (como ORDER BY en SQL), el manejador de base de datos recupera los datos y los organiza según el criterio especificado, sin tener que indicar paso a paso cómo hacerlo."
+  },
+  {
+    "objectID": "clases/clase_27.html#cómo-maneja-un-dbms-un-ordenamiento",
+    "href": "clases/clase_27.html#cómo-maneja-un-dbms-un-ordenamiento",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "Cómo Maneja un DBMS un Ordenamiento",
+    "text": "Cómo Maneja un DBMS un Ordenamiento\n\nOrdenamiento por Intercambio (Bubble Sort)\nOrdenamiento por Selección (Selection Sort)\nOrdenamiento por Inserción (Insertion Sort)\nOrdenamiento por Mezcla (Merge Sort)\nOrdenamiento por Rápido (Quick Sort)\nOrdenamiento por Heapsort\n…."
+  },
+  {
+    "objectID": "clases/clase_27.html#qué-es-la-indexación-y-su-ventaja",
+    "href": "clases/clase_27.html#qué-es-la-indexación-y-su-ventaja",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "¿Qué es la indexación y su ventaja?",
+    "text": "¿Qué es la indexación y su ventaja?\nEs una técnica que mejora el rendimiento de las consultas en bases de datos al crear estructuras de acceso rápido a los datos. Permite buscar información más rápidamente, similar a un índice en un libro."
+  },
+  {
+    "objectID": "clases/clase_27.html#qué-es-desnormalizar-una-base-de-dato",
+    "href": "clases/clase_27.html#qué-es-desnormalizar-una-base-de-dato",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "¿Qué es desnormalizar una base de dato?",
+    "text": "¿Qué es desnormalizar una base de dato?\nDesnormalizar una base de datos implica combinar tablas para reducir la redundancia y mejorar el rendimiento de las consultas. Aunque puede simplificar ciertas operaciones, también puede llevar a problemas de integridad de los datos.\n\n\n\n\n🔗 ucveconomiar4ds"
+  },
+  {
+    "objectID": "clases/clase_03.html#section",
+    "href": "clases/clase_03.html#section",
+    "title": "Ciencia de Datos para Economistas",
+    "section": "",
+    "text": "🔗 ucveconomiar4ds"
   }
 ]

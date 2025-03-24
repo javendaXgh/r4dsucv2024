@@ -93,6 +93,8 @@ datos %>%
   mutate(resultado = mi_funcion(valor1, valor2))
 ```
 
+## rowwise - ejemplo 2- cont.
+
 ```{r}
 # Usar rowwise para aplicar la función
 datos %>%

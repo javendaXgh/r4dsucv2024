@@ -259,8 +259,9 @@ min_gdpPercap <- round(min(gap_colven$gdpPercap),2)
 En período analizado va de `r min_periodo` a `r max_periodo`, mientras que el máximo PIB per cápita es `r max_gdpPercap` , siendo el mínimo `r min_gdpPercap`, para los países `r unique(gap_colven$country)`
 
 ```         
-En período analizado va de ``r min_periodo`` a ´r max_periodo´, mientras que el máximo PIB per cápita es `r max_gdpPercap`  , siendo el mínimo ´r min_gdpPercap´, para los países ´r unique(gap_colven$country)´.
-Modificar ´ por `
+En período analizado va de ´r min_periodo´ a ´r max_periodo´, mientras que el máximo PIB per cápita es ´r max_gdpPercap´  , siendo el mínimo ´r min_gdpPercap´, para los países ´r unique(gap_colven$country)´.
+
+Nota: Modificar "´" por "`"
 ```
 
 ## Tablas GT

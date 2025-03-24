@@ -1,17 +1,15 @@
 {
-  "hash": "b55c00c853036680650dbad13f3b849f",
+  "hash": "7633b5bbc46cb37a1fdad0e4600f92fe",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Ciencia de Datos para Economistas\"\nsubtitle: \"Clase 20: Presentación\"\ndate: \"January 22, 2025\"\nauthor: \"M.Sc. José M. Avendaño\"\noutput:\n  html_document:\n    toc: yes\n    incremental: true\n# filters:\n#   - webr\nengine: knitr\nformat: \n  revealjs:\n    incremental: true\nexecute:\n  echo: true\neval: false\n---\n\n\n\n## Anuncios\n\n-   Tramitar API key [Google AI Studio](https://aistudio.google.com/)\n\n-   Tramitar API key [RapidApi](https://rapidapi.com)\n\n-   Retardos en tareas. Fin del plazo\n\n-   Programación Actividades\n\n-   Clase faltante lunes 20-01.\n\n    -   presencial miércoles 29 en la mañana\n\n    -   remota, fecha por definir semana 27 al 31-01\n\n## Objetivo\n\nConocer los \"principios de gráficos analíticos\" para crear visualizaciones de datos para el análisis exploratorio de los datos (exploratory data analysis - EDA).\n\n***90% del tiempo...***\n\n![](clases/images/cd_ciclo_3.png)\n\n## Contenido\n\n-   Repaso clase IAVD\n\n-   Principios de Gráficos Analíticos\n\n-   Gráficos Exploratorios (GE)\n\n-   Librerías para EDA\n",
-    "supporting": [],
+    "markdown": "---\ntitle: \"Ciencia de Datos para Economistas\"\nsubtitle: \"Clase 20: Presentación\"\ndate: \"January 22, 2025\"\nauthor: \"M.Sc. José M. Avendaño\"\noutput:\n  html_document:\n    toc: yes\n    incremental: true\n# filters:\n#   - webr\nengine: knitr\nformat: \n  revealjs:\n    incremental: true\nexecute:\n  echo: true\n  eval: false\n---\n\n\n\n\n\n\n## Anuncios\n\n-   Tramitar API key [Google AI Studio](https://aistudio.google.com/)\n\n-   Tramitar API key [RapidApi](https://rapidapi.com)\n\n-   Retardos en tareas. Fin del plazo\n\n-   Programación Actividades\n\n-   Clase faltante lunes 20-01.\n\n    -   presencial miércoles 29 en la mañana\n\n    -   remota, fecha por definir semana 27 al 31-01\n\n## Objetivo\n\nConocer los \"principios de gráficos analíticos\" para crear visualizaciones de datos para el análisis exploratorio de los datos (exploratory data analysis - EDA).\n\n***90% del tiempo...***\n\n![](clases/images/cd_ciclo_3.png)\n\n## Contenido\n\n-   Repaso clase IAVD\n\n-   Principios de Gráficos Analíticos\n\n-   Gráficos Exploratorios (GE)\n\n-   Librerías para EDA\n",
+    "supporting": [
+      "clase_20_0_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],
-    "includes": {
-      "include-after-body": [
-        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
-      ]
-    },
+    "includes": {},
     "engineDependencies": {},
     "preserve": {},
     "postProcess": true
